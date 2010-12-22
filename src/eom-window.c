@@ -2668,13 +2668,39 @@ static void
 wallpaper_info_bar_response (GtkInfoBar *bar, gint response, EomWindow *window)
 {
 	if (response == GTK_RESPONSE_YES) {
-		GdkScreen *screen;
+		GAppInfo *app_info;
+		GError *error = NULL;
 
-		screen = gtk_widget_get_screen (GTK_WIDGET (window));
-		mate_gdk_spawn_command_line_on_screen (screen,
-						  "mate-appearance-properties"
-						  " --show-page=background",
-						  NULL);
+		app_info = g_app_info_create_from_commandline ("mate-appearance-properties --show-page=background",
+							       "mate-appearance-properties",
+							       G_APP_INFO_CREATE_NONE,
+							       &error);
+
+		if (error != NULL) {
+			g_warning ("%s%s", _("Error launching appearance preferences dialog: "),
+				   error->message);
+			g_error_free (error);
+			error = NULL;
+		}
+
+		if (app_info != NULL) {
+			GdkAppLaunchContext *context;
+			GdkDisplay *display;
+
+			display = gtk_widget_get_display (GTK_WIDGET (window));
+			context = gdk_display_get_app_launch_context (display);
+			g_app_info_launch (app_info, NULL, G_APP_LAUNCH_CONTEXT (context), &error);
+
+			if (error != NULL) {
+				g_warning ("%s%s", _("Error launching appearance preferences dialog: "),
+					   error->message);
+				g_error_free (error);
+				error = NULL;
+			}
+
+			g_object_unref (context);
+			g_object_unref (app_info);
+		}
 	}
 
 	/* Close message area on every response */
