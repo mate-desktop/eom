@@ -52,6 +52,7 @@
 #include "eom-save-as-dialog-helper.h"
 #include "eom-close-confirmation-dialog.h"
 #include "eom-clipboard-handler.h"
+#include "eom-window-activatable.h"
 #include "eom-metadata-sidebar.h"
 
 #include "eom-enum-types.h"
@@ -5127,8 +5128,9 @@ eom_window_constructor (GType type,
 	eom_window_construct_ui (EOM_WINDOW (object));
 
 	priv->extensions = peas_extension_set_new (PEAS_ENGINE (EOM_APP->plugin_engine),
-						   PEAS_TYPE_ACTIVATABLE,
-						   "object", object, NULL);
+	                                           EOM_TYPE_WINDOW_ACTIVATABLE,
+	                                           "window",
+	                                           EOM_WINDOW (object), NULL);
 
 	peas_extension_set_call (priv->extensions, "activate");
 

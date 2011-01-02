@@ -40,6 +40,7 @@ INST_H_FILES =				\
 	eom-application.h		\
 	eom-debug.h			\
 	eom-window.h			\
+	eom-window-activatable.h	\
 	eom-sidebar.h			\
 	eom-dialog.h			\
 	eom-properties-dialog.h		\
@@ -66,6 +67,7 @@ libeom_c_files =			\
 	eom-util.c			\
 	eom-pixbuf-util.c		\
 	eom-window.c			\
+	eom-window-activatable.c	\
 	eom-sidebar.c			\
 	eom-dialog.c			\
 	eom-preferences-dialog.c	\
