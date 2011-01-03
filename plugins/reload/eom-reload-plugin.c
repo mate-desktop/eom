@@ -10,19 +10,20 @@
 
 #include <eom-debug.h>
 #include <eom-window.h>
+#include <eom-window-activatable.h>
 
-static void peas_activatable_iface_init (PeasActivatableInterface *iface);
+static void eom_window_activatable_iface_init (EomWindowActivatableInterface *iface);
 
 G_DEFINE_DYNAMIC_TYPE_EXTENDED (EomReloadPlugin,
                                 eom_reload_plugin,
                                 PEAS_TYPE_EXTENSION_BASE,
                                 0,
-                                G_IMPLEMENT_INTERFACE_DYNAMIC (PEAS_TYPE_ACTIVATABLE,
-                                                               peas_activatable_iface_init))
+                                G_IMPLEMENT_INTERFACE_DYNAMIC (EOM_TYPE_WINDOW_ACTIVATABLE,
+                                                               eom_window_activatable_iface_init))
 
 enum {
 	PROP_0,
-	PROP_OBJECT
+	PROP_WINDOW
 };
 
 static void
@@ -54,8 +55,8 @@ eom_reload_plugin_set_property (GObject      *object,
 
 	switch (prop_id)
 	{
-	case PROP_OBJECT:
-		plugin->window = GTK_WIDGET (g_value_dup_object (value));
+	case PROP_WINDOW:
+		plugin->window = EOM_WINDOW (g_value_dup_object (value));
 		break;
 
 	default:
@@ -74,7 +75,7 @@ eom_reload_plugin_get_property (GObject    *object,
 
 	switch (prop_id)
 	{
-	case PROP_OBJECT:
+	case PROP_WINDOW:
 		g_value_set_object (value, plugin->window);
 		break;
 
@@ -106,14 +107,14 @@ eom_reload_plugin_dispose (GObject *object)
 }
 
 static void
-eom_reload_plugin_activate (PeasActivatable *activatable)
+eom_reload_plugin_activate (EomWindowActivatable *activatable)
 {
 	EomReloadPlugin *plugin = EOM_RELOAD_PLUGIN (activatable);
 	GtkUIManager *manager;
 
 	eom_debug (DEBUG_PLUGINS);
 
-	manager = eom_window_get_ui_manager (EOM_WINDOW (plugin->window));
+	manager = eom_window_get_ui_manager (plugin->window);
 
 	plugin->ui_action_group = gtk_action_group_new ("EomReloadPluginActions");
 
@@ -129,14 +130,14 @@ eom_reload_plugin_activate (PeasActivatable *activatable)
 }
 
 static void
-eom_reload_plugin_deactivate (PeasActivatable *activatable)
+eom_reload_plugin_deactivate (EomWindowActivatable *activatable)
 {
 	EomReloadPlugin *plugin = EOM_RELOAD_PLUGIN (activatable);
 	GtkUIManager *manager;
 
 	eom_debug (DEBUG_PLUGINS);
 
-	manager = eom_window_get_ui_manager (EOM_WINDOW (plugin->window));
+	manager = eom_window_get_ui_manager (plugin->window);
 
 	gtk_ui_manager_remove_ui (manager, plugin->ui_id);
 
@@ -154,7 +155,7 @@ eom_reload_plugin_class_init (EomReloadPluginClass *klass)
 	object_class->set_property = eom_reload_plugin_set_property;
 	object_class->get_property = eom_reload_plugin_get_property;
 
-	g_object_class_override_property (object_class, PROP_OBJECT, "object");
+	g_object_class_override_property (object_class, PROP_WINDOW, "window");
 }
 
 static void
@@ -164,7 +165,7 @@ eom_reload_plugin_class_finalize (EomReloadPluginClass *klass)
 }
 
 static void
-peas_activatable_iface_init (PeasActivatableInterface *iface)
+eom_window_activatable_iface_init (EomWindowActivatableInterface *iface)
 {
 	iface->activate = eom_reload_plugin_activate;
 	iface->deactivate = eom_reload_plugin_deactivate;
@@ -175,6 +176,6 @@ peas_register_types (PeasObjectModule *module)
 {
 	eom_reload_plugin_register_type (G_TYPE_MODULE (module));
 	peas_object_module_register_extension_type (module,
-	                                            PEAS_TYPE_ACTIVATABLE,
+	                                            EOM_TYPE_WINDOW_ACTIVATABLE,
 	                                            EOM_TYPE_RELOAD_PLUGIN);
 }
