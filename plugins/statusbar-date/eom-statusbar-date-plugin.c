@@ -32,21 +32,22 @@
 #include <eom-debug.h>
 #include <eom-image.h>
 #include <eom-thumb-view.h>
-#include <eom-window.h>
 #include <eom-exif-util.h>
+#include <eom-window.h>
+#include <eom-window-activatable.h>
 
-static void peas_activatable_iface_init (PeasActivatableInterface *iface);
+static void eom_window_activatable_iface_init (EomWindowActivatableInterface *iface);
 
 G_DEFINE_DYNAMIC_TYPE_EXTENDED (EomStatusbarDatePlugin,
                                 eom_statusbar_date_plugin,
                                 PEAS_TYPE_EXTENSION_BASE,
                                 0,
-                                G_IMPLEMENT_INTERFACE_DYNAMIC (PEAS_TYPE_ACTIVATABLE,
-                                                               peas_activatable_iface_init))
+                                G_IMPLEMENT_INTERFACE_DYNAMIC (EOM_TYPE_WINDOW_ACTIVATABLE,
+                                                               eom_window_activatable_iface_init))
 
 enum {
 	PROP_0,
-	PROP_OBJECT
+	PROP_WINDOW
 };
 
 static void
@@ -112,8 +113,8 @@ eom_statusbar_date_plugin_set_property (GObject      *object,
 
 	switch (prop_id)
 	{
-	case PROP_OBJECT:
-		plugin->window = GTK_WIDGET (g_value_dup_object (value));
+	case PROP_WINDOW:
+		plugin->window = EOM_WINDOW (g_value_dup_object (value));
 		break;
 
 	default:
@@ -132,7 +133,7 @@ eom_statusbar_date_plugin_get_property (GObject    *object,
 
 	switch (prop_id)
 	{
-	case PROP_OBJECT:
+	case PROP_WINDOW:
 		g_value_set_object (value, plugin->window);
 		break;
 
@@ -164,10 +165,10 @@ eom_statusbar_date_plugin_dispose (GObject *object)
 }
 
 static void
-eom_statusbar_date_plugin_activate (PeasActivatable *activatable)
+eom_statusbar_date_plugin_activate (EomWindowActivatable *activatable)
 {
 	EomStatusbarDatePlugin *plugin = EOM_STATUSBAR_DATE_PLUGIN (activatable);
-	EomWindow *window = EOM_WINDOW (plugin->window);
+	EomWindow *window = plugin->window;
 	GtkWidget *statusbar = eom_window_get_statusbar (window);
 	GtkWidget *thumbview = eom_window_get_thumb_view (window);
 
@@ -187,10 +188,10 @@ eom_statusbar_date_plugin_activate (PeasActivatable *activatable)
 }
 
 static void
-eom_statusbar_date_plugin_deactivate (PeasActivatable *activatable)
+eom_statusbar_date_plugin_deactivate (EomWindowActivatable *activatable)
 {
 	EomStatusbarDatePlugin *plugin = EOM_STATUSBAR_DATE_PLUGIN (activatable);
-	EomWindow *window = EOM_WINDOW (plugin->window);
+	EomWindow *window = plugin->window;
 	GtkWidget *statusbar = eom_window_get_statusbar (window);
 	GtkWidget *view = eom_window_get_thumb_view (window);
 
@@ -208,7 +209,7 @@ eom_statusbar_date_plugin_class_init (EomStatusbarDatePluginClass *klass)
 	object_class->set_property = eom_statusbar_date_plugin_set_property;
 	object_class->get_property = eom_statusbar_date_plugin_get_property;
 
-	g_object_class_override_property (object_class, PROP_OBJECT, "object");
+	g_object_class_override_property (object_class, PROP_WINDOW, "window");
 }
 
 static void
@@ -218,7 +219,7 @@ eom_statusbar_date_plugin_class_finalize (EomStatusbarDatePluginClass *klass)
 }
 
 static void
-peas_activatable_iface_init (PeasActivatableInterface *iface)
+eom_window_activatable_iface_init (EomWindowActivatableInterface *iface)
 {
 	iface->activate = eom_statusbar_date_plugin_activate;
 	iface->deactivate = eom_statusbar_date_plugin_deactivate;
@@ -229,6 +230,6 @@ peas_register_types (PeasObjectModule *module)
 {
 	eom_statusbar_date_plugin_register_type (G_TYPE_MODULE (module));
 	peas_object_module_register_extension_type (module,
-	                                            PEAS_TYPE_ACTIVATABLE,
+	                                            EOM_TYPE_WINDOW_ACTIVATABLE,
 	                                            EOM_TYPE_STATUSBAR_DATE_PLUGIN);
 }
