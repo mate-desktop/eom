@@ -43,19 +43,6 @@ struct _EomListStorePrivate {
 };
 
 static void
-eom_list_store_finalize (GObject *object)
-{
-	EomListStore *store = EOM_LIST_STORE (object);
-
-	if (store->priv != NULL) {
-		g_free (store->priv);
-		store->priv = NULL;
-	}
-
-	G_OBJECT_CLASS (eom_list_store_parent_class)->finalize (object);
-}
-
-static void
 foreach_monitors_free (gpointer data, gpointer user_data)
 {
 	g_file_monitor_cancel (G_FILE_MONITOR (data));
@@ -93,7 +80,6 @@ eom_list_store_class_init (EomListStoreClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-	object_class->finalize = eom_list_store_finalize;
 	object_class->dispose = eom_list_store_dispose;
 
 	g_type_class_add_private (object_class, sizeof (EomListStorePrivate));
