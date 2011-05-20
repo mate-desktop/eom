@@ -2954,6 +2954,54 @@ eom_window_cmd_save_as (GtkAction *action, gpointer user_data)
 }
 
 static void
+eom_window_cmd_open_containing_folder (GtkAction *action, gpointer user_data)
+{
+	EomWindow *window = EOM_WINDOW (user_data);
+	EomWindowPrivate *priv;
+	
+	GtkWidget *eom_window_widget;
+  
+	GFile *file;
+	GFile *parent = NULL;
+	
+	eom_window_widget = GTK_WIDGET (window);	
+	priv = window->priv;
+	
+	g_return_if_fail (priv->image != NULL);	
+	
+	file = eom_image_get_file (priv->image);
+
+	if (file) {
+		parent = g_file_get_parent (file);
+		g_object_unref(file);
+	}
+
+	if (parent) {
+		char *parent_uri;
+		
+		parent_uri = g_file_get_uri (parent);
+		if (parent_uri) {
+			GdkScreen *screen;
+			guint32 timestamp;
+			GError *error;
+
+			screen = gtk_widget_get_screen (eom_window_widget);
+			timestamp = gtk_get_current_event_time ();
+
+			error = NULL;
+			if (!gtk_show_uri (screen, parent_uri, timestamp, &error)) {
+				eom_debug_message (DEBUG_WINDOW, "Could not open the containing folder");
+				g_error_free (error);
+			}
+
+			g_free (parent_uri);
+		}
+
+		g_object_unref(parent);
+	}
+}
+
+static void
 eom_window_cmd_print (GtkAction *action, gpointer user_data)
 {
 	EomWindow *window = EOM_WINDOW (user_data);
@@ -3651,6 +3699,9 @@ static const GtkActionEntry action_entries_image[] = {
 	{ "ImageSaveAs", "document-save-as", N_("Save _As…"), "<control><shift>s",
 	  N_("Save the selected images with a different name"),
 	  G_CALLBACK (eom_window_cmd_save_as) },
+	{ "ImageOpenContainingFolder", GTK_STOCK_DIRECTORY, N_("Open Containing _Folder"), NULL,
+	  N_("Show the folder which contains this file in the file manager"),
+	  G_CALLBACK (eom_window_cmd_open_containing_folder) },
 	{ "ImagePrint", "document-print", N_("_Print…"), "<control>p",
 	  N_("Print the selected image"),
 	  G_CALLBACK (eom_window_cmd_print) },
@@ -3823,6 +3874,9 @@ set_action_properties (GtkActionGroup *window_group,
 
         action = gtk_action_group_get_action (image_group, "EditRotate270");
         g_object_set (action, "short_label", _("Left"), NULL);
+
+        action = gtk_action_group_get_action (image_group, "ImageOpenContainingFolder");
+        g_object_set (action, "short_label", _("Open Folder"), NULL);
 
         action = gtk_action_group_get_action (image_group, "ViewZoomIn");
         g_object_set (action, "short_label", _("In"), NULL);
