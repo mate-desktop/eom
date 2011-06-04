@@ -40,6 +40,7 @@ GtkWidget* eom_scroll_view_new            (void);
 
 /* loading stuff */
 void     eom_scroll_view_set_image        (EomScrollView *view, EomImage *image);
+EomImage* eom_scroll_view_get_image       (EomScrollView *view);
 
 /* general properties */
 void     eom_scroll_view_set_scroll_wheel_zoom (EomScrollView *view, gboolean scroll_wheel_zoom);
