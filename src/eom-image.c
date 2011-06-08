@@ -693,17 +693,19 @@ eom_image_set_icc_data (EomImage *img, EomMetadataReader *md_reader)
 }
 #endif
 
-#ifdef HAVE_EXIF
 static void
 eom_image_set_orientation (EomImage *img)
 {
 	EomImagePrivate *priv;
+#ifdef HAVE_EXIF
 	ExifData* exif;
+#endif
 
 	g_return_if_fail (EOM_IS_IMAGE (img));
 
 	priv = img->priv;
 
+#ifdef HAVE_EXIF
 	exif = (ExifData*) eom_image_get_exif_info (img);
 
 	if (exif != NULL) {
@@ -715,10 +717,27 @@ eom_image_set_orientation (EomImage *img)
 		if (entry && entry->data != NULL) {
 			priv->orientation = exif_get_short (entry->data, o);
 		}
-	}
+		exif_data_unref (exif);
+	} else
+#endif
+	{
+		GdkPixbuf *pbuf;
 
-	/* exif_data_unref handles NULL values like g_free */
-	exif_data_unref (exif);
+		pbuf = eom_image_get_pixbuf (img);
+
+		if (pbuf) {
+			const gchar *o_str;
+
+			o_str = gdk_pixbuf_get_option (pbuf, "orientation");
+			if (o_str) {
+				short t = (short) g_ascii_strtoll (o_str,
+								   NULL, 10);
+				if (t >= 0 && t < 9)
+					priv->orientation = t;
+			}
+			g_object_unref (pbuf);
+		}
+	}
 
 	if (priv->orientation > 4 &&
 	    priv->orientation < 9) {
@@ -767,7 +786,6 @@ eom_image_autorotate (EomImage *img)
 	/* Schedule auto orientation */
 	img->priv->autorotate = TRUE;
 }
-#endif
 
 #ifdef HAVE_EXEMPI
 static void
@@ -1137,6 +1155,11 @@ eom_image_real_load (EomImage *img,
 			}
 
 			priv->file_is_changed = FALSE;
+
+			/* Set orientation again for safety, eg. if we don't
+			 * have Exif data or HAVE_EXIF is undefined. */
+			eom_image_set_orientation (img);
+
 		} else {
 			/* Some loaders don't report errors correctly.
 			 * Error will be set below. */
@@ -1233,16 +1256,16 @@ eom_image_load (EomImage *img, EomImageData data2read, EomJob *job, GError **err
 
 	success = eom_image_real_load (img, data2read, job, error);
 
-#ifdef HAVE_EXIF
 	/* Check that the metadata was loaded at least once before
 	 * trying to autorotate. Also only an imatge load job should try to
 	 * autorotate and image */
-	if (priv->autorotate && 
-	    priv->metadata_status == EOM_IMAGE_METADATA_READY &&
-	      data2read & EOM_IMAGE_DATA_IMAGE) {
-		eom_image_real_autorotate (img);
-	}
+	if (priv->autorotate &&
+#ifdef HAVE_EXIF
+	    priv->metadata_status != EOM_IMAGE_METADATA_NOT_READ &&
 #endif
+	    data2read & EOM_IMAGE_DATA_IMAGE) {
+	                          eom_image_real_autorotate (img);
+	}
 
 	if (success && eom_image_needs_transformation (img)) {
 		success = eom_image_apply_transformations (img, error);
