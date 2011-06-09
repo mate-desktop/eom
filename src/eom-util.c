@@ -157,7 +157,6 @@ eom_util_string_list_to_file_list (GSList *string_list)
 	return g_slist_reverse (file_list);
 }
 
-#ifdef HAVE_DBUS
 GSList*
 eom_util_strings_to_file_list (gchar **strings)
 {
@@ -171,7 +170,6 @@ eom_util_strings_to_file_list (gchar **strings)
 
  	return g_slist_reverse (file_list);
 }
-#endif
 
 GSList*
 eom_util_string_array_to_list (const gchar **files, gboolean create_uri)

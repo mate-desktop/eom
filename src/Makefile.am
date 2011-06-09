@@ -191,17 +191,6 @@ EXTRA_DIST = 				\
 	eom-enum-types.c.template	\
 	eom-marshal.list
 
-if HAVE_DBUS
-
-BUILT_SOURCES += eom-application-service.h
-
-EXTRA_DIST += eom-application-service.xml
-
-eom-application-service.h: eom-application-service.xml
-	$(AM_V_GEN)dbus-binding-tool --prefix=eom_application --mode=glib-server --output=eom-application-service.h $<
-
-endif
-
 CLEANFILES = $(BUILT_SOURCES)
 
 if HAVE_INTROSPECTION
