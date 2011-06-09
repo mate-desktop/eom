@@ -257,30 +257,6 @@ AC_SUBST(LIBJPEG)
 AM_CONDITIONAL(ENABLE_JPEG, test x$have_jpeg = xyes)
 AM_CONDITIONAL(HAVE_LIBJPEG_80, test "x$have_libjpeg_80" = xyes)
 
-# ****************
-# D-Bus activation
-# ****************
-
-DBUS_GLIB_REQUIRED=0.71
-
-AC_ARG_WITH([dbus], AC_HELP_STRING([--without-dbus], [disable dbus based activation]))
-have_dbus=no
-if test x$with_dbus != xno; then
-    PKG_CHECK_MODULES([DBUS], [dbus-glib-1 >= $DBUS_GLIB_REQUIRED], have_dbus=yes, have_dbus=no)
-fi
-if test x$have_dbus = xyes; then
-   AC_PATH_PROG([DBUS_BINDING_TOOL], [dbus-binding-tool], [no])
-
-   if test x$DBUS_BINDING_TOOL = "xno" ; then
-       AC_MSG_ERROR([dbus-binding-tool executable not found in your path - should be installed with dbus glib bindings])
-   fi
-
-    AC_DEFINE(HAVE_DBUS, 1, [DBUS based activation.])
-    EOM_MODULES="$EOM_MODULES dbus-glib-1 >= $DBUS_GLIB_REQUIRED"
-fi
-
-AM_CONDITIONAL([HAVE_DBUS], [test "x$have_dbus" = "xyes"])
-
 # ************************************
 # libXML2 (required for toolbareditor)
 # ************************************
@@ -390,6 +366,5 @@ Configure summary:
 	JPEG support ...............:  ${have_jpeg}
 	RSVG support ...............:  ${have_rsvg}
 	Colour management support ..:  ${have_lcms}
-	D-Bus activation............:  ${have_dbus}
 	GObject Introspection.......:  ${have_introspection}
 "

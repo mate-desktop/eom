@@ -42,10 +42,8 @@ GSList  *eom_util_parse_uri_string_list_to_file_list (const gchar *uri_list);
 G_GNUC_INTERNAL
 GSList  *eom_util_string_list_to_file_list    (GSList *string_list);
 
-#ifdef HAVE_DBUS
 G_GNUC_INTERNAL
 GSList  *eom_util_strings_to_file_list        (gchar **strings);
-#endif
 
 G_GNUC_INTERNAL
 GSList  *eom_util_string_array_to_list       (const gchar **files,

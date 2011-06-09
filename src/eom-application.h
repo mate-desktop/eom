@@ -29,9 +29,7 @@
 #include "eom-plugin-engine.h"
 #include "egg-toolbars-model.h"
 
-#ifdef HAVE_DBUS
 #include "totem-scrsaver.h"
-#endif
 
 #include <glib.h>
 #include <glib-object.h>
@@ -52,31 +50,24 @@ typedef struct _EomApplicationPrivate EomApplicationPrivate;
 #define EOM_APP				(eom_application_get_instance ())
 
 struct _EomApplication {
-	GObject base_instance;
+	GtkApplication base_instance;
 
 	EggToolbarsModel *toolbars_model;
 	gchar            *toolbars_file;
 
 	EomPluginEngine  *plugin_engine;
 
-#ifdef HAVE_DBUS
 	TotemScrsaver    *scr_saver;
-#endif
+	EomStartupFlags   flags;
 };
 
 struct _EomApplicationClass {
-	GObjectClass parent_class;
+	GtkApplicationClass parent_class;
 };
 
 GType	          eom_application_get_type	      (void) G_GNUC_CONST;
 
 EomApplication   *eom_application_get_instance        (void);
-
-#ifdef HAVE_DBUS
-gboolean          eom_application_register_service    (EomApplication *application);
-#endif
-
-void	          eom_application_shutdown	      (EomApplication   *application);
 
 gboolean          eom_application_open_window         (EomApplication   *application,
 						       guint             timestamp,
@@ -95,15 +86,11 @@ gboolean          eom_application_open_file_list     (EomApplication  *applicati
 						      EomStartupFlags flags,
 						      GError         **error);
 
-#ifdef HAVE_DBUS
 gboolean          eom_application_open_uris           (EomApplication *application,
 						       gchar         **uris,
 						       guint           timestamp,
 						       EomStartupFlags flags,
 						       GError        **error);
-#endif
-
-GList		 *eom_application_get_windows	      (EomApplication   *application);
 
 EggToolbarsModel *eom_application_get_toolbars_model  (EomApplication *application);
 
@@ -111,11 +98,9 @@ void              eom_application_save_toolbars_model (EomApplication *applicati
 
 void		  eom_application_reset_toolbars_model (EomApplication *app);
 
-#ifdef HAVE_DBUS
 void              eom_application_screensaver_enable  (EomApplication *application);
 
 void              eom_application_screensaver_disable (EomApplication *application);
-#endif
 
 G_END_DECLS
 

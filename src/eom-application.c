@@ -32,9 +32,7 @@
 #include "eom-application.h"
 #include "eom-util.h"
 
-#ifdef HAVE_DBUS
 #include "totem-scrsaver.h"
-#endif
 
 #include <string.h>
 #include <glib.h>
@@ -43,12 +41,7 @@
 #include <gtk/gtk.h>
 #include <gdk/gdkx.h>
 
-#ifdef HAVE_DBUS
-#include "eom-application-service.h"
-#include <dbus/dbus-glib-bindings.h>
-
 #define APPLICATION_SERVICE_NAME "org.mate.eom.ApplicationService"
-#endif
 
 static void eom_application_load_accelerators (void);
 static void eom_application_save_accelerators (void);
@@ -56,81 +49,103 @@ static void eom_application_save_accelerators (void);
 #define EOM_APPLICATION_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_APPLICATION, EomApplicationPrivate))
 
-G_DEFINE_TYPE (EomApplication, eom_application, G_TYPE_OBJECT);
+G_DEFINE_TYPE (EomApplication, eom_application, GTK_TYPE_APPLICATION);
 
-#ifdef HAVE_DBUS
-
-/**
- * eom_application_register_service:
- * @application: An #EomApplication.
- *
- * Registers #EomApplication<!-- -->'s DBus service, to allow
- * remote calls. If the DBus service is already registered,
- * or there is any other connection error, returns %FALSE.
- *
- * Returns: %TRUE if the service was registered succesfully. %FALSE
- * otherwise.
- **/
-gboolean
-eom_application_register_service (EomApplication *application)
+static void
+eom_application_activate (GApplication *application)
 {
-	static DBusGConnection *connection = NULL;
-	DBusGProxy *driver_proxy;
-	GError *err = NULL;
-	guint request_name_result;
-
-	if (connection) {
-		g_warning ("Service already registered.");
-		return FALSE;
-	}
-
-	connection = dbus_g_bus_get (DBUS_BUS_STARTER, &err);
-
-	if (connection == NULL) {
-		g_warning ("Service registration failed.");
-		g_error_free (err);
-
-		return FALSE;
-	}
-
-	driver_proxy = dbus_g_proxy_new_for_name (connection,
-						  DBUS_SERVICE_DBUS,
-						  DBUS_PATH_DBUS,
-						  DBUS_INTERFACE_DBUS);
-
-	if (!org_freedesktop_DBus_request_name (driver_proxy,
-                                        	APPLICATION_SERVICE_NAME,
-						DBUS_NAME_FLAG_DO_NOT_QUEUE,
-						&request_name_result, &err)) {
-		g_warning ("Service registration failed.");
-		g_clear_error (&err);
-	}
-
-	g_object_unref (driver_proxy);
-
-	if (request_name_result == DBUS_REQUEST_NAME_REPLY_EXISTS) {
-		return FALSE;
-	}
-
-	dbus_g_object_type_install_info (EOM_TYPE_APPLICATION,
-					 &dbus_glib_eom_application_object_info);
-
-	dbus_g_connection_register_g_object (connection,
-					     "/org/mate/eom/Eom",
-                                             G_OBJECT (application));
-
-        application->scr_saver = totem_scrsaver_new ();
-        g_object_set (application->scr_saver,
-		      "reason", _("Running in fullscreen mode"),
-		      NULL);
-
-	return TRUE;
+	eom_application_open_window (EOM_APPLICATION (application),
+				     GDK_CURRENT_TIME,
+				     EOM_APPLICATION (application)->flags,
+				     NULL);
 }
-#endif /* ENABLE_DBUS */
+
+static void
+eom_application_open (GApplication *application,
+		      GFile       **files,
+		      gint          n_files,
+		      const gchar  *hint)
+{
+	GSList *list = NULL;
+
+	while (n_files--)
+		list = g_slist_prepend (list, files[n_files]);
+
+	eom_application_open_file_list (EOM_APPLICATION (application),
+					list, GDK_CURRENT_TIME,
+					EOM_APPLICATION (application)->flags,
+					NULL);
+}
+
+static void
+eom_application_finalize (GObject *object)
+{
+	EomApplication *application = EOM_APPLICATION (object);
+
+	if (application->toolbars_model) {
+		g_object_unref (application->toolbars_model);
+		application->toolbars_model = NULL;
+		g_free (application->toolbars_file);
+		application->toolbars_file = NULL;
+	}
+	if (application->plugin_engine) {
+		g_object_unref (application->plugin_engine);
+		application->plugin_engine = NULL;
+	}
+	eom_application_save_accelerators ();
+}
+
+static void
+eom_application_add_platform_data (GApplication *application,
+				   GVariantBuilder *builder)
+{
+	EomApplication *app = EOM_APPLICATION (application);
+
+	G_APPLICATION_CLASS (eom_application_parent_class)->add_platform_data (application,
+									       builder);
+
+	if (app->flags) {
+		g_variant_builder_add (builder, "{sv}",
+				       "eom-application-startup-flags",
+				       g_variant_new_byte (app->flags));
+	}
+}
+
+static void
+eom_application_before_emit (GApplication *application,
+			     GVariant *platform_data)
+{
+	GVariantIter iter;
+	const gchar *key;
+	GVariant *value;
+
+	EOM_APPLICATION (application)->flags = 0;
+	g_variant_iter_init (&iter, platform_data);
+	while (g_variant_iter_loop (&iter, "{&sv}", &key, &value)) {
+		if (strcmp (key, "eom-application-startup-flags") == 0) {
+			EOM_APPLICATION (application)->flags = g_variant_get_byte (value);
+		}
+	}
+
+	G_APPLICATION_CLASS (eom_application_parent_class)->before_emit (application,
+									 platform_data);
+}
 
 static void
 eom_application_class_init (EomApplicationClass *eom_application_class)
 {
+	GApplicationClass *application_class;
+	GObjectClass *object_class;
+
+	application_class = (GApplicationClass *) eom_application_class;
+	object_class = (GObjectClass *) eom_application_class;
+
+	object_class->finalize = eom_application_finalize;
+
+	application_class->activate = eom_application_activate;
+	application_class->open = eom_application_open;
+	application_class->add_platform_data = eom_application_add_platform_data;
+	application_class->before_emit = eom_application_before_emit;
 }
 
 static void
@@ -140,9 +155,9 @@ eom_application_init (EomApplication *eom_application)
 
 	eom_session_init (eom_application);
 
-	eom_application->plugin_engine = eom_plugin_engine_new ();
-
 	eom_application->toolbars_model = egg_toolbars_model_new ();
+	eom_application->plugin_engine = eom_plugin_engine_new ();
+	eom_application->flags = 0;
 
 	egg_toolbars_model_load_names (eom_application->toolbars_model,
 				       EOM_DATA_DIR "/eom-toolbar.xml");
@@ -178,7 +193,10 @@ eom_application_get_instance (void)
 	static EomApplication *instance;
 
 	if (!instance) {
-		instance = EOM_APPLICATION (g_object_new (EOM_TYPE_APPLICATION, NULL));
+		instance = EOM_APPLICATION (g_object_new (EOM_TYPE_APPLICATION,
+							  "application-id", APPLICATION_SERVICE_NAME,
+							  "flags", G_APPLICATION_HANDLES_OPEN,
+							  NULL));
 	}
 
 	return instance;
@@ -193,7 +211,7 @@ eom_application_get_empty_window (EomApplication *application)
 
 	g_return_val_if_fail (EOM_IS_APPLICATION (application), NULL);
 
-	windows = eom_application_get_windows (application);
+	windows = gtk_application_get_windows (GTK_APPLICATION (application));
 
 	for (l = windows; l != NULL; l = l->next) {
 		EomWindow *window = EOM_WINDOW (l->data);
@@ -203,8 +221,6 @@ eom_application_get_empty_window (EomApplication *application)
 			break;
 		}
 	}
-
-	g_list_free (windows);
 
 	return empty_window;
 }
@@ -386,7 +402,6 @@ eom_application_open_uri_list (EomApplication  *application,
 					       error);
 }
 
-#ifdef HAVE_DBUS
 /**
  * eom_application_open_uris:
  * @application: an #EomApplication
@@ -414,70 +429,6 @@ eom_application_open_uris (EomApplication  *application,
 
  	return eom_application_open_file_list (application, file_list, timestamp,
 						    flags, error);
-}
-#endif
-
-/**
- * eom_application_shutdown:
- * @application: An #EomApplication.
- *
- * Takes care of shutting down the Eye of MATE, and quits.
- **/
-void
-eom_application_shutdown (EomApplication *application)
-{
-	g_return_if_fail (EOM_IS_APPLICATION (application));
-
-	if (application->toolbars_model) {
-		g_object_unref (application->toolbars_model);
-		application->toolbars_model = NULL;
-
-		g_free (application->toolbars_file);
-		application->toolbars_file = NULL;
-	}
-
-	if (application->plugin_engine) {
-		g_object_unref (application->plugin_engine);
-		application->plugin_engine = NULL;
-	}
-
-	eom_application_save_accelerators ();
-
-	g_object_unref (application);
-
-	gtk_main_quit ();
-}
-
-/**
- * eom_application_get_windows:
- * @application: An #EomApplication.
- *
- * Gets the list of existing #EomApplication<!-- -->s. The windows
- * in this list are not individually referenced, you need to keep
- * your own references if you want to perform actions that may destroy
- * them.
- *
- * Returns: (element-type EomWindow) (transfer container): A new list of #EomWindow<!-- -->s.
- **/
-GList *
-eom_application_get_windows (EomApplication *application)
-{
-	GList *l, *toplevels;
-	GList *windows = NULL;
-
-	g_return_val_if_fail (EOM_IS_APPLICATION (application), NULL);
-
-	toplevels = gtk_window_list_toplevels ();
-
-	for (l = toplevels; l != NULL; l = l->next) {
-		if (EOM_IS_WINDOW (l->data)) {
-			windows = g_list_append (windows, l->data);
-		}
-	}
-
-	g_list_free (toplevels);
-
-	return windows;
 }
 
 /**
@@ -534,7 +485,6 @@ eom_application_reset_toolbars_model (EomApplication *app)
 				      EGG_TB_MODEL_NOT_REMOVABLE);
 }
 
-#ifdef HAVE_DBUS
 /**
  * eom_application_screensaver_enable:
  * @application: an #EomApplication.
@@ -562,7 +512,6 @@ eom_application_screensaver_disable (EomApplication *application)
         if (application->scr_saver)
                 totem_scrsaver_disable (application->scr_saver);
 }
-#endif
 
 static void
 eom_application_load_accelerators (void)

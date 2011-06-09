@@ -2057,9 +2057,7 @@ eom_window_run_fullscreen (EomWindow *window, gboolean slideshow)
 	gtk_window_fullscreen (GTK_WINDOW (window));
 	eom_window_update_fullscreen_popup (window);
 
-#ifdef HAVE_DBUS
 	eom_application_screensaver_disable (EOM_APP);
-#endif
 
 	/* Update both actions as we could've already been in one those modes */
 	eom_window_update_slideshow_action (window);
@@ -2124,9 +2122,7 @@ eom_window_stop_fullscreen (EomWindow *window, gboolean slideshow)
 
 	eom_scroll_view_show_cursor (EOM_SCROLL_VIEW (priv->view));
 
-#ifdef HAVE_DBUS
 	eom_application_screensaver_enable (EOM_APP);
-#endif
 }
 
 static void
@@ -4572,6 +4568,8 @@ eom_window_init (EomWindow *window)
 	window->priv->save_disabled = FALSE;
 
 	window->priv->page_setup = NULL;
+
+	gtk_window_set_application (GTK_WINDOW (window), GTK_APPLICATION (EOM_APP));
 }
 
 static void
@@ -4715,24 +4713,6 @@ eom_window_dispose (GObject *object)
 	peas_engine_garbage_collect (PEAS_ENGINE (EOM_APP->plugin_engine));
 
 	G_OBJECT_CLASS (eom_window_parent_class)->dispose (object);
-}
-
-static void
-eom_window_finalize (GObject *object)
-{
-	GList *windows = eom_application_get_windows (EOM_APP);
-
-	g_return_if_fail (EOM_IS_WINDOW (object));
-
-	eom_debug (DEBUG_WINDOW);
-
-	if (windows == NULL) {
-		eom_application_shutdown (EOM_APP);
-	} else {
-		g_list_free (windows);
-	}
-
-	G_OBJECT_CLASS (eom_window_parent_class)->finalize (object);
 }
 
 static gint
@@ -5090,7 +5070,6 @@ eom_window_class_init (EomWindowClass *class)
 
 	g_object_class->constructor = eom_window_constructor;
 	g_object_class->dispose = eom_window_dispose;
-	g_object_class->finalize = eom_window_finalize;
 	g_object_class->set_property = eom_window_set_property;
 	g_object_class->get_property = eom_window_get_property;
 
