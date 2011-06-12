@@ -420,8 +420,6 @@ filter_files (GSList *files, GList **file_list, GList **error_list)
 						      g_file_get_uri (file));
 			break;
 		}
-
-		g_object_unref (file);
 	}
 
 	*file_list  = g_list_reverse (*file_list);
