@@ -351,6 +351,94 @@ set_row_data (GtkTreeStore *store, char *path, char *parent, const char *attribu
 }
 
 #ifdef HAVE_EXIF
+
+static const char *
+eom_exif_entry_get_value (ExifEntry    *e,
+                          char         *buf,
+                          guint         n_buf)
+{
+	ExifByteOrder bo;
+
+	/* For now we only want to reformat some GPS values */
+	if (G_LIKELY (exif_entry_get_ifd (e) != EXIF_IFD_GPS))
+		return exif_entry_get_value (e, buf, n_buf);
+
+	bo = exif_data_get_byte_order (e->parent->parent);
+
+	/* Cast to number to avoid warnings about values not in enumeration */
+	switch ((guint16) e->tag) {
+		case EXIF_TAG_GPS_LATITUDE:
+		case EXIF_TAG_GPS_LONGITUDE:
+		{
+			gsize rational_size;
+			ExifRational r;
+			gfloat h = 0., m = 0.;
+
+
+			rational_size = exif_format_get_size (EXIF_FORMAT_RATIONAL);
+			if (G_UNLIKELY (e->components != 3 ||
+			    e->format != EXIF_FORMAT_RATIONAL))
+				return exif_entry_get_value (e, buf, n_buf);
+
+			r = exif_get_rational (e->data, bo);
+			if (r.denominator != 0)
+				h = (gfloat)r.numerator / r.denominator;
+
+			r = exif_get_rational (e->data + rational_size, bo);
+			if (r.denominator != 0)
+				m = (gfloat)r.numerator / (gfloat)r.denominator;
+
+			r = exif_get_rational (e->data + (2 * rational_size),
+					       bo);
+			if (r.numerator != 0 && r.denominator != 0) {
+				gfloat s;
+
+				s = (gfloat)r.numerator / (gfloat)r.denominator;
+				g_snprintf (buf, n_buf,
+					    "%.0f° %.0f' %.2f\"",
+					    h, m, s);
+			} else {
+				g_snprintf (buf, n_buf,
+					    "%.0f° %.2f'",
+					    h, m);
+			}
+
+			break;
+		}
+		case EXIF_TAG_GPS_LATITUDE_REF:
+		case EXIF_TAG_GPS_LONGITUDE_REF:
+		{
+			if (G_UNLIKELY (e->components != 2 ||
+			    e->format != EXIF_FORMAT_ASCII))
+				return exif_entry_get_value (e, buf, n_buf);
+
+			switch (e->data[0]) {
+			case 'N':
+				g_snprintf (buf, n_buf, "%s", _("North"));
+				break;
+			case 'E':
+				g_snprintf (buf, n_buf, "%s", _("East"));
+				break;
+			case 'W':
+				g_snprintf (buf, n_buf, "%s", _("West"));
+				break;
+			case 'S':
+				g_snprintf (buf, n_buf, "%s", _("South"));
+				break;
+			default:
+				return exif_entry_get_value (e, buf, n_buf);
+				break;
+			}
+			break;
+		}
+		default:
+			return exif_entry_get_value (e, buf, n_buf);
+			break;
+	}
+
+	return buf;
+}
+
 static void
 exif_entry_cb (ExifEntry *entry, gpointer data)
 {
@@ -374,7 +462,7 @@ exif_entry_cb (ExifEntry *entry, gpointer data)
 			      path,
 			      NULL,
 			      exif_tag_get_name_in_ifd (entry->tag, ifd),
-			      exif_entry_get_value (entry, b, sizeof(b)));
+			      eom_exif_entry_get_value (entry, b, sizeof(b)));
 	} else {
 
 		ExifMnoteData *mnote = (entry->tag == EXIF_TAG_MAKER_NOTE ?
@@ -406,8 +494,8 @@ exif_entry_cb (ExifEntry *entry, gpointer data)
 					     NULL,
 					     exif_categories[cat].path,
 					     exif_tag_get_name_in_ifd (entry->tag, ifd),
-					     exif_entry_get_value (entry, b,
-								   sizeof(b)));
+					     eom_exif_entry_get_value (entry, b,
+						                           sizeof(b)));
 
 			g_hash_table_insert (priv->id_path_hash,
 					     GINT_TO_POINTER (entry->tag),
