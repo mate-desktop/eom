@@ -49,6 +49,7 @@ typedef enum {
 	EXIF_CATEGORY_CAMERA,
 	EXIF_CATEGORY_IMAGE_DATA,
 	EXIF_CATEGORY_IMAGE_TAKING_CONDITIONS,
+	EXIF_CATEGORY_GPS_DATA,
 	EXIF_CATEGORY_MAKER_NOTE,
 	EXIF_CATEGORY_OTHER,
 #ifdef HAVE_EXEMPI
@@ -68,13 +69,14 @@ static ExifCategoryInfo exif_categories[] = {
 	{ N_("Camera"),                  "0" },
 	{ N_("Image Data"),              "1" },
 	{ N_("Image Taking Conditions"), "2" },
-	{ N_("Maker Note"),              "3" },
-	{ N_("Other"),                   "4" },
+	{ N_("GPS Data"),                "3" },
+	{ N_("Maker Note"),              "4" },
+	{ N_("Other"),                   "5" },
 #ifdef HAVE_EXEMPI
-	{ N_("XMP Exif"),                "5" },
-	{ N_("XMP IPTC"),                "6" },
-	{ N_("XMP Rights Management"),   "7" },
-	{ N_("XMP Other"),               "8" },
+	{ N_("XMP Exif"),                "6" },
+	{ N_("XMP IPTC"),                "7" },
+	{ N_("XMP Rights Management"),   "8" },
+	{ N_("XMP Other"),               "9" },
 #endif
 	{ NULL, NULL }
 };
@@ -285,7 +287,7 @@ get_exif_category (ExifEntry *entry)
 
 	/* Some GPS tag IDs overlap with other ones, so check the IFD */
 	if (exif_entry_get_ifd (entry) == EXIF_IFD_GPS) {
-		return EXIF_CATEGORY_OTHER;
+		return EXIF_CATEGORY_GPS_DATA;
 	}
 
 	for (i = 0; exif_tag_category_map [i].id != -1; i++) {
