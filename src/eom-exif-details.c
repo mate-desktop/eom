@@ -283,6 +283,11 @@ get_exif_category (ExifEntry *entry)
 	ExifCategory cat = EXIF_CATEGORY_OTHER;
 	int i;
 
+	/* Some GPS tag IDs overlap with other ones, so check the IFD */
+	if (exif_entry_get_ifd (entry) == EXIF_IFD_GPS) {
+		return EXIF_CATEGORY_OTHER;
+	}
+
 	for (i = 0; exif_tag_category_map [i].id != -1; i++) {
 		if (exif_tag_category_map[i].id == (int) entry->tag) {
 			cat = exif_tag_category_map[i].category;
@@ -353,6 +358,7 @@ exif_entry_cb (ExifEntry *entry, gpointer data)
 	EomExifDetails *view;
 	EomExifDetailsPrivate *priv;
 	ExifCategory cat;
+	ExifIfd ifd = exif_entry_get_ifd (entry);
 	char *path;
 	char b[1024];
 
@@ -367,7 +373,7 @@ exif_entry_cb (ExifEntry *entry, gpointer data)
 		set_row_data (store,
 			      path,
 			      NULL,
-			      exif_tag_get_name (entry->tag),
+			      exif_tag_get_name_in_ifd (entry->tag, ifd),
 			      exif_entry_get_value (entry, b, sizeof(b)));
 	} else {
 
@@ -399,7 +405,7 @@ exif_entry_cb (ExifEntry *entry, gpointer data)
 			path = set_row_data (store,
 					     NULL,
 					     exif_categories[cat].path,
-					     exif_tag_get_name (entry->tag),
+					     exif_tag_get_name_in_ifd (entry->tag, ifd),
 					     exif_entry_get_value (entry, b,
 								   sizeof(b)));
 
