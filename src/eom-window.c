@@ -4489,6 +4489,8 @@ eom_window_construct_ui (EomWindow *window)
 	g_settings_bind (priv->ui_settings, EOM_CONF_UI_IMAGE_COLLECTION_RESIZABLE,
 			 window, "collection-resizable", G_SETTINGS_BIND_GET);
 
+	update_action_groups_state (window);
+
 	if ((priv->flags & EOM_STARTUP_FULLSCREEN) ||
 	    (priv->flags & EOM_STARTUP_SLIDE_SHOW)) {
 		eom_window_run_fullscreen (window, (priv->flags & EOM_STARTUP_SLIDE_SHOW));
