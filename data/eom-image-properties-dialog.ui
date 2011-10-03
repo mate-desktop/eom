@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.20.0 -->
+<!-- Generated with glade 3.22.1 -->
 <interface>
-  <requires lib="gtk+" version="3.14"/>
+  <requires lib="gtk+" version="3.22"/>
   <object class="GtkDialog" id="eom_image_properties_dialog">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="title" translatable="yes">Image Properties</property>
     <property name="icon_name">gtk-properties</property>
     <property name="type_hint">dialog</property>
+    <child>
+      <placeholder/>
+    </child>
     <child internal-child="vbox">
       <object class="GtkBox" id="image-properties-dialog-vbox">
         <property name="visible">True</property>
@@ -189,6 +192,8 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="halign">start</property>
+                            <property name="margin_top">8</property>
+                            <property name="margin_bottom">8</property>
                             <property name="label" translatable="yes">Name:</property>
                             <property name="justify">right</property>
                             <attributes>
@@ -206,6 +211,8 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="halign">start</property>
+                            <property name="margin_top">8</property>
+                            <property name="margin_bottom">8</property>
                             <property name="label" translatable="yes">Width:</property>
                             <attributes>
                               <attribute name="weight" value="bold"/>
@@ -222,6 +229,8 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="halign">start</property>
+                            <property name="margin_top">8</property>
+                            <property name="margin_bottom">8</property>
                             <property name="label" translatable="yes">Height:</property>
                             <attributes>
                               <attribute name="weight" value="bold"/>
@@ -238,6 +247,8 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="halign">start</property>
+                            <property name="margin_top">8</property>
+                            <property name="margin_bottom">8</property>
                             <property name="label" translatable="yes">Type:</property>
                             <attributes>
                               <attribute name="weight" value="bold"/>
@@ -254,6 +265,8 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="halign">start</property>
+                            <property name="margin_top">8</property>
+                            <property name="margin_bottom">8</property>
                             <property name="label" translatable="yes">Bytes:</property>
                             <attributes>
                               <attribute name="weight" value="bold"/>
@@ -270,6 +283,8 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="halign">start</property>
+                            <property name="margin_top">8</property>
+                            <property name="margin_bottom">8</property>
                             <property name="label" translatable="yes">Location:</property>
                             <attributes>
                               <attribute name="weight" value="bold"/>
@@ -299,6 +314,8 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="halign">start</property>
+                            <property name="margin_top">9</property>
+                            <property name="margin_bottom">7</property>
                             <property name="selectable">True</property>
                           </object>
                           <packing>
@@ -312,6 +329,8 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="halign">start</property>
+                            <property name="margin_top">9</property>
+                            <property name="margin_bottom">7</property>
                             <property name="selectable">True</property>
                           </object>
                           <packing>
@@ -325,6 +344,8 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="halign">start</property>
+                            <property name="margin_top">9</property>
+                            <property name="margin_bottom">7</property>
                             <property name="selectable">True</property>
                           </object>
                           <packing>
@@ -338,6 +359,8 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="halign">start</property>
+                            <property name="margin_top">9</property>
+                            <property name="margin_bottom">7</property>
                             <property name="selectable">True</property>
                           </object>
                           <packing>
@@ -351,6 +374,8 @@
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="halign">start</property>
+                            <property name="margin_top">9</property>
+                            <property name="margin_bottom">7</property>
                             <property name="selectable">True</property>
                           </object>
                           <packing>
@@ -360,12 +385,11 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkLabel" id="location_label">
+                          <object class="GtkButton" id="folder_button">
+                            <property name="label">button</property>
                             <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="halign">start</property>
-                            <property name="selectable">True</property>
-                            <property name="ellipsize">end</property>
+                            <property name="can_focus">True</property>
+                            <property name="receives_default">True</property>
                           </object>
                           <packing>
                             <property name="expand">False</property>
