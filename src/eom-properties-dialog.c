@@ -80,7 +80,8 @@ struct _EomPropertiesDialogPrivate {
 	GtkWidget      *height_label;
 	GtkWidget      *type_label;
 	GtkWidget      *bytes_label;
-	GtkWidget      *location_label;
+	GtkWidget      *folder_button;
+	gchar          *folder_button_uri;
 	GtkWidget      *created_label;
 	GtkWidget      *modified_label;
 #ifdef HAVE_EXIF
@@ -115,9 +116,9 @@ static void
 pd_update_general_tab (EomPropertiesDialog *prop_dlg,
 		       EomImage            *image)
 {
-	gchar *bytes_str, *dir_str, *uri_str;
+	gchar *bytes_str, *dir_str;
 	gchar *width_str, *height_str;
-	GFile *file;
+	GFile *file, *parent_file;
 	GFileInfo *file_info;
 	const char *mime_str;
 	char *type_str;
@@ -165,15 +166,21 @@ pd_update_general_tab (EomPropertiesDialog *prop_dlg,
 
 	gtk_label_set_text (GTK_LABEL (prop_dlg->priv->bytes_label), bytes_str);
 
-	uri_str = eom_image_get_uri_for_display (image);
-	dir_str = g_path_get_dirname (uri_str);
-	gtk_label_set_text (GTK_LABEL (prop_dlg->priv->location_label),
-			    dir_str);
+	parent_file = g_file_get_parent (file);
+	if (parent_file == NULL) {
+		/* file is root directory itself */
+		parent_file = g_object_ref (file);
+	}
+	dir_str = g_file_get_basename (parent_file);
+	gtk_button_set_label (GTK_BUTTON (prop_dlg->priv->folder_button),
+			      dir_str);
+	g_free (prop_dlg->priv->folder_button_uri);
+	prop_dlg->priv->folder_button_uri = g_file_get_uri (parent_file);
+	g_object_unref (parent_file);
 
 	g_free (type_str);
 	g_free (bytes_str);
 	g_free (dir_str);
-	g_free (uri_str);
 }
 
 #if HAVE_EXEMPI
@@ -401,6 +408,23 @@ pd_close_button_clicked_cb (GtkButton *button,
 	eom_dialog_hide (EOM_DIALOG (user_data));
 }
 
+static void
+pd_folder_button_clicked_cb (GtkButton *button, gpointer data)
+{
+	EomPropertiesDialogPrivate *priv = EOM_PROPERTIES_DIALOG (data)->priv;
+	GdkScreen *screen;
+	guint32 timestamp;
+
+
+	if (!priv->folder_button_uri)
+		return;
+	
+	screen = gtk_widget_get_screen (GTK_WIDGET (button));
+	timestamp = gtk_get_current_event_time ();
+
+	gtk_show_uri (screen, priv->folder_button_uri, timestamp, NULL);
+}
+
 static gboolean
 eom_properties_dialog_page_switch (GtkNotebook     *notebook,
 				   gpointer         page,
@@ -531,6 +555,9 @@ eom_properties_dialog_dispose (GObject *object)
 		priv->thumbview = NULL;
 	}
 
+	g_free (priv->folder_button_uri);
+	priv->folder_button_uri = NULL;
+
 	G_OBJECT_CLASS (eom_properties_dialog_parent_class)->dispose (object);
 }
 
@@ -600,7 +627,7 @@ eom_properties_dialog_init (EomPropertiesDialog *prop_dlg)
 			         "height_label", &priv->height_label,
 			         "type_label", &priv->type_label,
 			         "bytes_label", &priv->bytes_label,
-			         "location_label", &priv->location_label,
+			         "folder_button", &priv->folder_button,
 			         "created_label", &priv->created_label,
 			         "modified_label", &priv->modified_label,
 #ifdef HAVE_EXIF
@@ -644,6 +671,15 @@ eom_properties_dialog_init (EomPropertiesDialog *prop_dlg)
 			  "clicked",
 			  G_CALLBACK (pd_close_button_clicked_cb),
 			  prop_dlg);
+
+	g_signal_connect (priv->folder_button,
+			  "clicked",
+			  G_CALLBACK (pd_folder_button_clicked_cb),
+			  prop_dlg);
+	gtk_widget_set_tooltip_text (GTK_WIDGET (priv->folder_button),
+				     _("Show the folder which contains this "
+				       "file in the file manager"));
+	priv->folder_button_uri = NULL;
 
 	gtk_widget_set_size_request (priv->thumbnail_image, 100, 100);
 
