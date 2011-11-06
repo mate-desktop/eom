@@ -1,0 +1,196 @@
+<!-- ##### SECTION Title ##### -->
+EomWindow
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### MACRO EOM_WINDOW_ERROR ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### ENUM EomWindowMode ##### -->
+<para>
+
+</para>
+
+@EOM_WINDOW_MODE_UNKNOWN: 
+@EOM_WINDOW_MODE_NORMAL: 
+@EOM_WINDOW_MODE_FULLSCREEN: 
+@EOM_WINDOW_MODE_SLIDESHOW: 
+
+<!-- ##### ENUM EomWindowError ##### -->
+<para>
+
+</para>
+
+@EOM_WINDOW_ERROR_CONTROL_NOT_FOUND: 
+@EOM_WINDOW_ERROR_UI_NOT_FOUND: 
+@EOM_WINDOW_ERROR_NO_PERSIST_FILE_INTERFACE: 
+@EOM_WINDOW_ERROR_IO: 
+@EOM_WINDOW_ERROR_TRASH_NOT_FOUND: 
+@EOM_WINDOW_ERROR_GENERIC: 
+@EOM_WINDOW_ERROR_UNKNOWN: 
+
+<!-- ##### ENUM EomStartupFlags ##### -->
+<para>
+
+</para>
+
+@EOM_STARTUP_FULLSCREEN: 
+@EOM_STARTUP_SLIDE_SHOW: 
+@EOM_STARTUP_DISABLE_COLLECTION: 
+
+<!-- ##### STRUCT EomWindow ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL EomWindow::prepared ##### -->
+<para>
+
+</para>
+
+@eomwindow: the object which received the signal.
+
+<!-- ##### ARG EomWindow:startup-flags ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION eom_window_new ##### -->
+<para>
+
+</para>
+
+@flags: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_window_get_mode ##### -->
+<para>
+
+</para>
+
+@window: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_window_set_mode ##### -->
+<para>
+
+</para>
+
+@window: 
+@mode: 
+
+
+<!-- ##### FUNCTION eom_window_get_ui_manager ##### -->
+<para>
+
+</para>
+
+@window: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_window_get_store ##### -->
+<para>
+
+</para>
+
+@window: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_window_get_view ##### -->
+<para>
+
+</para>
+
+@window: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_window_get_sidebar ##### -->
+<para>
+
+</para>
+
+@window: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_window_get_thumb_view ##### -->
+<para>
+
+</para>
+
+@window: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_window_get_thumb_nav ##### -->
+<para>
+
+</para>
+
+@window: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_window_get_statusbar ##### -->
+<para>
+
+</para>
+
+@window: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_window_get_image ##### -->
+<para>
+
+</para>
+
+@window: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_window_open_file_list ##### -->
+<para>
+
+</para>
+
+@window: 
+@file_list: 
+
+
+<!-- ##### FUNCTION eom_window_is_empty ##### -->
+<para>
+
+</para>
+
+@window: 
+@Returns: 
+
+

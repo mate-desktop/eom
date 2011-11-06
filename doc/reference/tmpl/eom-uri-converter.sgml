@@ -1,0 +1,174 @@
+<!-- ##### SECTION Title ##### -->
+EomURIConverter
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### ENUM EomUCType ##### -->
+<para>
+
+</para>
+
+@EOM_UC_STRING: 
+@EOM_UC_FILENAME: 
+@EOM_UC_COUNTER: 
+@EOM_UC_COMMENT: 
+@EOM_UC_DATE: 
+@EOM_UC_TIME: 
+@EOM_UC_DAY: 
+@EOM_UC_MONTH: 
+@EOM_UC_YEAR: 
+@EOM_UC_HOUR: 
+@EOM_UC_MINUTE: 
+@EOM_UC_SECOND: 
+@EOM_UC_END: 
+
+<!-- ##### STRUCT EomUCInfo ##### -->
+<para>
+
+</para>
+
+@description: 
+@rep: 
+@req_exif: 
+
+<!-- ##### ENUM EomUCError ##### -->
+<para>
+
+</para>
+
+@EOM_UC_ERROR_INVALID_UNICODE: 
+@EOM_UC_ERROR_INVALID_CHARACTER: 
+@EOM_UC_ERROR_EQUAL_FILENAMES: 
+@EOM_UC_ERROR_UNKNOWN: 
+
+<!-- ##### MACRO EOM_UC_ERROR ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### STRUCT EomURIConverter ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG EomURIConverter:convert-spaces ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG EomURIConverter:counter-n-digits ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG EomURIConverter:counter-start ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG EomURIConverter:n-images ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG EomURIConverter:space-character ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION eom_uc_error_quark ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_uri_converter_new ##### -->
+<para>
+
+</para>
+
+@base_file: 
+@img_format: 
+@format_string: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_uri_converter_check ##### -->
+<para>
+
+</para>
+
+@converter: 
+@img_list: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_uri_converter_requires_exif ##### -->
+<para>
+
+</para>
+
+@converter: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_uri_converter_do ##### -->
+<para>
+
+</para>
+
+@converter: 
+@image: 
+@file: 
+@format: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_uri_converter_preview ##### -->
+<para>
+
+</para>
+
+@format_str: 
+@img: 
+@format: 
+@counter: 
+@n_images: 
+@convert_spaces: 
+@space_char: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_uri_converter_print_list ##### -->
+<para>
+
+</para>
+
+@conv: 
+
+

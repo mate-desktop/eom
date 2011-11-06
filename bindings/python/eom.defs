@@ -1,0 +1,1222 @@
+;; -*- scheme -*-
+; object definitions ...
+(define-object Application
+  (in-module "Eom")
+  (parent "GObject")
+  (c-name "EomApplication")
+  (gtype-id "EOM_TYPE_APPLICATION")
+)
+
+(define-object Dialog
+  (in-module "Eom")
+  (parent "GObject")
+  (c-name "EomDialog")
+  (gtype-id "EOM_TYPE_DIALOG")
+)
+
+(define-object Image
+  (in-module "Eom")
+  (parent "GObject")
+  (c-name "EomImage")
+  (gtype-id "EOM_TYPE_IMAGE")
+)
+
+(define-object Job
+  (in-module "Eom")
+  (parent "GObject")
+  (c-name "EomJob")
+  (gtype-id "EOM_TYPE_JOB")
+)
+
+(define-object JobLoad
+  (in-module "Eom")
+  (parent "EomJob")
+  (c-name "EomJobLoad")
+  (gtype-id "EOM_TYPE_JOB_LOAD")
+)
+
+(define-object JobModel
+  (in-module "Eom")
+  (parent "EomJob")
+  (c-name "EomJobModel")
+  (gtype-id "EOM_TYPE_JOB_MODEL")
+)
+
+(define-object JobSave
+  (in-module "Eom")
+  (parent "EomJob")
+  (c-name "EomJobSave")
+  (gtype-id "EOM_TYPE_JOB_SAVE")
+)
+
+(define-object JobSaveAs
+  (in-module "Eom")
+  (parent "EomJobSave")
+  (c-name "EomJobSaveAs")
+  (gtype-id "EOM_TYPE_JOB_SAVE_AS")
+)
+
+(define-object JobThumbnail
+  (in-module "Eom")
+  (parent "EomJob")
+  (c-name "EomJobThumbnail")
+  (gtype-id "EOM_TYPE_JOB_THUMBNAIL")
+)
+
+(define-object JobTransform
+  (in-module "Eom")
+  (parent "EomJob")
+  (c-name "EomJobTransform")
+  (gtype-id "EOM_TYPE_JOB_TRANSFORM")
+)
+
+(define-object ListStore
+  (in-module "Eom")
+  (parent "GtkListStore")
+  (c-name "EomListStore")
+  (gtype-id "EOM_TYPE_LIST_STORE")
+)
+
+(define-object Plugin
+  (in-module "Eom")
+  (parent "GObject")
+  (c-name "EomPlugin")
+  (gtype-id "EOM_TYPE_PLUGIN")
+)
+
+(define-object PropertiesDialog
+  (in-module "Eom")
+  (parent "EomDialog")
+  (c-name "EomPropertiesDialog")
+  (gtype-id "EOM_TYPE_PROPERTIES_DIALOG")
+)
+
+(define-object ScrollView
+  (in-module "Eom")
+  (parent "GtkTable")
+  (c-name "EomScrollView")
+  (gtype-id "EOM_TYPE_SCROLL_VIEW")
+)
+
+(define-object Sidebar
+  (in-module "Eom")
+  (parent "GtkVBox")
+  (c-name "EomSidebar")
+  (gtype-id "EOM_TYPE_SIDEBAR")
+)
+
+(define-object Statusbar
+  (in-module "Eom")
+  (parent "GtkStatusbar")
+  (c-name "EomStatusbar")
+  (gtype-id "EOM_TYPE_STATUSBAR")
+)
+
+(define-object ThumbNav
+  (in-module "Eom")
+  (parent "GtkHBox")
+  (c-name "EomThumbNav")
+  (gtype-id "EOM_TYPE_THUMB_NAV")
+)
+
+(define-object ThumbView
+  (in-module "Eom")
+  (parent "GtkIconView")
+  (c-name "EomThumbView")
+  (gtype-id "EOM_TYPE_THUMB_VIEW")
+)
+
+(define-object Window
+  (in-module "Eom")
+  (parent "GtkWindow")
+  (c-name "EomWindow")
+  (gtype-id "EOM_TYPE_WINDOW")
+)
+
+;; Enumerations and flags ...
+
+(define-flags ImageData
+  (in-module "Eom")
+  (c-name "EomImageData")
+  (gtype-id "EOM_TYPE_IMAGE_DATA")
+  (values
+    '("image" "EOM_IMAGE_DATA_IMAGE")
+    '("dimension" "EOM_IMAGE_DATA_DIMENSION")
+    '("exif" "EOM_IMAGE_DATA_EXIF")
+  )
+)
+
+(define-enum ImageError
+  (in-module "Eom")
+  (c-name "EomImageError")
+  (gtype-id "EOM_TYPE_IMAGE_ERROR")
+  (values
+    '("save-not-local" "EOM_IMAGE_ERROR_SAVE_NOT_LOCAL")
+    '("not-loaded" "EOM_IMAGE_ERROR_NOT_LOADED")
+    '("vfs" "EOM_IMAGE_ERROR_VFS")
+    '("file-exists" "EOM_IMAGE_ERROR_FILE_EXISTS")
+    '("tmp-file-failed" "EOM_IMAGE_ERROR_TMP_FILE_FAILED")
+    '("generic" "EOM_IMAGE_ERROR_GENERIC")
+    '("unknown" "EOM_IMAGE_ERROR_UNKNOWN")
+  )
+)
+
+(define-enum ImageStatus
+  (in-module "Eom")
+  (c-name "EomImageStatus")
+  (gtype-id "EOM_TYPE_IMAGE_STATUS")
+  (values
+    '("unknown" "EOM_IMAGE_STATUS_UNKNOWN")
+    '("loading" "EOM_IMAGE_STATUS_LOADING")
+    '("loaded" "EOM_IMAGE_STATUS_LOADED")
+    '("failed" "EOM_IMAGE_STATUS_FAILED")
+  )
+)
+
+(define-enum JobSaveResponse
+  (in-module "Eom")
+  (c-name "EomJobSaveResponse")
+  (gtype-id "EOM_TYPE_JOB_SAVE_RESPONSE")
+  (values
+    '("none" "EOM_SAVE_RESPONSE_NONE")
+    '("retry" "EOM_SAVE_RESPONSE_RETRY")
+    '("skip" "EOM_SAVE_RESPONSE_SKIP")
+    '("overwrite" "EOM_SAVE_RESPONSE_OVERWRITE")
+    '("cancel" "EOM_SAVE_RESPONSE_CANCEL")
+    '("last" "EOM_SAVE_RESPONSE_LAST")
+  )
+)
+
+(define-enum ListStoreColumn
+  (in-module "Eom")
+  (c-name "EomListStoreColumn")
+  (gtype-id "EOM_TYPE_LIST_STORE_COLUMN")
+  (values
+    '("thumbnail" "EOM_LIST_STORE_THUMBNAIL")
+    '("thumb-set" "EOM_LIST_STORE_THUMB_SET")
+    '("eom-image" "EOM_LIST_STORE_EOM_IMAGE")
+    '("eom-job" "EOM_LIST_STORE_EOM_JOB")
+    '("num-columns" "EOM_LIST_STORE_NUM_COLUMNS")
+  )
+)
+
+(define-enum PropertiesDialogPage
+  (in-module "Eom")
+  (c-name "EomPropertiesDialogPage")
+  (gtype-id "EOM_TYPE_PROPERTIES_DIALOG_PAGE")
+  (values
+    '("general" "EOM_PROPERTIES_DIALOG_PAGE_GENERAL")
+    '("exif" "EOM_PROPERTIES_DIALOG_PAGE_EXIF")
+  )
+)
+
+(define-enum TransparencyStyle
+  (in-module "Eom")
+  (c-name "EomTransparencyStyle")
+  (gtype-id "EOM_TYPE_TRANSPARENCY_STYLE")
+  (values
+    '("background" "EOM_TRANSP_BACKGROUND")
+    '("checked" "EOM_TRANSP_CHECKED")
+    '("color" "EOM_TRANSP_COLOR")
+  )
+)
+
+(define-enum ThumbNavMode
+  (in-module "Eom")
+  (c-name "EomThumbNavMode")
+  (gtype-id "EOM_TYPE_THUMB_NAV_MODE")
+  (values
+    '("one-row" "EOM_THUMB_NAV_MODE_ONE_ROW")
+    '("one-column" "EOM_THUMB_NAV_MODE_ONE_COLUMN")
+    '("multiple-rows" "EOM_THUMB_NAV_MODE_MULTIPLE_ROWS")
+    '("multiple-columns" "EOM_THUMB_NAV_MODE_MULTIPLE_COLUMNS")
+  )
+)
+
+(define-enum ThumbViewSelectionChange
+  (in-module "Eom")
+  (c-name "EomThumbViewSelectionChange")
+  (gtype-id "EOM_TYPE_THUMB_VIEW_SELECTION_CHANGE")
+  (values
+    '("left" "EOM_THUMB_VIEW_SELECT_LEFT")
+    '("right" "EOM_THUMB_VIEW_SELECT_RIGHT")
+    '("first" "EOM_THUMB_VIEW_SELECT_FIRST")
+    '("last" "EOM_THUMB_VIEW_SELECT_LAST")
+  )
+)
+
+(define-enum WindowMode
+  (in-module "Eom")
+  (c-name "EomWindowMode")
+  (gtype-id "EOM_TYPE_WINDOW_MODE")
+  (values
+    '("unknown" "EOM_WINDOW_MODE_UNKNOWN")
+    '("normal" "EOM_WINDOW_MODE_NORMAL")
+    '("fullscreen" "EOM_WINDOW_MODE_FULLSCREEN")
+    '("slideshow" "EOM_WINDOW_MODE_SLIDESHOW")
+  )
+)
+
+(define-enum WindowError
+  (in-module "Eom")
+  (c-name "EomWindowError")
+  (gtype-id "EOM_TYPE_WINDOW_ERROR")
+  (values
+    '("control-not-found" "EOM_WINDOW_ERROR_CONTROL_NOT_FOUND")
+    '("ui-not-found" "EOM_WINDOW_ERROR_UI_NOT_FOUND")
+    '("no-persist-file-interface" "EOM_WINDOW_ERROR_NO_PERSIST_FILE_INTERFACE")
+    '("io" "EOM_WINDOW_ERROR_IO")
+    '("trash-not-found" "EOM_WINDOW_ERROR_TRASH_NOT_FOUND")
+    '("generic" "EOM_WINDOW_ERROR_GENERIC")
+    '("unknown" "EOM_WINDOW_ERROR_UNKNOWN")
+  )
+)
+
+(define-flags StartupFlags
+  (in-module "Eom")
+  (c-name "EomStartupFlags")
+  (gtype-id "EOM_TYPE_STARTUP_FLAGS")
+  (values
+    '("fullscreen" "EOM_STARTUP_FULLSCREEN")
+    '("slide-show" "EOM_STARTUP_SLIDE_SHOW")
+    '("disable-collection" "EOM_STARTUP_DISABLE_COLLECTION")
+  )
+)
+
+
+;; From eom-application.h
+
+(define-function eom_application_get_type
+  (c-name "eom_application_get_type")
+  (return-type "GType")
+)
+
+(define-function eom_application_get_instance
+  (c-name "eom_application_get_instance")
+  (return-type "EomApplication*")
+)
+
+(define-method shutdown
+  (of-object "EomApplication")
+  (c-name "eom_application_shutdown")
+  (return-type "none")
+)
+
+(define-method open_window
+  (of-object "EomApplication")
+  (c-name "eom_application_open_window")
+  (return-type "gboolean")
+  (parameters
+    '("guint" "timestamp")
+    '("EomStartupFlags" "flags")
+    '("GError**" "error")
+  )
+)
+
+(define-method open_uri_list
+  (of-object "EomApplication")
+  (c-name "eom_application_open_uri_list")
+  (return-type "gboolean")
+  (parameters
+    '("GSList*" "uri_list")
+    '("guint" "timestamp")
+    '("EomStartupFlags" "flags")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_windows
+  (of-object "EomApplication")
+  (c-name "eom_application_get_windows")
+  (return-type "GList*")
+)
+
+
+
+
+;; From eom-dialog.h
+
+(define-function eom_dialog_get_type
+  (c-name "eom_dialog_get_type")
+  (return-type "GType")
+)
+
+(define-method construct
+  (of-object "EomDialog")
+  (c-name "eom_dialog_construct")
+  (return-type "none")
+  (parameters
+    '("const-gchar*" "glade_file")
+    '("const-gchar*" "dlg_node")
+  )
+)
+
+(define-method show
+  (of-object "EomDialog")
+  (c-name "eom_dialog_show")
+  (return-type "none")
+)
+
+(define-method hide
+  (of-object "EomDialog")
+  (c-name "eom_dialog_hide")
+  (return-type "none")
+)
+
+(define-method get_controls
+  (of-object "EomDialog")
+  (c-name "eom_dialog_get_controls")
+  (return-type "none")
+  (parameters
+    '("const-gchar*" "property_id")
+  )
+  (varargs #t)
+)
+
+
+
+;; From eom-image.h
+
+(define-function eom_image_get_type
+  (c-name "eom_image_get_type")
+  (return-type "GType")
+)
+
+(define-function eom_image_new
+  (c-name "eom_image_new")
+  (is-constructor-of "EomImage")
+  (return-type "EomImage*")
+  (parameters
+    '("const-char*" "txt_uri")
+  )
+)
+
+(define-function eom_image_new_file
+  (c-name "eom_image_new_file")
+  (return-type "EomImage*")
+  (parameters
+    '("GFile*" "file")
+  )
+)
+
+(define-method has_data
+  (of-object "EomImage")
+  (c-name "eom_image_has_data")
+  (return-type "gboolean")
+  (parameters
+    '("EomImageData" "data")
+  )
+)
+
+(define-method load
+  (of-object "EomImage")
+  (c-name "eom_image_load")
+  (return-type "gboolean")
+  (parameters
+    '("EomImageData" "data2read")
+    '("EomJob*" "job" (null-ok))
+    '("GError**" "error")
+  )
+)
+
+(define-method set_thumbnail
+  (of-object "EomImage")
+  (c-name "eom_image_set_thumbnail")
+  (return-type "none")
+  (parameters
+    '("GdkPixbuf*" "pixbuf")
+  )
+)
+
+(define-method get_pixbuf
+  (of-object "EomImage")
+  (c-name "eom_image_get_pixbuf")
+  (return-type "GdkPixbuf*")
+)
+
+(define-method get_thumbnail
+  (of-object "EomImage")
+  (c-name "eom_image_get_thumbnail")
+  (return-type "GdkPixbuf*")
+)
+
+(define-method get_size
+  (of-object "EomImage")
+  (c-name "eom_image_get_size")
+  (return-type "none")
+  (parameters
+    '("gint*" "width")
+    '("gint*" "height")
+  )
+)
+
+(define-method get_bytes
+  (of-object "EomImage")
+  (c-name "eom_image_get_bytes")
+  (return-type "goffset")
+)
+
+(define-method is_modified
+  (of-object "EomImage")
+  (c-name "eom_image_is_modified")
+  (return-type "gboolean")
+)
+
+(define-method modified
+  (of-object "EomImage")
+  (c-name "eom_image_modified")
+  (return-type "none")
+)
+
+(define-method get_caption
+  (of-object "EomImage")
+  (c-name "eom_image_get_caption")
+  (return-type "const-gchar*")
+)
+
+(define-method get_exif_info
+  (of-object "EomImage")
+  (c-name "eom_image_get_exif_info")
+  (return-type "gpointer")
+)
+
+(define-method get_file
+  (of-object "EomImage")
+  (c-name "eom_image_get_file")
+  (return-type "GFile*")
+)
+
+(define-method get_uri_for_display
+  (of-object "EomImage")
+  (c-name "eom_image_get_uri_for_display")
+  (return-type "gchar*")
+)
+
+(define-method undo
+  (of-object "EomImage")
+  (c-name "eom_image_undo")
+  (return-type "none")
+)
+
+
+
+;; From eom-job-queue.h
+
+(define-method queue_add_job
+  (of-object "EomJob")
+  (c-name "eom_job_queue_add_job")
+  (return-type "none")
+)
+
+(define-method queue_remove_job
+  (of-object "EomJob")
+  (c-name "eom_job_queue_remove_job")
+  (return-type "gboolean")
+)
+
+
+
+;; From eom-jobs.h
+
+(define-function eom_job_get_type
+  (c-name "eom_job_get_type")
+  (return-type "GType")
+)
+
+(define-method finished
+  (of-object "EomJob")
+  (c-name "eom_job_finished")
+  (return-type "none")
+)
+
+(define-method run
+  (of-object "EomJob")
+  (c-name "eom_job_run")
+  (return-type "none")
+)
+
+(define-method set_progress
+  (of-object "EomJob")
+  (c-name "eom_job_set_progress")
+  (return-type "none")
+  (parameters
+    '("float" "progress")
+  )
+)
+
+(define-function eom_job_thumbnail_get_type
+  (c-name "eom_job_thumbnail_get_type")
+  (return-type "GType")
+)
+
+(define-function eom_job_thumbnail_new
+  (c-name "eom_job_thumbnail_new")
+  (is-constructor-of "EomJobThumbnail")
+  (return-type "EomJob*")
+  (parameters
+    '("EomImage*" "image")
+  )
+)
+
+(define-function eom_job_load_get_type
+  (c-name "eom_job_load_get_type")
+  (return-type "GType")
+)
+
+(define-function eom_job_load_new
+  (c-name "eom_job_load_new")
+  (is-constructor-of "EomJobLoad")
+  (return-type "EomJob*")
+  (parameters
+    '("EomImage*" "image")
+    '("EomImageData" "data")
+  )
+)
+
+(define-function eom_job_model_get_type
+  (c-name "eom_job_model_get_type")
+  (return-type "GType")
+)
+
+(define-function eom_job_model_new
+  (c-name "eom_job_model_new")
+  (is-constructor-of "EomJobModel")
+  (return-type "EomJob*")
+  (parameters
+    '("GSList*" "uri_list")
+  )
+)
+
+(define-function eom_job_transform_get_type
+  (c-name "eom_job_transform_get_type")
+  (return-type "GType")
+)
+
+(define-function eom_job_transform_new
+  (c-name "eom_job_transform_new")
+  (is-constructor-of "EomJobTransform")
+  (return-type "EomJob*")
+  (parameters
+    '("GList*" "images")
+    '("EomTransform*" "trans")
+  )
+)
+
+;; From eom-list-store.h
+
+(define-function eom_list_store_get_type
+  (c-name "eom_list_store_get_type")
+  (return-type "GType")
+)
+
+(define-function eom_list_store_new
+  (c-name "eom_list_store_new")
+  (is-constructor-of "EomListStore")
+  (return-type "GtkListStore*")
+)
+
+(define-method append_image
+  (of-object "EomListStore")
+  (c-name "eom_list_store_append_image")
+  (return-type "none")
+  (parameters
+    '("EomImage*" "image")
+  )
+)
+
+(define-method add_uris
+  (of-object "EomListStore")
+  (c-name "eom_list_store_add_uris")
+  (return-type "none")
+  (parameters
+    '("GList*" "uri_list")
+  )
+)
+
+(define-method remove_image
+  (of-object "EomListStore")
+  (c-name "eom_list_store_remove_image")
+  (return-type "none")
+  (parameters
+    '("EomImage*" "image")
+  )
+)
+
+(define-method get_pos_by_image
+  (of-object "EomListStore")
+  (c-name "eom_list_store_get_pos_by_image")
+  (return-type "gint")
+  (parameters
+    '("EomImage*" "image")
+  )
+)
+
+(define-method get_image_by_pos
+  (of-object "EomListStore")
+  (c-name "eom_list_store_get_image_by_pos")
+  (return-type "EomImage*")
+  (parameters
+    '("gint" "pos")
+  )
+)
+
+(define-method get_pos_by_iter
+  (of-object "EomListStore")
+  (c-name "eom_list_store_get_pos_by_iter")
+  (return-type "gint")
+  (parameters
+    '("GtkTreeIter*" "iter")
+  )
+)
+
+(define-method length
+  (of-object "EomListStore")
+  (c-name "eom_list_store_length")
+  (return-type "gint")
+)
+
+(define-method get_initial_pos
+  (of-object "EomListStore")
+  (c-name "eom_list_store_get_initial_pos")
+  (return-type "gint")
+)
+
+;; From eom-plugin.h
+
+(define-function eom_plugin_get_type
+  (c-name "eom_plugin_get_type")
+  (return-type "GType")
+)
+
+(define-method activate
+  (of-object "EomPlugin")
+  (c-name "eom_plugin_activate")
+  (return-type "none")
+  (parameters
+    '("EomWindow*" "window")
+  )
+)
+
+(define-method deactivate
+  (of-object "EomPlugin")
+  (c-name "eom_plugin_deactivate")
+  (return-type "none")
+  (parameters
+    '("EomWindow*" "window")
+  )
+)
+
+(define-method update_ui
+  (of-object "EomPlugin")
+  (c-name "eom_plugin_update_ui")
+  (return-type "none")
+  (parameters
+    '("EomWindow*" "window")
+  )
+)
+
+(define-method is_configurable
+  (of-object "EomPlugin")
+  (c-name "eom_plugin_is_configurable")
+  (return-type "gboolean")
+)
+
+(define-method create_configure_dialog
+  (of-object "EomPlugin")
+  (c-name "eom_plugin_create_configure_dialog")
+  (return-type "GtkWidget*")
+)
+
+
+
+;; From eom-properties-dialog.h
+
+(define-function eom_properties_dialog_get_type
+  (c-name "eom_properties_dialog_get_type")
+  (return-type "GType")
+)
+
+(define-function eom_properties_dialog_new
+  (c-name "eom_properties_dialog_new")
+  (is-constructor-of "EomPropertiesDialog")
+  (return-type "GObject*")
+  (parameters
+    '("GtkWindow*" "parent")
+    '("EomThumbView*" "thumbview")
+    '("GtkAction*" "next_image_action")
+    '("GtkAction*" "previous_image_action")
+  )
+)
+
+(define-method update
+  (of-object "EomPropertiesDialog")
+  (c-name "eom_properties_dialog_update")
+  (return-type "none")
+  (parameters
+    '("EomImage*" "image")
+  )
+)
+
+(define-method set_page
+  (of-object "EomPropertiesDialog")
+  (c-name "eom_properties_dialog_set_page")
+  (return-type "none")
+  (parameters
+    '("EomPropertiesDialogPage" "page")
+  )
+)
+
+
+
+;; From eom-scroll-view.h
+
+(define-function eom_scroll_view_get_type
+  (c-name "eom_scroll_view_get_type")
+  (return-type "GType")
+)
+
+(define-function eom_scroll_view_new
+  (c-name "eom_scroll_view_new")
+  (is-constructor-of "EomScrollView")
+  (return-type "GtkWidget*")
+)
+
+(define-method set_image
+  (of-object "EomScrollView")
+  (c-name "eom_scroll_view_set_image")
+  (return-type "none")
+  (parameters
+    '("EomImage*" "image")
+  )
+)
+
+(define-method set_zoom_upscale
+  (of-object "EomScrollView")
+  (c-name "eom_scroll_view_set_zoom_upscale")
+  (return-type "none")
+  (parameters
+    '("gboolean" "upscale")
+  )
+)
+
+(define-method set_zoom_multiplier
+  (of-object "EomScrollView")
+  (c-name "eom_scroll_view_set_zoom_multiplier")
+  (return-type "none")
+  (parameters
+    '("gdouble" "multiplier")
+  )
+)
+
+(define-method set_antialiasing_in
+  (of-object "EomScrollView")
+  (c-name "eom_scroll_view_set_antialiasing_in")
+  (return-type "none")
+  (parameters
+    '("gboolean" "state")
+  )
+)
+
+(define-method set_antialiasing_out
+  (of-object "EomScrollView")
+  (c-name "eom_scroll_view_set_antialiasing_out")
+  (return-type "none")
+  (parameters
+    '("gboolean" "state")
+  )
+)
+
+(define-method set_transparency
+  (of-object "EomScrollView")
+  (c-name "eom_scroll_view_set_transparency")
+  (return-type "none")
+  (parameters
+    '("EomTransparencyStyle" "style")
+    '("GdkColor*" "color")
+  )
+)
+
+(define-method scrollbars_visible
+  (of-object "EomScrollView")
+  (c-name "eom_scroll_view_scrollbars_visible")
+  (return-type "gboolean")
+)
+
+(define-method zoom_in
+  (of-object "EomScrollView")
+  (c-name "eom_scroll_view_zoom_in")
+  (return-type "none")
+  (parameters
+    '("gboolean" "smooth")
+  )
+)
+
+(define-method zoom_out
+  (of-object "EomScrollView")
+  (c-name "eom_scroll_view_zoom_out")
+  (return-type "none")
+  (parameters
+    '("gboolean" "smooth")
+  )
+)
+
+(define-method zoom_fit
+  (of-object "EomScrollView")
+  (c-name "eom_scroll_view_zoom_fit")
+  (return-type "none")
+)
+
+(define-method set_zoom
+  (of-object "EomScrollView")
+  (c-name "eom_scroll_view_set_zoom")
+  (return-type "none")
+  (parameters
+    '("double" "zoom")
+  )
+)
+
+(define-method get_zoom
+  (of-object "EomScrollView")
+  (c-name "eom_scroll_view_get_zoom")
+  (return-type "double")
+)
+
+(define-method get_zoom_is_min
+  (of-object "EomScrollView")
+  (c-name "eom_scroll_view_get_zoom_is_min")
+  (return-type "gboolean")
+)
+
+(define-method get_zoom_is_max
+  (of-object "EomScrollView")
+  (c-name "eom_scroll_view_get_zoom_is_max")
+  (return-type "gboolean")
+)
+
+(define-method show_cursor
+  (of-object "EomScrollView")
+  (c-name "eom_scroll_view_show_cursor")
+  (return-type "none")
+)
+
+(define-method hide_cursor
+  (of-object "EomScrollView")
+  (c-name "eom_scroll_view_hide_cursor")
+  (return-type "none")
+)
+
+
+
+;; From eom-sidebar.h
+
+(define-function eom_sidebar_get_type
+  (c-name "eom_sidebar_get_type")
+  (return-type "GType")
+)
+
+(define-function eom_sidebar_new
+  (c-name "eom_sidebar_new")
+  (is-constructor-of "EomSidebar")
+  (return-type "GtkWidget*")
+)
+
+(define-method add_page
+  (of-object "EomSidebar")
+  (c-name "eom_sidebar_add_page")
+  (return-type "none")
+  (parameters
+    '("const-gchar*" "title")
+    '("GtkWidget*" "main_widget")
+  )
+)
+
+(define-method remove_page
+  (of-object "EomSidebar")
+  (c-name "eom_sidebar_remove_page")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "main_widget")
+  )
+)
+
+(define-method set_page
+  (of-object "EomSidebar")
+  (c-name "eom_sidebar_set_page")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "main_widget")
+  )
+)
+
+(define-method get_n_pages
+  (of-object "EomSidebar")
+  (c-name "eom_sidebar_get_n_pages")
+  (return-type "gint")
+)
+
+(define-method is_empty
+  (of-object "EomSidebar")
+  (c-name "eom_sidebar_is_empty")
+  (return-type "gboolean")
+)
+
+
+
+;; From eom-statusbar.h
+
+(define-function eom_statusbar_get_type
+  (c-name "eom_statusbar_get_type")
+  (return-type "GType")
+)
+
+(define-function eom_statusbar_new
+  (c-name "eom_statusbar_new")
+  (is-constructor-of "EomStatusbar")
+  (return-type "GtkWidget*")
+)
+
+(define-method set_image_number
+  (of-object "EomStatusbar")
+  (c-name "eom_statusbar_set_image_number")
+  (return-type "none")
+  (parameters
+    '("gint" "num")
+    '("gint" "tot")
+  )
+)
+
+(define-method set_progress
+  (of-object "EomStatusbar")
+  (c-name "eom_statusbar_set_progress")
+  (return-type "none")
+  (parameters
+    '("gdouble" "progress")
+  )
+)
+
+
+
+;; From eom-thumb-nav.h
+
+(define-function eom_thumb_nav_get_type
+  (c-name "eom_thumb_nav_get_type")
+  (return-type "GType")
+)
+
+(define-function eom_thumb_nav_new
+  (c-name "eom_thumb_nav_new")
+  (is-constructor-of "EomThumbNav")
+  (return-type "GtkWidget*")
+  (parameters
+    '("GtkWidget*" "thumbview")
+    '("EomThumbNavMode" "mode")
+    '("gboolean" "show_buttons")
+  )
+)
+
+(define-method get_show_buttons
+  (of-object "EomThumbNav")
+  (c-name "eom_thumb_nav_get_show_buttons")
+  (return-type "gboolean")
+)
+
+(define-method set_show_buttons
+  (of-object "EomThumbNav")
+  (c-name "eom_thumb_nav_set_show_buttons")
+  (return-type "none")
+  (parameters
+    '("gboolean" "show_buttons")
+  )
+)
+
+(define-method get_mode
+  (of-object "EomThumbNav")
+  (c-name "eom_thumb_nav_get_mode")
+  (return-type "EomThumbNavMode")
+)
+
+(define-method set_mode
+  (of-object "EomThumbNav")
+  (c-name "eom_thumb_nav_set_mode")
+  (return-type "none")
+  (parameters
+    '("EomThumbNavMode" "mode")
+  )
+)
+
+
+
+;; From eom-thumb-view.h
+
+(define-function eom_thumb_view_get_type
+  (c-name "eom_thumb_view_get_type")
+  (return-type "GType")
+)
+
+(define-function eom_thumb_view_new
+  (c-name "eom_thumb_view_new")
+  (is-constructor-of "EomThumbView")
+  (return-type "GtkWidget*")
+)
+
+(define-method set_model
+  (of-object "EomThumbView")
+  (c-name "eom_thumb_view_set_model")
+  (return-type "none")
+  (parameters
+    '("EomListStore*" "store")
+  )
+)
+
+(define-method set_item_height
+  (of-object "EomThumbView")
+  (c-name "eom_thumb_view_set_item_height")
+  (return-type "none")
+  (parameters
+    '("gint" "height")
+  )
+)
+
+(define-method get_n_selected
+  (of-object "EomThumbView")
+  (c-name "eom_thumb_view_get_n_selected")
+  (return-type "guint")
+)
+
+(define-method get_first_selected_image
+  (of-object "EomThumbView")
+  (c-name "eom_thumb_view_get_first_selected_image")
+  (return-type "EomImage*")
+)
+
+(define-method get_selected_images
+  (of-object "EomThumbView")
+  (c-name "eom_thumb_view_get_selected_images")
+  (return-type "GList*")
+)
+
+(define-method select_single
+  (of-object "EomThumbView")
+  (c-name "eom_thumb_view_select_single")
+  (return-type "none")
+  (parameters
+    '("EomThumbViewSelectionChange" "change")
+  )
+)
+
+(define-method set_current_image
+  (of-object "EomThumbView")
+  (c-name "eom_thumb_view_set_current_image")
+  (return-type "none")
+  (parameters
+    '("EomImage*" "image")
+    '("gboolean" "deselect_other")
+  )
+)
+
+(define-method set_thumbnail_popup
+  (of-object "EomThumbView")
+  (c-name "eom_thumb_view_set_thumbnail_popup")
+  (return-type "none")
+  (parameters
+    '("GtkMenu*" "menu")
+  )
+)
+
+
+
+;; From eom-window.h
+
+(define-function eom_window_get_type
+  (c-name "eom_window_get_type")
+  (return-type "GType")
+)
+
+(define-function eom_window_new
+  (c-name "eom_window_new")
+  (is-constructor-of "EomWindow")
+  (return-type "GtkWidget*")
+  (parameters
+    '("EomStartupFlags" "flags")
+  )
+)
+
+(define-method get_mode
+  (of-object "EomWindow")
+  (c-name "eom_window_get_mode")
+  (return-type "EomWindowMode")
+)
+
+(define-method set_mode
+  (of-object "EomWindow")
+  (c-name "eom_window_set_mode")
+  (return-type "none")
+  (parameters
+    '("EomWindowMode" "mode")
+  )
+)
+
+(define-method get_ui_manager
+  (of-object "EomWindow")
+  (c-name "eom_window_get_ui_manager")
+  (return-type "GtkUIManager*")
+)
+
+(define-method get_store
+  (of-object "EomWindow")
+  (c-name "eom_window_get_store")
+  (return-type "EomListStore*")
+)
+
+(define-method get_view
+  (of-object "EomWindow")
+  (c-name "eom_window_get_view")
+  (return-type "GtkWidget*")
+)
+
+(define-method get_sidebar
+  (of-object "EomWindow")
+  (c-name "eom_window_get_sidebar")
+  (return-type "GtkWidget*")
+)
+
+(define-method get_thumb_view
+  (of-object "EomWindow")
+  (c-name "eom_window_get_thumb_view")
+  (return-type "GtkWidget*")
+)
+
+(define-method get_thumb_nav
+  (of-object "EomWindow")
+  (c-name "eom_window_get_thumb_nav")
+  (return-type "GtkWidget*")
+)
+
+(define-method get_statusbar
+  (of-object "EomWindow")
+  (c-name "eom_window_get_statusbar")
+  (return-type "GtkWidget*")
+)
+
+(define-method get_image
+  (of-object "EomWindow")
+  (c-name "eom_window_get_image")
+  (return-type "EomImage*")
+)
+
+(define-method open_uri_list
+  (of-object "EomWindow")
+  (c-name "eom_window_open_uri_list")
+  (return-type "none")
+  (parameters
+    '("GSList*" "uri_list")
+  )
+)
+
+(define-method is_empty
+  (of-object "EomWindow")
+  (c-name "eom_window_is_empty")
+  (return-type "gboolean")
+)
+
+

@@ -1,0 +1,463 @@
+<!-- ##### SECTION Title ##### -->
+EomJobCopy
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### MACRO EOM_TYPE_JOB_THUMBNAIL ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO EOM_JOB_THUMBNAIL ##### -->
+<para>
+
+</para>
+
+@obj: 
+
+
+<!-- ##### MACRO EOM_JOB_THUMBNAIL_CLASS ##### -->
+<para>
+
+</para>
+
+@klass: 
+
+
+<!-- ##### MACRO EOM_IS_JOB_THUMBNAIL ##### -->
+<para>
+
+</para>
+
+@obj: 
+
+
+<!-- ##### MACRO EOM_TYPE_JOB_LOAD ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO EOM_JOB_LOAD ##### -->
+<para>
+
+</para>
+
+@obj: 
+
+
+<!-- ##### MACRO EOM_JOB_LOAD_CLASS ##### -->
+<para>
+
+</para>
+
+@klass: 
+
+
+<!-- ##### MACRO EOM_IS_JOB_LOAD ##### -->
+<para>
+
+</para>
+
+@obj: 
+
+
+<!-- ##### MACRO EOM_TYPE_JOB_MODEL ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO EOM_JOB_MODEL ##### -->
+<para>
+
+</para>
+
+@obj: 
+
+
+<!-- ##### MACRO EOM_JOB_MODEL_CLASS ##### -->
+<para>
+
+</para>
+
+@klass: 
+
+
+<!-- ##### MACRO EOM_IS_JOB_MODEL ##### -->
+<para>
+
+</para>
+
+@obj: 
+
+
+<!-- ##### MACRO EOM_TYPE_JOB_TRANSFORM ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO EOM_JOB_TRANSFORM ##### -->
+<para>
+
+</para>
+
+@obj: 
+
+
+<!-- ##### MACRO EOM_JOB_TRANSFORM_CLASS ##### -->
+<para>
+
+</para>
+
+@klass: 
+
+
+<!-- ##### MACRO EOM_IS_JOB_TRANSFORM ##### -->
+<para>
+
+</para>
+
+@obj: 
+
+
+<!-- ##### MACRO EOM_TYPE_JOB_SAVE ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO EOM_JOB_SAVE ##### -->
+<para>
+
+</para>
+
+@obj: 
+
+
+<!-- ##### MACRO EOM_JOB_SAVE_CLASS ##### -->
+<para>
+
+</para>
+
+@klass: 
+
+
+<!-- ##### MACRO EOM_IS_JOB_SAVE ##### -->
+<para>
+
+</para>
+
+@obj: 
+
+
+<!-- ##### MACRO EOM_JOB_SAVE_GET_CLASS ##### -->
+<para>
+
+</para>
+
+@obj: 
+
+
+<!-- ##### MACRO EOM_TYPE_JOB_SAVE_AS ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO EOM_JOB_SAVE_AS ##### -->
+<para>
+
+</para>
+
+@obj: 
+
+
+<!-- ##### MACRO EOM_JOB_SAVE_AS_CLASS ##### -->
+<para>
+
+</para>
+
+@klass: 
+
+
+<!-- ##### MACRO EOM_IS_JOB_SAVE_AS ##### -->
+<para>
+
+</para>
+
+@obj: 
+
+
+<!-- ##### MACRO EOM_JOB_COPY ##### -->
+<para>
+
+</para>
+
+@obj: 
+
+
+<!-- ##### MACRO EOM_JOB_COPY_CLASS ##### -->
+<para>
+
+</para>
+
+@klass: 
+
+
+<!-- ##### STRUCT EomJob ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL EomJob::finished ##### -->
+<para>
+
+</para>
+
+@eomjob: the object which received the signal.
+
+<!-- ##### SIGNAL EomJob::progress ##### -->
+<para>
+
+</para>
+
+@eomjob: the object which received the signal.
+@arg1: 
+
+<!-- ##### STRUCT EomJobThumbnail ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT EomJobLoad ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT EomJobModel ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT EomJobTransform ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ENUM EomJobSaveResponse ##### -->
+<para>
+
+</para>
+
+@EOM_SAVE_RESPONSE_NONE: 
+@EOM_SAVE_RESPONSE_RETRY: 
+@EOM_SAVE_RESPONSE_SKIP: 
+@EOM_SAVE_RESPONSE_OVERWRITE: 
+@EOM_SAVE_RESPONSE_CANCEL: 
+@EOM_SAVE_RESPONSE_LAST: 
+
+<!-- ##### STRUCT EomJobSave ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT EomJobSaveAs ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT EomJobCopy ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION eom_job_finished ##### -->
+<para>
+
+</para>
+
+@job: 
+
+
+<!-- ##### FUNCTION eom_job_run ##### -->
+<para>
+
+</para>
+
+@job: 
+
+
+<!-- ##### FUNCTION eom_job_set_progress ##### -->
+<para>
+
+</para>
+
+@job: 
+@progress: 
+
+
+<!-- ##### FUNCTION eom_job_thumbnail_get_type ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_job_thumbnail_new ##### -->
+<para>
+
+</para>
+
+@image: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_job_load_get_type ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_job_load_new ##### -->
+<para>
+
+</para>
+
+@image: 
+@data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_job_model_get_type ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_job_model_new ##### -->
+<para>
+
+</para>
+
+@file_list: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_job_transform_get_type ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_job_transform_new ##### -->
+<para>
+
+</para>
+
+@images: 
+@trans: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_job_save_get_type ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_job_save_new ##### -->
+<para>
+
+</para>
+
+@images: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_job_save_as_get_type ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_job_save_as_new ##### -->
+<para>
+
+</para>
+
+@images: 
+@converter: 
+@file: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_job_copy_get_type ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_job_copy_new ##### -->
+<para>
+
+</para>
+
+@images: 
+@dest: 
+@Returns: 
+
+

@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+<book id="index" xmlns:xi="http://www.w3.org/2003/XInclude">
+  <bookinfo>
+    <title>Eye of MATE Reference Manual</title>
+    <releaseinfo>
+      for Eye of MATE &version;
+    </releaseinfo>
+  </bookinfo>
+
+  <chapter>
+    <title>User Interface</title>
+    <xi:include href="xml/eom-properties-dialog.xml"/>
+    <xi:include href="xml/eom-list-store.xml"/>
+    <xi:include href="xml/eom-file-chooser.xml"/>
+    <xi:include href="xml/eom-thumb-nav.xml"/>
+    <xi:include href="xml/eom-thumb-view.xml"/>
+    <xi:include href="xml/eom-scroll-view.xml"/>
+    <xi:include href="xml/eom-window.xml"/>
+    <xi:include href="xml/eom-statusbar.xml"/>
+    @EOM_DOC_EXIF_START@
+    <xi:include href="xml/eom-exif-details.xml"/>
+    @EOM_DOC_EXIF_STOP@
+    <xi:include href="xml/eom-dialog.xml"/>
+    <xi:include href="xml/eom-sidebar.xml"/>
+    <xi:include href="xml/eom-thumbnail.xml"/>
+    <xi:include href="xml/eom-save-as-dialog-helper.xml"/>
+    <xi:include href="xml/eom-error-message-area.xml"/>
+  </chapter>
+
+  <chapter>
+    <title>Image data and manipulation</title>
+    <xi:include href="xml/eom-image.xml"/>
+    <xi:include href="xml/eom-image-save-info.xml"/>
+    <xi:include href="xml/eom-transform.xml"/>
+    <xi:include href="xml/eom-metadata-reader.xml"/>
+    <xi:include href="xml/eom-metadata-reader-png.xml"/>
+    <xi:include href="xml/eom-metadata-reader-jpg.xml"/>
+  </chapter>
+
+  <chapter>
+    <title>Printing</title>
+    <xi:include href="xml/eom-print-preview.xml"/>
+    <xi:include href="xml/eom-print-image-setup.xml"/>
+    <xi:include href="xml/eom-print.xml"/>
+  </chapter>
+
+  <chapter>
+    <title>Application and configuration</title>
+    <xi:include href="xml/eom-preferences-dialog.xml"/>
+    <xi:include href="xml/eom-application.xml"/>
+    <xi:include href="xml/eom-session.xml"/>
+    <xi:include href="xml/eom-config-keys.xml"/>
+  </chapter>
+
+  <chapter>
+    <title>Plugins</title>
+    <xi:include href="xml/eom-plugin.xml"/>
+    <xi:include href="xml/eom-plugin-manager.xml"/>
+    <xi:include href="xml/eom-plugin-engine.xml"/>
+  </chapter>
+
+  <chapter>
+    <title>Utilities</title>
+    <xi:include href="xml/eom-debug.xml"/>
+    <xi:include href="xml/eom-uri-converter.xml"/>
+    <xi:include href="xml/eom-util.xml"/>
+    @EOM_DOC_EXIF_START@
+    <xi:include href="xml/eom-exif-util.xml"/>
+    @EOM_DOC_EXIF_STOP@
+    <xi:include href="xml/eom-pixbuf-util.xml"/>
+    <xi:include href="xml/zoom.xml"/>
+    <xi:include href="xml/uta.xml"/>
+  </chapter>
+
+  <chapter>
+    <title>Asynchronous jobs</title>
+    <xi:include href="xml/eom-jobs.xml"/>
+    <xi:include href="xml/eom-job-queue.xml"/>
+  </chapter>
+</book>

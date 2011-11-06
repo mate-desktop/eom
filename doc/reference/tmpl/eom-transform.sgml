@@ -1,0 +1,136 @@
+<!-- ##### SECTION Title ##### -->
+EomTransform
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### ENUM EomTransformType ##### -->
+<para>
+
+</para>
+
+@EOM_TRANSFORM_NONE: 
+@EOM_TRANSFORM_ROT_90: 
+@EOM_TRANSFORM_ROT_180: 
+@EOM_TRANSFORM_ROT_270: 
+@EOM_TRANSFORM_FLIP_HORIZONTAL: 
+@EOM_TRANSFORM_FLIP_VERTICAL: 
+@EOM_TRANSFORM_TRANSPOSE: 
+@EOM_TRANSFORM_TRANSVERSE: 
+
+<!-- ##### STRUCT EomTransform ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION eom_transform_apply ##### -->
+<para>
+
+</para>
+
+@trans: 
+@pixbuf: 
+@job: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_transform_reverse ##### -->
+<para>
+
+</para>
+
+@trans: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_transform_compose ##### -->
+<para>
+
+</para>
+
+@trans: 
+@compose: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_transform_is_identity ##### -->
+<para>
+
+</para>
+
+@trans: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_transform_identity_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_transform_rotate_new ##### -->
+<para>
+
+</para>
+
+@degree: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_transform_flip_new ##### -->
+<para>
+
+</para>
+
+@type: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_transform_scale_new ##### -->
+<para>
+
+</para>
+
+@sx: 
+@sy: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_transform_new ##### -->
+<para>
+
+</para>
+
+@trans: 
+@Returns: 
+
+
+<!-- ##### FUNCTION eom_transform_get_transform_type ##### -->
+<para>
+
+</para>
+
+@trans: 
+@Returns: 
+
+

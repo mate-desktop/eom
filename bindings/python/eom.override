@@ -1,0 +1,126 @@
+%%
+headers
+#define NO_IMPORT
+#include "pygobject.h"
+#include <pygtk/pygtk.h>
+
+#include "eom-enum-types.h"
+#include "eom-application.h"
+#include "eom-window.h"
+#include "eom-dialog.h"
+#include "eom-properties-dialog.h"
+#include "eom-statusbar.h"
+#include "eom-sidebar.h"
+#include "eom-thumb-nav.h"
+#include "eom-image.h"
+#include "eom-scroll-view.h"
+#include "eom-thumb-view.h"
+#include "eom-list-store.h"
+#include "eom-job-queue.h"
+#include "eom-jobs.h"
+#include "eom-plugin.h"
+
+void pyeom_register_classes (PyObject *d);
+void pyeom_add_constants (PyObject *module, const gchar *strip_prefix);
+
+static PyObject *
+_helper_wrap_gobject_glist (const GList *list)
+{
+    PyObject *py_list;
+    const GList *tmp;
+
+    if ((py_list = PyList_New(0)) == NULL) {
+        return NULL;
+    }
+    for (tmp = list; tmp != NULL; tmp = tmp->next) {
+        PyObject *py_obj = pygobject_new(G_OBJECT(tmp->data));
+
+        if (py_obj == NULL) {
+            Py_DECREF(py_list);
+            return NULL;
+        }
+        PyList_Append(py_list, py_obj);
+        Py_DECREF(py_obj);
+    }
+    return py_list;
+}
+%%
+modulename eom
+%%
+import gtk.Widget as PyGtkWidget_Type
+import gobject.GObject as PyGObject_Type
+import gtk.Window as PyGtkWindow_Type
+import gtk.Action as PyGtkAction_Type
+import gtk.Statusbar as PyGtkStatusbar_Type
+import gtk.Menu as PyGtkMenu_Type
+import gtk.gdk.Pixbuf as PyGdkPixbuf_Type
+import gtk.FileChooserDialog as PyGtkFileChooserDialog_Type
+import gtk.ListStore as PyGtkListStore_Type
+import gtk.HBox as PyGtkHBox_Type
+import gtk.VBox as PyGtkVBox_Type
+import gtk.Table as PyGtkTable_Type
+import gtk.IconView as PyGtkIconView_Type
+import gio.File as PyGFile_Type
+%%
+ignore-glob
+  *_get_type
+%%
+override eom_application_get_windows
+static PyObject *
+_wrap_eom_application_get_windows(PyGObject *self)
+{
+    const GList *list;
+    PyObject *py_list;
+
+    list = eom_application_get_windows (EOM_APPLICATION (self->obj));
+
+    py_list = _helper_wrap_gobject_glist (list);
+
+    return py_list;
+}
+%%
+override eom_application_open_uri_list kwargs
+static PyObject *
+_wrap_eom_application_open_uri_list (PyGObject *self,
+			             PyObject  *args,
+			             PyObject  *kwargs)
+{
+	static char *kwlist[] = { "uri_list", NULL };
+	PyObject *list, *item;
+	GSList *glist = NULL;
+	int len, i;
+
+	if (!PyArg_ParseTupleAndKeywords (args, kwargs,
+					  "O:EomApplication.open_uri_list", kwlist,
+					  &list))
+		return NULL;
+
+	if (!PySequence_Check (list)) {
+		PyErr_SetString (PyExc_TypeError,
+				 "first argument must be a sequence");
+		return NULL;
+	}
+
+	len = PySequence_Length (list);
+
+	for (i = 0; i < len; i++)
+	{
+		item = PySequence_GetItem (list, i);
+		Py_DECREF(item);
+
+		if (!PyString_Check (item)) {
+			PyErr_SetString (PyExc_TypeError,
+					 "sequence item not a string");
+			g_slist_free (glist);
+			return NULL;
+		}
+
+		glist = g_slist_append (glist, g_strdup (PyString_AsString (item)));
+	}
+
+	eom_application_open_uri_list (EOM_APPLICATION (self->obj), glist, GDK_CURRENT_TIME, 0, NULL);
+
+	g_slist_free (glist);
+	Py_INCREF (Py_None);
+	return Py_None;
+}
