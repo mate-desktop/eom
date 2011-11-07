@@ -2,7 +2,7 @@ AC_PREREQ(2.59)
 
 m4_define(eom_major_version, 2011)
 m4_define(eom_minor_version, 11)
-m4_define(eom_micro_version, 09)
+m4_define(eom_micro_version, 9)
 m4_define(eom_version, eom_major_version.eom_minor_version.eom_micro_version)
 
 AC_INIT([eom], eom_version, [http://bugzilla.gnome.org/enter_bug.cgi?product=eom], [eom])
