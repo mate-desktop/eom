@@ -31,23 +31,28 @@ G_BEGIN_DECLS
 /*
  * Type checking and casting macros
  */
-#define EOM_TYPE_STATUSBAR_DATE_PLUGIN		(eom_statusbar_date_plugin_get_type ())
-#define EOM_STATUSBAR_DATE_PLUGIN(o)		(G_TYPE_CHECK_INSTANCE_CAST ((o), EOM_TYPE_STATUSBAR_DATE_PLUGIN, EomStatusbarDatePlugin))
-#define EOM_STATUSBAR_DATE_PLUGIN_CLASS(k)		G_TYPE_CHECK_CLASS_CAST((k),      EOM_TYPE_STATUSBAR_DATE_PLUGIN, EomStatusbarDatePluginClass))
-#define EOM_IS_STATUSBAR_DATE_PLUGIN(o)	        (G_TYPE_CHECK_INSTANCE_TYPE ((o), EOM_TYPE_STATUSBAR_DATE_PLUGIN))
-#define EOM_IS_STATUSBAR_DATE_PLUGIN_CLASS(k)	(G_TYPE_CHECK_CLASS_TYPE ((k),    EOM_TYPE_STATUSBAR_DATE_PLUGIN))
-#define EOM_STATUSBAR_DATE_PLUGIN_GET_CLASS(o)	(G_TYPE_INSTANCE_GET_CLASS ((o),  EOM_TYPE_STATUSBAR_DATE_PLUGIN, EomStatusbarDatePluginClass))
+#define EOM_TYPE_STATUSBAR_DATE_PLUGIN \
+	(eom_statusbar_date_plugin_get_type())
+#define EOM_STATUSBAR_DATE_PLUGIN(o) \
+	(G_TYPE_CHECK_INSTANCE_CAST((o), EOM_TYPE_STATUSBAR_DATE_PLUGIN, EomStatusbarDatePlugin))
+#define EOM_STATUSBAR_DATE_PLUGIN_CLASS(k) \
+	G_TYPE_CHECK_CLASS_CAST((k), EOM_TYPE_STATUSBAR_DATE_PLUGIN, EomStatusbarDatePluginClass))
+#define EOM_IS_STATUSBAR_DATE_PLUGIN(o) \
+	(G_TYPE_CHECK_INSTANCE_TYPE((o), EOM_TYPE_STATUSBAR_DATE_PLUGIN))
+#define EOM_IS_STATUSBAR_DATE_PLUGIN_CLASS(k) \
+	(G_TYPE_CHECK_CLASS_TYPE((k), EOM_TYPE_STATUSBAR_DATE_PLUGIN))
+#define EOM_STATUSBAR_DATE_PLUGIN_GET_CLASS(o) \
+	(G_TYPE_INSTANCE_GET_CLASS((o), EOM_TYPE_STATUSBAR_DATE_PLUGIN, EomStatusbarDatePluginClass))
 
 /* Private structure type */
-typedef struct _EomStatusbarDatePluginPrivate	EomStatusbarDatePluginPrivate;
+typedef struct _EomStatusbarDatePluginPrivate EomStatusbarDatePluginPrivate;
 
 /*
  * Main object structure
  */
-typedef struct _EomStatusbarDatePlugin		EomStatusbarDatePlugin;
+typedef struct _EomStatusbarDatePlugin EomStatusbarDatePlugin;
 
-struct _EomStatusbarDatePlugin
-{
+struct _EomStatusbarDatePlugin {
 	EomPlugin parent_instance;
 };
 
@@ -56,18 +61,17 @@ struct _EomStatusbarDatePlugin
  */
 typedef struct _EomStatusbarDatePluginClass	EomStatusbarDatePluginClass;
 
-struct _EomStatusbarDatePluginClass
-{
+struct _EomStatusbarDatePluginClass {
 	EomPluginClass parent_class;
 };
 
 /*
  * Public methods
  */
-GType	eom_statusbar_date_plugin_get_type		(void) G_GNUC_CONST;
+GType eom_statusbar_date_plugin_get_type(void) G_GNUC_CONST;
 
 /* All the plugins must implement this function */
-G_MODULE_EXPORT GType register_eom_plugin (GTypeModule *module);
+G_MODULE_EXPORT GType register_eom_plugin(GTypeModule* module);
 
 G_END_DECLS
 
