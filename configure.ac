@@ -1,8 +1,8 @@
 AC_PREREQ(2.59)
 
-m4_define(eom_major_version, 2011)
-m4_define(eom_minor_version, 12)
-m4_define(eom_micro_version, 01)
+m4_define(eom_major_version, 1)
+m4_define(eom_minor_version, 1)
+m4_define(eom_micro_version, 0)
 m4_define(eom_version, eom_major_version.eom_minor_version.eom_micro_version)
 
 AC_INIT([eom], eom_version, [http://bugzilla.gnome.org/enter_bug.cgi?product=eom], [eom])
@@ -85,11 +85,11 @@ MATE_DOC_INIT
 
 GTK_REQUIRED=2.18.0
 GLIB_REQUIRED=2.25.9
-MATE_DESKTOP_REQUIRED=2.25.1
+MATE_DESKTOP_REQUIRED=1.1.0
 GDKPIXBUF_REQUIRED=2.4.0
-MATECONF_REQUIRED=2.5.90
+MATECONF_REQUIRED=1.1.0
 GTK_PRINT_REQUIRED=2.10.0
-MATE_ICON_THEME_REQUIRED=2.19.1
+MATE_ICON_THEME_REQUIRED=1.1.0
 SHARED_MIME_INFO_REQUIRED=0.20
 EXEMPI_REQUIRED=1.99.5
 
