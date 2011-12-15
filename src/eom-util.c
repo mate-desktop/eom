@@ -343,3 +343,89 @@ eom_util_file_is_persistent (GFile *file)
 
 	return TRUE;
 }
+
+static void
+_eom_util_show_file_in_filemanager_fallback (GFile *file, GdkScreen *screen)
+{
+	gchar *uri = NULL;
+	GError *error = NULL;
+	guint32 timestamp = gtk_get_current_event_time ();
+
+	if (g_file_query_file_type (file, 0, NULL) == G_FILE_TYPE_DIRECTORY) {
+		uri = g_file_get_uri (file);
+	} else {
+		/* If input file is not a directory we must open it's
+		   folder/parent to avoid opening the file itself     */
+		GFile *parent_file;
+
+		parent_file = g_file_get_parent (file);
+		if (G_LIKELY (parent_file))
+			uri = g_file_get_uri (parent_file);
+		g_object_unref (parent_file);
+	}
+
+	if (uri && !gtk_show_uri (screen, uri, timestamp, &error)) {
+		g_warning ("Couldn't show containing folder \"%s\": %s", uri,
+			   error->message);
+		g_error_free (error);
+	}
+
+	g_free (uri);
+}
+
+void
+eom_util_show_file_in_filemanager (GFile *file, GdkScreen *screen)
+{
+	GDBusProxy *proxy;
+	gboolean done = FALSE;
+
+	g_return_if_fail (file != NULL);
+
+	proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SESSION,
+				G_DBUS_PROXY_FLAGS_DO_NOT_CONNECT_SIGNALS |
+				G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES,
+				NULL, "org.freedesktop.FileManager1",
+				"/org/freedesktop/FileManager1",
+				"org.freedesktop.FileManager1",
+				NULL, NULL);
+
+	if (proxy) {
+		gchar *uri = g_file_get_uri (file);
+		gchar *startup_id;
+		GVariant *params, *result;
+		GVariantBuilder builder;
+
+		g_variant_builder_init (&builder,
+					G_VARIANT_TYPE ("as"));
+		g_variant_builder_add (&builder, "s", uri);
+
+		/* This seems to be the expected format, as other values
+		   cause the filemanager window not to get focus. */
+		startup_id = g_strdup_printf("_TIME%u",
+					     gtk_get_current_event_time());
+
+		/* params is floating! */
+		params = g_variant_new ("(ass)", &builder, startup_id);
+
+		g_free (startup_id);
+		g_variant_builder_clear (&builder);
+
+		/* Floating params-GVariant is consumed here */
+		result = g_dbus_proxy_call_sync (proxy, "ShowItems",
+						 params, G_DBUS_CALL_FLAGS_NONE,
+						 -1, NULL, NULL);
+
+		/* Receiving a non-NULL result counts as a successful call. */
+		if (G_LIKELY (result != NULL)) {
+			done = TRUE;
+			g_variant_unref (result);
+		}
+
+		g_free (uri);
+		g_object_unref (proxy);
+	}
+
+	/* Fallback to gtk_show_uri() if launch over DBus is not possible */
+	if (!done)
+		_eom_util_show_file_in_filemanager_fallback (file, screen);
+}
