@@ -63,6 +63,10 @@ char *  eom_util_filename_get_extension      (const char * filename_with_extensi
 G_GNUC_INTERNAL
 gboolean eom_util_file_is_persistent (GFile *file);
 
+G_GNUC_INTERNAL
+void     eom_util_show_file_in_filemanager   (GFile *file,
+					      GdkScreen *screen);
+
 G_END_DECLS
 
 #endif /* __EOM_UTIL_H__ */
