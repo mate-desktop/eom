@@ -30,6 +30,7 @@
 
 #include "eom-list-store.h"
 #include "eom-image.h"
+#include "eom-dialog.h"
 
 #include <glib.h>
 #include <glib-object.h>
@@ -124,6 +125,7 @@ void          eom_window_open_file_list	(EomWindow       *window,
 gboolean      eom_window_is_empty 	(EomWindow       *window);
 
 void          eom_window_reload_image (EomWindow *window);
+EomDialog    *eom_window_get_properties_dialog (EomWindow *window);
 G_END_DECLS
 
 #endif

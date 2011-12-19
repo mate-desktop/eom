@@ -176,94 +176,6 @@ pd_update_general_tab (EomPropertiesDialog *prop_dlg,
 	g_free (uri_str);
 }
 
-#if HAVE_EXIF
-static void
-eom_exif_set_label (GtkWidget *w, ExifData *exif_data, gint tag_id)
-{
-	gchar exif_buffer[512];
-	const gchar *buf_ptr;
-	gchar *label_text = NULL;
-
-	if (exif_data) {
-		buf_ptr = eom_exif_data_get_value (exif_data, tag_id,
-						   exif_buffer, 512);
-
-		if (tag_id == EXIF_TAG_DATE_TIME_ORIGINAL && buf_ptr)
-			label_text = eom_exif_util_format_date (buf_ptr);
-		else
-			label_text = eom_util_make_valid_utf8 (buf_ptr);
-	}
-
-	gtk_label_set_text (GTK_LABEL (w), label_text);
-	g_free (label_text);
-}
-
-static void
-eom_exif_set_focal_length_label (GtkWidget *w, ExifData *exif_data)
-{
-	ExifEntry *entry = NULL, *entry35mm = NULL;
-	ExifByteOrder byte_order;
-	gfloat f_val = 0.0;
-	gchar *fl_text = NULL,*fl35_text = NULL;
-
-	/* If no ExifData is supplied the label will be
-	 * cleared later as fl35_text is NULL. */
-	if (exif_data != NULL) {
-		entry = exif_data_get_entry (exif_data, EXIF_TAG_FOCAL_LENGTH);
-		entry35mm = exif_data_get_entry (exif_data,
-					    EXIF_TAG_FOCAL_LENGTH_IN_35MM_FILM);
-		byte_order = exif_data_get_byte_order (exif_data);
-	}
-
-	if (entry && G_LIKELY (entry->format == EXIF_FORMAT_RATIONAL)) {
-		ExifRational value;
-
-		/* Decode value by hand as libexif is not necessarily returning
-		 * it in the format we want it to be.
-		 */
-		value = exif_get_rational (entry->data, byte_order);
-		/* Guard against div by zero */
-		if (G_LIKELY(value.denominator != 0))
-			f_val = (gfloat)value.numerator/
-				(gfloat)value.denominator;
-
-		/* TRANSLATORS: This is the actual focal length used when
-		   the image was taken.*/
-		fl_text = g_strdup_printf (_("%.1f (lens)"), f_val);
-
-	}
-	if (entry35mm && G_LIKELY (entry35mm->format == EXIF_FORMAT_SHORT)) {
-		ExifShort s_val;
-
-		s_val = exif_get_short (entry35mm->data, byte_order);
-
-		/* Print as float to get a similar look as above. */
-		/* TRANSLATORS: This is the equivalent focal length assuming
-		   a 35mm film camera. */
-		fl35_text = g_strdup_printf(_("%.1f (35mm film)"),(float)s_val);
-	}
-
-	if (fl_text) {
-		if (fl35_text) {
-			gchar *merged_txt;
-
-			merged_txt = g_strconcat (fl35_text,", ", fl_text, NULL);
-			gtk_label_set_text (GTK_LABEL (w), merged_txt);
-			g_free (merged_txt);
-		} else {
-			gtk_label_set_text (GTK_LABEL (w), fl_text);
-		}
-	} else {
-		/* This will also clear the label if no ExifData was supplied */
-		gtk_label_set_text (GTK_LABEL (w), fl35_text);
-	}
-
-	g_free (fl35_text);
-	g_free (fl_text);
-
-}
-#endif
-
 #if HAVE_EXEMPI
 static void
 eom_xmp_set_label (XmpPtr xmp,
@@ -374,29 +286,29 @@ pd_update_metadata_tab (EomPropertiesDialog *prop_dlg,
 #if HAVE_EXIF
 	exif_data = (ExifData *) eom_image_get_exif_info (image);
 
-	eom_exif_set_label (priv->exif_aperture_label,
-			    exif_data, EXIF_TAG_FNUMBER);
+	eom_exif_util_set_label_text (GTK_LABEL (priv->exif_aperture_label),
+				      exif_data, EXIF_TAG_FNUMBER);
 
-	eom_exif_set_label (priv->exif_exposure_label,
-			    exif_data, EXIF_TAG_EXPOSURE_TIME);
+	eom_exif_util_set_label_text (GTK_LABEL (priv->exif_exposure_label),
+				      exif_data, EXIF_TAG_EXPOSURE_TIME);
 
-	eom_exif_set_focal_length_label (priv->exif_focal_label, exif_data);
+	eom_exif_util_set_focal_length_label_text (GTK_LABEL (priv->exif_focal_label), exif_data);
 
-	eom_exif_set_label (priv->exif_flash_label,
-			    exif_data, EXIF_TAG_FLASH);
+	eom_exif_util_set_label_text (GTK_LABEL (priv->exif_flash_label),
+				      exif_data, EXIF_TAG_FLASH);
 
-	eom_exif_set_label (priv->exif_iso_label,
-			    exif_data, EXIF_TAG_ISO_SPEED_RATINGS);
+	eom_exif_util_set_label_text (GTK_LABEL (priv->exif_iso_label),
+				      exif_data, EXIF_TAG_ISO_SPEED_RATINGS);
 
 
-	eom_exif_set_label (priv->exif_metering_label,
-			    exif_data, EXIF_TAG_METERING_MODE);
+	eom_exif_util_set_label_text (GTK_LABEL (priv->exif_metering_label),
+				      exif_data, EXIF_TAG_METERING_MODE);
 
-	eom_exif_set_label (priv->exif_model_label,
-			    exif_data, EXIF_TAG_MODEL);
+	eom_exif_util_set_label_text (GTK_LABEL (priv->exif_model_label),
+				      exif_data, EXIF_TAG_MODEL);
 
-	eom_exif_set_label (priv->exif_date_label,
-			    exif_data, EXIF_TAG_DATE_TIME_ORIGINAL);
+	eom_exif_util_set_label_text (GTK_LABEL (priv->exif_date_label),
+				      exif_data, EXIF_TAG_DATE_TIME_ORIGINAL);
 
 	eom_exif_details_update (EOM_EXIF_DETAILS (priv->exif_details),
 				 exif_data);

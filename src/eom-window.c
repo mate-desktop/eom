@@ -52,6 +52,7 @@
 #include "eom-save-as-dialog-helper.h"
 #include "eom-close-confirmation-dialog.h"
 #include "eom-clipboard-handler.h"
+#include "eom-metadata-sidebar.h"
 
 #include "eom-enum-types.h"
 
@@ -3010,26 +3011,26 @@ eom_window_cmd_print (GtkAction *action, gpointer user_data)
 	eom_window_print (window);
 }
 
-static void
-eom_window_cmd_properties (GtkAction *action, gpointer user_data)
+EomDialog*
+eom_window_get_properties_dialog (EomWindow *window)
 {
-	EomWindow *window = EOM_WINDOW (user_data);
 	EomWindowPrivate *priv;
-	GtkAction *next_image_action, *previous_image_action;
+
+	g_return_val_if_fail (EOM_IS_WINDOW (window), NULL);
 
 	priv = window->priv;
 
-	next_image_action =
-		gtk_action_group_get_action (priv->actions_collection,
-					     "GoNext");
+	if (priv->properties_dlg == NULL) {
+		GtkAction *next_image_action, *previous_image_action;
 
-	previous_image_action =
-		gtk_action_group_get_action (priv->actions_collection,
-					     "GoPrevious");
+		next_image_action =
+			gtk_action_group_get_action (priv->actions_collection,
+						     "GoNext");
 
-	if (window->priv->properties_dlg == NULL) {
-
-		window->priv->properties_dlg =
+		previous_image_action =
+			gtk_action_group_get_action (priv->actions_collection,
+						     "GoPrevious");
+		priv->properties_dlg =
 			eom_properties_dialog_new (GTK_WINDOW (window),
 						   EOM_THUMB_VIEW (priv->thumbview),
 						   next_image_action,
@@ -3043,7 +3044,20 @@ eom_window_cmd_properties (GtkAction *action, gpointer user_data)
 				 G_SETTINGS_BIND_GET);
 	}
 
-	eom_dialog_show (EOM_DIALOG (window->priv->properties_dlg));
+	return EOM_DIALOG (priv->properties_dlg);
+}
+
+static void
+eom_window_cmd_properties (GtkAction *action, gpointer user_data)
+{
+	EomWindow *window = EOM_WINDOW (user_data);
+	EomWindowPrivate *priv;
+	EomDialog *dialog;
+
+	priv = window->priv;
+
+	dialog = eom_window_get_properties_dialog (window);
+	eom_dialog_show (dialog);
 }
 
 static void
@@ -4459,6 +4473,11 @@ eom_window_construct_ui (EomWindow *window)
 				window);
 
  	priv->view = eom_scroll_view_new ();
+
+	eom_sidebar_add_page (EOM_SIDEBAR (priv->sidebar),
+			      _("Image Properties"),
+			      GTK_WIDGET (eom_metadata_sidebar_new (window)));
+
 	gtk_widget_set_size_request (GTK_WIDGET (priv->view), 100, 100);
 	g_signal_connect (G_OBJECT (priv->view),
 			  "zoom_changed",

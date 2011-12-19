@@ -1,0 +1,634 @@
+/*
+ * eom-metadata-sidebar.c
+ * This file is part of eom
+ *
+ * Author: Felix Riemann <friemann@gnome.org>
+ *
+ * Portions based on code by: Lucas Rocha <lucasr@gnome.org>
+ *                            Hubert Figuiere <hub@figuiere.net> (XMP support)
+ *
+ * Copyright (C) 2011 GNOME Foundation
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
+#include <glib.h>
+#include <glib/gi18n.h>
+#include <gtk/gtk.h>
+
+#include "eom-dialog.h"
+#include "eom-image.h"
+#include "eom-metadata-sidebar.h"
+#include "eom-properties-dialog.h"
+#include "eom-scroll-view.h"
+#include "eom-util.h"
+#include "eom-window.h"
+
+#if HAVE_EXEMPI
+#include <exempi/xmp.h>
+#include <exempi/xmpconsts.h>
+#endif
+
+enum {
+	PROP_0,
+	PROP_IMAGE,
+	PROP_PARENT_WINDOW
+};
+
+struct _EomMetadataSidebarPrivate {
+	EomWindow *parent_window;
+	EomImage *image;
+
+	gulong image_changed_id;
+	gulong thumb_changed_id;
+
+	GtkWidget *grid;
+
+	GtkWidget *name_label;
+	GtkWidget *height_label;
+	GtkWidget *width_label;
+	GtkWidget *type_label;
+	GtkWidget *size_label;
+	GtkWidget *folder_button;
+
+	GtkWidget *aperture_label;
+	GtkWidget *exposure_label;
+	GtkWidget *focallen_label;
+	GtkWidget *flash_label;
+	GtkWidget *iso_label;
+	GtkWidget *metering_label;
+	GtkWidget *model_label;
+	GtkWidget *date_label;
+
+	GtkWidget *location_label;
+	GtkWidget *desc_label;
+	GtkWidget *keyword_label;
+	GtkWidget *creator_label;
+	GtkWidget *rights_label;
+
+	GtkWidget *details_button;
+};
+
+#define EOM_METADATA_SIDEBAR_GET_PRIVATE(object) \
+	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_METADATA_SIDEBAR, EomMetadataSidebarPrivate))
+
+G_DEFINE_TYPE(EomMetadataSidebar, eom_metadata_sidebar, GTK_TYPE_SCROLLED_WINDOW)
+
+static GtkWidget*
+_gtk_grid_append_title_line (GtkGrid *grid, GtkWidget *sibling,
+			     const gchar *text)
+{
+	GtkWidget *label;
+	gchar *markup;
+
+	label = gtk_label_new (NULL);
+
+	markup = g_markup_printf_escaped ("<b>%s</b>", text);
+	gtk_label_set_markup (GTK_LABEL (label), markup);
+
+	gtk_grid_attach_next_to (grid, label, sibling, GTK_POS_BOTTOM,  2, 1);
+	return label;
+}
+
+static GtkWidget*
+_gtk_grid_append_prop_line (GtkGrid *grid, GtkWidget *sibling,
+			    GtkWidget **data_label, const gchar *text)
+{
+	GtkWidget *label;
+
+	label = gtk_label_new (text);
+	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
+
+	gtk_grid_attach_next_to (grid, label, sibling, GTK_POS_BOTTOM,  1, 1);
+
+	if (G_LIKELY (data_label != NULL)) {
+		*data_label = gtk_label_new (NULL);
+		gtk_label_set_ellipsize (GTK_LABEL (*data_label), PANGO_ELLIPSIZE_END);
+		gtk_misc_set_alignment (GTK_MISC (*data_label), 0.0, 0.5);
+		gtk_grid_attach_next_to (grid, *data_label, label,
+					 GTK_POS_RIGHT, 1, 1);
+	}
+
+	return label;
+}
+
+#if HAVE_EXEMPI
+static void
+eom_xmp_set_label (XmpPtr xmp,
+		   const char *ns,
+		   const char *propname,
+		   GtkWidget *w)
+{
+	uint32_t options;
+
+	XmpStringPtr value = xmp_string_new ();
+
+	if (xmp && xmp_get_property (xmp, ns, propname, value, &options)) {
+		if (XMP_IS_PROP_SIMPLE (options)) {
+			gtk_label_set_text (GTK_LABEL (w), xmp_string_cstr (value));
+		} else if (XMP_IS_PROP_ARRAY (options)) {
+			XmpIteratorPtr iter = xmp_iterator_new (xmp,
+							        ns,
+								propname,
+								XMP_ITER_JUSTLEAFNODES);
+
+			GString *string = g_string_new ("");
+
+			if (iter) {
+				gboolean first = TRUE;
+
+				while (xmp_iterator_next (iter, NULL, NULL, value, &options)
+				       && !XMP_IS_PROP_QUALIFIER (options)) {
+
+					if (!first) {
+						g_string_append_printf(string, ", ");
+					} else {
+						first = FALSE;
+					}
+
+					g_string_append_printf (string,
+								"%s",
+								xmp_string_cstr (value));
+				}
+
+				xmp_iterator_free (iter);
+			}
+
+			gtk_label_set_text (GTK_LABEL (w), string->str);
+			g_string_free (string, TRUE);
+		}
+	} else {
+		/* Property was not found */
+		/* Clear label so it won't show bogus data */
+		gtk_label_set_text (GTK_LABEL (w), NULL);
+	}
+
+	xmp_string_free (value);
+}
+#endif
+
+static void
+eom_metadata_sidebar_update_general_section (EomMetadataSidebar *sidebar)
+{
+	EomMetadataSidebarPrivate *priv = sidebar->priv;
+	EomImage *img = priv->image;
+	GFile *file, *parent_file;
+	GFileInfo *file_info;
+	gchar *str;
+	goffset bytes;
+	gint width, height;
+
+	if (G_UNLIKELY (img == NULL)) {
+		gtk_label_set_text (GTK_LABEL (priv->name_label), NULL);
+		gtk_label_set_text (GTK_LABEL (priv->height_label), NULL);
+		gtk_label_set_text (GTK_LABEL (priv->width_label), NULL);
+		gtk_label_set_text (GTK_LABEL (priv->type_label), NULL);
+		gtk_label_set_text (GTK_LABEL (priv->size_label), NULL);
+		return;		
+	}
+
+	gtk_label_set_text (GTK_LABEL (priv->name_label),
+			    eom_image_get_caption (img));
+	eom_image_get_size (img, &width, &height);
+	str = g_strdup_printf ("%d %s", height,
+			       ngettext ("pixel", "pixels", height));
+	gtk_label_set_text (GTK_LABEL (priv->height_label), str);
+	g_free (str);
+	str = g_strdup_printf ("%d %s", width,
+			       ngettext ("pixel", "pixels", width));
+	gtk_label_set_text (GTK_LABEL (priv->width_label), str);
+	g_free (str);
+
+	file = eom_image_get_file (img);
+	file_info = g_file_query_info (file,
+				       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
+				       0, NULL, NULL);
+	if (file_info == NULL) {
+		str = g_strdup (_("Unknown"));
+	} else {
+		const gchar *mime_str;
+
+		mime_str = g_file_info_get_content_type (file_info);
+		str = g_content_type_get_description (mime_str);
+		g_object_unref (file_info);
+	}
+	gtk_label_set_text (GTK_LABEL (priv->type_label), str);
+	g_free (str);
+
+	bytes = eom_image_get_bytes (img);
+	str = g_format_size (bytes);
+	gtk_label_set_text (GTK_LABEL (priv->size_label), str);
+	g_free (str);
+
+	parent_file = g_file_get_parent (file);
+	if (parent_file == NULL) {
+		/* file is root directory itself */
+		parent_file = g_object_ref (file);
+	}
+	str = g_file_get_basename (parent_file);
+	gtk_button_set_label (GTK_BUTTON (priv->folder_button), str);
+	g_free (str);
+	g_object_unref (parent_file);
+}
+
+static void
+eom_metadata_sidebar_update_metadata_section (EomMetadataSidebar *sidebar)
+{
+	EomMetadataSidebarPrivate *priv = sidebar->priv;
+	EomImage *img = priv->image;
+	ExifData *exif_data = NULL;
+	XmpPtr xmp_data = NULL;
+
+
+	if (img) {
+		exif_data = eom_image_get_exif_info (img);
+		xmp_data =  eom_image_get_xmp_info (img);
+	}
+
+
+	eom_exif_util_set_label_text (GTK_LABEL (priv->aperture_label),
+				      exif_data, EXIF_TAG_FNUMBER);
+	eom_exif_util_set_label_text (GTK_LABEL (priv->exposure_label),
+				      exif_data,
+				      EXIF_TAG_EXPOSURE_TIME);
+	eom_exif_util_set_focal_length_label_text (
+				       GTK_LABEL (priv->focallen_label),
+				       exif_data);
+	eom_exif_util_set_label_text (GTK_LABEL (priv->flash_label),
+				      exif_data, EXIF_TAG_FLASH);
+	eom_exif_util_set_label_text (GTK_LABEL (priv->iso_label),
+				      exif_data,
+				      EXIF_TAG_ISO_SPEED_RATINGS);
+	eom_exif_util_set_label_text (GTK_LABEL (priv->metering_label),
+				      exif_data,
+				      EXIF_TAG_METERING_MODE);
+	eom_exif_util_set_label_text (GTK_LABEL (priv->model_label),
+				      exif_data, EXIF_TAG_MODEL);
+	eom_exif_util_set_label_text (GTK_LABEL (priv->date_label),
+				      exif_data,
+				      EXIF_TAG_DATE_TIME_ORIGINAL);
+
+	/* exif_data_unref can handle NULL-values */
+	exif_data_unref(exif_data);
+
+#if HAVE_EXEMPI
+ 	eom_xmp_set_label (xmp_data,
+			   NS_IPTC4XMP,
+			   "Location",
+			   priv->location_label);
+
+	eom_xmp_set_label (xmp_data,
+			   NS_DC,
+			   "description",
+			   priv->desc_label);
+
+	eom_xmp_set_label (xmp_data,
+			   NS_DC,
+			   "subject",
+			   priv->keyword_label);
+
+	eom_xmp_set_label (xmp_data,
+			   NS_DC,
+       	                   "creator",
+			   priv->creator_label);
+
+	eom_xmp_set_label (xmp_data,
+			   NS_DC,
+			   "rights",
+			   priv->rights_label);
+
+
+	if (xmp_data != NULL)
+		xmp_free (xmp_data);
+#endif
+		
+}
+
+static void
+eom_metadata_sidebar_update (EomMetadataSidebar *sidebar)
+{
+	g_return_if_fail (EOM_IS_METADATA_SIDEBAR (sidebar));
+
+	eom_metadata_sidebar_update_general_section (sidebar);
+	eom_metadata_sidebar_update_metadata_section (sidebar);
+}
+
+static void
+_thumbnail_changed_cb (EomImage *image, gpointer user_data)
+{
+	eom_metadata_sidebar_update (EOM_METADATA_SIDEBAR (user_data));
+}
+
+static void
+eom_metadata_sidebar_set_image (EomMetadataSidebar *sidebar, EomImage *image)
+{
+	EomMetadataSidebarPrivate *priv = sidebar->priv;
+
+	if (image == priv->image)
+		return;
+
+
+	if (priv->thumb_changed_id != 0) {
+		g_signal_handler_disconnect (priv->image,
+					     priv->thumb_changed_id);
+		priv->thumb_changed_id = 0;
+	}
+
+	if (priv->image)
+		g_object_unref (priv->image);
+
+	priv->image = image;
+
+	if (priv->image) {
+		g_object_ref (priv->image);
+		priv->thumb_changed_id = 
+			g_signal_connect (priv->image, "thumbnail-changed",
+					  G_CALLBACK (_thumbnail_changed_cb),
+					  sidebar);
+		eom_metadata_sidebar_update (sidebar);
+	}
+	
+	g_object_notify (G_OBJECT (sidebar), "image");
+}
+
+static void
+_notify_image_cb (GObject *gobject, GParamSpec *pspec, gpointer user_data)
+{
+	EomImage *image;
+
+	g_return_if_fail (EOM_IS_METADATA_SIDEBAR (user_data));
+	g_return_if_fail (EOM_IS_SCROLL_VIEW (gobject));
+
+	image = eom_scroll_view_get_image (EOM_SCROLL_VIEW (gobject));
+
+	eom_metadata_sidebar_set_image (EOM_METADATA_SIDEBAR (user_data),
+					image);
+
+	if (image)
+		g_object_unref (image);
+}
+
+static void
+_folder_button_clicked_cb (GtkButton *button, gpointer user_data)
+{
+	EomMetadataSidebarPrivate *priv = EOM_METADATA_SIDEBAR(user_data)->priv;
+	EomImage *img;
+	GdkScreen *screen;
+	GFile *file;
+
+	g_return_if_fail (priv->parent_window != NULL);
+
+	img = eom_window_get_image (priv->parent_window);
+	screen = gtk_widget_get_screen (GTK_WIDGET (priv->parent_window));
+	file = eom_image_get_file (img);
+
+	eom_util_show_file_in_filemanager (file, screen);
+
+	g_object_unref (file);
+}
+
+static void
+_details_button_clicked_cb (GtkButton *button, gpointer user_data)
+{
+	EomMetadataSidebarPrivate *priv = EOM_METADATA_SIDEBAR(user_data)->priv;
+	EomDialog *dlg;
+
+	g_return_if_fail (priv->parent_window != NULL);
+
+	dlg = eom_window_get_properties_dialog (
+					EOM_WINDOW (priv->parent_window));
+	g_return_if_fail (dlg != NULL);
+	eom_properties_dialog_set_page (EOM_PROPERTIES_DIALOG (dlg),
+					EOM_PROPERTIES_DIALOG_PAGE_DETAILS);
+	eom_dialog_show (dlg);
+}
+
+
+static void
+eom_metadata_sidebar_set_parent_window (EomMetadataSidebar *sidebar,
+					EomWindow *window)
+{
+	EomMetadataSidebarPrivate *priv;
+	GtkWidget *view;
+
+	g_return_if_fail (EOM_IS_METADATA_SIDEBAR (sidebar));
+	priv = sidebar->priv;
+	g_return_if_fail (priv->parent_window == NULL);
+
+	priv->parent_window = g_object_ref (window);
+	eom_metadata_sidebar_update (sidebar);
+	view = eom_window_get_view (window);
+	priv->image_changed_id = g_signal_connect (view, "notify::image",
+						  G_CALLBACK (_notify_image_cb),
+						  sidebar);
+
+	g_object_notify (G_OBJECT (sidebar), "parent-window");
+	
+}
+
+static void
+eom_metadata_sidebar_init (EomMetadataSidebar *sidebar)
+{
+	EomMetadataSidebarPrivate *priv;
+	GtkWidget *label;
+
+	priv = sidebar->priv = EOM_METADATA_SIDEBAR_GET_PRIVATE (sidebar);
+	priv->grid = gtk_grid_new ();
+	g_object_set (G_OBJECT (priv->grid),
+	              "row-spacing", 6,
+		      "column-spacing", 6,
+		      NULL);
+
+	label = _gtk_grid_append_title_line (GTK_GRID (priv->grid),
+					     NULL, _("General"));
+	label = _gtk_grid_append_prop_line (GTK_GRID (priv->grid), label,
+					    &priv->name_label, _("Name:"));
+	label = _gtk_grid_append_prop_line (GTK_GRID (priv->grid), label,
+					    &priv->width_label, _("Width:"));
+	label = _gtk_grid_append_prop_line (GTK_GRID (priv->grid), label,
+					    &priv->height_label, _("Height:"));
+	label = _gtk_grid_append_prop_line (GTK_GRID (priv->grid), label,
+					    &priv->type_label, _("Type:"));
+	label = _gtk_grid_append_prop_line (GTK_GRID (priv->grid), label,
+					    &priv->size_label, _("File size:"));
+	label = _gtk_grid_append_prop_line (GTK_GRID (priv->grid), label,
+					    NULL, _("Folder:"));
+
+	priv->folder_button = gtk_button_new_with_label ("");
+	g_signal_connect (priv->folder_button, "clicked",
+			  G_CALLBACK (_folder_button_clicked_cb), sidebar);
+	gtk_grid_attach_next_to (GTK_GRID (priv->grid), priv->folder_button,
+				 label, GTK_POS_RIGHT, 1, 1);
+	
+	label = _gtk_grid_append_title_line (GTK_GRID (priv->grid),
+					     label, _("Metadata"));
+	label = _gtk_grid_append_prop_line (GTK_GRID (priv->grid), label,
+					    &priv->aperture_label,
+					    _("Aperture Value:"));
+	label = _gtk_grid_append_prop_line (GTK_GRID (priv->grid), label,
+					    &priv->exposure_label,
+					    _("Exposure Time:"));
+	label = _gtk_grid_append_prop_line (GTK_GRID (priv->grid), label,
+					    &priv->focallen_label,
+					    _("Focal Length:"));
+	label = _gtk_grid_append_prop_line (GTK_GRID (priv->grid), label,
+					    &priv->flash_label, _("Flash:"));
+	gtk_label_set_line_wrap (GTK_LABEL (priv->flash_label), TRUE);
+	label = _gtk_grid_append_prop_line (GTK_GRID (priv->grid), label,
+					    &priv->iso_label,
+					    _("ISO Speed Rating:"));
+	label = _gtk_grid_append_prop_line (GTK_GRID (priv->grid), label,
+					    &priv->metering_label,
+					    _("Metering Mode:"));
+	label = _gtk_grid_append_prop_line (GTK_GRID (priv->grid), label,
+					    &priv->model_label,
+					    _("Camera Model:"));
+	label = _gtk_grid_append_prop_line (GTK_GRID (priv->grid), label,
+					    &priv->date_label, _("Date/Time:"));
+	label = _gtk_grid_append_prop_line (GTK_GRID (priv->grid), label,
+					    &priv->desc_label,
+					    _("Description:"));
+	label = _gtk_grid_append_prop_line (GTK_GRID (priv->grid), label,
+					    &priv->location_label,
+					    _("Location:"));
+	label = _gtk_grid_append_prop_line (GTK_GRID (priv->grid), label,
+					    &priv->keyword_label,
+					    _("Keywords:"));
+	label = _gtk_grid_append_prop_line (GTK_GRID (priv->grid), label,
+					    &priv->creator_label, _("Author:"));
+	label = _gtk_grid_append_prop_line (GTK_GRID (priv->grid), label,
+					    &priv->rights_label,
+					    _("Copyright:"));
+
+	priv->details_button = gtk_button_new_with_label (_("Details"));
+	g_signal_connect (priv->details_button, "clicked",
+			  G_CALLBACK (_details_button_clicked_cb), sidebar);
+	gtk_grid_attach_next_to (GTK_GRID (priv->grid), priv->details_button,
+				 label, GTK_POS_BOTTOM, 1, 1);
+
+
+	gtk_widget_show_all (priv->grid);
+}
+
+static void
+eom_metadata_sidebar_constructed (GObject *object)
+{
+	EomMetadataSidebarPrivate *priv;
+
+	priv = EOM_METADATA_SIDEBAR (object)->priv;
+
+	/* This can only happen after all construct properties for
+	 * GtkScrolledWindow are set/handled. */
+	gtk_scrolled_window_add_with_viewport (GTK_SCROLLED_WINDOW (object),
+					       priv->grid);
+	gtk_widget_show (GTK_WIDGET (object));
+
+	G_OBJECT_CLASS (eom_metadata_sidebar_parent_class)->constructed (object);
+}
+
+static void
+eom_metadata_sidebar_get_property (GObject *object, guint property_id,
+				   GValue *value, GParamSpec *pspec)
+{
+	EomMetadataSidebar *sidebar;
+
+	g_return_if_fail (EOM_IS_METADATA_SIDEBAR (object));
+
+	sidebar = EOM_METADATA_SIDEBAR (object);
+
+	switch (property_id) {
+	case PROP_IMAGE:
+	{
+		g_value_set_object (value, sidebar->priv->image);
+		break;
+	}
+	case PROP_PARENT_WINDOW:
+		g_value_set_object (value, sidebar->priv->parent_window);
+		break;
+	default:
+		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
+	}
+}
+
+static void
+eom_metadata_sidebar_set_property (GObject *object, guint property_id,
+				   const GValue *value, GParamSpec *pspec)
+{
+	EomMetadataSidebar *sidebar;
+
+	g_return_if_fail (EOM_IS_METADATA_SIDEBAR (object));
+
+	sidebar = EOM_METADATA_SIDEBAR (object);
+
+	switch (property_id) {
+	case PROP_IMAGE:
+	{
+		break;
+	}
+	case PROP_PARENT_WINDOW:
+	{
+		EomWindow *window;
+
+		window = g_value_get_object (value);
+		eom_metadata_sidebar_set_parent_window (sidebar, window);
+		break;
+	}
+	default:
+		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
+	}
+
+}
+static void
+eom_metadata_sidebar_class_init (EomMetadataSidebarClass *klass)
+{
+	GObjectClass *g_obj_class = G_OBJECT_CLASS (klass);
+
+	g_type_class_add_private (klass, sizeof(EomMetadataSidebarPrivate));
+
+	g_obj_class->constructed = eom_metadata_sidebar_constructed;
+	g_obj_class->get_property = eom_metadata_sidebar_get_property;
+	g_obj_class->set_property = eom_metadata_sidebar_set_property;
+/*	g_obj_class->dispose = eom_metadata_sidebar_dispose;*/
+
+	g_object_class_install_property (
+		g_obj_class, PROP_PARENT_WINDOW,
+		g_param_spec_object ("parent-window", NULL, NULL,
+				     EOM_TYPE_WINDOW, G_PARAM_READWRITE
+				     | G_PARAM_CONSTRUCT_ONLY
+				     | G_PARAM_STATIC_STRINGS));
+	g_object_class_install_property (
+		g_obj_class, PROP_IMAGE,
+		g_param_spec_object ("image", NULL, NULL, EOM_TYPE_IMAGE,
+				     G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS)
+				    );
+}
+
+
+GtkWidget*
+eom_metadata_sidebar_new (EomWindow *window)
+{
+	return gtk_widget_new (EOM_TYPE_METADATA_SIDEBAR,
+			       "hadjustment", NULL,
+			       "vadjustment", NULL,
+	                       "hscrollbar-policy", GTK_POLICY_NEVER,
+			       "vscrollbar-policy", GTK_POLICY_AUTOMATIC,
+			       "border-width", 6,
+			       "parent-window", window,
+			       NULL);
+}
