@@ -23,6 +23,7 @@ NOINST_H_FILES =			\
 	eom-config-keys.h		\
 	eom-image-jpeg.h		\
 	eom-image-private.h		\
+	eom-metadata-sidebar.h		\
 	eom-uri-converter.h		\
 	eom-metadata-reader.h		\
 	eom-metadata-reader-jpg.h	\
@@ -80,6 +81,7 @@ libeom_c_files =			\
 	eom-scroll-view.c		\
 	eom-thumb-view.c		\
 	eom-list-store.c		\
+	eom-metadata-sidebar.c	\
 	eom-thumbnail.c			\
 	eom-job-queue.c			\
 	eom-jobs.c			\

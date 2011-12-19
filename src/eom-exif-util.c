@@ -35,6 +35,7 @@
 #include <time.h>
 
 #include "eom-exif-util.h"
+#include "eom-util.h"
 
 #include <string.h>
 #include <glib/gi18n.h>
@@ -190,6 +191,96 @@ eom_exif_util_format_date (const gchar *date)
 	new_date = eom_exif_util_format_date_by_hand (date);
 #endif /* HAVE_STRPTIME */
 	return new_date;
+}
+
+void
+eom_exif_util_set_label_text (GtkLabel *label,
+			      EomExifData *exif_data,
+			      gint tag_id)
+{
+	gchar exif_buffer[512];
+	const gchar *buf_ptr;
+	gchar *label_text = NULL;
+
+	g_return_if_fail (GTK_IS_LABEL (label));
+
+	if (exif_data) {
+		buf_ptr = eom_exif_data_get_value (exif_data, tag_id,
+						   exif_buffer, 512);
+
+		if (tag_id == EXIF_TAG_DATE_TIME_ORIGINAL && buf_ptr)
+			label_text = eom_exif_util_format_date (buf_ptr);
+		else
+			label_text = eom_util_make_valid_utf8 (buf_ptr);
+	}
+
+	gtk_label_set_text (label, label_text);
+	g_free (label_text);
+}
+
+void
+eom_exif_util_set_focal_length_label_text (GtkLabel *label,
+					   EomExifData *exif_data)
+{
+	ExifEntry *entry = NULL, *entry35mm = NULL;
+	ExifByteOrder byte_order;
+	gfloat f_val = 0.0;
+	gchar *fl_text = NULL,*fl35_text = NULL;
+
+	/* If no ExifData is supplied the label will be
+	 * cleared later as fl35_text is NULL. */
+	if (exif_data != NULL) {
+		entry = exif_data_get_entry (exif_data, EXIF_TAG_FOCAL_LENGTH);
+		entry35mm = exif_data_get_entry (exif_data,
+					    EXIF_TAG_FOCAL_LENGTH_IN_35MM_FILM);
+		byte_order = exif_data_get_byte_order (exif_data);
+	}
+
+	if (entry && G_LIKELY (entry->format == EXIF_FORMAT_RATIONAL)) {
+		ExifRational value;
+
+		/* Decode value by hand as libexif is not necessarily returning
+		 * it in the format we want it to be.
+		 */
+		value = exif_get_rational (entry->data, byte_order);
+		/* Guard against div by zero */
+		if (G_LIKELY(value.denominator != 0))
+			f_val = (gfloat)value.numerator/
+				(gfloat)value.denominator;
+
+		/* TRANSLATORS: This is the actual focal length used when
+		   the image was taken.*/
+		fl_text = g_strdup_printf (_("%.1f (lens)"), f_val);
+
+	}
+	if (entry35mm && G_LIKELY (entry35mm->format == EXIF_FORMAT_SHORT)) {
+		ExifShort s_val;
+
+		s_val = exif_get_short (entry35mm->data, byte_order);
+
+		/* Print as float to get a similar look as above. */
+		/* TRANSLATORS: This is the equivalent focal length assuming
+		   a 35mm film camera. */
+		fl35_text = g_strdup_printf(_("%.1f (35mm film)"),(float)s_val);
+	}
+
+	if (fl_text) {
+		if (fl35_text) {
+			gchar *merged_txt;
+
+			merged_txt = g_strconcat (fl35_text,", ", fl_text, NULL);
+			gtk_label_set_text (label, merged_txt);
+			g_free (merged_txt);
+		} else {
+			gtk_label_set_text (label, fl_text);
+		}
+	} else {
+		/* This will also clear the label if no ExifData was supplied */
+		gtk_label_set_text (label, fl35_text);
+	}
+
+	g_free (fl35_text);
+	g_free (fl_text);
 }
 
 /**
