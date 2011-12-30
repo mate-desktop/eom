@@ -2812,6 +2812,10 @@ eom_window_cmd_about (GtkAction *action, gpointer user_data)
 	g_return_if_fail (EOM_IS_WINDOW (user_data));
 
 	static const char *authors[] = {
+		"Perberos <perberos@gmail.com>",
+		"Steve Zesch <stevezesch2@gmail.com>",
+		"Stefano Karapetsas <stefano@karapetsas.com>",
+		"",
 		"Claudio Saavedra <csaavedra@igalia.com> (maintainer)",
 		"Felix Riemann <friemann@gnome.org> (maintainer)",
 		"",
@@ -2863,12 +2867,13 @@ eom_window_cmd_about (GtkAction *action, gpointer user_data)
 	gtk_show_about_dialog (GTK_WINDOW (window),
 			       "program-name", _("Eye of MATE"),
 			       "version", VERSION,
-			       "copyright", "Copyright \xc2\xa9 2000-2010 Free Software Foundation, Inc.",
+			       "copyright", "Copyright \xc2\xa9 2000-2010 Free Software Foundation, Inc.\n"
+			       "Copyright \xc2\xa9 2011 Perberos",
 			       "comments",_("The MATE image viewer."),
 			       "authors", authors,
 			       "documenters", documenters,
 			       "translator-credits", translators,
-			       "website", "http://projects.gnome.org/eom/",
+			       "website", "http://www.mate-desktop.org/",
 			       "logo-icon-name", "eom",
 			       "wrap-license", TRUE,
 			       "license", license_trans,

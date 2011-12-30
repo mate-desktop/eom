@@ -5,7 +5,7 @@ m4_define(eom_minor_version, 1)
 m4_define(eom_micro_version, 0)
 m4_define(eom_version, eom_major_version.eom_minor_version.eom_micro_version)
 
-AC_INIT([eom], eom_version, [http://bugzilla.gnome.org/enter_bug.cgi?product=eom], [eom])
+AC_INIT([eom], eom_version, [http://www.mate-desktop.org], [eom])
 AM_INIT_AUTOMAKE([1.9 foreign no-dist-gzip dist-bzip2])
 
 # Support silencing the build output if supported (automake-1.11+)
@@ -101,8 +101,8 @@ EOM_MODULES="gtk+-2.0 >= $GTK_REQUIRED \
              gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED \
              mateconf-2.0 >= $MATECONF_REQUIRED \
              gtk+-unix-print-2.0 >= $GTK_PRINT_REQUIRED \
-	     mate-icon-theme >= $MATE_ICON_THEME_REQUIRED \
-	     shared-mime-info >= $SHARED_MIME_INFO_REQUIRED"
+             mate-icon-theme >= $MATE_ICON_THEME_REQUIRED \
+             shared-mime-info >= $SHARED_MIME_INFO_REQUIRED"
 
 # ***************
 # ZLIB (required)
