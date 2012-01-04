@@ -1800,7 +1800,8 @@ eom_scroll_view_init (EomScrollView *view)
 
 	gtk_drag_source_set (priv->display, GDK_BUTTON1_MASK,
 			     target_table, G_N_ELEMENTS (target_table),
-			     GDK_ACTION_COPY);
+			     GDK_ACTION_COPY | GDK_ACTION_MOVE |
+			     GDK_ACTION_LINK | GDK_ACTION_ASK);
 	g_signal_connect (G_OBJECT (priv->display), "drag-data-get",
 			  G_CALLBACK (view_on_drag_data_get_cb), view);
 	g_signal_connect (G_OBJECT (priv->display), "drag-begin",
