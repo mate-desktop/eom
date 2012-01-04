@@ -149,7 +149,10 @@ eom_thumb_view_constructed (GObject *object)
 
 	gtk_icon_view_enable_model_drag_source (GTK_ICON_VIEW (thumbview), 0,
 						NULL, 0,
-						GDK_ACTION_COPY);
+						GDK_ACTION_COPY |
+						GDK_ACTION_MOVE |
+						GDK_ACTION_LINK |
+						GDK_ACTION_ASK);
 	gtk_drag_source_add_uri_targets (GTK_WIDGET (thumbview));
 
 	g_signal_connect (G_OBJECT (thumbview), "drag-data-get",
