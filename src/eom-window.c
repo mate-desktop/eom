@@ -4106,10 +4106,6 @@ eom_window_sidebar_visibility_changed (GtkWidget *widget, EomWindow *window)
 
 	visible = gtk_widget_get_visible (window->priv->sidebar);
 
-	g_settings_set_boolean (window->priv->ui_settings,
-			       EOM_CONF_UI_SIDEBAR,
-			       visible);
-
 	action = gtk_action_group_get_action (window->priv->actions_window,
 					      "ViewSidebar");
 
