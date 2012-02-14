@@ -135,6 +135,7 @@ _gtk_grid_append_prop_line (GtkGrid *grid, GtkWidget *sibling,
 
 	if (G_LIKELY (data_label != NULL)) {
 		*data_label = gtk_label_new (NULL);
+		gtk_label_set_selectable (GTK_LABEL (*data_label), TRUE);
 		gtk_label_set_ellipsize (GTK_LABEL (*data_label), PANGO_ELLIPSIZE_END);
 		gtk_misc_set_alignment (GTK_MISC (*data_label), 0.0, 0.5);
 		gtk_grid_attach_next_to (grid, *data_label, label,
