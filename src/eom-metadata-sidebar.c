@@ -514,6 +514,8 @@ eom_metadata_sidebar_init (EomMetadataSidebar *sidebar)
 	gtk_widget_set_margin_left (priv->folder_button, 12);
 	gtk_widget_set_margin_right (priv->folder_button, 12);
 	gtk_widget_set_margin_top (priv->folder_button, 3);
+	gtk_widget_set_tooltip_text (priv->folder_button, _("Show the folder "
+	                             "which contains this file in the file manager"));
 	gtk_box_pack_end (GTK_BOX (label), priv->folder_button, FALSE, FALSE, 0);
 }
 
