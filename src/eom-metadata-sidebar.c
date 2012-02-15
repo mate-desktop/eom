@@ -127,22 +127,30 @@ _gtk_grid_append_prop_line (GtkGrid *grid, GtkWidget *sibling,
 			    GtkWidget **data_label, const gchar *text)
 {
 	GtkWidget *label;
+	gchar *markup;
+	GtkWidget *box;
 
-	label = gtk_label_new (text);
-	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
+	box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+	label = gtk_label_new (NULL);
+	markup = g_markup_printf_escaped("<b>%s</b>", text);
+	gtk_label_set_markup (GTK_LABEL(label), markup);
+	g_free (markup);
 
-	gtk_grid_attach_next_to (grid, label, sibling, GTK_POS_BOTTOM,  1, 1);
+	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 1.0);
+	gtk_box_pack_start (GTK_BOX (box), label, FALSE, FALSE, 0);
 
 	if (G_LIKELY (data_label != NULL)) {
 		*data_label = gtk_label_new (NULL);
 		gtk_label_set_selectable (GTK_LABEL (*data_label), TRUE);
-		gtk_label_set_ellipsize (GTK_LABEL (*data_label), PANGO_ELLIPSIZE_END);
-		gtk_misc_set_alignment (GTK_MISC (*data_label), 0.0, 0.5);
-		gtk_grid_attach_next_to (grid, *data_label, label,
-					 GTK_POS_RIGHT, 1, 1);
+		gtk_label_set_line_wrap (GTK_LABEL(*data_label), TRUE);
+		gtk_misc_set_alignment (GTK_MISC (*data_label), 0.0, 0.0);
+		// Add a small margin to make it a sublabel to the first label
+		gtk_widget_set_margin_left (*data_label, 12);
+		gtk_box_pack_end (GTK_BOX(box), *data_label, FALSE, FALSE, 0);
 	}
+	gtk_grid_attach_next_to (grid, box, sibling, GTK_POS_BOTTOM,  2, 1);
 
-	return label;
+	return box;
 }
 
 #if HAVE_EXEMPI
@@ -499,11 +507,15 @@ eom_metadata_sidebar_init (EomMetadataSidebar *sidebar)
 	label = _gtk_grid_append_prop_line (GTK_GRID (priv->grid), label,
 					    NULL, _("Folder:"));
 
+{
 	priv->folder_button = gtk_button_new_with_label ("");
 	g_signal_connect (priv->folder_button, "clicked",
 			  G_CALLBACK (_folder_button_clicked_cb), sidebar);
-	gtk_grid_attach_next_to (GTK_GRID (priv->grid), priv->folder_button,
-				 label, GTK_POS_RIGHT, 1, 1);
+	gtk_widget_set_margin_left (priv->folder_button, 12);
+	gtk_widget_set_margin_right (priv->folder_button, 12);
+	gtk_widget_set_margin_top (priv->folder_button, 3);
+	gtk_box_pack_end (GTK_BOX (label), priv->folder_button, FALSE, FALSE, 0);
+}
 
 #if HAVE_METADATA	
 	label = _gtk_grid_append_title_line (GTK_GRID (priv->grid),
