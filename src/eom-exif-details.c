@@ -451,13 +451,22 @@ exif_entry_cb (ExifEntry *entry, gpointer data)
 	ExifIfd ifd = exif_entry_get_ifd (entry);
 	char *path;
 	char b[1024];
+	const gint key = ifd << 16 | entry->tag;
+
+	/* This should optimize away if comparision is correct */
+	g_warn_if_fail (EXIF_IFD_COUNT <= G_MAXUINT16);
 
 	view = EOM_EXIF_DETAILS (data);
 	priv = view->priv;
 
 	store = GTK_TREE_STORE (gtk_tree_view_get_model (GTK_TREE_VIEW (view)));
 
-	path = g_hash_table_lookup (priv->id_path_hash, GINT_TO_POINTER (entry->tag));
+	/* Take the tag's IFD into account when caching their GtkTreePaths.
+	 * That should fix key collisions for tags that have the same number
+	 * but are stored in different IFDs. Exif tag numbers are 16-bit
+	 * values so we should be able to set the high word to the IFD number.
+	 */
+	path = g_hash_table_lookup (priv->id_path_hash, GINT_TO_POINTER (key));
 
 	if (path != NULL) {
 		set_row_data (store,
@@ -500,8 +509,8 @@ exif_entry_cb (ExifEntry *entry, gpointer data)
 						                           sizeof(b)));
 
 			g_hash_table_insert (priv->id_path_hash,
-					     GINT_TO_POINTER (entry->tag),
-					     path);
+			                     GINT_TO_POINTER (key),
+			                     path);
 		}
 	}
 }
