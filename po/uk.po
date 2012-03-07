@@ -1,22 +1,22 @@
-# Ukrainian translation for Eye of MATE.
-# Copyright (C) 1999-2003 Free Software Foundation, Inc.
-# Yuri Syrota <rasta@renome.rovno.ua>, 1999, 2000.
-# Maxim Dziumanenko <dziumanenko@gmail.com>, 2004-2010
-#
-# wanderlust <wanderlust@ukr.net>, 2009.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Rax Garfield <admin@dvizho.ks.ua>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: eom\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-26 13:35+0200\n"
-"PO-Revision-Date: 2010-03-26 17:40+0300\n"
-"Last-Translator: Maxim Dziumanenko <dziumanenko@gmail.com>\n"
-"Language-Team: ukrainian <Ukrainian <uk@li.org>>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/Perberos/Mate-Desktop-Environment/issues\n"
+"POT-Creation-Date: 2011-12-30 15:48+0100\n"
+"PO-Revision-Date: 2012-02-20 13:07+0000\n"
+"Last-Translator: Rax Garfield <admin@dvizho.ks.ua>\n"
+"Language-Team: Ukrainian (http://www.transifex.net/projects/p/MATE/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -58,10 +58,6 @@ msgstr "Видалити виділену панель"
 msgid "Separator"
 msgstr "Розділювач"
 
-#: ../cut-n-paste/totem-screensaver/totem-scrsaver.c:115
-msgid "Running in fullscreen mode"
-msgstr "Працює у повноекранному режимі"
-
 #: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:1
 msgid "Activate fullscreen mode with double-click"
 msgstr "Активувати повноекранний режим подвійним клацанням"
@@ -71,12 +67,12 @@ msgid "Fullscreen with double-click"
 msgstr "На весь екран подвійним клацанням"
 
 #: ../plugins/reload/reload.eom-plugin.desktop.in.h:1
-#: ../plugins/reload/eom-reload-plugin.c:45
+#: ../plugins/reload/eom-reload-plugin.c:38
 msgid "Reload Image"
 msgstr "Перезавантажити зображення"
 
 #: ../plugins/reload/reload.eom-plugin.desktop.in.h:2
-#: ../plugins/reload/eom-reload-plugin.c:47
+#: ../plugins/reload/eom-reload-plugin.c:38
 msgid "Reload current image"
 msgstr "Перезавантажити поточне зображення"
 
@@ -92,9 +88,9 @@ msgstr "Показати чи приховати жату у рядку стан
 msgid "Browse and rotate images"
 msgstr "Перегляд та обертання зображень"
 
-#: ../data/eom.desktop.in.in.h:2
-msgid "Image Viewer"
-msgstr "Перегляд зображень"
+#: ../data/eom.desktop.in.in.h:2 ../src/main.c:66 ../src/main.c:248
+msgid "Eye of MATE Image Viewer"
+msgstr "Програма \"Око MATE\""
 
 #: ../data/eom-image-properties-dialog.ui.h:1
 msgid "Aperture Value:"
@@ -259,77 +255,86 @@ msgid "As custom c_olor:"
 msgstr "_Іншим кольором:"
 
 #: ../data/eom-preferences-dialog.ui.h:4
+msgid "As custom color:"
+msgstr "Власний колір:"
+
+#: ../data/eom-preferences-dialog.ui.h:5
+msgid "Background"
+msgstr "Тло"
+
+#: ../data/eom-preferences-dialog.ui.h:6 ../data/eom.schemas.in.h:6
+msgid "Background Color"
+msgstr "Колір тла"
+
+#: ../data/eom-preferences-dialog.ui.h:7
 msgid "Color for Transparent Areas"
 msgstr "Колір прозорих ділянок"
 
-#: ../data/eom-preferences-dialog.ui.h:5
+#: ../data/eom-preferences-dialog.ui.h:8
 msgid "E_xpand images to fit screen"
 msgstr "Роз_ширювати зображення до розміру вікна"
 
-#: ../data/eom-preferences-dialog.ui.h:6
+#: ../data/eom-preferences-dialog.ui.h:9
 msgid "Eye of MATE Preferences"
 msgstr "Параметри програми \"Око MATE\""
 
-#: ../data/eom-preferences-dialog.ui.h:7
+#: ../data/eom-preferences-dialog.ui.h:10
 msgid "Image Enhancements"
 msgstr "Покращення зображень"
 
-#: ../data/eom-preferences-dialog.ui.h:8
+#: ../data/eom-preferences-dialog.ui.h:11
 msgid "Image View"
 msgstr "Вигляд зображення"
 
-#: ../data/eom-preferences-dialog.ui.h:9
+#: ../data/eom-preferences-dialog.ui.h:12
 msgid "Image Zoom"
 msgstr "Масштаб зображення"
 
-#: ../data/eom-preferences-dialog.ui.h:10
+#: ../data/eom-preferences-dialog.ui.h:13
 msgid "Plugins"
 msgstr "Модулі"
 
-#: ../data/eom-preferences-dialog.ui.h:11
+#: ../data/eom-preferences-dialog.ui.h:14
 msgid "Sequence"
 msgstr "Послідовність"
 
-#: ../data/eom-preferences-dialog.ui.h:12
+#: ../data/eom-preferences-dialog.ui.h:15
 msgid "Slideshow"
 msgstr "Показ слайдів"
 
-#: ../data/eom-preferences-dialog.ui.h:13
+#: ../data/eom-preferences-dialog.ui.h:16
 msgid "Smooth images when zoomed-_in"
 msgstr "Згладжувати зображення при збільшенні _масштабу"
 
-#: ../data/eom-preferences-dialog.ui.h:14
+#: ../data/eom-preferences-dialog.ui.h:17
 msgid "Smooth images when zoomed-_out"
 msgstr "Згладжувати зображення при зменшенні _масштабу"
 
-#: ../data/eom-preferences-dialog.ui.h:15
+#: ../data/eom-preferences-dialog.ui.h:18
 msgid "Transparent Parts"
 msgstr "Прозорі елементи"
 
-#: ../data/eom-preferences-dialog.ui.h:16
+#: ../data/eom-preferences-dialog.ui.h:19
 msgid "_Automatic orientation"
 msgstr "_Автоматичне орієнтування"
 
-#: ../data/eom-preferences-dialog.ui.h:17
+#: ../data/eom-preferences-dialog.ui.h:20
 msgid "_Loop sequence"
 msgstr "_Циклічна послідовність"
 
-#: ../data/eom-preferences-dialog.ui.h:18
+#: ../data/eom-preferences-dialog.ui.h:21
 msgid "_Switch image after:"
 msgstr "Зм_інювати зображення через:"
 
-#: ../data/eom-preferences-dialog.ui.h:19
+#: ../data/eom-preferences-dialog.ui.h:22
 msgid "seconds"
 msgstr "секунд"
 
 #: ../data/eom.schemas.in.h:1
 msgid ""
-"A value greater than 0 determines the seconds an image stays on screen until "
-"the next one is shown automatically. Zero disables the automatic browsing."
-msgstr ""
-"Значення більше 0 визначає кількість секунд, яку зображення лишатиметься на "
-"екрані перед автоматичною появою наступного. Нуль вимикає автоматичний "
-"перегляд."
+"A value greater than 0 determines the seconds an image stays on screen until"
+" the next one is shown automatically. Zero disables the automatic browsing."
+msgstr "Значення більше 0 визначає кількість секунд, яку зображення лишатиметься на екрані перед автоматичною появою наступного. Нуль вимикає автоматичний перегляд."
 
 #: ../data/eom.schemas.in.h:2
 msgid "Active plugins"
@@ -344,204 +349,187 @@ msgstr "Дозволяти початковий масштаб більше 100%
 msgid "Automatic orientation"
 msgstr "Автоматичне орієнтування"
 
-#: ../data/eom.schemas.in.h:6
+#: ../data/eom.schemas.in.h:7
 msgid "Delay in seconds until showing the next image"
 msgstr "Затримка у секундах перед наступним зображенням"
 
-#: ../data/eom.schemas.in.h:7
+#: ../data/eom.schemas.in.h:8
 msgid ""
 "Determines how transparency should be indicated. Valid values are "
-"CHECK_PATTERN, COLOR and NONE. If COLOR is choosen, then the trans_color key "
-"determines the used color value."
-msgstr ""
-"Визначає як потрібно позначати прозорість. Правильними значеннями є  "
-"CHECK_PATTERN (клітинки), COLOR (колір) і NONE (нічого). Якщо вибрано COLOR, "
-"то колір, яким позначатиметься прозорість буде визначатися ключем "
-"trans_color."
-
-#: ../data/eom.schemas.in.h:8
-msgid "Extrapolate Image"
-msgstr "Екстраполювати зображення"
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
+msgstr "Визначає, як слід позначати прозорість. Коректні значення: CHECK_PATTERN, COLOR, NONE. Якщо обрано COLOR, то колір визнчається трансколірним ключем."
 
 #: ../data/eom.schemas.in.h:9
-msgid ""
-"If activated Eye of MATE wont ask for confirmation when moving images to "
-"the trash. It will still ask if any of the files cannot be moved to the "
-"trash and would be deleted instead."
-msgstr ""
-"Якщо активне, \"Око MATE\" не запитуватиме підтвердження при переміщенні "
-"зображень до смітника. Однак, Ви будете отримувати запити у випадку, якщо "
-"файли не можна перенести до смітника, а натомість їх пропонується видалити."
+msgid "Extrapolate Image"
+msgstr "Екстраполювати зображення"
 
 #: ../data/eom.schemas.in.h:10
 msgid ""
 "If activated and no image is loaded in the active window, the file chooser "
 "will display the user's pictures folder using the XDG special user "
-"directories. If deactivated or the pictures folder has not been set up it "
+"directories. If deactivated or the pictures folder has not been set up, it "
 "will show the current working directory."
 msgstr ""
-"Якщо активне, та у активному вікні не завантажено зображення, діалог вибору "
-"файлів показуватиме теку користувача для малюнків, зі спеціальних каталогів "
-"XDG. Якщо не активне, або у вікні відрито або теку малюнків не встановлено , "
-"показуватиметься зміст поточного каталогу."
 
 #: ../data/eom.schemas.in.h:11
 msgid ""
-"If activated the detailed metadata list in the properties dialog will be "
-"moved to its own page in the dialog. This should make the dialog more usable "
-"on smaller screens, e.g. as used by netbooks. If disabled the widget will be "
-"embedded on the \"Metadata\" page."
+"If activated, Eye of MATE won't ask for confirmation when moving images to "
+"the trash. It will still ask if any of the files cannot be moved to the "
+"trash and would be deleted instead."
 msgstr ""
-"Якщо активне, докладний список метаданих у діалозі властивостей буде "
-"показано  на власній сторінці у діалоговому вікні. Це дозволяє краще "
-"розміщуватись на маленьких екранах, наприклад нетбуках. Якщо вимкнено, "
-"віджет вбудовується у сторінку \"Метадані\"."
 
 #: ../data/eom.schemas.in.h:12
 msgid ""
-"If the transparency key has the value COLOR, then this key determines the "
-"color which is used for indicating transparency."
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable"
+" on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
 msgstr ""
-"Якщо ключ \"transparency\" має значення COLOR, то цей ключ визначає колір, "
-"яким позначатиметься прозорість."
 
 #: ../data/eom.schemas.in.h:13
 msgid ""
-"If this is set to FALSE small images will not be stretched to fit into the "
-"screen initially."
-msgstr ""
-"Якщо не відмічено, то малі зображення не будуть розтягуватись до розмірів "
-"екрану на початку."
+"If the transparency key has the value COLOR, then this key determines the "
+"color which is used for indicating transparency."
+msgstr "Якщо ключ \"transparency\" має значення COLOR, то цей ключ визначає колір, яким позначатиметься прозорість."
 
 #: ../data/eom.schemas.in.h:14
 msgid ""
-"Image collection pane position. Set to 0 for bottom; 1 for left; 2 for top; "
-"3 for right."
+"If this is active, the color set by the background-color key will be used to"
+" fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
 msgstr ""
-"Положення панелі колекції зображень. Встановіть 0 - знизу; 1 - ліворуч; 2 - "
-"згори; 3 - праворуч."
 
 #: ../data/eom.schemas.in.h:15
+msgid ""
+"If this is set to FALSE small images will not be stretched to fit into the "
+"screen initially."
+msgstr "Якщо не відмічено, то малі зображення не будуть розтягуватись до розмірів екрану на початку."
+
+#: ../data/eom.schemas.in.h:16
+msgid ""
+"Image collection pane position. Set to 0 for bottom; 1 for left; 2 for top; "
+"3 for right."
+msgstr "Положення панелі колекції зображень. Встановіть 0 - знизу; 1 - ліворуч; 2 - згори; 3 - праворуч."
+
+#: ../data/eom.schemas.in.h:17
 msgid "Interpolate Image"
 msgstr "Інтерполювати зображення"
 
-#: ../data/eom.schemas.in.h:16
+#: ../data/eom.schemas.in.h:18
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
 "plugin."
-msgstr ""
-"Список активних модулів. У списку не міститься \"Розташування\" активних "
-"модулів. Щоб дізнатись \"Розташування\" певного модуля дивіться файл .eom-"
-"plugin\"."
+msgstr "Список активних модулів. У списку не міститься \"Розташування\" активних модулів. Щоб дізнатись \"Розташування\" певного модуля дивіться файл .eom-plugin\"."
 
-#: ../data/eom.schemas.in.h:17
+#: ../data/eom.schemas.in.h:19
 msgid "Loop through the image sequence"
 msgstr "Циклічна послідовність зображень"
 
-#: ../data/eom.schemas.in.h:18
+#: ../data/eom.schemas.in.h:20
 msgid "Scroll wheel zoom"
 msgstr "Масштабувати обертання колеса миші"
 
-#: ../data/eom.schemas.in.h:19
+#: ../data/eom.schemas.in.h:21
 msgid "Show/Hide the image collection pane scroll buttons."
 msgstr "Показувати/сховати кнопки прокрутки колекції зображень."
 
-#: ../data/eom.schemas.in.h:20
+#: ../data/eom.schemas.in.h:22
 msgid "Show/Hide the image collection pane."
 msgstr "Показувати/приховувати панель колекції зображень."
 
-#: ../data/eom.schemas.in.h:21
+#: ../data/eom.schemas.in.h:23
 msgid "Show/Hide the window side pane."
 msgstr "Показати чи приховати бічну панель."
 
-#: ../data/eom.schemas.in.h:22
+#: ../data/eom.schemas.in.h:24
 msgid "Show/Hide the window statusbar."
 msgstr "Показати чи приховати рядок стану вікна."
 
-#: ../data/eom.schemas.in.h:23
+#: ../data/eom.schemas.in.h:25
 msgid "Show/Hide the window toolbar."
 msgstr "Показати чи прибрати панель інструментів."
 
-#: ../data/eom.schemas.in.h:25
+#: ../data/eom.schemas.in.h:26
+msgid ""
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
+msgstr "Колір, яким заповнюється простір за зображенням. Якщо не вказано, використовуватиметься колір поточної теми GTK+."
+
+#: ../data/eom.schemas.in.h:28
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
-"This value defines the zooming step used for each scroll event. For example, "
-"0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
-"a 100% zoom increment."
-msgstr ""
-"Множник, що застосовується при використанні колеса миші для зміни масштабу. "
-"Це значення визначає крок зміни масштабу при кожній русі прокручування. "
-"Наприклад, 0.05 означає збільшення на 5% для кожної події прокручування, а "
-"1.00 - збільшення на 100%."
+"This value defines the zooming step used for each scroll event. For example,"
+" 0.05 results in a 5% zoom increment for each scroll event and 1.00 result "
+"in a 100% zoom increment."
+msgstr "Множник, що застосовується при використанні колеса миші для зміни масштабу. Це значення визначає крок зміни масштабу при кожній русі прокручування. Наприклад, 0.05 означає збільшення на 5% для кожної події прокручування, а 1.00 - збільшення на 100%."
 
-#: ../data/eom.schemas.in.h:26
+#: ../data/eom.schemas.in.h:29
 msgid "Transparency color"
 msgstr "Колір прозорості"
 
-#: ../data/eom.schemas.in.h:27
+#: ../data/eom.schemas.in.h:30
 msgid "Transparency indicator"
 msgstr "Індикатор прозорості"
 
-#: ../data/eom.schemas.in.h:28
+#: ../data/eom.schemas.in.h:31
 msgid "Trash images without asking"
 msgstr "Знищувати зображення не питаючи дозволу"
 
-#: ../data/eom.schemas.in.h:29
-msgid ""
-"Whether the file chooser should show the user's pictures folder if no images "
-"are loaded."
-msgstr ""
-"Чи у діалозі вибору файлу слід показувати зображення з теки малюнків, якщо "
-"зображення не завантажено у програмі."
-
-#: ../data/eom.schemas.in.h:30
-msgid "Whether the image collection pane should be resizable."
-msgstr "Чи можна змінювати розмір панелі колекції зображень."
-
-#: ../data/eom.schemas.in.h:31
-msgid ""
-"Whether the image should be extrapolated on zoom-in. This leads to blurry "
-"quality and is somewhat slower than non-extrapolated images."
-msgstr ""
-"Визначає, чи потрібно екстраполювати зображення коли змінюється його "
-"масштаб. В результаті можна отримати кращу якість при сповільненні роботи, "
-"на відміну від неекстрапольованих зображень."
-
 #: ../data/eom.schemas.in.h:32
-msgid ""
-"Whether the image should be interpolated on zoom-out. This leads to better "
-"quality but is somewhat slower than non interpolated images."
-msgstr ""
-"Визначає, чи потрібно інтерполювати зображення коли змінюється його масштаб. "
-"В результаті можна отримати кращу якість при сповільненні роботи, на відміну "
-"від неінтерпольованих зображень."
+msgid "Use a custom background color"
+msgstr "Використовувати власний колір тла"
 
 #: ../data/eom.schemas.in.h:33
 msgid ""
-"Whether the image should be rotated automatically based on EXIF orientation."
-msgstr ""
-"Чи повинно зображення автоматично обертатись у відповідності до даних EXIF."
+"Whether the file chooser should show the user's pictures folder if no images"
+" are loaded."
+msgstr "Чи у діалозі вибору файлу слід показувати зображення з теки малюнків, якщо зображення не завантажено у програмі."
 
 #: ../data/eom.schemas.in.h:34
+msgid "Whether the image collection pane should be resizable."
+msgstr "Чи можна змінювати розмір панелі колекції зображень."
+
+#: ../data/eom.schemas.in.h:35
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr "Визначає, чи потрібно екстраполювати зображення коли змінюється його масштаб. В результаті можна отримати кращу якість при сповільненні роботи, на відміну від неекстрапольованих зображень."
+
+#: ../data/eom.schemas.in.h:36
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:37
+msgid ""
+"Whether the image should be rotated automatically based on EXIF orientation."
+msgstr "Чи повинно зображення автоматично обертатись у відповідності до даних EXIF."
+
+#: ../data/eom.schemas.in.h:38
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
 msgstr "Чи матиме список метаданих власну сторінку у діалозі властивостей."
 
-#: ../data/eom.schemas.in.h:35
+#: ../data/eom.schemas.in.h:39
 msgid "Whether the scroll wheel should be used for zooming."
 msgstr "Чи використовувати прокручування колеса для зміни масштабу."
 
-#: ../data/eom.schemas.in.h:36
+#: ../data/eom.schemas.in.h:40
 msgid "Whether the sequence of images should be shown in an endless loop."
-msgstr ""
-"Визначає, що потрібно показувати послідовність зображень у нескінченному "
-"циклі."
+msgstr "Визначає, що потрібно показувати послідовність зображень у нескінченному циклі."
 
-#: ../data/eom.schemas.in.h:37
+#: ../data/eom.schemas.in.h:41
 msgid "Zoom multiplier"
 msgstr "Коефіцієнт збільшення"
+
+#: ../src/eom-application.c:123
+msgid "Running in fullscreen mode"
+msgstr "Працює у повноекранному режимі"
 
 #: ../src/eom-close-confirmation-dialog.c:159
 msgid "Close _without Saving"
@@ -586,9 +574,7 @@ msgstr "Формат файлу невідомий або не підтриму�
 msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
-msgstr ""
-"Око MATE не вдається визначити підтримуваний формат файлу для запису на "
-"основі назви файлу."
+msgstr "Око MATE не вдається визначити підтримуваний формат файлу для запису на основі назви файлу."
 
 #: ../src/eom-file-chooser.c:134
 msgid "Please try a different file extension like .png or .jpg."
@@ -602,7 +588,8 @@ msgstr "Всі файли"
 msgid "All Images"
 msgstr "Всі зображення"
 
-#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
+#. Filter name: First description then file extension, eg. "The PNG-Format
+#. (*.png)".
 #: ../src/eom-file-chooser.c:192
 #, c-format
 msgid "%s (*.%s)"
@@ -618,7 +605,7 @@ msgstr[1] "точки"
 msgstr[2] "точок"
 
 #: ../src/eom-file-chooser.c:437
-msgid "Load Image"
+msgid "Open Image"
 msgstr "Відкрити зображення"
 
 #: ../src/eom-file-chooser.c:445
@@ -629,42 +616,42 @@ msgstr "Зберегти зображення"
 msgid "Open Folder"
 msgstr "Відкрити теку"
 
-#: ../src/eom-image.c:579
+#: ../src/eom-image.c:598
 #, c-format
 msgid "Transformation on unloaded image."
 msgstr "Перетворення для не завантаженого зображення."
 
-#: ../src/eom-image.c:607
+#: ../src/eom-image.c:626
 #, c-format
 msgid "Transformation failed."
 msgstr "Помилка при перетворенні."
 
-#: ../src/eom-image.c:1011
+#: ../src/eom-image.c:1053
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "Для цього формату файлів EXIF не підтримується."
 
-#: ../src/eom-image.c:1134
+#: ../src/eom-image.c:1180
 #, c-format
 msgid "Image loading failed."
 msgstr "Помилка завантаження зображення."
 
-#: ../src/eom-image.c:1539 ../src/eom-image.c:1641
+#: ../src/eom-image.c:1585 ../src/eom-image.c:1687
 #, c-format
 msgid "No image loaded."
 msgstr "Зображення не завантажено."
 
-#: ../src/eom-image.c:1549 ../src/eom-image.c:1653
+#: ../src/eom-image.c:1595 ../src/eom-image.c:1699
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "Помилка при створенні тимчасового файлу."
 
-#: ../src/eom-image-jpeg.c:361
+#: ../src/eom-image-jpeg.c:364
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr "Не вдається створити тимчасовий файл для збереження: %s"
 
-#: ../src/eom-image-jpeg.c:380
+#: ../src/eom-image-jpeg.c:383
 #, c-format
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "Не вдається виділити пам'ять для завантаження файла у форматі JPEG"
@@ -718,7 +705,8 @@ msgstr "Значення"
 msgid "%a, %d %B %Y  %X"
 msgstr "%a, %d %B %Y  %X"
 
-#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
+#. A strftime-formatted string, to display the date the image was taken, for
+#. the case we don't have the time.
 #: ../src/eom-exif-util.c:147
 msgid "%a, %d %B %Y"
 msgstr "%a, %d %B %Y"
@@ -741,7 +729,7 @@ msgstr "Зображення не знайдено у \"%s\"."
 msgid "The given locations contain no images."
 msgstr "Вказані місця не містять зображень."
 
-#: ../src/eom-print.c:197
+#: ../src/eom-print.c:219
 msgid "Image Settings"
 msgstr "Параметри зображення"
 
@@ -894,7 +882,7 @@ msgstr " (некоректний символ Unicode)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/eom-window.c:773
+#: ../src/eom-window.c:832
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
@@ -902,7 +890,25 @@ msgstr[0] "%i × %i точок  %s    %i%%"
 msgstr[1] "%i × %i точок  %s    %i%%"
 msgstr[2] "%i × %i точок  %s    %i%%"
 
-#: ../src/eom-window.c:1191
+#: ../src/eom-window.c:1138
+msgid "_Reload"
+msgstr "Пе_резавантажити"
+
+#: ../src/eom-window.c:1140 ../src/eom-window.c:3000
+msgctxt "MessageArea"
+msgid "Hi_de"
+msgstr "С_ховати"
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eom-window.c:1150
+#, c-format
+msgid ""
+"The image \"%s\" has been modified by an external application.\n"
+"Would you like to reload it?"
+msgstr "Зовнішня програма модифікувала зображення \"%s\".\nПерезавантажити його?"
+
+#: ../src/eom-window.c:1305
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Використовувати \"%s\" для відкривання виділеного зображення"
@@ -912,114 +918,100 @@ msgstr "Використовувати \"%s\" для відкривання ви
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1341
+#: ../src/eom-window.c:1455
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Збереження зображення \"%s\" (%u/%u)"
 
-#: ../src/eom-window.c:1683
+#: ../src/eom-window.c:1808
 #, c-format
-msgid "Loading image \"%s\""
-msgstr "Завантаження зображення \"%s\""
+msgid "Opening image \"%s\""
+msgstr "Відкривається зображення \"%s\""
 
-#: ../src/eom-window.c:2383
+#: ../src/eom-window.c:2498
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
-msgstr ""
-"Помилка при друкуванні файлу:\n"
-"%s"
+msgstr "Помилка при друкуванні файлу:\n%s"
 
-#: ../src/eom-window.c:2635
+#: ../src/eom-window.c:2751
 msgid "Toolbar Editor"
 msgstr "Редактор панелі інструментів"
 
-#: ../src/eom-window.c:2638
+#: ../src/eom-window.c:2754
 msgid "_Reset to Default"
 msgstr "_Типове розташування"
 
-#: ../src/eom-window.c:2724
+#: ../src/eom-window.c:2844
 msgid "translator-credits"
-msgstr ""
-"Юрій Сирота\n"
-"Максим Дзюманенко <dziumanenko@gmail.com>"
+msgstr "Юрій Сирота\nМаксим Дзюманенко <dziumanenko@gmail.com>"
 
-#: ../src/eom-window.c:2727
+#: ../src/eom-window.c:2847
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version.\n"
-msgstr ""
-"Це вільна програма; ви можете розповсюджувати її та/чи змінювати на умовах "
-"ліцензії GNU General Public License, що опублікована Free Software "
-"Foundation; версії 2 цієх ліцензії, чи (на вашу думку) будь-якою більш "
-"пізнішої версії.\n"
+msgstr "Це вільна програма; ви можете розповсюджувати її та/чи змінювати на умовах ліцензії GNU General Public License, що опублікована Free Software Foundation; версії 2 цієх ліцензії, чи (на вашу думку) будь-якою більш пізнішої версії.\n"
 
-#: ../src/eom-window.c:2731
+#: ../src/eom-window.c:2851
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details.\n"
-msgstr ""
-"Ця програма розповсюджується в сподіванні на те, що вона буде корисною, але "
-"БЕЗ БУДЬ-ЯКИХ ГАРАНТІЙ, в тому числі без неявної гарантії КОМЕРЦІЙНОЇ "
-"ЦІННОСТІ чи ПРИДАТНОСТІ ДЛЯ БУДЬ-ЯКИХ ЦІЛЕЙ. Докладніше про це дивіться GNU "
-"General Public License.\n"
+msgstr "Ця програма розповсюджується в сподіванні на те, що вона буде корисною, але БЕЗ БУДЬ-ЯКИХ ГАРАНТІЙ, в тому числі без неявної гарантії КОМЕРЦІЙНОЇ ЦІННОСТІ чи ПРИДАТНОСТІ ДЛЯ БУДЬ-ЯКИХ ЦІЛЕЙ. Докладніше про це дивіться GNU General Public License.\n"
 
-#: ../src/eom-window.c:2735
+#: ../src/eom-window.c:2855
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program; if not, write to the Free Software Foundation, Inc., 59 Temple "
-"Place - Suite 330, Boston, MA 02111-1307, USA."
-msgstr ""
-"Ви мали отримати копію GNU General Public License разом з цією програмою; "
-"якщо це не так, напишіть у Free Software Foundation, Inc., 59 Temple Place - "
-"Suite 330, Boston, MA 02111-1307, USA."
+"You should have received a copy of the GNU General Public License along with"
+" this program; if not, write to the Free Software Foundation, Inc., 59 "
+"Temple Place - Suite 330, Boston, MA 02111-1307, USA."
+msgstr "Ви мали отримати копію GNU General Public License разом з цією програмою; якщо це не так, напишіть у Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA."
 
-#: ../src/eom-window.c:2748
+#: ../src/eom-window.c:2868
 msgid "Eye of MATE"
 msgstr "Око MATE"
 
-#: ../src/eom-window.c:2751
+#: ../src/eom-window.c:2872
 msgid "The MATE image viewer."
 msgstr "Програма перегляду зображень для MATE."
 
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from eom's menubar
+#: ../src/eom-window.c:2998
+msgid "_Open Background Preferences"
+msgstr "_Налаштувати тло"
+
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2877
+#: ../src/eom-window.c:3014
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
-msgstr ""
-"Зображення «%s» встановлено у якості тла робочого столу.\n"
-"Змінити його зовнішній вигляд?"
+msgstr "Зображення «%s» встановлено у якості тла робочого столу.\nЗмінити його зовнішній вигляд?"
 
-#: ../src/eom-window.c:3277
+#: ../src/eom-window.c:3410
 msgid "Saving image locally…"
 msgstr "Збереження зображення локально…"
 
-#: ../src/eom-window.c:3359
+#: ../src/eom-window.c:3492
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
-msgstr ""
-"Ви справді бажаєте перемістити\n"
-"\"%s\" у смітник?"
+msgstr "Ви справді бажаєте перемістити\n\"%s\" у смітник?"
 
-#: ../src/eom-window.c:3362
+#: ../src/eom-window.c:3495
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
-msgstr ""
-"Не можу знайти смітника для \"%s\". Бажаєте назавжди знищити це зображення?"
+msgstr "Не можу знайти смітника для \"%s\". Бажаєте назавжди знищити це зображення?"
 
-#: ../src/eom-window.c:3367
+#: ../src/eom-window.c:3500
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1027,377 +1019,369 @@ msgid ""
 msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
-msgstr[0] ""
-"Ви справді бажаєте перемістити\n"
-"%d виділене зображення у смітник?"
-msgstr[1] ""
-"Ви справді бажаєте перемістити\n"
-"%d виділених зображення у смітник?"
-msgstr[2] ""
-"Ви справді бажаєте перемістити\n"
-"%d виділених зображень у смітник?"
+msgstr[0] "Ви справді бажаєте перемістити\n%d виділене зображення у смітник?"
+msgstr[1] "Ви справді бажаєте перемістити\n%d виділених зображення у смітник?"
+msgstr[2] "Ви справді бажаєте перемістити\n%d виділених зображень у смітник?"
 
-#: ../src/eom-window.c:3372
+#: ../src/eom-window.c:3505
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
-msgstr ""
-"Деякі з обраних зображень не можна перенести до смітника, а тому їх буде "
-"знищено. Бажаєте продовжити?"
+msgstr "Деякі з обраних зображень не можна перенести до смітника, а тому їх буде знищено. Бажаєте продовжити?"
 
-#: ../src/eom-window.c:3389 ../src/eom-window.c:3831 ../src/eom-window.c:3855
+#: ../src/eom-window.c:3522 ../src/eom-window.c:3980 ../src/eom-window.c:4004
 msgid "Move to _Trash"
 msgstr "Перемістити у _смітник"
 
-#: ../src/eom-window.c:3391
+#: ../src/eom-window.c:3524
 msgid "_Do not ask again during this session"
 msgstr "_Не запитувати знову впродовж цього сеансу"
 
-#: ../src/eom-window.c:3436 ../src/eom-window.c:3450
+#: ../src/eom-window.c:3569 ../src/eom-window.c:3583
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Не вдається отримати доступ до смітника."
 
-#: ../src/eom-window.c:3458
+#: ../src/eom-window.c:3591
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Не можу знищити файл"
 
-#: ../src/eom-window.c:3529
+#: ../src/eom-window.c:3662
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Помилка при видаленні зображення %s"
 
-#: ../src/eom-window.c:3751
-msgid "_File"
-msgstr "_Файл"
-
-#: ../src/eom-window.c:3752
-msgid "_Edit"
-msgstr "_Правка"
-
-#: ../src/eom-window.c:3753
-msgid "_View"
-msgstr "_Вигляд"
-
-#: ../src/eom-window.c:3754
+#: ../src/eom-window.c:3904
 msgid "_Image"
 msgstr "_Зображення"
 
-#: ../src/eom-window.c:3755
+#: ../src/eom-window.c:3905
+msgid "_Edit"
+msgstr "_Правка"
+
+#: ../src/eom-window.c:3906
+msgid "_View"
+msgstr "_Вигляд"
+
+#: ../src/eom-window.c:3907
 msgid "_Go"
 msgstr "Пере_йти"
 
-#: ../src/eom-window.c:3756
+#: ../src/eom-window.c:3908
 msgid "_Tools"
 msgstr "_Панель інструментів"
 
-#: ../src/eom-window.c:3757
+#: ../src/eom-window.c:3909
 msgid "_Help"
 msgstr "_Довідка"
 
-#: ../src/eom-window.c:3759
+#: ../src/eom-window.c:3911
 msgid "_Open…"
 msgstr "_Відкрити…"
 
-#: ../src/eom-window.c:3760
+#: ../src/eom-window.c:3912
 msgid "Open a file"
 msgstr "Відкрити файл"
 
-#: ../src/eom-window.c:3762
+#: ../src/eom-window.c:3914
 msgid "_Close"
 msgstr "_Закрити"
 
-#: ../src/eom-window.c:3763
+#: ../src/eom-window.c:3915
 msgid "Close window"
 msgstr "Закрити вікно"
 
-#: ../src/eom-window.c:3765
+#: ../src/eom-window.c:3917
 msgid "T_oolbar"
 msgstr "_Панель інструментів"
 
-#: ../src/eom-window.c:3766
+#: ../src/eom-window.c:3918
 msgid "Edit the application toolbar"
 msgstr "Редагувати панель інструментів"
 
-#: ../src/eom-window.c:3768
+#: ../src/eom-window.c:3920
 msgid "Prefere_nces"
 msgstr "П_араметри"
 
-#: ../src/eom-window.c:3769
+#: ../src/eom-window.c:3921
 msgid "Preferences for Eye of MATE"
 msgstr "Параметри програми \"Око MATE\""
 
-#: ../src/eom-window.c:3771
+#: ../src/eom-window.c:3923
 msgid "_Contents"
 msgstr "_Зміст"
 
-#: ../src/eom-window.c:3772
+#: ../src/eom-window.c:3924
 msgid "Help on this application"
 msgstr "Довідка про програму"
 
-#: ../src/eom-window.c:3774 ../src/eom-plugin-manager.c:505
+#: ../src/eom-window.c:3926 ../src/eom-plugin-manager.c:505
 msgid "_About"
 msgstr "_Про програму"
 
-#: ../src/eom-window.c:3775
+#: ../src/eom-window.c:3927
 msgid "About this application"
 msgstr "Про цю програму"
 
-#: ../src/eom-window.c:3780
+#: ../src/eom-window.c:3932
 msgid "_Toolbar"
 msgstr "_Панель інструментів"
 
-#: ../src/eom-window.c:3781
+#: ../src/eom-window.c:3933
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Змінює видимість панелі інструментів у поточному вікні"
 
-#: ../src/eom-window.c:3783
+#: ../src/eom-window.c:3935
 msgid "_Statusbar"
 msgstr "_Рядок стану"
 
-#: ../src/eom-window.c:3784
+#: ../src/eom-window.c:3936
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Змінює видимість рядка стану у поточному вікні"
 
-#: ../src/eom-window.c:3786
+#: ../src/eom-window.c:3938
 msgid "_Image Collection"
 msgstr "Колекція _зображень"
 
-#: ../src/eom-window.c:3787
+#: ../src/eom-window.c:3939
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "Змінює видимість колекції зображень у поточному вікні"
 
-#: ../src/eom-window.c:3789
+#: ../src/eom-window.c:3941
 msgid "Side _Pane"
 msgstr "Бі_чна панель"
 
-#: ../src/eom-window.c:3790
+#: ../src/eom-window.c:3942
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Змінює видимість бічної панелі у поточному вікні"
 
-#: ../src/eom-window.c:3795
+#: ../src/eom-window.c:3947
 msgid "_Save"
 msgstr "З_берегти"
 
-#: ../src/eom-window.c:3796
+#: ../src/eom-window.c:3948
 msgid "Save changes in currently selected images"
 msgstr "Зберегти зміни у виділених зображеннях"
 
-#: ../src/eom-window.c:3798
+#: ../src/eom-window.c:3950
 msgid "Open _with"
 msgstr "Відкрити _у програмі"
 
-#: ../src/eom-window.c:3799
+#: ../src/eom-window.c:3951
 msgid "Open the selected image with a different application"
 msgstr "Відкрити виділене зображення у інший програмі"
 
-#: ../src/eom-window.c:3801
+#: ../src/eom-window.c:3953
 msgid "Save _As…"
 msgstr "Зберегти _як…"
 
-#: ../src/eom-window.c:3802
+#: ../src/eom-window.c:3954
 msgid "Save the selected images with a different name"
 msgstr "Зберегти виділене зображення з іншою назвою"
 
-#: ../src/eom-window.c:3805
-msgid "Set up the page properties for printing"
-msgstr "Встановити властивості сторінки для друку"
-
-#: ../src/eom-window.c:3807
+#: ../src/eom-window.c:3956
 msgid "_Print…"
 msgstr "Д_рук…"
 
-#: ../src/eom-window.c:3808
+#: ../src/eom-window.c:3957
 msgid "Print the selected image"
 msgstr "Друкувати виділені зображення"
 
-#: ../src/eom-window.c:3810
+#: ../src/eom-window.c:3959
 msgid "Prope_rties"
 msgstr "В_ластивості"
 
-#: ../src/eom-window.c:3811
+#: ../src/eom-window.c:3960
 msgid "Show the properties and metadata of the selected image"
 msgstr "Відобразити властивості та метадані виділених зображень"
 
-#: ../src/eom-window.c:3813
+#: ../src/eom-window.c:3962
 msgid "_Undo"
 msgstr "В_ернути"
 
-#: ../src/eom-window.c:3814
+#: ../src/eom-window.c:3963
 msgid "Undo the last change in the image"
 msgstr "Вернути останню зміну у зображенні"
 
-#: ../src/eom-window.c:3816
+#: ../src/eom-window.c:3965
 msgid "Flip _Horizontal"
 msgstr "Перевернути _горизонтально"
 
-#: ../src/eom-window.c:3817
+#: ../src/eom-window.c:3966
 msgid "Mirror the image horizontally"
 msgstr "Горизонтальне віддзеркалення зображення "
 
-#: ../src/eom-window.c:3819
+#: ../src/eom-window.c:3968
 msgid "Flip _Vertical"
 msgstr "Перевернути _вертикально"
 
-#: ../src/eom-window.c:3820
+#: ../src/eom-window.c:3969
 msgid "Mirror the image vertically"
 msgstr "Вертикальне віддзеркалення зображення "
 
-#: ../src/eom-window.c:3822
+#: ../src/eom-window.c:3971
 msgid "_Rotate Clockwise"
 msgstr "Обернути _за годинниковою стрілкою"
 
-#: ../src/eom-window.c:3823
+#: ../src/eom-window.c:3972
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Обернути зображення за годинниковою стрілкою на 90 градусів"
 
-#: ../src/eom-window.c:3825
+#: ../src/eom-window.c:3974
 msgid "Rotate Counterc_lockwise"
 msgstr "Обернути _проти годинникової стрілки"
 
-#: ../src/eom-window.c:3826
+#: ../src/eom-window.c:3975
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Обернути зображення проти годинникової стрілки на 90 градусів"
 
-#: ../src/eom-window.c:3828
+#: ../src/eom-window.c:3977
 msgid "Set as _Desktop Background"
 msgstr "Встановити як _тло"
 
-#: ../src/eom-window.c:3829
+#: ../src/eom-window.c:3978
 msgid "Set the selected image as the desktop background"
 msgstr "Встановити обране зображення як тло робочого столу"
 
-#: ../src/eom-window.c:3832
+#: ../src/eom-window.c:3981
 msgid "Move the selected image to the trash folder"
 msgstr "Перемістити виділене зображення у теку смітника"
 
-#: ../src/eom-window.c:3834 ../src/eom-window.c:3846 ../src/eom-window.c:3849
+#: ../src/eom-window.c:3983 ../src/eom-window.c:3995 ../src/eom-window.c:3998
 msgid "_Zoom In"
 msgstr "З_більшити"
 
-#: ../src/eom-window.c:3835 ../src/eom-window.c:3847
+#: ../src/eom-window.c:3984 ../src/eom-window.c:3996
 msgid "Enlarge the image"
 msgstr "Збільшити зображення"
 
-#: ../src/eom-window.c:3837 ../src/eom-window.c:3852
+#: ../src/eom-window.c:3986 ../src/eom-window.c:4001
 msgid "Zoom _Out"
 msgstr "З_меншити"
 
-#: ../src/eom-window.c:3838 ../src/eom-window.c:3850 ../src/eom-window.c:3853
+#: ../src/eom-window.c:3987 ../src/eom-window.c:3999 ../src/eom-window.c:4002
 msgid "Shrink the image"
 msgstr "Зменшити зображення"
 
-#: ../src/eom-window.c:3840
+#: ../src/eom-window.c:3989
 msgid "_Normal Size"
 msgstr "_Нормальний розмір"
 
-#: ../src/eom-window.c:3841
+#: ../src/eom-window.c:3990
 msgid "Show the image at its normal size"
 msgstr "Відобразити зображення зі звичайними розмірами"
 
-#: ../src/eom-window.c:3843
+#: ../src/eom-window.c:3992
 msgid "Best _Fit"
 msgstr "Піді_гнати"
 
-#: ../src/eom-window.c:3844
+#: ../src/eom-window.c:3993
 msgid "Fit the image to the window"
 msgstr "Розмістити зображення цілком у вікні"
 
-#: ../src/eom-window.c:3861
+#: ../src/eom-window.c:4010
 msgid "_Fullscreen"
 msgstr "На _весь екран"
 
-#: ../src/eom-window.c:3862
+#: ../src/eom-window.c:4011
 msgid "Show the current image in fullscreen mode"
 msgstr "Відобразити зображення у повноекранному режимі"
 
-#: ../src/eom-window.c:3867 ../src/eom-window.c:3882
+#: ../src/eom-window.c:4013
+msgid "Pause Slideshow"
+msgstr "Призупинити показ слайдів"
+
+#: ../src/eom-window.c:4014
+msgid "Pause or resume the slideshow"
+msgstr "Призупинити чи відновити показ слайдів"
+
+#: ../src/eom-window.c:4019 ../src/eom-window.c:4034
 msgid "_Previous Image"
 msgstr "_Попереднє зображення"
 
-#: ../src/eom-window.c:3868
+#: ../src/eom-window.c:4020
 msgid "Go to the previous image of the collection"
 msgstr "Перейти до попередньої колекції зображень"
 
-#: ../src/eom-window.c:3870
+#: ../src/eom-window.c:4022
 msgid "_Next Image"
 msgstr "_Наступне зображення"
 
-#: ../src/eom-window.c:3871
+#: ../src/eom-window.c:4023
 msgid "Go to the next image of the collection"
 msgstr "Перейти до наступної колекції зображень"
 
-#: ../src/eom-window.c:3873 ../src/eom-window.c:3885
+#: ../src/eom-window.c:4025 ../src/eom-window.c:4037
 msgid "_First Image"
 msgstr "П_ерше зображення"
 
-#: ../src/eom-window.c:3874
+#: ../src/eom-window.c:4026
 msgid "Go to the first image of the collection"
 msgstr "Перейти до першої колекції зображень"
 
-#: ../src/eom-window.c:3876 ../src/eom-window.c:3888
+#: ../src/eom-window.c:4028 ../src/eom-window.c:4040
 msgid "_Last Image"
 msgstr "_Останнє зображення"
 
-#: ../src/eom-window.c:3877
+#: ../src/eom-window.c:4029
 msgid "Go to the last image of the collection"
 msgstr "Перейти до останньої колекції зображень"
 
-#: ../src/eom-window.c:3879
+#: ../src/eom-window.c:4031
 msgid "_Random Image"
 msgstr "Випа_дкове зображення"
 
-#: ../src/eom-window.c:3880
+#: ../src/eom-window.c:4032
 msgid "Go to a random image of the collection"
 msgstr "Перейти до випадкового зображення у колекції"
 
-#: ../src/eom-window.c:3894
+#: ../src/eom-window.c:4046
 msgid "_Slideshow"
 msgstr "Показ _слайдів"
 
-#: ../src/eom-window.c:3895
+#: ../src/eom-window.c:4047
 msgid "Start a slideshow view of the images"
 msgstr "Почати показ слайдів із зображень"
 
-#: ../src/eom-window.c:3961
+#: ../src/eom-window.c:4113
 msgid "Previous"
 msgstr "Попереднє"
 
-#: ../src/eom-window.c:3965
+#: ../src/eom-window.c:4117
 msgid "Next"
 msgstr "Наступне"
 
-#: ../src/eom-window.c:3969
+#: ../src/eom-window.c:4121
 msgid "Right"
 msgstr "За годинниковою"
 
-#: ../src/eom-window.c:3972
+#: ../src/eom-window.c:4124
 msgid "Left"
 msgstr "Проти годинникової"
 
-#: ../src/eom-window.c:3975
+#: ../src/eom-window.c:4127
 msgid "In"
 msgstr "Збільшити"
 
-#: ../src/eom-window.c:3978
+#: ../src/eom-window.c:4130
 msgid "Out"
 msgstr "Зменшити"
 
-#: ../src/eom-window.c:3981
+#: ../src/eom-window.c:4133
 msgid "Normal"
 msgstr "Нормальний"
 
-#: ../src/eom-window.c:3984
+#: ../src/eom-window.c:4136
 msgid "Fit"
 msgstr "Підігнати"
 
-#: ../src/eom-window.c:3987
+#: ../src/eom-window.c:4139
 msgid "Collection"
 msgstr "Колекція зображень"
 
-#: ../src/eom-window.c:3990
+#: ../src/eom-window.c:4142
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Смітник"
@@ -1438,36 +1422,32 @@ msgstr "_Про модуль"
 msgid "C_onfigure Plugin"
 msgstr "На_лаштувати модуль"
 
-#: ../src/main.c:63
+#: ../src/main.c:73
 msgid "Open in fullscreen mode"
 msgstr "Відкрити у повноекранному режимі"
 
-#: ../src/main.c:64
+#: ../src/main.c:74
 msgid "Disable image collection"
 msgstr "Колекція _зображень"
 
-#: ../src/main.c:65
+#: ../src/main.c:75
 msgid "Open in slideshow mode"
 msgstr "Відкрити у режимі перегляду слайдів"
 
-#: ../src/main.c:67
+#: ../src/main.c:77
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "Запускати новий екземпляр замість використанні існуючого"
 
-#: ../src/main.c:69
+#: ../src/main.c:80
+msgid "Show the application's version"
+msgstr "Показати версію програми"
+
+#: ../src/main.c:81
 msgid "[FILE…]"
 msgstr "[ФАЙЛ…]"
 
 #. I18N: The '%s' is replaced with eom's command name.
-#: ../src/main.c:195
+#: ../src/main.c:207
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
-msgstr ""
-"Виконайте '%s --help' щоб побачити повний перелік параметрів командного "
-"рядка."
-
-#: ../src/main.c:233
-msgid "Eye of MATE Image Viewer"
-msgstr "Програма \"Око MATE\""
-
-
+msgstr "Виконайте '%s --help' щоб побачити повний перелік параметрів командного рядка."
