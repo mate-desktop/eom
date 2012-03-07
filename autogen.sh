@@ -12,7 +12,7 @@ PKG_NAME="mate-image-viewer"
     exit 1
 }
 
-which mate-autogen.sh || {
+which mate-autogen || {
     echo "You need to install mate-common from the MATE Git"
     exit 1
 }
@@ -20,5 +20,5 @@ which mate-autogen.sh || {
 REQUIRED_AUTOMAKE_VERSION=1.9
 MATE_DATADIR="$mate_datadir"
 
-. mate-autogen.sh
+. mate-autogen
 

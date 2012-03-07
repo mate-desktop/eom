@@ -6,10 +6,6 @@ SUBDIRS = $(jpeg_DIRS) cut-n-paste bindings src plugins po help data doc
 
 EXTRA_DIST = 			\
 	HACKING			\
-	MAINTAINERS		\
-	ChangeLog-2.6		\
-	ChangeLog-2.18		\
-	ChangeLog.pre-git	\
 	mate-doc-utils.make
 
 DISTCLEANFILES =                \
