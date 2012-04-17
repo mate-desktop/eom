@@ -255,9 +255,9 @@ eom_util_dot_dir (void)
 		gboolean exists;
 
 		#if GLIB_CHECK_VERSION(2, 6, 0)
-			dot_dir = g_build_filename(g_get_user_config_dir(), ".mate", "eom", NULL);
+			dot_dir = g_build_filename(g_get_user_config_dir(), "mate", "eom", NULL);
 		#else // glib version < 2.6.0
-			dot_dir = g_build_filename(g_get_home_dir(), ".config", ".mate", "eom", NULL);
+			dot_dir = g_build_filename(g_get_home_dir(), ".config", "mate", "eom", NULL);
 		#endif
 
 		exists = ensure_dir_exists (dot_dir);
