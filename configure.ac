@@ -93,8 +93,10 @@ MATE_ICON_THEME_REQUIRED=1.1.0
 SHARED_MIME_INFO_REQUIRED=0.20
 EXEMPI_REQUIRED=1.99.5
 
+PKG_CHECK_MODULES(GMODULE, gmodule-2.0, [GMODULE_ADD="gmodule-2.0"],[GMODULE_ADD=""])
 EOM_MODULES="gtk+-2.0 >= $GTK_REQUIRED \
              glib-2.0 >= $GLIB_REQUIRED \
+             $GMODULE_ADD \
              gio-2.0 >= $GLIB_REQUIRED \
              gthread-2.0 >= $GLIB_REQUIRED \
              mate-desktop-2.0 >= $MATE_DESKTOP_REQUIRED \
