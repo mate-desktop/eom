@@ -87,7 +87,7 @@
 #define EOM_WINDOW_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_WINDOW, EomWindowPrivate))
 
-G_DEFINE_TYPE (EomWindow, eom_window, GTK_TYPE_WINDOW);
+G_DEFINE_TYPE (EomWindow, eom_window, GTK_TYPE_APPLICATION_WINDOW);
 
 #define EOM_WINDOW_MIN_WIDTH  440
 #define EOM_WINDOW_MIN_HEIGHT 350
@@ -5237,9 +5237,11 @@ eom_window_new (EomStartupFlags flags)
 	eom_debug (DEBUG_WINDOW);
 
 	window = EOM_WINDOW (g_object_new (EOM_TYPE_WINDOW,
-					   "type", GTK_WINDOW_TOPLEVEL,
-					   "startup-flags", flags,
-					   NULL));
+	                                   "type", GTK_WINDOW_TOPLEVEL,
+	                                   "application", EOM_APP,
+	                                   "show-menubar", FALSE,
+	                                   "startup-flags", flags,
+	                                   NULL));
 
 	return GTK_WIDGET (window);
 }

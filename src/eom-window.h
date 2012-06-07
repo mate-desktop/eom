@@ -83,13 +83,13 @@ typedef enum {
 } EomStartupFlags;
 
 struct _EomWindow {
-	GtkWindow win;
+	GtkApplicationWindow win;
 
 	EomWindowPrivate *priv;
 };
 
 struct _EomWindowClass {
-	GtkWindowClass parent_class;
+	GtkApplicationWindowClass parent_class;
 
 	void (* prepared) (EomWindow *window);
 };
