@@ -1,585 +1,1013 @@
-#
-# Pablo Saratxaga <pablo@walon.org>, 2002, 2003, 2004, 2006.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: eom\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-07 17:29+0200\n"
-"PO-Revision-Date: 2006-10-09 22:29+0200\n"
-"Last-Translator: Pablo Saratxaga <pablo@walon.org>\n"
-"Language-Team: Walloon <linux-wa@walon.org>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2011-12-30 15:48+0100\n"
+"PO-Revision-Date: 2011-12-30 15:25+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: KBabel 1.9.1\n"
+"Language: wa\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 
-#: ../eom.desktop.in.in.h:1
-msgid "Image Viewer"
-msgstr "Håyneu d' imådjes"
+#. Translaters: This string is for a toggle to display a toolbar.
+#. * The name of the toolbar is automatically computed from the widgets
+#. * on the toolbar, and is placed at the %s. Note the _ before the %s
+#. * which is used to add mnemonics. We know that this is likely to
+#. * produce duplicates, but don't worry about it. If your language
+#. * normally has a mnemonic at the start, please use the _. If not,
+#. * please remove.
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:934
+#, c-format
+msgid "Show “_%s”"
+msgstr ""
 
-#: ../eom.desktop.in.in.h:2
-msgid "View different types of images"
-msgstr "Vey sacwantès diferinnès sôres d' imådjes"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1397
+msgid "_Move on Toolbar"
+msgstr ""
 
-#: ../eom.glade.h:1
-msgid "<b>File Name Preview</b>"
-msgstr "<b>Prévoeyaedje do no d' fitchî</b>"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1398
+msgid "Move the selected item on the toolbar"
+msgstr ""
 
-#: ../eom.glade.h:2
-msgid "<b>File Path Specifications</b>"
-msgstr "<b>Sipecifiaedjes do tchmin</b>"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1399
+msgid "_Remove from Toolbar"
+msgstr ""
 
-#: ../eom.glade.h:3
-msgid "<b>Image Interpolation</b>"
-msgstr "<b>Eterpolåcion di l' imådje</b>"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1400
+msgid "Remove the selected item from the toolbar"
+msgstr ""
 
-#: ../eom.glade.h:4
-msgid "<b>Image Zoom</b>"
-msgstr "<b>Zoumaedje di l' imådje</b>"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1401
+msgid "_Delete Toolbar"
+msgstr ""
 
-#: ../eom.glade.h:5
-msgid "<b>Options</b>"
-msgstr "<b>Tchuzes</b>"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1402
+msgid "Remove the selected toolbar"
+msgstr ""
 
-#: ../eom.glade.h:6
-msgid "<b>Sequence</b>"
-msgstr "<b>Secwince</b>"
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:485
+msgid "Separator"
+msgstr ""
 
-#: ../eom.glade.h:7
-msgid "<b>Transparent Parts</b>"
-msgstr "<b>bokets transparins</b>"
+#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:1
+msgid "Activate fullscreen mode with double-click"
+msgstr ""
 
-#: ../eom.glade.h:9
+#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:2
+msgid "Fullscreen with double-click"
+msgstr ""
+
+#: ../plugins/reload/reload.eom-plugin.desktop.in.h:1
+#: ../plugins/reload/eom-reload-plugin.c:38
+msgid "Reload Image"
+msgstr ""
+
+#: ../plugins/reload/reload.eom-plugin.desktop.in.h:2
+#: ../plugins/reload/eom-reload-plugin.c:38
+msgid "Reload current image"
+msgstr ""
+
+#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:1
+msgid "Date in statusbar"
+msgstr ""
+
+#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:2
+msgid "Shows the image date in the window statusbar"
+msgstr ""
+
+#: ../data/eom.desktop.in.in.h:1
+msgid "Browse and rotate images"
+msgstr ""
+
+#: ../data/eom.desktop.in.in.h:2 ../src/main.c:66 ../src/main.c:248
+msgid "Eye of MATE Image Viewer"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:1
+msgid "Aperture Value:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:2
+msgid "Author:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:3
+msgid "Bytes:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:4
+msgid "Camera Model:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:5
+msgid "Copyright:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:6
+msgid "Date/Time:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:7
+msgid "Description:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:8
+msgid "Details"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:9
+msgid "Exposure Time:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:10
+msgid "Flash:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:11
+msgid "Focal Length:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:12
+msgid "General"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:13
+msgid "Height:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:14
+msgid "ISO Speed Rating:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:15
+msgid "Image Properties"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:16
+msgid "Keywords:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:17
+msgid "Location:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:18
+msgid "Metadata"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:19
+msgid "Metering Mode:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:20
+msgid "Name:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:21
+msgid "Type:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:22
+msgid "Width:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:23
+msgid "_Next"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:24
+msgid "_Previous"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:2
 #, no-c-format
-msgid "Allow _zoom greater than 100% initially"
-msgstr "Permete on _zoumaedje di pus di 100% a l' atake"
+msgid "<b>%f:</b> original filename"
+msgstr ""
 
-#: ../eom.glade.h:10
-msgid "As _background"
-msgstr "Come li _fond"
+#: ../data/eom-multiple-save-as-dialog.ui.h:4
+#, no-c-format
+msgid "<b>%n:</b> counter"
+msgstr ""
 
-#: ../eom.glade.h:11
-msgid "As check _pattern"
-msgstr "Come on motif e c_wåreas"
+#: ../data/eom-multiple-save-as-dialog.ui.h:5
+msgid "Choose a folder"
+msgstr ""
 
-#: ../eom.glade.h:12
-msgid "As custom c_olor:"
-msgstr "Come ene coleur da _vosse:"
+#: ../data/eom-multiple-save-as-dialog.ui.h:6
+msgid "Destination folder:"
+msgstr ""
 
-#: ../eom.glade.h:13
-msgid "Color for Transparent Areas"
-msgstr "Coleur po les bokets k' on voet houte"
+#: ../data/eom-multiple-save-as-dialog.ui.h:7
+msgid "File Name Preview"
+msgstr ""
 
-#: ../eom.glade.h:14
-msgid "Destination Folder:"
-msgstr "Ridant d' destinåcion:"
+#: ../data/eom-multiple-save-as-dialog.ui.h:8
+msgid "File Path Specifications"
+msgstr ""
 
-#: ../eom.glade.h:15
-msgid "Eye of MATE Preferences"
-msgstr "Preferinces di Eye of Mate"
+#: ../data/eom-multiple-save-as-dialog.ui.h:9
+msgid "Filename format:"
+msgstr ""
 
-#: ../eom.glade.h:16
-msgid "Filename Format:"
-msgstr "Cogne do no d' fitchî:"
+#: ../data/eom-multiple-save-as-dialog.ui.h:10
+msgid "Options"
+msgstr ""
 
-#: ../eom.glade.h:17
-msgid "Image View"
-msgstr "Vuwe d' imådje"
+#: ../data/eom-multiple-save-as-dialog.ui.h:11
+msgid "Rename from:"
+msgstr ""
 
-#: ../eom.glade.h:18
-msgid "Interpolate image on _zoom"
-msgstr "Eterpoler l' imådje pol _zoumaedje"
+#: ../data/eom-multiple-save-as-dialog.ui.h:12
+msgid "Replace spaces with underscores"
+msgstr ""
 
-#: ../eom.glade.h:19
-msgid "Rename From:"
-msgstr "Rilomer a pårti di:"
-
-#: ../eom.glade.h:20
-msgid "Replace spaces by underscore"
-msgstr "Replaecî les espåces avou des sorlignîs"
-
-#: ../eom.glade.h:21 ../shell/eom-window.c:3488
+#: ../data/eom-multiple-save-as-dialog.ui.h:13
 msgid "Save As"
 msgstr "Schaper et rlomer"
 
-#: ../eom.glade.h:22
-msgid "Saving Image"
-msgstr "Schapant l' imådje"
-
-#: ../eom.glade.h:23
-msgid "Slide Show"
-msgstr "Môde diyas"
-
-#: ../eom.glade.h:24
+#: ../data/eom-multiple-save-as-dialog.ui.h:14
 msgid "Start counter at:"
 msgstr "Enonder l' conteu a:"
 
-#: ../eom.glade.h:25
+#: ../data/eom-multiple-save-as-dialog.ui.h:15
 msgid "To:"
 msgstr "A:"
 
-#: ../eom.glade.h:26
-msgid "_Browse"
-msgstr "_Foyter"
+#: ../data/eom-preferences-dialog.ui.h:1
+msgid "As _background"
+msgstr "Come li _fond"
 
-#: ../eom.glade.h:27
+#: ../data/eom-preferences-dialog.ui.h:2
+msgid "As check _pattern"
+msgstr "Come on motif e c_wåreas"
+
+#: ../data/eom-preferences-dialog.ui.h:3
+msgid "As custom c_olor:"
+msgstr "Come ene coleur da _vosse:"
+
+#: ../data/eom-preferences-dialog.ui.h:4
+msgid "As custom color:"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:5
+msgid "Background"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:6 ../data/eom.schemas.in.h:6
+msgid "Background Color"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:7
+msgid "Color for Transparent Areas"
+msgstr "Coleur po les bokets k' on voet houte"
+
+#: ../data/eom-preferences-dialog.ui.h:8
+msgid "E_xpand images to fit screen"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:9
+msgid "Eye of MATE Preferences"
+msgstr "Preferinces di Eye of Mate"
+
+#: ../data/eom-preferences-dialog.ui.h:10
+msgid "Image Enhancements"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:11
+msgid "Image View"
+msgstr "Vuwe d' imådje"
+
+#: ../data/eom-preferences-dialog.ui.h:12
+msgid "Image Zoom"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:13
+msgid "Plugins"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:14
+msgid "Sequence"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:15
+msgid "Slideshow"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:16
+msgid "Smooth images when zoomed-_in"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:17
+msgid "Smooth images when zoomed-_out"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:18
+msgid "Transparent Parts"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:19
+msgid "_Automatic orientation"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:20
 msgid "_Loop sequence"
 msgstr "Secwince e _blouke"
 
-#: ../eom.glade.h:28
+#: ../data/eom-preferences-dialog.ui.h:21
 msgid "_Switch image after:"
 msgstr "_Candjî d' imådje après:"
 
-#: ../eom.glade.h:29
+#: ../data/eom-preferences-dialog.ui.h:22
 msgid "seconds"
 msgstr "segondes"
 
-#: ../eom.schemas.in.h:1
+#: ../data/eom.schemas.in.h:1
 msgid ""
-"A value greater than 0 determines the seconds an image stays on screen until "
-"the next one is shown automatically. Zero disables the automatic browsing."
-msgstr ""
-"Ene valixhance pus grande ki 0 dene li tins e segondes ki l' imådje dimeure "
-"sol waitroûle divant d' passer al shuvante. Zero c' est po dismete li "
-"håynaedje otomatike e môde diyas."
+"A value greater than 0 determines the seconds an image stays on screen until"
+" the next one is shown automatically. Zero disables the automatic browsing."
+msgstr "Ene valixhance pus grande ki 0 dene li tins e segondes ki l' imådje dimeure sol waitroûle divant d' passer al shuvante. Zero c' est po dismete li håynaedje otomatike e môde diyas."
 
-#: ../eom.schemas.in.h:3
+#: ../data/eom.schemas.in.h:2
+msgid "Active plugins"
+msgstr ""
+
+#: ../data/eom.schemas.in.h:4
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
 msgstr "Permete on zoumaedje di pus di 100% a l' atake"
 
-#: ../eom.schemas.in.h:4
+#: ../data/eom.schemas.in.h:5
+msgid "Automatic orientation"
+msgstr ""
+
+#: ../data/eom.schemas.in.h:7
 msgid "Delay in seconds until showing the next image"
 msgstr "Tins e segondes divant d' passer a l' imådje shuvante"
 
-#: ../eom.schemas.in.h:5
+#: ../data/eom.schemas.in.h:8
 msgid ""
 "Determines how transparency should be indicated. Valid values are "
-"CHECK_PATTERN, COLOR and NONE. If COLOR is choosen, then the trans_color key "
-"determines the used color value."
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
 msgstr ""
-"Definixhe kimint indiker l' transparince. Les valixhances valides sont "
-"«CHECK_PATTERN» (motif a cwåreas), «COLOR» (ene coleur) oudonbén "
-"«NONE» (rén). Si «COLOR» a stî tchoezi, adon li clé «trans_color» definixh "
-"li coleur a-z eployî."
 
-#: ../eom.schemas.in.h:6
+#: ../data/eom.schemas.in.h:9
+msgid "Extrapolate Image"
+msgstr ""
+
+#: ../data/eom.schemas.in.h:10
+msgid ""
+"If activated and no image is loaded in the active window, the file chooser "
+"will display the user's pictures folder using the XDG special user "
+"directories. If deactivated or the pictures folder has not been set up, it "
+"will show the current working directory."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:11
+msgid ""
+"If activated, Eye of MATE won't ask for confirmation when moving images to "
+"the trash. It will still ask if any of the files cannot be moved to the "
+"trash and would be deleted instead."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:12
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable"
+" on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:13
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
-msgstr ""
-"Si l' clé pol transparince a stî metou al valixhance «COLOR», adon cisse clé "
-"ci definixh li coleur a-z eployî po mostrer l' transparince."
+msgstr "Si l' clé pol transparince a stî metou al valixhance «COLOR», adon cisse clé ci definixh li coleur a-z eployî po mostrer l' transparince."
 
-#: ../eom.schemas.in.h:7
+#: ../data/eom.schemas.in.h:14
+msgid ""
+"If this is active, the color set by the background-color key will be used to"
+" fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:15
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
-msgstr ""
-"Si çoula est metou a «FALSE» (fås), les ptitès imådjes èn seront nén "
-"stindowes po rimpli l' plaece li prumî côp k' ele sont håynêyes."
+msgstr "Si çoula est metou a «FALSE» (fås), les ptitès imådjes èn seront nén stindowes po rimpli l' plaece li prumî côp k' ele sont håynêyes."
 
-#: ../eom.schemas.in.h:8
+#: ../data/eom.schemas.in.h:16
+msgid ""
+"Image collection pane position. Set to 0 for bottom; 1 for left; 2 for top; "
+"3 for right."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:17
 msgid "Interpolate Image"
 msgstr "Eterpoler l' imådje"
 
-#: ../eom.schemas.in.h:9
-msgid "Last collection window geometry"
-msgstr "Djeyometreye do dierin purnea di ramexhnêye d' imådjes"
+#: ../data/eom.schemas.in.h:18
+msgid ""
+"List of active plugins. It doesn't contain the \"Location\" of the active "
+"plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
+"plugin."
+msgstr ""
 
-#: ../eom.schemas.in.h:10
-msgid "Last singleton window geometry"
-msgstr "Djeyometreye do dierin purnea po ene seule imådje"
-
-#: ../eom.schemas.in.h:11
+#: ../data/eom.schemas.in.h:19
 msgid "Loop through the image sequence"
 msgstr "Aler e blouke el secwince d' imådjes"
 
-#: ../eom.schemas.in.h:12
-msgid "Open images in a new window"
-msgstr "Drovi les imådjes en on novea purnea"
+#: ../data/eom.schemas.in.h:20
+msgid "Scroll wheel zoom"
+msgstr ""
 
-#: ../eom.schemas.in.h:13
-msgid "Show/hide image information for collection."
-msgstr "Mostrer/catchî les informåcions des imådjes pol ramexhnêye."
+#: ../data/eom.schemas.in.h:21
+msgid "Show/Hide the image collection pane scroll buttons."
+msgstr ""
 
-#: ../eom.schemas.in.h:14
-msgid "Show/hide image information for single image."
-msgstr "Mostrer/catchî les informåcions po ene seule imådje."
+#: ../data/eom.schemas.in.h:22
+msgid "Show/Hide the image collection pane."
+msgstr ""
 
-#: ../eom.schemas.in.h:15
-msgid "Show/hide the image collection pane."
-msgstr "Mostrer/catchî l' panea di ramexhnêye d' imådjes."
+#: ../data/eom.schemas.in.h:23
+msgid "Show/Hide the window side pane."
+msgstr ""
 
-#: ../eom.schemas.in.h:16
-msgid "Show/hide the window statusbar."
-msgstr "Mostrer/catchî l' bår ås messaedjes do purnea."
+#: ../data/eom.schemas.in.h:24
+msgid "Show/Hide the window statusbar."
+msgstr ""
 
-#: ../eom.schemas.in.h:17
-msgid "Show/hide the window toolbar."
-msgstr "Mostrer/catchî l' bår ås usteyes do purnea."
+#: ../data/eom.schemas.in.h:25
+msgid "Show/Hide the window toolbar."
+msgstr ""
 
-#: ../eom.schemas.in.h:18
+#: ../data/eom.schemas.in.h:26
+msgid ""
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:28
+#, no-c-format
+msgid ""
+"The multiplier to be applied when using the mouse scroll wheel for zooming. "
+"This value defines the zooming step used for each scroll event. For example,"
+" 0.05 results in a 5% zoom increment for each scroll event and 1.00 result "
+"in a 100% zoom increment."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:29
 msgid "Transparency color"
 msgstr "Coleur pol transparince"
 
-#: ../eom.schemas.in.h:19
+#: ../data/eom.schemas.in.h:30
 msgid "Transparency indicator"
 msgstr "Indicateu d' transparince"
 
-#: ../eom.schemas.in.h:20
-msgid ""
-"Whether opening an image should create a new window instead of replacing the "
-"image in the current window."
+#: ../data/eom.schemas.in.h:31
+msgid "Trash images without asking"
 msgstr ""
-"Si l' drovaedje d' ene imådje doet drovi on novea purnea purade ki replaecî "
-"l' imådje k' est ddja dins l' purnea do moumint."
 
-#: ../eom.schemas.in.h:21
-msgid ""
-"Whether or not the sequence of images should be shown in an endless loop."
-msgstr "Si l' secwince d' imådjes doet esse håynêye e blouke sins fén ou nén."
-
-#: ../eom.schemas.in.h:22
-msgid ""
-"Whether the image should be interpolated on zoom or not. This leads to "
-"better quality but is somewhat slower than non interpolated images."
+#: ../data/eom.schemas.in.h:32
+msgid "Use a custom background color"
 msgstr ""
-"Si l' imådje doet esse eterpolêye tot zoumant ou nén. Çoula dene ene meyeuse "
-"cwålité, mins c' est eto ene miete pus londjin k' on zoumaedje sins "
-"eterpolåcion."
 
-#: ../libeom/eom-image-jpeg.c:344
+#: ../data/eom.schemas.in.h:33
+msgid ""
+"Whether the file chooser should show the user's pictures folder if no images"
+" are loaded."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:34
+msgid "Whether the image collection pane should be resizable."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:35
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:36
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:37
+msgid ""
+"Whether the image should be rotated automatically based on EXIF orientation."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:38
+msgid ""
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:39
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:40
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:41
+msgid "Zoom multiplier"
+msgstr ""
+
+#: ../src/eom-application.c:123
+msgid "Running in fullscreen mode"
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:159
+msgid "Close _without Saving"
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:193
+msgid "Question"
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:374
+msgid "If you don't save, your changes will be lost."
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:409
 #, c-format
-msgid "Couldn't create temporary file for saving: %s"
-msgstr "Dji n' a savou fé on fitchî timporaire po schaper: %s"
+msgid "Save changes to image \"%s\" before closing?"
+msgstr ""
 
-#: ../libeom/eom-image-jpeg.c:363
-msgid "Couldn't allocate memory for loading JPEG file"
-msgstr "Dji n' a savou alouwer del memwere assez po tcherdjî l' fitchî JPEG"
+#: ../src/eom-close-confirmation-dialog.c:604
+#, c-format
+msgid "There is %d image with unsaved changes. Save changes before closing?"
+msgid_plural ""
+"There are %d images with unsaved changes. Save changes before closing?"
+msgstr[0] ""
+msgstr[1] ""
 
-#: ../libeom/eom-image.c:442
-msgid "Transformation on unloaded image."
-msgstr "Transformaedje so on fitchî nén tcherdjî."
+#: ../src/eom-close-confirmation-dialog.c:621
+msgid "S_elect the images you want to save:"
+msgstr ""
 
-#: ../libeom/eom-image.c:554
-msgid "EXIF not supported for this file format."
-msgstr "EXIF nén sopoirté po cisse sôre di fitchî ci."
+#. Secondary label
+#: ../src/eom-close-confirmation-dialog.c:639
+msgid "If you don't save, all your changes will be lost."
+msgstr ""
 
-#: ../libeom/eom-image.c:1224 ../libeom/eom-image.c:1437
-msgid "File exists"
-msgstr "Li fitchî egzistêye"
+#: ../src/eom-file-chooser.c:128
+msgid "File format is unknown or unsupported"
+msgstr ""
 
-#: ../libeom/eom-image.c:1377 ../libeom/eom-image.c:1505
-msgid "No image loaded."
-msgstr "Nole imådje di tcherdjeye"
+#: ../src/eom-file-chooser.c:133
+msgid ""
+"Eye of MATE could not determine a supported writable file format based on "
+"the filename."
+msgstr ""
 
-#: ../libeom/eom-image.c:1386 ../libeom/eom-image.c:1514
-msgid "Temporary file creation failed."
-msgstr "L' ahivaedje do fitchî timporaire a fwait berwete."
+#: ../src/eom-file-chooser.c:134
+msgid "Please try a different file extension like .png or .jpg."
+msgstr ""
 
-#: ../libeom/eom-info-view-exif.c:30
-msgid "Camera"
-msgstr "Camera"
-
-#: ../libeom/eom-info-view-exif.c:31
-msgid "Image Data"
-msgstr "Dinêyes di l' imådje"
-
-#: ../libeom/eom-info-view-exif.c:32
-msgid "Image Taking Conditions"
-msgstr "Condicions å moumint d' prinde l' imådje"
-
-#: ../libeom/eom-info-view-exif.c:33
-msgid "Maker Note"
-msgstr "Notes do fjheu"
-
-#: ../libeom/eom-info-view-exif.c:34
-msgid "Other"
-msgstr "Ôtes"
-
-#: ../libeom/eom-info-view-exif.c:212
-msgid "Tag"
-msgstr "Etikete"
-
-#: ../libeom/eom-info-view-exif.c:220 ../libeom/eom-info-view-file.c:97
-msgid "Value"
-msgstr "Valixhance"
-
-#. only used for internal purpose
-#: ../libeom/eom-info-view-file.c:29 ../shell/eom-save-as-dialog-helper.c:31
-msgid "Filename"
-msgstr "No do fitchî"
-
-#: ../libeom/eom-info-view-file.c:30
-msgid "Width"
-msgstr "Lårdjeur"
-
-#: ../libeom/eom-info-view-file.c:31
-msgid "Height"
-msgstr "Hôteur"
-
-#: ../libeom/eom-info-view-file.c:32
-msgid "Filesize"
-msgstr "Grandeu do fitchî"
-
-#: ../libeom/eom-info-view-file.c:89
-msgid "Attribute"
-msgstr "Atribut"
-
-#: ../libeom/eom-info-view.c:81
-msgid "File"
-msgstr "Fitchî"
-
-#: ../libeom/eom-info-view.c:93
-msgid "EXIF"
-msgstr "EXIF"
-
-#: ../libeom/eom-info-view.c:100
-msgid "IPTC"
-msgstr "IPTC"
-
-#: ../libeom/eom-uri-converter.c:1024
-msgid "At least two file names are equal."
-msgstr "I gn a pol moens does nos d' fitchîs ki sont les minmes."
-
-#: ../libeom/eom-util.c:44
-msgid " (invalid Unicode)"
-msgstr " (unicôde nén valide)"
-
-#: ../shell/eom-file-chooser.c:129
+#: ../src/eom-file-chooser.c:166
 msgid "All Files"
 msgstr "Tos les fitchîs"
 
-#: ../shell/eom-file-chooser.c:134
+#: ../src/eom-file-chooser.c:171
 msgid "All Images"
 msgstr "Totes les imådje"
 
-#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
-#: ../shell/eom-file-chooser.c:155
+#. Filter name: First description then file extension, eg. "The PNG-Format
+#. (*.png)".
+#: ../src/eom-file-chooser.c:192
 #, c-format
 msgid "%s (*.%s)"
 msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
-#: ../shell/eom-file-chooser.c:251
-#, c-format
-msgid "%s x %s pixels"
-msgid_plural "%s x %s pixels"
-msgstr[0] "%s x %s picsels"
-msgstr[1] "%s x %s picsels"
+#: ../src/eom-file-chooser.c:288 ../src/eom-properties-dialog.c:137
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:380
+msgid "pixel"
+msgid_plural "pixels"
+msgstr[0] ""
+msgstr[1] ""
 
-#: ../shell/eom-file-chooser.c:397
-msgid "Open in new window"
-msgstr "Drovi en on novea purnea"
+#: ../src/eom-file-chooser.c:437
+msgid "Open Image"
+msgstr ""
 
-#: ../shell/eom-file-chooser.c:425
-msgid "Load Image"
-msgstr "Tcherdjî imådje"
-
-#: ../shell/eom-file-chooser.c:433
+#: ../src/eom-file-chooser.c:445
 msgid "Save Image"
 msgstr "Schaper imådje"
 
-#: ../shell/eom-file-chooser.c:441
+#: ../src/eom-file-chooser.c:453
 msgid "Open Folder"
 msgstr "Drovi ridant"
 
-#: ../shell/eom-preferences.c:110
-msgid "Could not display help for Eye of MATE"
-msgstr "Dji n' a savou håyner l' aidance di Eye of Mate"
+#: ../src/eom-image.c:598
+#, c-format
+msgid "Transformation on unloaded image."
+msgstr "Transformaedje so on fitchî nén tcherdjî."
 
-#: ../shell/eom-save-as-dialog-helper.c:32
-msgid "Counter"
-msgstr "Conteu"
-
-#: ../shell/eom-save-as-dialog-helper.c:33
-msgid "Comment"
-msgstr "Rawete"
-
-#: ../shell/eom-save-as-dialog-helper.c:34
-msgid "Date"
-msgstr "Date"
-
-#: ../shell/eom-save-as-dialog-helper.c:35
-msgid "Time"
-msgstr "Tins"
-
-#: ../shell/eom-save-as-dialog-helper.c:36
-msgid "Day"
-msgstr "Djoû"
-
-#: ../shell/eom-save-as-dialog-helper.c:37
-msgid "Month"
-msgstr "Moes"
-
-#: ../shell/eom-save-as-dialog-helper.c:38
-msgid "Year"
-msgstr "Anêye"
-
-#: ../shell/eom-save-as-dialog-helper.c:39
-msgid "Hour"
-msgstr "Eure"
-
-#: ../shell/eom-save-as-dialog-helper.c:40
-msgid "Minute"
-msgstr "Munute"
-
-#: ../shell/eom-save-as-dialog-helper.c:41
-msgid "Second"
-msgstr "Segonde"
-
-#: ../shell/eom-save-as-dialog-helper.c:159
-msgid "Option not available."
-msgstr "Tchuze nén disponibe"
-
-#: ../shell/eom-save-as-dialog-helper.c:161
-msgid ""
-"To use this function you need the libexif library. Please install libexif "
-"(http://libexif.sf.net) and recompile Eye of MATE."
+#: ../src/eom-image.c:626
+#, c-format
+msgid "Transformation failed."
 msgstr ""
-"Po-z eployî cisse fonccionålité vos dvoz aveur li livreye libexif. Astalez "
-"s' ivs plait libexif (http://libexif.sf.net) eyet recopilez Eye of Mate."
 
-#: ../shell/eom-save-as-dialog-helper.c:235
+#: ../src/eom-image.c:1053
+#, c-format
+msgid "EXIF not supported for this file format."
+msgstr "EXIF nén sopoirté po cisse sôre di fitchî ci."
+
+#: ../src/eom-image.c:1180
+#, c-format
+msgid "Image loading failed."
+msgstr ""
+
+#: ../src/eom-image.c:1585 ../src/eom-image.c:1687
+#, c-format
+msgid "No image loaded."
+msgstr "Nole imådje di tcherdjeye"
+
+#: ../src/eom-image.c:1595 ../src/eom-image.c:1699
+#, c-format
+msgid "Temporary file creation failed."
+msgstr "L' ahivaedje do fitchî timporaire a fwait berwete."
+
+#: ../src/eom-image-jpeg.c:364
+#, c-format
+msgid "Couldn't create temporary file for saving: %s"
+msgstr "Dji n' a savou fé on fitchî timporaire po schaper: %s"
+
+#: ../src/eom-image-jpeg.c:383
+#, c-format
+msgid "Couldn't allocate memory for loading JPEG file"
+msgstr "Dji n' a savou alouwer del memwere assez po tcherdjî l' fitchî JPEG"
+
+#: ../src/eom-exif-details.c:68
+msgid "Camera"
+msgstr "Camera"
+
+#: ../src/eom-exif-details.c:69
+msgid "Image Data"
+msgstr "Dinêyes di l' imådje"
+
+#: ../src/eom-exif-details.c:70
+msgid "Image Taking Conditions"
+msgstr "Condicions å moumint d' prinde l' imådje"
+
+#: ../src/eom-exif-details.c:71
+msgid "Maker Note"
+msgstr "Notes do fjheu"
+
+#: ../src/eom-exif-details.c:72
+msgid "Other"
+msgstr "Ôtes"
+
+#: ../src/eom-exif-details.c:74
+msgid "XMP Exif"
+msgstr ""
+
+#: ../src/eom-exif-details.c:75
+msgid "XMP IPTC"
+msgstr ""
+
+#: ../src/eom-exif-details.c:76
+msgid "XMP Rights Management"
+msgstr ""
+
+#: ../src/eom-exif-details.c:77
+msgid "XMP Other"
+msgstr ""
+
+#: ../src/eom-exif-details.c:251
+msgid "Tag"
+msgstr "Etikete"
+
+#: ../src/eom-exif-details.c:258
+msgid "Value"
+msgstr "Valixhance"
+
+#. A strftime-formatted string, to display the date the image was taken.
+#: ../src/eom-exif-util.c:113 ../src/eom-exif-util.c:153
+msgid "%a, %d %B %Y  %X"
+msgstr ""
+
+#. A strftime-formatted string, to display the date the image was taken, for
+#. the case we don't have the time.
+#: ../src/eom-exif-util.c:147
+msgid "%a, %d %B %Y"
+msgstr ""
+
+#: ../src/eom-error-message-area.c:107
+msgid "_Retry"
+msgstr ""
+
+#: ../src/eom-error-message-area.c:141
+#, c-format
+msgid "Could not load image '%s'."
+msgstr ""
+
+#: ../src/eom-error-message-area.c:175
+#, c-format
+msgid "No images found in '%s'."
+msgstr ""
+
+#: ../src/eom-error-message-area.c:182
+msgid "The given locations contain no images."
+msgstr ""
+
+#: ../src/eom-print.c:219
+msgid "Image Settings"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:834
+msgid "Image"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:835
+msgid "The image whose printing properties will be set up"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:841
+msgid "Page Setup"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:842
+msgid "The information for the page where the image will be printed"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:870
+msgid "Position"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:875
+msgid "_Left:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:876
+msgid "_Right:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:877
+msgid "_Top:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:878
+msgid "_Bottom:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:880
+msgid "C_enter:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:885
+msgid "None"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:887
+msgid "Horizontal"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:889
+msgid "Vertical"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:891
+msgid "Both"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:907
+msgid "Size"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:912
+msgid "_Width:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:914
+msgid "_Height:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:917
+msgid "_Scaling:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:930
+msgid "_Unit:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:935
+msgid "Millimeters"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:937
+msgid "Inches"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:967
+msgid "Preview"
+msgstr ""
+
+#: ../src/eom-properties-dialog.c:154
+msgid "Unknown"
+msgstr ""
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../src/eom-properties-dialog.c:232
+#, c-format
+msgid "%.1f (lens)"
+msgstr ""
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../src/eom-properties-dialog.c:243
+#, c-format
+msgid "%.1f (35mm film)"
+msgstr ""
+
+#: ../src/eom-save-as-dialog-helper.c:161
 msgid "as is"
 msgstr "come elle est"
 
-#: ../shell/eom-save-dialog-helper.c:197
+#. Translators: This string is displayed in the statusbar.
+#. * The first token is the image number, the second is total image
+#. * count.
+#. *
+#. * Translate to "%Id" if you want to use localized digits, or
+#. * translate to "%d" otherwise.
+#. *
+#. * Note that translating this doesn't guarantee that you get localized
+#. * digits. That needs support from your system and locale definition
+#. * too.
+#: ../src/eom-statusbar.c:125
 #, c-format
-msgid "Saving image %s."
-msgstr "Schapant l' imådje %s."
+msgid "%d / %d"
+msgstr ""
 
-#: ../shell/eom-save-dialog-helper.c:243
-msgid "Cancel saving ..."
-msgstr "Dji rnonce a schaper..."
+#: ../src/eom-thumb-view.c:408
+msgid "Taken on"
+msgstr ""
 
-#. Translators should localize the following string
-#. * which will give them credit in the About box.
-#. * E.g. "Fulano de Tal <fulano@detal.com>"
-#.
-#: ../shell/eom-window.c:504
+#: ../src/eom-uri-converter.c:984
+#, c-format
+msgid "At least two file names are equal."
+msgstr "I gn a pol moens does nos d' fitchîs ki sont les minmes."
+
+#: ../src/eom-util.c:68
+msgid "Could not display help for Eye of MATE"
+msgstr "Dji n' a savou håyner l' aidance di Eye of Mate"
+
+#: ../src/eom-util.c:116
+msgid " (invalid Unicode)"
+msgstr " (unicôde nén valide)"
+
+#. Translators: This is the string displayed in the statusbar
+#. * The tokens are from left to right:
+#. * - image width
+#. * - image height
+#. * - image size in bytes
+#. * - zoom in percent
+#: ../src/eom-window.c:832
+#, c-format
+msgid "%i × %i pixel  %s    %i%%"
+msgid_plural "%i × %i pixels  %s    %i%%"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/eom-window.c:1138
+msgid "_Reload"
+msgstr ""
+
+#: ../src/eom-window.c:1140 ../src/eom-window.c:3000
+msgctxt "MessageArea"
+msgid "Hi_de"
+msgstr ""
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eom-window.c:1150
+#, c-format
+msgid ""
+"The image \"%s\" has been modified by an external application.\n"
+"Would you like to reload it?"
+msgstr ""
+
+#: ../src/eom-window.c:1305
+#, c-format
+msgid "Use \"%s\" to open the selected image"
+msgstr ""
+
+#. Translators: This string is displayed in the statusbar
+#. * while saving images. The tokens are from left to right:
+#. * - the original filename
+#. * - the current image's position in the queue
+#. * - the total number of images queued for saving
+#: ../src/eom-window.c:1455
+#, c-format
+msgid "Saving image \"%s\" (%u/%u)"
+msgstr ""
+
+#: ../src/eom-window.c:1808
+#, c-format
+msgid "Opening image \"%s\""
+msgstr ""
+
+#: ../src/eom-window.c:2498
+#, c-format
+msgid ""
+"Error printing file:\n"
+"%s"
+msgstr ""
+
+#: ../src/eom-window.c:2751
+msgid "Toolbar Editor"
+msgstr ""
+
+#: ../src/eom-window.c:2754
+msgid "_Reset to Default"
+msgstr ""
+
+#: ../src/eom-window.c:2844
 msgid "translator-credits"
 msgstr "Pablo Saratxaga <pablo@walon.org>"
 
-#: ../shell/eom-window.c:507
+#: ../src/eom-window.c:2847
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version.\n"
-msgstr ""
-"Çouchal, c' est on libe programe; vos l' poloz bén spåde et vos l' poloz bén "
-"candjî tot shuvant li Licince Publike Djeneråle (GPL) di GNU eplaideye pal "
-"Free Software Foundation; ça pout esse li 2e modêye del licince ou (si vos "
-"inmez mî) ene pus nouve.\n"
+msgstr "Çouchal, c' est on libe programe; vos l' poloz bén spåde et vos l' poloz bén candjî tot shuvant li Licince Publike Djeneråle (GPL) di GNU eplaideye pal Free Software Foundation; ça pout esse li 2e modêye del licince ou (si vos inmez mî) ene pus nouve.\n"
 
-#: ../shell/eom-window.c:511
+#: ../src/eom-window.c:2851
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details.\n"
-msgstr ""
-"Li programe est spårdou avou l' espwer k' i serè ahessåve, mins SINS NOLE "
-"WAERANTEYE; dji n' waeranti nén minme ki vos VINDRÎZ bén li programe ou ki "
-"vos vs È SIEVRÎZ BÉN PO ENE SÔRE OU L' ÔTE. Waitîz li Licince Publike "
-"Djeneråle (GPL) di GNU po vey les pondants eyet les djondants.\n"
+msgstr "Li programe est spårdou avou l' espwer k' i serè ahessåve, mins SINS NOLE WAERANTEYE; dji n' waeranti nén minme ki vos VINDRÎZ bén li programe ou ki vos vs È SIEVRÎZ BÉN PO ENE SÔRE OU L' ÔTE. Waitîz li Licince Publike Djeneråle (GPL) di GNU po vey les pondants eyet les djondants.\n"
 
-#: ../shell/eom-window.c:515
+#: ../src/eom-window.c:2855
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program; if not, write to the Free Software Foundation, Inc., 51 "
-"Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA"
+"You should have received a copy of the GNU General Public License along with"
+" this program; if not, write to the Free Software Foundation, Inc., 59 "
+"Temple Place - Suite 330, Boston, MA 02111-1307, USA."
 msgstr ""
-"Avou ci programe ci, vos dvrîz aveur rçuvou ene copeye del Licince Publike "
-"Djeneråle (GPL) di GNU; si vos n' l' avoz nén avou, sicrijhoz al Free "
-"SoftWare Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-"
-"1301, USA"
 
-#: ../shell/eom-window.c:528 ../shell/eom-window.c:3152
-#: ../shell/eom-window.c:3847 ../shell/main.c:610
+#: ../src/eom-window.c:2868
 msgid "Eye of MATE"
 msgstr "Eye of Mate"
 
-#: ../shell/eom-window.c:531
-msgid "The MATE image viewing and cataloging program."
-msgstr "Li programe di håynaedje et di catalogaedje d' imådjes di Mate"
+#: ../src/eom-window.c:2872
+msgid "The MATE image viewer."
+msgstr ""
 
-#: ../shell/eom-window.c:562
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from eom's menubar
+#: ../src/eom-window.c:2998
+msgid "_Open Background Preferences"
+msgstr ""
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eom-window.c:3014
 #, c-format
 msgid ""
-"Could not display help for Eye of MATE.\n"
-"%s"
+"The image \"%s\" has been set as Desktop Background.\n"
+"Would you like to modify its appearance?"
 msgstr ""
-"Dji n' a savou håyner l' aidance di Eye of Mate.\n"
-"%s"
 
-#: ../shell/eom-window.c:997
-#, c-format
-msgid "Overwrite file %s?"
-msgstr "Sipotchî l' fitchî %s?"
-
-#: ../shell/eom-window.c:998
-msgid "File exists. Do you want to overwrite it?"
-msgstr "Li fitchî egzistêye dedja, el voloz vs sipotchî?"
-
-#: ../shell/eom-window.c:1009 ../shell/eom-window.c:1025
-msgid "Skip"
-msgstr "Passer houte"
-
-#: ../shell/eom-window.c:1010
-msgid "Overwrite"
-msgstr "Sipotchî"
-
-#: ../shell/eom-window.c:1015
-#, c-format
-msgid "Error on saving %s."
-msgstr "Åk n' a nén stî tot schapant %s."
-
-#: ../shell/eom-window.c:1026 ../shell/eom-window.c:1592
-msgid "Retry"
-msgstr "Rissayî"
-
-#: ../shell/eom-window.c:1456
-msgid "Couldn't determine destination uri."
-msgstr "Dji n' a savou determiner l' URI d' destinåcion."
-
-#: ../shell/eom-window.c:1578
-#, c-format
-msgid "Couldn't determine file format of %s"
-msgstr "Dji n' a savou determiner l' sôre di fitchî po %s"
-
-#: ../shell/eom-window.c:1579
-msgid "Please use an appropriate filename suffix or select a file format."
+#: ../src/eom-window.c:3410
+msgid "Saving image locally…"
 msgstr ""
-"Sicrijhoz s' i vs plait ene cawete pol no do fitchî, oudonbén tchoezixhoz "
-"ene sôre di fitchî."
 
-#: ../shell/eom-window.c:1717
-msgid "Error on saving images."
-msgstr "Åk n' a nén stî tot schapant les imådjes."
-
-#: ../shell/eom-window.c:1801
-msgid "Print"
-msgstr "Imprimer"
-
-#: ../shell/eom-window.c:1835
-msgid "Print Preview"
-msgstr "Prévoeyadje"
-
-#: ../shell/eom-window.c:2039
+#: ../src/eom-window.c:3492
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
-msgstr ""
-"Estoz vs seur di voleur taper\n"
-"«%s» å batch?"
+msgstr "Estoz vs seur di voleur taper\n«%s» å batch?"
 
-#: ../shell/eom-window.c:2042
+#: ../src/eom-window.c:3495
+#, c-format
+msgid ""
+"A trash for \"%s\" couldn't be found. Do you want to remove this image "
+"permanently?"
+msgstr ""
+
+#: ../src/eom-window.c:3500
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -587,306 +1015,434 @@ msgid ""
 msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
-msgstr[0] ""
-"Estoz vs seur di voleur taper\n"
-"l' imådje tchoezeye å batch?"
-msgstr[1] ""
-"Estoz vs seur di voleur taper\n"
-"les %d imådjes tchoezeyes å batch?"
+msgstr[0] "Estoz vs seur di voleur taper\nl' imådje tchoezeye å batch?"
+msgstr[1] "Estoz vs seur di voleur taper\nles %d imådjes tchoezeyes å batch?"
 
-#: ../shell/eom-window.c:2057 ../shell/eom-window.c:3443
-msgid "Move to Trash"
-msgstr "Taper å batch"
+#: ../src/eom-window.c:3505
+msgid ""
+"Some of the selected images can't be moved to the trash and will be removed "
+"permanently. Are you sure you want to proceed?"
+msgstr ""
 
-#: ../shell/eom-window.c:2088
+#: ../src/eom-window.c:3522 ../src/eom-window.c:3980 ../src/eom-window.c:4004
+msgid "Move to _Trash"
+msgstr "_Taper å batch"
+
+#: ../src/eom-window.c:3524
+msgid "_Do not ask again during this session"
+msgstr ""
+
+#: ../src/eom-window.c:3569 ../src/eom-window.c:3583
+#, c-format
 msgid "Couldn't access trash."
 msgstr "Dji n' sai acceder å batch."
 
-#: ../shell/eom-window.c:2164
+#: ../src/eom-window.c:3591
+#, c-format
+msgid "Couldn't delete file"
+msgstr ""
+
+#: ../src/eom-window.c:3662
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Åk n' a nén stî tot disfaçant l' imådje %s"
 
-#. [image width] x [image height] pixels  [bytes]    [zoom in percent]
-#: ../shell/eom-window.c:3013
-#, c-format
-msgid "%i x %i pixels  %s    %i%%"
-msgid_plural "%i x %i pixels  %s    %i%%"
-msgstr[0] "%i x %i picsels  %s    %i%%"
-msgstr[1] "%i x %i picsels  %s    %i%%"
-
-#: ../shell/eom-window.c:3069
-#, c-format
-msgid "Reason: %s"
-msgstr "Råjhon: %s"
-
-#: ../shell/eom-window.c:3239
-#, c-format
-msgid "Image loading failed for %s"
-msgstr "Li tcherdjaedje di l' imådje a fwait berwete po %s"
-
-#: ../shell/eom-window.c:3408
-msgid "_File"
-msgstr "_Fitchî"
-
-#: ../shell/eom-window.c:3409
-msgid "_Edit"
-msgstr "_Candjî"
-
-#: ../shell/eom-window.c:3410
-msgid "_View"
-msgstr "_Vey"
-
-#: ../shell/eom-window.c:3411
+#: ../src/eom-window.c:3904
 msgid "_Image"
 msgstr "_Imådje"
 
-#: ../shell/eom-window.c:3412
+#: ../src/eom-window.c:3905
+msgid "_Edit"
+msgstr "_Candjî"
+
+#: ../src/eom-window.c:3906
+msgid "_View"
+msgstr "_Vey"
+
+#: ../src/eom-window.c:3907
 msgid "_Go"
 msgstr "_Potchî"
 
-#: ../shell/eom-window.c:3413
+#: ../src/eom-window.c:3908
+msgid "_Tools"
+msgstr ""
+
+#: ../src/eom-window.c:3909
 msgid "_Help"
 msgstr "_Aidance"
 
-#: ../shell/eom-window.c:3414
-msgid "_Open..."
-msgstr "_Drovi..."
+#: ../src/eom-window.c:3911
+msgid "_Open…"
+msgstr ""
 
-#: ../shell/eom-window.c:3414
+#: ../src/eom-window.c:3912
 msgid "Open a file"
 msgstr "Drovi on fitchî"
 
-#: ../shell/eom-window.c:3415
+#: ../src/eom-window.c:3914
 msgid "_Close"
 msgstr "_Clôre"
 
-#: ../shell/eom-window.c:3415
+#: ../src/eom-window.c:3915
 msgid "Close window"
 msgstr "Clôre li purnea"
 
-#: ../shell/eom-window.c:3416
+#: ../src/eom-window.c:3917
+msgid "T_oolbar"
+msgstr ""
+
+#: ../src/eom-window.c:3918
+msgid "Edit the application toolbar"
+msgstr ""
+
+#: ../src/eom-window.c:3920
 msgid "Prefere_nces"
 msgstr "_Preferinces"
 
-#: ../shell/eom-window.c:3416
+#: ../src/eom-window.c:3921
 msgid "Preferences for Eye of MATE"
 msgstr "Preferinces po Eye of Mate"
 
-#: ../shell/eom-window.c:3417
+#: ../src/eom-window.c:3923
 msgid "_Contents"
 msgstr "Å d_vins"
 
-#: ../shell/eom-window.c:3417
-msgid "Help On this application"
-msgstr "Aidance so ç' programe ci"
+#: ../src/eom-window.c:3924
+msgid "Help on this application"
+msgstr ""
 
-#: ../shell/eom-window.c:3418
+#: ../src/eom-window.c:3926 ../src/eom-plugin-manager.c:505
 msgid "_About"
 msgstr "Å_d fwait"
 
-#: ../shell/eom-window.c:3418
+#: ../src/eom-window.c:3927
 msgid "About this application"
 msgstr "Åd fwait di ç' programe ci"
 
-#: ../shell/eom-window.c:3423
+#: ../src/eom-window.c:3932
 msgid "_Toolbar"
 msgstr "Bår ås _usteyes"
 
-#: ../shell/eom-window.c:3423
+#: ../src/eom-window.c:3933
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Candjî l' veyåvisté del bår ås usteyes do purnea do moumint"
 
-#: ../shell/eom-window.c:3424
+#: ../src/eom-window.c:3935
 msgid "_Statusbar"
 msgstr "Bår ås _messaedjes"
 
-#: ../shell/eom-window.c:3424
+#: ../src/eom-window.c:3936
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Candjî l' veyåvisté del bår ås messaedjes do purnea do moumint"
 
-#: ../shell/eom-window.c:3425
+#: ../src/eom-window.c:3938
 msgid "_Image Collection"
 msgstr "Rame_xhnêye d' imådjes"
 
-#: ../shell/eom-window.c:3425
+#: ../src/eom-window.c:3939
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
-msgstr ""
-"Candjî l' veyåvisté do panea ramexhnêye d' imådjes do purnea do moumint"
+msgstr "Candjî l' veyåvisté do panea ramexhnêye d' imådjes do purnea do moumint"
 
-#: ../shell/eom-window.c:3429
+#: ../src/eom-window.c:3941
+msgid "Side _Pane"
+msgstr ""
+
+#: ../src/eom-window.c:3942
+msgid "Changes the visibility of the side pane in the current window"
+msgstr ""
+
+#: ../src/eom-window.c:3947
 msgid "_Save"
 msgstr "_Schaper"
 
-#: ../shell/eom-window.c:3430
-msgid "Save _As..."
-msgstr "Schaper et r_lomer..."
+#: ../src/eom-window.c:3948
+msgid "Save changes in currently selected images"
+msgstr ""
 
-#: ../shell/eom-window.c:3431
-msgid "Print..."
-msgstr "Imprimer..."
+#: ../src/eom-window.c:3950
+msgid "Open _with"
+msgstr ""
 
-#: ../shell/eom-window.c:3433
+#: ../src/eom-window.c:3951
+msgid "Open the selected image with a different application"
+msgstr ""
+
+#: ../src/eom-window.c:3953
+msgid "Save _As…"
+msgstr ""
+
+#: ../src/eom-window.c:3954
+msgid "Save the selected images with a different name"
+msgstr ""
+
+#: ../src/eom-window.c:3956
+msgid "_Print…"
+msgstr ""
+
+#: ../src/eom-window.c:3957
+msgid "Print the selected image"
+msgstr ""
+
+#: ../src/eom-window.c:3959
+msgid "Prope_rties"
+msgstr ""
+
+#: ../src/eom-window.c:3960
+msgid "Show the properties and metadata of the selected image"
+msgstr ""
+
+#: ../src/eom-window.c:3962
 msgid "_Undo"
 msgstr "_Disfé"
 
-#: ../shell/eom-window.c:3435
+#: ../src/eom-window.c:3963
+msgid "Undo the last change in the image"
+msgstr ""
+
+#: ../src/eom-window.c:3965
 msgid "Flip _Horizontal"
 msgstr "Discandjî di _coutchî"
 
-#: ../shell/eom-window.c:3436
+#: ../src/eom-window.c:3966
+msgid "Mirror the image horizontally"
+msgstr ""
+
+#: ../src/eom-window.c:3968
 msgid "Flip _Vertical"
 msgstr "Discandjî d' _astampé"
 
-#: ../shell/eom-window.c:3438
+#: ../src/eom-window.c:3969
+msgid "Mirror the image vertically"
+msgstr ""
+
+#: ../src/eom-window.c:3971
 msgid "_Rotate Clockwise"
 msgstr "Tourner dins l' sins des a_weyes"
 
-#: ../shell/eom-window.c:3439
+#: ../src/eom-window.c:3972
+msgid "Rotate the image 90 degrees to the right"
+msgstr ""
+
+#: ../src/eom-window.c:3974
 msgid "Rotate Counterc_lockwise"
 msgstr "Tourner dins l' sins _contråve des aweyes"
 
-#: ../shell/eom-window.c:3440
-msgid "Rotat_e 180°"
-msgstr "Tourner di 180 _digrés"
+#: ../src/eom-window.c:3975
+msgid "Rotate the image 90 degrees to the left"
+msgstr ""
 
-#: ../shell/eom-window.c:3441
-msgid "Set As _Wallpaper"
-msgstr "Mete come _tapisreye"
+#: ../src/eom-window.c:3977
+msgid "Set as _Desktop Background"
+msgstr ""
 
-#: ../shell/eom-window.c:3445
-msgid "_Full Screen"
-msgstr "_Forrimpli li waitroûle"
+#: ../src/eom-window.c:3978
+msgid "Set the selected image as the desktop background"
+msgstr ""
 
-#: ../shell/eom-window.c:3446
-msgid "_Slideshow"
-msgstr "Môde di_yas"
+#: ../src/eom-window.c:3981
+msgid "Move the selected image to the trash folder"
+msgstr ""
 
-#. accelerators
-#: ../shell/eom-window.c:3447 ../shell/eom-window.c:3453
-#: ../shell/eom-window.c:3454
+#: ../src/eom-window.c:3983 ../src/eom-window.c:3995 ../src/eom-window.c:3998
 msgid "_Zoom In"
 msgstr "_Zoumer"
 
-#: ../shell/eom-window.c:3448 ../shell/eom-window.c:3455
+#: ../src/eom-window.c:3984 ../src/eom-window.c:3996
+msgid "Enlarge the image"
+msgstr ""
+
+#: ../src/eom-window.c:3986 ../src/eom-window.c:4001
 msgid "Zoom _Out"
 msgstr "_Diszoumer"
 
-#: ../shell/eom-window.c:3449
+#: ../src/eom-window.c:3987 ../src/eom-window.c:3999 ../src/eom-window.c:4002
+msgid "Shrink the image"
+msgstr ""
+
+#: ../src/eom-window.c:3989
 msgid "_Normal Size"
 msgstr "Grandeu _normåle"
 
-#: ../shell/eom-window.c:3450
+#: ../src/eom-window.c:3990
+msgid "Show the image at its normal size"
+msgstr ""
+
+#: ../src/eom-window.c:3992
 msgid "Best _Fit"
 msgstr "_Rimpli å mî"
 
-#: ../shell/eom-window.c:3456 ../shell/eom-window.c:3458
-#: ../shell/eom-window.c:3472
-msgid "_Next Image"
-msgstr "Imådje _shuvante"
+#: ../src/eom-window.c:3993
+msgid "Fit the image to the window"
+msgstr ""
 
-#: ../shell/eom-window.c:3457 ../shell/eom-window.c:3459
-#: ../shell/eom-window.c:3460 ../shell/eom-window.c:3471
+#: ../src/eom-window.c:4010
+msgid "_Fullscreen"
+msgstr ""
+
+#: ../src/eom-window.c:4011
+msgid "Show the current image in fullscreen mode"
+msgstr ""
+
+#: ../src/eom-window.c:4013
+msgid "Pause Slideshow"
+msgstr ""
+
+#: ../src/eom-window.c:4014
+msgid "Pause or resume the slideshow"
+msgstr ""
+
+#: ../src/eom-window.c:4019 ../src/eom-window.c:4034
 msgid "_Previous Image"
 msgstr "Imådje di d_vant"
 
-#: ../shell/eom-window.c:3461
-msgid "Move to _Trash"
-msgstr "_Taper å batch"
+#: ../src/eom-window.c:4020
+msgid "Go to the previous image of the collection"
+msgstr ""
 
-#: ../shell/eom-window.c:3462 ../shell/eom-window.c:3473
+#: ../src/eom-window.c:4022
+msgid "_Next Image"
+msgstr "Imådje _shuvante"
+
+#: ../src/eom-window.c:4023
+msgid "Go to the next image of the collection"
+msgstr ""
+
+#: ../src/eom-window.c:4025 ../src/eom-window.c:4037
 msgid "_First Image"
 msgstr "_Prumire imådje"
 
-#: ../shell/eom-window.c:3463 ../shell/eom-window.c:3474
+#: ../src/eom-window.c:4026
+msgid "Go to the first image of the collection"
+msgstr ""
+
+#: ../src/eom-window.c:4028 ../src/eom-window.c:4040
 msgid "_Last Image"
 msgstr "_Dierinne imådje"
 
-#: ../shell/eom-window.c:3467
-msgid "Image _Information"
-msgstr "_Informåcion d' l' imådje"
+#: ../src/eom-window.c:4029
+msgid "Go to the last image of the collection"
+msgstr ""
 
-#: ../shell/eom-window.c:3467
-msgid "Changes the visibility of the information pane in the current window"
-msgstr "Candjî l' veyåvisté do panea d' informåcions do purnea do moumint"
+#: ../src/eom-window.c:4031
+msgid "_Random Image"
+msgstr ""
 
-#: ../shell/eom-window.c:3485
-msgid "Open"
-msgstr "Drovi"
+#: ../src/eom-window.c:4032
+msgid "Go to a random image of the collection"
+msgstr ""
 
-#: ../shell/eom-window.c:3486
-msgid "Close"
-msgstr "Clôre"
+#: ../src/eom-window.c:4046
+msgid "_Slideshow"
+msgstr "Môde di_yas"
 
-#: ../shell/eom-window.c:3487
-msgid "Save"
-msgstr "Schaper"
+#: ../src/eom-window.c:4047
+msgid "Start a slideshow view of the images"
+msgstr ""
 
-#: ../shell/eom-window.c:3489
-msgid "Undo"
-msgstr "Disfé"
-
-#: ../shell/eom-window.c:3492
-msgid "Right"
-msgstr "Droete"
-
-#: ../shell/eom-window.c:3493
-msgid "Left"
-msgstr "Hintche"
-
-#: ../shell/eom-window.c:3496
-msgid "In"
-msgstr "Ragrandi"
-
-#: ../shell/eom-window.c:3497
-msgid "Out"
-msgstr "Raptiti"
-
-#: ../shell/eom-window.c:3498
-msgid "Normal"
-msgstr "Normå"
-
-#: ../shell/eom-window.c:3499
-msgid "Fit"
-msgstr "Rimpli"
-
-#: ../shell/eom-window.c:3500
-msgid "Next"
-msgstr "Shuvant"
-
-#: ../shell/eom-window.c:3501
+#: ../src/eom-window.c:4113
 msgid "Previous"
 msgstr "Di dvant"
 
-#: ../shell/eom-window.c:3666
-msgid "User interface description not found."
-msgstr "Li discrijhaedje di l' eterface do programe n' a nén stî trové."
+#: ../src/eom-window.c:4117
+msgid "Next"
+msgstr "Shuvant"
 
-#: ../shell/main.c:24
-msgid "[FILE...]"
-msgstr "[FITCHÎ...]"
+#: ../src/eom-window.c:4121
+msgid "Right"
+msgstr "Droete"
 
-#: ../shell/main.c:175
-msgid "Unable to create Eye of MATE user interface"
-msgstr "Dji n' a savou ahiver l' eterface do programe Eye of Mate"
+#: ../src/eom-window.c:4124
+msgid "Left"
+msgstr "Hintche"
 
-#: ../shell/main.c:366
-msgid "File not found."
-msgid_plural "Files not found."
-msgstr[0] "Fitchî nén trové."
-msgstr[1] "Fitchîs nén trovés."
+#: ../src/eom-window.c:4127
+msgid "In"
+msgstr "Ragrandi"
 
-#: ../shell/util.c:52
+#: ../src/eom-window.c:4130
+msgid "Out"
+msgstr "Raptiti"
+
+#: ../src/eom-window.c:4133
+msgid "Normal"
+msgstr "Normå"
+
+#: ../src/eom-window.c:4136
+msgid "Fit"
+msgstr "Rimpli"
+
+#: ../src/eom-window.c:4139
+msgid "Collection"
+msgstr ""
+
+#: ../src/eom-window.c:4142
+msgctxt "action (to trash)"
+msgid "Trash"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:51
+msgid "Plugin"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:52
+msgid "Enabled"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:513
+msgid "C_onfigure"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:523
+msgid "A_ctivate"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:535
+msgid "Ac_tivate All"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:540
+msgid "_Deactivate All"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:834
+msgid "Active _Plugins:"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:863
+msgid "_About Plugin"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:870
+msgid "C_onfigure Plugin"
+msgstr ""
+
+#: ../src/main.c:73
+msgid "Open in fullscreen mode"
+msgstr ""
+
+#: ../src/main.c:74
+msgid "Disable image collection"
+msgstr ""
+
+#: ../src/main.c:75
+msgid "Open in slideshow mode"
+msgstr ""
+
+#: ../src/main.c:77
+msgid "Start a new instance instead of reusing an existing one"
+msgstr ""
+
+#: ../src/main.c:80
+msgid "Show the application's version"
+msgstr ""
+
+#: ../src/main.c:81
+msgid "[FILE…]"
+msgstr ""
+
+#. I18N: The '%s' is replaced with eom's command name.
+#: ../src/main.c:207
 #, c-format
-msgid "Could not open `%s'"
-msgstr "Dji n' a savou drovi «%s»"
-
-#: ../shell/recent-files/egg-recent-view-gtk.c:346
-#, c-format
-msgid "Open '%s'"
-msgstr "Drovi «%s»"
-
-#: ../shell/recent-files/egg-recent-view-gtk.c:444
-msgid "Empty"
-msgstr "Vude"
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr ""

@@ -1,21 +1,21 @@
-# translation of eom.master.kn.po to Kannada
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
-# Shankar Prasad <svenkate@redhat.com>, 2008, 2009, 2010.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: eom.master.kn\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-22 12:37+0530\n"
-"PO-Revision-Date: 2010-04-22 12:34+0530\n"
-"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
-"Language-Team: kn-IN <>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2011-12-30 15:48+0100\n"
+"PO-Revision-Date: 2011-12-30 15:21+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Language: kn\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -57,10 +57,6 @@ msgstr "ಆರಿಸಲಾದ ಉಪಕರಣ ಪಟ್ಟಿಯನ್ನು ತ
 msgid "Separator"
 msgstr "ವಿಭಜಕ"
 
-#: ../cut-n-paste/totem-screensaver/totem-scrsaver.c:115
-msgid "Running in fullscreen mode"
-msgstr "ಸಂಪೂರ್ಣ ತೆರೆಯಲ್ಲಿ ಚಾಲನೆಯಲ್ಲಿದೆ"
-
 #: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:1
 msgid "Activate fullscreen mode with double-click"
 msgstr "ಎರಡು ಕ್ಕಿಕ್ಕಿನಲ್ಲಿ ಪೂರ್ಣತೆರೆ ಕ್ರಮವನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ"
@@ -70,12 +66,12 @@ msgid "Fullscreen with double-click"
 msgstr "ಎರಡು-ಬಾರಿ ಕ್ಲಿಕ್ಕಿಸಿದಾಗ ಸಂಪೂರ್ಣತೆರೆ"
 
 #: ../plugins/reload/reload.eom-plugin.desktop.in.h:1
-#: ../plugins/reload/eom-reload-plugin.c:45
+#: ../plugins/reload/eom-reload-plugin.c:38
 msgid "Reload Image"
 msgstr "ಚಿತ್ರವನ್ನು ಮತ್ತೊಮ್ಮೆ ಲೋಡ್ ಮಾಡು"
 
 #: ../plugins/reload/reload.eom-plugin.desktop.in.h:2
-#: ../plugins/reload/eom-reload-plugin.c:47
+#: ../plugins/reload/eom-reload-plugin.c:38
 msgid "Reload current image"
 msgstr "ಪ್ರಸಕ್ತ ಚಿತ್ರವನ್ನು ಪುನಃ ಲೋಡ್ ಮಾಡು"
 
@@ -91,9 +87,9 @@ msgstr "ಸ್ಥಿತಿ ಪಟ್ಟಿ ವಿಂಡೊದಲ್ಲಿ ಚಿ
 msgid "Browse and rotate images"
 msgstr "ಚಿತ್ರಗಳನ್ನು ವೀಕ್ಷಿಸು ಹಾಗು ತಿರುಗಿಸು"
 
-#: ../data/eom.desktop.in.in.h:2
-msgid "Image Viewer"
-msgstr "ಚಿತ್ರ ವೀಕ್ಷಕ"
+#: ../data/eom.desktop.in.in.h:2 ../src/main.c:66 ../src/main.c:248
+msgid "Eye of MATE Image Viewer"
+msgstr "ಐ ಆಫ್ MATE ಚಿತ್ರ ವೀಕ್ಷಕ"
 
 #: ../data/eom-image-properties-dialog.ui.h:1
 msgid "Aperture Value:"
@@ -258,77 +254,86 @@ msgid "As custom c_olor:"
 msgstr "ನನ್ನಿಚ್ಛೆಯ ಬಣ್ಣವಾಗಿ(_o):"
 
 #: ../data/eom-preferences-dialog.ui.h:4
+msgid "As custom color:"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:5
+msgid "Background"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:6 ../data/eom.schemas.in.h:6
+msgid "Background Color"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:7
 msgid "Color for Transparent Areas"
 msgstr "ಪಾರದರ್ಶಕ ಕ್ಷೇತ್ರಗಳಿಗಾಗಿನ ಬಣ್ಣ"
 
-#: ../data/eom-preferences-dialog.ui.h:5
+#: ../data/eom-preferences-dialog.ui.h:8
 msgid "E_xpand images to fit screen"
 msgstr "ತೆರೆಗೆ ಸರಿಹೊಂದುವಂತೆ ಚಿತ್ರಗಳನ್ನು ಹಿಗ್ಗಿಸು(_x)"
 
-#: ../data/eom-preferences-dialog.ui.h:6
+#: ../data/eom-preferences-dialog.ui.h:9
 msgid "Eye of MATE Preferences"
 msgstr "ಐ ಆಫ್ MATE ನ ಆದ್ಯತೆಗಳು"
 
-#: ../data/eom-preferences-dialog.ui.h:7
+#: ../data/eom-preferences-dialog.ui.h:10
 msgid "Image Enhancements"
 msgstr "ಚಿತ್ರದ ವರ್ಧಕಗಳು"
 
-#: ../data/eom-preferences-dialog.ui.h:8
+#: ../data/eom-preferences-dialog.ui.h:11
 msgid "Image View"
 msgstr "ಚಿತ್ರ ನೋಟ"
 
-#: ../data/eom-preferences-dialog.ui.h:9
+#: ../data/eom-preferences-dialog.ui.h:12
 msgid "Image Zoom"
 msgstr "ಚಿತ್ರದ ಗಾತ್ರಬದಲಿಕೆ"
 
-#: ../data/eom-preferences-dialog.ui.h:10
+#: ../data/eom-preferences-dialog.ui.h:13
 msgid "Plugins"
 msgstr "ಪ್ಲಗ್‌ಇನ್‌ಗಳು(plugins)"
 
-#: ../data/eom-preferences-dialog.ui.h:11
+#: ../data/eom-preferences-dialog.ui.h:14
 msgid "Sequence"
 msgstr "ಅನುಕ್ರಮ"
 
-#: ../data/eom-preferences-dialog.ui.h:12
+#: ../data/eom-preferences-dialog.ui.h:15
 msgid "Slideshow"
 msgstr "ಜಾರುಫಲಕ ಪ್ರದರ್ಶನ"
 
-#: ../data/eom-preferences-dialog.ui.h:13
+#: ../data/eom-preferences-dialog.ui.h:16
 msgid "Smooth images when zoomed-_in"
 msgstr "ಹಿಗ್ಗಿಸಿದಾಗ ಚಿತ್ರಗಳನ್ನು ಮೃದುಗೊಳಿಸು(_i)"
 
-#: ../data/eom-preferences-dialog.ui.h:14
+#: ../data/eom-preferences-dialog.ui.h:17
 msgid "Smooth images when zoomed-_out"
 msgstr "ಕುಗ್ಗಿಸಿದಾಗ ಚಿತ್ರಗಳನ್ನು ಮೃದುಗೊಳಿಸು(_o)"
 
-#: ../data/eom-preferences-dialog.ui.h:15
+#: ../data/eom-preferences-dialog.ui.h:18
 msgid "Transparent Parts"
 msgstr "ಪಾರದರ್ಶಕ ಭಾಗಗಳು"
 
-#: ../data/eom-preferences-dialog.ui.h:16
+#: ../data/eom-preferences-dialog.ui.h:19
 msgid "_Automatic orientation"
 msgstr "ಸ್ವಯಂಚಾಲಿತ ವಾಲಿಕೆ(_A)"
 
-#: ../data/eom-preferences-dialog.ui.h:17
+#: ../data/eom-preferences-dialog.ui.h:20
 msgid "_Loop sequence"
 msgstr "ಪುನರಾವರ್ತಿತ(ಲೂಪ್) ಅನುಕ್ರಮ(_L)"
 
-#: ../data/eom-preferences-dialog.ui.h:18
+#: ../data/eom-preferences-dialog.ui.h:21
 msgid "_Switch image after:"
 msgstr "ಇದರ ನಂತರ ಚಿತ್ರವನ್ನು ಬದಲಾಯಿಸು(_S):"
 
-#: ../data/eom-preferences-dialog.ui.h:19
+#: ../data/eom-preferences-dialog.ui.h:22
 msgid "seconds"
 msgstr "ಸೆಕೆಂಡುಗಳು"
 
 #: ../data/eom.schemas.in.h:1
 msgid ""
-"A value greater than 0 determines the seconds an image stays on screen until "
-"the next one is shown automatically. Zero disables the automatic browsing."
-msgstr ""
-"0 ಗಿಂತ ಹೆಚ್ಚಿನ ಒಂದು ಮೌಲ್ಯವಿದ್ದಲ್ಲಿ ಒಂದು ಚಿತ್ರವು ಮುಂದಿನ ಚಿತ್ರವನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ "
-"ತೋರಿಸುವ ಮೊದಲು ಅಷ್ಟು ಸೆಕೆಂಡುಗಳ ಕಾಲ ತೆರೆಯ ಮೇಲೆ ಇರುತ್ತದೆ. ಸೊನ್ನೆ ಇದ್ದಲ್ಲಿ ಸ್ವಯಂಚಾಲಿತ "
-"ವೀಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸುತ್ತದೆ."
+"A value greater than 0 determines the seconds an image stays on screen until"
+" the next one is shown automatically. Zero disables the automatic browsing."
+msgstr "0 ಗಿಂತ ಹೆಚ್ಚಿನ ಒಂದು ಮೌಲ್ಯವಿದ್ದಲ್ಲಿ ಒಂದು ಚಿತ್ರವು ಮುಂದಿನ ಚಿತ್ರವನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ತೋರಿಸುವ ಮೊದಲು ಅಷ್ಟು ಸೆಕೆಂಡುಗಳ ಕಾಲ ತೆರೆಯ ಮೇಲೆ ಇರುತ್ತದೆ. ಸೊನ್ನೆ ಇದ್ದಲ್ಲಿ ಸ್ವಯಂಚಾಲಿತ ವೀಕ್ಷಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸುತ್ತದೆ."
 
 #: ../data/eom.schemas.in.h:2
 msgid "Active plugins"
@@ -343,199 +348,187 @@ msgstr "ಆರಂಭದಲ್ಲಿ 100% ಗಿಂತ ಹೆಚ್ಚಿನ ಝ�
 msgid "Automatic orientation"
 msgstr "ಸ್ವಯಂಚಾಲಿತ ವಾಲಿಕೆ"
 
-#: ../data/eom.schemas.in.h:6
+#: ../data/eom.schemas.in.h:7
 msgid "Delay in seconds until showing the next image"
 msgstr "ಮುಂದಿನ ಚಿತ್ರವನ್ನು ತೋರಿಸುವವರೆಗಿನ ವಿಳಂಬ, ಸೆಕೆಂಡುಗಳಲ್ಲಿ"
 
-#: ../data/eom.schemas.in.h:7
+#: ../data/eom.schemas.in.h:8
 msgid ""
 "Determines how transparency should be indicated. Valid values are "
-"CHECK_PATTERN, COLOR and NONE. If COLOR is choosen, then the trans_color key "
-"determines the used color value."
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
 msgstr ""
-"ಪಾರದರ್ಶಕತೆಯನ್ನು ಹೇಗೆ ತೋರಿಸಬೇಕು ಎಂದು ಸೂಚಿಸುತ್ತದೆ. ಮಾನ್ಯವಾದ ಮೌಲ್ಯಗಳುCHECK_PATTERN, "
-"COLOR ಹಾಗು NONE ಆಗಿರುತ್ತವೆ. COLOR ಅನ್ನು ಆರಿಸಲಾಗಿದ್ದರೆ, trans_color ಕೀಲಿಯು "
-"ಬಳಸಲಾದ ಬಣ್ಣದ ಮೌಲ್ಯವನ್ನು ಸೂಚಿಸುತ್ತದೆ."
-
-#: ../data/eom.schemas.in.h:8
-msgid "Extrapolate Image"
-msgstr "ಚಿತ್ರವನ್ನು ಊಹಿಸು(extrapolate)"
 
 #: ../data/eom.schemas.in.h:9
-msgid ""
-"If activated Eye of MATE wont ask for confirmation when moving images to "
-"the trash. It will still ask if any of the files cannot be moved to the "
-"trash and would be deleted instead."
-msgstr ""
-"ಸಕ್ರಿಯಗೊಳಿಸಿದಲ್ಲಿ, ಚಿತ್ರಗಳನ್ನು ಕಸದ ಬುಟ್ಟಿಗೆ ರವಾನಿಸುವಾಗ ಐ ಆಫ್ MATE ಖಚಿತಪಡಿಸಲು "
-"ಕೇಳುವುದಿಲ್ಲ. ಆದರೂ ಸಹ ಯಾವುದೆ ಕಡತಗಳನ್ನು ಕಸದ ಬುಟ್ಟಿಗೆ ರವಾನಿಸಲು ಸಾಧ್ಯವಾಗದೆ ಅಳಿಸಿ "
-"ಹಾಕಬೇಕಾಗಿ ಬಂದಲ್ಲಿ ಅದು ಖಚಿತ ಪಡಿಸಲು ಕೇಳುತ್ತದೆ."
+msgid "Extrapolate Image"
+msgstr "ಚಿತ್ರವನ್ನು ಊಹಿಸು(extrapolate)"
 
 #: ../data/eom.schemas.in.h:10
 msgid ""
 "If activated and no image is loaded in the active window, the file chooser "
 "will display the user's pictures folder using the XDG special user "
-"directories. If deactivated or the pictures folder has not been set up it "
+"directories. If deactivated or the pictures folder has not been set up, it "
 "will show the current working directory."
 msgstr ""
-"ಸಕ್ರಿಯಗೊಳಿಸಿದಲ್ಲಿ ಹಾಗು ಯಾವುದೆ ಚಿತ್ರವು ವಿಂಡೊದಲ್ಲಿ ಲೋಡ್ ಆಗದೆ ಇದ್ದಲ್ಲಿ, ಕಡತ ಆಯ್ಕೆಗಾರವು "
-"XDG ವಿಶೇಷ ಬಳಕೆದಾರ ಕೋಶಗಳನ್ನು ಬಳಸಿಕೊಂಡು ಬಳಕೆದಾರರ ಚಿತ್ರಗಳ ಕಡತಕೋಶವನ್ನು ತೋರಿಸುತ್ತದೆ. "
-"ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿದಲ್ಲಿ ಅಥವ ಚಿತ್ರಗಳ ಕಡತಕೋಶವನ್ನು ಸಿದ್ಧಗೊಳಿಸಿರದ ಪಕ್ಷದಲ್ಲಿ ಅದು ಪ್ರಸಕ್ತ ಕೆಲಸ "
-"ಮಾಡುವ ಕೋಶವನ್ನು ತೋರಿಸುತ್ತದೆ."
 
 #: ../data/eom.schemas.in.h:11
 msgid ""
-"If activated the detailed metadata list in the properties dialog will be "
-"moved to its own page in the dialog. This should make the dialog more usable "
-"on smaller screens, e.g. as used by netbooks. If disabled the widget will be "
-"embedded on the \"Metadata\" page."
+"If activated, Eye of MATE won't ask for confirmation when moving images to "
+"the trash. It will still ask if any of the files cannot be moved to the "
+"trash and would be deleted instead."
 msgstr ""
-"ಸಕ್ರಿಯಗೊಳಿಸಿದಲ್ಲಿ ಗುಣಲಕ್ಷಣಗಳ ಸಂವಾದಲ್ಲಿನ ವಿವರವಾದ ಮೆಟಾಡೇಟ ಪಟ್ಟಿಯನ್ನು ಸಂವಾದದಲ್ಲಿನ "
-"ಅದರದ್ದೇ ಆದಂತಹ ಪುಟಕ್ಕೆ ಸ್ಥಳಾಂತರಿಸಲಾಗುತ್ತದೆ.. ಇದರಿಂದಾಗಿ ಸಣ್ಣ ತೆರೆಗಳಲ್ಲಿ ಸಂವಾದವನ್ನು "
-"ಬಳಸುವುದು ಸುಲಭವಾಗುತ್ತದೆ, ಉದಾ. ನೆಟ್‌ಬುಕ್‌ಗಳಲ್ಲಿ ಬಳಸುವಂತೆ. ಅಶಕ್ತಗೊಳಿಸಲಾಗಿದ್ದರೆ ವಿಜೆಟ್‌ "
-"ಅನ್ನು \"ಮೆಟಾಡೇಟ\" ಪುಟದಲ್ಲಿ ಅಡಕಗೊಳಿಸಲಾಗುತ್ತದೆ."
 
 #: ../data/eom.schemas.in.h:12
 msgid ""
-"If the transparency key has the value COLOR, then this key determines the "
-"color which is used for indicating transparency."
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable"
+" on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
 msgstr ""
-"ಪಾರದರ್ಶಕತೆ ಕೀಲಿಯು COLOR ಮೌಲ್ಯವನ್ನು ಹೊಂದಿದ್ದರೆ, ಪಾರದರ್ಶಕತೆಯನ್ನು ಸೂಚಿಸಲು ಬಳಸಲಾಗುವ "
-"ಬಣ್ಣವನ್ನು ಕೀಲಿಯು ನಿರ್ಧರಿಸುತ್ತದೆ."
 
 #: ../data/eom.schemas.in.h:13
 msgid ""
-"If this is set to FALSE small images will not be stretched to fit into the "
-"screen initially."
-msgstr ""
-"ಇದನ್ನು FALSE ಗೆ ಬದಲಾಯಿಸಿದಲ್ಲಿ, ಚಿಕ್ಕ ಚಿತ್ರಗಳನ್ನು ಆರಂಭದಲ್ಲಿ ತೆರೆಗೆ ಹೊಂದಿಕೊಳ್ಳುವಂತೆ "
-"ಎಳೆದು ಹಿಗ್ಗಿಸಲಾಗುತ್ತದೆ."
+"If the transparency key has the value COLOR, then this key determines the "
+"color which is used for indicating transparency."
+msgstr "ಪಾರದರ್ಶಕತೆ ಕೀಲಿಯು COLOR ಮೌಲ್ಯವನ್ನು ಹೊಂದಿದ್ದರೆ, ಪಾರದರ್ಶಕತೆಯನ್ನು ಸೂಚಿಸಲು ಬಳಸಲಾಗುವ ಬಣ್ಣವನ್ನು ಕೀಲಿಯು ನಿರ್ಧರಿಸುತ್ತದೆ."
 
 #: ../data/eom.schemas.in.h:14
 msgid ""
-"Image collection pane position. Set to 0 for bottom; 1 for left; 2 for top; "
-"3 for right."
+"If this is active, the color set by the background-color key will be used to"
+" fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
 msgstr ""
-"ಚಿತ್ರ ಸಂಗ್ರಹ ಫಲಕದ ಸ್ಥಾನ. ಕೆಳಗನ್ನು ಸೂಚಿಸಲು 0 ; ಎಡಕ್ಕೆ ಸೂಚಿಸಲು 1; ಮೇಲೆ ಎಂದು ಸೂಚಿಸಲು "
-"2;  ಬಲಕ್ಕೆ ಸೂಚಿಸಲು 3 ಕ್ಕೆ ಹೊಂದಿಸಿ."
 
 #: ../data/eom.schemas.in.h:15
+msgid ""
+"If this is set to FALSE small images will not be stretched to fit into the "
+"screen initially."
+msgstr "ಇದನ್ನು FALSE ಗೆ ಬದಲಾಯಿಸಿದಲ್ಲಿ, ಚಿಕ್ಕ ಚಿತ್ರಗಳನ್ನು ಆರಂಭದಲ್ಲಿ ತೆರೆಗೆ ಹೊಂದಿಕೊಳ್ಳುವಂತೆ ಎಳೆದು ಹಿಗ್ಗಿಸಲಾಗುತ್ತದೆ."
+
+#: ../data/eom.schemas.in.h:16
+msgid ""
+"Image collection pane position. Set to 0 for bottom; 1 for left; 2 for top; "
+"3 for right."
+msgstr "ಚಿತ್ರ ಸಂಗ್ರಹ ಫಲಕದ ಸ್ಥಾನ. ಕೆಳಗನ್ನು ಸೂಚಿಸಲು 0 ; ಎಡಕ್ಕೆ ಸೂಚಿಸಲು 1; ಮೇಲೆ ಎಂದು ಸೂಚಿಸಲು 2;  ಬಲಕ್ಕೆ ಸೂಚಿಸಲು 3 ಕ್ಕೆ ಹೊಂದಿಸಿ."
+
+#: ../data/eom.schemas.in.h:17
 msgid "Interpolate Image"
 msgstr "ಚಿತ್ರದ ಒಳಗೆ ಸೇರಿಸು"
 
-#: ../data/eom.schemas.in.h:16
+#: ../data/eom.schemas.in.h:18
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
 "plugin."
-msgstr ""
-"ಸಕ್ರಿಯ ಪ್ಲಗ್‌ಇನ್‌ಗಳನ್ನು ಪಟ್ಟಿ. ಇದು ಸಕ್ರಿಯ ಪ್ಲಗ್‌ಇನ್‌ಗಳು ಇರುವ \"ಸ್ಥಳ\"ವನ್ನು ಹೊಂದಿಲ್ಲ. ನೀಡಲಾದ "
-"ಪ್ಲಗ್‌ಇನ್‌ ಇರುವ \"ಸ್ಥಳ\"ವನ್ನು ನೋಡಲು .eom-plugin ಕಡತವನ್ನು ನೋಡಿ."
+msgstr "ಸಕ್ರಿಯ ಪ್ಲಗ್‌ಇನ್‌ಗಳನ್ನು ಪಟ್ಟಿ. ಇದು ಸಕ್ರಿಯ ಪ್ಲಗ್‌ಇನ್‌ಗಳು ಇರುವ \"ಸ್ಥಳ\"ವನ್ನು ಹೊಂದಿಲ್ಲ. ನೀಡಲಾದ ಪ್ಲಗ್‌ಇನ್‌ ಇರುವ \"ಸ್ಥಳ\"ವನ್ನು ನೋಡಲು .eom-plugin ಕಡತವನ್ನು ನೋಡಿ."
 
-#: ../data/eom.schemas.in.h:17
+#: ../data/eom.schemas.in.h:19
 msgid "Loop through the image sequence"
 msgstr "ಚಿತ್ರದ ಅನುಕ್ರಮಣೆಯ ಮೂಲಕದ ಲೂಪ್"
 
-#: ../data/eom.schemas.in.h:18
+#: ../data/eom.schemas.in.h:20
 msgid "Scroll wheel zoom"
 msgstr "ಚಲನಾ ಚಕ್ರ ಹಿಗ್ಗಿಸುವಿಕೆ"
 
-#: ../data/eom.schemas.in.h:19
+#: ../data/eom.schemas.in.h:21
 msgid "Show/Hide the image collection pane scroll buttons."
 msgstr "ಚಿತ್ರ ಸಂಗ್ರಹ ಫಲಕ ಚಲನಾ ಗುಂಡಿಗಳನ್ನು ತೋರಿಸು/ಅಡಗಿಸು."
 
-#: ../data/eom.schemas.in.h:20
+#: ../data/eom.schemas.in.h:22
 msgid "Show/Hide the image collection pane."
 msgstr "ಚಿತ್ರ ಸಂಗ್ರಹ ಫಲಕವನ್ನು ತೋರಿಸು/ಅಡಗಿಸು."
 
-#: ../data/eom.schemas.in.h:21
+#: ../data/eom.schemas.in.h:23
 msgid "Show/Hide the window side pane."
 msgstr "ವಿಂಡೊ ಬದಿಯಫಲಕವನ್ನು ತೋರಿಸು/ಅಡಗಿಸು."
 
-#: ../data/eom.schemas.in.h:22
+#: ../data/eom.schemas.in.h:24
 msgid "Show/Hide the window statusbar."
 msgstr "ವಿಂಡೊ ಸ್ಥಿತಿಪಟ್ಟಿಯನ್ನು ತೋರಿಸು/ಅಡಗಿಸು."
 
-#: ../data/eom.schemas.in.h:23
+#: ../data/eom.schemas.in.h:25
 msgid "Show/Hide the window toolbar."
 msgstr "ವಿಂಡೊ ಉಪಕರಣಪಟ್ಟಿಯನ್ನು ತೋರಿಸು/ಅಡಗಿಸು."
 
-#: ../data/eom.schemas.in.h:25
+#: ../data/eom.schemas.in.h:26
+msgid ""
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:28
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
-"This value defines the zooming step used for each scroll event. For example, "
-"0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
-"a 100% zoom increment."
-msgstr ""
-"ಹಿಗ್ಗಿಸಲು ಮೌಸಿನ ಚಲನಾ ಚಕ್ರವನ್ನು ಬಳಸುವಾಗ ಅನ್ವಯಿಸಬೇಕಿರುವ ಗುಣಕ. ಪ್ರತಿಯೊಂದು ಬಾರಿಯ ಚಲನೆಯ "
-"ಸಮಯದಲ್ಲಿ ಹಿಗ್ಗಿಸುವ ಹಂತವನ್ನು ಈ ಮೌಲ್ಯವು ಸೂಚಿಸುತ್ತದೆ. ಉದಾಹರಣೆಗೆ, ಪ್ರತಿ ಬಾರಿಯೂ 0.05 "
-"ರಷ್ಟು ಬದಲಾಯಿಸಿದಾಗ ಚಲನಾ ಸನ್ನಿವೇಶದಲ್ಲಿನ 5% ಹಿಗ್ಗಿಸುವಿಕೆಗೆ ಕಾರಣವಾಗುತ್ತದೆ ಹಾಗು 1.00 "
-"ರಷ್ಟು ಬದಲಾಯಿಸಿದಾಗ ಚಲನಾ ಸನ್ನಿವೇಶದಲ್ಲಿನ 100% ಹಿಗ್ಗಿಸುವಿಕೆಗೆ ಕಾರಣವಾಗುತ್ತದೆ."
+"This value defines the zooming step used for each scroll event. For example,"
+" 0.05 results in a 5% zoom increment for each scroll event and 1.00 result "
+"in a 100% zoom increment."
+msgstr "ಹಿಗ್ಗಿಸಲು ಮೌಸಿನ ಚಲನಾ ಚಕ್ರವನ್ನು ಬಳಸುವಾಗ ಅನ್ವಯಿಸಬೇಕಿರುವ ಗುಣಕ. ಪ್ರತಿಯೊಂದು ಬಾರಿಯ ಚಲನೆಯ ಸಮಯದಲ್ಲಿ ಹಿಗ್ಗಿಸುವ ಹಂತವನ್ನು ಈ ಮೌಲ್ಯವು ಸೂಚಿಸುತ್ತದೆ. ಉದಾಹರಣೆಗೆ, ಪ್ರತಿ ಬಾರಿಯೂ 0.05 ರಷ್ಟು ಬದಲಾಯಿಸಿದಾಗ ಚಲನಾ ಸನ್ನಿವೇಶದಲ್ಲಿನ 5% ಹಿಗ್ಗಿಸುವಿಕೆಗೆ ಕಾರಣವಾಗುತ್ತದೆ ಹಾಗು 1.00 ರಷ್ಟು ಬದಲಾಯಿಸಿದಾಗ ಚಲನಾ ಸನ್ನಿವೇಶದಲ್ಲಿನ 100% ಹಿಗ್ಗಿಸುವಿಕೆಗೆ ಕಾರಣವಾಗುತ್ತದೆ."
 
-#: ../data/eom.schemas.in.h:26
+#: ../data/eom.schemas.in.h:29
 msgid "Transparency color"
 msgstr "ಪಾರದರ್ಶಕತೆ ಬಣ್ಣ"
 
-#: ../data/eom.schemas.in.h:27
+#: ../data/eom.schemas.in.h:30
 msgid "Transparency indicator"
 msgstr "ಪಾರದರ್ಶಕತೆ ಸೂಚಕ"
 
-#: ../data/eom.schemas.in.h:28
+#: ../data/eom.schemas.in.h:31
 msgid "Trash images without asking"
 msgstr "ಅನುಮತಿಯನ್ನು ಕೇಳದೆ ಚಿತ್ರಗಳನ್ನು ಕಸದಬುಟ್ಟಿಗೆ ಹಾಕು"
 
-#: ../data/eom.schemas.in.h:29
-msgid ""
-"Whether the file chooser should show the user's pictures folder if no images "
-"are loaded."
+#: ../data/eom.schemas.in.h:32
+msgid "Use a custom background color"
 msgstr ""
-"ಯಾವುದೆ ಚಿತ್ರಗಳನ್ನು ಲೋಡ್ ಮಾಡದೆ ಇದ್ದಲ್ಲಿ ಕಡತ ಆಯ್ಕೆಗಾರವು ಬಳಕೆದಾರರ ಚಿತ್ರಗಳ ಕಡತಕೋಶವನ್ನು "
-"ತೋರಿಸಬೇಕೆ."
 
-#: ../data/eom.schemas.in.h:30
+#: ../data/eom.schemas.in.h:33
+msgid ""
+"Whether the file chooser should show the user's pictures folder if no images"
+" are loaded."
+msgstr "ಯಾವುದೆ ಚಿತ್ರಗಳನ್ನು ಲೋಡ್ ಮಾಡದೆ ಇದ್ದಲ್ಲಿ ಕಡತ ಆಯ್ಕೆಗಾರವು ಬಳಕೆದಾರರ ಚಿತ್ರಗಳ ಕಡತಕೋಶವನ್ನು ತೋರಿಸಬೇಕೆ."
+
+#: ../data/eom.schemas.in.h:34
 msgid "Whether the image collection pane should be resizable."
 msgstr "ಚಿತ್ರ ಸಂಗ್ರಹ ಫಲಕದ ಗಾತ್ರವು ಬದಲಾಯಿಸುವಂತಿರಬೇಕೆ ಅಥವ ಬೇಡವೆ."
 
-#: ../data/eom.schemas.in.h:31
+#: ../data/eom.schemas.in.h:35
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
-msgstr ""
-"ಚಿತ್ರವನ್ನು ಹಿಗ್ಗಿಸಿದಾಗ ಅಥವ ಕುಗ್ಗಿಸಿದಾಗ ಅಂದಾಜು ಮಾಡಬೇಕೆ ಅಥವ ಬೇಡವೆ. ಇದರಿಂದಾಗಿ "
-"ಗುಣಮಟ್ಟವು ಮಸುಕಾಗುತ್ತದೆ ಹಾಗು ಅಂದಾಜು ಮಾಡದೆ ಇರುವ ಚಿತ್ರಗಳಿಗಿಂತ ಒಂದಿಷ್ಟು "
-"ನಿಧಾನವಾಗಿರುತ್ತದೆ."
+msgstr "ಚಿತ್ರವನ್ನು ಹಿಗ್ಗಿಸಿದಾಗ ಅಥವ ಕುಗ್ಗಿಸಿದಾಗ ಅಂದಾಜು ಮಾಡಬೇಕೆ ಅಥವ ಬೇಡವೆ. ಇದರಿಂದಾಗಿ ಗುಣಮಟ್ಟವು ಮಸುಕಾಗುತ್ತದೆ ಹಾಗು ಅಂದಾಜು ಮಾಡದೆ ಇರುವ ಚಿತ್ರಗಳಿಗಿಂತ ಒಂದಿಷ್ಟು ನಿಧಾನವಾಗಿರುತ್ತದೆ."
 
-#: ../data/eom.schemas.in.h:32
+#: ../data/eom.schemas.in.h:36
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
-"quality but is somewhat slower than non interpolated images."
+"quality but is somewhat slower than non-interpolated images."
 msgstr ""
-"ಹಿಗ್ಗಿಸಿದಾಗ ಅಥವ ಕುಗ್ಗಿಸಿದಾಗ ಚಿತ್ರವನ್ನು ಪ್ರಕ್ಷೇಪಿಸಬೇಕೆ (ಸೇರಿಸಬೇಕೆ) ಅಥವ ಬೇಡವೆ. "
-"ಇದರಿಂದಾಗಿ ಗುಣಮಟ್ಟವು ಉತ್ತಮಗೊಳ್ಳುತ್ತದೆ ಆದರೆ ಸೇರಿಸದೆ ಇರುವ ಚಿತ್ರಗಳಿಗಿಂತ ಒಂದಿಷ್ಟು "
-"ನಿಧಾನವಾಗಿರುತ್ತದೆ."
 
-#: ../data/eom.schemas.in.h:33
+#: ../data/eom.schemas.in.h:37
 msgid ""
 "Whether the image should be rotated automatically based on EXIF orientation."
 msgstr "ಚಿತ್ರವನ್ನು EXIF ವಾಲಿಕೆಯ ಮೇಲೆ ಆಧರಿತವಾಗಿ ತಾನಾಗಿಯೆ ತಿರುಗುವಂತೆ ಮಾಡಬೇಕೆ."
 
-#: ../data/eom.schemas.in.h:34
+#: ../data/eom.schemas.in.h:38
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
 msgstr "ಗುಣಲಕ್ಷಣಗಳ ಸಂವಾದದಲ್ಲಿನ ಮೆಟಾಡೇಟಾ ಪಟ್ಟಿಯು ತನ್ನದೆ ಆದ ಪುಟವನ್ನು ಹೊಂದಿರಬೇಕೆ."
 
-#: ../data/eom.schemas.in.h:35
+#: ../data/eom.schemas.in.h:39
 msgid "Whether the scroll wheel should be used for zooming."
 msgstr "ಚಲನಾ ಚಕ್ರವನ್ನು ಝೂಮ್ ಮಾಡಲು ಬಳಸಬೇಕೆ"
 
-#: ../data/eom.schemas.in.h:36
+#: ../data/eom.schemas.in.h:40
 msgid "Whether the sequence of images should be shown in an endless loop."
 msgstr "ಚಿತ್ರಗಳ ಸರಣಿಯನ್ನು ಒಂದು ಅಂತ್ಯವಿಲ್ಲದ ಲೂಪ್‌ನಲ್ಲಿ ತೋರಿಸಬೇಕೆ"
 
-#: ../data/eom.schemas.in.h:37
+#: ../data/eom.schemas.in.h:41
 msgid "Zoom multiplier"
 msgstr "ಝೂಮ್ ಗುಣಕ"
+
+#: ../src/eom-application.c:123
+msgid "Running in fullscreen mode"
+msgstr "ಸಂಪೂರ್ಣ ತೆರೆಯಲ್ಲಿ ಚಾಲನೆಯಲ್ಲಿದೆ"
 
 #: ../src/eom-close-confirmation-dialog.c:159
 msgid "Close _without Saving"
@@ -560,7 +553,6 @@ msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] ""
-msgstr[1] ""
 
 #: ../src/eom-close-confirmation-dialog.c:621
 msgid "S_elect the images you want to save:"
@@ -579,9 +571,7 @@ msgstr "ಕಡತ ವಿನ್ಯಾಸವು ತಿಳಿದಿಲ್ಲ ಅಥ
 msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
-msgstr ""
-"ಕಡತ ಆಧಾರದ ಮೇಲೆ ಬರೆಯಬಹುದಾದ ಕಡತದ ವಿನ್ಯಾಸವನ್ನು ಪತ್ತೆ ಮಾಡಲು ಐ ಆಫ್‌ MATE ನಿಂದ "
-"ಸಾಧ್ಯವಾಗಲಿಲ್ಲ."
+msgstr "ಕಡತ ಆಧಾರದ ಮೇಲೆ ಬರೆಯಬಹುದಾದ ಕಡತದ ವಿನ್ಯಾಸವನ್ನು ಪತ್ತೆ ಮಾಡಲು ಐ ಆಫ್‌ MATE ನಿಂದ ಸಾಧ್ಯವಾಗಲಿಲ್ಲ."
 
 #: ../src/eom-file-chooser.c:134
 msgid "Please try a different file extension like .png or .jpg."
@@ -595,7 +585,8 @@ msgstr "ಎಲ್ಲಾ ಕಡತಗಳು"
 msgid "All Images"
 msgstr "ಎಲ್ಲಾ ಚಿತ್ರಗಳು"
 
-#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
+#. Filter name: First description then file extension, eg. "The PNG-Format
+#. (*.png)".
 #: ../src/eom-file-chooser.c:192
 #, c-format
 msgid "%s (*.%s)"
@@ -606,12 +597,11 @@ msgstr "%s (*.%s)"
 #: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:380
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] "ಪಿಕ್ಸೆಲ್"
-msgstr[1] "ಪಿಕ್ಸೆಲ್"
+msgstr[0] ""
 
 #: ../src/eom-file-chooser.c:437
-msgid "Load Image"
-msgstr "ಚಿತ್ರವನ್ನು ತೆಗೆ"
+msgid "Open Image"
+msgstr ""
 
 #: ../src/eom-file-chooser.c:445
 msgid "Save Image"
@@ -621,32 +611,32 @@ msgstr "ಚಿತ್ರವನ್ನು ಉಳಿಸು"
 msgid "Open Folder"
 msgstr "ಕಡತಕೋಶವನ್ನು ತೆರೆ"
 
-#: ../src/eom-image.c:579
+#: ../src/eom-image.c:598
 #, c-format
 msgid "Transformation on unloaded image."
 msgstr "ಲೋಡ್ ಆಗದೆ ಇರುವ ಚಿತ್ರದ ಮೇಲೆ ವರ್ಗಾವಣೆ."
 
-#: ../src/eom-image.c:607
+#: ../src/eom-image.c:626
 #, c-format
 msgid "Transformation failed."
 msgstr "ವರ್ಗಾವಣೆಯು ವಿಫಲಗೊಂಡಿದೆ."
 
-#: ../src/eom-image.c:1011
+#: ../src/eom-image.c:1053
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "ಈ ಬಗೆಯ ಕಡತದ ವಿನ್ಯಾಸಕ್ಕೆ EXIF ಬೆಂಬಲವಿಲ್ಲ."
 
-#: ../src/eom-image.c:1134
+#: ../src/eom-image.c:1180
 #, c-format
 msgid "Image loading failed."
 msgstr "ಚಿತ್ರದ ಲೋಡ್ ಮಾಡುವಿಕೆಯು ವಿಫಲಗೊಂಡಿದೆ."
 
-#: ../src/eom-image.c:1539 ../src/eom-image.c:1641
+#: ../src/eom-image.c:1585 ../src/eom-image.c:1687
 #, c-format
 msgid "No image loaded."
 msgstr "ಯಾವುದೆ ಚಿತ್ರವು ಲೋಡ್ ಆಗಿಲ್ಲ."
 
-#: ../src/eom-image.c:1549 ../src/eom-image.c:1653
+#: ../src/eom-image.c:1595 ../src/eom-image.c:1699
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "ತಾತ್ಕಾಲಿಕ ಕಡತದ ರಚನೆಯಲ್ಲಿ ವಿಫಲತೆ."
@@ -710,7 +700,8 @@ msgstr "ಮೌಲ್ಯ"
 msgid "%a, %d %B %Y  %X"
 msgstr "%a, %d %B %Y  %X"
 
-#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
+#. A strftime-formatted string, to display the date the image was taken, for
+#. the case we don't have the time.
 #: ../src/eom-exif-util.c:147
 msgid "%a, %d %B %Y"
 msgstr "%a, %d %B %Y"
@@ -733,7 +724,7 @@ msgstr "'%s' ನಲ್ಲಿ ಯಾವುದೆ ಚಿತ್ರಗಳು ಕಂ�
 msgid "The given locations contain no images."
 msgstr "ಸೂಚಿಸಲಾದ ಸ್ಥಳಗಳು ಯಾವುದೆ ಚಿತ್ರಗಳನ್ನು ಹೊಂದಿಲ್ಲ."
 
-#: ../src/eom-print.c:197
+#: ../src/eom-print.c:219
 msgid "Image Settings"
 msgstr "ಚಿತ್ರದ ಸಿದ್ಧತೆಗಳು"
 
@@ -742,9 +733,8 @@ msgid "Image"
 msgstr "ಚಿತ್ರ"
 
 #: ../src/eom-print-image-setup.c:835
-#, fuzzy
 msgid "The image whose printing properties will be set up"
-msgstr "ಯಾವ ಚಿತ್ರದ ಮುದ್ರಣ ಗುಣಲಕ್ಷಣಗಳನ್ನು ಹೊಂದಿಸಬೇಕೋ ಆ ಚಿತ್ರ"
+msgstr ""
 
 #: ../src/eom-print-image-setup.c:841
 msgid "Page Setup"
@@ -887,14 +877,31 @@ msgstr " (ಅಮಾನ್ಯ ಯುನಿಕೋಡ್)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/eom-window.c:773
-#, fuzzy, c-format
+#: ../src/eom-window.c:832
+#, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] "%i x %i ಪಿಕ್ಸೆಲ್  %s    %i%%"
-msgstr[1] "%i x %i ಪಿಕ್ಸೆಲ್‌ಗಳು  %s    %i%%"
+msgstr[0] ""
 
-#: ../src/eom-window.c:1191
+#: ../src/eom-window.c:1138
+msgid "_Reload"
+msgstr ""
+
+#: ../src/eom-window.c:1140 ../src/eom-window.c:3000
+msgctxt "MessageArea"
+msgid "Hi_de"
+msgstr ""
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eom-window.c:1150
+#, c-format
+msgid ""
+"The image \"%s\" has been modified by an external application.\n"
+"Would you like to reload it?"
+msgstr ""
+
+#: ../src/eom-window.c:1305
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "ಆರಿಸಲಾದ ಚಿತ್ರವನ್ನು ತೆರೆಯಲು \"%s\" ಅನ್ನು ಬಳಸಿ"
@@ -904,111 +911,100 @@ msgstr "ಆರಿಸಲಾದ ಚಿತ್ರವನ್ನು ತೆರೆಯಲ�
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1341
+#: ../src/eom-window.c:1455
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "\"%s\" ಚಿತ್ರವನ್ನು ಉಳಿಸಲಾಗುತ್ತಿದೆ (%u/%u)"
 
-#: ../src/eom-window.c:1683
+#: ../src/eom-window.c:1808
 #, c-format
-msgid "Loading image \"%s\""
-msgstr "\"%s\" ಚಿತ್ರವನ್ನು ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ"
+msgid "Opening image \"%s\""
+msgstr ""
 
-#: ../src/eom-window.c:2383
+#: ../src/eom-window.c:2498
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
-msgstr ""
-"ಕಡತವನ್ನು ಮುದ್ರಿಸುವಾಗ ದೋಷ:\n"
-"%s"
+msgstr "ಕಡತವನ್ನು ಮುದ್ರಿಸುವಾಗ ದೋಷ:\n%s"
 
-#: ../src/eom-window.c:2635
+#: ../src/eom-window.c:2751
 msgid "Toolbar Editor"
 msgstr "ಉಪಕರಣ ಪಟ್ಟಿ ಸಂಪಾದಕ"
 
-#: ../src/eom-window.c:2638
+#: ../src/eom-window.c:2754
 msgid "_Reset to Default"
 msgstr "ಪೂರ್ವನಿಯೋಜಿತಕ್ಕೆ ಮರಳಿ ಹೊಂದಿಸು(_R)"
 
-#: ../src/eom-window.c:2724
+#: ../src/eom-window.c:2844
 msgid "translator-credits"
 msgstr "ಶಂಕರ್ ಪ್ರಸಾದ್ ಎಂ. ವಿ. <svenkate@redhat.com>"
 
-#: ../src/eom-window.c:2727
+#: ../src/eom-window.c:2847
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version.\n"
-msgstr ""
-"This program is free software; you can redistribute it and/or modify it "
-"under the terms of the  Public License as published by the Free Software "
-"Foundation; either version 2 of the License, or (at your option) any later "
-"version.\n"
+msgstr "This program is free software; you can redistribute it and/or modify it under the terms of the  Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n"
 
-#: ../src/eom-window.c:2731
+#: ../src/eom-window.c:2851
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details.\n"
-msgstr ""
-"This program is distributed in the hope that it will be useful, but WITHOUT "
-"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
-"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details.\n"
+msgstr "This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.\n"
 
-#: ../src/eom-window.c:2735
+#: ../src/eom-window.c:2855
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program; if not, write to the Free Software Foundation, Inc., 59 Temple "
-"Place - Suite 330, Boston, MA 02111-1307, USA."
-msgstr ""
-"You should have received a copy of the GNU General Public License along with "
-"this program; if not, write to the Free Software Foundation, Inc., 59 Temple "
-"Place - Suite 330, Boston, MA 02111-1307, USA."
+"You should have received a copy of the GNU General Public License along with"
+" this program; if not, write to the Free Software Foundation, Inc., 59 "
+"Temple Place - Suite 330, Boston, MA 02111-1307, USA."
+msgstr "You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA."
 
-#: ../src/eom-window.c:2748
+#: ../src/eom-window.c:2868
 msgid "Eye of MATE"
 msgstr "ಐ ಆಫ್  MATE"
 
-#: ../src/eom-window.c:2751
+#: ../src/eom-window.c:2872
 msgid "The MATE image viewer."
 msgstr "MATE ಚಿತ್ರ ವೀಕ್ಷಕ."
 
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from eom's menubar
+#: ../src/eom-window.c:2998
+msgid "_Open Background Preferences"
+msgstr ""
+
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2877
+#: ../src/eom-window.c:3014
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
 msgstr ""
 
-#: ../src/eom-window.c:3277
+#: ../src/eom-window.c:3410
 msgid "Saving image locally…"
 msgstr "ಚಿತ್ರವನ್ನು ಸ್ಥಳೀಯವಾಗಿ ಉಳಿಸಲಾಗುತ್ತಿದೆ…"
 
-#: ../src/eom-window.c:3359
+#: ../src/eom-window.c:3492
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
-msgstr ""
-"ನೀವು ಖಚಿತವಾಗಿಯೂ ಕಸದಬುಟ್ಟಿಗೆ \n"
-"\"%s\" ಅನ್ನು ವರ್ಗಾಯಿಸಲು ಬಯಸುತ್ತೀರೆ?"
+msgstr "ನೀವು ಖಚಿತವಾಗಿಯೂ ಕಸದಬುಟ್ಟಿಗೆ \n\"%s\" ಅನ್ನು ವರ್ಗಾಯಿಸಲು ಬಯಸುತ್ತೀರೆ?"
 
-#: ../src/eom-window.c:3362
+#: ../src/eom-window.c:3495
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
-msgstr ""
-"\"%s\" ಗಾಗಿ ಕಸದಬುಟ್ಟಿಯು ಕಂಡುಬಂದಿಲ್ಲ. ಈ ಚಿತ್ರವನ್ನು ನೀವು ಖಚಿತವಾಗಿ ತೆಗೆದು ಹಾಕಲು "
-"ಬಯಸುತ್ತೀರೆ?"
+msgstr "\"%s\" ಗಾಗಿ ಕಸದಬುಟ್ಟಿಯು ಕಂಡುಬಂದಿಲ್ಲ. ಈ ಚಿತ್ರವನ್ನು ನೀವು ಖಚಿತವಾಗಿ ತೆಗೆದು ಹಾಕಲು ಬಯಸುತ್ತೀರೆ?"
 
-#: ../src/eom-window.c:3367
+#: ../src/eom-window.c:3500
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1016,376 +1012,367 @@ msgid ""
 msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
-msgstr[0] "ಆರಿಸಲಾದ ಚಿತ್ರವನ್ನು ನೀವು ಖಚಿತವಾಗಿಯೂ ಕಸದಬುಟ್ಟಿಗೆ ವರ್ಗಾಯಿಸಲು ಬಯಸುತ್ತೀರೆ?"
-msgstr[1] ""
-"ನೀವು ಖಚಿತವಾಗಿಯೂ ಆರಿಸಲಾದ \n"
-" %d ಚಿತ್ರಗಳನ್ನು ಕಸದಬುಟ್ಟಿಗೆ ವರ್ಗಾಯಿಸಲು ಬಯಸುತ್ತೀರೆ?"
+msgstr[0] ""
 
-#: ../src/eom-window.c:3372
+#: ../src/eom-window.c:3505
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
-msgstr ""
-"ಆಯ್ಕೆ ಮಾಡಲಾದ ಕೆಲವು ಚಿತ್ರಗಳನ್ನು ಕಸದಬುಟ್ಟಿಗೆ ವರ್ಗಾಯಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ ಹಾಗು ಶಾಶ್ವತವಾಗಿ "
-"ತೆಗೆದು ಹಾಕಲ್ಪಡುತ್ತವೆ. ನೀವು ಖಚಿತವಾಗಿಯೂ ಮುಂದುವರೆಯಲು ಬಯಸುತ್ತೀರೆ?"
+msgstr "ಆಯ್ಕೆ ಮಾಡಲಾದ ಕೆಲವು ಚಿತ್ರಗಳನ್ನು ಕಸದಬುಟ್ಟಿಗೆ ವರ್ಗಾಯಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ ಹಾಗು ಶಾಶ್ವತವಾಗಿ ತೆಗೆದು ಹಾಕಲ್ಪಡುತ್ತವೆ. ನೀವು ಖಚಿತವಾಗಿಯೂ ಮುಂದುವರೆಯಲು ಬಯಸುತ್ತೀರೆ?"
 
-#: ../src/eom-window.c:3389 ../src/eom-window.c:3831 ../src/eom-window.c:3855
+#: ../src/eom-window.c:3522 ../src/eom-window.c:3980 ../src/eom-window.c:4004
 msgid "Move to _Trash"
 msgstr "ಕಸದ ಬುಟ್ಟಿಗೆ ವರ್ಗಾಯಿಸು(_T)"
 
-#: ../src/eom-window.c:3391
+#: ../src/eom-window.c:3524
 msgid "_Do not ask again during this session"
 msgstr "ಈ ಅಧಿವೇಶನದಲ್ಲಿ ಇನ್ನೊಮ್ಮೆ ನನ್ನನ್ನು ಕೇಳಬೇಡ(_D)"
 
-#: ../src/eom-window.c:3436 ../src/eom-window.c:3450
+#: ../src/eom-window.c:3569 ../src/eom-window.c:3583
 #, c-format
 msgid "Couldn't access trash."
 msgstr "ಕಸದಬುಟ್ಟಿಯನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳಲಾಗಲಿಲ್ಲ."
 
-#: ../src/eom-window.c:3458
+#: ../src/eom-window.c:3591
 #, c-format
 msgid "Couldn't delete file"
 msgstr "ಕಡತವನ್ನು ಅಳಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
 
-#: ../src/eom-window.c:3529
+#: ../src/eom-window.c:3662
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "%s ಚಿತ್ರವನ್ನು ಅಳಿಸುವಾಗ ದೋಷ"
 
-#: ../src/eom-window.c:3751
-msgid "_File"
-msgstr "ಕಡತ(_F)"
-
-#: ../src/eom-window.c:3752
-msgid "_Edit"
-msgstr "ಸಂಪಾದಿಸು(_E)"
-
-#: ../src/eom-window.c:3753
-msgid "_View"
-msgstr "ನೋಟ(_V)"
-
-#: ../src/eom-window.c:3754
+#: ../src/eom-window.c:3904
 msgid "_Image"
 msgstr "ಚಿತ್ರ(_I)"
 
-#: ../src/eom-window.c:3755
+#: ../src/eom-window.c:3905
+msgid "_Edit"
+msgstr "ಸಂಪಾದಿಸು(_E)"
+
+#: ../src/eom-window.c:3906
+msgid "_View"
+msgstr "ನೋಟ(_V)"
+
+#: ../src/eom-window.c:3907
 msgid "_Go"
 msgstr "ತೆರಳು(_G)"
 
-#: ../src/eom-window.c:3756
+#: ../src/eom-window.c:3908
 msgid "_Tools"
 msgstr "ಉಪಕರಣಗಳು(_T)"
 
-#: ../src/eom-window.c:3757
+#: ../src/eom-window.c:3909
 msgid "_Help"
 msgstr "ಸಹಾಯ(_H)"
 
-#: ../src/eom-window.c:3759
+#: ../src/eom-window.c:3911
 msgid "_Open…"
 msgstr "ತೆರೆ(_O)..."
 
-#: ../src/eom-window.c:3760
+#: ../src/eom-window.c:3912
 msgid "Open a file"
 msgstr "ಒಂದು ಕಡತವನ್ನು ತೆಗೆ"
 
-#: ../src/eom-window.c:3762
+#: ../src/eom-window.c:3914
 msgid "_Close"
 msgstr "ಮುಚ್ಚು(_C)"
 
-#: ../src/eom-window.c:3763
+#: ../src/eom-window.c:3915
 msgid "Close window"
 msgstr "ವಿಂಡೋ ಅನ್ನು ಮುಚ್ಚು"
 
-#: ../src/eom-window.c:3765
+#: ../src/eom-window.c:3917
 msgid "T_oolbar"
 msgstr "ಉಪಕರಣಪಟ್ಟಿ(_o)"
 
-#: ../src/eom-window.c:3766
+#: ../src/eom-window.c:3918
 msgid "Edit the application toolbar"
 msgstr "ಅನ್ವಯ ಉಪಕರಣವನ್ನು ಸಂಪಾದಿಸು"
 
-#: ../src/eom-window.c:3768
+#: ../src/eom-window.c:3920
 msgid "Prefere_nces"
 msgstr "ಆದ್ಯತೆಗಳು(_n)"
 
-#: ../src/eom-window.c:3769
+#: ../src/eom-window.c:3921
 msgid "Preferences for Eye of MATE"
 msgstr "ಐ ಆಫ್ MATE ನ ಆದ್ಯತೆಗಳು"
 
-#: ../src/eom-window.c:3771
+#: ../src/eom-window.c:3923
 msgid "_Contents"
 msgstr "ವಿಷಯಗಳು(_C)"
 
-#: ../src/eom-window.c:3772
+#: ../src/eom-window.c:3924
 msgid "Help on this application"
 msgstr "ಈ ಅನ್ವಯಕ್ಕಾಗಿನ ಸಹಾಯ"
 
-#: ../src/eom-window.c:3774 ../src/eom-plugin-manager.c:505
+#: ../src/eom-window.c:3926 ../src/eom-plugin-manager.c:505
 msgid "_About"
 msgstr "ತಂತ್ರಾಂಶದ ಬಗ್ಗೆ(_A)"
 
-#: ../src/eom-window.c:3775
+#: ../src/eom-window.c:3927
 msgid "About this application"
 msgstr "ಈ ಅನ್ವಯದ ಬಗ್ಗೆ"
 
-#: ../src/eom-window.c:3780
+#: ../src/eom-window.c:3932
 msgid "_Toolbar"
 msgstr "ಉಪಕರಣಪಟ್ಟಿ(_T)"
 
-#: ../src/eom-window.c:3781
+#: ../src/eom-window.c:3933
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "ಪ್ರಸಕ್ತ ವಿಂಡೊದಲ್ಲಿ ಉಪಕರಣಪಟ್ಟಿಯ ಗೋಚರಿಕೆಯನ್ನು ಬದಲಾಯಿಸುತ್ತದೆ"
 
-#: ../src/eom-window.c:3783
+#: ../src/eom-window.c:3935
 msgid "_Statusbar"
 msgstr "ಸ್ಥಿತಿಪಟ್ಟಿಕೆ(_S)"
 
-#: ../src/eom-window.c:3784
+#: ../src/eom-window.c:3936
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "ಈಗಿನ ವಿಂಡೊ"
 
-#: ../src/eom-window.c:3786
+#: ../src/eom-window.c:3938
 msgid "_Image Collection"
 msgstr "ಚಿತ್ರ ಸಂಗ್ರಹ(_I)"
 
-#: ../src/eom-window.c:3787
+#: ../src/eom-window.c:3939
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "ಪ್ರಸಕ್ತ ವಿಂಡೊದಲ್ಲಿ ಚಿತ್ರ ಸಂಗ್ರಹದ ಫಲಕದ ಗೋಚರಿಕೆಯನ್ನು ಬದಲಾಯಿಸುತ್ತದೆ"
 
-#: ../src/eom-window.c:3789
+#: ../src/eom-window.c:3941
 msgid "Side _Pane"
 msgstr "ಬದಿಯ ಫಲಕ(_P)"
 
-#: ../src/eom-window.c:3790
+#: ../src/eom-window.c:3942
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "ಪ್ರಸಕ್ತ ವಿಂಡೊದಲ್ಲಿ ಬದಿಯ ಫಲಕದ ಗೋಚರಿಕೆಯನ್ನು ಬದಲಾಯಿಸುತ್ತದೆ"
 
-#: ../src/eom-window.c:3795
+#: ../src/eom-window.c:3947
 msgid "_Save"
 msgstr "ಉಳಿಸು(_S)"
 
-#: ../src/eom-window.c:3796
+#: ../src/eom-window.c:3948
 msgid "Save changes in currently selected images"
 msgstr "ಈಗ ಆರಿಸಲಾದ ಚಿತ್ರಗಳಲ್ಲಿನ ಬದಲಾವಣೆಗಳನ್ನು ಉಳಿಸು"
 
-#: ../src/eom-window.c:3798
+#: ../src/eom-window.c:3950
 msgid "Open _with"
 msgstr "ಇದರೊಂದಿಗೆ ತೆಗೆ(_w)"
 
-#: ../src/eom-window.c:3799
+#: ../src/eom-window.c:3951
 msgid "Open the selected image with a different application"
 msgstr "ಆರಿಸಲಾದ ಚಿತ್ರಗಳನ್ನು ಬೇರೊಂದು ಅನ್ವಯದೊಂದಿಗೆ ತೆರೆ"
 
-#: ../src/eom-window.c:3801
-#, fuzzy
+#: ../src/eom-window.c:3953
 msgid "Save _As…"
-msgstr "ಹೀಗೆ ಉಳಿಸು"
+msgstr ""
 
-#: ../src/eom-window.c:3802
+#: ../src/eom-window.c:3954
 msgid "Save the selected images with a different name"
 msgstr "ಆರಿಸಲಾದ ಚಿತ್ರಗಳನ್ನು ಬೇರೊಂದು ಹೆಸರಿನೊಂದಿಗೆ ಉಳಿಸು"
 
-#: ../src/eom-window.c:3805
-#, fuzzy
-msgid "Set up the page properties for printing"
-msgstr "ಮುದ್ರಣಕ್ಕಾಗಿ ಪುಟದ ಗುಣಲಕ್ಷಣಗಳನ್ನು ಹೊಂದಿಸು"
-
-#: ../src/eom-window.c:3807
+#: ../src/eom-window.c:3956
 msgid "_Print…"
 msgstr "ಮುದ್ರಿಸು(_P)..."
 
-#: ../src/eom-window.c:3808
+#: ../src/eom-window.c:3957
 msgid "Print the selected image"
 msgstr "ಆರಿಸಲಾದ ಚಿತ್ರವನ್ನು ಮುದ್ರಿಸು "
 
-#: ../src/eom-window.c:3810
+#: ../src/eom-window.c:3959
 msgid "Prope_rties"
 msgstr "ಗುಣಲಕ್ಷಣಗಳು(_r)"
 
-#: ../src/eom-window.c:3811
+#: ../src/eom-window.c:3960
 msgid "Show the properties and metadata of the selected image"
 msgstr "ಆರಿಸಲಾದ ಚಿತ್ರದ ಗುಣಲಕ್ಷಣಗಳು ಹಾಗು ಮೆಟಾಡಾಟವನ್ನು ತೋರಿಸು"
 
-#: ../src/eom-window.c:3813
+#: ../src/eom-window.c:3962
 msgid "_Undo"
 msgstr "ರದ್ದುಗೊಳಿಸು(_U)"
 
-#: ../src/eom-window.c:3814
+#: ../src/eom-window.c:3963
 msgid "Undo the last change in the image"
 msgstr "ಚಿತ್ರದಲ್ಲಿ ಮಾಡಲಾದ ಕೊನೆಯ ಬದಲಾಣೆಯನ್ನು ರದ್ದುಗೊಳಿಸು"
 
-#: ../src/eom-window.c:3816
+#: ../src/eom-window.c:3965
 msgid "Flip _Horizontal"
 msgstr "ಅಡ್ಡವಾಗಿ ತಿರುಗಿಸು(_H)"
 
-#: ../src/eom-window.c:3817
+#: ../src/eom-window.c:3966
 msgid "Mirror the image horizontally"
 msgstr "ಚಿತ್ರವನ್ನು ಅಡ್ಡವಾಗಿ ಪ್ರತಿಬಿಂಬಿಸು"
 
-#: ../src/eom-window.c:3819
+#: ../src/eom-window.c:3968
 msgid "Flip _Vertical"
 msgstr "ಲಂಬವಾಗಿ ತಿರುಗಿಸು(_V)"
 
-#: ../src/eom-window.c:3820
+#: ../src/eom-window.c:3969
 msgid "Mirror the image vertically"
 msgstr "ಚಿತ್ರವನ್ನು ಲಂಬವಾಗಿ ಪ್ರತಿಬಿಂಬಿಸು"
 
-#: ../src/eom-window.c:3822
+#: ../src/eom-window.c:3971
 msgid "_Rotate Clockwise"
 msgstr "ಅಪ್ರದಕ್ಷಿಣೆಯಲ್ಲಿ ತಿರುಗಿಸು(_R)"
 
-#: ../src/eom-window.c:3823
+#: ../src/eom-window.c:3972
 msgid "Rotate the image 90 degrees to the right"
 msgstr "ಚಿತ್ರವನ್ನು 90 ಡಿಗ್ರಿಯಷ್ಟು ಬಲಕ್ಕೆ ತಿರುಗಿಸು"
 
-#: ../src/eom-window.c:3825
+#: ../src/eom-window.c:3974
 msgid "Rotate Counterc_lockwise"
 msgstr "ಅಪ್ರದಕ್ಷಿಣೆಯಲ್ಲಿ ತಿರುಗಿಸು(_l)"
 
-#: ../src/eom-window.c:3826
+#: ../src/eom-window.c:3975
 msgid "Rotate the image 90 degrees to the left"
 msgstr "ಚಿತ್ರವನ್ನು 90 ಡಿಗ್ರಿಯಷ್ಟು ಎಡಕ್ಕೆ ತಿರುಗಿಸು"
 
-#: ../src/eom-window.c:3828
+#: ../src/eom-window.c:3977
 msgid "Set as _Desktop Background"
 msgstr "ಗಣಕತೆರೆಯ ಹಿನ್ನಲೆಯಾಗಿ ಹೊಂದಿಸು(_D)"
 
-#: ../src/eom-window.c:3829
+#: ../src/eom-window.c:3978
 msgid "Set the selected image as the desktop background"
 msgstr "ಆರಿಸಲಾದ ಚಿತ್ರವನ್ನು ಗಣಕತೆರೆಯ ಹಿನ್ನಲೆಯಾಗಿ ಬಳಸು"
 
-#: ../src/eom-window.c:3832
+#: ../src/eom-window.c:3981
 msgid "Move the selected image to the trash folder"
 msgstr "ಆರಿಸಲಾದ ಚಿತ್ರವನ್ನು ಕಸದಬುಟ್ಟಿ ಸ್ಥಳಾಂತರಿಸು"
 
-#: ../src/eom-window.c:3834 ../src/eom-window.c:3846 ../src/eom-window.c:3849
+#: ../src/eom-window.c:3983 ../src/eom-window.c:3995 ../src/eom-window.c:3998
 msgid "_Zoom In"
 msgstr "ಹಿಗ್ಗಿಸು(_Z)s"
 
-#: ../src/eom-window.c:3835 ../src/eom-window.c:3847
+#: ../src/eom-window.c:3984 ../src/eom-window.c:3996
 msgid "Enlarge the image"
 msgstr "ಚಿತ್ರವನ್ನು ಹಿಗ್ಗಿಸು"
 
-#: ../src/eom-window.c:3837 ../src/eom-window.c:3852
+#: ../src/eom-window.c:3986 ../src/eom-window.c:4001
 msgid "Zoom _Out"
 msgstr "ಕುಗ್ಗಿಸು(_O)"
 
-#: ../src/eom-window.c:3838 ../src/eom-window.c:3850 ../src/eom-window.c:3853
+#: ../src/eom-window.c:3987 ../src/eom-window.c:3999 ../src/eom-window.c:4002
 msgid "Shrink the image"
 msgstr "ಚಿತ್ರವನ್ನು ಕುಗ್ಗಿಸು"
 
-#: ../src/eom-window.c:3840
+#: ../src/eom-window.c:3989
 msgid "_Normal Size"
 msgstr "ಮಾಮೂಲಿ ಗಾತ್ರ(_N)"
 
-#: ../src/eom-window.c:3841
+#: ../src/eom-window.c:3990
 msgid "Show the image at its normal size"
 msgstr "ಚಿತ್ರವನ್ನು ಅದರ ಮಾಮೂಲಿ ಗಾತ್ರದಲ್ಲಿ ತೋರಿಸು"
 
-#: ../src/eom-window.c:3843
+#: ../src/eom-window.c:3992
 msgid "Best _Fit"
 msgstr "ಉತ್ತಮವಾಗಿ ಹೊಂದುವ(_F)"
 
-#: ../src/eom-window.c:3844
+#: ../src/eom-window.c:3993
 msgid "Fit the image to the window"
 msgstr "ಚಿತ್ರವನ್ನು ವಿಂಡೊದ ಗಾತ್ರಕ್ಕೆ ಸರಿಹೊಂದಿಸು"
 
-#: ../src/eom-window.c:3861
+#: ../src/eom-window.c:4010
 msgid "_Fullscreen"
 msgstr "ಪೂರ್ಣತೆರೆ(_F)"
 
-#: ../src/eom-window.c:3862
+#: ../src/eom-window.c:4011
 msgid "Show the current image in fullscreen mode"
 msgstr "ಈಗಿನ ಚಿತ್ರವನ್ನು ಪೂರ್ಣತೆರೆ ಕ್ರಮದಲ್ಲಿ ತೋರಿಸು"
 
-#: ../src/eom-window.c:3867 ../src/eom-window.c:3882
+#: ../src/eom-window.c:4013
+msgid "Pause Slideshow"
+msgstr ""
+
+#: ../src/eom-window.c:4014
+msgid "Pause or resume the slideshow"
+msgstr ""
+
+#: ../src/eom-window.c:4019 ../src/eom-window.c:4034
 msgid "_Previous Image"
 msgstr "ಹಿಂದಿನ ಚಿತ್ರ(_P)"
 
-#: ../src/eom-window.c:3868
+#: ../src/eom-window.c:4020
 msgid "Go to the previous image of the collection"
 msgstr "ಸಂಗ್ರಹದ ಹಿಂದಿನ ಚಿತ್ರಕ್ಕೆ ತೆರಳು"
 
-#: ../src/eom-window.c:3870
+#: ../src/eom-window.c:4022
 msgid "_Next Image"
 msgstr "ಮುಂದಿನ ಚಿತ್ರ(_N)"
 
-#: ../src/eom-window.c:3871
+#: ../src/eom-window.c:4023
 msgid "Go to the next image of the collection"
 msgstr "ಸಂಗ್ರಹದ ಮುಂದಿನ ಚಿತ್ರಕ್ಕೆ ತೆರಳು"
 
-#: ../src/eom-window.c:3873 ../src/eom-window.c:3885
+#: ../src/eom-window.c:4025 ../src/eom-window.c:4037
 msgid "_First Image"
 msgstr "ಮೊದಲ ಚಿತ್ರ(_F)"
 
-#: ../src/eom-window.c:3874
+#: ../src/eom-window.c:4026
 msgid "Go to the first image of the collection"
 msgstr "ಸಂಗ್ರಹದಲ್ಲಿನ ಮೊದಲ ಚಿತ್ರಕ್ಕೆ ತೆರಳು"
 
-#: ../src/eom-window.c:3876 ../src/eom-window.c:3888
+#: ../src/eom-window.c:4028 ../src/eom-window.c:4040
 msgid "_Last Image"
 msgstr "ಕೊನೆಯ ಚಿತ್ರ(_L)"
 
-#: ../src/eom-window.c:3877
+#: ../src/eom-window.c:4029
 msgid "Go to the last image of the collection"
 msgstr "ಸಂಗ್ರಹದಲ್ಲಿನ ಕೊನೆಯ ಚಿತ್ರಕ್ಕೆ ತೆರಳು"
 
-#: ../src/eom-window.c:3879
-#, fuzzy
+#: ../src/eom-window.c:4031
 msgid "_Random Image"
-msgstr "ಚಿತ್ರವನ್ನು ಮತ್ತೊಮ್ಮೆ ಲೋಡ್ ಮಾಡು"
+msgstr ""
 
-#: ../src/eom-window.c:3880
-#, fuzzy
+#: ../src/eom-window.c:4032
 msgid "Go to a random image of the collection"
-msgstr "ಸಂಗ್ರಹದ ಮುಂದಿನ ಚಿತ್ರಕ್ಕೆ ತೆರಳು"
+msgstr ""
 
-#: ../src/eom-window.c:3894
+#: ../src/eom-window.c:4046
 msgid "_Slideshow"
 msgstr "ಜಾರುಫಲಕ ಪ್ರದರ್ಶನ(_S)"
 
-#: ../src/eom-window.c:3895
+#: ../src/eom-window.c:4047
 msgid "Start a slideshow view of the images"
 msgstr "ಚಿತ್ರಗಳ ಒಂದು ಜಾರುಫಲಕ ಪ್ರದರ್ಶನವನ್ನು ಆರಂಭಿಸು"
 
-#: ../src/eom-window.c:3961
+#: ../src/eom-window.c:4113
 msgid "Previous"
 msgstr "ಹಿಂದಿನ"
 
-#: ../src/eom-window.c:3965
+#: ../src/eom-window.c:4117
 msgid "Next"
 msgstr "ಮುಂದಿನ"
 
-#: ../src/eom-window.c:3969
+#: ../src/eom-window.c:4121
 msgid "Right"
 msgstr "ಬಲ"
 
-#: ../src/eom-window.c:3972
+#: ../src/eom-window.c:4124
 msgid "Left"
 msgstr "ಎಡ"
 
-#: ../src/eom-window.c:3975
+#: ../src/eom-window.c:4127
 msgid "In"
 msgstr "ಒಳಗೆ"
 
-#: ../src/eom-window.c:3978
+#: ../src/eom-window.c:4130
 msgid "Out"
 msgstr "ಹೊರಗೆ"
 
-#: ../src/eom-window.c:3981
+#: ../src/eom-window.c:4133
 msgid "Normal"
 msgstr "ಸಾಮಾನ್ಯ"
 
-#: ../src/eom-window.c:3984
+#: ../src/eom-window.c:4136
 msgid "Fit"
 msgstr "ಹೊಂದಿಸು"
 
-#: ../src/eom-window.c:3987
+#: ../src/eom-window.c:4139
 msgid "Collection"
 msgstr "ಸಂಗ್ರಹ"
 
-#: ../src/eom-window.c:3990
+#: ../src/eom-window.c:4142
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "ಕಸದ ಬುಟ್ಟಿ"
@@ -1426,54 +1413,32 @@ msgstr "ಪ್ಲಗ್ಇನ್‍ನ ಬಗ್ಗೆ(_A)"
 msgid "C_onfigure Plugin"
 msgstr "ಪ್ಲಗ್ಇನ್ ಅನ್ನು ಸಂರಚಿಸು(_o)"
 
-#: ../src/main.c:63
+#: ../src/main.c:73
 msgid "Open in fullscreen mode"
 msgstr "ಪೂರ್ಣತೆರೆ ಕ್ರಮದಲ್ಲಿ ತೆಗೆ"
 
-#: ../src/main.c:64
+#: ../src/main.c:74
 msgid "Disable image collection"
 msgstr "ಚಿತ್ರ ಸಂಗ್ರಹವನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
 
-#: ../src/main.c:65
-#, fuzzy
+#: ../src/main.c:75
 msgid "Open in slideshow mode"
-msgstr "ಜಾರುಫಲಕ ಪ್ರದರ್ಶನದಲ್ಲಿ ತೆಗೆ"
+msgstr ""
 
-#: ../src/main.c:67
+#: ../src/main.c:77
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "ಈಗಿರುವ ಒಂದು ಸನ್ನಿವೇಶವನ್ನು ಬಳಸುವ ಬದಲು ಹೊಸತೊಂದನ್ನು ಆರಂಭಿಸಿ"
 
-#: ../src/main.c:69
+#: ../src/main.c:80
+msgid "Show the application's version"
+msgstr ""
+
+#: ../src/main.c:81
 msgid "[FILE…]"
 msgstr "[FILE…]"
 
 #. I18N: The '%s' is replaced with eom's command name.
-#: ../src/main.c:195
+#: ../src/main.c:207
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "ಲಭ್ಯವಿರುವ ಎಲ್ಲಾ ಆಜ್ಞಾ ಸಾಲಿನ ಆಯ್ಕೆಗಳನ್ನು ನೋಡಲು '%s --help' ಅನ್ನು ಚಲಾಯಿಸಿ."
-
-#: ../src/main.c:233
-msgid "Eye of MATE Image Viewer"
-msgstr "ಐ ಆಫ್ MATE ಚಿತ್ರ ವೀಕ್ಷಕ"
-
-#~ msgid "Show the application's version"
-#~ msgstr "ಅನ್ವಯದ ಆವೃತ್ತಿಯನ್ನು ತೋರಿಸು"
-
-#~ msgid "<b>Details</b>"
-#~ msgstr "<b>ವಿವರಗಳು</b>"
-
-#~ msgid "<b>Height:</b>"
-#~ msgstr "<b>ಎತ್ತರ:</b>"
-
-#~ msgid "<b>Name:</b>"
-#~ msgstr "<b>ಹೆಸರು:</b>"
-
-#~ msgid "<b>Type:</b>"
-#~ msgstr "<b>ಬಗೆ:</b>"
-
-#~ msgid "<b>Width:</b>"
-#~ msgstr "<b>ಅಗಲ:</b>"
-
-#~ msgid "Save _As..."
-#~ msgstr "ಹೀಗೆ ಉಳಿಸು(_A)..."

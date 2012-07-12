@@ -1,22 +1,21 @@
-# Irish translations for eom package.
-# Copyright (C) 2000-2007 Free Software Foundation, Inc.
-# Alastair McKinstry <mckinstry@computer.org>, 2000.
-# Paul Duffy <dubhthach@frink.nuigalway.ie>, 2003.
-# Seán de Búrca <leftmostcat@gmail.com>, 2007, 2009.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: eom HEAD\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-15 01:38-0600\n"
-"PO-Revision-Date: 2009-08-15 01:59-0600\n"
-"Last-Translator: Seán de Búrca <leftmostcat@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2011-12-30 15:48+0100\n"
+"PO-Revision-Date: 2011-12-30 14:56+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=5; plural=n==1 ? 0 : (n%10==1 || n%10==2) ? 1 : (n%"
-"10>=3 && n%10<= 6) ? 2 : ((n%10>=7 && n%10<=9) || n==10) ? 3 : 4;\n"
+"Language: ga\n"
+"Plural-Forms: nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : 4)\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -58,10 +57,6 @@ msgstr "Bain an barra uirlisí roghnaithe"
 msgid "Separator"
 msgstr "Deighilteoir"
 
-#: ../cut-n-paste/totem-screensaver/totem-scrsaver.c:111
-msgid "Running in fullscreen mode"
-msgstr "Á rith i mód lánscáileán"
-
 #: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:1
 msgid "Activate fullscreen mode with double-click"
 msgstr "Gníomhachtaigh mód lánscáileáin le déchliceáil"
@@ -71,12 +66,12 @@ msgid "Fullscreen with double-click"
 msgstr "Lánscáileán le déchliceáil"
 
 #: ../plugins/reload/reload.eom-plugin.desktop.in.h:1
-#: ../plugins/reload/eom-reload-plugin.c:45
+#: ../plugins/reload/eom-reload-plugin.c:38
 msgid "Reload Image"
 msgstr "Athluchtaigh Íomhá"
 
 #: ../plugins/reload/reload.eom-plugin.desktop.in.h:2
-#: ../plugins/reload/eom-reload-plugin.c:47
+#: ../plugins/reload/eom-reload-plugin.c:38
 msgid "Reload current image"
 msgstr "Athluchtaigh íomhá reatha"
 
@@ -92,143 +87,139 @@ msgstr "Taispeánann sé seo dáta na híomhá i mbarra stádais na fuinneoige"
 msgid "Browse and rotate images"
 msgstr "Brabhsáil agus rothlaigh íomhánna"
 
-#: ../data/eom.desktop.in.in.h:2
-msgid "Image Viewer"
-msgstr "Amharcán Íomhánna"
+#: ../data/eom.desktop.in.in.h:2 ../src/main.c:66 ../src/main.c:248
+msgid "Eye of MATE Image Viewer"
+msgstr "Amharcán Íomhánna Eye of MATE"
 
 #: ../data/eom-image-properties-dialog.ui.h:1
-msgid "<b>Aperture Value:</b>"
-msgstr "<b>Luach Cró:</b>"
+msgid "Aperture Value:"
+msgstr ""
 
 #: ../data/eom-image-properties-dialog.ui.h:2
-msgid "<b>Author:</b>"
-msgstr "<b>Údar:</b>"
+msgid "Author:"
+msgstr ""
 
 #: ../data/eom-image-properties-dialog.ui.h:3
-msgid "<b>Bytes:</b>"
-msgstr "<b>Bearta:</b>"
+msgid "Bytes:"
+msgstr ""
 
 #: ../data/eom-image-properties-dialog.ui.h:4
-msgid "<b>Camera Model:</b>"
-msgstr "<b>Cineál Ceamara:</b>"
+msgid "Camera Model:"
+msgstr ""
 
 #: ../data/eom-image-properties-dialog.ui.h:5
-msgid "<b>Copyright:</b>"
-msgstr "<b>Cóipcheart:</b>"
+msgid "Copyright:"
+msgstr ""
 
 #: ../data/eom-image-properties-dialog.ui.h:6
-msgid "<b>Date/Time:</b>"
-msgstr "<b>Dáta/Am:</b>"
+msgid "Date/Time:"
+msgstr ""
 
 #: ../data/eom-image-properties-dialog.ui.h:7
-msgid "<b>Description:</b>"
-msgstr "<b>Cur Síos:</b>"
+msgid "Description:"
+msgstr ""
 
 #: ../data/eom-image-properties-dialog.ui.h:8
-msgid "<b>Details</b>"
-msgstr "<b>Sonraí</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:9
-msgid "<b>Exposure Time:</b>"
-msgstr "<b>Am Nochta:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:10
-msgid "<b>Flash:</b>"
-msgstr "<b>Splanc:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:11
-msgid "<b>Focal Length:</b>"
-msgstr "<b>Fad Fócais:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:12
-msgid "<b>Height:</b>"
-msgstr "<b>Airde:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:13
-msgid "<b>ISO Speed Rating:</b>"
-msgstr "<b>Rátáil Luais ISO:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:14
-msgid "<b>Keywords:</b>"
-msgstr "<b>Lorgfhocail:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:15
-msgid "<b>Location:</b>"
-msgstr "<b>Suíomh:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:16
-msgid "<b>Metering Mode:</b>"
-msgstr "<b>Mód Méadaraithe:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:17
-msgid "<b>Name:</b>"
-msgstr "<b>Ainm:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:18
-msgid "<b>Type:</b>"
-msgstr "<b>Cineál:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:19
-msgid "<b>Width:</b>"
-msgstr "<b>Leithead:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:20
 msgid "Details"
 msgstr "Mionsonraí"
 
-#: ../data/eom-image-properties-dialog.ui.h:21
+#: ../data/eom-image-properties-dialog.ui.h:9
+msgid "Exposure Time:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:10
+msgid "Flash:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:11
+msgid "Focal Length:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:12
 msgid "General"
 msgstr "Ginearálta"
 
-#: ../data/eom-image-properties-dialog.ui.h:22
+#: ../data/eom-image-properties-dialog.ui.h:13
+msgid "Height:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:14
+msgid "ISO Speed Rating:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:15
 msgid "Image Properties"
 msgstr "Airíonna Íomhá"
 
-#: ../data/eom-image-properties-dialog.ui.h:23
+#: ../data/eom-image-properties-dialog.ui.h:16
+msgid "Keywords:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:17
+msgid "Location:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:18
 msgid "Metadata"
 msgstr "Meiteashonraí"
 
-#: ../data/eom-image-properties-dialog.ui.h:24
+#: ../data/eom-image-properties-dialog.ui.h:19
+msgid "Metering Mode:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:20
+msgid "Name:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:21
+msgid "Type:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:22
+msgid "Width:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:23
 msgid "_Next"
 msgstr "Ar _Aghaidh"
 
-#: ../data/eom-image-properties-dialog.ui.h:25
+#: ../data/eom-image-properties-dialog.ui.h:24
 msgid "_Previous"
 msgstr "_Siar"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:1
-msgid "<b>File Name Preview</b>"
-msgstr "<b>Réamhamharc Ainm Comhaid</b>"
-
 #: ../data/eom-multiple-save-as-dialog.ui.h:2
-msgid "<b>File Path Specifications</b>"
-msgstr "<b>Sonraíochtaí Chonair Chomhad</b>"
+#, no-c-format
+msgid "<b>%f:</b> original filename"
+msgstr ""
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:3
-msgid "<b>Options</b>"
-msgstr "<b>Roghanna</b>"
+#: ../data/eom-multiple-save-as-dialog.ui.h:4
+#, no-c-format
+msgid "<b>%n:</b> counter"
+msgstr ""
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:5
-#, no-c-format
-msgid "<small><i><b>%f:</b> original filename</i></small>"
-msgstr "<small><i><b>%f:</b> bunainm comhaid</i></small>"
-
-#: ../data/eom-multiple-save-as-dialog.ui.h:7
-#, no-c-format
-msgid "<small><i><b>%n:</b> counter</i></small>"
-msgstr "<small><i><b>%n:</b> áiritheoir</i></small>"
-
-#: ../data/eom-multiple-save-as-dialog.ui.h:8
 msgid "Choose a folder"
 msgstr "Roghnaigh fillteán"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:9
+#: ../data/eom-multiple-save-as-dialog.ui.h:6
 msgid "Destination folder:"
 msgstr "Sprioc-fhillteán:"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:10
+#: ../data/eom-multiple-save-as-dialog.ui.h:7
+msgid "File Name Preview"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:8
+msgid "File Path Specifications"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:9
 msgid "Filename format:"
 msgstr "Formáid ainm comhaid:"
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:10
+msgid "Options"
+msgstr ""
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:11
 msgid "Rename from:"
@@ -251,85 +242,97 @@ msgid "To:"
 msgstr "Chuig:"
 
 #: ../data/eom-preferences-dialog.ui.h:1
-msgid "<b>Image Enhancements</b>"
-msgstr "<b>Feabhsúcháin Íomhá</b>"
-
-#: ../data/eom-preferences-dialog.ui.h:2
-msgid "<b>Image Zoom</b>"
-msgstr "<b>Súmáil Íomhá</b>"
-
-#: ../data/eom-preferences-dialog.ui.h:3
-msgid "<b>Sequence</b>"
-msgstr "<b>Seicheamh</b>"
-
-#: ../data/eom-preferences-dialog.ui.h:4
-msgid "<b>Transparent Parts</b>"
-msgstr "<b>Limistéir Trédhearcacha</b>"
-
-#: ../data/eom-preferences-dialog.ui.h:5
 msgid "As _background"
 msgstr "Mar _chúlra"
 
-#: ../data/eom-preferences-dialog.ui.h:6
+#: ../data/eom-preferences-dialog.ui.h:2
 msgid "As check _pattern"
 msgstr "Mar _phatrún táiplise"
 
-#: ../data/eom-preferences-dialog.ui.h:7
+#: ../data/eom-preferences-dialog.ui.h:3
 msgid "As custom c_olor:"
 msgstr "Mar _dhath saincheaptha:"
 
-#: ../data/eom-preferences-dialog.ui.h:8
+#: ../data/eom-preferences-dialog.ui.h:4
+msgid "As custom color:"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:5
+msgid "Background"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:6 ../data/eom.schemas.in.h:6
+msgid "Background Color"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:7
 msgid "Color for Transparent Areas"
 msgstr "Dath do Limistéir Trédhearcacha"
 
-#: ../data/eom-preferences-dialog.ui.h:9
+#: ../data/eom-preferences-dialog.ui.h:8
 msgid "E_xpand images to fit screen"
 msgstr "_Leathnaigh íomhánna chun scáileán a oiriúnú"
 
-#: ../data/eom-preferences-dialog.ui.h:10
+#: ../data/eom-preferences-dialog.ui.h:9
 msgid "Eye of MATE Preferences"
 msgstr "Sainroghanna Eye of MATE"
+
+#: ../data/eom-preferences-dialog.ui.h:10
+msgid "Image Enhancements"
+msgstr ""
 
 #: ../data/eom-preferences-dialog.ui.h:11
 msgid "Image View"
 msgstr "Amharc Íomhánna"
 
 #: ../data/eom-preferences-dialog.ui.h:12
+msgid "Image Zoom"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:13
 msgid "Plugins"
 msgstr "Breiseáin"
 
-#: ../data/eom-preferences-dialog.ui.h:13
+#: ../data/eom-preferences-dialog.ui.h:14
+msgid "Sequence"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:15
 msgid "Slideshow"
 msgstr "Taispeántas Sleamhnán"
 
-#: ../data/eom-preferences-dialog.ui.h:14
+#: ../data/eom-preferences-dialog.ui.h:16
 msgid "Smooth images when zoomed-_in"
 msgstr "Smúdáil íomhánna agus súmáilte _isteach"
 
-#: ../data/eom-preferences-dialog.ui.h:15
+#: ../data/eom-preferences-dialog.ui.h:17
 msgid "Smooth images when zoomed-_out"
 msgstr "Smúdáil íomhánna agus súmáilte _amach"
 
-#: ../data/eom-preferences-dialog.ui.h:16
+#: ../data/eom-preferences-dialog.ui.h:18
+msgid "Transparent Parts"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:19
 msgid "_Automatic orientation"
 msgstr "Treoshuíomh _uathoibríoch"
 
-#: ../data/eom-preferences-dialog.ui.h:17
+#: ../data/eom-preferences-dialog.ui.h:20
 msgid "_Loop sequence"
 msgstr "Lúb _seicheamh"
 
-#: ../data/eom-preferences-dialog.ui.h:18
+#: ../data/eom-preferences-dialog.ui.h:21
 msgid "_Switch image after:"
 msgstr "_Athraigh íomhá i ndiaidh:"
 
-#: ../data/eom-preferences-dialog.ui.h:19
+#: ../data/eom-preferences-dialog.ui.h:22
 msgid "seconds"
 msgstr "soicind"
 
 #: ../data/eom.schemas.in.h:1
 msgid ""
-"A value greater than 0 determines the seconds an image stays on screen until "
-"the next one is shown automatically. Zero disables the automatic browsing."
+"A value greater than 0 determines the seconds an image stays on screen until"
+" the next one is shown automatically. Zero disables the automatic browsing."
 msgstr ""
 
 #: ../data/eom.schemas.in.h:2
@@ -345,165 +348,223 @@ msgstr ""
 msgid "Automatic orientation"
 msgstr ""
 
-#: ../data/eom.schemas.in.h:6
+#: ../data/eom.schemas.in.h:7
 msgid "Delay in seconds until showing the next image"
 msgstr ""
 
-#: ../data/eom.schemas.in.h:7
+#: ../data/eom.schemas.in.h:8
 msgid ""
 "Determines how transparency should be indicated. Valid values are "
-"CHECK_PATTERN, COLOR and NONE. If COLOR is choosen, then the trans_color key "
-"determines the used color value."
-msgstr ""
-
-#: ../data/eom.schemas.in.h:8
-msgid "Extrapolate Image"
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
 msgstr ""
 
 #: ../data/eom.schemas.in.h:9
-msgid ""
-"If activated Eye of MATE wont ask for confirmation when moving images to "
-"the trash. It will still ask if any of the files cannot be moved to the "
-"trash and would be deleted instead."
+msgid "Extrapolate Image"
 msgstr ""
 
 #: ../data/eom.schemas.in.h:10
 msgid ""
-"If activated and no image is loaded in the active window, the filechooser "
+"If activated and no image is loaded in the active window, the file chooser "
 "will display the user's pictures folder using the XDG special user "
-"directories. If deactivated or the pictures folder has not been set up it "
+"directories. If deactivated or the pictures folder has not been set up, it "
 "will show the current working directory."
 msgstr ""
 
 #: ../data/eom.schemas.in.h:11
 msgid ""
-"If activated the detailed metadata list in the properties dialog will be "
-"moved to its own page in the dialog. This should make the dialog more usable "
-"on smaller screens, e.g. as used by netbooks. If disabled the widget will be "
-"embedded on the \"Metadata\" page."
+"If activated, Eye of MATE won't ask for confirmation when moving images to "
+"the trash. It will still ask if any of the files cannot be moved to the "
+"trash and would be deleted instead."
 msgstr ""
 
 #: ../data/eom.schemas.in.h:12
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable"
+" on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:13
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
 msgstr ""
 
-#: ../data/eom.schemas.in.h:13
+#: ../data/eom.schemas.in.h:14
+msgid ""
+"If this is active, the color set by the background-color key will be used to"
+" fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:15
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
 msgstr ""
 
-#: ../data/eom.schemas.in.h:14
+#: ../data/eom.schemas.in.h:16
 msgid ""
 "Image collection pane position. Set to 0 for bottom; 1 for left; 2 for top; "
 "3 for right."
 msgstr ""
 
-#: ../data/eom.schemas.in.h:15
+#: ../data/eom.schemas.in.h:17
 msgid "Interpolate Image"
 msgstr ""
 
-#: ../data/eom.schemas.in.h:16
+#: ../data/eom.schemas.in.h:18
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
 "plugin."
 msgstr ""
 
-#: ../data/eom.schemas.in.h:17
+#: ../data/eom.schemas.in.h:19
 msgid "Loop through the image sequence"
 msgstr ""
 
-#: ../data/eom.schemas.in.h:18
+#: ../data/eom.schemas.in.h:20
 msgid "Scroll wheel zoom"
 msgstr ""
 
-#: ../data/eom.schemas.in.h:19
-msgid "Show/hide the image collection pane scroll buttons."
+#: ../data/eom.schemas.in.h:21
+msgid "Show/Hide the image collection pane scroll buttons."
 msgstr ""
 
-#: ../data/eom.schemas.in.h:20
-msgid "Show/hide the image collection pane."
-msgstr "Taispeáin/folaigh an pána bhailiúchán íomhánna."
-
-#: ../data/eom.schemas.in.h:21
-msgid "Show/hide the window side pane."
-msgstr "Taispeáin/folaigh pána taoibh na fuinneoige."
-
 #: ../data/eom.schemas.in.h:22
-msgid "Show/hide the window statusbar."
-msgstr "Taispeáin/folaigh barra stádais na fuinneoige."
+msgid "Show/Hide the image collection pane."
+msgstr ""
 
 #: ../data/eom.schemas.in.h:23
-msgid "Show/hide the window toolbar."
-msgstr "Taispeáin/folaigh barra uirlisí na fuinneoige."
+msgid "Show/Hide the window side pane."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:24
+msgid "Show/Hide the window statusbar."
+msgstr ""
 
 #: ../data/eom.schemas.in.h:25
-#, no-c-format
-msgid ""
-"The multiplier to be applied when using the mouse scroll wheel for zooming. "
-"This value defines the zooming step used for each scroll event. For example, "
-"0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
-"a 100% zoom increment."
+msgid "Show/Hide the window toolbar."
 msgstr ""
 
 #: ../data/eom.schemas.in.h:26
-msgid "Transparency color"
-msgstr ""
-
-#: ../data/eom.schemas.in.h:27
-msgid "Transparency indicator"
+msgid ""
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
 msgstr ""
 
 #: ../data/eom.schemas.in.h:28
-msgid "Trash images without asking"
+#, no-c-format
+msgid ""
+"The multiplier to be applied when using the mouse scroll wheel for zooming. "
+"This value defines the zooming step used for each scroll event. For example,"
+" 0.05 results in a 5% zoom increment for each scroll event and 1.00 result "
+"in a 100% zoom increment."
 msgstr ""
 
 #: ../data/eom.schemas.in.h:29
-msgid ""
-"Whether or not the sequence of images should be shown in an endless loop."
+msgid "Transparency color"
 msgstr ""
 
 #: ../data/eom.schemas.in.h:30
-msgid ""
-"Whether the filechooser should show the user's pictures folder if no images "
-"are loaded."
+msgid "Transparency indicator"
 msgstr ""
 
 #: ../data/eom.schemas.in.h:31
-msgid "Whether the image collection pane should be resizable or not."
+msgid "Trash images without asking"
 msgstr ""
 
 #: ../data/eom.schemas.in.h:32
-msgid ""
-"Whether the image should be extrapolated on zoom-in or not. This leads to "
-"blurry quality and is somewhat slower than non extrapolated images."
+msgid "Use a custom background color"
 msgstr ""
 
 #: ../data/eom.schemas.in.h:33
 msgid ""
-"Whether the image should be interpolated on zoom-out or not. This leads to "
-"better quality but is somewhat slower than non interpolated images."
+"Whether the file chooser should show the user's pictures folder if no images"
+" are loaded."
 msgstr ""
 
 #: ../data/eom.schemas.in.h:34
-msgid ""
-"Whether the image should be rotated automatically based on EXIF orientation."
+msgid "Whether the image collection pane should be resizable."
 msgstr ""
 
 #: ../data/eom.schemas.in.h:35
 msgid ""
-"Whether the metadata list in the properties dialog should have its own page."
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
 msgstr ""
 
 #: ../data/eom.schemas.in.h:36
-msgid "Whether the scroll wheel should be used for zooming or not."
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
 msgstr ""
 
 #: ../data/eom.schemas.in.h:37
+msgid ""
+"Whether the image should be rotated automatically based on EXIF orientation."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:38
+msgid ""
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:39
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:40
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:41
 msgid "Zoom multiplier"
+msgstr ""
+
+#: ../src/eom-application.c:123
+msgid "Running in fullscreen mode"
+msgstr "Á rith i mód lánscáileán"
+
+#: ../src/eom-close-confirmation-dialog.c:159
+msgid "Close _without Saving"
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:193
+msgid "Question"
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:374
+msgid "If you don't save, your changes will be lost."
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:409
+#, c-format
+msgid "Save changes to image \"%s\" before closing?"
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:604
+#, c-format
+msgid "There is %d image with unsaved changes. Save changes before closing?"
+msgid_plural ""
+"There are %d images with unsaved changes. Save changes before closing?"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+
+#: ../src/eom-close-confirmation-dialog.c:621
+msgid "S_elect the images you want to save:"
+msgstr ""
+
+#. Secondary label
+#: ../src/eom-close-confirmation-dialog.c:639
+msgid "If you don't save, all your changes will be lost."
 msgstr ""
 
 #: ../src/eom-file-chooser.c:128
@@ -528,7 +589,8 @@ msgstr "Gach Comhad"
 msgid "All Images"
 msgstr "Gach Íomhá"
 
-#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
+#. Filter name: First description then file extension, eg. "The PNG-Format
+#. (*.png)".
 #: ../src/eom-file-chooser.c:192
 #, c-format
 msgid "%s (*.%s)"
@@ -536,8 +598,7 @@ msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
 #: ../src/eom-file-chooser.c:288 ../src/eom-properties-dialog.c:137
-#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:379
-#: ../src/eom-window.c:768
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:380
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "phicteilín"
@@ -547,8 +608,8 @@ msgstr[3] "bpicteilín"
 msgstr[4] "picteilín"
 
 #: ../src/eom-file-chooser.c:437
-msgid "Load Image"
-msgstr "Luchtaigh Íomhá"
+msgid "Open Image"
+msgstr ""
 
 #: ../src/eom-file-chooser.c:445
 msgid "Save Image"
@@ -558,42 +619,42 @@ msgstr "Sábháil Íomhá"
 msgid "Open Folder"
 msgstr "Oscail Fillteán"
 
-#: ../src/eom-image.c:546
+#: ../src/eom-image.c:598
 #, c-format
 msgid "Transformation on unloaded image."
 msgstr ""
 
-#: ../src/eom-image.c:574
+#: ../src/eom-image.c:626
 #, c-format
 msgid "Transformation failed."
 msgstr "Theip ar thrasfhoirmiú."
 
-#: ../src/eom-image.c:971
+#: ../src/eom-image.c:1053
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr ""
 
-#: ../src/eom-image.c:1086
+#: ../src/eom-image.c:1180
 #, c-format
 msgid "Image loading failed."
 msgstr "Theip ar luchtú íomhá."
 
-#: ../src/eom-image.c:1488 ../src/eom-image.c:1590
+#: ../src/eom-image.c:1585 ../src/eom-image.c:1687
 #, c-format
 msgid "No image loaded."
 msgstr "Níor luchtaíodh aon íomhá."
 
-#: ../src/eom-image.c:1498 ../src/eom-image.c:1602
+#: ../src/eom-image.c:1595 ../src/eom-image.c:1699
 #, c-format
 msgid "Temporary file creation failed."
 msgstr ""
 
-#: ../src/eom-image-jpeg.c:361
+#: ../src/eom-image-jpeg.c:364
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr ""
 
-#: ../src/eom-image-jpeg.c:380
+#: ../src/eom-image-jpeg.c:383
 #, c-format
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr ""
@@ -647,30 +708,31 @@ msgstr "Luach"
 msgid "%a, %d %B %Y  %X"
 msgstr ""
 
-#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
+#. A strftime-formatted string, to display the date the image was taken, for
+#. the case we don't have the time.
 #: ../src/eom-exif-util.c:147
 msgid "%a, %d %B %Y"
 msgstr ""
 
-#: ../src/eom-error-message-area.c:110
+#: ../src/eom-error-message-area.c:107
 msgid "_Retry"
 msgstr ""
 
-#: ../src/eom-error-message-area.c:140
+#: ../src/eom-error-message-area.c:141
 #, c-format
 msgid "Could not load image '%s'."
 msgstr "Níorbh fhéidir íomhá '%s' a luchtú."
 
-#: ../src/eom-error-message-area.c:174
+#: ../src/eom-error-message-area.c:175
 #, c-format
 msgid "No images found in '%s'."
 msgstr "Níor aimsíodh aon íomhá i '%s'."
 
-#: ../src/eom-error-message-area.c:181
+#: ../src/eom-error-message-area.c:182
 msgid "The given locations contain no images."
 msgstr ""
 
-#: ../src/eom-print.c:197
+#: ../src/eom-print.c:219
 msgid "Image Settings"
 msgstr "Socruithe Íomhá"
 
@@ -679,7 +741,7 @@ msgid "Image"
 msgstr "Íomhá"
 
 #: ../src/eom-print-image-setup.c:835
-msgid "The image whose printing properties will be setup"
+msgid "The image whose printing properties will be set up"
 msgstr ""
 
 #: ../src/eom-print-image-setup.c:841
@@ -762,13 +824,13 @@ msgstr "Orlaí"
 msgid "Preview"
 msgstr "Reámhamharc"
 
-#: ../src/eom-properties-dialog.c:154 ../src/eom-properties-dialog.c:155
+#: ../src/eom-properties-dialog.c:154
 msgid "Unknown"
 msgstr "Anaithnid"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../src/eom-properties-dialog.c:233
+#: ../src/eom-properties-dialog.c:232
 #, c-format
 msgid "%.1f (lens)"
 msgstr "%.1f (lionsa)"
@@ -776,7 +838,7 @@ msgstr "%.1f (lionsa)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../src/eom-properties-dialog.c:244
+#: ../src/eom-properties-dialog.c:243
 #, c-format
 msgid "%.1f (35mm film)"
 msgstr "%.1f (scannán 35mm)"
@@ -785,7 +847,22 @@ msgstr "%.1f (scannán 35mm)"
 msgid "as is"
 msgstr "mar atá"
 
-#: ../src/eom-thumb-view.c:407
+#. Translators: This string is displayed in the statusbar.
+#. * The first token is the image number, the second is total image
+#. * count.
+#. *
+#. * Translate to "%Id" if you want to use localized digits, or
+#. * translate to "%d" otherwise.
+#. *
+#. * Note that translating this doesn't guarantee that you get localized
+#. * digits. That needs support from your system and locale definition
+#. * too.
+#: ../src/eom-statusbar.c:125
+#, c-format
+msgid "%d / %d"
+msgstr ""
+
+#: ../src/eom-thumb-view.c:408
 msgid "Taken on"
 msgstr "Tógtha ar"
 
@@ -802,12 +879,41 @@ msgstr "Níorbh fhéidir cabhair a thaispeáint le Eye of MATE"
 msgid " (invalid Unicode)"
 msgstr " (Unicode neamhbhailí)"
 
-#: ../src/eom-window.c:1179
+#. Translators: This is the string displayed in the statusbar
+#. * The tokens are from left to right:
+#. * - image width
+#. * - image height
+#. * - image size in bytes
+#. * - zoom in percent
+#: ../src/eom-window.c:832
 #, c-format
-msgid "Open with \"%s\""
-msgstr "Oscail le \"%s\""
+msgid "%i × %i pixel  %s    %i%%"
+msgid_plural "%i × %i pixels  %s    %i%%"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
-#: ../src/eom-window.c:1180
+#: ../src/eom-window.c:1138
+msgid "_Reload"
+msgstr ""
+
+#: ../src/eom-window.c:1140 ../src/eom-window.c:3000
+msgctxt "MessageArea"
+msgid "Hi_de"
+msgstr ""
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eom-window.c:1150
+#, c-format
+msgid ""
+"The image \"%s\" has been modified by an external application.\n"
+"Would you like to reload it?"
+msgstr ""
+
+#: ../src/eom-window.c:1305
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Úsáid \"%s\" chun an íomhá roghnaithe a oscailt"
@@ -817,100 +923,100 @@ msgstr "Úsáid \"%s\" chun an íomhá roghnaithe a oscailt"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1295
+#: ../src/eom-window.c:1455
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Íomhá \"%s\" á shábháil (%u/%u)"
 
-#: ../src/eom-window.c:1634
+#: ../src/eom-window.c:1808
 #, c-format
-msgid "Loading image \"%s\""
-msgstr "Íomhá \"%s\" á luchtú"
+msgid "Opening image \"%s\""
+msgstr ""
 
-#: ../src/eom-window.c:2330
+#: ../src/eom-window.c:2498
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
-msgstr ""
-"Earráid agus comhad á phriontáil:\n"
-"%s"
+msgstr "Earráid agus comhad á phriontáil:\n%s"
 
-#: ../src/eom-window.c:2472
+#: ../src/eom-window.c:2751
 msgid "Toolbar Editor"
 msgstr "Eagarthóir Bharra Uirlisí"
 
-#: ../src/eom-window.c:2475
+#: ../src/eom-window.c:2754
 msgid "_Reset to Default"
 msgstr "_Athshocraigh go Réamhshocraithe"
 
-#: ../src/eom-window.c:2561
+#: ../src/eom-window.c:2844
 msgid "translator-credits"
-msgstr ""
-"Alastair McKinstry <mckinstry@computer.org>\n"
-"Paul Duffy <dubhthach@frink.nuigalway.ie>\n"
-"Seán de Búrca <leftmostcat@gmail.com>"
+msgstr "Alastair McKinstry <mckinstry@computer.org>\nPaul Duffy <dubhthach@frink.nuigalway.ie>\nSeán de Búrca <leftmostcat@gmail.com>"
 
-#: ../src/eom-window.c:2564
+#: ../src/eom-window.c:2847
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version.\n"
-msgstr ""
-"Is bogearraí saor é an clár seo; is féidir leat é a athdháileadh nó a athrú "
-"faoi théarmaí an GNU General Public License mar foilsíodh é ag an Free "
-"Software Foundation; leagan 2 an License, nó (de do rogha) aon leagan níos "
-"déanaí.\n"
+msgstr "Is bogearraí saor é an clár seo; is féidir leat é a athdháileadh nó a athrú faoi théarmaí an GNU General Public License mar foilsíodh é ag an Free Software Foundation; leagan 2 an License, nó (de do rogha) aon leagan níos déanaí.\n"
 
-#: ../src/eom-window.c:2568
+#: ../src/eom-window.c:2851
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details.\n"
-msgstr ""
-"Dáileadh an clár seo le súil go mbeidh sé úsáideach, ach GAN AON BHARÁNTA; "
-"gan an baránta intuigthe INDÍOLTÓIREACHTA nó OIRIÚNACHTA D'FHEIDHM ÁIRITHE "
-"fiú. Féach an GNU General Public License le haghaidh tuilleadh mionsonraí.\n"
+msgstr "Dáileadh an clár seo le súil go mbeidh sé úsáideach, ach GAN AON BHARÁNTA; gan an baránta intuigthe INDÍOLTÓIREACHTA nó OIRIÚNACHTA D'FHEIDHM ÁIRITHE fiú. Féach an GNU General Public License le haghaidh tuilleadh mionsonraí.\n"
 
-#: ../src/eom-window.c:2572
+#: ../src/eom-window.c:2855
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program; if not, write to the Free Software Foundation, Inc., 59 Temple "
-"Place - Suite 330, Boston, MA 02111-1307, USA."
-msgstr ""
-"Ba chóir go bhfuair tú cóip an GNU General Public License in éineacht leis "
-"an gclár seo; mura bhfuair tú é, scríobh chuig an Free Software Foundation, "
-"Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301 USA."
+"You should have received a copy of the GNU General Public License along with"
+" this program; if not, write to the Free Software Foundation, Inc., 59 "
+"Temple Place - Suite 330, Boston, MA 02111-1307, USA."
+msgstr "Ba chóir go bhfuair tú cóip an GNU General Public License in éineacht leis an gclár seo; mura bhfuair tú é, scríobh chuig an Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301 USA."
 
-#: ../src/eom-window.c:2585
+#: ../src/eom-window.c:2868
 msgid "Eye of MATE"
 msgstr "Eye of MATE"
 
-#: ../src/eom-window.c:2588
+#: ../src/eom-window.c:2872
 msgid "The MATE image viewer."
 msgstr "An t-amharcán íomhánna MATE."
 
-#: ../src/eom-window.c:3029
-msgid "Saving image locally..."
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from eom's menubar
+#: ../src/eom-window.c:2998
+msgid "_Open Background Preferences"
 msgstr ""
 
-#: ../src/eom-window.c:3111
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eom-window.c:3014
+#, c-format
+msgid ""
+"The image \"%s\" has been set as Desktop Background.\n"
+"Would you like to modify its appearance?"
+msgstr ""
+
+#: ../src/eom-window.c:3410
+msgid "Saving image locally…"
+msgstr ""
+
+#: ../src/eom-window.c:3492
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
 msgstr ""
 
-#: ../src/eom-window.c:3114
+#: ../src/eom-window.c:3495
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr ""
 
-#: ../src/eom-window.c:3119
+#: ../src/eom-window.c:3500
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -920,358 +1026,369 @@ msgid_plural ""
 "the %d selected images to the trash?"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
-#: ../src/eom-window.c:3124
+#: ../src/eom-window.c:3505
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
 msgstr ""
 
-#: ../src/eom-window.c:3141 ../src/eom-window.c:3568 ../src/eom-window.c:3592
+#: ../src/eom-window.c:3522 ../src/eom-window.c:3980 ../src/eom-window.c:4004
 msgid "Move to _Trash"
 msgstr "Bog go _Bruscar"
 
-#: ../src/eom-window.c:3143
+#: ../src/eom-window.c:3524
 msgid "_Do not ask again during this session"
 msgstr ""
 
-#: ../src/eom-window.c:3188 ../src/eom-window.c:3202
+#: ../src/eom-window.c:3569 ../src/eom-window.c:3583
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Níorbh fhéidir bruscar a rochtain."
 
-#: ../src/eom-window.c:3210
+#: ../src/eom-window.c:3591
 #, c-format
 msgid "Couldn't delete file"
 msgstr ""
 
-#: ../src/eom-window.c:3281
+#: ../src/eom-window.c:3662
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Earráid agus íomhá %s á scriosadh"
 
-#: ../src/eom-window.c:3488
-msgid "_File"
-msgstr "_Comhad"
-
-#: ../src/eom-window.c:3489
-msgid "_Edit"
-msgstr "_Eagar"
-
-#: ../src/eom-window.c:3490
-msgid "_View"
-msgstr "_Amharc"
-
-#: ../src/eom-window.c:3491
+#: ../src/eom-window.c:3904
 msgid "_Image"
 msgstr "Í_omhá"
 
-#: ../src/eom-window.c:3492
+#: ../src/eom-window.c:3905
+msgid "_Edit"
+msgstr "_Eagar"
+
+#: ../src/eom-window.c:3906
+msgid "_View"
+msgstr "_Amharc"
+
+#: ../src/eom-window.c:3907
 msgid "_Go"
 msgstr "_Téigh"
 
-#: ../src/eom-window.c:3493
+#: ../src/eom-window.c:3908
 msgid "_Tools"
 msgstr "_Uirlisí"
 
-#: ../src/eom-window.c:3494
+#: ../src/eom-window.c:3909
 msgid "_Help"
 msgstr "Cab_hair"
 
-#: ../src/eom-window.c:3496
-msgid "_Open..."
-msgstr "_Oscail..."
+#: ../src/eom-window.c:3911
+msgid "_Open…"
+msgstr ""
 
-#: ../src/eom-window.c:3497
+#: ../src/eom-window.c:3912
 msgid "Open a file"
 msgstr "Oscail comhad"
 
-#: ../src/eom-window.c:3499
+#: ../src/eom-window.c:3914
 msgid "_Close"
 msgstr "_Dún"
 
-#: ../src/eom-window.c:3500
+#: ../src/eom-window.c:3915
 msgid "Close window"
 msgstr "Dún fuinneom"
 
-#: ../src/eom-window.c:3502
+#: ../src/eom-window.c:3917
 msgid "T_oolbar"
 msgstr "Barra _Uirlisí"
 
-#: ../src/eom-window.c:3503
+#: ../src/eom-window.c:3918
 msgid "Edit the application toolbar"
 msgstr "Cuir barra uirlisí an fheidhmchláir in eagar"
 
-#: ../src/eom-window.c:3505
+#: ../src/eom-window.c:3920
 msgid "Prefere_nces"
 msgstr "_Sainroghanna"
 
-#: ../src/eom-window.c:3506
+#: ../src/eom-window.c:3921
 msgid "Preferences for Eye of MATE"
 msgstr "Sainroghanna le Eye of MATE"
 
-#: ../src/eom-window.c:3508
+#: ../src/eom-window.c:3923
 msgid "_Contents"
 msgstr "_Inneachar"
 
-#: ../src/eom-window.c:3509
+#: ../src/eom-window.c:3924
 msgid "Help on this application"
 msgstr "Cabhair leis an feidhmchlár seo"
 
-#: ../src/eom-window.c:3511 ../src/eom-plugin-manager.c:505
+#: ../src/eom-window.c:3926 ../src/eom-plugin-manager.c:505
 msgid "_About"
 msgstr "_Maidir Leis Seo"
 
-#: ../src/eom-window.c:3512
+#: ../src/eom-window.c:3927
 msgid "About this application"
 msgstr "Maidir leis an feidhmchlár seo"
 
-#: ../src/eom-window.c:3517
+#: ../src/eom-window.c:3932
 msgid "_Toolbar"
 msgstr "_Barra Uirlisí"
 
-#: ../src/eom-window.c:3518
+#: ../src/eom-window.c:3933
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr ""
 
-#: ../src/eom-window.c:3520
+#: ../src/eom-window.c:3935
 msgid "_Statusbar"
 msgstr "Barra _Stádais"
 
-#: ../src/eom-window.c:3521
+#: ../src/eom-window.c:3936
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr ""
 
-#: ../src/eom-window.c:3523
+#: ../src/eom-window.c:3938
 msgid "_Image Collection"
 msgstr "Bailiúchán Í_omhánna"
 
-#: ../src/eom-window.c:3524
+#: ../src/eom-window.c:3939
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr ""
 
-#: ../src/eom-window.c:3526
+#: ../src/eom-window.c:3941
 msgid "Side _Pane"
 msgstr "_Pána Taoibh"
 
-#: ../src/eom-window.c:3527
+#: ../src/eom-window.c:3942
 msgid "Changes the visibility of the side pane in the current window"
 msgstr ""
 
-#: ../src/eom-window.c:3532
+#: ../src/eom-window.c:3947
 msgid "_Save"
 msgstr "_Sábháil"
 
-#: ../src/eom-window.c:3533
+#: ../src/eom-window.c:3948
 msgid "Save changes in currently selected images"
 msgstr "Sábháil athruithe in íomhánna atá roghnaithe faoi láthair"
 
-#: ../src/eom-window.c:3535
+#: ../src/eom-window.c:3950
 msgid "Open _with"
 msgstr "Oscail _le"
 
-#: ../src/eom-window.c:3536
+#: ../src/eom-window.c:3951
 msgid "Open the selected image with a different application"
 msgstr ""
 
-#: ../src/eom-window.c:3538
-msgid "Save _As..."
-msgstr "Sábháil _Mar..."
+#: ../src/eom-window.c:3953
+msgid "Save _As…"
+msgstr ""
 
-#: ../src/eom-window.c:3539
+#: ../src/eom-window.c:3954
 msgid "Save the selected images with a different name"
 msgstr ""
 
-#: ../src/eom-window.c:3542
-msgid "Setup the page properties for printing"
+#: ../src/eom-window.c:3956
+msgid "_Print…"
 msgstr ""
 
-#: ../src/eom-window.c:3544
-msgid "_Print..."
-msgstr "_Priontáil..."
-
-#: ../src/eom-window.c:3545
+#: ../src/eom-window.c:3957
 msgid "Print the selected image"
 msgstr "Priontáil an íomhá roghnaithe"
 
-#: ../src/eom-window.c:3547
+#: ../src/eom-window.c:3959
 msgid "Prope_rties"
 msgstr "_Airíonna"
 
-#: ../src/eom-window.c:3548
+#: ../src/eom-window.c:3960
 msgid "Show the properties and metadata of the selected image"
 msgstr ""
 
-#: ../src/eom-window.c:3550
+#: ../src/eom-window.c:3962
 msgid "_Undo"
 msgstr "Cea_laigh"
 
-#: ../src/eom-window.c:3551
+#: ../src/eom-window.c:3963
 msgid "Undo the last change in the image"
 msgstr ""
 
-#: ../src/eom-window.c:3553
+#: ../src/eom-window.c:3965
 msgid "Flip _Horizontal"
 msgstr "Smeach go _Cothrománach"
 
-#: ../src/eom-window.c:3554
+#: ../src/eom-window.c:3966
 msgid "Mirror the image horizontally"
 msgstr ""
 
-#: ../src/eom-window.c:3556
+#: ../src/eom-window.c:3968
 msgid "Flip _Vertical"
 msgstr "Smeach go h_Ingearach"
 
-#: ../src/eom-window.c:3557
+#: ../src/eom-window.c:3969
 msgid "Mirror the image vertically"
 msgstr ""
 
-#: ../src/eom-window.c:3559
+#: ../src/eom-window.c:3971
 msgid "_Rotate Clockwise"
 msgstr "_Rothlaigh go Deisealach"
 
-#: ../src/eom-window.c:3560
+#: ../src/eom-window.c:3972
 msgid "Rotate the image 90 degrees to the right"
 msgstr ""
 
-#: ../src/eom-window.c:3562
+#: ../src/eom-window.c:3974
 msgid "Rotate Counterc_lockwise"
 msgstr "Rothlaigh go _Tuathalach"
 
-#: ../src/eom-window.c:3563
+#: ../src/eom-window.c:3975
 msgid "Rotate the image 90 degrees to the left"
 msgstr ""
 
-#: ../src/eom-window.c:3565
+#: ../src/eom-window.c:3977
 msgid "Set as _Desktop Background"
 msgstr "Socraigh mar Chúlra na _Deisce"
 
-#: ../src/eom-window.c:3566
+#: ../src/eom-window.c:3978
 msgid "Set the selected image as the desktop background"
 msgstr "Socraigh an íomhá roghnaithe mar chúlra na deisce"
 
-#: ../src/eom-window.c:3569
+#: ../src/eom-window.c:3981
 msgid "Move the selected image to the trash folder"
 msgstr "Bog an íomhá roghnaithe go dtí an fillteán bruscair"
 
-#: ../src/eom-window.c:3571 ../src/eom-window.c:3583 ../src/eom-window.c:3586
+#: ../src/eom-window.c:3983 ../src/eom-window.c:3995 ../src/eom-window.c:3998
 msgid "_Zoom In"
 msgstr "Súmáil _Isteach"
 
-#: ../src/eom-window.c:3572 ../src/eom-window.c:3584
+#: ../src/eom-window.c:3984 ../src/eom-window.c:3996
 msgid "Enlarge the image"
 msgstr ""
 
-#: ../src/eom-window.c:3574 ../src/eom-window.c:3589
+#: ../src/eom-window.c:3986 ../src/eom-window.c:4001
 msgid "Zoom _Out"
 msgstr "Súmáil _Amach"
 
-#: ../src/eom-window.c:3575 ../src/eom-window.c:3587 ../src/eom-window.c:3590
+#: ../src/eom-window.c:3987 ../src/eom-window.c:3999 ../src/eom-window.c:4002
 msgid "Shrink the image"
 msgstr ""
 
-#: ../src/eom-window.c:3577
+#: ../src/eom-window.c:3989
 msgid "_Normal Size"
 msgstr "_Gnáthmhéid"
 
-#: ../src/eom-window.c:3578
+#: ../src/eom-window.c:3990
 msgid "Show the image at its normal size"
 msgstr ""
 
-#: ../src/eom-window.c:3580
+#: ../src/eom-window.c:3992
 msgid "Best _Fit"
 msgstr "S_cothoiriúint"
 
-#: ../src/eom-window.c:3581
+#: ../src/eom-window.c:3993
 msgid "Fit the image to the window"
 msgstr ""
 
-#: ../src/eom-window.c:3598
-msgid "_Full Screen"
-msgstr "_Lánscáileán"
+#: ../src/eom-window.c:4010
+msgid "_Fullscreen"
+msgstr ""
 
-#: ../src/eom-window.c:3599
+#: ../src/eom-window.c:4011
 msgid "Show the current image in fullscreen mode"
 msgstr "Taispeáin an íomhá reatha i mód lánscáileáin"
 
-#: ../src/eom-window.c:3604 ../src/eom-window.c:3616
+#: ../src/eom-window.c:4013
+msgid "Pause Slideshow"
+msgstr ""
+
+#: ../src/eom-window.c:4014
+msgid "Pause or resume the slideshow"
+msgstr ""
+
+#: ../src/eom-window.c:4019 ../src/eom-window.c:4034
 msgid "_Previous Image"
 msgstr "An Íomhá _Roimhe Seo"
 
-#: ../src/eom-window.c:3605
+#: ../src/eom-window.c:4020
 msgid "Go to the previous image of the collection"
 msgstr ""
 
-#: ../src/eom-window.c:3607
+#: ../src/eom-window.c:4022
 msgid "_Next Image"
 msgstr "An Chéad Íomhá _Eile"
 
-#: ../src/eom-window.c:3608
+#: ../src/eom-window.c:4023
 msgid "Go to the next image of the collection"
 msgstr ""
 
-#: ../src/eom-window.c:3610 ../src/eom-window.c:3619
+#: ../src/eom-window.c:4025 ../src/eom-window.c:4037
 msgid "_First Image"
 msgstr "An _Chéad Íomhá"
 
-#: ../src/eom-window.c:3611
+#: ../src/eom-window.c:4026
 msgid "Go to the first image of the collection"
 msgstr "Téigh go dtí chéad íomhá an bhailiúcháin"
 
-#: ../src/eom-window.c:3613 ../src/eom-window.c:3622
+#: ../src/eom-window.c:4028 ../src/eom-window.c:4040
 msgid "_Last Image"
 msgstr "An Íomhá _Dheiridh"
 
-#: ../src/eom-window.c:3614
+#: ../src/eom-window.c:4029
 msgid "Go to the last image of the collection"
 msgstr "Téigh go dtí íomhá dheiridh an bhailiúcháin"
 
-#: ../src/eom-window.c:3628
+#: ../src/eom-window.c:4031
+msgid "_Random Image"
+msgstr ""
+
+#: ../src/eom-window.c:4032
+msgid "Go to a random image of the collection"
+msgstr ""
+
+#: ../src/eom-window.c:4046
 msgid "_Slideshow"
 msgstr "_Taispeántas Sleamhnán"
 
-#: ../src/eom-window.c:3629
+#: ../src/eom-window.c:4047
 msgid "Start a slideshow view of the images"
 msgstr ""
 
-#: ../src/eom-window.c:3695
+#: ../src/eom-window.c:4113
 msgid "Previous"
 msgstr "Siar"
 
-#: ../src/eom-window.c:3699
+#: ../src/eom-window.c:4117
 msgid "Next"
 msgstr "Ar Aghaidh"
 
-#: ../src/eom-window.c:3703
+#: ../src/eom-window.c:4121
 msgid "Right"
 msgstr "Go Deisealach"
 
-#: ../src/eom-window.c:3706
+#: ../src/eom-window.c:4124
 msgid "Left"
 msgstr "Go Tuathalach"
 
-#: ../src/eom-window.c:3709
+#: ../src/eom-window.c:4127
 msgid "In"
 msgstr "Isteach"
 
-#: ../src/eom-window.c:3712
+#: ../src/eom-window.c:4130
 msgid "Out"
 msgstr "Amach"
 
-#: ../src/eom-window.c:3715
+#: ../src/eom-window.c:4133
 msgid "Normal"
 msgstr "Gnáthmhéid"
 
-#: ../src/eom-window.c:3718
+#: ../src/eom-window.c:4136
 msgid "Fit"
 msgstr "Oiriúnaigh"
 
-#: ../src/eom-window.c:3721
+#: ../src/eom-window.c:4139
 msgid "Collection"
 msgstr "Bailiúchán"
 
-#: ../src/eom-window.c:3724
+#: ../src/eom-window.c:4142
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Bog go Bruscar"
@@ -1300,59 +1417,44 @@ msgstr "Gníomhach_taigh Gach Rud"
 msgid "_Deactivate All"
 msgstr "_Díghníomhachtaigh Gach Rud"
 
-#: ../src/eom-plugin-manager.c:831
+#: ../src/eom-plugin-manager.c:834
 msgid "Active _Plugins:"
 msgstr "_Breiseáin Gníomhacha:"
 
-#: ../src/eom-plugin-manager.c:860
+#: ../src/eom-plugin-manager.c:863
 msgid "_About Plugin"
 msgstr "_Maidir le Breiseán"
 
-#: ../src/eom-plugin-manager.c:867
+#: ../src/eom-plugin-manager.c:870
 msgid "C_onfigure Plugin"
 msgstr "C_umraigh Breiseán"
 
-#: ../src/main.c:63
+#: ../src/main.c:73
 msgid "Open in fullscreen mode"
 msgstr "Oscail i mód lánscáileán"
 
-#: ../src/main.c:64
+#: ../src/main.c:74
 msgid "Disable image collection"
 msgstr "Díchumasaigh bailiúchán íomhánna"
 
-#: ../src/main.c:65
-msgid "Open in slide show mode"
-msgstr "Oscail i mód thaispeántas sleamhnán"
+#: ../src/main.c:75
+msgid "Open in slideshow mode"
+msgstr ""
 
-#: ../src/main.c:67
+#: ../src/main.c:77
 msgid "Start a new instance instead of reusing an existing one"
 msgstr ""
 
-#: ../src/main.c:69
-msgid "[FILE...]"
-msgstr "[COMHAD...]"
+#: ../src/main.c:80
+msgid "Show the application's version"
+msgstr ""
+
+#: ../src/main.c:81
+msgid "[FILE…]"
+msgstr ""
 
 #. I18N: The '%s' is replaced with eom's command name.
-#: ../src/main.c:195
+#: ../src/main.c:207
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
-
-#: ../src/main.c:233
-msgid "Eye of MATE Image Viewer"
-msgstr "Amharcán Íomhánna Eye of MATE"
-
-#~ msgid "File exists"
-#~ msgstr "Tá comhad ann"
-
-#~ msgid "Move to Trash"
-#~ msgstr "Bog go Bruscar"
-
-#~ msgid "Page Set_up..."
-#~ msgstr "Soc_rú Leathanaigh"
-
-#~ msgid "Set As _Wallpaper"
-#~ msgstr "Socraigh Mar _Pháipéar Balla"
-
-#~ msgid "<b>Location:</b>\t"
-#~ msgstr "<b>Suíomh:</b>\t"

@@ -1,734 +1,1448 @@
-# Northern Sotho translation of eom.
-# Copyright (C) 2004 Zuza Software Foundation (Translate.org.za)
-# This file is distributed under the same license as the eom package.
-#
-# Zuza Software Foundation <info@translate.org.za>, 2004
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: eom HEAD\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-11-29 23:32+0200\n"
-"PO-Revision-Date: 2004-11-27 17:02+0200\n"
-"Last-Translator: Zuza Software Foundation <info@translate.org.za>\n"
-"Language-Team: Northern Sotho <translate-discuss-nso@lists.sourceforge.net>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2011-12-30 15:48+0100\n"
+"PO-Revision-Date: 2011-12-30 14:55+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n>1;\n"
+"Language: nso\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 
-#: eom.desktop.in.in.h:1
-msgid "Image Viewer"
-msgstr "Selebeledi sa Seswantšho"
+#. Translaters: This string is for a toggle to display a toolbar.
+#. * The name of the toolbar is automatically computed from the widgets
+#. * on the toolbar, and is placed at the %s. Note the _ before the %s
+#. * which is used to add mnemonics. We know that this is likely to
+#. * produce duplicates, but don't worry about it. If your language
+#. * normally has a mnemonic at the start, please use the _. If not,
+#. * please remove.
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:934
+#, c-format
+msgid "Show “_%s”"
+msgstr ""
 
-#: eom.desktop.in.in.h:2
-msgid "View many different types of images"
-msgstr "Lebelela mehuta e mentši e fapa-fapanego ya diswantšho"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1397
+msgid "_Move on Toolbar"
+msgstr ""
 
-#: eom.glade.h:1
-msgid "    "
-msgstr "    "
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1398
+msgid "Move the selected item on the toolbar"
+msgstr ""
 
-#: eom.glade.h:2
-msgid "*"
-msgstr "*"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1399
+msgid "_Remove from Toolbar"
+msgstr ""
 
-#: eom.glade.h:3
-msgid "."
-msgstr "."
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1400
+msgid "Remove the selected item from the toolbar"
+msgstr ""
 
-#: eom.glade.h:4
-msgid "<b>File Name Preview</b>"
-msgstr "<b>Ponelopele ya Leina la Faele</b>"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1401
+msgid "_Delete Toolbar"
+msgstr ""
 
-#: eom.glade.h:5
-msgid "<b>File Path Specifications</b>"
-msgstr "<b>Ditaetšo tša Tsejana ya Faele</b>"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1402
+msgid "Remove the selected toolbar"
+msgstr ""
 
-#: eom.glade.h:6
-msgid "<b>Image Interpolation</b>"
-msgstr "<b>Go Lokišwa ga Seswantšho</b>"
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:485
+msgid "Separator"
+msgstr ""
 
-#: eom.glade.h:7
-msgid "<b>Image Zoom</b>"
-msgstr "<b>Go Godiša Seswanšho</b>"
+#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:1
+msgid "Activate fullscreen mode with double-click"
+msgstr ""
 
-#: eom.glade.h:8
-msgid "<b>Options</b>"
-msgstr "<b>Dikgetho</b>"
+#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:2
+msgid "Fullscreen with double-click"
+msgstr ""
 
-#: eom.glade.h:9
-msgid "<b>Sequence</b>"
-msgstr "<b>Tatelano</b>"
+#: ../plugins/reload/reload.eom-plugin.desktop.in.h:1
+#: ../plugins/reload/eom-reload-plugin.c:38
+msgid "Reload Image"
+msgstr ""
 
-#: eom.glade.h:10
-msgid "<b>Transparent Parts</b>"
-msgstr "<b>Dikarolo tše di Bonatšago</b>"
+#: ../plugins/reload/reload.eom-plugin.desktop.in.h:2
+#: ../plugins/reload/eom-reload-plugin.c:38
+msgid "Reload current image"
+msgstr ""
 
-#: eom.glade.h:12
+#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:1
+msgid "Date in statusbar"
+msgstr ""
+
+#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:2
+msgid "Shows the image date in the window statusbar"
+msgstr ""
+
+#: ../data/eom.desktop.in.in.h:1
+msgid "Browse and rotate images"
+msgstr ""
+
+#: ../data/eom.desktop.in.in.h:2 ../src/main.c:66 ../src/main.c:248
+msgid "Eye of MATE Image Viewer"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:1
+msgid "Aperture Value:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:2
+msgid "Author:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:3
+msgid "Bytes:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:4
+msgid "Camera Model:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:5
+msgid "Copyright:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:6
+msgid "Date/Time:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:7
+msgid "Description:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:8
+msgid "Details"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:9
+msgid "Exposure Time:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:10
+msgid "Flash:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:11
+msgid "Focal Length:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:12
+msgid "General"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:13
+msgid "Height:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:14
+msgid "ISO Speed Rating:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:15
+msgid "Image Properties"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:16
+msgid "Keywords:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:17
+msgid "Location:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:18
+msgid "Metadata"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:19
+msgid "Metering Mode:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:20
+msgid "Name:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:21
+msgid "Type:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:22
+msgid "Width:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:23
+msgid "_Next"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:24
+msgid "_Previous"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:2
 #, no-c-format
-msgid "Allow _zoom greater than 100% initially"
-msgstr "Dumelela _go godiša mo go fetago 100% mathomong"
+msgid "<b>%f:</b> original filename"
+msgstr ""
 
-#: eom.glade.h:13
-msgid "As _background"
-msgstr "E le _karolo ya ka morago"
+#: ../data/eom-multiple-save-as-dialog.ui.h:4
+#, no-c-format
+msgid "<b>%n:</b> counter"
+msgstr ""
 
-#: eom.glade.h:14
-msgid "As check _pattern"
-msgstr "E le mokgwa wa go _lekola"
+#: ../data/eom-multiple-save-as-dialog.ui.h:5
+msgid "Choose a folder"
+msgstr ""
 
-#: eom.glade.h:15
-msgid "As custom c_olor"
-msgstr "E le mmala wa t_lwaelo"
+#: ../data/eom-multiple-save-as-dialog.ui.h:6
+msgid "Destination folder:"
+msgstr ""
 
-#: eom.glade.h:16
-msgid "Color for Transparent Areas"
-msgstr "Mmala Bakeng sa Mafelo a bonatšago"
+#: ../data/eom-multiple-save-as-dialog.ui.h:7
+msgid "File Name Preview"
+msgstr ""
 
-#: eom.glade.h:17
-msgid "Destination Folder:"
-msgstr "Sephuthedi sa mo yo Iwago:"
+#: ../data/eom-multiple-save-as-dialog.ui.h:8
+msgid "File Path Specifications"
+msgstr ""
 
-#: eom.glade.h:18
-msgid "Eye of MATE Preferences"
-msgstr "Leihlo la tše di Ratwago tša MATE"
+#: ../data/eom-multiple-save-as-dialog.ui.h:9
+msgid "Filename format:"
+msgstr ""
 
-#: eom.glade.h:19
-msgid "Filename Format:"
-msgstr "Sebopego sa Leina la Faele:"
+#: ../data/eom-multiple-save-as-dialog.ui.h:10
+msgid "Options"
+msgstr ""
 
-#: eom.glade.h:20
-msgid "Image _View"
-msgstr "Go Lebelela_Seswantšho"
+#: ../data/eom-multiple-save-as-dialog.ui.h:11
+msgid "Rename from:"
+msgstr ""
 
-#: eom.glade.h:21
-msgid "Rename From:"
-msgstr "Thea ka Leswa go Tloga go:"
+#: ../data/eom-multiple-save-as-dialog.ui.h:12
+msgid "Replace spaces with underscores"
+msgstr ""
 
-#: eom.glade.h:22
-msgid "Replace spaces by underscore"
-msgstr "Tšeela sekgoba legato ka dintlha tša tlase"
-
-#: eom.glade.h:23
+#: ../data/eom-multiple-save-as-dialog.ui.h:13
 msgid "Save As"
 msgstr "Boloka Bjalo ka"
 
-#: eom.glade.h:24
-msgid "Saving Image"
-msgstr "Go Boloka Seswantšho"
-
-#: eom.glade.h:25
-msgid "Show _next image automatically after:"
-msgstr "Bontšha_seswantšho se se latelago ka mo go itiragalelago ka morago ga:"
-
-#: eom.glade.h:26
-msgid "Sli_de Show"
-msgstr "Go Bon_tšha Diswantšho ka go Latelana"
-
-#: eom.glade.h:27
+#: ../data/eom-multiple-save-as-dialog.ui.h:14
 msgid "Start counter at:"
 msgstr "Thoma go bala go:"
 
-#: eom.glade.h:28
+#: ../data/eom-multiple-save-as-dialog.ui.h:15
 msgid "To:"
 msgstr "Go Fihla go:"
 
-#: eom.glade.h:29
-msgid "_Browse"
-msgstr "_Fetleka"
+#: ../data/eom-preferences-dialog.ui.h:1
+msgid "As _background"
+msgstr "E le _karolo ya ka morago"
 
-#: eom.glade.h:30
-msgid "_Interpolate image on zoom"
-msgstr "_Lokiša seswantšho nakong ya go godiša"
+#: ../data/eom-preferences-dialog.ui.h:2
+msgid "As check _pattern"
+msgstr "E le mokgwa wa go _lekola"
 
-#: eom.glade.h:31
+#: ../data/eom-preferences-dialog.ui.h:3
+msgid "As custom c_olor:"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:4
+msgid "As custom color:"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:5
+msgid "Background"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:6 ../data/eom.schemas.in.h:6
+msgid "Background Color"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:7
+msgid "Color for Transparent Areas"
+msgstr "Mmala Bakeng sa Mafelo a bonatšago"
+
+#: ../data/eom-preferences-dialog.ui.h:8
+msgid "E_xpand images to fit screen"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:9
+msgid "Eye of MATE Preferences"
+msgstr "Leihlo la tše di Ratwago tša MATE"
+
+#: ../data/eom-preferences-dialog.ui.h:10
+msgid "Image Enhancements"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:11
+msgid "Image View"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:12
+msgid "Image Zoom"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:13
+msgid "Plugins"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:14
+msgid "Sequence"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:15
+msgid "Slideshow"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:16
+msgid "Smooth images when zoomed-_in"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:17
+msgid "Smooth images when zoomed-_out"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:18
+msgid "Transparent Parts"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:19
+msgid "_Automatic orientation"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:20
 msgid "_Loop sequence"
 msgstr "_Kgaotša tsela ya tatelano"
 
-#: eom.glade.h:32
+#: ../data/eom-preferences-dialog.ui.h:21
+msgid "_Switch image after:"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:22
 msgid "seconds"
 msgstr "metsotswana"
 
-#: eom.schemas.in.h:1
+#: ../data/eom.schemas.in.h:1
 msgid ""
-"A value greater than 0 determines the seconds an image stays on screen until "
-"the next one is shown automatically. Zero disables the automatic browsing."
-msgstr ""
-"Tekanyo e fetago 0 e bontšha metsotswana yeo seswantšho se dulago ka yona "
-"sekirining go fihlela se se latelago se tšwelela ka go itiragalela. Lefeela "
-"le palediša fetleka mo go itiragalelago."
+"A value greater than 0 determines the seconds an image stays on screen until"
+" the next one is shown automatically. Zero disables the automatic browsing."
+msgstr "Tekanyo e fetago 0 e bontšha metsotswana yeo seswantšho se dulago ka yona sekirining go fihlela se se latelago se tšwelela ka go itiragalela. Lefeela le palediša fetleka mo go itiragalelago."
 
-#: eom.schemas.in.h:3
+#: ../data/eom.schemas.in.h:2
+msgid "Active plugins"
+msgstr ""
+
+#: ../data/eom.schemas.in.h:4
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
 msgstr "Dumelela go godiša mo go fetago 100% mathomong"
 
-#: eom.schemas.in.h:4
-msgid "Delay in seconds until showing the next image"
+#: ../data/eom.schemas.in.h:5
+msgid "Automatic orientation"
 msgstr ""
-"Diegiša ka metsotswana go fihlela go bontšhwa seswantšho se se latelago"
 
-#: eom.schemas.in.h:5
+#: ../data/eom.schemas.in.h:7
+msgid "Delay in seconds until showing the next image"
+msgstr "Diegiša ka metsotswana go fihlela go bontšhwa seswantšho se se latelago"
+
+#: ../data/eom.schemas.in.h:8
 msgid ""
 "Determines how transparency should be indicated. Valid values are "
-"CHECK_PATTERN, COLOR and NONE. If COLOR is choosen, then the trans_color key "
-"determines the used color value."
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
 msgstr ""
-"Lemoga kamoo go bonagatša go swanetšego go bonagatšwa ka gona. Dilo tše di "
-"lego gona ke CHECK_PATTERN, COLOR le NONE. Ge e ba go kgethilwe COLOR, gona "
-"senotlelo sa trans_color se lemoga boleng bja mmala o dirišitšwego."
 
-#: eom.schemas.in.h:6
+#: ../data/eom.schemas.in.h:9
+msgid "Extrapolate Image"
+msgstr ""
+
+#: ../data/eom.schemas.in.h:10
+msgid ""
+"If activated and no image is loaded in the active window, the file chooser "
+"will display the user's pictures folder using the XDG special user "
+"directories. If deactivated or the pictures folder has not been set up, it "
+"will show the current working directory."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:11
+msgid ""
+"If activated, Eye of MATE won't ask for confirmation when moving images to "
+"the trash. It will still ask if any of the files cannot be moved to the "
+"trash and would be deleted instead."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:12
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable"
+" on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:13
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
-msgstr ""
-"Ge e ba senotlelo se bonagatšago se na le boleng bja COLOR, gona senotlelo "
-"se se lemoga mmala o dirišeditšwego go bontšha go se bonagale."
+msgstr "Ge e ba senotlelo se bonagatšago se na le boleng bja COLOR, gona senotlelo se se lemoga mmala o dirišeditšwego go bontšha go se bonagale."
 
-#: eom.schemas.in.h:7
+#: ../data/eom.schemas.in.h:14
+msgid ""
+"If this is active, the color set by the background-color key will be used to"
+" fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:15
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
-msgstr ""
-"Ge eba go beakantšwe go FALSE, diswantšho tše dinyenyane di ka se ke tša "
-"otlollwa gore di tlale sekirini mathomong."
+msgstr "Ge eba go beakantšwe go FALSE, diswantšho tše dinyenyane di ka se ke tša otlollwa gore di tlale sekirini mathomong."
 
-#: eom.schemas.in.h:8
+#: ../data/eom.schemas.in.h:16
+msgid ""
+"Image collection pane position. Set to 0 for bottom; 1 for left; 2 for top; "
+"3 for right."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:17
 msgid "Interpolate Image"
 msgstr "Lokiša Seswantšho"
 
-#: eom.schemas.in.h:9
+#: ../data/eom.schemas.in.h:18
+msgid ""
+"List of active plugins. It doesn't contain the \"Location\" of the active "
+"plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
+"plugin."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:19
 msgid "Loop through the image sequence"
 msgstr "Lekola tatelano yeo seswantšho se lego ka yona"
 
-#: eom.schemas.in.h:10
-msgid "Open images in a new window"
-msgstr "Bula diswantšho go lefesetere le leswa"
-
-#: eom.schemas.in.h:11
-msgid "Show/hide image information for collection."
+#: ../data/eom.schemas.in.h:20
+msgid "Scroll wheel zoom"
 msgstr ""
 
-#: eom.schemas.in.h:12
-msgid "Show/hide image information for single image."
+#: ../data/eom.schemas.in.h:21
+msgid "Show/Hide the image collection pane scroll buttons."
 msgstr ""
 
-#: eom.schemas.in.h:13
-msgid "Show/hide the window statusbar."
-msgstr "Bontšha/Uta bara ya boemo ya lefesetere."
+#: ../data/eom.schemas.in.h:22
+msgid "Show/Hide the image collection pane."
+msgstr ""
 
-#: eom.schemas.in.h:14
-msgid "Show/hide the window toolbar."
-msgstr "Bontšha/uta bara ya didirišwa ya lefesetere."
+#: ../data/eom.schemas.in.h:23
+msgid "Show/Hide the window side pane."
+msgstr ""
 
-#: eom.schemas.in.h:15
+#: ../data/eom.schemas.in.h:24
+msgid "Show/Hide the window statusbar."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:25
+msgid "Show/Hide the window toolbar."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:26
+msgid ""
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:28
+#, no-c-format
+msgid ""
+"The multiplier to be applied when using the mouse scroll wheel for zooming. "
+"This value defines the zooming step used for each scroll event. For example,"
+" 0.05 results in a 5% zoom increment for each scroll event and 1.00 result "
+"in a 100% zoom increment."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:29
 msgid "Transparency color"
 msgstr "Go se bonagale ga mmala"
 
-#: eom.schemas.in.h:16
+#: ../data/eom.schemas.in.h:30
 msgid "Transparency indicator"
 msgstr "Selaetši se se sa bonagalego"
 
-#: eom.schemas.in.h:17
-msgid ""
-"Whether opening an image should create a new window instead of replacing the "
-"image in the current window."
+#: ../data/eom.schemas.in.h:31
+msgid "Trash images without asking"
 msgstr ""
-"Ge eba go bula seswantšho go swanetše go hlama lefesetere le leswa go e na "
-"le go bea se sengwe legatong la seswantšho sa lefesetere ya gona bjale."
 
-#: eom.schemas.in.h:18
-msgid ""
-"Whether or not the sequence of images should be shown in an endless loop."
+#: ../data/eom.schemas.in.h:32
+msgid "Use a custom background color"
 msgstr ""
-"Ge eba tatelano ya diswantšho e swanetše go bonagatšwa phetlekong e sa "
-"felego goba aowa."
 
-#: eom.schemas.in.h:19
+#: ../data/eom.schemas.in.h:33
 msgid ""
-"Whether the image should be interpolated on zoom or not. This leads to "
-"better quality but is somewhat slower than non interpolated images."
+"Whether the file chooser should show the user's pictures folder if no images"
+" are loaded."
 msgstr ""
-"Ge eba seswantšho se swanetše go dirwa gore se gole goba aowa. Se se lebiša "
-"boemong bjo bokaone eupša bjo bo nanyago go e na le diswantšho tše di sa "
-"lokišwago."
 
-#: libeom/eom-file-selection.c:124
+#: ../data/eom.schemas.in.h:34
+msgid "Whether the image collection pane should be resizable."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:35
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:36
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:37
+msgid ""
+"Whether the image should be rotated automatically based on EXIF orientation."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:38
+msgid ""
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:39
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:40
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:41
+msgid "Zoom multiplier"
+msgstr ""
+
+#: ../src/eom-application.c:123
+msgid "Running in fullscreen mode"
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:159
+msgid "Close _without Saving"
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:193
+msgid "Question"
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:374
+msgid "If you don't save, your changes will be lost."
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:409
+#, c-format
+msgid "Save changes to image \"%s\" before closing?"
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:604
+#, c-format
+msgid "There is %d image with unsaved changes. Save changes before closing?"
+msgid_plural ""
+"There are %d images with unsaved changes. Save changes before closing?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/eom-close-confirmation-dialog.c:621
+msgid "S_elect the images you want to save:"
+msgstr ""
+
+#. Secondary label
+#: ../src/eom-close-confirmation-dialog.c:639
+msgid "If you don't save, all your changes will be lost."
+msgstr ""
+
+#: ../src/eom-file-chooser.c:128
+msgid "File format is unknown or unsupported"
+msgstr ""
+
+#: ../src/eom-file-chooser.c:133
+msgid ""
+"Eye of MATE could not determine a supported writable file format based on "
+"the filename."
+msgstr ""
+
+#: ../src/eom-file-chooser.c:134
+msgid "Please try a different file extension like .png or .jpg."
+msgstr ""
+
+#: ../src/eom-file-chooser.c:166
 msgid "All Files"
 msgstr "Difaele ka Moka"
 
-#: libeom/eom-file-selection.c:129
+#: ../src/eom-file-chooser.c:171
 msgid "All Images"
 msgstr "Diswantšho ka Moka"
 
-#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
-#: libeom/eom-file-selection.c:147
+#. Filter name: First description then file extension, eg. "The PNG-Format
+#. (*.png)".
+#: ../src/eom-file-chooser.c:192
 #, c-format
 msgid "%s (*.%s)"
 msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
-#: libeom/eom-file-selection.c:240
-#, c-format
-msgid "%s x %s pixel"
-msgstr "%s x %s dikarolwana tše bopago seswantšho"
+#: ../src/eom-file-chooser.c:288 ../src/eom-properties-dialog.c:137
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:380
+msgid "pixel"
+msgid_plural "pixels"
+msgstr[0] ""
+msgstr[1] ""
 
-#: libeom/eom-file-selection.c:396
-msgid "Load Image"
-msgstr "Laiša Seswantšho"
+#: ../src/eom-file-chooser.c:437
+msgid "Open Image"
+msgstr ""
 
-#: libeom/eom-file-selection.c:404
+#: ../src/eom-file-chooser.c:445
 msgid "Save Image"
 msgstr "Boloka Seswantšho"
 
-#: libeom/eom-file-selection.c:412
+#: ../src/eom-file-chooser.c:453
 msgid "Open Folder"
 msgstr "Bula Sephuthedi"
 
-#: libeom/eom-image-jpeg.c:330 libeom/eom-image-jpeg.c:569
+#: ../src/eom-image.c:598
+#, c-format
+msgid "Transformation on unloaded image."
+msgstr ""
+
+#: ../src/eom-image.c:626
+#, c-format
+msgid "Transformation failed."
+msgstr ""
+
+#: ../src/eom-image.c:1053
+#, c-format
+msgid "EXIF not supported for this file format."
+msgstr ""
+
+#: ../src/eom-image.c:1180
+#, c-format
+msgid "Image loading failed."
+msgstr ""
+
+#: ../src/eom-image.c:1585 ../src/eom-image.c:1687
+#, c-format
+msgid "No image loaded."
+msgstr "Ga go na seswantšho se laišitšwego."
+
+#: ../src/eom-image.c:1595 ../src/eom-image.c:1699
+#, c-format
+msgid "Temporary file creation failed."
+msgstr "Go hlama faele ya nakwana go padile."
+
+#: ../src/eom-image-jpeg.c:364
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr "Ga se ya kgona go hlama faele ya nakwana bakeng sa go boloka: %s"
 
-#: libeom/eom-image-jpeg.c:349 libeom/eom-image-jpeg.c:590
+#: ../src/eom-image-jpeg.c:383
+#, c-format
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "Ga se ya kgona go aba kgopolo bakeng sa go laiša faele ya JPEG"
 
-#: libeom/eom-image.c:814
-msgid "empty file"
-msgstr "ntšha tšohle ka faeleng"
-
-#: libeom/eom-image.c:1247 libeom/eom-image.c:1458
-msgid "File exists"
-msgstr "Faele e gona"
-
-#: libeom/eom-image.c:1400 libeom/eom-image.c:1526
-msgid "No image loaded."
-msgstr "Ga go na seswantšho se laišitšwego."
-
-#: libeom/eom-image.c:1409 libeom/eom-image.c:1535
-msgid "Temporary file creation failed."
-msgstr "Go hlama faele ya nakwana go padile."
-
-#: libeom/eom-info-view-exif.c:26
+#: ../src/eom-exif-details.c:68
 msgid "Camera"
 msgstr "Khamera"
 
-#: libeom/eom-info-view-exif.c:27
+#: ../src/eom-exif-details.c:69
 msgid "Image Data"
 msgstr "Tsebišo ya Seswantšho"
 
-#: libeom/eom-info-view-exif.c:28
+#: ../src/eom-exif-details.c:70
 msgid "Image Taking Conditions"
 msgstr "Maemo a go Tšea Seswantšho"
 
-#: libeom/eom-info-view-exif.c:29
+#: ../src/eom-exif-details.c:71
 msgid "Maker Note"
 msgstr "Tsebišo ya Modiri"
 
-#: libeom/eom-info-view-exif.c:30
+#: ../src/eom-exif-details.c:72
 msgid "Other"
 msgstr "Tše Dingwe"
 
-#: libeom/eom-info-view-exif.c:212
+#: ../src/eom-exif-details.c:74
+msgid "XMP Exif"
+msgstr ""
+
+#: ../src/eom-exif-details.c:75
+msgid "XMP IPTC"
+msgstr ""
+
+#: ../src/eom-exif-details.c:76
+msgid "XMP Rights Management"
+msgstr ""
+
+#: ../src/eom-exif-details.c:77
+msgid "XMP Other"
+msgstr ""
+
+#: ../src/eom-exif-details.c:251
 msgid "Tag"
 msgstr "Leswao"
 
-#: libeom/eom-info-view-exif.c:220 libeom/eom-info-view-file.c:96
+#: ../src/eom-exif-details.c:258
 msgid "Value"
 msgstr "Boleng"
 
-#. only used for internal purpose
-#: libeom/eom-info-view-file.c:25 libeom/eom-uri-converter.h:45
-msgid "Filename"
-msgstr "Leina la Faele"
-
-#: libeom/eom-info-view-file.c:26
-msgid "Width"
-msgstr "Bophara"
-
-#: libeom/eom-info-view-file.c:27
-msgid "Height"
-msgstr "Bophagamo"
-
-#: libeom/eom-info-view-file.c:28
-msgid "Filesize"
-msgstr "Bogolo bja Faele"
-
-#: libeom/eom-info-view-file.c:88
-msgid "Attribute"
-msgstr "Pharologanyo"
-
-#: libeom/eom-info-view.c:92
-msgid "File"
-msgstr "Faele"
-
-#: libeom/eom-info-view.c:101
-msgid "EXIF"
-msgstr "EXIF"
-
-#: libeom/eom-info-view.c:108
-msgid "IPTC"
-msgstr "IPTC"
-
-#: libeom/eom-save-as-dialog-helper.c:137
-msgid "Option not available."
-msgstr "Ga go na kgetho."
-
-#: libeom/eom-save-as-dialog-helper.c:138
-msgid ""
-"To use this function you need the libexif library. Please install libexif "
-"(http://libexif.sf.net) and recompile Eye of MATE."
+#. A strftime-formatted string, to display the date the image was taken.
+#: ../src/eom-exif-util.c:113 ../src/eom-exif-util.c:153
+msgid "%a, %d %B %Y  %X"
 msgstr ""
-"O swanetše go ba le bokgobapuku bja libexif e le gore o diriše selo se. Hle "
-"tsenya libexif (http://libexif.sf.net) gomme o kgoboketše Leihlo la MATE."
 
-#: libeom/eom-save-as-dialog-helper.c:214
+#. A strftime-formatted string, to display the date the image was taken, for
+#. the case we don't have the time.
+#: ../src/eom-exif-util.c:147
+msgid "%a, %d %B %Y"
+msgstr ""
+
+#: ../src/eom-error-message-area.c:107
+msgid "_Retry"
+msgstr ""
+
+#: ../src/eom-error-message-area.c:141
+#, c-format
+msgid "Could not load image '%s'."
+msgstr ""
+
+#: ../src/eom-error-message-area.c:175
+#, c-format
+msgid "No images found in '%s'."
+msgstr ""
+
+#: ../src/eom-error-message-area.c:182
+msgid "The given locations contain no images."
+msgstr ""
+
+#: ../src/eom-print.c:219
+msgid "Image Settings"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:834
+msgid "Image"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:835
+msgid "The image whose printing properties will be set up"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:841
+msgid "Page Setup"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:842
+msgid "The information for the page where the image will be printed"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:870
+msgid "Position"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:875
+msgid "_Left:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:876
+msgid "_Right:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:877
+msgid "_Top:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:878
+msgid "_Bottom:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:880
+msgid "C_enter:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:885
+msgid "None"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:887
+msgid "Horizontal"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:889
+msgid "Vertical"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:891
+msgid "Both"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:907
+msgid "Size"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:912
+msgid "_Width:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:914
+msgid "_Height:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:917
+msgid "_Scaling:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:930
+msgid "_Unit:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:935
+msgid "Millimeters"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:937
+msgid "Inches"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:967
+msgid "Preview"
+msgstr ""
+
+#: ../src/eom-properties-dialog.c:154
+msgid "Unknown"
+msgstr ""
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../src/eom-properties-dialog.c:232
+#, c-format
+msgid "%.1f (lens)"
+msgstr ""
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../src/eom-properties-dialog.c:243
+#, c-format
+msgid "%.1f (35mm film)"
+msgstr ""
+
+#: ../src/eom-save-as-dialog-helper.c:161
 msgid "as is"
 msgstr "e le bjalo"
 
-#: libeom/eom-save-dialog-helper.c:162
+#. Translators: This string is displayed in the statusbar.
+#. * The first token is the image number, the second is total image
+#. * count.
+#. *
+#. * Translate to "%Id" if you want to use localized digits, or
+#. * translate to "%d" otherwise.
+#. *
+#. * Note that translating this doesn't guarantee that you get localized
+#. * digits. That needs support from your system and locale definition
+#. * too.
+#: ../src/eom-statusbar.c:125
 #, c-format
-msgid "Saving image %s."
-msgstr "Go boloka seswantšho sa %s."
-
-#: libeom/eom-save-dialog-helper.c:208
-msgid "Cancel saving ..."
-msgstr "Khansela go boloka ..."
-
-#: libeom/eom-uri-converter.c:1023
-msgid "Filenames are not disjunct."
-msgstr "Maina a difaele ga se a arogana."
-
-#: libeom/eom-uri-converter.h:46
-msgid "Counter"
-msgstr "Sebadi"
-
-#: libeom/eom-uri-converter.h:47
-msgid "Comment"
-msgstr "Tlhaloso"
-
-#: libeom/eom-uri-converter.h:48
-msgid "Date"
-msgstr "Letšatši-kgwedi"
-
-#: libeom/eom-uri-converter.h:49
-msgid "Time"
-msgstr "Nako"
-
-#: libeom/eom-uri-converter.h:50
-msgid "Day"
-msgstr "Letšatši"
-
-#: libeom/eom-uri-converter.h:51
-msgid "Month"
-msgstr "Kgwedi"
-
-#: libeom/eom-uri-converter.h:52
-msgid "Year"
-msgstr "Ngwaga"
-
-#: libeom/eom-uri-converter.h:53
-msgid "Hour"
-msgstr "Iri"
-
-#: libeom/eom-uri-converter.h:54
-msgid "Minute"
-msgstr "Motsotso"
-
-#: libeom/eom-uri-converter.h:55
-msgid "Second"
-msgstr "Motsotswana"
-
-#. Translators should localize the following string
-#. * which will give them credit in the About box.
-#. * E.g. "Fulano de Tal <fulano@detal.com>"
-#.
-#: shell/eom-window.c:314
-msgid "translator-credits"
+msgid "%d / %d"
 msgstr ""
-"Translate.org.za <info@translate.org.za>\n"
-"Pheledi Mathibela <amathibela@mweb.co.za>"
 
-#: shell/eom-window.c:319 shell/eom-window.c:2208 shell/eom-window.c:2543
-#: shell/main.c:520
+#: ../src/eom-thumb-view.c:408
+msgid "Taken on"
+msgstr ""
+
+#: ../src/eom-uri-converter.c:984
+#, c-format
+msgid "At least two file names are equal."
+msgstr ""
+
+#: ../src/eom-util.c:68
+msgid "Could not display help for Eye of MATE"
+msgstr ""
+
+#: ../src/eom-util.c:116
+msgid " (invalid Unicode)"
+msgstr ""
+
+#. Translators: This is the string displayed in the statusbar
+#. * The tokens are from left to right:
+#. * - image width
+#. * - image height
+#. * - image size in bytes
+#. * - zoom in percent
+#: ../src/eom-window.c:832
+#, c-format
+msgid "%i × %i pixel  %s    %i%%"
+msgid_plural "%i × %i pixels  %s    %i%%"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/eom-window.c:1138
+msgid "_Reload"
+msgstr ""
+
+#: ../src/eom-window.c:1140 ../src/eom-window.c:3000
+msgctxt "MessageArea"
+msgid "Hi_de"
+msgstr ""
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eom-window.c:1150
+#, c-format
+msgid ""
+"The image \"%s\" has been modified by an external application.\n"
+"Would you like to reload it?"
+msgstr ""
+
+#: ../src/eom-window.c:1305
+#, c-format
+msgid "Use \"%s\" to open the selected image"
+msgstr ""
+
+#. Translators: This string is displayed in the statusbar
+#. * while saving images. The tokens are from left to right:
+#. * - the original filename
+#. * - the current image's position in the queue
+#. * - the total number of images queued for saving
+#: ../src/eom-window.c:1455
+#, c-format
+msgid "Saving image \"%s\" (%u/%u)"
+msgstr ""
+
+#: ../src/eom-window.c:1808
+#, c-format
+msgid "Opening image \"%s\""
+msgstr ""
+
+#: ../src/eom-window.c:2498
+#, c-format
+msgid ""
+"Error printing file:\n"
+"%s"
+msgstr ""
+
+#: ../src/eom-window.c:2751
+msgid "Toolbar Editor"
+msgstr ""
+
+#: ../src/eom-window.c:2754
+msgid "_Reset to Default"
+msgstr ""
+
+#: ../src/eom-window.c:2844
+msgid "translator-credits"
+msgstr "Translate.org.za <info@translate.org.za>\nPheledi Mathibela <amathibela@mweb.co.za>"
+
+#: ../src/eom-window.c:2847
+msgid ""
+"This program is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version.\n"
+msgstr ""
+
+#: ../src/eom-window.c:2851
+msgid ""
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details.\n"
+msgstr ""
+
+#: ../src/eom-window.c:2855
+msgid ""
+"You should have received a copy of the GNU General Public License along with"
+" this program; if not, write to the Free Software Foundation, Inc., 59 "
+"Temple Place - Suite 330, Boston, MA 02111-1307, USA."
+msgstr ""
+
+#: ../src/eom-window.c:2868
 msgid "Eye of MATE"
 msgstr "Leihlo la MATE"
 
-#: shell/eom-window.c:322
-msgid "The MATE image viewing and cataloging program."
-msgstr "Go lebelela seswantšho ga MATE le lenaneo la puku ya diswantšho."
+#: ../src/eom-window.c:2872
+msgid "The MATE image viewer."
+msgstr ""
 
-#: shell/eom-window.c:359
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from eom's menubar
+#: ../src/eom-window.c:2998
+msgid "_Open Background Preferences"
+msgstr ""
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eom-window.c:3014
 #, c-format
 msgid ""
-"Could not display help for Eye of MATE.\n"
-"%s"
+"The image \"%s\" has been set as Desktop Background.\n"
+"Would you like to modify its appearance?"
 msgstr ""
-"E ka se kgone go bontšha thušo ya Leihlo la MATE.\n"
-"%s"
 
-#: shell/eom-window.c:647
-#, c-format
-msgid "Overwrite file %s?"
-msgstr "Ngwala godimo ga faele ya %s?"
-
-#: shell/eom-window.c:648
-msgid "File exists. Do you want to overwrite it?"
-msgstr "Faele e gona. Na o nyaka go ngwala godimo ga yona?"
-
-#: shell/eom-window.c:657 shell/eom-window.c:670
-msgid "Skip"
-msgstr "Tshela"
-
-#: shell/eom-window.c:658
-msgid "Overwrite"
-msgstr "Ngwala godimo"
-
-#: shell/eom-window.c:663
-#, c-format
-msgid "Error on saving %s."
-msgstr "Phošo ya go boloka %s."
-
-#: shell/eom-window.c:671 shell/eom-window.c:1055
-msgid "Retry"
-msgstr "Leka gape"
-
-#: shell/eom-window.c:1044
-#, c-format
-msgid "Couldn't determine file format of %s"
-msgstr "E ka se kgone go lemoga sebopego sa faele ya %s"
-
-#: shell/eom-window.c:1045
-msgid "Please use an appropriate filename suffix or select a file format."
+#: ../src/eom-window.c:3410
+msgid "Saving image locally…"
 msgstr ""
-"Hle diriša moselana o swanetšego wa leina la faele goba o kgethe sebopego sa "
-"faele."
 
-#: shell/eom-window.c:1187
-msgid "Error on saving images."
-msgstr "Phošo ya go boloka diswantšho."
-
-#: shell/eom-window.c:1420
+#: ../src/eom-window.c:3492
 #, c-format
-msgid "Do you really want to move %i image to trash?"
-msgid_plural "Do you really want to move %i images to trash?"
-msgstr[0] "Na ruri o nyaka go šuthišetša seswantšho sa %i ditlakaleng?"
-msgstr[1] "Na ruri o nyaka go šuthišetša diswantšho tša %i ditlakaleng?"
+msgid ""
+"Are you sure you want to move\n"
+"\"%s\" to the trash?"
+msgstr ""
 
-#: shell/eom-window.c:1458
+#: ../src/eom-window.c:3495
+#, c-format
+msgid ""
+"A trash for \"%s\" couldn't be found. Do you want to remove this image "
+"permanently?"
+msgstr ""
+
+#: ../src/eom-window.c:3500
+#, c-format
+msgid ""
+"Are you sure you want to move\n"
+"the selected image to the trash?"
+msgid_plural ""
+"Are you sure you want to move\n"
+"the %d selected images to the trash?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/eom-window.c:3505
+msgid ""
+"Some of the selected images can't be moved to the trash and will be removed "
+"permanently. Are you sure you want to proceed?"
+msgstr ""
+
+#: ../src/eom-window.c:3522 ../src/eom-window.c:3980 ../src/eom-window.c:4004
+msgid "Move to _Trash"
+msgstr ""
+
+#: ../src/eom-window.c:3524
+msgid "_Do not ask again during this session"
+msgstr ""
+
+#: ../src/eom-window.c:3569 ../src/eom-window.c:3583
+#, c-format
 msgid "Couldn't access trash."
 msgstr "E ka se kgone go tsena ditlakaleng."
 
-#: shell/eom-window.c:1532
+#: ../src/eom-window.c:3591
+#, c-format
+msgid "Couldn't delete file"
+msgstr ""
+
+#: ../src/eom-window.c:3662
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Phošo ya go phumola seswantšho sa %s"
 
-#. [image width] x [image height] pixel  [bytes]    [zoom in percent]
-#: shell/eom-window.c:2137
-#, c-format
-msgid "%i x %i pixel  %s    %i%%"
-msgstr "%i x %i dikarolwana tše bopago seswantšho  %s    %i%%"
+#: ../src/eom-window.c:3904
+msgid "_Image"
+msgstr ""
 
-#: shell/eom-window.c:2274
-msgid "_File"
-msgstr "_Faele"
-
-#: shell/eom-window.c:2275
+#: ../src/eom-window.c:3905
 msgid "_Edit"
 msgstr "_Lokiša"
 
-#: shell/eom-window.c:2276
+#: ../src/eom-window.c:3906
 msgid "_View"
 msgstr "_Lebelela"
 
-#: shell/eom-window.c:2277
+#: ../src/eom-window.c:3907
+msgid "_Go"
+msgstr ""
+
+#: ../src/eom-window.c:3908
+msgid "_Tools"
+msgstr ""
+
+#: ../src/eom-window.c:3909
 msgid "_Help"
 msgstr "_Thušo"
 
-#: shell/eom-window.c:2278
-msgid "_New"
-msgstr "_Mpsha"
+#: ../src/eom-window.c:3911
+msgid "_Open…"
+msgstr ""
 
-#: shell/eom-window.c:2278
-msgid "Open a new window"
-msgstr "Bula lefesetere le leswa"
-
-#: shell/eom-window.c:2279
-msgid "_Open..."
-msgstr "_Bula..."
-
-#: shell/eom-window.c:2279
+#: ../src/eom-window.c:3912
 msgid "Open a file"
 msgstr "Bula faele"
 
-#: shell/eom-window.c:2280
-msgid "Open _Folder..."
-msgstr "Bula _Sephuthedi..."
-
-#: shell/eom-window.c:2280
-#, fuzzy
-msgid "Open a folder"
-msgstr "Bula Sephuthedi"
-
-#: shell/eom-window.c:2281
+#: ../src/eom-window.c:3914
 msgid "_Close"
 msgstr "_Tswalela"
 
-#: shell/eom-window.c:2281
+#: ../src/eom-window.c:3915
 msgid "Close window"
 msgstr "Tswalela lefesetere"
 
-#: shell/eom-window.c:2282
+#: ../src/eom-window.c:3917
+msgid "T_oolbar"
+msgstr ""
+
+#: ../src/eom-window.c:3918
+msgid "Edit the application toolbar"
+msgstr ""
+
+#: ../src/eom-window.c:3920
 msgid "Prefere_nces"
 msgstr "Tše ratw_ago"
 
-#: shell/eom-window.c:2282
+#: ../src/eom-window.c:3921
 msgid "Preferences for Eye of MATE"
 msgstr "Tše ratwago bakeng sa Leihlo la MATE"
 
-#: shell/eom-window.c:2283
+#: ../src/eom-window.c:3923
 msgid "_Contents"
 msgstr "_Dikagare"
 
-#: shell/eom-window.c:2283
-msgid "Help On this application"
-msgstr "Thušo tirišong ye"
+#: ../src/eom-window.c:3924
+msgid "Help on this application"
+msgstr ""
 
-#: shell/eom-window.c:2284
+#: ../src/eom-window.c:3926 ../src/eom-plugin-manager.c:505
 msgid "_About"
 msgstr "_Ka ga"
 
-#: shell/eom-window.c:2284
+#: ../src/eom-window.c:3927
 msgid "About this application"
 msgstr "Ka ga tirišo ye"
 
-#: shell/eom-window.c:2289
+#: ../src/eom-window.c:3932
 msgid "_Toolbar"
 msgstr "_Bara ya sedirišwa"
 
-#: shell/eom-window.c:2289
+#: ../src/eom-window.c:3933
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr ""
 
-#: shell/eom-window.c:2290
+#: ../src/eom-window.c:3935
 msgid "_Statusbar"
 msgstr "_Bara ya boemo"
 
-#: shell/eom-window.c:2290
+#: ../src/eom-window.c:3936
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr ""
 
-#: shell/eom-window.c:2295
+#: ../src/eom-window.c:3938
+msgid "_Image Collection"
+msgstr ""
+
+#: ../src/eom-window.c:3939
+msgid ""
+"Changes the visibility of the image collection pane in the current window"
+msgstr ""
+
+#: ../src/eom-window.c:3941
+msgid "Side _Pane"
+msgstr ""
+
+#: ../src/eom-window.c:3942
+msgid "Changes the visibility of the side pane in the current window"
+msgstr ""
+
+#: ../src/eom-window.c:3947
 msgid "_Save"
 msgstr "_Boloka"
 
-#: shell/eom-window.c:2296
-msgid "Save _As"
-msgstr "Boloka _Bjalo ka"
+#: ../src/eom-window.c:3948
+msgid "Save changes in currently selected images"
+msgstr ""
 
-#: shell/eom-window.c:2298
+#: ../src/eom-window.c:3950
+msgid "Open _with"
+msgstr ""
+
+#: ../src/eom-window.c:3951
+msgid "Open the selected image with a different application"
+msgstr ""
+
+#: ../src/eom-window.c:3953
+msgid "Save _As…"
+msgstr ""
+
+#: ../src/eom-window.c:3954
+msgid "Save the selected images with a different name"
+msgstr ""
+
+#: ../src/eom-window.c:3956
+msgid "_Print…"
+msgstr ""
+
+#: ../src/eom-window.c:3957
+msgid "Print the selected image"
+msgstr ""
+
+#: ../src/eom-window.c:3959
+msgid "Prope_rties"
+msgstr ""
+
+#: ../src/eom-window.c:3960
+msgid "Show the properties and metadata of the selected image"
+msgstr ""
+
+#: ../src/eom-window.c:3962
 msgid "_Undo"
 msgstr "_Dirolla"
 
-#: shell/eom-window.c:2300
+#: ../src/eom-window.c:3963
+msgid "Undo the last change in the image"
+msgstr ""
+
+#: ../src/eom-window.c:3965
 msgid "Flip _Horizontal"
 msgstr "Go šutha ka lebelo mo _go Rapamego"
 
-#: shell/eom-window.c:2301
+#: ../src/eom-window.c:3966
+msgid "Mirror the image horizontally"
+msgstr ""
+
+#: ../src/eom-window.c:3968
 msgid "Flip _Vertical"
 msgstr "Go šutha ka lebelo mo _go Tsepamego"
 
-#: shell/eom-window.c:2303
+#: ../src/eom-window.c:3969
+msgid "Mirror the image vertically"
+msgstr ""
+
+#: ../src/eom-window.c:3971
 msgid "_Rotate Clockwise"
 msgstr "_Dikološa go ya ka go lagoja"
 
-#: shell/eom-window.c:2304
-msgid "Rotate Counter C_lockwise"
-msgstr "Dikološa Sebadi go ya ka go L_agoja"
+#: ../src/eom-window.c:3972
+msgid "Rotate the image 90 degrees to the right"
+msgstr ""
 
-#: shell/eom-window.c:2305
-msgid "Rotat_e 180°"
-msgstr "Dikološ_a go 180°"
+#: ../src/eom-window.c:3974
+msgid "Rotate Counterc_lockwise"
+msgstr ""
 
-#: shell/eom-window.c:2307
-msgid "Delete"
-msgstr "Phumola"
+#: ../src/eom-window.c:3975
+msgid "Rotate the image 90 degrees to the left"
+msgstr ""
 
-#: shell/eom-window.c:2309
-msgid "_Full Screen"
-msgstr "_Sekirini se Tletšego"
+#: ../src/eom-window.c:3977
+msgid "Set as _Desktop Background"
+msgstr ""
 
-#: shell/eom-window.c:2310
+#: ../src/eom-window.c:3978
+msgid "Set the selected image as the desktop background"
+msgstr ""
+
+#: ../src/eom-window.c:3981
+msgid "Move the selected image to the trash folder"
+msgstr ""
+
+#: ../src/eom-window.c:3983 ../src/eom-window.c:3995 ../src/eom-window.c:3998
 msgid "_Zoom In"
 msgstr "_Nyenyefatša Seswantšho"
 
-#: shell/eom-window.c:2311
+#: ../src/eom-window.c:3984 ../src/eom-window.c:3996
+msgid "Enlarge the image"
+msgstr ""
+
+#: ../src/eom-window.c:3986 ../src/eom-window.c:4001
 msgid "Zoom _Out"
 msgstr "Godiša _Seswantšho"
 
-#: shell/eom-window.c:2312
+#: ../src/eom-window.c:3987 ../src/eom-window.c:3999 ../src/eom-window.c:4002
+msgid "Shrink the image"
+msgstr ""
+
+#: ../src/eom-window.c:3989
 msgid "_Normal Size"
 msgstr "_Bogolo bjo Tlwaelegilego"
 
-#: shell/eom-window.c:2313
+#: ../src/eom-window.c:3990
+msgid "Show the image at its normal size"
+msgstr ""
+
+#: ../src/eom-window.c:3992
 msgid "Best _Fit"
 msgstr "E Lekana _Gabotse Kudu"
 
-#: shell/eom-window.c:2318
-#, fuzzy
-msgid "Image _Information"
-msgstr "<b>Go Lokišwa ga Seswantšho</b>"
-
-#: shell/eom-window.c:2318
-msgid "Change the visibility of the information pane in the current window"
+#: ../src/eom-window.c:3993
+msgid "Fit the image to the window"
 msgstr ""
 
-#: shell/eom-window.c:2374
-msgid "User interface description not found."
+#: ../src/eom-window.c:4010
+msgid "_Fullscreen"
 msgstr ""
 
-#: shell/main.c:67
-msgid "Unable to create Eye of MATE user interface"
+#: ../src/eom-window.c:4011
+msgid "Show the current image in fullscreen mode"
 msgstr ""
 
-#: shell/main.c:258
-#, c-format
-msgid ""
-"You are about to open %i windows simultaneously. Do you want to open them in "
-"a collection instead?"
+#: ../src/eom-window.c:4013
+msgid "Pause Slideshow"
 msgstr ""
-"O kgaufsi le go bula mafesetere a %i sammaletee. Na o nyaka go a bula ka "
-"sehlopha?"
 
-#: shell/main.c:262
-msgid "Open multiple single windows?"
-msgstr "Bula mafesetere a mantši ka e tee ka e tee?"
+#: ../src/eom-window.c:4014
+msgid "Pause or resume the slideshow"
+msgstr ""
 
-#: shell/main.c:266
-msgid "Single Windows"
-msgstr "Mafesetere a Tee ka Tee"
+#: ../src/eom-window.c:4019 ../src/eom-window.c:4034
+msgid "_Previous Image"
+msgstr ""
 
-#: shell/main.c:268
+#: ../src/eom-window.c:4020
+msgid "Go to the previous image of the collection"
+msgstr ""
+
+#: ../src/eom-window.c:4022
+msgid "_Next Image"
+msgstr ""
+
+#: ../src/eom-window.c:4023
+msgid "Go to the next image of the collection"
+msgstr ""
+
+#: ../src/eom-window.c:4025 ../src/eom-window.c:4037
+msgid "_First Image"
+msgstr ""
+
+#: ../src/eom-window.c:4026
+msgid "Go to the first image of the collection"
+msgstr ""
+
+#: ../src/eom-window.c:4028 ../src/eom-window.c:4040
+msgid "_Last Image"
+msgstr ""
+
+#: ../src/eom-window.c:4029
+msgid "Go to the last image of the collection"
+msgstr ""
+
+#: ../src/eom-window.c:4031
+msgid "_Random Image"
+msgstr ""
+
+#: ../src/eom-window.c:4032
+msgid "Go to a random image of the collection"
+msgstr ""
+
+#: ../src/eom-window.c:4046
+msgid "_Slideshow"
+msgstr ""
+
+#: ../src/eom-window.c:4047
+msgid "Start a slideshow view of the images"
+msgstr ""
+
+#: ../src/eom-window.c:4113
+msgid "Previous"
+msgstr ""
+
+#: ../src/eom-window.c:4117
+msgid "Next"
+msgstr ""
+
+#: ../src/eom-window.c:4121
+msgid "Right"
+msgstr ""
+
+#: ../src/eom-window.c:4124
+msgid "Left"
+msgstr ""
+
+#: ../src/eom-window.c:4127
+msgid "In"
+msgstr ""
+
+#: ../src/eom-window.c:4130
+msgid "Out"
+msgstr ""
+
+#: ../src/eom-window.c:4133
+msgid "Normal"
+msgstr ""
+
+#: ../src/eom-window.c:4136
+msgid "Fit"
+msgstr ""
+
+#: ../src/eom-window.c:4139
 msgid "Collection"
 msgstr "Kgoboketšo"
 
-#: shell/main.c:320
-msgid "File not found."
-msgid_plural "Files not found."
-msgstr[0] "Faele ga se ya hwetšwa."
-msgstr[1] "Difaele ga se tša hwetšwa."
+#: ../src/eom-window.c:4142
+msgctxt "action (to trash)"
+msgid "Trash"
+msgstr ""
 
-#: shell/util.c:52
+#: ../src/eom-plugin-manager.c:51
+msgid "Plugin"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:52
+msgid "Enabled"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:513
+msgid "C_onfigure"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:523
+msgid "A_ctivate"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:535
+msgid "Ac_tivate All"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:540
+msgid "_Deactivate All"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:834
+msgid "Active _Plugins:"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:863
+msgid "_About Plugin"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:870
+msgid "C_onfigure Plugin"
+msgstr ""
+
+#: ../src/main.c:73
+msgid "Open in fullscreen mode"
+msgstr ""
+
+#: ../src/main.c:74
+msgid "Disable image collection"
+msgstr ""
+
+#: ../src/main.c:75
+msgid "Open in slideshow mode"
+msgstr ""
+
+#: ../src/main.c:77
+msgid "Start a new instance instead of reusing an existing one"
+msgstr ""
+
+#: ../src/main.c:80
+msgid "Show the application's version"
+msgstr ""
+
+#: ../src/main.c:81
+msgid "[FILE…]"
+msgstr ""
+
+#. I18N: The '%s' is replaced with eom's command name.
+#: ../src/main.c:207
 #, c-format
-msgid "Could not open `%s'"
-msgstr "E ka se bule `%s'"
-
-#~ msgid "Open _Directory..."
-#~ msgstr "Bula _Tšhupetšo..."
-
-#~ msgid "Open a directory"
-#~ msgstr "Bula tšhupetšo"
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr ""

@@ -1,1216 +1,1448 @@
-# translation of eom.HEAD.po to Mongolian
-# translation of eom.HEAD.mn.po to Mongolian
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Copyright (C) 2004 THE PACKAGE'S COPYRIGHT HOLDER.
-# Ochirbat Batzaya <buuvei@yahoo.com>, 2003.
-# Sanlig Badral <badral@chinggis.com>, 2003.
-# Sanlig Badral <Badral@openmn.org>, 2003, 2004.
-#
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: eom.HEAD\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2004-10-11 19:50+0200\n"
-"PO-Revision-Date: 2004-03-09 10:37+0100\n"
-"Last-Translator: Sanlig Badral <Badral@openmn.org>\n"
-"Language-Team: Mongolian <openmn-core@lists.sf.net>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2011-12-30 15:48+0100\n"
+"PO-Revision-Date: 2011-12-30 15:19+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: mn\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: eom.desktop.in.h:1
-msgid "Image Viewer"
-msgstr "Зураг харагч"
-
-#: eom.desktop.in.h:2
-msgid "View many different types of images"
-msgstr "Зургийн олон төрлийг үзэх"
-
-#: eom.glade.h:1
-msgid "    "
-msgstr "    "
-
-#: eom.glade.h:2
-msgid "*"
-msgstr "*"
-
-#: eom.glade.h:3
-msgid "."
+#. Translaters: This string is for a toggle to display a toolbar.
+#. * The name of the toolbar is automatically computed from the widgets
+#. * on the toolbar, and is placed at the %s. Note the _ before the %s
+#. * which is used to add mnemonics. We know that this is likely to
+#. * produce duplicates, but don't worry about it. If your language
+#. * normally has a mnemonic at the start, please use the _. If not,
+#. * please remove.
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:934
+#, c-format
+msgid "Show “_%s”"
 msgstr ""
 
-#: eom.glade.h:4
-msgid "<b>File Name Preview</b>"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1397
+msgid "_Move on Toolbar"
 msgstr ""
 
-#: eom.glade.h:5
-msgid "<b>File Path Specifications</b>"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1398
+msgid "Move the selected item on the toolbar"
 msgstr ""
 
-#: eom.glade.h:6
-msgid "<b>Image Interpolation</b>"
-msgstr "<b>Зураг засвар</b>"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1399
+msgid "_Remove from Toolbar"
+msgstr ""
 
-#: eom.glade.h:7
-msgid "<b>Image Zoom</b>"
-msgstr "<b>Зургийн маштаб</b>"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1400
+msgid "Remove the selected item from the toolbar"
+msgstr ""
 
-#: eom.glade.h:8
-#, fuzzy
-msgid "<b>Options</b>"
-msgstr "<b>Зураг засвар</b>"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1401
+msgid "_Delete Toolbar"
+msgstr ""
 
-#: eom.glade.h:9
-msgid "<b>Sequence</b>"
-msgstr "<b>Дараалал</b>"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1402
+msgid "Remove the selected toolbar"
+msgstr ""
 
-#: eom.glade.h:10
-msgid "<b>Transparent Parts</b>"
-msgstr "<b>Тунгалаг хэсэг</b>"
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:485
+msgid "Separator"
+msgstr ""
 
-#: eom.glade.h:12
+#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:1
+msgid "Activate fullscreen mode with double-click"
+msgstr ""
+
+#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:2
+msgid "Fullscreen with double-click"
+msgstr ""
+
+#: ../plugins/reload/reload.eom-plugin.desktop.in.h:1
+#: ../plugins/reload/eom-reload-plugin.c:38
+msgid "Reload Image"
+msgstr ""
+
+#: ../plugins/reload/reload.eom-plugin.desktop.in.h:2
+#: ../plugins/reload/eom-reload-plugin.c:38
+msgid "Reload current image"
+msgstr ""
+
+#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:1
+msgid "Date in statusbar"
+msgstr ""
+
+#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:2
+msgid "Shows the image date in the window statusbar"
+msgstr ""
+
+#: ../data/eom.desktop.in.in.h:1
+msgid "Browse and rotate images"
+msgstr ""
+
+#: ../data/eom.desktop.in.in.h:2 ../src/main.c:66 ../src/main.c:248
+msgid "Eye of MATE Image Viewer"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:1
+msgid "Aperture Value:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:2
+msgid "Author:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:3
+msgid "Bytes:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:4
+msgid "Camera Model:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:5
+msgid "Copyright:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:6
+msgid "Date/Time:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:7
+msgid "Description:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:8
+msgid "Details"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:9
+msgid "Exposure Time:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:10
+msgid "Flash:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:11
+msgid "Focal Length:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:12
+msgid "General"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:13
+msgid "Height:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:14
+msgid "ISO Speed Rating:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:15
+msgid "Image Properties"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:16
+msgid "Keywords:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:17
+msgid "Location:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:18
+msgid "Metadata"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:19
+msgid "Metering Mode:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:20
+msgid "Name:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:21
+msgid "Type:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:22
+msgid "Width:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:23
+msgid "_Next"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:24
+msgid "_Previous"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:2
 #, no-c-format
-msgid "Allow _zoom greater than 100% initially"
-msgstr "_маштабыг 100% аас илүү болгохыг зөшөөрөх"
-
-#: eom.glade.h:13
-msgid "As _background"
-msgstr "_Дэвсгэрээр"
-
-#: eom.glade.h:14
-msgid "As check _pattern"
-msgstr "_Дөрвөлжин хээгээр"
-
-#: eom.glade.h:15
-msgid "As custom c_olor"
-msgstr "Хэрэглэгчийн тогтоосон ө_нгөөр"
-
-#: eom.glade.h:16
-msgid "Color for Transparent Areas"
-msgstr "Тунгалаг мужийн өнгө"
-
-#: eom.glade.h:17
-#, fuzzy
-msgid "Destination Folder:"
-msgstr "Хавтас нээх"
-
-#: eom.glade.h:18
-msgid "Eye of Mate Preferences"
-msgstr "Mate тохиргооны нүд"
-
-#: eom.glade.h:19
-#, fuzzy
-msgid "Filename Format:"
-msgstr "Файлын нэр"
-
-#: eom.glade.h:20
-msgid "Image _View"
-msgstr "Зураг _харах"
-
-#: eom.glade.h:21
-msgid "Rename From:"
+msgid "<b>%f:</b> original filename"
 msgstr ""
 
-#: eom.glade.h:22
-msgid "Replace spaces by underscore"
+#: ../data/eom-multiple-save-as-dialog.ui.h:4
+#, no-c-format
+msgid "<b>%n:</b> counter"
 msgstr ""
 
-#: eom.glade.h:23
-#, fuzzy
+#: ../data/eom-multiple-save-as-dialog.ui.h:5
+msgid "Choose a folder"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:6
+msgid "Destination folder:"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:7
+msgid "File Name Preview"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:8
+msgid "File Path Specifications"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:9
+msgid "Filename format:"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:10
+msgid "Options"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:11
+msgid "Rename from:"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:12
+msgid "Replace spaces with underscores"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:13
 msgid "Save As"
-msgstr "Дараахи нэрэн дор _хадгалах..."
+msgstr ""
 
-#: eom.glade.h:24
-#, fuzzy
-msgid "Saving Image"
-msgstr "Зургийг хадгалаж байна"
-
-#: eom.glade.h:25
-msgid "Show _next image automatically after:"
-msgstr "Д_араагийн зургийг автоматаар харуулах:"
-
-#: eom.glade.h:26
-msgid "Sli_de Show"
-msgstr "Ү_зүүлэн харуулах"
-
-#: eom.glade.h:27
+#: ../data/eom-multiple-save-as-dialog.ui.h:14
 msgid "Start counter at:"
 msgstr ""
 
-#: eom.glade.h:28
-#, fuzzy
+#: ../data/eom-multiple-save-as-dialog.ui.h:15
 msgid "To:"
-msgstr "Дээд хүрээний өргөн:"
+msgstr ""
 
-#: eom.glade.h:29
-#, fuzzy
-msgid "_Browse"
-msgstr "Х_аах"
+#: ../data/eom-preferences-dialog.ui.h:1
+msgid "As _background"
+msgstr "_Дэвсгэрээр"
 
-#: eom.glade.h:30
-msgid "_Interpolate image on zoom"
-msgstr "Зургийн _интерполяц хийх"
+#: ../data/eom-preferences-dialog.ui.h:2
+msgid "As check _pattern"
+msgstr "_Дөрвөлжин хээгээр"
 
-#: eom.glade.h:31
+#: ../data/eom-preferences-dialog.ui.h:3
+msgid "As custom c_olor:"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:4
+msgid "As custom color:"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:5
+msgid "Background"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:6 ../data/eom.schemas.in.h:6
+msgid "Background Color"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:7
+msgid "Color for Transparent Areas"
+msgstr "Тунгалаг мужийн өнгө"
+
+#: ../data/eom-preferences-dialog.ui.h:8
+msgid "E_xpand images to fit screen"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:9
+msgid "Eye of MATE Preferences"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:10
+msgid "Image Enhancements"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:11
+msgid "Image View"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:12
+msgid "Image Zoom"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:13
+msgid "Plugins"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:14
+msgid "Sequence"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:15
+msgid "Slideshow"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:16
+msgid "Smooth images when zoomed-_in"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:17
+msgid "Smooth images when zoomed-_out"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:18
+msgid "Transparent Parts"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:19
+msgid "_Automatic orientation"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:20
 msgid "_Loop sequence"
 msgstr "Да_вталтын дараалал"
 
-#: eom.glade.h:32
+#: ../data/eom-preferences-dialog.ui.h:21
+msgid "_Switch image after:"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:22
 msgid "seconds"
 msgstr "секунтүүд"
 
-#: eom.schemas.in.h:1
-#, fuzzy
+#: ../data/eom.schemas.in.h:1
 msgid ""
-"A value greater than 0 determines the seconds an image stays on screen until "
-"the next one is shown automatically. Zero disables the automatic browsing."
+"A value greater than 0 determines the seconds an image stays on screen until"
+" the next one is shown automatically. Zero disables the automatic browsing."
 msgstr ""
-"Утга 0 ээс илүү бол дараагийн зураг автоматаар харагдах хүртэлх секунтыг  "
-"танина. Тэг бол автомат харуулалт идэвхгүйжнэ."
 
-#: eom.schemas.in.h:3
+#: ../data/eom.schemas.in.h:2
+msgid "Active plugins"
+msgstr ""
+
+#: ../data/eom.schemas.in.h:4
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
 msgstr "_Маштабыг 100% аас илүү болгохыг зөшөөрөх"
 
-#: eom.schemas.in.h:4
+#: ../data/eom.schemas.in.h:5
+msgid "Automatic orientation"
+msgstr ""
+
+#: ../data/eom.schemas.in.h:7
 msgid "Delay in seconds until showing the next image"
 msgstr "Дараагийн зургийг харуулах хүртэл хүлээх хугацаа"
 
-#: eom.schemas.in.h:5
+#: ../data/eom.schemas.in.h:8
 msgid ""
 "Determines how transparency should be indicated. Valid values are "
-"CHECK_PATTERN, COLOR and NONE. If COLOR is choosen, then the trans_color key "
-"determines the used color value."
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
 msgstr ""
-"Тунгалаг чанар хэрхэн харагдахыг тохируулж өгнө. Хүчинтэй хэмжээсүүд нь "
-"CHECK_PATTERN COLOR болон БАЙХГҮЙ. Хэрэв COLOR сонгогдсон бол trans_color "
-"Түлхүүр нь ямар өнгө хэрэглэгдэхийг тодорхойлно."
 
-#: eom.schemas.in.h:6
+#: ../data/eom.schemas.in.h:9
+msgid "Extrapolate Image"
+msgstr ""
+
+#: ../data/eom.schemas.in.h:10
+msgid ""
+"If activated and no image is loaded in the active window, the file chooser "
+"will display the user's pictures folder using the XDG special user "
+"directories. If deactivated or the pictures folder has not been set up, it "
+"will show the current working directory."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:11
+msgid ""
+"If activated, Eye of MATE won't ask for confirmation when moving images to "
+"the trash. It will still ask if any of the files cannot be moved to the "
+"trash and would be deleted instead."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:12
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable"
+" on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:13
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
-msgstr ""
-"Хэрэв тунгалагийг заасан түлхүүр нь COLOR утгатай байвал тунгалагийг "
-"тодорхойлоход аль өнгийг ашиглахыг зааж өгнө."
+msgstr "Хэрэв тунгалагийг заасан түлхүүр нь COLOR утгатай байвал тунгалагийг тодорхойлоход аль өнгийг ашиглахыг зааж өгнө."
 
-#: eom.schemas.in.h:7
-#, fuzzy
+#: ../data/eom.schemas.in.h:14
+msgid ""
+"If this is active, the color set by the background-color key will be used to"
+" fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:15
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
 msgstr ""
-"Хэрэв энэ FALSE бол жижиг зургууд анхдагч дэлгэцэнд олон тавигдаж дүүргэхгүй."
 
-#: eom.schemas.in.h:8
+#: ../data/eom.schemas.in.h:16
+msgid ""
+"Image collection pane position. Set to 0 for bottom; 1 for left; 2 for top; "
+"3 for right."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:17
 msgid "Interpolate Image"
 msgstr "Зургийн интерполяц хийх"
 
-#: eom.schemas.in.h:9
+#: ../data/eom.schemas.in.h:18
+msgid ""
+"List of active plugins. It doesn't contain the \"Location\" of the active "
+"plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
+"plugin."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:19
 msgid "Loop through the image sequence"
 msgstr "Зургийн дарааллаар циклдэх"
 
-#: eom.schemas.in.h:10
-msgid "Open images in a new window"
-msgstr "Зургуудыг шинэ цонхнуудад нээх"
+#: ../data/eom.schemas.in.h:20
+msgid "Scroll wheel zoom"
+msgstr ""
 
-#: eom.schemas.in.h:11
-msgid "Show/hide the window statusbar."
-msgstr "Цонхны төлөв самбар харуулах/далдлах."
+#: ../data/eom.schemas.in.h:21
+msgid "Show/Hide the image collection pane scroll buttons."
+msgstr ""
 
-#: eom.schemas.in.h:12
-msgid "Show/hide the window toolbar."
-msgstr "Цонхны багаж самбар харуулах/далдлах."
+#: ../data/eom.schemas.in.h:22
+msgid "Show/Hide the image collection pane."
+msgstr ""
 
-#: eom.schemas.in.h:13
+#: ../data/eom.schemas.in.h:23
+msgid "Show/Hide the window side pane."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:24
+msgid "Show/Hide the window statusbar."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:25
+msgid "Show/Hide the window toolbar."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:26
+msgid ""
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:28
+#, no-c-format
+msgid ""
+"The multiplier to be applied when using the mouse scroll wheel for zooming. "
+"This value defines the zooming step used for each scroll event. For example,"
+" 0.05 results in a 5% zoom increment for each scroll event and 1.00 result "
+"in a 100% zoom increment."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:29
 msgid "Transparency color"
 msgstr "Тунгалагийн өнгө"
 
-#: eom.schemas.in.h:14
+#: ../data/eom.schemas.in.h:30
 msgid "Transparency indicator"
 msgstr "Тунгалагийн заалт"
 
-#: eom.schemas.in.h:15
-msgid ""
-"Whether opening an image should create a new window instead of replacing the "
-"image in the current window."
+#: ../data/eom.schemas.in.h:31
+msgid "Trash images without asking"
 msgstr ""
-"Зураг нээхдээ энэ цонхонд сольж харуулахын оронд  шинэ цонхонд нээж харуулах "
-"эсэх."
 
-#: eom.schemas.in.h:16
-msgid ""
-"Whether or not the sequence of images should be shown in an endless loop."
-msgstr "Зургуудын төгсгөлгүй циклээр цувуулан харагдах эсвэл үгүй эсэх."
-
-#: eom.schemas.in.h:17
-msgid ""
-"Whether the image should be interpolated on zoom or not. This leads to "
-"better quality but is somewhat slower than non interpolated images."
+#: ../data/eom.schemas.in.h:32
+msgid "Use a custom background color"
 msgstr ""
-"Зургийг томруулахад интерполяц хийх эсэх. Энэ нь зургийн чанарыг сайжруулах "
-"үйлчилгээтэй ч интерполяц хийгээгүй зургуудаа бодвол удаан байх талтай."
 
-#: libeom/eom-file-selection.c:124
+#: ../data/eom.schemas.in.h:33
+msgid ""
+"Whether the file chooser should show the user's pictures folder if no images"
+" are loaded."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:34
+msgid "Whether the image collection pane should be resizable."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:35
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:36
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:37
+msgid ""
+"Whether the image should be rotated automatically based on EXIF orientation."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:38
+msgid ""
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:39
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:40
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:41
+msgid "Zoom multiplier"
+msgstr ""
+
+#: ../src/eom-application.c:123
+msgid "Running in fullscreen mode"
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:159
+msgid "Close _without Saving"
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:193
+msgid "Question"
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:374
+msgid "If you don't save, your changes will be lost."
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:409
+#, c-format
+msgid "Save changes to image \"%s\" before closing?"
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:604
+#, c-format
+msgid "There is %d image with unsaved changes. Save changes before closing?"
+msgid_plural ""
+"There are %d images with unsaved changes. Save changes before closing?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/eom-close-confirmation-dialog.c:621
+msgid "S_elect the images you want to save:"
+msgstr ""
+
+#. Secondary label
+#: ../src/eom-close-confirmation-dialog.c:639
+msgid "If you don't save, all your changes will be lost."
+msgstr ""
+
+#: ../src/eom-file-chooser.c:128
+msgid "File format is unknown or unsupported"
+msgstr ""
+
+#: ../src/eom-file-chooser.c:133
+msgid ""
+"Eye of MATE could not determine a supported writable file format based on "
+"the filename."
+msgstr ""
+
+#: ../src/eom-file-chooser.c:134
+msgid "Please try a different file extension like .png or .jpg."
+msgstr ""
+
+#: ../src/eom-file-chooser.c:166
 msgid "All Files"
 msgstr "Бүх файлууд"
 
-#: libeom/eom-file-selection.c:129
+#: ../src/eom-file-chooser.c:171
 msgid "All Images"
 msgstr "Бүх зураг"
 
-#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
-#: libeom/eom-file-selection.c:147
+#. Filter name: First description then file extension, eg. "The PNG-Format
+#. (*.png)".
+#: ../src/eom-file-chooser.c:192
 #, c-format
 msgid "%s (*.%s)"
 msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
-#: libeom/eom-file-selection.c:240
-#, c-format
-msgid "%s x %s pixel"
-msgstr "%s x %s пиксел"
+#: ../src/eom-file-chooser.c:288 ../src/eom-properties-dialog.c:137
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:380
+msgid "pixel"
+msgid_plural "pixels"
+msgstr[0] ""
+msgstr[1] ""
 
-#: libeom/eom-file-selection.c:396
-msgid "Load Image"
-msgstr "Зургийг нээх"
+#: ../src/eom-file-chooser.c:437
+msgid "Open Image"
+msgstr ""
 
-#: libeom/eom-file-selection.c:404
+#: ../src/eom-file-chooser.c:445
 msgid "Save Image"
 msgstr "Зургийг хадгалах"
 
-#: libeom/eom-file-selection.c:412
+#: ../src/eom-file-chooser.c:453
 msgid "Open Folder"
 msgstr "Хавтас нээх"
 
-#: libeom/eom-image-jpeg.c:330 libeom/eom-image-jpeg.c:569
+#: ../src/eom-image.c:598
+#, c-format
+msgid "Transformation on unloaded image."
+msgstr ""
+
+#: ../src/eom-image.c:626
+#, c-format
+msgid "Transformation failed."
+msgstr ""
+
+#: ../src/eom-image.c:1053
+#, c-format
+msgid "EXIF not supported for this file format."
+msgstr ""
+
+#: ../src/eom-image.c:1180
+#, c-format
+msgid "Image loading failed."
+msgstr ""
+
+#: ../src/eom-image.c:1585 ../src/eom-image.c:1687
+#, c-format
+msgid "No image loaded."
+msgstr "Зураг ачаалагдсангүй."
+
+#: ../src/eom-image.c:1595 ../src/eom-image.c:1699
+#, c-format
+msgid "Temporary file creation failed."
+msgstr ""
+
+#: ../src/eom-image-jpeg.c:364
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr "Түр хадгалах файл үүсгэх боломжгүй: %s"
 
-#: libeom/eom-image-jpeg.c:349 libeom/eom-image-jpeg.c:590
+#: ../src/eom-image-jpeg.c:383
+#, c-format
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "JPEG файл ачаалахын тулд санах ой нөөцлөгдөх боломжгүй байна "
 
-#: libeom/eom-image.c:814
-msgid "empty file"
-msgstr "Хоосон файл"
-
-#: libeom/eom-image.c:1247 libeom/eom-image.c:1458
-msgid "File exists"
-msgstr "Файл хэдийнэ байна"
-
-#: libeom/eom-image.c:1400 libeom/eom-image.c:1526
-msgid "No image loaded."
-msgstr "Зураг ачаалагдсангүй."
-
-#: libeom/eom-image.c:1409 libeom/eom-image.c:1535
-msgid "Temporary file creation failed."
+#: ../src/eom-exif-details.c:68
+msgid "Camera"
 msgstr ""
 
-#: libeom/eom-info-view-exif.c:26
-#, fuzzy
-msgid "Camera"
-msgstr "Нэр"
-
-#: libeom/eom-info-view-exif.c:27
-#, fuzzy
+#: ../src/eom-exif-details.c:69
 msgid "Image Data"
-msgstr "Зургийн өргөний хэмжээ"
+msgstr ""
 
-#: libeom/eom-info-view-exif.c:28
-#, fuzzy
+#: ../src/eom-exif-details.c:70
 msgid "Image Taking Conditions"
-msgstr "Зургийн цомог"
+msgstr ""
 
-#: libeom/eom-info-view-exif.c:29
+#: ../src/eom-exif-details.c:71
 msgid "Maker Note"
 msgstr ""
 
-#: libeom/eom-info-view-exif.c:30
-#, fuzzy
+#: ../src/eom-exif-details.c:72
 msgid "Other"
-msgstr "Торлог"
+msgstr ""
 
-#: libeom/eom-info-view-exif.c:212
+#: ../src/eom-exif-details.c:74
+msgid "XMP Exif"
+msgstr ""
+
+#: ../src/eom-exif-details.c:75
+msgid "XMP IPTC"
+msgstr ""
+
+#: ../src/eom-exif-details.c:76
+msgid "XMP Rights Management"
+msgstr ""
+
+#: ../src/eom-exif-details.c:77
+msgid "XMP Other"
+msgstr ""
+
+#: ../src/eom-exif-details.c:251
 msgid "Tag"
 msgstr ""
 
-#: libeom/eom-info-view-exif.c:220 libeom/eom-info-view-file.c:96
+#: ../src/eom-exif-details.c:258
 msgid "Value"
 msgstr "Утга"
 
-#. only used for internal purpose
-#: libeom/eom-info-view-file.c:25 libeom/eom-uri-converter.h:45
-msgid "Filename"
-msgstr "Файлын нэр"
-
-#: libeom/eom-info-view-file.c:26
-msgid "Width"
-msgstr "Өргөн"
-
-#: libeom/eom-info-view-file.c:27
-msgid "Height"
-msgstr "Өндөр"
-
-#: libeom/eom-info-view-file.c:28
-msgid "Filesize"
-msgstr "Файлын хэмжээ"
-
-#: libeom/eom-info-view-file.c:88
-msgid "Attribute"
-msgstr "Аттрибут"
-
-#: libeom/eom-info-view.c:92
-#, fuzzy
-msgid "File"
-msgstr "_Файл"
-
-#: libeom/eom-info-view.c:101
-msgid "EXIF"
+#. A strftime-formatted string, to display the date the image was taken.
+#: ../src/eom-exif-util.c:113 ../src/eom-exif-util.c:153
+msgid "%a, %d %B %Y  %X"
 msgstr ""
 
-#: libeom/eom-info-view.c:108
-msgid "IPTC"
+#. A strftime-formatted string, to display the date the image was taken, for
+#. the case we don't have the time.
+#: ../src/eom-exif-util.c:147
+msgid "%a, %d %B %Y"
 msgstr ""
 
-#: libeom/eom-save-as-dialog-helper.c:137
-msgid "Option not available."
+#: ../src/eom-error-message-area.c:107
+msgid "_Retry"
 msgstr ""
 
-#: libeom/eom-save-as-dialog-helper.c:138
-msgid ""
-"To use this function you need the libexif library. Please install libexif "
-"(http://libexif.sf.net) and recompile Eye of Mate."
+#: ../src/eom-error-message-area.c:141
+#, c-format
+msgid "Could not load image '%s'."
 msgstr ""
 
-#: libeom/eom-save-as-dialog-helper.c:214
+#: ../src/eom-error-message-area.c:175
+#, c-format
+msgid "No images found in '%s'."
+msgstr ""
+
+#: ../src/eom-error-message-area.c:182
+msgid "The given locations contain no images."
+msgstr ""
+
+#: ../src/eom-print.c:219
+msgid "Image Settings"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:834
+msgid "Image"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:835
+msgid "The image whose printing properties will be set up"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:841
+msgid "Page Setup"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:842
+msgid "The information for the page where the image will be printed"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:870
+msgid "Position"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:875
+msgid "_Left:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:876
+msgid "_Right:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:877
+msgid "_Top:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:878
+msgid "_Bottom:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:880
+msgid "C_enter:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:885
+msgid "None"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:887
+msgid "Horizontal"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:889
+msgid "Vertical"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:891
+msgid "Both"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:907
+msgid "Size"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:912
+msgid "_Width:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:914
+msgid "_Height:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:917
+msgid "_Scaling:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:930
+msgid "_Unit:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:935
+msgid "Millimeters"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:937
+msgid "Inches"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:967
+msgid "Preview"
+msgstr ""
+
+#: ../src/eom-properties-dialog.c:154
+msgid "Unknown"
+msgstr ""
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../src/eom-properties-dialog.c:232
+#, c-format
+msgid "%.1f (lens)"
+msgstr ""
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../src/eom-properties-dialog.c:243
+#, c-format
+msgid "%.1f (35mm film)"
+msgstr ""
+
+#: ../src/eom-save-as-dialog-helper.c:161
 msgid "as is"
 msgstr ""
 
-#: libeom/eom-save-dialog-helper.c:162
-#, fuzzy, c-format
-msgid "Saving image %s."
-msgstr "Зургийг хадгалаж байна"
-
-#: libeom/eom-save-dialog-helper.c:208
-#, fuzzy
-msgid "Cancel saving ..."
-msgstr "Хадгалахаа болих"
-
-#: libeom/eom-uri-converter.c:1023
-msgid "Filenames are not disjunct."
+#. Translators: This string is displayed in the statusbar.
+#. * The first token is the image number, the second is total image
+#. * count.
+#. *
+#. * Translate to "%Id" if you want to use localized digits, or
+#. * translate to "%d" otherwise.
+#. *
+#. * Note that translating this doesn't guarantee that you get localized
+#. * digits. That needs support from your system and locale definition
+#. * too.
+#: ../src/eom-statusbar.c:125
+#, c-format
+msgid "%d / %d"
 msgstr ""
 
-#: libeom/eom-uri-converter.h:46
-#, fuzzy
-msgid "Counter"
-msgstr "Голлуулах"
-
-#: libeom/eom-uri-converter.h:47
-#, fuzzy
-msgid "Comment"
-msgstr "А_гуулга"
-
-#: libeom/eom-uri-converter.h:48
-msgid "Date"
+#: ../src/eom-thumb-view.c:408
+msgid "Taken on"
 msgstr ""
 
-#: libeom/eom-uri-converter.h:49
-msgid "Time"
+#: ../src/eom-uri-converter.c:984
+#, c-format
+msgid "At least two file names are equal."
 msgstr ""
 
-#: libeom/eom-uri-converter.h:50
-msgid "Day"
+#: ../src/eom-util.c:68
+msgid "Could not display help for Eye of MATE"
 msgstr ""
 
-#: libeom/eom-uri-converter.h:51
-msgid "Month"
+#: ../src/eom-util.c:116
+msgid " (invalid Unicode)"
 msgstr ""
 
-#: libeom/eom-uri-converter.h:52
-msgid "Year"
+#. Translators: This is the string displayed in the statusbar
+#. * The tokens are from left to right:
+#. * - image width
+#. * - image height
+#. * - image size in bytes
+#. * - zoom in percent
+#: ../src/eom-window.c:832
+#, c-format
+msgid "%i × %i pixel  %s    %i%%"
+msgid_plural "%i × %i pixels  %s    %i%%"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/eom-window.c:1138
+msgid "_Reload"
 msgstr ""
 
-#: libeom/eom-uri-converter.h:53
-msgid "Hour"
+#: ../src/eom-window.c:1140 ../src/eom-window.c:3000
+msgctxt "MessageArea"
+msgid "Hi_de"
 msgstr ""
 
-#: libeom/eom-uri-converter.h:54
-msgid "Minute"
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eom-window.c:1150
+#, c-format
+msgid ""
+"The image \"%s\" has been modified by an external application.\n"
+"Would you like to reload it?"
 msgstr ""
 
-#: libeom/eom-uri-converter.h:55
-#, fuzzy
-msgid "Second"
-msgstr "секунтүүд"
+#: ../src/eom-window.c:1305
+#, c-format
+msgid "Use \"%s\" to open the selected image"
+msgstr ""
 
-#. Translators should localize the following string
-#. * which will give them credit in the About box.
-#. * E.g. "Fulano de Tal <fulano@detal.com>"
-#.
-#: shell/eom-window.c:314
+#. Translators: This string is displayed in the statusbar
+#. * while saving images. The tokens are from left to right:
+#. * - the original filename
+#. * - the current image's position in the queue
+#. * - the total number of images queued for saving
+#: ../src/eom-window.c:1455
+#, c-format
+msgid "Saving image \"%s\" (%u/%u)"
+msgstr ""
+
+#: ../src/eom-window.c:1808
+#, c-format
+msgid "Opening image \"%s\""
+msgstr ""
+
+#: ../src/eom-window.c:2498
+#, c-format
+msgid ""
+"Error printing file:\n"
+"%s"
+msgstr ""
+
+#: ../src/eom-window.c:2751
+msgid "Toolbar Editor"
+msgstr ""
+
+#: ../src/eom-window.c:2754
+msgid "_Reset to Default"
+msgstr ""
+
+#: ../src/eom-window.c:2844
 msgid "translator-credits"
 msgstr ""
 
-#: shell/eom-window.c:319 shell/eom-window.c:2167 shell/eom-window.c:2482
-#: shell/main.c:498
-msgid "Eye of Mate"
-msgstr "Гноме-н нүд"
+#: ../src/eom-window.c:2847
+msgid ""
+"This program is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version.\n"
+msgstr ""
 
-#: shell/eom-window.c:322
-msgid "The MATE image viewing and cataloging program."
-msgstr "MATE-ийн зураг үзэх болон каталогжуулах программ"
+#: ../src/eom-window.c:2851
+msgid ""
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details.\n"
+msgstr ""
 
-#: shell/eom-window.c:359
+#: ../src/eom-window.c:2855
+msgid ""
+"You should have received a copy of the GNU General Public License along with"
+" this program; if not, write to the Free Software Foundation, Inc., 59 "
+"Temple Place - Suite 330, Boston, MA 02111-1307, USA."
+msgstr ""
+
+#: ../src/eom-window.c:2868
+msgid "Eye of MATE"
+msgstr ""
+
+#: ../src/eom-window.c:2872
+msgid "The MATE image viewer."
+msgstr ""
+
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from eom's menubar
+#: ../src/eom-window.c:2998
+msgid "_Open Background Preferences"
+msgstr ""
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eom-window.c:3014
 #, c-format
 msgid ""
-"Could not display help for Eye of Mate.\n"
-"%s"
+"The image \"%s\" has been set as Desktop Background.\n"
+"Would you like to modify its appearance?"
 msgstr ""
-"Гноме-н нүдийн \"Тусламж\"-ийг харуулж чадсангүй .\n"
-"%s"
 
-#: shell/eom-window.c:626
+#: ../src/eom-window.c:3410
+msgid "Saving image locally…"
+msgstr ""
+
+#: ../src/eom-window.c:3492
 #, c-format
-msgid "Overwrite file %s?"
+msgid ""
+"Are you sure you want to move\n"
+"\"%s\" to the trash?"
 msgstr ""
 
-#: shell/eom-window.c:627
-#, fuzzy
-msgid "File exists. Do you want to overwrite it?"
-msgstr "Та %s -г дарж бичихийг хүсэж байна уу?"
-
-#: shell/eom-window.c:636 shell/eom-window.c:649
-msgid "Skip"
-msgstr ""
-
-#: shell/eom-window.c:637
-msgid "Overwrite"
-msgstr ""
-
-#: shell/eom-window.c:642
+#: ../src/eom-window.c:3495
 #, c-format
-msgid "Error on saving %s."
+msgid ""
+"A trash for \"%s\" couldn't be found. Do you want to remove this image "
+"permanently?"
 msgstr ""
 
-#: shell/eom-window.c:650 shell/eom-window.c:1034
-msgid "Retry"
+#: ../src/eom-window.c:3500
+#, c-format
+msgid ""
+"Are you sure you want to move\n"
+"the selected image to the trash?"
+msgid_plural ""
+"Are you sure you want to move\n"
+"the %d selected images to the trash?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/eom-window.c:3505
+msgid ""
+"Some of the selected images can't be moved to the trash and will be removed "
+"permanently. Are you sure you want to proceed?"
 msgstr ""
 
-#: shell/eom-window.c:1023
-#, fuzzy, c-format
-msgid "Couldn't determine file format of %s"
-msgstr "Түр хадгалах файл үүсгэх боломжгүй: %s"
-
-#: shell/eom-window.c:1024
-msgid "Please use an appropriate filename suffix or select a file format."
+#: ../src/eom-window.c:3522 ../src/eom-window.c:3980 ../src/eom-window.c:4004
+msgid "Move to _Trash"
 msgstr ""
 
-#: shell/eom-window.c:1166
-#, fuzzy
-msgid "Error on saving images."
-msgstr "Зургийг хадгалаж байна"
+#: ../src/eom-window.c:3524
+msgid "_Do not ask again during this session"
+msgstr ""
 
-#: shell/eom-window.c:1399
-#, fuzzy, c-format
-msgid "Do you really want to move %i image to trash?"
-msgid_plural "Do you really want to move %i images to trash?"
-msgstr[0] "Та %s -г дарж бичихийг хүсэж байна уу?"
-msgstr[1] "Та %s -г дарж бичихийг хүсэж байна уу?"
-
-#: shell/eom-window.c:1437
+#: ../src/eom-window.c:3569 ../src/eom-window.c:3583
+#, c-format
 msgid "Couldn't access trash."
 msgstr ""
 
-#: shell/eom-window.c:1511
+#: ../src/eom-window.c:3591
+#, c-format
+msgid "Couldn't delete file"
+msgstr ""
+
+#: ../src/eom-window.c:3662
 #, c-format
 msgid "Error on deleting image %s"
 msgstr ""
 
-#. [image width] x [image height] pixel  [bytes]    [zoom in percent]
-#: shell/eom-window.c:2096
-#, c-format
-msgid "%i x %i pixel  %s    %i%%"
-msgstr "%i x %i пиксэл  %s    %i%%"
+#: ../src/eom-window.c:3904
+msgid "_Image"
+msgstr ""
 
-#: shell/eom-window.c:2233
-msgid "_File"
-msgstr "_Файл"
-
-#: shell/eom-window.c:2234
+#: ../src/eom-window.c:3905
 msgid "_Edit"
 msgstr "_Боловсруулах"
 
-#: shell/eom-window.c:2235
+#: ../src/eom-window.c:3906
 msgid "_View"
 msgstr "_Харах"
 
-#: shell/eom-window.c:2236
+#: ../src/eom-window.c:3907
+msgid "_Go"
+msgstr ""
+
+#: ../src/eom-window.c:3908
+msgid "_Tools"
+msgstr ""
+
+#: ../src/eom-window.c:3909
 msgid "_Help"
 msgstr "_Тусламж"
 
-#: shell/eom-window.c:2237
-msgid "_New"
-msgstr "_Шинэ"
+#: ../src/eom-window.c:3911
+msgid "_Open…"
+msgstr ""
 
-#: shell/eom-window.c:2237
-msgid "Open a new window"
-msgstr "Шинэ цонх нээх"
-
-#: shell/eom-window.c:2238
-msgid "_Open..."
-msgstr "_Нээх..."
-
-#: shell/eom-window.c:2238
+#: ../src/eom-window.c:3912
 msgid "Open a file"
 msgstr "Файл нээх"
 
-#: shell/eom-window.c:2239
-#, fuzzy
-msgid "Open _Directory..."
-msgstr "Лавлах _нээх..."
-
-#: shell/eom-window.c:2239
-msgid "Open a directory"
-msgstr "Лавлах нээх"
-
-#: shell/eom-window.c:2240
+#: ../src/eom-window.c:3914
 msgid "_Close"
 msgstr "Х_аах"
 
-#: shell/eom-window.c:2240
+#: ../src/eom-window.c:3915
 msgid "Close window"
 msgstr "Цонх хаах"
 
-#: shell/eom-window.c:2241
+#: ../src/eom-window.c:3917
+msgid "T_oolbar"
+msgstr ""
+
+#: ../src/eom-window.c:3918
+msgid "Edit the application toolbar"
+msgstr ""
+
+#: ../src/eom-window.c:3920
 msgid "Prefere_nces"
 msgstr "_Тохируулгууд"
 
-#: shell/eom-window.c:2241
-msgid "Preferences for Eye of Mate"
-msgstr "Гноме нүдний тохируулгууд"
+#: ../src/eom-window.c:3921
+msgid "Preferences for Eye of MATE"
+msgstr ""
 
-#: shell/eom-window.c:2242
+#: ../src/eom-window.c:3923
 msgid "_Contents"
 msgstr "А_гуулга"
 
-#: shell/eom-window.c:2242
-msgid "Help On this application"
-msgstr "Энэ х. программын талаархи тусламж"
+#: ../src/eom-window.c:3924
+msgid "Help on this application"
+msgstr ""
 
-#: shell/eom-window.c:2243
+#: ../src/eom-window.c:3926 ../src/eom-plugin-manager.c:505
 msgid "_About"
 msgstr "_Тухай"
 
-#: shell/eom-window.c:2243
+#: ../src/eom-window.c:3927
 msgid "About this application"
 msgstr "Энэ х. программын талаар"
 
-#: shell/eom-window.c:2248
+#: ../src/eom-window.c:3932
 msgid "_Toolbar"
 msgstr "_Багаж самбар"
 
-#: shell/eom-window.c:2249
+#: ../src/eom-window.c:3933
+msgid "Changes the visibility of the toolbar in the current window"
+msgstr ""
+
+#: ../src/eom-window.c:3935
 msgid "_Statusbar"
 msgstr "_Төлөв самбар"
 
-#: shell/eom-window.c:2254
+#: ../src/eom-window.c:3936
+msgid "Changes the visibility of the statusbar in the current window"
+msgstr ""
+
+#: ../src/eom-window.c:3938
+msgid "_Image Collection"
+msgstr ""
+
+#: ../src/eom-window.c:3939
+msgid ""
+"Changes the visibility of the image collection pane in the current window"
+msgstr ""
+
+#: ../src/eom-window.c:3941
+msgid "Side _Pane"
+msgstr ""
+
+#: ../src/eom-window.c:3942
+msgid "Changes the visibility of the side pane in the current window"
+msgstr ""
+
+#: ../src/eom-window.c:3947
 msgid "_Save"
 msgstr "_Хадгалах"
 
-#: shell/eom-window.c:2255
-#, fuzzy
-msgid "Save _As"
-msgstr "Дараахи нэрэн дор _хадгалах..."
+#: ../src/eom-window.c:3948
+msgid "Save changes in currently selected images"
+msgstr ""
 
-#: shell/eom-window.c:2257
+#: ../src/eom-window.c:3950
+msgid "Open _with"
+msgstr ""
+
+#: ../src/eom-window.c:3951
+msgid "Open the selected image with a different application"
+msgstr ""
+
+#: ../src/eom-window.c:3953
+msgid "Save _As…"
+msgstr ""
+
+#: ../src/eom-window.c:3954
+msgid "Save the selected images with a different name"
+msgstr ""
+
+#: ../src/eom-window.c:3956
+msgid "_Print…"
+msgstr ""
+
+#: ../src/eom-window.c:3957
+msgid "Print the selected image"
+msgstr ""
+
+#: ../src/eom-window.c:3959
+msgid "Prope_rties"
+msgstr ""
+
+#: ../src/eom-window.c:3960
+msgid "Show the properties and metadata of the selected image"
+msgstr ""
+
+#: ../src/eom-window.c:3962
 msgid "_Undo"
 msgstr "_Буцаад"
 
-#: shell/eom-window.c:2259
+#: ../src/eom-window.c:3963
+msgid "Undo the last change in the image"
+msgstr ""
+
+#: ../src/eom-window.c:3965
 msgid "Flip _Horizontal"
 msgstr "_Хэвтээгээр тольдох"
 
-#: shell/eom-window.c:2260
+#: ../src/eom-window.c:3966
+msgid "Mirror the image horizontally"
+msgstr ""
+
+#: ../src/eom-window.c:3968
 msgid "Flip _Vertical"
 msgstr "_Босоогоор тольдох"
 
-#: shell/eom-window.c:2262
-#, fuzzy
-msgid "_Rotate Clockwise"
-msgstr "Цагийн зүүний _дагуу эргүүлэх"
-
-#: shell/eom-window.c:2263
-#, fuzzy
-msgid "Rotate Counter C_lockwise"
-msgstr "Цагийн зүүний _эсрэг эргүүлэх"
-
-#: shell/eom-window.c:2264
-#, fuzzy
-msgid "Rotat_e 180°"
-msgstr "180° _эргүүлэх"
-
-#: shell/eom-window.c:2266
-msgid "Delete"
+#: ../src/eom-window.c:3969
+msgid "Mirror the image vertically"
 msgstr ""
 
-#: shell/eom-window.c:2268
-msgid "_Full Screen"
-msgstr "_Дэлгэц дүүрэн"
+#: ../src/eom-window.c:3971
+msgid "_Rotate Clockwise"
+msgstr ""
 
-#: shell/eom-window.c:2269
+#: ../src/eom-window.c:3972
+msgid "Rotate the image 90 degrees to the right"
+msgstr ""
+
+#: ../src/eom-window.c:3974
+msgid "Rotate Counterc_lockwise"
+msgstr ""
+
+#: ../src/eom-window.c:3975
+msgid "Rotate the image 90 degrees to the left"
+msgstr ""
+
+#: ../src/eom-window.c:3977
+msgid "Set as _Desktop Background"
+msgstr ""
+
+#: ../src/eom-window.c:3978
+msgid "Set the selected image as the desktop background"
+msgstr ""
+
+#: ../src/eom-window.c:3981
+msgid "Move the selected image to the trash folder"
+msgstr ""
+
+#: ../src/eom-window.c:3983 ../src/eom-window.c:3995 ../src/eom-window.c:3998
 msgid "_Zoom In"
 msgstr "_Томсгох"
 
-#: shell/eom-window.c:2270
+#: ../src/eom-window.c:3984 ../src/eom-window.c:3996
+msgid "Enlarge the image"
+msgstr ""
+
+#: ../src/eom-window.c:3986 ../src/eom-window.c:4001
 msgid "Zoom _Out"
 msgstr "Агшаах"
 
-#: shell/eom-window.c:2271
+#: ../src/eom-window.c:3987 ../src/eom-window.c:3999 ../src/eom-window.c:4002
+msgid "Shrink the image"
+msgstr ""
+
+#: ../src/eom-window.c:3989
 msgid "_Normal Size"
 msgstr "_Энгийн хэмжээ"
 
-#: shell/eom-window.c:2272
+#: ../src/eom-window.c:3990
+msgid "Show the image at its normal size"
+msgstr ""
+
+#: ../src/eom-window.c:3992
 msgid "Best _Fit"
 msgstr "Үзэмжийг тохируулах"
 
-#: shell/main.c:236
-#, fuzzy, c-format
-msgid ""
-"You are about to open %i windows simultaneously. Do you want to open them in "
-"a collection instead?"
+#: ../src/eom-window.c:3993
+msgid "Fit the image to the window"
 msgstr ""
-"Та эдгээр %i цонхуудыг нэгэн зэрэг нээх гэж байна. Та үүний оронд эдгээрийг "
-"нэг цомогт нээх үү?"
 
-#: shell/main.c:240
-msgid "Open multiple single windows?"
-msgstr "Олон дан цонхонд нээх үү?"
+#: ../src/eom-window.c:4010
+msgid "_Fullscreen"
+msgstr ""
 
-#: shell/main.c:244
-msgid "Single Windows"
-msgstr "Дан цонхууд"
+#: ../src/eom-window.c:4011
+msgid "Show the current image in fullscreen mode"
+msgstr ""
 
-#: shell/main.c:246
+#: ../src/eom-window.c:4013
+msgid "Pause Slideshow"
+msgstr ""
+
+#: ../src/eom-window.c:4014
+msgid "Pause or resume the slideshow"
+msgstr ""
+
+#: ../src/eom-window.c:4019 ../src/eom-window.c:4034
+msgid "_Previous Image"
+msgstr ""
+
+#: ../src/eom-window.c:4020
+msgid "Go to the previous image of the collection"
+msgstr ""
+
+#: ../src/eom-window.c:4022
+msgid "_Next Image"
+msgstr ""
+
+#: ../src/eom-window.c:4023
+msgid "Go to the next image of the collection"
+msgstr ""
+
+#: ../src/eom-window.c:4025 ../src/eom-window.c:4037
+msgid "_First Image"
+msgstr ""
+
+#: ../src/eom-window.c:4026
+msgid "Go to the first image of the collection"
+msgstr ""
+
+#: ../src/eom-window.c:4028 ../src/eom-window.c:4040
+msgid "_Last Image"
+msgstr ""
+
+#: ../src/eom-window.c:4029
+msgid "Go to the last image of the collection"
+msgstr ""
+
+#: ../src/eom-window.c:4031
+msgid "_Random Image"
+msgstr ""
+
+#: ../src/eom-window.c:4032
+msgid "Go to a random image of the collection"
+msgstr ""
+
+#: ../src/eom-window.c:4046
+msgid "_Slideshow"
+msgstr ""
+
+#: ../src/eom-window.c:4047
+msgid "Start a slideshow view of the images"
+msgstr ""
+
+#: ../src/eom-window.c:4113
+msgid "Previous"
+msgstr ""
+
+#: ../src/eom-window.c:4117
+msgid "Next"
+msgstr ""
+
+#: ../src/eom-window.c:4121
+msgid "Right"
+msgstr ""
+
+#: ../src/eom-window.c:4124
+msgid "Left"
+msgstr ""
+
+#: ../src/eom-window.c:4127
+msgid "In"
+msgstr ""
+
+#: ../src/eom-window.c:4130
+msgid "Out"
+msgstr ""
+
+#: ../src/eom-window.c:4133
+msgid "Normal"
+msgstr ""
+
+#: ../src/eom-window.c:4136
+msgid "Fit"
+msgstr ""
+
+#: ../src/eom-window.c:4139
 msgid "Collection"
 msgstr "Цомог"
 
-#: shell/main.c:298
-#, fuzzy
-msgid "File not found."
-msgid_plural "Files not found."
-msgstr[0] "Файлууд олдлоо."
-msgstr[1] "Файлууд олдлоо."
+#: ../src/eom-window.c:4142
+msgctxt "action (to trash)"
+msgid "Trash"
+msgstr ""
 
-#: shell/util.c:52
+#: ../src/eom-plugin-manager.c:51
+msgid "Plugin"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:52
+msgid "Enabled"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:513
+msgid "C_onfigure"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:523
+msgid "A_ctivate"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:535
+msgid "Ac_tivate All"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:540
+msgid "_Deactivate All"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:834
+msgid "Active _Plugins:"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:863
+msgid "_About Plugin"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:870
+msgid "C_onfigure Plugin"
+msgstr ""
+
+#: ../src/main.c:73
+msgid "Open in fullscreen mode"
+msgstr ""
+
+#: ../src/main.c:74
+msgid "Disable image collection"
+msgstr ""
+
+#: ../src/main.c:75
+msgid "Open in slideshow mode"
+msgstr ""
+
+#: ../src/main.c:77
+msgid "Start a new instance instead of reusing an existing one"
+msgstr ""
+
+#: ../src/main.c:80
+msgid "Show the application's version"
+msgstr ""
+
+#: ../src/main.c:81
+msgid "[FILE…]"
+msgstr ""
+
+#. I18N: The '%s' is replaced with eom's command name.
+#: ../src/main.c:207
 #, c-format
-msgid "Could not open `%s'"
-msgstr "`%s' нээгдсэнгүй"
-
-#~ msgid "EOM Image Collection Viewer"
-#~ msgstr "EOM-зургийн цомог харагч"
-
-#~ msgid "EOM Image collection view factory"
-#~ msgstr "EOM-зургийн цомгийн үзвэр боловсруулагч"
-
-#~ msgid "View as I_mage Collection"
-#~ msgstr "_Зургийн цомгоор харах"
-
-#~ msgid "View as Image Collection"
-#~ msgstr "Зургийн цомгоор харах"
-
-#~ msgid "Next"
-#~ msgstr "Дараачийн"
-
-#~ msgid "Next Image"
-#~ msgstr "Дараачийн зураг"
-
-#~ msgid "Previous"
-#~ msgstr "Өмнөх"
-
-#~ msgid "Previous Image"
-#~ msgstr "Өмнөх зураг"
-
-#~ msgid "Slide Show"
-#~ msgstr "Диафильм"
-
-#~ msgid "Saving finished"
-#~ msgstr "Хадгалалт дууслаа"
-
-#~ msgid "Move to Trash"
-#~ msgstr "Хогийн саванд хая"
-
-#~ msgid "Collection View"
-#~ msgstr "Цомог харах"
-
-#~ msgid "Images: %i/%i"
-#~ msgstr "Зураг: %i/%i"
-
-#~ msgid "Window Title"
-#~ msgstr "Цонхны нэр"
-
-#~ msgid "Status Text"
-#~ msgstr "Статус текст"
-
-#~ msgid "Progress of Image Loading"
-#~ msgstr "Зураг ачаалах прогресс"
-
-#~ msgid "EOM Image"
-#~ msgstr "EOM-Зураг"
-
-#~ msgid "EOM Image Viewer"
-#~ msgstr "EOM-Зургийн үзүүлэн"
-
-#~ msgid "EOM Image viewer factory"
-#~ msgstr "EOM-зургийн үзүллэнгийн боловсруулагч"
-
-#~ msgid "Embeddable EOM Image"
-#~ msgstr "Хүрээлүүлсэн EOM-Зураг"
-
-#~ msgid "Image"
-#~ msgstr "Зураг"
-
-#~ msgid "Images can only be saved as local files."
-#~ msgstr "Зургууд зөвхөн локал буюу дотоод файлаар л хадгалагдана."
-
-#~ msgid "Unsupported image type for saving."
-#~ msgstr "Хадгалахад дэмжигдээгүй зургийн файл төрөл"
-
-#~ msgid "Page"
-#~ msgstr "Хуудас"
-
-#~ msgid "Preview"
-#~ msgstr "Хэвлэх жинхэнэ хэлбэр"
-
-#~ msgid "Millimeter"
-#~ msgstr "Миллиметр"
-
-#~ msgid "Paper"
-#~ msgstr "Цаас"
-
-#~ msgid "% of original size"
-#~ msgstr "Эх хувийн хэмжээний %"
-
-#~ msgid "Adjust to "
-#~ msgstr "Дараах хэлбэрт тохируулах:"
-
-#~ msgid "Cutting help"
-#~ msgstr "Зүсэх заавар"
-
-#~ msgid "Down, then right"
-#~ msgstr "Эхлээд доош нь дараа нь баруун гар тийш"
-
-#~ msgid "Fit to page"
-#~ msgstr "Хуудсанд багтаах"
-
-#~ msgid "Horizontally"
-#~ msgstr "Хэвтээ"
-
-#~ msgid "Horizontally by "
-#~ msgstr "Хэвтээгээр"
-
-#~ msgid "Margins"
-#~ msgstr "Хүрээ"
-
-#~ msgid "Ordering help"
-#~ msgstr "Эрэмбэлэх тусламж"
-
-#~ msgid "Overlap"
-#~ msgstr "Давхарлах"
-
-#~ msgid "Overlap help"
-#~ msgstr "Давхарлах заавар"
-
-#~ msgid "Page order"
-#~ msgstr "Хуудасны дараалал"
-
-#~ msgid "Right, then down"
-#~ msgstr "Эхлээд баруун гар тийш дараа нь доош нь"
-
-#~ msgid "Scale"
-#~ msgstr "Шугам татах"
-
-#~ msgid "Show"
-#~ msgstr "Харуулах"
-
-#~ msgid "Vertically"
-#~ msgstr "Босоо"
-
-#~ msgid "Vertically by "
-#~ msgstr "Босоогоор"
-
-#~ msgid "The name of the file or data to print"
-#~ msgstr "Файл эсвэл хэвлэх өгөгдлийн нэр"
-
-#~ msgid "Cancel"
-#~ msgstr "Таслан зогсоох"
-
-#~ msgid "Change the visibility of the statusbar in the current window"
-#~ msgstr "Идэвхитэй цонхны төлөв самбарын харагдац өөрчилөх"
-
-#~ msgid "Change the visibility of the toolbar in the current window"
-#~ msgstr "Идэвхитэй цонхны багаж самбарын харагдац өөрчилөх"
-
-#~ msgid "New"
-#~ msgstr "Шинэ"
-
-#~ msgid "Open"
-#~ msgstr "Нээх"
-
-#~ msgid "Open in new window"
-#~ msgstr "Шинэ цонхонд нээх"
-
-#~ msgid "Open in this window"
-#~ msgstr "Энэ цонхондоо нээх"
-
-#~ msgid "Quit the program"
-#~ msgstr "Программаас гарах"
-
-#~ msgid "_Quit"
-#~ msgstr "_Гарах"
-
-#~ msgid "translator_credits-PLEASE_ADD_YOURSELF_HERE"
-#~ msgstr "Санлигийн Бадрал <badral@openmn.org>"
-
-#~ msgid "Fit"
-#~ msgstr "Тааруулах"
-
-#~ msgid "In"
-#~ msgstr "Томоор"
-
-#~ msgid "Normal"
-#~ msgstr "Энгийн"
-
-#~ msgid "Out"
-#~ msgstr "Жижгээр"
-
-#~ msgid "Full Screen"
-#~ msgstr "Дэлгэц дүүрэн"
-
-#~ msgid "Previews the image to be printed"
-#~ msgstr "Хэвлэхээр завдаж байгаа зургийг урьдчилан үзүүлэх"
-
-#~ msgid "Print Previe_w..."
-#~ msgstr "_Хэвлэх хэлбэр..."
-
-#~ msgid "Print Set_up"
-#~ msgstr "Хэвлэлтийн ф_ормат"
-
-#~ msgid "Print image to the printer"
-#~ msgstr "Зургийг хэвлэгчид илгээх"
-
-#~ msgid "Rotate Left"
-#~ msgstr "Зүүнтээ эргүүлэх"
-
-#~ msgid "Rotate Right"
-#~ msgstr "Баруунтаа эргүүлэх"
-
-#~ msgid "Setup the page settings for your current printer"
-#~ msgstr "Одоо идэвхтэй байгаа хэвлэгчийн Хуудасны форматыг тохируулах"
-
-#~ msgid "_Print..."
-#~ msgstr "_Хэвлэх..."
-
-#~ msgid "/Rotate C_lockwise"
-#~ msgstr "/Цагийн зүүний дагуу эргүүлэх"
-
-#~ msgid "/Rotate Counte_r Clockwise"
-#~ msgstr "/Цагийн зүүний эсрэг эргүүлэх"
-
-#~ msgid "/_Zoom In"
-#~ msgstr "/_Томсгох"
-
-#~ msgid "/Zoom _Out"
-#~ msgstr "/_Агшаах"
-
-#~ msgid "/_Normal Size"
-#~ msgstr "/_Энгийн хэмжээ"
-
-#~ msgid "/Best _Fit"
-#~ msgstr "/Үзэмжийг т_охируулах"
-
-#~ msgid "/_Close"
-#~ msgstr "/Х_аах"
-
-#~ msgid "Loading of image %s failed."
-#~ msgstr "%s зургийг ачаалж чадсангүй."
-
-#~ msgid ""
-#~ "Loading of image %s failed.\n"
-#~ "Reason: %s."
-#~ msgstr ""
-#~ "%s зургийг ачаалж чадсангүй.\n"
-#~ "Шалтгаан нь: %s."
-
-#~ msgid "Loading failed"
-#~ msgstr "Ачаалж чадсангүй"
-
-#~ msgid "Image successfully saved"
-#~ msgstr "Зураг амжилттай хадгалагдлаа"
-
-#~ msgid "Image saving failed"
-#~ msgstr "Зураг хадгалагдсангүй"
-
-#~ msgid "Image Height"
-#~ msgstr "Зургийн өндрийн хэмжээ"
-
-#~ msgid "Statusbar Text"
-#~ msgstr "Төлөв самбарын текст"
-
-#~ msgid "Desired Window Width"
-#~ msgstr "Цонхны хүссэн өргөн"
-
-#~ msgid "Desired Window Height"
-#~ msgstr "Цонхны хүссэн өндөр"
-
-#~ msgid "dialog1"
-#~ msgstr "Диалог1"
-
-#~ msgid "Could not find files"
-#~ msgstr "Файлууд олдсонгүй"
-
-#~ msgid "Don't use zoom larger than 100%"
-#~ msgstr "100% аас илүү томруулахгүй"
-
-#~ msgid "_Interpolate image on zoom (better quality but slower)"
-#~ msgstr "Зургийг томруулахдаа _интерполяц хийх (илүү чанартай ч удах талтай)"
-
-#~ msgid "By Extension"
-#~ msgstr "Өргөтгөлөөр"
-
-#~ msgid "Unsupported image file format for saving."
-#~ msgstr "Хадгалахад дэмжигдээгүй зургийн файл формат"
-
-#~ msgid "Determine File Type:"
-#~ msgstr "Файлын форматыг зааж өгөх:"
-
-#~ msgid "Automatically pick window size"
-#~ msgstr "Цонхны хэмжээг автоматаар сонгох"
-
-#~ msgid "Default zoom factor for the full screen view"
-#~ msgstr "Дэлгэц дүүрэн харуулахад томруулах харьцааг стандартаар сонгох"
-
-#~ msgid ""
-#~ "Default zoom factor for the full screen view. Possible values are: 0 (use "
-#~ "1:1 zoom factor), 1 (use the same zoom factor as the image window), 2 "
-#~ "(fit the image to the screen)."
-#~ msgstr ""
-#~ "Дэлгэц дүүрэн харуулахад томруулах харьцааг стандартаар сонгохБоломжит "
-#~ "хэмжээнүүд нь бол: 0 (1:1 харьцаа), 1 (уг зурагны өөрийнх нь хэмжээний "
-#~ "харьцааг сонгох), 2 (зургийг дэлгэцэнд нь тааруулах)."
-
-#~ msgid "Fit standard-sized images to the screen"
-#~ msgstr "Стандарт хэмжээ бүхий зурагнуудыг дэлгэцэнд багтаана"
-
-#~ msgid "Put a bevel around the screen"
-#~ msgstr "Дэлгэцийг гадна хөвөөг дагуулан хүрээ татах"
-
-#~ msgid "Scrollbar policy for the full screen view"
-#~ msgstr ""
-#~ "Дэлгэц дүүрэн үзүүлэхэд дэлгэцийн баруун болон доод хөвөөнд гүйлгэх "
-#~ "цонхыг ашиглана"
-
-#~ msgid ""
-#~ "Whether image windows should pick their size and zooming factor "
-#~ "automatically based on the size of the image. If this option is not set, "
-#~ "image windows will get whatever size the window manager assigns to them."
-#~ msgstr ""
-#~ "Зургийн нүдний хэмжээ болон тосгох харьцаа нь зургийн өөрийнх нь "
-#~ "хэмжээнээс хамаарах эсэх. Хэрэв энэ харьцааг тогтоож өгөөгүй бол зургийн "
-#~ "нүд нь цонхны менежерээс өгөгдсөн хэмжээг авна."
-
-#~ msgid ""
-#~ "Whether the full screen view should display a bevel along the edges of "
-#~ "the screen."
-#~ msgstr ""
-#~ "Дэлгэц дүүрэн үзүүлэх горимд зургийн гадуур хүрээ татах эсвэл үгүйг "
-#~ "тодорхойлно."
-
-#~ msgid ""
-#~ "Whether to display scrollbars on the full screen view. Possible values "
-#~ "are: 1 (automatic; only display scrollbars if the image is larger than "
-#~ "the window), 2 (never display scrollbars)."
-#~ msgstr ""
-#~ "Гүйлгэх цонх нь дэлгэц дүүрэн үзүүлэх горимд ажиллах эсэх. Боломжит "
-#~ "утгууд: 1 (автоматаар; Зураг цонхноосоо илүү гарах бол гүйлгэх цонхыг "
-#~ "идэвхжүүлэх), 2 (гүйлгэх цонхыг ерөөс үзүүлэхгүй)."
-
-#~ msgid ""
-#~ "Whether to fit standard-sized images to the screen when in full screen "
-#~ "mode. These are images with sizes like 320x240, 640x480, 800x800, etc. "
-#~ "This selects whether such images should be scaled to fit the screen "
-#~ "regardless of the setting for the default zoom factor of the full screen "
-#~ "view."
-#~ msgstr ""
-#~ "Зургийн стандарт хэмжээ нь дэлгэц дүүрэн үзүүлэхтэй ижил тохируулахЭдгээр "
-#~ "зургуудын хэмуээ нь 320x240, 640x480, 800x800,г.м. Ийм хэмжээний зургууд "
-#~ "дэлгэц дүүрэн үзүүлэх хэмжээний тохируулгаас хамааралгүй дэлгэцэнд "
-#~ "зохицуулан гарна."
-
-#~ msgid "Copyright (C) 2000-2002 The Free Software Foundation"
-#~ msgstr "© 2000-2002 The Free Software Foundation"
-
-#~ msgid "Couldn't initialize MateVFS!\n"
-#~ msgstr "MateVFS-ийгээ таньсангүй !\n"
-
-#~ msgid "pts"
-#~ msgstr "pts"
-
-#~ msgid "points"
-#~ msgstr "Цэг"
-
-#~ msgid "mm"
-#~ msgstr "mm"
-
-#~ msgid "cm"
-#~ msgstr "cm"
-
-#~ msgid "centimeter"
-#~ msgstr "Сантиметр"
-
-#~ msgid "inch"
-#~ msgstr "Ямх"
-
-#~ msgid "Print Setup"
-#~ msgstr "Хэвлэлийн тохируулга"
-
-#~ msgid "Print"
-#~ msgstr "Хэвлэх"
-
-#~ msgid "Print preview"
-#~ msgstr "Хэвлэх жинхэнэ хэлбэр"
-
-#~ msgid "Units: "
-#~ msgstr "Бүхэл нэгжүүд: "
-
-#~ msgid "Paper size:"
-#~ msgstr "Цаасны хэмжээ:"
-
-#~ msgid "Orientation"
-#~ msgstr "Хэвлэх баримжаа"
-
-#~ msgid "Portrait"
-#~ msgstr "Босоо формат"
-
-#~ msgid "Landscape"
-#~ msgstr "Хэвтээ формат"
-
-#~ msgid "Left:"
-#~ msgstr "Зүүн хүрээний өргөн:"
-
-#~ msgid "Right:"
-#~ msgstr "Баруун хүрээний өргөн:"
-
-#~ msgid "Bottom:"
-#~ msgstr "Доод хүрээний өргөн::"
-
-#~ msgid "Overlap horizontally by "
-#~ msgstr "Дараах хэмжээгээр хэвтээ чиглэлд өнгөлж давхарлах"
-
-#~ msgid "Overlap vertically by "
-#~ msgstr "Дараах хэмжээгээр босоо чиглэлд өнгөлж давхарлах"
-
-#~ msgid "Printing"
-#~ msgstr "Хэвлэх"
-
-#~ msgid "Helpers"
-#~ msgstr "Туслагчид"
-
-#~ msgid "Eye of Mate Image Viewer"
-#~ msgstr "Mate-зургийн харагчийн нүд"
-
-#~ msgid "By c_olor"
-#~ msgstr "_Өнгөөр"
-
-#~ msgid "Indicate Transparency"
-#~ msgstr "Тунгалагийн зааж өгөх"
-
-#~ msgid "Pick a color"
-#~ msgstr "Нэг өнгө сонго"
-
-#~ msgid "interpolation type"
-#~ msgstr "Интерполяцийн төрөл"
-
-#~ msgid "the type of interpolation to use"
-#~ msgstr "Хэрэглэх итерполяцийн төрөл"
-
-#~ msgid "check type"
-#~ msgstr "Шатрын хөлөг_хээн төрөл"
-
-#~ msgid "the type of chequering to use"
-#~ msgstr "Шатарласан хээний төрөл"
-
-#~ msgid "the size of chequers to use"
-#~ msgstr "Шатарласан хээн хэмжээ"
-
-#~ msgid "dither type"
-#~ msgstr "Торлогийн төрөл"
-
-#~ msgid "BMP"
-#~ msgstr "BMP"
-
-#~ msgid "GIF"
-#~ msgstr "GIF"
-
-#~ msgid "ICO"
-#~ msgstr "ICO"
-
-#~ msgid "JPEG"
-#~ msgstr "JPEG"
-
-#~ msgid "PNG"
-#~ msgstr "PNG"
-
-#~ msgid "PNM"
-#~ msgstr "PNM"
-
-#~ msgid "RAS"
-#~ msgstr "RAS"
-
-#~ msgid "SVG"
-#~ msgstr "SVG"
-
-#~ msgid "TGA"
-#~ msgstr "TGA"
-
-#~ msgid "TIFF"
-#~ msgstr "TIFF"
-
-#~ msgid "XBM"
-#~ msgstr "XBM"
-
-#~ msgid "XPM"
-#~ msgstr "XPM"
-
-#~ msgid ""
-#~ "You are about to open %i windows\n"
-#~ "simultanously. Do you want to continue?"
-#~ msgstr ""
-#~ "Та %i цонхуудыг\n"
-#~ "зэрэг нээх гэж байна. Үргэлжлүүлэх үү?"
-
-#~ msgid ""
-#~ "Could not access %s\n"
-#~ "Eye of Mate will not be able to display this file."
-#~ msgstr ""
-#~ "Файл %s-д хандаж чадсангүй.\n"
-#~ "Eye of Mate энэ файлыг үзүүлэх боломжгүй байна."
-
-#~ msgid ""
-#~ "The following files cannot be displayed because Eye of Mate was not able "
-#~ "to access them:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Дараахи файлуудад хандаж чадаагүй учраас Eye of Mate энэ файлыг үзүүлэх "
-#~ "боломжгүй байна.:\n"
-#~ "%s"
-
-#~ msgid "Could not initialize MateVFS!\n"
-#~ msgstr "MateVFS танигдсангүй!\n"
-
-#~ msgid "Could not initialize MateComponent!\n"
-#~ msgstr "MateComponent танигдсангүй!\n"
-
-#~ msgid "Could not save image as '%s': %s."
-#~ msgstr "Зургийг %s хадгалж чадсангүй: %s"
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr ""

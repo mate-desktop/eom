@@ -1,23 +1,21 @@
-# Vietnamese translation for Eye of Mate.
-# Copyright © 2008 Mate i18n Project for Vietnamese.
-# This file is distributed under the same licence as the eom package.
-# Nguyễn Thái Ngọc Duy <pclouds@gmail.com>, 2002-2004,2007-2008.
-# Phạm Thành Long <lngt@ngonngu.net>, 2007.
-# Clytie Siddall <clytie@riverland.net.au>, 2005-2009.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: eom MATE TRUNK\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=eom&component=general\n"
-"POT-Creation-Date: 2009-12-14 16:08+0000\n"
-"PO-Revision-Date: 2009-12-24 12:49+0700\n"
-"Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
-"Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2011-12-30 15:48+0100\n"
+"PO-Revision-Date: 2011-12-30 15:16+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: LocFactoryEditor 1.8\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -59,10 +57,6 @@ msgstr "Xoá thanh công cụ đã chọn"
 msgid "Separator"
 msgstr "Thanh phân cách"
 
-#: ../cut-n-paste/totem-screensaver/totem-scrsaver.c:111
-msgid "Running in fullscreen mode"
-msgstr "Đang chạy trong chế độ toàn màn hình"
-
 #: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:1
 msgid "Activate fullscreen mode with double-click"
 msgstr "Kích hoạt chế độ toàn màn hình bằng cú nhấn đôi"
@@ -72,12 +66,12 @@ msgid "Fullscreen with double-click"
 msgstr "Toàn màn hình bằng cú nhấn đôi"
 
 #: ../plugins/reload/reload.eom-plugin.desktop.in.h:1
-#: ../plugins/reload/eom-reload-plugin.c:45
+#: ../plugins/reload/eom-reload-plugin.c:38
 msgid "Reload Image"
 msgstr "Nạp lại ảnh"
 
 #: ../plugins/reload/reload.eom-plugin.desktop.in.h:2
-#: ../plugins/reload/eom-reload-plugin.c:47
+#: ../plugins/reload/eom-reload-plugin.c:38
 msgid "Reload current image"
 msgstr "Nạp lại ảnh hiện tại"
 
@@ -93,144 +87,139 @@ msgstr "Hiển thị ngày tháng của ảnh trên thanh trạng thái của c�
 msgid "Browse and rotate images"
 msgstr "Duyệt và xoay ảnh"
 
-#: ../data/eom.desktop.in.in.h:2
-msgid "Image Viewer"
-msgstr "Bộ xem ảnh"
+#: ../data/eom.desktop.in.in.h:2 ../src/main.c:66 ../src/main.c:248
+msgid "Eye of MATE Image Viewer"
+msgstr "Bộ xem ảnh Mắt MATE"
 
 #: ../data/eom-image-properties-dialog.ui.h:1
-msgid "<b>Aperture Value:</b>"
-msgstr "<b>Độ mở:</b>"
+msgid "Aperture Value:"
+msgstr ""
 
 #: ../data/eom-image-properties-dialog.ui.h:2
-msgid "<b>Author:</b>"
-msgstr "<b>Tác giả:</b>"
+msgid "Author:"
+msgstr ""
 
 #: ../data/eom-image-properties-dialog.ui.h:3
-msgid "<b>Bytes:</b>"
-msgstr "<b>Byte:</b>"
+msgid "Bytes:"
+msgstr ""
 
 #: ../data/eom-image-properties-dialog.ui.h:4
-msgid "<b>Camera Model:</b>"
-msgstr "<b>Loại máy ảnh:</b>"
+msgid "Camera Model:"
+msgstr ""
 
 #: ../data/eom-image-properties-dialog.ui.h:5
-msgid "<b>Copyright:</b>"
-msgstr "<b>Tác quyền:</b>"
+msgid "Copyright:"
+msgstr ""
 
 #: ../data/eom-image-properties-dialog.ui.h:6
-msgid "<b>Date/Time:</b>"
-msgstr "<b>Ngày/Giờ:</b>"
+msgid "Date/Time:"
+msgstr ""
 
 #: ../data/eom-image-properties-dialog.ui.h:7
-msgid "<b>Description:</b>"
-msgstr "<b>Mô tả:</b>"
+msgid "Description:"
+msgstr ""
 
 #: ../data/eom-image-properties-dialog.ui.h:8
-msgid "<b>Details</b>"
-msgstr "<b>Chi tiết</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:9
-msgid "<b>Exposure Time:</b>"
-msgstr "<b>Thời gian phơi sáng:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:10
-msgid "<b>Flash:</b>"
-msgstr "<b>Đèn nháy:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:11
-msgid "<b>Focal Length:</b>"
-msgstr "<b>Tiêu cự:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:12
-msgid "<b>Height:</b>"
-msgstr "<b>Cao:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:13
-msgid "<b>ISO Speed Rating:</b>"
-msgstr "<b>Tốc độ ISO:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:14
-msgid "<b>Keywords:</b>"
-msgstr "<b>Từ khoá:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:15
-msgid "<b>Location:</b>"
-msgstr "<b>Vị trí:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:16
-msgid "<b>Metering Mode:</b>"
-msgstr "<b>Chế độ đo:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:17
-msgid "<b>Name:</b>"
-msgstr "<b>Tên:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:18
-msgid "<b>Type:</b>"
-msgstr "<b>Kiểu:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:19
-msgid "<b>Width:</b>"
-msgstr "<b>Rộng:</b>"
-
-#: ../data/eom-image-properties-dialog.ui.h:20
-#| msgid "<b>Details</b>"
 msgid "Details"
 msgstr "Chi tiết"
 
-#: ../data/eom-image-properties-dialog.ui.h:21
+#: ../data/eom-image-properties-dialog.ui.h:9
+msgid "Exposure Time:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:10
+msgid "Flash:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:11
+msgid "Focal Length:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:12
 msgid "General"
 msgstr "Chung"
 
-#: ../data/eom-image-properties-dialog.ui.h:22
+#: ../data/eom-image-properties-dialog.ui.h:13
+msgid "Height:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:14
+msgid "ISO Speed Rating:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:15
 msgid "Image Properties"
 msgstr "Thuộc tính ảnh"
 
-#: ../data/eom-image-properties-dialog.ui.h:23
+#: ../data/eom-image-properties-dialog.ui.h:16
+msgid "Keywords:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:17
+msgid "Location:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:18
 msgid "Metadata"
 msgstr "Siêu dữ liệu"
 
-#: ../data/eom-image-properties-dialog.ui.h:24
+#: ../data/eom-image-properties-dialog.ui.h:19
+msgid "Metering Mode:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:20
+msgid "Name:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:21
+msgid "Type:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:22
+msgid "Width:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:23
 msgid "_Next"
 msgstr "_Tiếp"
 
-#: ../data/eom-image-properties-dialog.ui.h:25
+#: ../data/eom-image-properties-dialog.ui.h:24
 msgid "_Previous"
 msgstr "T_rước"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:1
-msgid "<b>File Name Preview</b>"
-msgstr "<b>Xem trước theo tên tập tin</b>"
-
 #: ../data/eom-multiple-save-as-dialog.ui.h:2
-msgid "<b>File Path Specifications</b>"
-msgstr "<b>Đặc tả đường dẫn tập tin</b>"
+#, no-c-format
+msgid "<b>%f:</b> original filename"
+msgstr ""
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:3
-msgid "<b>Options</b>"
-msgstr "<b>Tùy chọn</b>"
+#: ../data/eom-multiple-save-as-dialog.ui.h:4
+#, no-c-format
+msgid "<b>%n:</b> counter"
+msgstr ""
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:5
-#, no-c-format
-msgid "<small><i><b>%f:</b> original filename</i></small>"
-msgstr "<small><i><b>%f:</b> tên tập tin gốc</i></small>"
-
-#: ../data/eom-multiple-save-as-dialog.ui.h:7
-#, no-c-format
-msgid "<small><i><b>%n:</b> counter</i></small>"
-msgstr "<small><i><b>%n:</b> bộ đếm</i></small>"
-
-#: ../data/eom-multiple-save-as-dialog.ui.h:8
 msgid "Choose a folder"
 msgstr "Chọn thư mục"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:9
+#: ../data/eom-multiple-save-as-dialog.ui.h:6
 msgid "Destination folder:"
 msgstr "Thư mục đích:"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:10
+#: ../data/eom-multiple-save-as-dialog.ui.h:7
+msgid "File Name Preview"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:8
+msgid "File Path Specifications"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:9
 msgid "Filename format:"
 msgstr "Định dạng tên tập tin:"
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:10
+msgid "Options"
+msgstr ""
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:11
 msgid "Rename from:"
@@ -253,90 +242,98 @@ msgid "To:"
 msgstr "Đến:"
 
 #: ../data/eom-preferences-dialog.ui.h:1
-msgid "<b>Image Enhancements</b>"
-msgstr "<b>Tăng cường ảnh</b>"
-
-#: ../data/eom-preferences-dialog.ui.h:2
-msgid "<b>Image Zoom</b>"
-msgstr "<b>Phóng ảnh</b>"
-
-#: ../data/eom-preferences-dialog.ui.h:3
-msgid "<b>Sequence</b>"
-msgstr "<b>Cảnh</b>"
-
-#: ../data/eom-preferences-dialog.ui.h:4
-msgid "<b>Transparent Parts</b>"
-msgstr "<b>Phần trong suốt</b>"
-
-#: ../data/eom-preferences-dialog.ui.h:5
 msgid "As _background"
 msgstr "Dùng màu _nền"
 
-#: ../data/eom-preferences-dialog.ui.h:6
+#: ../data/eom-preferences-dialog.ui.h:2
 msgid "As check _pattern"
 msgstr "Dùng kiểu ô bàn _cờ"
 
-#: ../data/eom-preferences-dialog.ui.h:7
+#: ../data/eom-preferences-dialog.ui.h:3
 msgid "As custom c_olor:"
 msgstr "Dùng màu tự _chọn:"
 
-#: ../data/eom-preferences-dialog.ui.h:8
+#: ../data/eom-preferences-dialog.ui.h:4
+msgid "As custom color:"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:5
+msgid "Background"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:6 ../data/eom.schemas.in.h:6
+msgid "Background Color"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:7
 msgid "Color for Transparent Areas"
 msgstr "Màu trong vùng trong suốt"
 
-#: ../data/eom-preferences-dialog.ui.h:9
+#: ../data/eom-preferences-dialog.ui.h:8
 msgid "E_xpand images to fit screen"
 msgstr "_Mở rộng ảnh để vừa khít màn hình"
 
-#: ../data/eom-preferences-dialog.ui.h:10
+#: ../data/eom-preferences-dialog.ui.h:9
 msgid "Eye of MATE Preferences"
 msgstr "Cấu hình Mắt MATE"
+
+#: ../data/eom-preferences-dialog.ui.h:10
+msgid "Image Enhancements"
+msgstr ""
 
 #: ../data/eom-preferences-dialog.ui.h:11
 msgid "Image View"
 msgstr "Ô xem ảnh"
 
 #: ../data/eom-preferences-dialog.ui.h:12
+msgid "Image Zoom"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:13
 msgid "Plugins"
 msgstr "Phần bổ sung"
 
-#: ../data/eom-preferences-dialog.ui.h:13
+#: ../data/eom-preferences-dialog.ui.h:14
+msgid "Sequence"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:15
 msgid "Slideshow"
 msgstr "Trình chiếu ảnh"
 
-#: ../data/eom-preferences-dialog.ui.h:14
-#| msgid "Smooth images when _zoomed"
+#: ../data/eom-preferences-dialog.ui.h:16
 msgid "Smooth images when zoomed-_in"
 msgstr "Làm mịn ảnh khi phóng to"
 
-#: ../data/eom-preferences-dialog.ui.h:15
-#| msgid "Smooth images when _zoomed"
+#: ../data/eom-preferences-dialog.ui.h:17
 msgid "Smooth images when zoomed-_out"
 msgstr "Làm mịn ảnh khi thu nhỏ"
 
-#: ../data/eom-preferences-dialog.ui.h:16
+#: ../data/eom-preferences-dialog.ui.h:18
+msgid "Transparent Parts"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:19
 msgid "_Automatic orientation"
 msgstr "Tự động định _hướng"
 
-#: ../data/eom-preferences-dialog.ui.h:17
+#: ../data/eom-preferences-dialog.ui.h:20
 msgid "_Loop sequence"
 msgstr "_Lặp cảnh"
 
-#: ../data/eom-preferences-dialog.ui.h:18
+#: ../data/eom-preferences-dialog.ui.h:21
 msgid "_Switch image after:"
 msgstr "_Chuyển đổi ảnh sau:"
 
-#: ../data/eom-preferences-dialog.ui.h:19
+#: ../data/eom-preferences-dialog.ui.h:22
 msgid "seconds"
 msgstr "giây"
 
 #: ../data/eom.schemas.in.h:1
 msgid ""
-"A value greater than 0 determines the seconds an image stays on screen until "
-"the next one is shown automatically. Zero disables the automatic browsing."
-msgstr ""
-"Giá trị lớn hơn 0 xác định số giây hiển thị ảnh cho tới khi tự động hiển thị "
-"ảnh kế tiếp. Đặt là 0 để tắt khả năng duyệt tự động."
+"A value greater than 0 determines the seconds an image stays on screen until"
+" the next one is shown automatically. Zero disables the automatic browsing."
+msgstr "Giá trị lớn hơn 0 xác định số giây hiển thị ảnh cho tới khi tự động hiển thị ảnh kế tiếp. Đặt là 0 để tắt khả năng duyệt tự động."
 
 #: ../data/eom.schemas.in.h:2
 msgid "Active plugins"
@@ -351,221 +348,218 @@ msgstr "Cho phép phóng to hơn 100% từ ban đầu"
 msgid "Automatic orientation"
 msgstr "Tự động định hướng"
 
-#: ../data/eom.schemas.in.h:6
+#: ../data/eom.schemas.in.h:7
 msgid "Delay in seconds until showing the next image"
 msgstr "Thời gian chờ (giây) tới khi hiện ảnh tiếp theo"
 
-#: ../data/eom.schemas.in.h:7
+#: ../data/eom.schemas.in.h:8
 msgid ""
 "Determines how transparency should be indicated. Valid values are "
-"CHECK_PATTERN, COLOR and NONE. If COLOR is choosen, then the trans_color key "
-"determines the used color value."
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
 msgstr ""
-"Xác định cách chỉ thị trạng thái trong suốt. Giá trị hợp lệ là CHECK_PATTERN "
-"(ô bàn cờ), COLOR (màu sắc) và NONE (không). Nếu chọn COLOR, khoá "
-"\"trans_color\" sẽ xác định giá trị màu được dùng."
 
-#: ../data/eom.schemas.in.h:8
-#| msgid "Interpolate Image"
+#: ../data/eom.schemas.in.h:9
 msgid "Extrapolate Image"
 msgstr "Ngoại suy ảnh"
 
-#: ../data/eom.schemas.in.h:9
-msgid ""
-"If activated Eye of MATE wont ask for confirmation when moving images to "
-"the trash. It will still ask if any of the files cannot be moved to the "
-"trash and would be deleted instead."
-msgstr "Nếu kích hoạt, Mắt MATE sẽ không hỏi xác nhận khi cho ảnh vào sọt rác. Sẽ vẫn h3i nếu bất kỳ ảnh nào không thể đưa vào sọt rác và sẽ bị xóa."
-
 #: ../data/eom.schemas.in.h:10
 msgid ""
-"If activated and no image is loaded in the active window, the filechooser "
+"If activated and no image is loaded in the active window, the file chooser "
 "will display the user's pictures folder using the XDG special user "
-"directories. If deactivated or the pictures folder has not been set up it "
+"directories. If deactivated or the pictures folder has not been set up, it "
 "will show the current working directory."
-msgstr "Nếu kích hoạt và không nạp ảnh nào, trình chọn tập tin sẽ hiển thị thư mục ảnh của người dùng theo đặc tả XDG. Nếu bỏ kích hoạt hoặc thư mục ảnh chưa được tạo, hiện ảnh trong thư mục hiện tại."
+msgstr ""
 
 #: ../data/eom.schemas.in.h:11
 msgid ""
-"If activated the detailed metadata list in the properties dialog will be "
-"moved to its own page in the dialog. This should make the dialog more usable "
-"on smaller screens, e.g. as used by netbooks. If disabled the widget will be "
-"embedded on the \"Metadata\" page."
-msgstr "Nếu kích hoạt, danh sách metadata chi tiết trong hộp thoại thuộc tính sẽ chuyển qua một trang riêng. Việc này giúp làm hộp thoại hữu dụng hơn trên màn hình nhỏ, như netbook. Nếu tắt, toàn bộ sẽ được nhúng trong trang \"Metadata\"."
+"If activated, Eye of MATE won't ask for confirmation when moving images to "
+"the trash. It will still ask if any of the files cannot be moved to the "
+"trash and would be deleted instead."
+msgstr ""
 
 #: ../data/eom.schemas.in.h:12
 msgid ""
-"If the transparency key has the value COLOR, then this key determines the "
-"color which is used for indicating transparency."
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable"
+" on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
 msgstr ""
-"Nếu khoá trong suốt có giá trị COLOR (màu sắc), khoá này sẽ xác định màu "
-"được dùng để biểu thị trạng thái trong suốt."
 
 #: ../data/eom.schemas.in.h:13
 msgid ""
-"If this is set to FALSE small images will not be stretched to fit into the "
-"screen initially."
-msgstr ""
-"Nếu đặt là FALSE (sai), ảnh nhỏ sẽ không được kéo to ra để vừa màn hình ngay "
-"từ đầu."
+"If the transparency key has the value COLOR, then this key determines the "
+"color which is used for indicating transparency."
+msgstr "Nếu khoá trong suốt có giá trị COLOR (màu sắc), khoá này sẽ xác định màu được dùng để biểu thị trạng thái trong suốt."
 
 #: ../data/eom.schemas.in.h:14
 msgid ""
-"Image collection pane position. Set to 0 for bottom; 1 for left; 2 for top; "
-"3 for right."
+"If this is active, the color set by the background-color key will be used to"
+" fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
 msgstr ""
-"Vị trí ô cửa sổ chứa tập hợp ảnh. Đặt thành: 0 (bên dưới), 1 (bên trái), 2 "
-"(bên trên) hay 3 (bên phải)."
 
 #: ../data/eom.schemas.in.h:15
+msgid ""
+"If this is set to FALSE small images will not be stretched to fit into the "
+"screen initially."
+msgstr "Nếu đặt là FALSE (sai), ảnh nhỏ sẽ không được kéo to ra để vừa màn hình ngay từ đầu."
+
+#: ../data/eom.schemas.in.h:16
+msgid ""
+"Image collection pane position. Set to 0 for bottom; 1 for left; 2 for top; "
+"3 for right."
+msgstr "Vị trí ô cửa sổ chứa tập hợp ảnh. Đặt thành: 0 (bên dưới), 1 (bên trái), 2 (bên trên) hay 3 (bên phải)."
+
+#: ../data/eom.schemas.in.h:17
 msgid "Interpolate Image"
 msgstr "Nội suy ảnh"
 
-#: ../data/eom.schemas.in.h:16
+#: ../data/eom.schemas.in.h:18
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
 "plugin."
-msgstr ""
-"Danh sách các phần bổ sung còn hoạt động. Nó không chứa “Vị trí” của phần bổ "
-"sung hoạt động. Xem tập tin “.eom-plugin” để tìm “Vị trí” của từng phần bổ "
-"sung."
+msgstr "Danh sách các phần bổ sung còn hoạt động. Nó không chứa “Vị trí” của phần bổ sung hoạt động. Xem tập tin “.eom-plugin” để tìm “Vị trí” của từng phần bổ sung."
 
-#: ../data/eom.schemas.in.h:17
+#: ../data/eom.schemas.in.h:19
 msgid "Loop through the image sequence"
 msgstr "Lặp lại cảnh ảnh"
 
-#: ../data/eom.schemas.in.h:18
+#: ../data/eom.schemas.in.h:20
 msgid "Scroll wheel zoom"
 msgstr "Bánh xe cuộn thu/phóng"
 
-#: ../data/eom.schemas.in.h:19
-msgid "Show/hide the image collection pane scroll buttons."
-msgstr "Hiện/ẩn nút cuộn ở ô tập hợp ảnh."
-
-#: ../data/eom.schemas.in.h:20
-msgid "Show/hide the image collection pane."
-msgstr "Hiện/ẩn ô tập hợp ảnh."
-
 #: ../data/eom.schemas.in.h:21
-msgid "Show/hide the window side pane."
-msgstr "Hiện/ẩn khung lề cửa sổ."
+msgid "Show/Hide the image collection pane scroll buttons."
+msgstr ""
 
 #: ../data/eom.schemas.in.h:22
-msgid "Show/hide the window statusbar."
-msgstr "Hiện/ẩn thanh trạng thái cửa sổ."
+msgid "Show/Hide the image collection pane."
+msgstr ""
 
 #: ../data/eom.schemas.in.h:23
-msgid "Show/hide the window toolbar."
-msgstr "Hiện/ẩn thanh công cụ cửa sổ."
+msgid "Show/Hide the window side pane."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:24
+msgid "Show/Hide the window statusbar."
+msgstr ""
 
 #: ../data/eom.schemas.in.h:25
+msgid "Show/Hide the window toolbar."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:26
+msgid ""
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:28
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
-"This value defines the zooming step used for each scroll event. For example, "
-"0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
-"a 100% zoom increment."
-msgstr ""
-"Số nhân được áp dụng khi sử dụng bánh xe cuộn trên chuột để phóng to hay thu "
-"nhỏ. Giá trị này xác định bước phóng/thu dùng cho mỗi sự kiện cuộn. Chẳng "
-"hạn, giá trị 0.05 phóng to theo 5% mỗi sự kiện cuộn, còn giá trị 1.00 phóng "
-"to theo 100%."
+"This value defines the zooming step used for each scroll event. For example,"
+" 0.05 results in a 5% zoom increment for each scroll event and 1.00 result "
+"in a 100% zoom increment."
+msgstr "Số nhân được áp dụng khi sử dụng bánh xe cuộn trên chuột để phóng to hay thu nhỏ. Giá trị này xác định bước phóng/thu dùng cho mỗi sự kiện cuộn. Chẳng hạn, giá trị 0.05 phóng to theo 5% mỗi sự kiện cuộn, còn giá trị 1.00 phóng to theo 100%."
 
-#: ../data/eom.schemas.in.h:26
+#: ../data/eom.schemas.in.h:29
 msgid "Transparency color"
 msgstr "Màu trong suốt"
 
-#: ../data/eom.schemas.in.h:27
+#: ../data/eom.schemas.in.h:30
 msgid "Transparency indicator"
 msgstr "Chỉ thị trong suốt"
 
-#: ../data/eom.schemas.in.h:28
+#: ../data/eom.schemas.in.h:31
 msgid "Trash images without asking"
 msgstr "Cho vào sọt rác không cần hỏi"
 
-#: ../data/eom.schemas.in.h:29
-msgid ""
-"Whether or not the sequence of images should be shown in an endless loop."
-msgstr "Có hiển thị cảnh ảnh trong vòng lặp vô hạn hay không."
-
-#: ../data/eom.schemas.in.h:30
-msgid ""
-"Whether the filechooser should show the user's pictures folder if no images "
-"are loaded."
-msgstr "Có hiện thư mục ảnh của người dùng khi không nạp ảnh hay không."
-
-#: ../data/eom.schemas.in.h:31
-msgid "Whether the image collection pane should be resizable or not."
-msgstr "Có cho phép thay đổi kích thước ô tập hợp ảnh hay không."
-
 #: ../data/eom.schemas.in.h:32
-#| msgid ""
-#| "Whether the image should be interpolated on zoom or not. This leads to "
-#| "better quality but is somewhat slower than non interpolated images."
-msgid ""
-"Whether the image should be extrapolated on zoom-in or not. This leads to "
-"blurry quality and is somewhat slower than non extrapolated images."
-msgstr "Có ngoại suy ảnh khi phóng to hay không. Tính năng này giúp nâng cao chất lượng ảnh, nhưng chạy chậm hơn ảnh không ngoại suy."
+msgid "Use a custom background color"
+msgstr ""
 
 #: ../data/eom.schemas.in.h:33
-#| msgid ""
-#| "Whether the image should be interpolated on zoom or not. This leads to "
-#| "better quality but is somewhat slower than non interpolated images."
 msgid ""
-"Whether the image should be interpolated on zoom-out or not. This leads to "
-"better quality but is somewhat slower than non interpolated images."
-msgstr "Có nội suy ảnh khi thu nhỏ hay không. Tính năng này giúp nâng cao chất lượng ảnh, nhưng chạy chậm hơn ảnh không nội suy."
+"Whether the file chooser should show the user's pictures folder if no images"
+" are loaded."
+msgstr ""
 
 #: ../data/eom.schemas.in.h:34
+msgid "Whether the image collection pane should be resizable."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:35
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:36
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:37
 msgid ""
 "Whether the image should be rotated automatically based on EXIF orientation."
 msgstr "Có tự động xoay ảnh dựa vào hướng dẫn EXIF hay không."
 
-#: ../data/eom.schemas.in.h:35
+#: ../data/eom.schemas.in.h:38
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
 msgstr "Có dùng trang riêng cho metadata trong hộp thoại thuộc tính không."
 
-#: ../data/eom.schemas.in.h:36
-msgid "Whether the scroll wheel should be used for zooming or not."
-msgstr "Có dùng bánh xe cuộn để phóng to/thu nhỏ hay không."
+#: ../data/eom.schemas.in.h:39
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr ""
 
-#: ../data/eom.schemas.in.h:37
+#: ../data/eom.schemas.in.h:40
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:41
 msgid "Zoom multiplier"
 msgstr "Số nhân phóng/thu"
+
+#: ../src/eom-application.c:123
+msgid "Running in fullscreen mode"
+msgstr "Đang chạy trong chế độ toàn màn hình"
 
 #: ../src/eom-close-confirmation-dialog.c:159
 msgid "Close _without Saving"
 msgstr "Đóng _không lưu"
 
 #: ../src/eom-close-confirmation-dialog.c:193
-#| msgid "Position"
 msgid "Question"
 msgstr "Câu hỏi"
 
-#: ../src/eom-close-confirmation-dialog.c:375
+#: ../src/eom-close-confirmation-dialog.c:374
 msgid "If you don't save, your changes will be lost."
 msgstr "Nếu không lưu, các thay đổi sẽ bị mất."
 
-#: ../src/eom-close-confirmation-dialog.c:410
+#: ../src/eom-close-confirmation-dialog.c:409
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "Lưu thay đổi vào ảnh \"%s\" trước khi đóng nhé?"
 
-#: ../src/eom-close-confirmation-dialog.c:605
+#: ../src/eom-close-confirmation-dialog.c:604
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] "Có %d ảnh chưa lưu. Lưu trước khi đóng nhé?"
 
-#: ../src/eom-close-confirmation-dialog.c:622
+#: ../src/eom-close-confirmation-dialog.c:621
 msgid "S_elect the images you want to save:"
 msgstr "_Chọn ảnh bạn muốn lưu:"
 
 #. Secondary label
-#: ../src/eom-close-confirmation-dialog.c:640
+#: ../src/eom-close-confirmation-dialog.c:639
 msgid "If you don't save, all your changes will be lost."
 msgstr "Nếu không lưu, tất cả thay đổi sẽ bị mất."
 
@@ -577,9 +571,7 @@ msgstr "Định dạng tập tin không rõ hay không được hỗ trợ"
 msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
-msgstr ""
-"Dựa vào tên tập tin, Mắt MATE không thể xác định một định dạng tập tin có "
-"thể ghi mà được hỗ trợ."
+msgstr "Dựa vào tên tập tin, Mắt MATE không thể xác định một định dạng tập tin có thể ghi mà được hỗ trợ."
 
 #: ../src/eom-file-chooser.c:134
 msgid "Please try a different file extension like .png or .jpg."
@@ -593,7 +585,8 @@ msgstr "Mọi tập tin"
 msgid "All Images"
 msgstr "Mọi ảnh"
 
-#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
+#. Filter name: First description then file extension, eg. "The PNG-Format
+#. (*.png)".
 #: ../src/eom-file-chooser.c:192
 #, c-format
 msgid "%s (*.%s)"
@@ -601,14 +594,14 @@ msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
 #: ../src/eom-file-chooser.c:288 ../src/eom-properties-dialog.c:137
-#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:379
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:380
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "điểm ảnh"
 
 #: ../src/eom-file-chooser.c:437
-msgid "Load Image"
-msgstr "Nạp ảnh"
+msgid "Open Image"
+msgstr ""
 
 #: ../src/eom-file-chooser.c:445
 msgid "Save Image"
@@ -618,42 +611,42 @@ msgstr "Lưu ảnh"
 msgid "Open Folder"
 msgstr "Mở thư mục"
 
-#: ../src/eom-image.c:579
+#: ../src/eom-image.c:598
 #, c-format
 msgid "Transformation on unloaded image."
 msgstr "Chuyển dạng trên ảnh đã bỏ nạp."
 
-#: ../src/eom-image.c:607
+#: ../src/eom-image.c:626
 #, c-format
 msgid "Transformation failed."
 msgstr "Lỗi chuyển dạng."
 
-#: ../src/eom-image.c:1011
+#: ../src/eom-image.c:1053
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "Không hỗ trợ EXIF cho định dạng tập tin này."
 
-#: ../src/eom-image.c:1134
+#: ../src/eom-image.c:1180
 #, c-format
 msgid "Image loading failed."
 msgstr "Lỗi nạp ảnh."
 
-#: ../src/eom-image.c:1539 ../src/eom-image.c:1641
+#: ../src/eom-image.c:1585 ../src/eom-image.c:1687
 #, c-format
 msgid "No image loaded."
 msgstr "Chưa nạp ảnh nào."
 
-#: ../src/eom-image.c:1549 ../src/eom-image.c:1653
+#: ../src/eom-image.c:1595 ../src/eom-image.c:1699
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "Lỗi tạo tập tin tạm."
 
-#: ../src/eom-image-jpeg.c:361
+#: ../src/eom-image-jpeg.c:364
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr "Không thể tạo tập tin tạm để lưu: %s"
 
-#: ../src/eom-image-jpeg.c:380
+#: ../src/eom-image-jpeg.c:383
 #, c-format
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "Không thể cấp phát bộ nhớ để nạp ảnh JPEG"
@@ -707,30 +700,31 @@ msgstr "Giá trị"
 msgid "%a, %d %B %Y  %X"
 msgstr "%a, %d %B %Y  %X"
 
-#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
+#. A strftime-formatted string, to display the date the image was taken, for
+#. the case we don't have the time.
 #: ../src/eom-exif-util.c:147
 msgid "%a, %d %B %Y"
 msgstr "%a, %d %B %Y"
 
-#: ../src/eom-error-message-area.c:110
+#: ../src/eom-error-message-area.c:107
 msgid "_Retry"
 msgstr "Thử _lại"
 
-#: ../src/eom-error-message-area.c:140
+#: ../src/eom-error-message-area.c:141
 #, c-format
 msgid "Could not load image '%s'."
 msgstr "Không thể nạp ảnh '%s'."
 
-#: ../src/eom-error-message-area.c:174
+#: ../src/eom-error-message-area.c:175
 #, c-format
 msgid "No images found in '%s'."
 msgstr "Không tìm thấy ảnh trong '%s'."
 
-#: ../src/eom-error-message-area.c:181
+#: ../src/eom-error-message-area.c:182
 msgid "The given locations contain no images."
 msgstr "Các vị trí đã cho không chứa ảnh."
 
-#: ../src/eom-print.c:197
+#: ../src/eom-print.c:219
 msgid "Image Settings"
 msgstr "Thiết lập ảnh"
 
@@ -739,8 +733,8 @@ msgid "Image"
 msgstr "Ảnh"
 
 #: ../src/eom-print-image-setup.c:835
-msgid "The image whose printing properties will be setup"
-msgstr "Ảnh có thuộc tính in sẽ được thiết lập"
+msgid "The image whose printing properties will be set up"
+msgstr ""
 
 #: ../src/eom-print-image-setup.c:841
 msgid "Page Setup"
@@ -860,7 +854,7 @@ msgstr "như thế"
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/eom-thumb-view.c:407
+#: ../src/eom-thumb-view.c:408
 msgid "Taken on"
 msgstr "Chụp vào"
 
@@ -883,13 +877,31 @@ msgstr " (Unicode không hợp lệ)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/eom-window.c:773
+#: ../src/eom-window.c:832
 #, c-format
-msgid "%i x %i pixel  %s    %i%%"
-msgid_plural "%i x %i pixels  %s    %i%%"
-msgstr[0] "%i x %i điểm ảnh  %s    %i%%"
+msgid "%i × %i pixel  %s    %i%%"
+msgid_plural "%i × %i pixels  %s    %i%%"
+msgstr[0] ""
 
-#: ../src/eom-window.c:1191
+#: ../src/eom-window.c:1138
+msgid "_Reload"
+msgstr ""
+
+#: ../src/eom-window.c:1140 ../src/eom-window.c:3000
+msgctxt "MessageArea"
+msgid "Hi_de"
+msgstr ""
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eom-window.c:1150
+#, c-format
+msgid ""
+"The image \"%s\" has been modified by an external application.\n"
+"Would you like to reload it?"
+msgstr ""
+
+#: ../src/eom-window.c:1305
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Dùng “%s” để mở ảnh đã chọn"
@@ -899,102 +911,100 @@ msgstr "Dùng “%s” để mở ảnh đã chọn"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1341
+#: ../src/eom-window.c:1455
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Đang lưu ảnh “%s” (%u/%u)"
 
-#: ../src/eom-window.c:1680
+#: ../src/eom-window.c:1808
 #, c-format
-msgid "Loading image \"%s\""
-msgstr "Đang nạp ảnh \"%s\""
+msgid "Opening image \"%s\""
+msgstr ""
 
-#: ../src/eom-window.c:2379
+#: ../src/eom-window.c:2498
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
-msgstr ""
-"Gặp lỗi khi in tập tin:\n"
-"%s"
+msgstr "Gặp lỗi khi in tập tin:\n%s"
 
-#: ../src/eom-window.c:2631
+#: ../src/eom-window.c:2751
 msgid "Toolbar Editor"
 msgstr "Bộ sửa thanh công cụ"
 
-#: ../src/eom-window.c:2634
+#: ../src/eom-window.c:2754
 msgid "_Reset to Default"
 msgstr "Đặt lại _về mặc định"
 
-#: ../src/eom-window.c:2720
+#: ../src/eom-window.c:2844
 msgid "translator-credits"
 msgstr "Nhóm Việt hoá MATE (http://matevi.sourceforge.net)"
 
-#: ../src/eom-window.c:2723
+#: ../src/eom-window.c:2847
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version.\n"
-msgstr ""
-"Chương trình này là phần mềm tự do; bạn có thể phát hành lại và/hoặc sửa đổi "
-"nó theo các điều khoản của Giấy Phép Công Cộng GNU như được xuất bản bởi Tổ "
-"chức Phần mềm Tự do; hoặc phiên bản 2 của giấy phép này, hoặc bất kì phiên "
-"bản sau nào (tuỳ ý).\n"
+msgstr "Chương trình này là phần mềm tự do; bạn có thể phát hành lại và/hoặc sửa đổi nó theo các điều khoản của Giấy Phép Công Cộng GNU như được xuất bản bởi Tổ chức Phần mềm Tự do; hoặc phiên bản 2 của giấy phép này, hoặc bất kì phiên bản sau nào (tuỳ ý).\n"
 
-#: ../src/eom-window.c:2727
+#: ../src/eom-window.c:2851
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details.\n"
-msgstr ""
-"Chương trình này được phát hành với mong muốn nó sẽ là một phần mềm có ích,"
-"nhưng KHÔNG PHẢI CHỊU BẤT KÌ TRÁCH NHIỆM NÀO; thậm chí cả về KHẢ NĂNG BÁN "
-"LẠI hoặc PHÙ HỢP VỚI TỪNG MỤC ĐÍCH CỤ THỂ. Xem Giấy phép Công cộng GNU để "
-"biết thêm chi tiết.\n"
+msgstr "Chương trình này được phát hành với mong muốn nó sẽ là một phần mềm có ích,nhưng KHÔNG PHẢI CHỊU BẤT KÌ TRÁCH NHIỆM NÀO; thậm chí cả về KHẢ NĂNG BÁN LẠI hoặc PHÙ HỢP VỚI TỪNG MỤC ĐÍCH CỤ THỂ. Xem Giấy phép Công cộng GNU để biết thêm chi tiết.\n"
 
-#: ../src/eom-window.c:2731
+#: ../src/eom-window.c:2855
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program; if not, write to the Free Software Foundation, Inc., 59 Temple "
-"Place - Suite 330, Boston, MA 02111-1307, USA."
-msgstr ""
-"Bạn đã nhận một bản sao của Giấy Phép Công Cộng GNU cùng với chương trình "
-"này; nếu không, hãy liên hệ Tổ chức Phần mềm Tự do:\n"
-"Free Software Foundation, Inc.,\n"
-"51 Franklin Street, Fifth Floor,\n"
-"Boston, MA  02110-1301, USA (Mỹ)."
+"You should have received a copy of the GNU General Public License along with"
+" this program; if not, write to the Free Software Foundation, Inc., 59 "
+"Temple Place - Suite 330, Boston, MA 02111-1307, USA."
+msgstr "Bạn đã nhận một bản sao của Giấy Phép Công Cộng GNU cùng với chương trình này; nếu không, hãy liên hệ Tổ chức Phần mềm Tự do:\nFree Software Foundation, Inc.,\n51 Franklin Street, Fifth Floor,\nBoston, MA  02110-1301, USA (Mỹ)."
 
-#: ../src/eom-window.c:2744
+#: ../src/eom-window.c:2868
 msgid "Eye of MATE"
 msgstr "Mắt MATE"
 
-#: ../src/eom-window.c:2747
+#: ../src/eom-window.c:2872
 msgid "The MATE image viewer."
 msgstr "Bộ xem ảnh MATE."
 
-#: ../src/eom-window.c:3203
-msgid "Saving image locally..."
-msgstr "Đang lưu ảnh một cách cục bộ..."
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from eom's menubar
+#: ../src/eom-window.c:2998
+msgid "_Open Background Preferences"
+msgstr ""
 
-#: ../src/eom-window.c:3285
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eom-window.c:3014
+#, c-format
+msgid ""
+"The image \"%s\" has been set as Desktop Background.\n"
+"Would you like to modify its appearance?"
+msgstr ""
+
+#: ../src/eom-window.c:3410
+msgid "Saving image locally…"
+msgstr ""
+
+#: ../src/eom-window.c:3492
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
-msgstr ""
-"Bạn có chắc muốn chuyển\n"
-"“%s” vào Sọt rác không?"
+msgstr "Bạn có chắc muốn chuyển\n“%s” vào Sọt rác không?"
 
-#: ../src/eom-window.c:3288
+#: ../src/eom-window.c:3495
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr "Không tìm thấy Sọt rác cho “%s”. Bạn có muốn xóa bỏ vĩnh viễn ảnh này?"
 
-#: ../src/eom-window.c:3293
+#: ../src/eom-window.c:3500
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1002,364 +1012,367 @@ msgid ""
 msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
-msgstr[0] ""
-"Bạn có chắc muốn chuyển\n"
-"%d ảnh đã chọn vào Sọt rác không?"
+msgstr[0] "Bạn có chắc muốn chuyển\n%d ảnh đã chọn vào Sọt rác không?"
 
-#: ../src/eom-window.c:3298
+#: ../src/eom-window.c:3505
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
-msgstr ""
-"Một số ảnh đã chọn không thể chuyển được vào sọt rác và sẽ bị xoá bỏ vĩnh "
-"viễn. Bạn có chắc muốn tiếp tục không?"
+msgstr "Một số ảnh đã chọn không thể chuyển được vào sọt rác và sẽ bị xoá bỏ vĩnh viễn. Bạn có chắc muốn tiếp tục không?"
 
-#: ../src/eom-window.c:3315 ../src/eom-window.c:3742 ../src/eom-window.c:3766
+#: ../src/eom-window.c:3522 ../src/eom-window.c:3980 ../src/eom-window.c:4004
 msgid "Move to _Trash"
 msgstr "Chuyển vào _Sọt rác"
 
-#: ../src/eom-window.c:3317
+#: ../src/eom-window.c:3524
 msgid "_Do not ask again during this session"
 msgstr "Đừng _hỏi lại trong phiên làm việc này"
 
-#: ../src/eom-window.c:3362 ../src/eom-window.c:3376
+#: ../src/eom-window.c:3569 ../src/eom-window.c:3583
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Không thể truy cập Sọt rác."
 
-#: ../src/eom-window.c:3384
+#: ../src/eom-window.c:3591
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Không thể xoá tập tin"
 
-#: ../src/eom-window.c:3455
+#: ../src/eom-window.c:3662
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Gặp lỗi khi xoá bỏ ảnh %s"
 
-#: ../src/eom-window.c:3662
-msgid "_File"
-msgstr "_Tập tin"
-
-#: ../src/eom-window.c:3663
-msgid "_Edit"
-msgstr "_Sửa"
-
-#: ../src/eom-window.c:3664
-msgid "_View"
-msgstr "_Xem"
-
-#: ../src/eom-window.c:3665
+#: ../src/eom-window.c:3904
 msgid "_Image"
 msgstr "Ản_h"
 
-#: ../src/eom-window.c:3666
+#: ../src/eom-window.c:3905
+msgid "_Edit"
+msgstr "_Sửa"
+
+#: ../src/eom-window.c:3906
+msgid "_View"
+msgstr "_Xem"
+
+#: ../src/eom-window.c:3907
 msgid "_Go"
 msgstr "Đi đế_n"
 
-#: ../src/eom-window.c:3667
+#: ../src/eom-window.c:3908
 msgid "_Tools"
 msgstr "_Công cụ"
 
-#: ../src/eom-window.c:3668
+#: ../src/eom-window.c:3909
 msgid "_Help"
 msgstr "Trợ _giúp"
 
-#: ../src/eom-window.c:3670
-msgid "_Open..."
-msgstr "_Mở..."
+#: ../src/eom-window.c:3911
+msgid "_Open…"
+msgstr ""
 
-#: ../src/eom-window.c:3671
+#: ../src/eom-window.c:3912
 msgid "Open a file"
 msgstr "Mở tập tin"
 
-#: ../src/eom-window.c:3673
+#: ../src/eom-window.c:3914
 msgid "_Close"
 msgstr "Đón_g"
 
-#: ../src/eom-window.c:3674
+#: ../src/eom-window.c:3915
 msgid "Close window"
 msgstr "Đóng cửa sổ"
 
-#: ../src/eom-window.c:3676
+#: ../src/eom-window.c:3917
 msgid "T_oolbar"
 msgstr "Thanh _công cụ"
 
-#: ../src/eom-window.c:3677
+#: ../src/eom-window.c:3918
 msgid "Edit the application toolbar"
 msgstr "Sửa thanh công cụ ứng dụng"
 
-#: ../src/eom-window.c:3679
+#: ../src/eom-window.c:3920
 msgid "Prefere_nces"
 msgstr "_Cấu hình"
 
-#: ../src/eom-window.c:3680
+#: ../src/eom-window.c:3921
 msgid "Preferences for Eye of MATE"
 msgstr "Cấu hình của Mắt MATE"
 
-#: ../src/eom-window.c:3682
+#: ../src/eom-window.c:3923
 msgid "_Contents"
 msgstr "_Nội dung"
 
-#: ../src/eom-window.c:3683
+#: ../src/eom-window.c:3924
 msgid "Help on this application"
 msgstr "Trợ giúp về ứng dụng này"
 
-#: ../src/eom-window.c:3685 ../src/eom-plugin-manager.c:505
+#: ../src/eom-window.c:3926 ../src/eom-plugin-manager.c:505
 msgid "_About"
 msgstr "_Giới thiệu"
 
-#: ../src/eom-window.c:3686
+#: ../src/eom-window.c:3927
 msgid "About this application"
 msgstr "Giới thiệu về ứng dụng này"
 
-#: ../src/eom-window.c:3691
+#: ../src/eom-window.c:3932
 msgid "_Toolbar"
 msgstr "Thanh _công cụ"
 
-#: ../src/eom-window.c:3692
+#: ../src/eom-window.c:3933
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Thay đổi trạng thái hiển thị của thanh công cụ trên cửa sổ hiện thời"
 
-#: ../src/eom-window.c:3694
+#: ../src/eom-window.c:3935
 msgid "_Statusbar"
 msgstr "Thanh t_rạng thái"
 
-#: ../src/eom-window.c:3695
+#: ../src/eom-window.c:3936
 msgid "Changes the visibility of the statusbar in the current window"
-msgstr ""
-"Thay đổi trạng thái hiển thị của thanh trạng thái trên cửa sổ hiện thời"
+msgstr "Thay đổi trạng thái hiển thị của thanh trạng thái trên cửa sổ hiện thời"
 
-#: ../src/eom-window.c:3697
+#: ../src/eom-window.c:3938
 msgid "_Image Collection"
 msgstr "_Tập hợp ảnh"
 
-#: ../src/eom-window.c:3698
+#: ../src/eom-window.c:3939
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "Thay đổi trạng thái hiển thị của ô tập hợp ảnh trên cửa sổ hiện thời"
 
-#: ../src/eom-window.c:3700
+#: ../src/eom-window.c:3941
 msgid "Side _Pane"
 msgstr "Khung _lề"
 
-#: ../src/eom-window.c:3701
+#: ../src/eom-window.c:3942
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Thay đổi trạng thái hiển thị của khung lề của cửa sổ hiện thời"
 
-#: ../src/eom-window.c:3706
+#: ../src/eom-window.c:3947
 msgid "_Save"
 msgstr "_Lưu"
 
-#: ../src/eom-window.c:3707
+#: ../src/eom-window.c:3948
 msgid "Save changes in currently selected images"
 msgstr "Lưu thay đổi trong ảnh đang được chọn"
 
-#: ../src/eom-window.c:3709
+#: ../src/eom-window.c:3950
 msgid "Open _with"
 msgstr "Mở _bằng"
 
-#: ../src/eom-window.c:3710
+#: ../src/eom-window.c:3951
 msgid "Open the selected image with a different application"
 msgstr "Mở ảnh được chọn bằng ứng dụng khác"
 
-#: ../src/eom-window.c:3712
-msgid "Save _As..."
-msgstr "Lưu bản _sao..."
+#: ../src/eom-window.c:3953
+msgid "Save _As…"
+msgstr ""
 
-#: ../src/eom-window.c:3713
+#: ../src/eom-window.c:3954
 msgid "Save the selected images with a different name"
 msgstr "Lưu ảnh được chọn với tên khác"
 
-#: ../src/eom-window.c:3716
-msgid "Setup the page properties for printing"
-msgstr "Thiết lập thuộc tính trang in"
+#: ../src/eom-window.c:3956
+msgid "_Print…"
+msgstr ""
 
-#: ../src/eom-window.c:3718
-msgid "_Print..."
-msgstr "_In..."
-
-#: ../src/eom-window.c:3719
+#: ../src/eom-window.c:3957
 msgid "Print the selected image"
 msgstr "In ảnh được chọn"
 
-#: ../src/eom-window.c:3721
+#: ../src/eom-window.c:3959
 msgid "Prope_rties"
 msgstr "Th_uộc tính"
 
-#: ../src/eom-window.c:3722
+#: ../src/eom-window.c:3960
 msgid "Show the properties and metadata of the selected image"
 msgstr "Hiện thuộc tính và siêu dữ liệu của ảnh được chọn"
 
-#: ../src/eom-window.c:3724
+#: ../src/eom-window.c:3962
 msgid "_Undo"
 msgstr "_Hoàn tác"
 
-#: ../src/eom-window.c:3725
+#: ../src/eom-window.c:3963
 msgid "Undo the last change in the image"
 msgstr "Huỷ bỏ thay đổi cuối cùng đối với ảnh"
 
-#: ../src/eom-window.c:3727
+#: ../src/eom-window.c:3965
 msgid "Flip _Horizontal"
 msgstr "Lật _ngang"
 
-#: ../src/eom-window.c:3728
+#: ../src/eom-window.c:3966
 msgid "Mirror the image horizontally"
 msgstr "Phản chiếu ảnh theo chiều ngang"
 
-#: ../src/eom-window.c:3730
+#: ../src/eom-window.c:3968
 msgid "Flip _Vertical"
 msgstr "Lật _dọc"
 
-#: ../src/eom-window.c:3731
+#: ../src/eom-window.c:3969
 msgid "Mirror the image vertically"
 msgstr "Phản chiếu ảnh theo chiều dọc"
 
-#: ../src/eom-window.c:3733
+#: ../src/eom-window.c:3971
 msgid "_Rotate Clockwise"
 msgstr "Xoay _xuôi chiều kim đồng hồ"
 
-#: ../src/eom-window.c:3734
+#: ../src/eom-window.c:3972
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Quay ảnh 90 độ sang phải"
 
-#: ../src/eom-window.c:3736
+#: ../src/eom-window.c:3974
 msgid "Rotate Counterc_lockwise"
 msgstr "Xoay _ngược chiều kim đồng hồ"
 
-#: ../src/eom-window.c:3737
+#: ../src/eom-window.c:3975
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Quay ảnh 90 độ sang trái"
 
-#: ../src/eom-window.c:3739
+#: ../src/eom-window.c:3977
 msgid "Set as _Desktop Background"
 msgstr "Làm nền _màn hình"
 
-#: ../src/eom-window.c:3740
+#: ../src/eom-window.c:3978
 msgid "Set the selected image as the desktop background"
 msgstr "Đặt ảnh được chọn làm ảnh nền màn hình"
 
-#: ../src/eom-window.c:3743
+#: ../src/eom-window.c:3981
 msgid "Move the selected image to the trash folder"
 msgstr "Chuyển ảnh được chọn vào sọt rác"
 
-#: ../src/eom-window.c:3745 ../src/eom-window.c:3757 ../src/eom-window.c:3760
+#: ../src/eom-window.c:3983 ../src/eom-window.c:3995 ../src/eom-window.c:3998
 msgid "_Zoom In"
 msgstr "Phóng _to"
 
-#: ../src/eom-window.c:3746 ../src/eom-window.c:3758
+#: ../src/eom-window.c:3984 ../src/eom-window.c:3996
 msgid "Enlarge the image"
 msgstr "Phóng to ảnh"
 
-#: ../src/eom-window.c:3748 ../src/eom-window.c:3763
+#: ../src/eom-window.c:3986 ../src/eom-window.c:4001
 msgid "Zoom _Out"
 msgstr "Thu _nhỏ"
 
-#: ../src/eom-window.c:3749 ../src/eom-window.c:3761 ../src/eom-window.c:3764
+#: ../src/eom-window.c:3987 ../src/eom-window.c:3999 ../src/eom-window.c:4002
 msgid "Shrink the image"
 msgstr "Co ảnh"
 
-#: ../src/eom-window.c:3751
+#: ../src/eom-window.c:3989
 msgid "_Normal Size"
 msgstr "_Cỡ bình thường"
 
-#: ../src/eom-window.c:3752
+#: ../src/eom-window.c:3990
 msgid "Show the image at its normal size"
 msgstr "Hiện ảnh đúng kích thước thật"
 
-#: ../src/eom-window.c:3754
+#: ../src/eom-window.c:3992
 msgid "Best _Fit"
 msgstr "_Vừa khít"
 
-#: ../src/eom-window.c:3755
+#: ../src/eom-window.c:3993
 msgid "Fit the image to the window"
 msgstr "Khít ảnh vào cửa sổ"
 
-#: ../src/eom-window.c:3772
-msgid "_Full Screen"
-msgstr "_Toàn màn hình"
+#: ../src/eom-window.c:4010
+msgid "_Fullscreen"
+msgstr ""
 
-#: ../src/eom-window.c:3773
+#: ../src/eom-window.c:4011
 msgid "Show the current image in fullscreen mode"
 msgstr "Hiện ảnh hiện thời trong chế độ toàn màn hình"
 
-#: ../src/eom-window.c:3778 ../src/eom-window.c:3790
+#: ../src/eom-window.c:4013
+msgid "Pause Slideshow"
+msgstr ""
+
+#: ../src/eom-window.c:4014
+msgid "Pause or resume the slideshow"
+msgstr ""
+
+#: ../src/eom-window.c:4019 ../src/eom-window.c:4034
 msgid "_Previous Image"
 msgstr "Ảnh t_rước"
 
-#: ../src/eom-window.c:3779
+#: ../src/eom-window.c:4020
 msgid "Go to the previous image of the collection"
 msgstr "Quay về ảnh trước đó trong tập ảnh"
 
-#: ../src/eom-window.c:3781
+#: ../src/eom-window.c:4022
 msgid "_Next Image"
 msgstr "Ảnh _tiếp"
 
-#: ../src/eom-window.c:3782
+#: ../src/eom-window.c:4023
 msgid "Go to the next image of the collection"
 msgstr "Đến ảnh kế tiếp trong tập ảnh"
 
-#: ../src/eom-window.c:3784 ../src/eom-window.c:3793
+#: ../src/eom-window.c:4025 ../src/eom-window.c:4037
 msgid "_First Image"
 msgstr "Ảnh đầ_u tiên"
 
-#: ../src/eom-window.c:3785
+#: ../src/eom-window.c:4026
 msgid "Go to the first image of the collection"
 msgstr "Đến ảnh đầu tiên trong tập ảnh"
 
-#: ../src/eom-window.c:3787 ../src/eom-window.c:3796
+#: ../src/eom-window.c:4028 ../src/eom-window.c:4040
 msgid "_Last Image"
 msgstr "Ảnh _cuối cùng"
 
-#: ../src/eom-window.c:3788
+#: ../src/eom-window.c:4029
 msgid "Go to the last image of the collection"
 msgstr "Đến ảnh cuối trong tập ảnh"
 
-#: ../src/eom-window.c:3802
+#: ../src/eom-window.c:4031
+msgid "_Random Image"
+msgstr ""
+
+#: ../src/eom-window.c:4032
+msgid "Go to a random image of the collection"
+msgstr ""
+
+#: ../src/eom-window.c:4046
 msgid "_Slideshow"
 msgstr "Trình _chiếu"
 
-#: ../src/eom-window.c:3803
+#: ../src/eom-window.c:4047
 msgid "Start a slideshow view of the images"
 msgstr "Bắt đầu trình chiếu ảnh"
 
-#: ../src/eom-window.c:3869
+#: ../src/eom-window.c:4113
 msgid "Previous"
 msgstr "Trước"
 
-#: ../src/eom-window.c:3873
+#: ../src/eom-window.c:4117
 msgid "Next"
 msgstr "Tiếp"
 
-#: ../src/eom-window.c:3877
+#: ../src/eom-window.c:4121
 msgid "Right"
 msgstr "Phải"
 
-#: ../src/eom-window.c:3880
+#: ../src/eom-window.c:4124
 msgid "Left"
 msgstr "Trái"
 
-#: ../src/eom-window.c:3883
+#: ../src/eom-window.c:4127
 msgid "In"
 msgstr "To"
 
-#: ../src/eom-window.c:3886
+#: ../src/eom-window.c:4130
 msgid "Out"
 msgstr "Nhỏ"
 
-#: ../src/eom-window.c:3889
+#: ../src/eom-window.c:4133
 msgid "Normal"
 msgstr "Bình thường"
 
-#: ../src/eom-window.c:3892
+#: ../src/eom-window.c:4136
 msgid "Fit"
 msgstr "Vừa"
 
-#: ../src/eom-window.c:3895
+#: ../src/eom-window.c:4139
 msgid "Collection"
 msgstr "Tập hợp"
 
-#: ../src/eom-window.c:3898
+#: ../src/eom-window.c:4142
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Thùng rác"
@@ -1388,51 +1401,44 @@ msgstr "Bật _tất cả"
 msgid "_Deactivate All"
 msgstr "Tắt tất _cả"
 
-#: ../src/eom-plugin-manager.c:831
+#: ../src/eom-plugin-manager.c:834
 msgid "Active _Plugins:"
 msgstr "_Phần bổ sung hoạt động:"
 
-#: ../src/eom-plugin-manager.c:860
+#: ../src/eom-plugin-manager.c:863
 msgid "_About Plugin"
 msgstr "_Giới thiệu phần bổ sung"
 
-#: ../src/eom-plugin-manager.c:867
+#: ../src/eom-plugin-manager.c:870
 msgid "C_onfigure Plugin"
 msgstr "_Cấu hình phần bổ sung"
 
-#: ../src/main.c:63
+#: ../src/main.c:73
 msgid "Open in fullscreen mode"
 msgstr "Mở trong chế độ toàn màn hình"
 
-#: ../src/main.c:64
+#: ../src/main.c:74
 msgid "Disable image collection"
 msgstr "Tắt tập hợp ảnh"
 
-#: ../src/main.c:65
-msgid "Open in slide show mode"
-msgstr "Mở trong chế độ trình chiếu ảnh"
+#: ../src/main.c:75
+msgid "Open in slideshow mode"
+msgstr ""
 
-#: ../src/main.c:67
+#: ../src/main.c:77
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "Khởi chạy một tiến trình mới thay vì dùng lại tiến trình đang chạy"
 
-#: ../src/main.c:69
-msgid "[FILE...]"
-msgstr "[TẬP TIN...]"
+#: ../src/main.c:80
+msgid "Show the application's version"
+msgstr ""
+
+#: ../src/main.c:81
+msgid "[FILE…]"
+msgstr ""
 
 #. I18N: The '%s' is replaced with eom's command name.
-#: ../src/main.c:195
+#: ../src/main.c:207
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
-msgstr ""
-"Chạy câu lệnh '%s --help' để xem danh sách tất cả các tùy chọn dòng lệnh."
-
-#: ../src/main.c:233
-msgid "Eye of MATE Image Viewer"
-msgstr "Bộ xem ảnh Mắt MATE"
-
-#~ msgid "Open with \"%s\""
-#~ msgstr "Mở bằng '%s'"
-
-#~ msgid "Move to Trash"
-#~ msgstr "Chuyển vào Sọt rác"
+msgstr "Chạy câu lệnh '%s --help' để xem danh sách tất cả các tùy chọn dòng lệnh."

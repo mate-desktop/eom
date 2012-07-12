@@ -1,829 +1,1444 @@
-# translation of eom.po to Georgian
-# Copyright (C) 2006 Mate Georgian Translators mate@inet.ge
-# This file is distributed under the same license as the eom package.
-# Zuka Akhvlediani <korvin@soft.ge>
-# Alexander Didebulidze <didebuli@in.tum.de>, 2006.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: eom\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-22 13:44+0100\n"
-"PO-Revision-Date: 2006-03-30 01:30+0200\n"
-"Last-Translator: beso <besik28@hotmail.com>\n"
-"Language-Team: Georgian <mate@inet.ge>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2011-12-30 15:48+0100\n"
+"PO-Revision-Date: 2011-12-30 15:27+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0"
+"Language: ka\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
-#: ../eom.desktop.in.in.h:1
-msgid "Image Viewer"
-msgstr "სურათების გალერეა"
+#. Translaters: This string is for a toggle to display a toolbar.
+#. * The name of the toolbar is automatically computed from the widgets
+#. * on the toolbar, and is placed at the %s. Note the _ before the %s
+#. * which is used to add mnemonics. We know that this is likely to
+#. * produce duplicates, but don't worry about it. If your language
+#. * normally has a mnemonic at the start, please use the _. If not,
+#. * please remove.
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:934
+#, c-format
+msgid "Show “_%s”"
+msgstr ""
 
-#: ../eom.desktop.in.in.h:2
-msgid "View different types of images"
-msgstr "აჩვენე სხვადასხვა ტიპის გრაფიკული გამოსახულებები"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1397
+msgid "_Move on Toolbar"
+msgstr ""
 
-#: ../eom.glade.h:1
-msgid "    "
-msgstr "    "
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1398
+msgid "Move the selected item on the toolbar"
+msgstr ""
 
-#: ../eom.glade.h:2
-msgid "."
-msgstr "."
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1399
+msgid "_Remove from Toolbar"
+msgstr ""
 
-#: ../eom.glade.h:3
-msgid "<b>File Name Preview</b>"
-msgstr "<b> ფაილის სახელის წინასწარ ნახვა</b>"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1400
+msgid "Remove the selected item from the toolbar"
+msgstr ""
 
-#: ../eom.glade.h:4
-msgid "<b>File Path Specifications</b>"
-msgstr "<b>ფაილის გეზის სპეციფიკაცია</b>"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1401
+msgid "_Delete Toolbar"
+msgstr ""
 
-#: ../eom.glade.h:5
-msgid "<b>Image Interpolation</b>"
-msgstr "<b>გრაფიკული გამოსახულების ინტერპოლაცია</b>"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1402
+msgid "Remove the selected toolbar"
+msgstr ""
 
-#: ../eom.glade.h:6
-msgid "<b>Image Zoom</b>"
-msgstr "<b>გრაფიკული გამოსახულების გადიდება</b>"
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:485
+msgid "Separator"
+msgstr ""
 
-#: ../eom.glade.h:7
-msgid "<b>Options</b>"
-msgstr "<b>ოფციები</b>"
+#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:1
+msgid "Activate fullscreen mode with double-click"
+msgstr ""
 
-#: ../eom.glade.h:8
-msgid "<b>Sequence</b>"
-msgstr "<b>თანმიმდევრობა</b>"
+#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:2
+msgid "Fullscreen with double-click"
+msgstr ""
 
-#: ../eom.glade.h:9
-msgid "<b>Transparent Parts</b>"
-msgstr "<b>გამჭვირვალე არეები</b>"
+#: ../plugins/reload/reload.eom-plugin.desktop.in.h:1
+#: ../plugins/reload/eom-reload-plugin.c:38
+msgid "Reload Image"
+msgstr ""
 
-#: ../eom.glade.h:11
+#: ../plugins/reload/reload.eom-plugin.desktop.in.h:2
+#: ../plugins/reload/eom-reload-plugin.c:38
+msgid "Reload current image"
+msgstr ""
+
+#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:1
+msgid "Date in statusbar"
+msgstr ""
+
+#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:2
+msgid "Shows the image date in the window statusbar"
+msgstr ""
+
+#: ../data/eom.desktop.in.in.h:1
+msgid "Browse and rotate images"
+msgstr ""
+
+#: ../data/eom.desktop.in.in.h:2 ../src/main.c:66 ../src/main.c:248
+msgid "Eye of MATE Image Viewer"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:1
+msgid "Aperture Value:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:2
+msgid "Author:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:3
+msgid "Bytes:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:4
+msgid "Camera Model:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:5
+msgid "Copyright:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:6
+msgid "Date/Time:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:7
+msgid "Description:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:8
+msgid "Details"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:9
+msgid "Exposure Time:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:10
+msgid "Flash:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:11
+msgid "Focal Length:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:12
+msgid "General"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:13
+msgid "Height:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:14
+msgid "ISO Speed Rating:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:15
+msgid "Image Properties"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:16
+msgid "Keywords:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:17
+msgid "Location:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:18
+msgid "Metadata"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:19
+msgid "Metering Mode:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:20
+msgid "Name:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:21
+msgid "Type:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:22
+msgid "Width:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:23
+msgid "_Next"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:24
+msgid "_Previous"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:2
 #, no-c-format
-msgid "Allow _zoom greater than 100% initially"
-msgstr "გაადიდე 100%-მდე"
+msgid "<b>%f:</b> original filename"
+msgstr ""
 
-#: ../eom.glade.h:12
-msgid "As _background"
-msgstr "ფონად დაყენება"
+#: ../data/eom-multiple-save-as-dialog.ui.h:4
+#, no-c-format
+msgid "<b>%n:</b> counter"
+msgstr ""
 
-#: ../eom.glade.h:13
-msgid "As check _pattern"
-msgstr "შ_აბლონად დაყენება"
+#: ../data/eom-multiple-save-as-dialog.ui.h:5
+msgid "Choose a folder"
+msgstr ""
 
-#: ../eom.glade.h:14
-msgid "As custom c_olor:"
-msgstr "სხვა _ფრად"
+#: ../data/eom-multiple-save-as-dialog.ui.h:6
+msgid "Destination folder:"
+msgstr ""
 
-#: ../eom.glade.h:15
-msgid "Color for Transparent Areas"
-msgstr "ფერი გამჭვირვალე ველებისათვის"
+#: ../data/eom-multiple-save-as-dialog.ui.h:7
+msgid "File Name Preview"
+msgstr ""
 
-#: ../eom.glade.h:16
-msgid "Destination Folder:"
-msgstr "დანიშნულების საქაღალდე:"
+#: ../data/eom-multiple-save-as-dialog.ui.h:8
+msgid "File Path Specifications"
+msgstr ""
 
-#: ../eom.glade.h:17
-msgid "Eye of MATE Preferences"
-msgstr "გნომეს თვალის  პარამეტრები"
+#: ../data/eom-multiple-save-as-dialog.ui.h:9
+msgid "Filename format:"
+msgstr ""
 
-#: ../eom.glade.h:18
-msgid "Filename Format:"
-msgstr "ფაილის სახელის ფორმატი:"
+#: ../data/eom-multiple-save-as-dialog.ui.h:10
+msgid "Options"
+msgstr ""
 
-#: ../eom.glade.h:19
-msgid "Image View"
-msgstr "სურათის ხედი"
+#: ../data/eom-multiple-save-as-dialog.ui.h:11
+msgid "Rename from:"
+msgstr ""
 
-#: ../eom.glade.h:20
-msgid "Rename From:"
-msgstr "გადაარქვი სახელი:"
+#: ../data/eom-multiple-save-as-dialog.ui.h:12
+msgid "Replace spaces with underscores"
+msgstr ""
 
-#: ../eom.glade.h:21
-msgid "Replace spaces by underscore"
-msgstr "ჭდეების ხაზგასმით შეცვლა"
-
-#: ../eom.glade.h:22
-#: ../shell/eom-window.c:3340
+#: ../data/eom-multiple-save-as-dialog.ui.h:13
 msgid "Save As"
 msgstr "შეინახე როგორც"
 
-#: ../eom.glade.h:23
-msgid "Saving Image"
-msgstr "ვინახავ გრაფიკულ გამოსახულებას"
-
-#: ../eom.glade.h:24
-msgid "Slide Show"
-msgstr "სლაიდ შოუ"
-
-#: ../eom.glade.h:25
+#: ../data/eom-multiple-save-as-dialog.ui.h:14
 msgid "Start counter at:"
 msgstr "ჩართე მრიცხველი:  -დან"
 
-#: ../eom.glade.h:26
+#: ../data/eom-multiple-save-as-dialog.ui.h:15
 msgid "To:"
 msgstr "ვის:"
 
-#: ../eom.glade.h:27
-msgid "_Browse"
-msgstr "_მოიძიე"
+#: ../data/eom-preferences-dialog.ui.h:1
+msgid "As _background"
+msgstr "ფონად დაყენება"
 
-#: ../eom.glade.h:28
-msgid "_Interpolate image on zoom"
-msgstr "გაადიდე გ_რაფიკული გამოსახულება"
+#: ../data/eom-preferences-dialog.ui.h:2
+msgid "As check _pattern"
+msgstr "შ_აბლონად დაყენება"
 
-#: ../eom.glade.h:29
+#: ../data/eom-preferences-dialog.ui.h:3
+msgid "As custom c_olor:"
+msgstr "სხვა _ფრად"
+
+#: ../data/eom-preferences-dialog.ui.h:4
+msgid "As custom color:"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:5
+msgid "Background"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:6 ../data/eom.schemas.in.h:6
+msgid "Background Color"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:7
+msgid "Color for Transparent Areas"
+msgstr "ფერი გამჭვირვალე ველებისათვის"
+
+#: ../data/eom-preferences-dialog.ui.h:8
+msgid "E_xpand images to fit screen"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:9
+msgid "Eye of MATE Preferences"
+msgstr "გნომეს თვალის  პარამეტრები"
+
+#: ../data/eom-preferences-dialog.ui.h:10
+msgid "Image Enhancements"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:11
+msgid "Image View"
+msgstr "სურათის ხედი"
+
+#: ../data/eom-preferences-dialog.ui.h:12
+msgid "Image Zoom"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:13
+msgid "Plugins"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:14
+msgid "Sequence"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:15
+msgid "Slideshow"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:16
+msgid "Smooth images when zoomed-_in"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:17
+msgid "Smooth images when zoomed-_out"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:18
+msgid "Transparent Parts"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:19
+msgid "_Automatic orientation"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:20
 msgid "_Loop sequence"
 msgstr "აჩვენე თანმიმდევრობის ციკ_ლი"
 
-#: ../eom.glade.h:30
+#: ../data/eom-preferences-dialog.ui.h:21
 msgid "_Switch image after:"
 msgstr "გადართე ამ გრაფიკული გამოსახულების სემდეგ:"
 
-#: ../eom.glade.h:31
+#: ../data/eom-preferences-dialog.ui.h:22
 msgid "seconds"
 msgstr "წამები"
 
-#: ../eom.schemas.in.h:1
-msgid "A value greater than 0 determines the seconds an image stays on screen until the next one is shown automatically. Zero disables the automatic browsing."
+#: ../data/eom.schemas.in.h:1
+msgid ""
+"A value greater than 0 determines the seconds an image stays on screen until"
+" the next one is shown automatically. Zero disables the automatic browsing."
 msgstr "ნულზე მეტი რიცხვი აღნიშნავს წამებს,  თუ რამდენ ხანს დარჩება გამოსახულება ეკრანზე, სანამ მას მომდევნო არ შეცვლის. ციფრი 0 თიშავს ავტომატური ჩვენების შესაძლებლობას."
 
-#: ../eom.schemas.in.h:3
+#: ../data/eom.schemas.in.h:2
+msgid "Active plugins"
+msgstr ""
+
+#: ../data/eom.schemas.in.h:4
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
 msgstr "გაადიდე 100%-მდე"
 
-#: ../eom.schemas.in.h:4
+#: ../data/eom.schemas.in.h:5
+msgid "Automatic orientation"
+msgstr ""
+
+#: ../data/eom.schemas.in.h:7
 msgid "Delay in seconds until showing the next image"
 msgstr "წამობრივი დაყოვნება მომდევნო გამოსახულების გამოსვლამდე."
 
-#: ../eom.schemas.in.h:5
-msgid "Determines how transparency should be indicated. Valid values are CHECK_PATTERN, COLOR and NONE. If COLOR is choosen, then the trans_color key determines the used color value."
-msgstr "განსაზღვრავს გამჭვირვალობის ხარისხს. მოცემული პირობებია გამჭვირვალობის სიმკვეთრე, ფერი ფა არაფერი. თუ არჩეულია ფერი, იგი განსაზღვრავს გამოსაყენებელ ფერს. "
+#: ../data/eom.schemas.in.h:8
+msgid ""
+"Determines how transparency should be indicated. Valid values are "
+"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
+"determines the color value used."
+msgstr ""
 
-#: ../eom.schemas.in.h:6
-msgid "If the transparency key has the value COLOR, then this key determines the color which is used for indicating transparency."
+#: ../data/eom.schemas.in.h:9
+msgid "Extrapolate Image"
+msgstr ""
+
+#: ../data/eom.schemas.in.h:10
+msgid ""
+"If activated and no image is loaded in the active window, the file chooser "
+"will display the user's pictures folder using the XDG special user "
+"directories. If deactivated or the pictures folder has not been set up, it "
+"will show the current working directory."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:11
+msgid ""
+"If activated, Eye of MATE won't ask for confirmation when moving images to "
+"the trash. It will still ask if any of the files cannot be moved to the "
+"trash and would be deleted instead."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:12
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable"
+" on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:13
+msgid ""
+"If the transparency key has the value COLOR, then this key determines the "
+"color which is used for indicating transparency."
 msgstr "თუ გამჭვირვალობის გასაღებს მინიჭებული აქვს ფერი, მაშინ ეს გასაები განსაზღვრავს ფერს, რომელიც გამოიყენება გამჭვირვალობისათვის."
 
-#: ../eom.schemas.in.h:7
-msgid "If this is set to FALSE small images will not be stretched to fit into the screen initially."
+#: ../data/eom.schemas.in.h:14
+msgid ""
+"If this is active, the color set by the background-color key will be used to"
+" fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:15
+msgid ""
+"If this is set to FALSE small images will not be stretched to fit into the "
+"screen initially."
 msgstr "თე ეს მონაცემი მცდარია, პატარა გრაფიკული გამოსახულებები არ გაიჭიმება ეკრანზე."
 
-#: ../eom.schemas.in.h:8
+#: ../data/eom.schemas.in.h:16
+msgid ""
+"Image collection pane position. Set to 0 for bottom; 1 for left; 2 for top; "
+"3 for right."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:17
 msgid "Interpolate Image"
 msgstr "გრაფიკული გამოსახულების ინტერპოლირება"
 
-#: ../eom.schemas.in.h:9
-msgid "Last collection window geometry"
-msgstr "ბოლო კოლექციის ფანჯრის გეომეტრიული ფორმა"
+#: ../data/eom.schemas.in.h:18
+msgid ""
+"List of active plugins. It doesn't contain the \"Location\" of the active "
+"plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
+"plugin."
+msgstr ""
 
-#: ../eom.schemas.in.h:10
-msgid "Last singleton window geometry"
-msgstr "ბოლო კერძო ფანჯრის გეომეტრიული ფორმა"
-
-#: ../eom.schemas.in.h:11
+#: ../data/eom.schemas.in.h:19
 msgid "Loop through the image sequence"
 msgstr "განსაზღვრე გრაფიკულ გამოსახულებათა თანმიმდევრობა"
 
-#: ../eom.schemas.in.h:12
-msgid "Open images in a new window"
-msgstr "გახსენი ახალ ფანჯარაში"
+#: ../data/eom.schemas.in.h:20
+msgid "Scroll wheel zoom"
+msgstr ""
 
-#: ../eom.schemas.in.h:13
-msgid "Show/hide image information for collection."
-msgstr "გამოაჩინე/დამალე ინფორმაცია კოლექციის შესახებ"
+#: ../data/eom.schemas.in.h:21
+msgid "Show/Hide the image collection pane scroll buttons."
+msgstr ""
 
-#: ../eom.schemas.in.h:14
-msgid "Show/hide image information for single image."
-msgstr "გამოაჩინე/დამალე ინფორმაცია თიტოეული გრაფიკული გამოსახულების  შესახებ"
+#: ../data/eom.schemas.in.h:22
+msgid "Show/Hide the image collection pane."
+msgstr ""
 
-#: ../eom.schemas.in.h:15
-msgid "Show/hide the image collection pane."
-msgstr "გამოაჩინე/დამალე გამოსახულებათა კოლექციის ველი."
+#: ../data/eom.schemas.in.h:23
+msgid "Show/Hide the window side pane."
+msgstr ""
 
-#: ../eom.schemas.in.h:16
-msgid "Show/hide the window statusbar."
-msgstr "გამოაჩინე/დამალე ფანჯრის სტატუსის ველი."
+#: ../data/eom.schemas.in.h:24
+msgid "Show/Hide the window statusbar."
+msgstr ""
 
-#: ../eom.schemas.in.h:17
-msgid "Show/hide the window toolbar."
-msgstr "გამოაჩინე/დამალე ფანჯრის იარაღების ველი."
+#: ../data/eom.schemas.in.h:25
+msgid "Show/Hide the window toolbar."
+msgstr ""
 
-#: ../eom.schemas.in.h:18
+#: ../data/eom.schemas.in.h:26
+msgid ""
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:28
+#, no-c-format
+msgid ""
+"The multiplier to be applied when using the mouse scroll wheel for zooming. "
+"This value defines the zooming step used for each scroll event. For example,"
+" 0.05 results in a 5% zoom increment for each scroll event and 1.00 result "
+"in a 100% zoom increment."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:29
 msgid "Transparency color"
 msgstr "გამჭვირვალეირვალობის ფერი"
 
-#: ../eom.schemas.in.h:19
+#: ../data/eom.schemas.in.h:30
 msgid "Transparency indicator"
 msgstr "გამჭირვალობის ინდიკატორი"
 
-#: ../eom.schemas.in.h:20
-msgid "Whether opening an image should create a new window instead of replacing the image in the current window."
-msgstr "უნდა გაიხსნას თუ არა ახალ ფანჯარაში გრაფიკულმა გამოსახულება, ნაცვლად იმისა რომ წინა გამოსახულების ფანჯარაში შეიცვალოს. "
+#: ../data/eom.schemas.in.h:31
+msgid "Trash images without asking"
+msgstr ""
 
-#: ../eom.schemas.in.h:21
-msgid "Whether or not the sequence of images should be shown in an endless loop."
-msgstr "ვატრიალო თუ არა გრაფიკულ გამოსახულებათა თანმიმდევრობა შეუჩერებლად."
+#: ../data/eom.schemas.in.h:32
+msgid "Use a custom background color"
+msgstr ""
 
-#: ../eom.schemas.in.h:22
-msgid "Whether the image should be interpolated on zoom or not. This leads to better quality but is somewhat slower than non interpolated images."
-msgstr "უნდა განიცადოს თუ არა გამოსახულებამ ინტერპოლირება გადიდების დროს. მას მივყავართ საუკეთესო ხარისხამდე მაგრამ უფრო ნელა იტვირთება ვიდრე არაინტერპოლირებული გამოსახულება."
+#: ../data/eom.schemas.in.h:33
+msgid ""
+"Whether the file chooser should show the user's pictures folder if no images"
+" are loaded."
+msgstr ""
 
-#: ../libeom/eom-image-jpeg.c:340
-#: ../libeom/eom-image-jpeg.c:579
+#: ../data/eom.schemas.in.h:34
+msgid "Whether the image collection pane should be resizable."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:35
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:36
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:37
+msgid ""
+"Whether the image should be rotated automatically based on EXIF orientation."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:38
+msgid ""
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:39
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:40
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr ""
+
+#: ../data/eom.schemas.in.h:41
+msgid "Zoom multiplier"
+msgstr ""
+
+#: ../src/eom-application.c:123
+msgid "Running in fullscreen mode"
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:159
+msgid "Close _without Saving"
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:193
+msgid "Question"
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:374
+msgid "If you don't save, your changes will be lost."
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:409
 #, c-format
-msgid "Couldn't create temporary file for saving: %s"
-msgstr "ვერ ვქმნი დროებით ფაილს %s  -ის შესანახად"
+msgid "Save changes to image \"%s\" before closing?"
+msgstr ""
 
-#: ../libeom/eom-image-jpeg.c:359
-#: ../libeom/eom-image-jpeg.c:600
-msgid "Couldn't allocate memory for loading JPEG file"
-msgstr "ვერ განვსაზღვრე მეხსიერების ზომა JPEG ფაილის ჩასატვირთად"
+#: ../src/eom-close-confirmation-dialog.c:604
+#, c-format
+msgid "There is %d image with unsaved changes. Save changes before closing?"
+msgid_plural ""
+"There are %d images with unsaved changes. Save changes before closing?"
+msgstr[0] ""
 
-#: ../libeom/eom-image.c:426
-msgid "Transformation on unloaded image."
-msgstr "ჩაუტვირთავი გრაფიკული გამოსახულების ტრანსფორმაცია.  "
+#: ../src/eom-close-confirmation-dialog.c:621
+msgid "S_elect the images you want to save:"
+msgstr ""
 
-#: ../libeom/eom-image.c:538
-msgid "EXIF not supported for this file format."
-msgstr "EXIF-ი ვერ კიტხულობს მოცემული ფორმატის ფაილებს."
+#. Secondary label
+#: ../src/eom-close-confirmation-dialog.c:639
+msgid "If you don't save, all your changes will be lost."
+msgstr ""
 
-#: ../libeom/eom-image.c:1198
-#: ../libeom/eom-image.c:1411
-msgid "File exists"
-msgstr "ფაილი უკვე არსებობს"
+#: ../src/eom-file-chooser.c:128
+msgid "File format is unknown or unsupported"
+msgstr ""
 
-#: ../libeom/eom-image.c:1351
-#: ../libeom/eom-image.c:1479
-msgid "No image loaded."
-msgstr "გრაფიკული გამოსახულება ჩატვირთული არაა."
+#: ../src/eom-file-chooser.c:133
+msgid ""
+"Eye of MATE could not determine a supported writable file format based on "
+"the filename."
+msgstr ""
 
-#: ../libeom/eom-image.c:1360
-#: ../libeom/eom-image.c:1488
-msgid "Temporary file creation failed."
-msgstr "ვერ ვქმნი დროებით ფაილს."
+#: ../src/eom-file-chooser.c:134
+msgid "Please try a different file extension like .png or .jpg."
+msgstr ""
 
-#: ../libeom/eom-info-view-exif.c:30
-msgid "Camera"
-msgstr "კამერა"
-
-#: ../libeom/eom-info-view-exif.c:31
-msgid "Image Data"
-msgstr "სურათის შექმნის თარიღი"
-
-#: ../libeom/eom-info-view-exif.c:32
-msgid "Image Taking Conditions"
-msgstr "გრაფიკული გამოსახულების იარლიყის მდგომარეობა"
-
-#: ../libeom/eom-info-view-exif.c:33
-msgid "Maker Note"
-msgstr "შენიშვნა"
-
-#: ../libeom/eom-info-view-exif.c:34
-msgid "Other"
-msgstr "სხვა"
-
-#: ../libeom/eom-info-view-exif.c:212
-msgid "Tag"
-msgstr "იარლიყი"
-
-#: ../libeom/eom-info-view-exif.c:220
-#: ../libeom/eom-info-view-file.c:97
-msgid "Value"
-msgstr "მნიშვნელობა"
-
-#. only used for internal purpose
-#: ../libeom/eom-info-view-file.c:29
-#: ../shell/eom-save-as-dialog-helper.c:31
-msgid "Filename"
-msgstr "ფაილის სახელი"
-
-#: ../libeom/eom-info-view-file.c:30
-msgid "Width"
-msgstr "სიგანე"
-
-#: ../libeom/eom-info-view-file.c:31
-msgid "Height"
-msgstr "სიმაღლე"
-
-#: ../libeom/eom-info-view-file.c:32
-msgid "Filesize"
-msgstr "ფაილის ზომა"
-
-#: ../libeom/eom-info-view-file.c:89
-msgid "Attribute"
-msgstr "ატრიბუტები"
-
-#: ../libeom/eom-info-view.c:81
-msgid "File"
-msgstr "ფაილი"
-
-#: ../libeom/eom-info-view.c:93
-msgid "EXIF"
-msgstr "EXIF"
-
-#: ../libeom/eom-info-view.c:100
-msgid "IPTC"
-msgstr "IPTC"
-
-#: ../libeom/eom-uri-converter.c:1024
-msgid "At least two file names are equal."
-msgstr "მინიმუმ ორი ფაილის სახელწოდება იდენტურია."
-
-#: ../libeom/eom-util.c:44
-msgid " (invalid Unicode)"
-msgstr " (ინვალიდი უნიკოდი)"
-
-#: ../shell/eom-file-chooser.c:129
+#: ../src/eom-file-chooser.c:166
 msgid "All Files"
 msgstr "ყველა ფაილი"
 
-#: ../shell/eom-file-chooser.c:134
+#: ../src/eom-file-chooser.c:171
 msgid "All Images"
 msgstr "ყველა გრაფიკული გამოსახულება"
 
-#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
-#: ../shell/eom-file-chooser.c:155
+#. Filter name: First description then file extension, eg. "The PNG-Format
+#. (*.png)".
+#: ../src/eom-file-chooser.c:192
 #, c-format
 msgid "%s (*.%s)"
 msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
-#: ../shell/eom-file-chooser.c:251
-#, c-format
-msgid "%s x %s pixels"
-msgstr "%s x %s პიქსელი"
+#: ../src/eom-file-chooser.c:288 ../src/eom-properties-dialog.c:137
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:380
+msgid "pixel"
+msgid_plural "pixels"
+msgstr[0] ""
 
-#: ../shell/eom-file-chooser.c:397
-msgid "Open in new window"
-msgstr "გახსენი ახალ ფანჯარაში"
+#: ../src/eom-file-chooser.c:437
+msgid "Open Image"
+msgstr ""
 
-#: ../shell/eom-file-chooser.c:425
-msgid "Load Image"
-msgstr "გრაფიკული გამოსახულების ჩატვირთვა"
-
-#: ../shell/eom-file-chooser.c:433
+#: ../src/eom-file-chooser.c:445
 msgid "Save Image"
 msgstr "გრაფიკული გამოსახულების შენახვა"
 
-#: ../shell/eom-file-chooser.c:441
+#: ../src/eom-file-chooser.c:453
 msgid "Open Folder"
 msgstr "გახსენი საქაღალდე"
 
-#: ../shell/eom-preferences.c:110
-msgid "Could not display help for Eye of MATE"
-msgstr "ვერ ვპოულობ MATE Eye-ს დამხმარე სახელმძღვანელოს."
+#: ../src/eom-image.c:598
+#, c-format
+msgid "Transformation on unloaded image."
+msgstr "ჩაუტვირთავი გრაფიკული გამოსახულების ტრანსფორმაცია.  "
 
-#: ../shell/eom-save-as-dialog-helper.c:32
-msgid "Counter"
-msgstr "მრიცხველი"
+#: ../src/eom-image.c:626
+#, c-format
+msgid "Transformation failed."
+msgstr ""
 
-#: ../shell/eom-save-as-dialog-helper.c:33
-msgid "Comment"
-msgstr "კომენტარი"
+#: ../src/eom-image.c:1053
+#, c-format
+msgid "EXIF not supported for this file format."
+msgstr "EXIF-ი ვერ კიტხულობს მოცემული ფორმატის ფაილებს."
 
-#: ../shell/eom-save-as-dialog-helper.c:34
-msgid "Date"
-msgstr "თარიღი"
+#: ../src/eom-image.c:1180
+#, c-format
+msgid "Image loading failed."
+msgstr ""
 
-#: ../shell/eom-save-as-dialog-helper.c:35
-msgid "Time"
-msgstr "დრო"
+#: ../src/eom-image.c:1585 ../src/eom-image.c:1687
+#, c-format
+msgid "No image loaded."
+msgstr "გრაფიკული გამოსახულება ჩატვირთული არაა."
 
-#: ../shell/eom-save-as-dialog-helper.c:36
-msgid "Day"
-msgstr "დღე"
+#: ../src/eom-image.c:1595 ../src/eom-image.c:1699
+#, c-format
+msgid "Temporary file creation failed."
+msgstr "ვერ ვქმნი დროებით ფაილს."
 
-#: ../shell/eom-save-as-dialog-helper.c:37
-msgid "Month"
-msgstr "თვე"
+#: ../src/eom-image-jpeg.c:364
+#, c-format
+msgid "Couldn't create temporary file for saving: %s"
+msgstr "ვერ ვქმნი დროებით ფაილს %s  -ის შესანახად"
 
-#: ../shell/eom-save-as-dialog-helper.c:38
-msgid "Year"
-msgstr "წელი"
+#: ../src/eom-image-jpeg.c:383
+#, c-format
+msgid "Couldn't allocate memory for loading JPEG file"
+msgstr "ვერ განვსაზღვრე მეხსიერების ზომა JPEG ფაილის ჩასატვირთად"
 
-#: ../shell/eom-save-as-dialog-helper.c:39
-msgid "Hour"
-msgstr "საათი"
+#: ../src/eom-exif-details.c:68
+msgid "Camera"
+msgstr "კამერა"
 
-#: ../shell/eom-save-as-dialog-helper.c:40
-msgid "Minute"
-msgstr "წუთი"
+#: ../src/eom-exif-details.c:69
+msgid "Image Data"
+msgstr "სურათის შექმნის თარიღი"
 
-#: ../shell/eom-save-as-dialog-helper.c:41
-msgid "Second"
-msgstr "წამი"
+#: ../src/eom-exif-details.c:70
+msgid "Image Taking Conditions"
+msgstr "გრაფიკული გამოსახულების იარლიყის მდგომარეობა"
 
-#: ../shell/eom-save-as-dialog-helper.c:159
-msgid "Option not available."
-msgstr "ოფციები არაა."
+#: ../src/eom-exif-details.c:71
+msgid "Maker Note"
+msgstr "შენიშვნა"
 
-#: ../shell/eom-save-as-dialog-helper.c:161
-msgid "To use this function you need the libexif library. Please install libexif (http://libexif.sf.net) and recompile Eye of MATE."
-msgstr "ამ ფუნქციის შესასრულებლად საჭიროა სპეციალური  Libexif ბიბლიოთეკა. (http://libexif.sf.net) დააინსტალირე Libexif და თავიდან გადააინსტალირე გნომეს თვალი."
+#: ../src/eom-exif-details.c:72
+msgid "Other"
+msgstr "სხვა"
 
-#: ../shell/eom-save-as-dialog-helper.c:235
+#: ../src/eom-exif-details.c:74
+msgid "XMP Exif"
+msgstr ""
+
+#: ../src/eom-exif-details.c:75
+msgid "XMP IPTC"
+msgstr ""
+
+#: ../src/eom-exif-details.c:76
+msgid "XMP Rights Management"
+msgstr ""
+
+#: ../src/eom-exif-details.c:77
+msgid "XMP Other"
+msgstr ""
+
+#: ../src/eom-exif-details.c:251
+msgid "Tag"
+msgstr "იარლიყი"
+
+#: ../src/eom-exif-details.c:258
+msgid "Value"
+msgstr "მნიშვნელობა"
+
+#. A strftime-formatted string, to display the date the image was taken.
+#: ../src/eom-exif-util.c:113 ../src/eom-exif-util.c:153
+msgid "%a, %d %B %Y  %X"
+msgstr ""
+
+#. A strftime-formatted string, to display the date the image was taken, for
+#. the case we don't have the time.
+#: ../src/eom-exif-util.c:147
+msgid "%a, %d %B %Y"
+msgstr ""
+
+#: ../src/eom-error-message-area.c:107
+msgid "_Retry"
+msgstr ""
+
+#: ../src/eom-error-message-area.c:141
+#, c-format
+msgid "Could not load image '%s'."
+msgstr ""
+
+#: ../src/eom-error-message-area.c:175
+#, c-format
+msgid "No images found in '%s'."
+msgstr ""
+
+#: ../src/eom-error-message-area.c:182
+msgid "The given locations contain no images."
+msgstr ""
+
+#: ../src/eom-print.c:219
+msgid "Image Settings"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:834
+msgid "Image"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:835
+msgid "The image whose printing properties will be set up"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:841
+msgid "Page Setup"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:842
+msgid "The information for the page where the image will be printed"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:870
+msgid "Position"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:875
+msgid "_Left:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:876
+msgid "_Right:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:877
+msgid "_Top:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:878
+msgid "_Bottom:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:880
+msgid "C_enter:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:885
+msgid "None"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:887
+msgid "Horizontal"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:889
+msgid "Vertical"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:891
+msgid "Both"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:907
+msgid "Size"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:912
+msgid "_Width:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:914
+msgid "_Height:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:917
+msgid "_Scaling:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:930
+msgid "_Unit:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:935
+msgid "Millimeters"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:937
+msgid "Inches"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:967
+msgid "Preview"
+msgstr ""
+
+#: ../src/eom-properties-dialog.c:154
+msgid "Unknown"
+msgstr ""
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../src/eom-properties-dialog.c:232
+#, c-format
+msgid "%.1f (lens)"
+msgstr ""
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../src/eom-properties-dialog.c:243
+#, c-format
+msgid "%.1f (35mm film)"
+msgstr ""
+
+#: ../src/eom-save-as-dialog-helper.c:161
 msgid "as is"
 msgstr "როგორც არის"
 
-#: ../shell/eom-save-dialog-helper.c:197
+#. Translators: This string is displayed in the statusbar.
+#. * The first token is the image number, the second is total image
+#. * count.
+#. *
+#. * Translate to "%Id" if you want to use localized digits, or
+#. * translate to "%d" otherwise.
+#. *
+#. * Note that translating this doesn't guarantee that you get localized
+#. * digits. That needs support from your system and locale definition
+#. * too.
+#: ../src/eom-statusbar.c:125
 #, c-format
-msgid "Saving image %s."
-msgstr "ვინახავ გრაფიკულ გამოსახულებას %s."
+msgid "%d / %d"
+msgstr ""
 
-#: ../shell/eom-save-dialog-helper.c:243
-msgid "Cancel saving ..."
-msgstr "შენახვის გაუქმება."
+#: ../src/eom-thumb-view.c:408
+msgid "Taken on"
+msgstr ""
 
-#. Translators should localize the following string
-#. * which will give them credit in the About box.
-#. * E.g. "Fulano de Tal <fulano@detal.com>"
-#.
-#: ../shell/eom-window.c:498
+#: ../src/eom-uri-converter.c:984
+#, c-format
+msgid "At least two file names are equal."
+msgstr "მინიმუმ ორი ფაილის სახელწოდება იდენტურია."
+
+#: ../src/eom-util.c:68
+msgid "Could not display help for Eye of MATE"
+msgstr "ვერ ვპოულობ MATE Eye-ს დამხმარე სახელმძღვანელოს."
+
+#: ../src/eom-util.c:116
+msgid " (invalid Unicode)"
+msgstr " (ინვალიდი უნიკოდი)"
+
+#. Translators: This is the string displayed in the statusbar
+#. * The tokens are from left to right:
+#. * - image width
+#. * - image height
+#. * - image size in bytes
+#. * - zoom in percent
+#: ../src/eom-window.c:832
+#, c-format
+msgid "%i × %i pixel  %s    %i%%"
+msgid_plural "%i × %i pixels  %s    %i%%"
+msgstr[0] ""
+
+#: ../src/eom-window.c:1138
+msgid "_Reload"
+msgstr ""
+
+#: ../src/eom-window.c:1140 ../src/eom-window.c:3000
+msgctxt "MessageArea"
+msgid "Hi_de"
+msgstr ""
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eom-window.c:1150
+#, c-format
+msgid ""
+"The image \"%s\" has been modified by an external application.\n"
+"Would you like to reload it?"
+msgstr ""
+
+#: ../src/eom-window.c:1305
+#, c-format
+msgid "Use \"%s\" to open the selected image"
+msgstr ""
+
+#. Translators: This string is displayed in the statusbar
+#. * while saving images. The tokens are from left to right:
+#. * - the original filename
+#. * - the current image's position in the queue
+#. * - the total number of images queued for saving
+#: ../src/eom-window.c:1455
+#, c-format
+msgid "Saving image \"%s\" (%u/%u)"
+msgstr ""
+
+#: ../src/eom-window.c:1808
+#, c-format
+msgid "Opening image \"%s\""
+msgstr ""
+
+#: ../src/eom-window.c:2498
+#, c-format
+msgid ""
+"Error printing file:\n"
+"%s"
+msgstr ""
+
+#: ../src/eom-window.c:2751
+msgid "Toolbar Editor"
+msgstr ""
+
+#: ../src/eom-window.c:2754
+msgid "_Reset to Default"
+msgstr ""
+
+#: ../src/eom-window.c:2844
 msgid "translator-credits"
-msgstr "Besik Meshveliani <meshvel@mail.ru>  "
-"Zuka·Akhvlediani· <korvin@soft.ge>  "
+msgstr "Besik Meshveliani <meshvel@mail.ru>  Zuka·Akhvlediani· <korvin@soft.ge>  "
 
-#: ../shell/eom-window.c:503
-#: ../shell/eom-window.c:3048
-#: ../shell/eom-window.c:3699
-#: ../shell/main.c:601
+#: ../src/eom-window.c:2847
+msgid ""
+"This program is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version.\n"
+msgstr ""
+
+#: ../src/eom-window.c:2851
+msgid ""
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details.\n"
+msgstr ""
+
+#: ../src/eom-window.c:2855
+msgid ""
+"You should have received a copy of the GNU General Public License along with"
+" this program; if not, write to the Free Software Foundation, Inc., 59 "
+"Temple Place - Suite 330, Boston, MA 02111-1307, USA."
+msgstr ""
+
+#: ../src/eom-window.c:2868
 msgid "Eye of MATE"
 msgstr "გნომის თვალი "
 
-#: ../shell/eom-window.c:506
-msgid "The MATE image viewing and cataloging program."
-msgstr "გნომე გრაფიკული გამოსახულებების დამთვალიერებელი  პროგრამა-კატალოგი."
+#: ../src/eom-window.c:2872
+msgid "The MATE image viewer."
+msgstr ""
 
-#: ../shell/eom-window.c:532
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from eom's menubar
+#: ../src/eom-window.c:2998
+msgid "_Open Background Preferences"
+msgstr ""
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eom-window.c:3014
 #, c-format
 msgid ""
-"Could not display help for Eye of MATE.\n"
-"%s"
+"The image \"%s\" has been set as Desktop Background.\n"
+"Would you like to modify its appearance?"
 msgstr ""
-"ვერ ვპოულოდ დამხმარე სახელმძღვანელოს გნომეს თვალისათვის.\n"
-"%s"
 
-#: ../shell/eom-window.c:967
-#, c-format
-msgid "Overwrite file %s?"
-msgstr "ჩავანაცვლო და გადავაწერო %s ფაილს?"
+#: ../src/eom-window.c:3410
+msgid "Saving image locally…"
+msgstr ""
 
-#: ../shell/eom-window.c:968
-msgid "File exists. Do you want to overwrite it?"
-msgstr "ეს ფაილი უკვე არსებობს. გადავაწერო?"
-
-#: ../shell/eom-window.c:979
-#: ../shell/eom-window.c:995
-msgid "Skip"
-msgstr "გამოტოვე"
-
-#: ../shell/eom-window.c:980
-msgid "Overwrite"
-msgstr "ჩაანაცვლე, თავზე გადააწერე."
-
-#: ../shell/eom-window.c:985
-#, c-format
-msgid "Error on saving %s."
-msgstr "%s -ის შენახვისას გაიპარა შეცდომა! (Error)"
-
-#: ../shell/eom-window.c:996
-#: ../shell/eom-window.c:1562
-msgid "Retry"
-msgstr "გაიმეორე"
-
-#: ../shell/eom-window.c:1426
-msgid "Couldn't determine destination uri."
-msgstr "ვერ ვსაზღვრავ დანიშნულების მისამართს"
-
-#: ../shell/eom-window.c:1548
-#, c-format
-msgid "Couldn't determine file format of %s"
-msgstr "ვერ ვსაზღვრავ %s ფაილის ფორმატს"
-
-#: ../shell/eom-window.c:1549
-msgid "Please use an appropriate filename suffix or select a file format."
-msgstr "გამოიყენე ფაილის შესაბამისი სახელი, ან მონიშნე ფაილის ფორმატი."
-
-#: ../shell/eom-window.c:1687
-msgid "Error on saving images."
-msgstr "გრაფიკული გამოსახულების შენახვისას დაშვებულია შეცდომა."
-
-#: ../shell/eom-window.c:1768
-#: ../shell/eom-window.c:3285
-msgid "Print"
-msgstr "დაბეჭდე"
-
-#: ../shell/eom-window.c:1802
-msgid "Print Preview"
-msgstr "დასაბეჭდი გამოსახულების წინასწარი დათვალიერება"
-
-#: ../shell/eom-window.c:2006
+#: ../src/eom-window.c:3492
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
-msgstr ""
-"დარწმუნებული ხარ რომ გინდა \n"
-"\"%s\" -ს გადაგდება?"
+msgstr "დარწმუნებული ხარ რომ გინდა \n\"%s\" -ს გადაგდება?"
 
-#: ../shell/eom-window.c:2009
+#: ../src/eom-window.c:3495
+#, c-format
+msgid ""
+"A trash for \"%s\" couldn't be found. Do you want to remove this image "
+"permanently?"
+msgstr ""
+
+#: ../src/eom-window.c:3500
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
-"the %d selected image to the trash?Are you sure you want to move\n"
+"the selected image to the trash?"
+msgid_plural ""
+"Are you sure you want to move\n"
 "the %d selected images to the trash?"
-msgstr "დარწმუნებული ხარ რომ გსურს %d მონიშნული გრაფიკული გამოსახულების გადაგდება?დარწმუნებული ხარ რომ გსურს%d მონიშნული გრაფიკული გამოსახულების გადაგდება?"
+msgstr[0] ""
 
-#: ../shell/eom-window.c:2024
-#: ../shell/eom-window.c:3297
-msgid "Move to Trash"
-msgstr "გადააგდე"
+#: ../src/eom-window.c:3505
+msgid ""
+"Some of the selected images can't be moved to the trash and will be removed "
+"permanently. Are you sure you want to proceed?"
+msgstr ""
 
-#: ../shell/eom-window.c:2055
+#: ../src/eom-window.c:3522 ../src/eom-window.c:3980 ../src/eom-window.c:4004
+msgid "Move to _Trash"
+msgstr "_გადააგდე"
+
+#: ../src/eom-window.c:3524
+msgid "_Do not ask again during this session"
+msgstr ""
+
+#: ../src/eom-window.c:3569 ../src/eom-window.c:3583
+#, c-format
 msgid "Couldn't access trash."
 msgstr "ვერ ვწვდები სანაგვე ყუთს."
 
-#: ../shell/eom-window.c:2131
+#: ../src/eom-window.c:3591
+#, c-format
+msgid "Couldn't delete file"
+msgstr ""
+
+#: ../src/eom-window.c:3662
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "შეცდომა %s გრაფიკული გამოსახულების წაშლისას"
 
-#. [image width] x [image height] pixels  [bytes]    [zoom in percent]
-#: ../shell/eom-window.c:2911
-#, c-format
-msgid "%i x %i pixels  %s    %i%%"
-msgstr "%i x %i პიქსელი  %s    %i%%"
-
-#: ../shell/eom-window.c:2967
-#, c-format
-msgid "Reason: %s"
-msgstr "მიზეზი: %s"
-
-#: ../shell/eom-window.c:3097
-#, c-format
-msgid "Image loading failed for %s"
-msgstr "არ ხორციელდება %s გრაფიკული გამოსახულების ჩატვირთვა"
-
-#: ../shell/eom-window.c:3262
-msgid "_File"
-msgstr "_ფაილი"
-
-#: ../shell/eom-window.c:3263
-msgid "_Edit"
-msgstr "დამუშავ_ება"
-
-#: ../shell/eom-window.c:3264
-msgid "_View"
-msgstr "_ხედი"
-
-#: ../shell/eom-window.c:3265
+#: ../src/eom-window.c:3904
 msgid "_Image"
 msgstr "_გრაფიკული გამოსახულება"
 
-#: ../shell/eom-window.c:3266
+#: ../src/eom-window.c:3905
+msgid "_Edit"
+msgstr "დამუშავ_ება"
+
+#: ../src/eom-window.c:3906
+msgid "_View"
+msgstr "_ხედი"
+
+#: ../src/eom-window.c:3907
 msgid "_Go"
 msgstr "გ_ადასვლა"
 
-#: ../shell/eom-window.c:3267
+#: ../src/eom-window.c:3908
+msgid "_Tools"
+msgstr ""
+
+#: ../src/eom-window.c:3909
 msgid "_Help"
 msgstr "_დახმარება"
 
-#: ../shell/eom-window.c:3268
-msgid "_Open..."
-msgstr "_გახსნა..."
+#: ../src/eom-window.c:3911
+msgid "_Open…"
+msgstr ""
 
-#: ../shell/eom-window.c:3268
+#: ../src/eom-window.c:3912
 msgid "Open a file"
 msgstr "გახსენი ფაილი"
 
-#: ../shell/eom-window.c:3269
+#: ../src/eom-window.c:3914
 msgid "_Close"
 msgstr "_დახურვა"
 
-#: ../shell/eom-window.c:3269
+#: ../src/eom-window.c:3915
 msgid "Close window"
 msgstr "დახურე ფანჯარა"
 
-#: ../shell/eom-window.c:3270
+#: ../src/eom-window.c:3917
+msgid "T_oolbar"
+msgstr ""
+
+#: ../src/eom-window.c:3918
+msgid "Edit the application toolbar"
+msgstr ""
+
+#: ../src/eom-window.c:3920
 msgid "Prefere_nces"
 msgstr "პა_რამეტრები"
 
-#: ../shell/eom-window.c:3270
+#: ../src/eom-window.c:3921
 msgid "Preferences for Eye of MATE"
 msgstr "პარამეტრები გნომის თვალისთვის"
 
-#: ../shell/eom-window.c:3271
+#: ../src/eom-window.c:3923
 msgid "_Contents"
 msgstr "შ_ინაარსი"
 
-#: ../shell/eom-window.c:3271
-msgid "Help On this application"
-msgstr "ამ პროგრამის დამხმარე სახელმძღვანელო"
+#: ../src/eom-window.c:3924
+msgid "Help on this application"
+msgstr ""
 
-#: ../shell/eom-window.c:3272
+#: ../src/eom-window.c:3926 ../src/eom-plugin-manager.c:505
 msgid "_About"
 msgstr "შ_ესახებ"
 
-#: ../shell/eom-window.c:3272
+#: ../src/eom-window.c:3927
 msgid "About this application"
 msgstr "ამ პროგრამის შესახებ"
 
-#: ../shell/eom-window.c:3277
+#: ../src/eom-window.c:3932
 msgid "_Toolbar"
 msgstr "_ინსტრუმენტების ველი"
 
-#: ../shell/eom-window.c:3277
+#: ../src/eom-window.c:3933
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "ცვის ინსტრუმენტების ველის შეხედულებას მიმდინარე ფანჯარაში."
 
-#: ../shell/eom-window.c:3278
+#: ../src/eom-window.c:3935
 msgid "_Statusbar"
 msgstr "_სტატუსის ველი"
 
-#: ../shell/eom-window.c:3278
+#: ../src/eom-window.c:3936
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "ცვლის სტატუსის შესახედაობას სახეობას მიმდინარე ფანჯარაში."
 
-#: ../shell/eom-window.c:3279
+#: ../src/eom-window.c:3938
 msgid "_Image Collection"
 msgstr "_კოლექცია"
 
-#: ../shell/eom-window.c:3279
-msgid "Changes the visibility of the image collection pane in the current window"
+#: ../src/eom-window.c:3939
+msgid ""
+"Changes the visibility of the image collection pane in the current window"
 msgstr "ცვლის გამოსახულებათა კოლექციის ველის შესახედაობას მიმდინარე ფანჯარაში."
 
-#: ../shell/eom-window.c:3283
+#: ../src/eom-window.c:3941
+msgid "Side _Pane"
+msgstr ""
+
+#: ../src/eom-window.c:3942
+msgid "Changes the visibility of the side pane in the current window"
+msgstr ""
+
+#: ../src/eom-window.c:3947
 msgid "_Save"
 msgstr "შ_ეინახე"
 
-#: ../shell/eom-window.c:3284
-msgid "Save _As"
-msgstr "შეინახე _როგორც"
+#: ../src/eom-window.c:3948
+msgid "Save changes in currently selected images"
+msgstr ""
 
-#: ../shell/eom-window.c:3287
+#: ../src/eom-window.c:3950
+msgid "Open _with"
+msgstr ""
+
+#: ../src/eom-window.c:3951
+msgid "Open the selected image with a different application"
+msgstr ""
+
+#: ../src/eom-window.c:3953
+msgid "Save _As…"
+msgstr ""
+
+#: ../src/eom-window.c:3954
+msgid "Save the selected images with a different name"
+msgstr ""
+
+#: ../src/eom-window.c:3956
+msgid "_Print…"
+msgstr ""
+
+#: ../src/eom-window.c:3957
+msgid "Print the selected image"
+msgstr ""
+
+#: ../src/eom-window.c:3959
+msgid "Prope_rties"
+msgstr ""
+
+#: ../src/eom-window.c:3960
+msgid "Show the properties and metadata of the selected image"
+msgstr ""
+
+#: ../src/eom-window.c:3962
 msgid "_Undo"
 msgstr "_გაუქმება"
 
-#: ../shell/eom-window.c:3289
+#: ../src/eom-window.c:3963
+msgid "Undo the last change in the image"
+msgstr ""
+
+#: ../src/eom-window.c:3965
 msgid "Flip _Horizontal"
 msgstr "ჰორიზონ_ტალურად"
 
-#: ../shell/eom-window.c:3290
+#: ../src/eom-window.c:3966
+msgid "Mirror the image horizontally"
+msgstr ""
+
+#: ../src/eom-window.c:3968
 msgid "Flip _Vertical"
 msgstr "ვერტიკალურად"
 
-#: ../shell/eom-window.c:3292
+#: ../src/eom-window.c:3969
+msgid "Mirror the image vertically"
+msgstr ""
+
+#: ../src/eom-window.c:3971
 msgid "_Rotate Clockwise"
 msgstr "საათის ისრის _მიმართულებით"
 
-#: ../shell/eom-window.c:3293
-msgid "Rotate Counter C_lockwise"
-msgstr "მ_რიცხველის მოძრაობის მიმართულებით"
+#: ../src/eom-window.c:3972
+msgid "Rotate the image 90 degrees to the right"
+msgstr ""
 
-#: ../shell/eom-window.c:3294
-msgid "Rotat_e 180°"
-msgstr "შემოაბრუნ_ე 180°"
+#: ../src/eom-window.c:3974
+msgid "Rotate Counterc_lockwise"
+msgstr ""
 
-#: ../shell/eom-window.c:3295
-msgid "Set As _Wallpaper"
-msgstr "დააყენე _ფონად"
+#: ../src/eom-window.c:3975
+msgid "Rotate the image 90 degrees to the left"
+msgstr ""
 
-#: ../shell/eom-window.c:3299
-msgid "_Full Screen"
-msgstr "მთლიან ე_კრანზე კაშლა"
+#: ../src/eom-window.c:3977
+msgid "Set as _Desktop Background"
+msgstr ""
 
-#: ../shell/eom-window.c:3300
-msgid "_Slideshow"
-msgstr "_სლაიდ შოუ"
+#: ../src/eom-window.c:3978
+msgid "Set the selected image as the desktop background"
+msgstr ""
 
-#. accelerators
-#: ../shell/eom-window.c:3301
-#: ../shell/eom-window.c:3307
-#: ../shell/eom-window.c:3308
+#: ../src/eom-window.c:3981
+msgid "Move the selected image to the trash folder"
+msgstr ""
+
+#: ../src/eom-window.c:3983 ../src/eom-window.c:3995 ../src/eom-window.c:3998
 msgid "_Zoom In"
 msgstr "_გადიდება"
 
-#: ../shell/eom-window.c:3302
-#: ../shell/eom-window.c:3309
+#: ../src/eom-window.c:3984 ../src/eom-window.c:3996
+msgid "Enlarge the image"
+msgstr ""
+
+#: ../src/eom-window.c:3986 ../src/eom-window.c:4001
 msgid "Zoom _Out"
 msgstr "და_პატარავება"
 
-#: ../shell/eom-window.c:3303
+#: ../src/eom-window.c:3987 ../src/eom-window.c:3999 ../src/eom-window.c:4002
+msgid "Shrink the image"
+msgstr ""
+
+#: ../src/eom-window.c:3989
 msgid "_Normal Size"
 msgstr "_ნორმალური ზომა"
 
-#: ../shell/eom-window.c:3304
+#: ../src/eom-window.c:3990
+msgid "Show the image at its normal size"
+msgstr ""
+
+#: ../src/eom-window.c:3992
 msgid "Best _Fit"
 msgstr "საუკეთესო _ზომა"
 
-#: ../shell/eom-window.c:3310
-#: ../shell/eom-window.c:3312
-#: ../shell/eom-window.c:3324
-msgid "_Next Image"
-msgstr "_შემდეგი"
+#: ../src/eom-window.c:3993
+msgid "Fit the image to the window"
+msgstr ""
 
-#: ../shell/eom-window.c:3311
-#: ../shell/eom-window.c:3313
-#: ../shell/eom-window.c:3314
-#: ../shell/eom-window.c:3323
+#: ../src/eom-window.c:4010
+msgid "_Fullscreen"
+msgstr ""
+
+#: ../src/eom-window.c:4011
+msgid "Show the current image in fullscreen mode"
+msgstr ""
+
+#: ../src/eom-window.c:4013
+msgid "Pause Slideshow"
+msgstr ""
+
+#: ../src/eom-window.c:4014
+msgid "Pause or resume the slideshow"
+msgstr ""
+
+#: ../src/eom-window.c:4019 ../src/eom-window.c:4034
 msgid "_Previous Image"
 msgstr "_წინა"
 
-#: ../shell/eom-window.c:3315
-msgid "Move to _Trash"
-msgstr "_გადააგდე"
+#: ../src/eom-window.c:4020
+msgid "Go to the previous image of the collection"
+msgstr ""
 
-#: ../shell/eom-window.c:3319
-msgid "Image _Information"
-msgstr "_ინფორმაცია"
+#: ../src/eom-window.c:4022
+msgid "_Next Image"
+msgstr "_შემდეგი"
 
-#: ../shell/eom-window.c:3319
-msgid "Changes the visibility of the information pane in the current window"
-msgstr "ცვლის საინფორმაციო ველის შესახედაობას მიმდინარე ფანჯარაში."
+#: ../src/eom-window.c:4023
+msgid "Go to the next image of the collection"
+msgstr ""
 
-#: ../shell/eom-window.c:3325
+#: ../src/eom-window.c:4025 ../src/eom-window.c:4037
 msgid "_First Image"
 msgstr "_პირველი"
 
-#: ../shell/eom-window.c:3326
+#: ../src/eom-window.c:4026
+msgid "Go to the first image of the collection"
+msgstr ""
+
+#: ../src/eom-window.c:4028 ../src/eom-window.c:4040
 msgid "_Last Image"
 msgstr "_ბოლო"
 
-#: ../shell/eom-window.c:3337
-msgid "Open"
-msgstr "გახსენი"
+#: ../src/eom-window.c:4029
+msgid "Go to the last image of the collection"
+msgstr ""
 
-#: ../shell/eom-window.c:3338
-msgid "Close"
-msgstr "დახურე"
+#: ../src/eom-window.c:4031
+msgid "_Random Image"
+msgstr ""
 
-#: ../shell/eom-window.c:3339
-msgid "Save"
-msgstr "შეინახე"
+#: ../src/eom-window.c:4032
+msgid "Go to a random image of the collection"
+msgstr ""
 
-#: ../shell/eom-window.c:3341
-msgid "Undo"
-msgstr "უკან დააბრუნე"
+#: ../src/eom-window.c:4046
+msgid "_Slideshow"
+msgstr "_სლაიდ შოუ"
 
-#: ../shell/eom-window.c:3344
-msgid "Right"
-msgstr "მარჯვნივ"
+#: ../src/eom-window.c:4047
+msgid "Start a slideshow view of the images"
+msgstr ""
 
-#: ../shell/eom-window.c:3345
-msgid "Left"
-msgstr "მარცხნივ"
-
-#: ../shell/eom-window.c:3348
-msgid "In"
-msgstr "გა_დიდება"
-
-#: ../shell/eom-window.c:3349
-msgid "Out"
-msgstr "და_პატარავება"
-
-#: ../shell/eom-window.c:3350
-msgid "Normal"
-msgstr "ნორმალური"
-
-#: ../shell/eom-window.c:3351
-msgid "Fit"
-msgstr "გაშალე"
-
-#: ../shell/eom-window.c:3352
-msgid "Next"
-msgstr "შემდეგი"
-
-#: ../shell/eom-window.c:3353
+#: ../src/eom-window.c:4113
 msgid "Previous"
 msgstr "წინა"
 
-#: ../shell/eom-window.c:3518
-msgid "User interface description not found."
-msgstr "სამომხმარებლო ინტერფეისის  აღწერა არ მოიპოვება."
+#: ../src/eom-window.c:4117
+msgid "Next"
+msgstr "შემდეგი"
 
-#: ../shell/main.c:166
-msgid "Unable to create Eye of MATE user interface"
-msgstr "დაუშვი გნომეს თვალის სამომხმარებლო ინტერფეისის შექმნის სესაძლებლობა"
+#: ../src/eom-window.c:4121
+msgid "Right"
+msgstr "მარჯვნივ"
 
-#: ../shell/main.c:357
-msgid "File not found."
-msgid_plural "Files not found."
-msgstr[0] "ვერ ვპოულობ ფაილს."
+#: ../src/eom-window.c:4124
+msgid "Left"
+msgstr "მარცხნივ"
 
-#: ../shell/util.c:52
+#: ../src/eom-window.c:4127
+msgid "In"
+msgstr "გა_დიდება"
+
+#: ../src/eom-window.c:4130
+msgid "Out"
+msgstr "და_პატარავება"
+
+#: ../src/eom-window.c:4133
+msgid "Normal"
+msgstr "ნორმალური"
+
+#: ../src/eom-window.c:4136
+msgid "Fit"
+msgstr "გაშალე"
+
+#: ../src/eom-window.c:4139
+msgid "Collection"
+msgstr ""
+
+#: ../src/eom-window.c:4142
+msgctxt "action (to trash)"
+msgid "Trash"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:51
+msgid "Plugin"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:52
+msgid "Enabled"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:513
+msgid "C_onfigure"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:523
+msgid "A_ctivate"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:535
+msgid "Ac_tivate All"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:540
+msgid "_Deactivate All"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:834
+msgid "Active _Plugins:"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:863
+msgid "_About Plugin"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:870
+msgid "C_onfigure Plugin"
+msgstr ""
+
+#: ../src/main.c:73
+msgid "Open in fullscreen mode"
+msgstr ""
+
+#: ../src/main.c:74
+msgid "Disable image collection"
+msgstr ""
+
+#: ../src/main.c:75
+msgid "Open in slideshow mode"
+msgstr ""
+
+#: ../src/main.c:77
+msgid "Start a new instance instead of reusing an existing one"
+msgstr ""
+
+#: ../src/main.c:80
+msgid "Show the application's version"
+msgstr ""
+
+#: ../src/main.c:81
+msgid "[FILE…]"
+msgstr ""
+
+#. I18N: The '%s' is replaced with eom's command name.
+#: ../src/main.c:207
 #, c-format
-msgid "Could not open `%s'"
-msgstr "ვერ ვხსნი `%s'"
-
-#: ../shell/recent-files/egg-recent-view-gtk.c:346
-#, c-format
-msgid "Open '%s'"
-msgstr "გახსენი '%s'"
-
-#: ../shell/recent-files/egg-recent-view-gtk.c:444
-msgid "Empty"
-msgstr "ცარიელია"
-
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr ""

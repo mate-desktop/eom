@@ -1,23 +1,21 @@
-# translation of eu.po to Basque
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
-#
-# Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2004.
-# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2004, 2005, 2006, 2008, 2009, 2010.
-# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2007.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: eu\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=eom&component=general\n"
-"POT-Creation-Date: 2010-09-25 11:04+0000\n"
-"PO-Revision-Date: 2010-09-27 10:34+0200\n"
-"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
-"Language-Team: Basque <itzulpena@euskalgnu.org>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2011-12-30 15:48+0100\n"
+"PO-Revision-Date: 2011-12-30 15:22+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: Basque (http://www.transifex.com/projects/p/MATE/language/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: eu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -68,12 +66,12 @@ msgid "Fullscreen with double-click"
 msgstr "Pantaila osoa klik bikoitzarekin"
 
 #: ../plugins/reload/reload.eom-plugin.desktop.in.h:1
-#: ../plugins/reload/eom-reload-plugin.c:45
+#: ../plugins/reload/eom-reload-plugin.c:38
 msgid "Reload Image"
 msgstr "Birkargatu irudia"
 
 #: ../plugins/reload/reload.eom-plugin.desktop.in.h:2
-#: ../plugins/reload/eom-reload-plugin.c:47
+#: ../plugins/reload/eom-reload-plugin.c:38
 msgid "Reload current image"
 msgstr "Birkargatu uneko irudia"
 
@@ -89,9 +87,9 @@ msgstr "Irudiaren data erakusten du leihoaren egoera-barran."
 msgid "Browse and rotate images"
 msgstr "Arakatu eta biratu irudiak"
 
-#: ../data/eom.desktop.in.in.h:2
-msgid "Image Viewer"
-msgstr "Irudi-ikustailea"
+#: ../data/eom.desktop.in.in.h:2 ../src/main.c:66 ../src/main.c:248
+msgid "Eye of MATE Image Viewer"
+msgstr "MATEren irudi-ikustailearen begia"
 
 #: ../data/eom-image-properties-dialog.ui.h:1
 msgid "Aperture Value:"
@@ -333,12 +331,9 @@ msgstr "segundo"
 
 #: ../data/eom.schemas.in.h:1
 msgid ""
-"A value greater than 0 determines the seconds an image stays on screen until "
-"the next one is shown automatically. Zero disables the automatic browsing."
-msgstr ""
-"0 baino handiagoa den balio batek irudia pantailan zenbat segundotan "
-"erakutsiko den zehazten du, hurrengo irudia automatikoki erakutsi aurretik. "
-"0 balioak bistaratze automatikoa desgaitzen du."
+"A value greater than 0 determines the seconds an image stays on screen until"
+" the next one is shown automatically. Zero disables the automatic browsing."
+msgstr "0 baino handiagoa den balio batek irudia pantailan zenbat segundotan erakutsiko den zehazten du, hurrengo irudia automatikoki erakutsi aurretik. 0 balioak bistaratze automatikoa desgaitzen du."
 
 #: ../data/eom.schemas.in.h:2
 msgid "Active plugins"
@@ -362,10 +357,7 @@ msgid ""
 "Determines how transparency should be indicated. Valid values are "
 "CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
 "determines the color value used."
-msgstr ""
-"Gardentasuna nola adierazi zehazten du. Baliozko aukerak CHECK_PATTERN, "
-"COLOR eta NONE dira. COLOR aukeratzen bada, trans_color gakoak zehazten du "
-"kolorearen balioa."
+msgstr "Gardentasuna nola adierazi zehazten du. Baliozko aukerak CHECK_PATTERN, COLOR eta NONE dira. COLOR aukeratzen bada, trans_color gakoak zehazten du kolorearen balioa."
 
 #: ../data/eom.schemas.in.h:9
 msgid "Extrapolate Image"
@@ -377,69 +369,47 @@ msgid ""
 "will display the user's pictures folder using the XDG special user "
 "directories. If deactivated or the pictures folder has not been set up, it "
 "will show the current working directory."
-msgstr ""
-"Aktibatzen bada, eta irudirik ez badago kargatuta leiho aktiboan, fitxategi-"
-"aukeratzaileak erabiltzailearen argazkien karpeta bistaratuko du "
-"erabiltzailearen direktorioen XDG berezia erabiliz. Desaktibatzen bada, edo "
-"argazkien karpeta ez bada konfiguratu, uneko laneko direktorioa erakutsiko "
-"du."
+msgstr "Aktibatzen bada, eta irudirik ez badago kargatuta leiho aktiboan, fitxategi-aukeratzaileak erabiltzailearen argazkien karpeta bistaratuko du erabiltzailearen direktorioen XDG berezia erabiliz. Desaktibatzen bada, edo argazkien karpeta ez bada konfiguratu, uneko laneko direktorioa erakutsiko du."
 
 #: ../data/eom.schemas.in.h:11
 msgid ""
 "If activated, Eye of MATE won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
 "trash and would be deleted instead."
-msgstr ""
-"Aktibatzen bada, MATEren Begiak ez du berrespenik eskatuko irudiak "
-"zakarrontzira botatzean. Hala ere, irudietariko batzuk ezin badira "
-"zakarrontzira bota, horren ordez ezabatu egin behar al diren galdetuko du."
+msgstr "Aktibatzen bada, MATEren Begiak ez du berrespenik eskatuko irudiak zakarrontzira botatzean. Hala ere, irudietariko batzuk ezin badira zakarrontzira bota, horren ordez ezabatu egin behar al diren galdetuko du."
 
 #: ../data/eom.schemas.in.h:12
 msgid ""
 "If activated, the detailed metadata list in the properties dialog will be "
-"moved to its own page in the dialog. This should make the dialog more usable "
-"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"moved to its own page in the dialog. This should make the dialog more usable"
+" on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
 "be embedded on the \"Metadata\" page."
-msgstr ""
-"Aktibatzen bada, propietateen elkarrizketa-koadroko metadatuen zerrenda "
-"xehea elkarrizketa-koadroko dagokion orrialdera eramango da. Honek "
-"elkarrizketa-koadroa askoz ere erabilgarriagoa egingo du pantaila txikidun "
-"ordenagailuetan, adib. 'sareko ordenagailu' edo netbook-etan. Desaktibatzen "
-"bada, trepeta \"Metadatuak\" orrialdean kapsulatuko dira."
+msgstr "Aktibatzen bada, propietateen elkarrizketa-koadroko metadatuen zerrenda xehea elkarrizketa-koadroko dagokion orrialdera eramango da. Honek elkarrizketa-koadroa askoz ere erabilgarriagoa egingo du pantaila txikidun ordenagailuetan, adib. 'sareko ordenagailu' edo netbook-etan. Desaktibatzen bada, trepeta \"Metadatuak\" orrialdean kapsulatuko dira."
 
 #: ../data/eom.schemas.in.h:13
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
-msgstr ""
-"Gardentasunaren gakoak COLOR balioa badu, gako honek zehaztuko du "
-"gardentasuna adierazteko erabiliko den kolorea."
+msgstr "Gardentasunaren gakoak COLOR balioa badu, gako honek zehaztuko du gardentasuna adierazteko erabiliko den kolorea."
 
 #: ../data/eom.schemas.in.h:14
 msgid ""
-"If this is active, the color set by the background-color key will be used to "
-"fill the area behind the image. If it is not set, the current GTK+ theme "
+"If this is active, the color set by the background-color key will be used to"
+" fill the area behind the image. If it is not set, the current GTK+ theme "
 "will determine the fill color."
-msgstr ""
-"Hau aktibo egonez gero, 'background-color' (atzeko planoaren kolorea) gakoak "
-"ezarritako kolorea erabiliko da irudiaren atzeko area betetzeko. Aukera hau "
-"ez bada ezartzen, uneko GTK+ gaiak zehaztuko du kolore betegarria."
+msgstr "Hau aktibo egonez gero, 'background-color' (atzeko planoaren kolorea) gakoak ezarritako kolorea erabiliko da irudiaren atzeko area betetzeko. Aukera hau ez bada ezartzen, uneko GTK+ gaiak zehaztuko du kolore betegarria."
 
 #: ../data/eom.schemas.in.h:15
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
-msgstr ""
-"FALSE balioarekin ezartzen bada, irudi txikiak ez dira pantaila bete arte "
-"tiratuko hasieran."
+msgstr "FALSE balioarekin ezartzen bada, irudi txikiak ez dira pantaila bete arte tiratuko hasieran."
 
 #: ../data/eom.schemas.in.h:16
 msgid ""
 "Image collection pane position. Set to 0 for bottom; 1 for left; 2 for top; "
 "3 for right."
-msgstr ""
-"Irudi-bildumaren panelaren posizioa. Balioak: 0 behean, 1 ezkerrean, 2 "
-"goian, 3 eskuinean."
+msgstr "Irudi-bildumaren panelaren posizioa. Balioak: 0 behean, 1 ezkerrean, 2 goian, 3 eskuinean."
 
 #: ../data/eom.schemas.in.h:17
 msgid "Interpolate Image"
@@ -450,9 +420,7 @@ msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
 "plugin."
-msgstr ""
-"Plugin aktiboen zerrenda. Ez dauka plugin aktiboen \"Kokalekua\" datua. "
-"Ikus .eom-plugin fitxategia plugin zehatz baten \"Kokalekua\" jakiteko."
+msgstr "Plugin aktiboen zerrenda. Ez dauka plugin aktiboen \"Kokalekua\" datua. Ikus .eom-plugin fitxategia plugin zehatz baten \"Kokalekua\" jakiteko."
 
 #: ../data/eom.schemas.in.h:19
 msgid "Loop through the image sequence"
@@ -487,22 +455,16 @@ msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
 "theme instead."
-msgstr ""
-"Irudiaren atzeko area betetzeko erabiliko den kolorea. 'use-background-"
-"color' gakoa ez bada ezartzen, aktibo dagoen GTK+ gaiak zehaztuko du kolorea."
+msgstr "Irudiaren atzeko area betetzeko erabiliko den kolorea. 'use-background-color' gakoa ez bada ezartzen, aktibo dagoen GTK+ gaiak zehaztuko du kolorea."
 
 #: ../data/eom.schemas.in.h:28
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
-"This value defines the zooming step used for each scroll event. For example, "
-"0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
-"a 100% zoom increment."
-msgstr ""
-"Biderkatzailea saguaren korritze-gurpilarekin zooma erabiltzean aplikatzeko. "
-"Balio honek korritze-gertaerek erabiltzen duten zoomaren urratsa definitzen "
-"du. Adibidez, 0.05 balioak %5-ean handitzen du zooma korritze-gertaera "
-"bakoitzean, eta 1.00 balioak zooma %100-ean handitzen du"
+"This value defines the zooming step used for each scroll event. For example,"
+" 0.05 results in a 5% zoom increment for each scroll event and 1.00 result "
+"in a 100% zoom increment."
+msgstr "Biderkatzailea saguaren korritze-gurpilarekin zooma erabiltzean aplikatzeko. Balio honek korritze-gertaerek erabiltzen duten zoomaren urratsa definitzen du. Adibidez, 0.05 balioak %5-ean handitzen du zooma korritze-gertaera bakoitzean, eta 1.00 balioak zooma %100-ean handitzen du"
 
 #: ../data/eom.schemas.in.h:29
 msgid "Transparency color"
@@ -522,11 +484,9 @@ msgstr "Erabili atzeko planoaren kolore pertsonalizatua"
 
 #: ../data/eom.schemas.in.h:33
 msgid ""
-"Whether the file chooser should show the user's pictures folder if no images "
-"are loaded."
-msgstr ""
-"Irudirik ez bada kargatu, fitxategi-aukeratzaileak erabiltzailearen "
-"argazkien karpeta erakutsi behar duen edo ez."
+"Whether the file chooser should show the user's pictures folder if no images"
+" are loaded."
+msgstr "Irudirik ez bada kargatu, fitxategi-aukeratzaileak erabiltzailearen argazkien karpeta erakutsi behar duen edo ez."
 
 #: ../data/eom.schemas.in.h:34
 msgid "Whether the image collection pane should be resizable."
@@ -536,27 +496,23 @@ msgstr "Irudi-bildumaren panela tamainaz alda daitekeen edo ez."
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
-msgstr ""
-"Irudia zooma handiagotzean estrapolatu behar den ala ez. Kalitatea lausoagoa "
-"izango da, baina estrapolatu gabeko irudiak baino mantsoago ibiliko da."
+msgstr "Irudia zooma handiagotzean estrapolatu behar den ala ez. Kalitatea lausoagoa izango da, baina estrapolatu gabeko irudiak baino mantsoago ibiliko da."
 
 #: ../data/eom.schemas.in.h:36
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
-msgstr ""
-"Irudia zooma txikiagotzean interpolatu behar den ala ez. Kalitatea hobea "
-"izango da, baina interpolatu gabeko irudiak baino mantsoago ibiliko da."
+msgstr "Irudia zooma txikiagotzean interpolatu behar den ala ez. Kalitatea hobea izango da, baina interpolatu gabeko irudiak baino mantsoago ibiliko da."
 
 #: ../data/eom.schemas.in.h:37
-msgid "Whether the image should be rotated automatically based on EXIF orientation."
+msgid ""
+"Whether the image should be rotated automatically based on EXIF orientation."
 msgstr "EXIF orientazioaren arabera irudia automatikoki biratuko den edo ez."
 
 #: ../data/eom.schemas.in.h:38
-msgid "Whether the metadata list in the properties dialog should have its own page."
-msgstr ""
-"Propietateen elkarrizketa-koadroan metadatuen zerrendak bere orrialde "
-"propioa eduki behar duen edo ez."
+msgid ""
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr "Propietateen elkarrizketa-koadroan metadatuen zerrendak bere orrialde propioa eduki behar duen edo ez."
 
 #: ../data/eom.schemas.in.h:39
 msgid "Whether the scroll wheel should be used for zooming."
@@ -594,7 +550,8 @@ msgstr "Aldaketak \"%s\" irudian gorde itxi aurretik?"
 #: ../src/eom-close-confirmation-dialog.c:604
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
-msgid_plural "There are %d images with unsaved changes. Save changes before closing?"
+msgid_plural ""
+"There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] "Irudi %d dago gorde gabeko aldaketekin. Aldaketak gorde itxi aurretik?"
 msgstr[1] "%d daude gorde gabeko aldaketekin. Aldaketak gorde itxi aurretik?"
 
@@ -615,9 +572,7 @@ msgstr "Fitxategi-formatua ezezaguna da edo ez dago onartuta"
 msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
-msgstr ""
-"MATEren Begiak ezin izan du fitxategi-formatu idazgarria zehaztu fitxategi-"
-"izenean oinarrituz"
+msgstr "MATEren Begiak ezin izan du fitxategi-formatu idazgarria zehaztu fitxategi-izenean oinarrituz"
 
 #: ../src/eom-file-chooser.c:134
 msgid "Please try a different file extension like .png or .jpg."
@@ -631,7 +586,8 @@ msgstr "Fitxategi denak"
 msgid "All Images"
 msgstr "Irudi denak"
 
-#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
+#. Filter name: First description then file extension, eg. "The PNG-Format
+#. (*.png)".
 #: ../src/eom-file-chooser.c:192
 #, c-format
 msgid "%s (*.%s)"
@@ -746,7 +702,8 @@ msgstr "Balioa"
 msgid "%a, %d %B %Y  %X"
 msgstr "%a, %Y %B %d  %X"
 
-#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
+#. A strftime-formatted string, to display the date the image was taken, for
+#. the case we don't have the time.
 #: ../src/eom-exif-util.c:147
 msgid "%a, %d %B %Y"
 msgstr "%a, %Y %B %d"
@@ -933,7 +890,7 @@ msgstr[1] "%i × %i pixel  %s    %% %i"
 msgid "_Reload"
 msgstr "_Birkargatu"
 
-#: ../src/eom-window.c:1140 ../src/eom-window.c:2995
+#: ../src/eom-window.c:1140 ../src/eom-window.c:3000
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "_Ezkutatu"
@@ -945,9 +902,7 @@ msgstr "_Ezkutatu"
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
-msgstr ""
-"\"%s\" irudia kanpoko aplikazio batek aldatu du.\n"
-"Nahi duzu berriro kargatzea?"
+msgstr "\"%s\" irudia kanpoko aplikazio batek aldatu du.\nNahi duzu berriro kargatzea?"
 
 #: ../src/eom-window.c:1305
 #, c-format
@@ -974,9 +929,7 @@ msgstr "\"%s\" irudia irekitzen"
 msgid ""
 "Error printing file:\n"
 "%s"
-msgstr ""
-"Errorea fitxategia inprimatzean:\n"
-"%s"
+msgstr "Errorea fitxategia inprimatzean:\n%s"
 
 #: ../src/eom-window.c:2751
 msgid "Toolbar Editor"
@@ -986,91 +939,75 @@ msgstr "Tresna-barraren editorea"
 msgid "_Reset to Default"
 msgstr "_Berrasieratu lehenetsira"
 
-#: ../src/eom-window.c:2840
+#: ../src/eom-window.c:2844
 msgid "translator-credits"
 msgstr "Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>"
 
-#: ../src/eom-window.c:2843
+#: ../src/eom-window.c:2847
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version.\n"
-msgstr ""
-"Programa hau software librea da; birbana eta/edo alda dezakezu Software "
-"Foundation-ek argitaratutako GNU Lizentzia Publiko Orokorraren 2. bertsioan, "
-"edo (nahiago baduzu) beste berriago batean, jasotako baldintzak betez gero.\n"
+msgstr "Programa hau software librea da; birbana eta/edo alda dezakezu Software Foundation-ek argitaratutako GNU Lizentzia Publiko Orokorraren 2. bertsioan, edo (nahiago baduzu) beste berriago batean, jasotako baldintzak betez gero.\n"
 
-#: ../src/eom-window.c:2847
+#: ../src/eom-window.c:2851
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details.\n"
-msgstr ""
-"Programa hau erabilgarria izango delakoan banatzen da, baina, INOLAKO "
-"BERMERIK GABE; era berean, ez da bermatzen beraren EGOKITASUNA "
-"MERKATURATZEKO edo HELBURU PARTIKULARRETARAKO ERABILTZEKO. Argibide gehiago "
-"nahi izanez gero, ikus GNU Lizentzia Publiko Orokorra.\n"
+msgstr "Programa hau erabilgarria izango delakoan banatzen da, baina, INOLAKO BERMERIK GABE; era berean, ez da bermatzen beraren EGOKITASUNA MERKATURATZEKO edo HELBURU PARTIKULARRETARAKO ERABILTZEKO. Argibide gehiago nahi izanez gero, ikus GNU Lizentzia Publiko Orokorra.\n"
 
-#: ../src/eom-window.c:2851
+#: ../src/eom-window.c:2855
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program; if not, write to the Free Software Foundation, Inc., 59 Temple "
-"Place - Suite 330, Boston, MA 02111-1307, USA."
-msgstr ""
-"Programa honekin batera GNU Lizentzia Publiko Orokorraren kopia bat jasoko "
-"zenuen; hala ez bada, idatzi hona: Free SoftwareFoundation, Inc., 59 Temple "
-"Place - Suite 330, Boston, MA 02111-1307, USA."
+"You should have received a copy of the GNU General Public License along with"
+" this program; if not, write to the Free Software Foundation, Inc., 59 "
+"Temple Place - Suite 330, Boston, MA 02111-1307, USA."
+msgstr "Programa honekin batera GNU Lizentzia Publiko Orokorraren kopia bat jasoko zenuen; hala ez bada, idatzi hona: Free SoftwareFoundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA."
 
-#: ../src/eom-window.c:2864
+#: ../src/eom-window.c:2868
 msgid "Eye of MATE"
 msgstr "MATEren begia"
 
-#: ../src/eom-window.c:2867
+#: ../src/eom-window.c:2872
 msgid "The MATE image viewer."
 msgstr "MATEren irudi-ikustailea."
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2993
+#: ../src/eom-window.c:2998
 msgid "_Open Background Preferences"
 msgstr "_Ireki atzeko planoaren hobespenak"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:3009
+#: ../src/eom-window.c:3014
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
-msgstr ""
-"\"%s\" irudia mahaigaineko atzeko planoko irudi gisa ezarri da.\n"
-"Nahi duzu bere itxura aldatzea?"
+msgstr "\"%s\" irudia mahaigaineko atzeko planoko irudi gisa ezarri da.\nNahi duzu bere itxura aldatzea?"
 
-#: ../src/eom-window.c:3405
+#: ../src/eom-window.c:3410
 msgid "Saving image locally…"
 msgstr "Irudia lokalean gordetzen..."
 
-#: ../src/eom-window.c:3487
+#: ../src/eom-window.c:3492
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
-msgstr ""
-"Ziur zaude \"%s\"\n"
-"zakarrontzira botatzea nahi duzula?"
+msgstr "Ziur zaude \"%s\"\nzakarrontzira botatzea nahi duzula?"
 
-#: ../src/eom-window.c:3490
+#: ../src/eom-window.c:3495
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
-msgstr ""
-"Ezin izan da \"%s\"(r)en zakarrontzia aurkitu. Nahi duzu irudi hau betirako "
-"kentzea?"
+msgstr "Ezin izan da \"%s\"(r)en zakarrontzia aurkitu. Nahi duzu irudi hau betirako kentzea?"
 
-#: ../src/eom-window.c:3495
+#: ../src/eom-window.c:3500
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1078,373 +1015,368 @@ msgid ""
 msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
-msgstr[0] ""
-"Ziur zaude hautatutako irudia\n"
-"zakarrontzira botatzea nahi duzula?"
-msgstr[1] ""
-"Ziur zaude hautatutako %d irudi\n"
-"zakarrontzira botatzea nahi dituzula?"
+msgstr[0] "Ziur zaude hautatutako irudia\nzakarrontzira botatzea nahi duzula?"
+msgstr[1] "Ziur zaude hautatutako %d irudi\nzakarrontzira botatzea nahi dituzula?"
 
-#: ../src/eom-window.c:3500
+#: ../src/eom-window.c:3505
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
-msgstr ""
-"Hautatutako irudi batzuk ezin dira zakarrontzira bota, eta betirako "
-"ezabatuko dira. Aurrera jarraitzea nahi duzu?"
+msgstr "Hautatutako irudi batzuk ezin dira zakarrontzira bota, eta betirako ezabatuko dira. Aurrera jarraitzea nahi duzu?"
 
-#: ../src/eom-window.c:3517 ../src/eom-window.c:3975 ../src/eom-window.c:3999
+#: ../src/eom-window.c:3522 ../src/eom-window.c:3980 ../src/eom-window.c:4004
 msgid "Move to _Trash"
 msgstr "Bota _zakarrontzira"
 
-#: ../src/eom-window.c:3519
+#: ../src/eom-window.c:3524
 msgid "_Do not ask again during this session"
 msgstr "_Ez galdetu berriro saio honetan"
 
-#: ../src/eom-window.c:3564 ../src/eom-window.c:3578
+#: ../src/eom-window.c:3569 ../src/eom-window.c:3583
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Ezin izan da zakarrontzirik erabili."
 
-#: ../src/eom-window.c:3586
+#: ../src/eom-window.c:3591
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Ezin izan da fitxategia ezabatu"
 
-#: ../src/eom-window.c:3657
+#: ../src/eom-window.c:3662
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Errorea %s irudia ezabatzean"
 
-#: ../src/eom-window.c:3899
+#: ../src/eom-window.c:3904
 msgid "_Image"
 msgstr "I_rudia"
 
-#: ../src/eom-window.c:3900
+#: ../src/eom-window.c:3905
 msgid "_Edit"
 msgstr "_Editatu"
 
-#: ../src/eom-window.c:3901
+#: ../src/eom-window.c:3906
 msgid "_View"
 msgstr "_Ikusi"
 
-#: ../src/eom-window.c:3902
+#: ../src/eom-window.c:3907
 msgid "_Go"
 msgstr "_Joan"
 
-#: ../src/eom-window.c:3903
+#: ../src/eom-window.c:3908
 msgid "_Tools"
 msgstr "_Tresnak"
 
-#: ../src/eom-window.c:3904
+#: ../src/eom-window.c:3909
 msgid "_Help"
 msgstr "_Laguntza"
 
-#: ../src/eom-window.c:3906
+#: ../src/eom-window.c:3911
 msgid "_Open…"
 msgstr "_Ireki..."
 
-#: ../src/eom-window.c:3907
+#: ../src/eom-window.c:3912
 msgid "Open a file"
 msgstr "Fitxategi bat irekitzen du"
 
-#: ../src/eom-window.c:3909
+#: ../src/eom-window.c:3914
 msgid "_Close"
 msgstr "It_xi"
 
-#: ../src/eom-window.c:3910
+#: ../src/eom-window.c:3915
 msgid "Close window"
 msgstr "Itxi leihoa"
 
-#: ../src/eom-window.c:3912
+#: ../src/eom-window.c:3917
 msgid "T_oolbar"
 msgstr "T_resna-barra"
 
-#: ../src/eom-window.c:3913
+#: ../src/eom-window.c:3918
 msgid "Edit the application toolbar"
 msgstr "Editatu aplikazioaren tresna-barra"
 
-#: ../src/eom-window.c:3915
+#: ../src/eom-window.c:3920
 msgid "Prefere_nces"
 msgstr "_Hobespenak"
 
-#: ../src/eom-window.c:3916
+#: ../src/eom-window.c:3921
 msgid "Preferences for Eye of MATE"
 msgstr "MATEren begiaren hobespenak"
 
-#: ../src/eom-window.c:3918
+#: ../src/eom-window.c:3923
 msgid "_Contents"
 msgstr "_Edukia"
 
-#: ../src/eom-window.c:3919
+#: ../src/eom-window.c:3924
 msgid "Help on this application"
 msgstr "Aplikazio honen laguntza"
 
-#: ../src/eom-window.c:3921 ../src/eom-plugin-manager.c:505
+#: ../src/eom-window.c:3926 ../src/eom-plugin-manager.c:505
 msgid "_About"
 msgstr "Honi _buruz"
 
-#: ../src/eom-window.c:3922
+#: ../src/eom-window.c:3927
 msgid "About this application"
 msgstr "Aplikazio honi buruz"
 
-#: ../src/eom-window.c:3927
+#: ../src/eom-window.c:3932
 msgid "_Toolbar"
 msgstr "_Tresna-barra"
 
-#: ../src/eom-window.c:3928
+#: ../src/eom-window.c:3933
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Aldatu tresna-barraren ikusgaitasuna uneko leihoan"
 
-#: ../src/eom-window.c:3930
+#: ../src/eom-window.c:3935
 msgid "_Statusbar"
 msgstr "_Egoera-barra"
 
-#: ../src/eom-window.c:3931
+#: ../src/eom-window.c:3936
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Aldatu egoera-barraren ikusgaitasuna uneko leihoan"
 
-#: ../src/eom-window.c:3933
+#: ../src/eom-window.c:3938
 msgid "_Image Collection"
 msgstr "_Irudi-bilduma"
 
-#: ../src/eom-window.c:3934
-msgid "Changes the visibility of the image collection pane in the current window"
+#: ../src/eom-window.c:3939
+msgid ""
+"Changes the visibility of the image collection pane in the current window"
 msgstr "Aldatu irudi-bildumaren panelaren ikusgaitasuna uneko leihoan"
 
-#: ../src/eom-window.c:3936
+#: ../src/eom-window.c:3941
 msgid "Side _Pane"
 msgstr "_Albo-panela"
 
-#: ../src/eom-window.c:3937
+#: ../src/eom-window.c:3942
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Albo-panelaren ikusgaitasuna aldatzen du uneko leihoan"
 
-#: ../src/eom-window.c:3942
+#: ../src/eom-window.c:3947
 msgid "_Save"
 msgstr "_Gorde"
 
-#: ../src/eom-window.c:3943
+#: ../src/eom-window.c:3948
 msgid "Save changes in currently selected images"
 msgstr "Gorde aldaketak unean hautatutako irudietan"
 
-#: ../src/eom-window.c:3945
+#: ../src/eom-window.c:3950
 msgid "Open _with"
 msgstr "Ireki _honekin"
 
-#: ../src/eom-window.c:3946
+#: ../src/eom-window.c:3951
 msgid "Open the selected image with a different application"
 msgstr "Ireki hautatutako irudia beste aplikazio batekin"
 
-#: ../src/eom-window.c:3948
+#: ../src/eom-window.c:3953
 msgid "Save _As…"
 msgstr "Gorde _honela..."
 
-#: ../src/eom-window.c:3949
+#: ../src/eom-window.c:3954
 msgid "Save the selected images with a different name"
 msgstr "Gorde hautatutako irudiak beste izenarekin"
 
-#: ../src/eom-window.c:3951
+#: ../src/eom-window.c:3956
 msgid "_Print…"
 msgstr "_Inprimatu..."
 
-#: ../src/eom-window.c:3952
+#: ../src/eom-window.c:3957
 msgid "Print the selected image"
 msgstr "Inprimatu hautatutako irudia"
 
-#: ../src/eom-window.c:3954
+#: ../src/eom-window.c:3959
 msgid "Prope_rties"
 msgstr "_Propietateak"
 
-#: ../src/eom-window.c:3955
+#: ../src/eom-window.c:3960
 msgid "Show the properties and metadata of the selected image"
 msgstr "Erakutsi hautatutako irudiaren propietateak eta metadatuak"
 
-#: ../src/eom-window.c:3957
+#: ../src/eom-window.c:3962
 msgid "_Undo"
 msgstr "_Desegin"
 
-#: ../src/eom-window.c:3958
+#: ../src/eom-window.c:3963
 msgid "Undo the last change in the image"
 msgstr "Desegin irudiaren azken aldaketa"
 
-#: ../src/eom-window.c:3960
+#: ../src/eom-window.c:3965
 msgid "Flip _Horizontal"
 msgstr "Irauli _horizontalki"
 
-#: ../src/eom-window.c:3961
+#: ../src/eom-window.c:3966
 msgid "Mirror the image horizontally"
 msgstr "Ispilatu irudia horizontalki"
 
-#: ../src/eom-window.c:3963
+#: ../src/eom-window.c:3968
 msgid "Flip _Vertical"
 msgstr "Irauli _bertikalki"
 
-#: ../src/eom-window.c:3964
+#: ../src/eom-window.c:3969
 msgid "Mirror the image vertically"
 msgstr "Ispilatu irudia bertikalki"
 
-#: ../src/eom-window.c:3966
+#: ../src/eom-window.c:3971
 msgid "_Rotate Clockwise"
 msgstr "Biratu e_skuinera"
 
-#: ../src/eom-window.c:3967
+#: ../src/eom-window.c:3972
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Biratu irudia 90 gradu eskuinera"
 
-#: ../src/eom-window.c:3969
+#: ../src/eom-window.c:3974
 msgid "Rotate Counterc_lockwise"
 msgstr "Biratu e_zkerrera"
 
-#: ../src/eom-window.c:3970
+#: ../src/eom-window.c:3975
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Biratu irudia 90 gradu ezkerrera"
 
-#: ../src/eom-window.c:3972
+#: ../src/eom-window.c:3977
 msgid "Set as _Desktop Background"
 msgstr "Ezarri _mahaigaineko atzeko plano gisa"
 
-#: ../src/eom-window.c:3973
+#: ../src/eom-window.c:3978
 msgid "Set the selected image as the desktop background"
 msgstr "Ezarri hautatutako irudia mahaigaineko atzeko plano gisa"
 
-#: ../src/eom-window.c:3976
+#: ../src/eom-window.c:3981
 msgid "Move the selected image to the trash folder"
 msgstr "Bota hautatutako irudia zakarrontzira"
 
-#: ../src/eom-window.c:3978 ../src/eom-window.c:3990 ../src/eom-window.c:3993
+#: ../src/eom-window.c:3983 ../src/eom-window.c:3995 ../src/eom-window.c:3998
 msgid "_Zoom In"
 msgstr "_Handiagotu"
 
-#: ../src/eom-window.c:3979 ../src/eom-window.c:3991
+#: ../src/eom-window.c:3984 ../src/eom-window.c:3996
 msgid "Enlarge the image"
 msgstr "Handiagotu irudia"
 
-#: ../src/eom-window.c:3981 ../src/eom-window.c:3996
+#: ../src/eom-window.c:3986 ../src/eom-window.c:4001
 msgid "Zoom _Out"
 msgstr "_Txikiagotu"
 
-#: ../src/eom-window.c:3982 ../src/eom-window.c:3994 ../src/eom-window.c:3997
+#: ../src/eom-window.c:3987 ../src/eom-window.c:3999 ../src/eom-window.c:4002
 msgid "Shrink the image"
 msgstr "Txikiagotu irudia"
 
-#: ../src/eom-window.c:3984
+#: ../src/eom-window.c:3989
 msgid "_Normal Size"
 msgstr "Tamaina _normala"
 
-#: ../src/eom-window.c:3985
+#: ../src/eom-window.c:3990
 msgid "Show the image at its normal size"
 msgstr "Erakutsi irudia bere tamaina normalean"
 
-#: ../src/eom-window.c:3987
+#: ../src/eom-window.c:3992
 msgid "Best _Fit"
 msgstr "_Egokiena"
 
-#: ../src/eom-window.c:3988
+#: ../src/eom-window.c:3993
 msgid "Fit the image to the window"
 msgstr "Doitu irudia leihora"
 
-#: ../src/eom-window.c:4005
+#: ../src/eom-window.c:4010
 msgid "_Fullscreen"
 msgstr "_Pantaila osoan"
 
-#: ../src/eom-window.c:4006
+#: ../src/eom-window.c:4011
 msgid "Show the current image in fullscreen mode"
 msgstr "Erakutsi uneko irudia pantaila osoko moduan"
 
-#: ../src/eom-window.c:4008
+#: ../src/eom-window.c:4013
 msgid "Pause Slideshow"
 msgstr "Pausatu diapositiba-aurkezpena"
 
-#: ../src/eom-window.c:4009
+#: ../src/eom-window.c:4014
 msgid "Pause or resume the slideshow"
 msgstr "Pausatu edo jarraitu diapositiba-aurkezpena"
 
-#: ../src/eom-window.c:4014 ../src/eom-window.c:4029
+#: ../src/eom-window.c:4019 ../src/eom-window.c:4034
 msgid "_Previous Image"
 msgstr "_Aurreko irudia"
 
-#: ../src/eom-window.c:4015
+#: ../src/eom-window.c:4020
 msgid "Go to the previous image of the collection"
 msgstr "Joan bildumaren aurreko irudira"
 
-#: ../src/eom-window.c:4017
+#: ../src/eom-window.c:4022
 msgid "_Next Image"
 msgstr "_Hurrengo irudia"
 
-#: ../src/eom-window.c:4018
+#: ../src/eom-window.c:4023
 msgid "Go to the next image of the collection"
 msgstr "Joan bildumaren hurrengo irudira"
 
-#: ../src/eom-window.c:4020 ../src/eom-window.c:4032
+#: ../src/eom-window.c:4025 ../src/eom-window.c:4037
 msgid "_First Image"
 msgstr "_Aurreneko irudia"
 
-#: ../src/eom-window.c:4021
+#: ../src/eom-window.c:4026
 msgid "Go to the first image of the collection"
 msgstr "Joan bildumaren aurreneko irudira"
 
-#: ../src/eom-window.c:4023 ../src/eom-window.c:4035
+#: ../src/eom-window.c:4028 ../src/eom-window.c:4040
 msgid "_Last Image"
 msgstr "_Azkeneko irudia"
 
-#: ../src/eom-window.c:4024
+#: ../src/eom-window.c:4029
 msgid "Go to the last image of the collection"
 msgstr "Joan bildumaren azkeneko irudira"
 
-#: ../src/eom-window.c:4026
+#: ../src/eom-window.c:4031
 msgid "_Random Image"
 msgstr "_Ausazko irudia"
 
-#: ../src/eom-window.c:4027
+#: ../src/eom-window.c:4032
 msgid "Go to a random image of the collection"
 msgstr "Joan bildumaren hurrengo ausazko irudira"
 
-#: ../src/eom-window.c:4041
+#: ../src/eom-window.c:4046
 msgid "_Slideshow"
 msgstr "_Diapositiba-aurkezpena"
 
-#: ../src/eom-window.c:4042
+#: ../src/eom-window.c:4047
 msgid "Start a slideshow view of the images"
 msgstr "Hasi irudien diapositiba-aurkezpena"
 
-#: ../src/eom-window.c:4108
+#: ../src/eom-window.c:4113
 msgid "Previous"
 msgstr "Aurrekoa"
 
-#: ../src/eom-window.c:4112
+#: ../src/eom-window.c:4117
 msgid "Next"
 msgstr "Hurrengoa"
 
-#: ../src/eom-window.c:4116
+#: ../src/eom-window.c:4121
 msgid "Right"
 msgstr "Eskuinera"
 
-#: ../src/eom-window.c:4119
+#: ../src/eom-window.c:4124
 msgid "Left"
 msgstr "Ezkerrera"
 
-#: ../src/eom-window.c:4122
+#: ../src/eom-window.c:4127
 msgid "In"
 msgstr "Handiagotu"
 
-#: ../src/eom-window.c:4125
+#: ../src/eom-window.c:4130
 msgid "Out"
 msgstr "Txikiagotu"
 
-#: ../src/eom-window.c:4128
+#: ../src/eom-window.c:4133
 msgid "Normal"
 msgstr "Normala"
 
-#: ../src/eom-window.c:4131
+#: ../src/eom-window.c:4136
 msgid "Fit"
 msgstr "Doitu"
 
-#: ../src/eom-window.c:4134
+#: ../src/eom-window.c:4139
 msgid "Collection"
 msgstr "Bilduma"
 
-#: ../src/eom-window.c:4137
+#: ../src/eom-window.c:4142
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Bota"
@@ -1485,10 +1417,6 @@ msgstr "_Pluginari buruz"
 msgid "C_onfigure Plugin"
 msgstr "K_onfiguratu plugina"
 
-#: ../src/main.c:66 ../src/main.c:248
-msgid "Eye of MATE Image Viewer"
-msgstr "MATEren irudi-ikustailearen begia"
-
 #: ../src/main.c:73
 msgid "Open in fullscreen mode"
 msgstr "Ireki pantaila osoko moduan"
@@ -1518,4 +1446,3 @@ msgstr "[FITXATEGIA...]"
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "Exekutatu '%s --help' komando-lerroko aukera guztiak zerrendatzeko."
-

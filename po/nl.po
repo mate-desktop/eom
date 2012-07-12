@@ -1,29 +1,21 @@
-# Dutch translation for Eye of Mate
-#
-# This file is distributed under the same license as the Eye of Mate package.
-#
-# Vincent van Adrighem <V.vanadrighem@dirck.mine.nu>
-# Dennis Smit <synap@area101.penguin.nl>, 2000
-# Michiel Sikkes <michiel@eyesopened.nl>, 2004
-# Vincent van Adrighem <V.vanAdrighem@dirck.mine.nu>, 2003
-# Tino Meinen <a.t.meinen@chello.nl>, 2004, 2005, 2006, 2007, 2008
-# Michiel Sikkes <michiel.sikkes@gmail.com>, 2006
-# Wouter Bolsterlee <wbolster@gnome.org>, 2006–2010
-# Reinout van Schouwen <reinouts@gnome.org>, 2008
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: eom\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-19 18:29+0200\n"
-"PO-Revision-Date: 2010-09-19 18:29+0200\n"
-"Last-Translator: Wouter Bolsterlee <wbolster@gnome.org>\n"
-"Language-Team: Dutch <vertaling@vrijschrift.org>\n"
-"Language: nl\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2011-12-30 15:48+0100\n"
+"PO-Revision-Date: 2011-12-30 15:23+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/MATE/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -73,14 +65,13 @@ msgstr "Omschakelen naar volledig scherm-modus bij dubbelklikken"
 msgid "Fullscreen with double-click"
 msgstr "Volledig scherm bij dubbelklikken"
 
-# opnieuw laden/herladen
 #: ../plugins/reload/reload.eom-plugin.desktop.in.h:1
-#: ../plugins/reload/eom-reload-plugin.c:45
+#: ../plugins/reload/eom-reload-plugin.c:38
 msgid "Reload Image"
 msgstr "Afbeelding herladen"
 
 #: ../plugins/reload/reload.eom-plugin.desktop.in.h:2
-#: ../plugins/reload/eom-reload-plugin.c:47
+#: ../plugins/reload/eom-reload-plugin.c:38
 msgid "Reload current image"
 msgstr "Huidige afbeelding herladen"
 
@@ -96,12 +87,9 @@ msgstr "Toont de datum van de afbeelding in de statusbalk"
 msgid "Browse and rotate images"
 msgstr "Afbeeldingen doorbladeren en roteren"
 
-# eigenlijk moet de naam erbij want er zijn meer van dit soort
-# programma's: bv. Gthumb afbeeldingviewer
-# viewer ipv weergave om constistent te blijven met evince documentviewer
-#: ../data/eom.desktop.in.in.h:2
-msgid "Image Viewer"
-msgstr "EOM Afbeeldingviewer"
+#: ../data/eom.desktop.in.in.h:2 ../src/main.c:66 ../src/main.c:248
+msgid "Eye of MATE Image Viewer"
+msgstr "Eye of Mate afbeeldingsweergave"
 
 #: ../data/eom-image-properties-dialog.ui.h:1
 msgid "Aperture Value:"
@@ -115,7 +103,6 @@ msgstr "Auteur:"
 msgid "Bytes:"
 msgstr "Bytes:"
 
-# cameramodel/model camera
 #: ../data/eom-image-properties-dialog.ui.h:4
 msgid "Camera Model:"
 msgstr "Model camera:"
@@ -286,7 +273,6 @@ msgstr "Kleur voor transparante delen"
 msgid "E_xpand images to fit screen"
 msgstr "Afbeeldingen uit_rekken om passend te maken"
 
-# Voorkeuren Eye of MATE
 #: ../data/eom-preferences-dialog.ui.h:9
 msgid "Eye of MATE Preferences"
 msgstr "Eye of Mate-voorkeuren"
@@ -299,7 +285,6 @@ msgstr "Afbeeldingsverbeteringen"
 msgid "Image View"
 msgstr "Afbeeldingsweergave"
 
-# Vrij vertaald (Wouter Bolsterlee)
 #: ../data/eom-preferences-dialog.ui.h:12
 msgid "Image Zoom"
 msgstr "Zoomen"
@@ -346,12 +331,9 @@ msgstr "seconden"
 
 #: ../data/eom.schemas.in.h:1
 msgid ""
-"A value greater than 0 determines the seconds an image stays on screen until "
-"the next one is shown automatically. Zero disables the automatic browsing."
-msgstr ""
-"Een waarde groter dan 0 geeft het aantal seconden dat een afbeelding op het "
-"scherm blijft staan voordat de volgende automatisch wordt weergegeven. Een "
-"waarde van nul schakelt deze functie uit."
+"A value greater than 0 determines the seconds an image stays on screen until"
+" the next one is shown automatically. Zero disables the automatic browsing."
+msgstr "Een waarde groter dan 0 geeft het aantal seconden dat een afbeelding op het scherm blijft staan voordat de volgende automatisch wordt weergegeven. Een waarde van nul schakelt deze functie uit."
 
 #: ../data/eom.schemas.in.h:2
 msgid "Active plugins"
@@ -375,10 +357,7 @@ msgid ""
 "Determines how transparency should be indicated. Valid values are "
 "CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
 "determines the color value used."
-msgstr ""
-"Bepaalt hoe de transparantie weergegeven dient te worden. Geldige waarden "
-"zijn CHECK_PATTERN, COLOR en NONE. Als COLOR wordt gebruikt, zal de sleutel "
-"‘trans-color’ de kleur voor transparantie voorstellen."
+msgstr "Bepaalt hoe de transparantie weergegeven dient te worden. Geldige waarden zijn CHECK_PATTERN, COLOR en NONE. Als COLOR wordt gebruikt, zal de sleutel ‘trans-color’ de kleur voor transparantie voorstellen."
 
 #: ../data/eom.schemas.in.h:9
 msgid "Extrapolate Image"
@@ -390,68 +369,47 @@ msgid ""
 "will display the user's pictures folder using the XDG special user "
 "directories. If deactivated or the pictures folder has not been set up, it "
 "will show the current working directory."
-msgstr ""
-"Indien ingeschakeld en er geen afbeelding is geladen in het huidige venster, "
-"zal de bestandskiezer de afbeeldingenmap van de gebruiker tonen met behulp "
-"van de speciale XDG-mappen. Indien uitgeschakeld, of als er geen "
-"afbeeldingenmap ingesteld is, wordt de huidige map getoond."
+msgstr "Indien ingeschakeld en er geen afbeelding is geladen in het huidige venster, zal de bestandskiezer de afbeeldingenmap van de gebruiker tonen met behulp van de speciale XDG-mappen. Indien uitgeschakeld, of als er geen afbeeldingenmap ingesteld is, wordt de huidige map getoond."
 
 #: ../data/eom.schemas.in.h:11
 msgid ""
 "If activated, Eye of MATE won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
 "trash and would be deleted instead."
-msgstr ""
-"Indien ingeschakeld zal Eye of Mate niet vragen om bevestiging bij het "
-"verplaatsen van afbeeldingen naar de prullenbak. Er zal nog steeds om "
-"bevestiging gevraagd worden als afbeeldingen niet naar de prullenbak "
-"verplaatst, maar enkel definitief verwijderd kunnen worden."
+msgstr "Indien ingeschakeld zal Eye of Mate niet vragen om bevestiging bij het verplaatsen van afbeeldingen naar de prullenbak. Er zal nog steeds om bevestiging gevraagd worden als afbeeldingen niet naar de prullenbak verplaatst, maar enkel definitief verwijderd kunnen worden."
 
 #: ../data/eom.schemas.in.h:12
 msgid ""
 "If activated, the detailed metadata list in the properties dialog will be "
-"moved to its own page in the dialog. This should make the dialog more usable "
-"on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"moved to its own page in the dialog. This should make the dialog more usable"
+" on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
 "be embedded on the \"Metadata\" page."
-msgstr ""
-"Indien ingeschakeld wordt de metadatalijst in het eigenschappenvenster naar "
-"een eigen pagina in het venster verplaatst. Dit maakt dit venster geschikter "
-"voor kleinere schermen, zoals bijvoorbeeld netbooks. Indien uitgeschakeld "
-"wordt de lijst getoond op de pagina met metadata."
+msgstr "Indien ingeschakeld wordt de metadatalijst in het eigenschappenvenster naar een eigen pagina in het venster verplaatst. Dit maakt dit venster geschikter voor kleinere schermen, zoals bijvoorbeeld netbooks. Indien uitgeschakeld wordt de lijst getoond op de pagina met metadata."
 
 #: ../data/eom.schemas.in.h:13
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
-msgstr ""
-"Als de transparantiesleutel de waarde COLOR heeft, bepaalt deze sleutel "
-"welke kleur de transparantie voorstelt."
+msgstr "Als de transparantiesleutel de waarde COLOR heeft, bepaalt deze sleutel welke kleur de transparantie voorstelt."
 
 #: ../data/eom.schemas.in.h:14
 msgid ""
-"If this is active, the color set by the background-color key will be used to "
-"fill the area behind the image. If it is not set, the current GTK+ theme "
+"If this is active, the color set by the background-color key will be used to"
+" fill the area behind the image. If it is not set, the current GTK+ theme "
 "will determine the fill color."
-msgstr ""
-"Indien ingeschakeld wordt de kleur die ingesteld is met de sleutel "
-"‘background-color’ gebruikt om de achtergrond achter de afbeelding te "
-"vullen. Indien uitgeschakeld wordt de kleur bepaald door het GTK+-thema."
+msgstr "Indien ingeschakeld wordt de kleur die ingesteld is met de sleutel ‘background-color’ gebruikt om de achtergrond achter de afbeelding te vullen. Indien uitgeschakeld wordt de kleur bepaald door het GTK+-thema."
 
 #: ../data/eom.schemas.in.h:15
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
-msgstr ""
-"Indien uitgeschakeld worden kleine afbeeldingen in beginsel niet tot "
-"schermvullende grootte opgerekt."
+msgstr "Indien uitgeschakeld worden kleine afbeeldingen in beginsel niet tot schermvullende grootte opgerekt."
 
 #: ../data/eom.schemas.in.h:16
 msgid ""
 "Image collection pane position. Set to 0 for bottom; 1 for left; 2 for top; "
 "3 for right."
-msgstr ""
-"Positie van het paneel met de afbeeldingsverzameling. Onderkant: 0, links: "
-"1, bovenkant: 2, rechts: 3."
+msgstr "Positie van het paneel met de afbeeldingsverzameling. Onderkant: 0, links: 1, bovenkant: 2, rechts: 3."
 
 #: ../data/eom.schemas.in.h:17
 msgid "Interpolate Image"
@@ -462,9 +420,7 @@ msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
 "plugin."
-msgstr ""
-"Lijst van actieve plugins. Deze lijst bevat de locatie van de plugin niet; "
-"zie hievoor het ‘.eom-plugin’-bestand."
+msgstr "Lijst van actieve plugins. Deze lijst bevat de locatie van de plugin niet; zie hievoor het ‘.eom-plugin’-bestand."
 
 #: ../data/eom.schemas.in.h:19
 msgid "Loop through the image sequence"
@@ -482,7 +438,6 @@ msgstr "Schuifknoppen naast afbeeldingsverzameling tonen of verbergen."
 msgid "Show/Hide the image collection pane."
 msgstr "Tonen of verbergen van het afbeeldingsverzamelingspaneel."
 
-# zijbalk/informatiebalk
 #: ../data/eom.schemas.in.h:23
 msgid "Show/Hide the window side pane."
 msgstr "Zijbalk tonen of verbergen."
@@ -500,23 +455,16 @@ msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
 "theme instead."
-msgstr ""
-"De kleur die gebruikt wordt om de achtergrond achter een afbeelding te "
-"vullen. Als de sleutel ‘use-background-color’ niet ingeschakeld is, bepaalt "
-"het GTK+-thema deze kleur."
+msgstr "De kleur die gebruikt wordt om de achtergrond achter een afbeelding te vullen. Als de sleutel ‘use-background-color’ niet ingeschakeld is, bepaalt het GTK+-thema deze kleur."
 
 #: ../data/eom.schemas.in.h:28
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
-"This value defines the zooming step used for each scroll event. For example, "
-"0.05 results in a 5% zoom increment for each scroll event and 1.00 result in "
-"a 100% zoom increment."
-msgstr ""
-"De vermenigvuldigingsfactor die gebruikt wordt bij zoomen met een muiswiel. "
-"Deze waarde bepaalt hoeveel gezoomd wordt als het muiswiel een keer wordt "
-"bewogen. Voorbeeld: de waarde 0.05 zorgt ervoor dat er 5% in- of uitgezoomd "
-"wordt en de waarde 1.00 zorgt voor een 100% toe- of afname. "
+"This value defines the zooming step used for each scroll event. For example,"
+" 0.05 results in a 5% zoom increment for each scroll event and 1.00 result "
+"in a 100% zoom increment."
+msgstr "De vermenigvuldigingsfactor die gebruikt wordt bij zoomen met een muiswiel. Deze waarde bepaalt hoeveel gezoomd wordt als het muiswiel een keer wordt bewogen. Voorbeeld: de waarde 0.05 zorgt ervoor dat er 5% in- of uitgezoomd wordt en de waarde 1.00 zorgt voor een 100% toe- of afname. "
 
 #: ../data/eom.schemas.in.h:29
 msgid "Transparency color"
@@ -536,47 +484,35 @@ msgstr "Aangepaste achtergrondkleur gebruiken"
 
 #: ../data/eom.schemas.in.h:33
 msgid ""
-"Whether the file chooser should show the user's pictures folder if no images "
-"are loaded."
-msgstr ""
-"Geeft aan of de bestandskiezer de afbeeldingenmap van de gebruiker dient te "
-"tonen als geen afbeeldingen geladen zijn."
+"Whether the file chooser should show the user's pictures folder if no images"
+" are loaded."
+msgstr "Geeft aan of de bestandskiezer de afbeeldingenmap van de gebruiker dient te tonen als geen afbeeldingen geladen zijn."
 
 #: ../data/eom.schemas.in.h:34
 msgid "Whether the image collection pane should be resizable."
-msgstr ""
-"Geeft aan of het paneel met de afbeeldingsverzameling van grootte kan "
-"veranderen."
+msgstr "Geeft aan of het paneel met de afbeeldingsverzameling van grootte kan veranderen."
 
 #: ../data/eom.schemas.in.h:35
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
-msgstr ""
-"Geeft aan of de afbeelding geëxtrapoleerd moet worden bij inzoomen. Dit "
-"zorgt voor een wazige beeldkwaliteit en is wat langzamer."
+msgstr "Geeft aan of de afbeelding geëxtrapoleerd moet worden bij inzoomen. Dit zorgt voor een wazige beeldkwaliteit en is wat langzamer."
 
 #: ../data/eom.schemas.in.h:36
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
-msgstr ""
-"Geeft aan of de afbeelding geïnterpoleerd moet worden bij uitzoomen. Dit "
-"zorgt voor een betere beeldkwaliteit maar is wat langzamer."
+msgstr "Geeft aan of de afbeelding geïnterpoleerd moet worden bij uitzoomen. Dit zorgt voor een betere beeldkwaliteit maar is wat langzamer."
 
 #: ../data/eom.schemas.in.h:37
 msgid ""
 "Whether the image should be rotated automatically based on EXIF orientation."
-msgstr ""
-"Geeft aan of de afbeelding automatisch geroteerd dient te worden op basis "
-"van EXIF-oriëntatie."
+msgstr "Geeft aan of de afbeelding automatisch geroteerd dient te worden op basis van EXIF-oriëntatie."
 
 #: ../data/eom.schemas.in.h:38
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
-msgstr ""
-"Geeft aan of de metadatalijst in het eigenschappenvenster op een eigen "
-"pagina staat."
+msgstr "Geeft aan of de metadatalijst in het eigenschappenvenster op een eigen pagina staat."
 
 #: ../data/eom.schemas.in.h:39
 msgid "Whether the scroll wheel should be used for zooming."
@@ -590,7 +526,6 @@ msgstr "Geeft aan of de reeks van afbeeldingen steeds herhaald moet worden."
 msgid "Zoom multiplier"
 msgstr "Zoomfactor"
 
-# openen in volledig scherm?
 #: ../src/eom-application.c:123
 msgid "Running in fullscreen mode"
 msgstr "In volledig scherm"
@@ -617,12 +552,8 @@ msgstr "Wijzigingen aan afbeelding ‘%s’ opslaan alvorens te sluiten?"
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
-msgstr[0] ""
-"Er is %d afbeelding met niet opgeslagen wijzigingen. Wijzigingen opslaan "
-"alvorens te sluiten?"
-msgstr[1] ""
-"Er zijn %d afbeeldingen met niet opgeslagen wijzigingen. Wijzigingen opslaan "
-"alvorens te sluiten?"
+msgstr[0] "Er is %d afbeelding met niet opgeslagen wijzigingen. Wijzigingen opslaan alvorens te sluiten?"
+msgstr[1] "Er zijn %d afbeeldingen met niet opgeslagen wijzigingen. Wijzigingen opslaan alvorens te sluiten?"
 
 #: ../src/eom-close-confirmation-dialog.c:621
 msgid "S_elect the images you want to save:"
@@ -641,9 +572,7 @@ msgstr "Bestandsformaat is onbekend of wordt niet ondersteund"
 msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
-msgstr ""
-"Eye of Mate kon geen geschikt bestandsformaat bepalen om te schrijven, "
-"gebaseerd op de bestandsnaam."
+msgstr "Eye of Mate kon geen geschikt bestandsformaat bepalen om te schrijven, gebaseerd op de bestandsnaam."
 
 #: ../src/eom-file-chooser.c:134
 msgid "Please try a different file extension like .png or .jpg."
@@ -657,7 +586,8 @@ msgstr "Alle bestanden"
 msgid "All Images"
 msgstr "Alle afbeeldingen"
 
-#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
+#. Filter name: First description then file extension, eg. "The PNG-Format
+#. (*.png)".
 #: ../src/eom-file-chooser.c:192
 #, c-format
 msgid "%s (*.%s)"
@@ -727,7 +657,6 @@ msgstr "Allocatie van geheugen voor JPEG-bestand is mislukt"
 msgid "Camera"
 msgstr "Camera"
 
-# gegevens
 #: ../src/eom-exif-details.c:69
 msgid "Image Data"
 msgstr "Afbeeldingsdata"
@@ -768,13 +697,13 @@ msgstr "Markering"
 msgid "Value"
 msgstr "Waarde"
 
-# a=verkorte weekdag, d=dag vd maand, B=maand, Y=4tallig jaar X=tijd volgens locale
 #. A strftime-formatted string, to display the date the image was taken.
 #: ../src/eom-exif-util.c:113 ../src/eom-exif-util.c:153
 msgid "%a, %d %B %Y  %X"
 msgstr "%a, %d %B %Y  %X"
 
-#. A strftime-formatted string, to display the date the image was taken, for the case we don't have the time.
+#. A strftime-formatted string, to display the date the image was taken, for
+#. the case we don't have the time.
 #: ../src/eom-exif-util.c:147
 msgid "%a, %d %B %Y"
 msgstr "%a, %d %B %Y"
@@ -957,12 +886,11 @@ msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i pixel  %s    %i%%"
 msgstr[1] "%i × %i pixels  %s    %i%%"
 
-# opnieuw laden/herladen
 #: ../src/eom-window.c:1138
 msgid "_Reload"
 msgstr "_Herladen"
 
-#: ../src/eom-window.c:1140 ../src/eom-window.c:2995
+#: ../src/eom-window.c:1140 ../src/eom-window.c:3000
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "Ver_bergen"
@@ -974,9 +902,7 @@ msgstr "Ver_bergen"
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
-msgstr ""
-"De afbeelding ‘%s’ is door een andere toepassing aangepast.\n"
-"Wilt u de afbeelding herladen?"
+msgstr "De afbeelding ‘%s’ is door een andere toepassing aangepast.\nWilt u de afbeelding herladen?"
 
 #: ../src/eom-window.c:1305
 #, c-format
@@ -1003,9 +929,7 @@ msgstr "Afbeelding ‘%s’ openen…"
 msgid ""
 "Error printing file:\n"
 "%s"
-msgstr ""
-"Fout bij afdrukken van het bestand:\n"
-"%s"
+msgstr "Fout bij afdrukken van het bestand:\n%s"
 
 #: ../src/eom-window.c:2751
 msgid "Toolbar Editor"
@@ -1015,99 +939,75 @@ msgstr "Werkbalk-editor"
 msgid "_Reset to Default"
 msgstr "_Terugzetten naar standaardinstellingen%s"
 
-#: ../src/eom-window.c:2840
+#: ../src/eom-window.c:2844
 msgid "translator-credits"
-msgstr ""
-"Wouter Bolsterlee\n"
-"Tino Meinen\n"
-"Michiel Sikkes\n"
-"Vincent van Adrighem\n"
-"Dennis Smit\n"
-"Reinout van Schouwen\n"
-"Kijk voor meer informatie op http://nl.gnome.org/"
-
-#: ../src/eom-window.c:2843
-msgid ""
-"This program is free software; you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation; either version 2 of the License, or (at your option) "
-"any later version.\n"
-msgstr ""
-"This program is free software; you can redistribute it and/or modify it "
-"under the terms of the GNU General Public License as published by the Free "
-"Software Foundation; either version 2 of the License, or (at your option) "
-"any later version.\n"
+msgstr "Wouter Bolsterlee\nTino Meinen\nMichiel Sikkes\nVincent van Adrighem\nDennis Smit\nReinout van Schouwen\nKijk voor meer informatie op http://nl.gnome.org/"
 
 #: ../src/eom-window.c:2847
 msgid ""
-"This program is distributed in the hope that it will be useful, but WITHOUT "
-"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
-"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details.\n"
-msgstr ""
-"This program is distributed in the hope that it will be useful, but WITHOUT "
-"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
-"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
-"more details.\n"
+"This program is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version.\n"
+msgstr "This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n"
 
 #: ../src/eom-window.c:2851
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program; if not, write to the Free Software Foundation, Inc., 59 Temple "
-"Place - Suite 330, Boston, MA 02111-1307, USA."
-msgstr ""
-"You should have received a copy of the GNU General Public License along with "
-"this program; if not, write to the Free Software Foundation, Inc., 59 Temple "
-"Place - Suite 330, Boston, MA 02111-1307, USA."
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details.\n"
+msgstr "This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.\n"
 
-#: ../src/eom-window.c:2864
+#: ../src/eom-window.c:2855
+msgid ""
+"You should have received a copy of the GNU General Public License along with"
+" this program; if not, write to the Free Software Foundation, Inc., 59 "
+"Temple Place - Suite 330, Boston, MA 02111-1307, USA."
+msgstr "You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA."
+
+#: ../src/eom-window.c:2868
 msgid "Eye of MATE"
 msgstr "Eye of Mate"
 
-#: ../src/eom-window.c:2867
+#: ../src/eom-window.c:2872
 msgid "The MATE image viewer."
 msgstr "Eye of Mate afbeeldingsweergave"
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2993
+#: ../src/eom-window.c:2998
 msgid "_Open Background Preferences"
 msgstr "Achtergrondvoorkeuren _openen"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:3009
+#: ../src/eom-window.c:3014
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
-msgstr ""
-"De afbeelding ‘%s’ is als bureaubladachtergrond ingesteld.\n"
-"Wilt u de weergaveopties wijzigen?"
+msgstr "De afbeelding ‘%s’ is als bureaubladachtergrond ingesteld.\nWilt u de weergaveopties wijzigen?"
 
-#: ../src/eom-window.c:3405
+#: ../src/eom-window.c:3410
 msgid "Saving image locally…"
 msgstr "Afbeelding lokaal opslaan…"
 
-#: ../src/eom-window.c:3487
+#: ../src/eom-window.c:3492
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
-msgstr ""
-"Weet u zeker dat u ‘%s’ naar\n"
-"de prullenbak wilt verplaatsen?"
+msgstr "Weet u zeker dat u ‘%s’ naar\nde prullenbak wilt verplaatsen?"
 
-#: ../src/eom-window.c:3490
+#: ../src/eom-window.c:3495
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
-msgstr ""
-"Er kon geen prullenbak voor ‘%s’ gevonden worden. Weet u zeker dat u deze "
-"afbeelding voorgoed wilt verwijderen?"
+msgstr "Er kon geen prullenbak voor ‘%s’ gevonden worden. Weet u zeker dat u deze afbeelding voorgoed wilt verwijderen?"
 
-#: ../src/eom-window.c:3495
+#: ../src/eom-window.c:3500
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1115,379 +1015,368 @@ msgid ""
 msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
-msgstr[0] ""
-"Weet u zeker dat u de geselecteerde\n"
-"afbeelding naar de prullenbak wilt verplaatsen?"
-msgstr[1] ""
-"Weet u zeker dat u de %d geselecteerde\n"
-"afbeeldingen naar de prullenbak wilt verplaatsen?"
+msgstr[0] "Weet u zeker dat u de geselecteerde\nafbeelding naar de prullenbak wilt verplaatsen?"
+msgstr[1] "Weet u zeker dat u de %d geselecteerde\nafbeeldingen naar de prullenbak wilt verplaatsen?"
 
-#: ../src/eom-window.c:3500
+#: ../src/eom-window.c:3505
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
-msgstr ""
-"Enkele geselecteerde afbeeldingen kunnen niet in de prullenbak gegooid "
-"worden en zullen voorgoed verwijderd worden. Weet u zeker dat u wilt "
-"doorgaan?"
+msgstr "Enkele geselecteerde afbeeldingen kunnen niet in de prullenbak gegooid worden en zullen voorgoed verwijderd worden. Weet u zeker dat u wilt doorgaan?"
 
-#: ../src/eom-window.c:3517 ../src/eom-window.c:3975 ../src/eom-window.c:3999
+#: ../src/eom-window.c:3522 ../src/eom-window.c:3980 ../src/eom-window.c:4004
 msgid "Move to _Trash"
 msgstr "In _prullenbak gooien"
 
-#: ../src/eom-window.c:3519
+#: ../src/eom-window.c:3524
 msgid "_Do not ask again during this session"
 msgstr "_Niet nogmaals vragen tijdens deze sessie"
 
-# benaderen/toegang krijgen/bereiken
-#: ../src/eom-window.c:3564 ../src/eom-window.c:3578
+#: ../src/eom-window.c:3569 ../src/eom-window.c:3583
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Kan de prullenbak niet bereiken."
 
-#: ../src/eom-window.c:3586
+#: ../src/eom-window.c:3591
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Kon bestand niet verwijderen."
 
-#: ../src/eom-window.c:3657
+#: ../src/eom-window.c:3662
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Fout bij het verwijderen van afbeelding %s"
 
-#: ../src/eom-window.c:3899
+#: ../src/eom-window.c:3904
 msgid "_Image"
 msgstr "_Afbeelding"
 
-#: ../src/eom-window.c:3900
+#: ../src/eom-window.c:3905
 msgid "_Edit"
 msgstr "Be_werken"
 
-#: ../src/eom-window.c:3901
+#: ../src/eom-window.c:3906
 msgid "_View"
 msgstr "Beel_d"
 
-#: ../src/eom-window.c:3902
+#: ../src/eom-window.c:3907
 msgid "_Go"
 msgstr "_Ga naar"
 
-#: ../src/eom-window.c:3903
+#: ../src/eom-window.c:3908
 msgid "_Tools"
 msgstr "E_xtra"
 
-#: ../src/eom-window.c:3904
+#: ../src/eom-window.c:3909
 msgid "_Help"
 msgstr "_Hulp"
 
-#: ../src/eom-window.c:3906
+#: ../src/eom-window.c:3911
 msgid "_Open…"
 msgstr "_Openen"
 
-#: ../src/eom-window.c:3907
+#: ../src/eom-window.c:3912
 msgid "Open a file"
 msgstr "Bestand openen"
 
-#: ../src/eom-window.c:3909
+#: ../src/eom-window.c:3914
 msgid "_Close"
 msgstr "Sl_uiten"
 
-#: ../src/eom-window.c:3910
+#: ../src/eom-window.c:3915
 msgid "Close window"
 msgstr "Venster sluiten"
 
-#: ../src/eom-window.c:3912
+#: ../src/eom-window.c:3917
 msgid "T_oolbar"
 msgstr "_Werkbalk"
 
-#: ../src/eom-window.c:3913
+#: ../src/eom-window.c:3918
 msgid "Edit the application toolbar"
 msgstr "De werkbalk bewerken"
 
-#: ../src/eom-window.c:3915
+#: ../src/eom-window.c:3920
 msgid "Prefere_nces"
 msgstr "_Voorkeuren"
 
-#: ../src/eom-window.c:3916
+#: ../src/eom-window.c:3921
 msgid "Preferences for Eye of MATE"
 msgstr "Voorkeuren voor Eye of Mate"
 
-#: ../src/eom-window.c:3918
+#: ../src/eom-window.c:3923
 msgid "_Contents"
 msgstr "In_houd"
 
-#: ../src/eom-window.c:3919
+#: ../src/eom-window.c:3924
 msgid "Help on this application"
 msgstr "Hulp voor dit programma"
 
-#: ../src/eom-window.c:3921 ../src/eom-plugin-manager.c:505
+#: ../src/eom-window.c:3926 ../src/eom-plugin-manager.c:505
 msgid "_About"
 msgstr "I_nfo"
 
-#: ../src/eom-window.c:3922
+#: ../src/eom-window.c:3927
 msgid "About this application"
 msgstr "Info over deze toepassing"
 
-#: ../src/eom-window.c:3927
+#: ../src/eom-window.c:3932
 msgid "_Toolbar"
 msgstr "_Werkbalk"
 
-#: ../src/eom-window.c:3928
+#: ../src/eom-window.c:3933
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Toont of verbergt de werkbalk van het huidige venster"
 
-#: ../src/eom-window.c:3930
+#: ../src/eom-window.c:3935
 msgid "_Statusbar"
 msgstr "_Statusbalk"
 
-#: ../src/eom-window.c:3931
+#: ../src/eom-window.c:3936
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Toont of verbergt de statusbalk van het huidige venster"
 
-# verzameling afbeelingen
-#: ../src/eom-window.c:3933
+#: ../src/eom-window.c:3938
 msgid "_Image Collection"
 msgstr "_Afbeeldingsverzameling"
 
-#: ../src/eom-window.c:3934
+#: ../src/eom-window.c:3939
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "Toont of verbergt de afbeeldingsverzameling in het huidige venster"
 
-#: ../src/eom-window.c:3936
+#: ../src/eom-window.c:3941
 msgid "Side _Pane"
 msgstr "_Zijbalk"
 
-# informatiebalk/zijbalk
-#: ../src/eom-window.c:3937
+#: ../src/eom-window.c:3942
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Toont of verbergt de zijbalk in het huidige venster"
 
-#: ../src/eom-window.c:3942
+#: ../src/eom-window.c:3947
 msgid "_Save"
 msgstr "Op_slaan"
 
-#: ../src/eom-window.c:3943
+#: ../src/eom-window.c:3948
 msgid "Save changes in currently selected images"
 msgstr "Wijzigingen in de geselecteerde afbeeldingen opslaan"
 
-#: ../src/eom-window.c:3945
+#: ../src/eom-window.c:3950
 msgid "Open _with"
 msgstr "Openen _met"
 
-#: ../src/eom-window.c:3946
+#: ../src/eom-window.c:3951
 msgid "Open the selected image with a different application"
 msgstr "De geselecteerde afbeelding openen met en andere toepassing"
 
-#: ../src/eom-window.c:3948
+#: ../src/eom-window.c:3953
 msgid "Save _As…"
 msgstr "Opslaan _als…"
 
-#: ../src/eom-window.c:3949
+#: ../src/eom-window.c:3954
 msgid "Save the selected images with a different name"
 msgstr "De geselecteerde afbeeldingen opslaan onder een andere naam"
 
-#: ../src/eom-window.c:3951
+#: ../src/eom-window.c:3956
 msgid "_Print…"
 msgstr "Af_drukken…"
 
-#: ../src/eom-window.c:3952
+#: ../src/eom-window.c:3957
 msgid "Print the selected image"
 msgstr "De geselecteerde afbeelding afdrukken"
 
-#: ../src/eom-window.c:3954
+#: ../src/eom-window.c:3959
 msgid "Prope_rties"
 msgstr "_Eigenschappen"
 
-#: ../src/eom-window.c:3955
+#: ../src/eom-window.c:3960
 msgid "Show the properties and metadata of the selected image"
 msgstr "De eigenschappen en metadata van de geselecteerde afbeelding tonen"
 
-#: ../src/eom-window.c:3957
+#: ../src/eom-window.c:3962
 msgid "_Undo"
 msgstr "_Ongedaan maken"
 
-#: ../src/eom-window.c:3958
+#: ../src/eom-window.c:3963
 msgid "Undo the last change in the image"
 msgstr "De laatste wijziging in de afbeelding ongedaan maken"
 
-#: ../src/eom-window.c:3960
+#: ../src/eom-window.c:3965
 msgid "Flip _Horizontal"
 msgstr "_Horizontaal spiegelen"
 
-#: ../src/eom-window.c:3961
+#: ../src/eom-window.c:3966
 msgid "Mirror the image horizontally"
 msgstr "De afbeelding horizontaal spiegelen"
 
-#: ../src/eom-window.c:3963
+#: ../src/eom-window.c:3968
 msgid "Flip _Vertical"
 msgstr "_Verticaal spiegelen"
 
-#: ../src/eom-window.c:3964
+#: ../src/eom-window.c:3969
 msgid "Mirror the image vertically"
 msgstr "De afbeelding verticaal spiegelen"
 
-#: ../src/eom-window.c:3966
+#: ../src/eom-window.c:3971
 msgid "_Rotate Clockwise"
 msgstr "_Met de klok mee draaien"
 
-#: ../src/eom-window.c:3967
+#: ../src/eom-window.c:3972
 msgid "Rotate the image 90 degrees to the right"
 msgstr "De afbeelding 90 graden rechtsom draaien"
 
-#: ../src/eom-window.c:3969
+#: ../src/eom-window.c:3974
 msgid "Rotate Counterc_lockwise"
 msgstr "_Tegen de klok in draaien"
 
-#: ../src/eom-window.c:3970
+#: ../src/eom-window.c:3975
 msgid "Rotate the image 90 degrees to the left"
 msgstr "De afbeelding 90 graden linksom draaien"
 
-#: ../src/eom-window.c:3972
+#: ../src/eom-window.c:3977
 msgid "Set as _Desktop Background"
 msgstr "Als _achtergrond instellen"
 
-#: ../src/eom-window.c:3973
+#: ../src/eom-window.c:3978
 msgid "Set the selected image as the desktop background"
-msgstr ""
-"De geselecteerde afbeelding als achtergrond van het bureaublad instellen"
+msgstr "De geselecteerde afbeelding als achtergrond van het bureaublad instellen"
 
-#: ../src/eom-window.c:3976
+#: ../src/eom-window.c:3981
 msgid "Move the selected image to the trash folder"
 msgstr "De geselecteerde afbeelding naar de prullenbak verplaatsen"
 
-#: ../src/eom-window.c:3978 ../src/eom-window.c:3990 ../src/eom-window.c:3993
+#: ../src/eom-window.c:3983 ../src/eom-window.c:3995 ../src/eom-window.c:3998
 msgid "_Zoom In"
 msgstr "_Inzoomen"
 
-#: ../src/eom-window.c:3979 ../src/eom-window.c:3991
+#: ../src/eom-window.c:3984 ../src/eom-window.c:3996
 msgid "Enlarge the image"
 msgstr "Afbeelding vergroten"
 
-#: ../src/eom-window.c:3981 ../src/eom-window.c:3996
+#: ../src/eom-window.c:3986 ../src/eom-window.c:4001
 msgid "Zoom _Out"
 msgstr "_Uitzoomen"
 
-#: ../src/eom-window.c:3982 ../src/eom-window.c:3994 ../src/eom-window.c:3997
+#: ../src/eom-window.c:3987 ../src/eom-window.c:3999 ../src/eom-window.c:4002
 msgid "Shrink the image"
 msgstr "Afbeelding verkleinen"
 
-#: ../src/eom-window.c:3984
+#: ../src/eom-window.c:3989
 msgid "_Normal Size"
 msgstr "_Normale afmetingen"
 
-#: ../src/eom-window.c:3985
+#: ../src/eom-window.c:3990
 msgid "Show the image at its normal size"
 msgstr "Afbeelding weergeven op de normale grootte"
 
-#: ../src/eom-window.c:3987
+#: ../src/eom-window.c:3992
 msgid "Best _Fit"
 msgstr "_Passend"
 
-#: ../src/eom-window.c:3988
+#: ../src/eom-window.c:3993
 msgid "Fit the image to the window"
 msgstr "Afbeeldingsgrootte aanpassen aan het venster"
 
-#: ../src/eom-window.c:4005
+#: ../src/eom-window.c:4010
 msgid "_Fullscreen"
 msgstr "Scherm_vullend"
 
-#: ../src/eom-window.c:4006
+#: ../src/eom-window.c:4011
 msgid "Show the current image in fullscreen mode"
 msgstr "Huidige afbeelding weergeven in volledig scherm-modus"
 
-#: ../src/eom-window.c:4008
+#: ../src/eom-window.c:4013
 msgid "Pause Slideshow"
 msgstr "Diavoorstelling pauzeren"
 
-#: ../src/eom-window.c:4009
+#: ../src/eom-window.c:4014
 msgid "Pause or resume the slideshow"
 msgstr "De diavoorstelling pauzeren of hervatten"
 
-#: ../src/eom-window.c:4014 ../src/eom-window.c:4029
+#: ../src/eom-window.c:4019 ../src/eom-window.c:4034
 msgid "_Previous Image"
 msgstr "Vo_rige afbeelding"
 
-#: ../src/eom-window.c:4015
+#: ../src/eom-window.c:4020
 msgid "Go to the previous image of the collection"
 msgstr "Naar de vorige afbeelding in de verzameling gaan"
 
-#: ../src/eom-window.c:4017
+#: ../src/eom-window.c:4022
 msgid "_Next Image"
 msgstr "V_olgende afbeelding"
 
-#: ../src/eom-window.c:4018
+#: ../src/eom-window.c:4023
 msgid "Go to the next image of the collection"
 msgstr "Naar de volgende afbeelding in de verzameling gaan"
 
-#: ../src/eom-window.c:4020 ../src/eom-window.c:4032
+#: ../src/eom-window.c:4025 ../src/eom-window.c:4037
 msgid "_First Image"
 msgstr "_Eerste afbeelding"
 
-#: ../src/eom-window.c:4021
+#: ../src/eom-window.c:4026
 msgid "Go to the first image of the collection"
 msgstr "Naar de eerste afbeelding in de verzameling gaan"
 
-#: ../src/eom-window.c:4023 ../src/eom-window.c:4035
+#: ../src/eom-window.c:4028 ../src/eom-window.c:4040
 msgid "_Last Image"
 msgstr "_Laatste afbeelding"
 
-#: ../src/eom-window.c:4024
+#: ../src/eom-window.c:4029
 msgid "Go to the last image of the collection"
 msgstr "Naar de laatste afbeelding in de verzameling gaan"
 
-#: ../src/eom-window.c:4026
+#: ../src/eom-window.c:4031
 msgid "_Random Image"
 msgstr "_Willekeurige afbeelding"
 
-#: ../src/eom-window.c:4027
+#: ../src/eom-window.c:4032
 msgid "Go to a random image of the collection"
 msgstr "Naar een willekeurige afbeelding in de verzameling gaan"
 
-#: ../src/eom-window.c:4041
+#: ../src/eom-window.c:4046
 msgid "_Slideshow"
 msgstr "_Diavoorstelling"
 
-#: ../src/eom-window.c:4042
+#: ../src/eom-window.c:4047
 msgid "Start a slideshow view of the images"
 msgstr "Diavoorstelling van de afbeeldingen starten"
 
-#: ../src/eom-window.c:4108
+#: ../src/eom-window.c:4113
 msgid "Previous"
 msgstr "Vorige"
 
-#: ../src/eom-window.c:4112
+#: ../src/eom-window.c:4117
 msgid "Next"
 msgstr "Volgende"
 
-#: ../src/eom-window.c:4116
+#: ../src/eom-window.c:4121
 msgid "Right"
 msgstr "Rechts"
 
-#: ../src/eom-window.c:4119
+#: ../src/eom-window.c:4124
 msgid "Left"
 msgstr "Links"
 
-#: ../src/eom-window.c:4122
+#: ../src/eom-window.c:4127
 msgid "In"
 msgstr "In"
 
-#: ../src/eom-window.c:4125
+#: ../src/eom-window.c:4130
 msgid "Out"
 msgstr "Uit"
 
-#: ../src/eom-window.c:4128
+#: ../src/eom-window.c:4133
 msgid "Normal"
 msgstr "Normaal"
 
-#: ../src/eom-window.c:4131
+#: ../src/eom-window.c:4136
 msgid "Fit"
 msgstr "Passend maken"
 
-#: ../src/eom-window.c:4134
+#: ../src/eom-window.c:4139
 msgid "Collection"
 msgstr "Verzameling"
 
-#: ../src/eom-window.c:4137
+#: ../src/eom-window.c:4142
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "In prullenbak gooien"
@@ -1528,10 +1417,6 @@ msgstr "Plugin-I_nfo"
 msgid "C_onfigure Plugin"
 msgstr "Plugin c_onfigureren"
 
-#: ../src/main.c:66 ../src/main.c:248
-msgid "Eye of MATE Image Viewer"
-msgstr "Eye of Mate afbeeldingsweergave"
-
 #: ../src/main.c:73
 msgid "Open in fullscreen mode"
 msgstr "Openen in volledig scherm"
@@ -1560,15 +1445,4 @@ msgstr "[BESTAND…]"
 #: ../src/main.c:207
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
-msgstr ""
-"Voer ‘%s --help’ uit om een volledige lisjt van alle opdrachtregelopties te "
-"zien."
-
-#~ msgid "Load Image"
-#~ msgstr "Afbeelding laden"
-
-#~ msgid "_File"
-#~ msgstr "_Bestand"
-
-#~ msgid "Set up the page properties for printing"
-#~ msgstr "De paginainstellingen voor afdrukken aanpassen"
+msgstr "Voer ‘%s --help’ uit om een volledige lisjt van alle opdrachtregelopties te zien."
