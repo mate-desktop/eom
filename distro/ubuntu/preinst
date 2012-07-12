@@ -1,9 +1,0 @@
-#!/bin/sh -e
-
-pkgname=mate-image-viewer
-
-if [ -f /usr/share/mateconf/schemas/${pkgname}.schemas ]; then
-	/usr/sbin/mateconfpkg --uninstall ${pkgname}
-fi
-
-

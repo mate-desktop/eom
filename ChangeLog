@@ -1,3 +1,152 @@
+commit 877bd1e3c1390ca58b72c61c9df421eb5a1bbd28
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Thu Jul 12 11:18:54 2012 +0200
+
+    sync translations with transifex
+
+ po/af.po                | 1387 +++++++++++++----------------
+ po/as.po                |  926 +++++++++----------
+ po/ast.po               |  664 +++++++-------
+ po/az.po                | 1733 +++++++++++++++++++++++-------------
+ po/be.po                | 2251 +++++++++++++++++++++--------------------------
+ po/bg.po                |  448 ++++------
+ po/bn.po                |  946 +++++++-------------
+ po/bn_IN.po             |  878 ++++++++----------
+ po/br.po                |  871 ++++++++++--------
+ po/bs.po                | 1582 ++++++++++++++++++++++++---------
+ po/ca.po                | 1539 ++++----------------------------
+ po/ca@valencia.po       | 1742 +++++++-----------------------------
+ po/cs.po                |  434 ++++-----
+ po/cy.po                | 2145 ++++++++++++++++++++++----------------------
+ po/da.po                |  495 ++++-------
+ po/de.po                |  512 ++++-------
+ po/dz.po                | 1363 ++++++++++++++--------------
+ po/el.po                |  516 ++++++-----
+ po/en_CA.po             | 1272 ++++++++++++++++----------
+ po/en_GB.po             |  663 ++++----------
+ po/es.po                |  530 ++++-------
+ po/et.po                |  531 +++++++----
+ po/eu.po                |  419 ++++-----
+ po/fa.po                | 1862 ++++++++++++++++++++++-----------------
+ po/fi.po                | 1272 +++++++-------------------
+ po/fr.po                |  473 ++++------
+ po/fur.po               | 1153 +++++++++++++-----------
+ po/ga.po                |  874 ++++++++++--------
+ po/gl.po                |  478 ++++------
+ po/gnome-copyrights.txt | 1258 ++++++++++++++++++++++++++
+ po/gu.po                |  920 +++++++++----------
+ po/he.po                |  470 ++++------
+ po/hi.po                |  948 ++++++++++----------
+ po/hr.po                | 1048 +++++++++++++---------
+ po/hu.po                |  419 ++++-----
+ po/id.po                |  442 ++++------
+ po/is.po                | 1722 +++++++++++++++++++++++-------------
+ po/it.po                |  484 ++++------
+ po/ka.po                | 1597 ++++++++++++++++++++++-----------
+ po/kk.po                |  468 +++++-----
+ po/kn.po                |  645 +++++++-------
+ po/ko.po                |  611 +++++++------
+ po/ks.po                | 1132 ++++++++++++++----------
+ po/ku.po                | 1325 ++++++++++++++++------------
+ po/lt.po                |  489 ++++------
+ po/lv.po                |  729 +++++++--------
+ po/mai.po               |  855 ++++++++++--------
+ po/mg.po                | 1612 ++++++++++++++++++++++-----------
+ po/mk.po                | 1145 +++++++++++++-----------
+ po/ml.po                |  773 ++++++++--------
+ po/mn.po                | 1984 +++++++++++++++++++++++------------------
+ po/mr.po                |  888 ++++++++++---------
+ po/ms.po                | 1679 +++++++++++++++++++++++------------
+ po/nb.po                |  382 ++++----
+ po/nds.po               |  793 +++++++++--------
+ po/ne.po                | 1241 ++++++++++++++++----------
+ po/nl.po                |  474 ++++------
+ po/nn.po                | 1175 +++++++++++++++----------
+ po/nso.po               | 1574 ++++++++++++++++++++++++---------
+ po/oc.po                |  695 +++++++--------
+ po/or.po                |  828 ++++++++---------
+ po/pa.po                |  438 ++++-----
+ po/pl.po                |  432 ++++-----
+ po/ps.po                | 1101 ++++++++++++++---------
+ po/pt.po                | 1251 +++++++-------------------
+ po/pt_BR.po             |  548 ++++--------
+ po/ro.po                |  689 +++++++--------
+ po/ru.po                |  505 +++++------
+ po/si.po                | 1262 +++++++++++++++++---------
+ po/sk.po                | 1167 ++++++++++++++----------
+ po/sl.po                |  495 +++++------
+ po/sq.po                | 1131 ++++++++++++++----------
+ po/sr.po                |  613 +++++--------
+ po/sr@latin.po          |  613 +++++--------
+ po/sv.po                |  912 +++++--------------
+ po/ta.po                |  658 +++++++-------
+ po/te.po                |  757 ++++++++--------
+ po/th.po                | 1431 +++++++++---------------------
+ po/tk.po                | 1610 ++++++++++++++++++++++-----------
+ po/tr.po                |  970 ++++++++++----------
+ po/ug.po                | 1600 +++++++++++++++++++++++----------
+ po/uz.po                |  918 +++++++++++--------
+ po/vi.po                |  886 ++++++++++---------
+ po/wa.po                | 1604 ++++++++++++++++++++++-----------
+ po/xh.po                | 1608 +++++++++++++++++++++++----------
+ po/zh_CN.po             |  389 ++++----
+ po/zh_HK.po             |  387 +++-----
+ po/zh_TW.po             |  448 ++++------
+ po/zu.po                | 1568 ++++++++++++++++++++++++---------
+ 89 files changed, 45236 insertions(+), 41519 deletions(-)
+
+commit 7f3dc89e4d5c451d36e593c1e4a0a197140fb8ac
+Merge: 5e9a0dd f8e78d8
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed May 16 02:51:47 2012 -0700
+
+    Merge pull request #1 from MDykstra/master
+    
+    backward compatible dependency on gmodule-2.0
+
+commit f8e78d8669e4ad9e2ccde3c2318b47e9563eb8d5
+Author: Marcel Dijkstra <marcel.dykstra@gmail.com>
+Date:   Wed May 16 05:03:50 2012 +0200
+
+    only depend on gmodule-2.0 if it exists
+
+ configure.ac |    2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 5e9a0ddfc5a35cb6b83840e9708914ab95d592ab
+Author: Perberos <perberos@gmail.com>
+Date:   Tue Apr 17 18:32:22 2012 -0300
+
+    folder name mistake
+
+ src/eom-application.c |    8 ++++----
+ src/eom-util.c        |    4 ++--
+ 2 files changed, 6 insertions(+), 6 deletions(-)
+
+commit 3ec67e8e70aef72ed7b63d0ff22c9895f810860d
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Mar 7 16:09:26 2012 +0100
+
+    update translations (ar, uk)
+
+ po/ar.po |  439 ++++++++++++++++--------------------------
+ po/uk.po |  640 ++++++++++++++++++++++++++++++--------------------------------
+ 2 files changed, 471 insertions(+), 608 deletions(-)
+
+commit eaf2b02aff434e190d045a7bbee0a093719ca9f2
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Mar 7 16:01:28 2012 +0100
+
+    update info for 1.2 release
+
+ ChangeLog    |  597 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ MAINTAINERS  |    7 -
+ Makefile.am  |    4 -
+ README       |    2 +
+ autogen.sh   |    4 +-
+ configure.ac |    2 +-
+ 6 files changed, 602 insertions(+), 14 deletions(-)
+
 commit 98403dcdc65f055f047b99902f119a4fb5a4c40c
 Author: Perberos <perberos@gmail.com>
 Date:   Mon Jan 30 13:26:01 2012 -0300
@@ -15,7 +164,7 @@ Date:   Tue Jan 10 14:03:19 2012 -0500
     Changed mate.gr.jp to gnome.gr.jp as requested in Issue #86
 
  po/ChangeLog |  248 +++++++++++++++++++++++++++++-----------------------------
- po/ja.po     |   12 ++--
+ po/ja.po     |   12 +--
  2 files changed, 130 insertions(+), 130 deletions(-)
 
 commit 23e63d331bae6b5e5fcb66ffc75dc7ec925def93
@@ -60,7 +209,7 @@ Date:   Mon Nov 14 18:48:30 2011 -0300
     using allman style
 
  plugins/reload/eom-reload-plugin.c                 |  120 +++++---------
- plugins/reload/eom-reload-plugin.h                 |   34 +++--
+ plugins/reload/eom-reload-plugin.h                 |   34 ++--
  plugins/statusbar-date/eom-statusbar-date-plugin.c |  164 +++++++++-----------
  plugins/statusbar-date/eom-statusbar-date-plugin.h |   32 ++--
  .../statusbar-date.eom-plugin.desktop.in           |    1 -
@@ -73,7 +222,7 @@ Date:   Mon Nov 14 18:48:15 2011 -0300
     updating autogen.sh
 
  autogen.sh |   15 ++++++++-------
- 1 files changed, 8 insertions(+), 7 deletions(-)
+ 1 file changed, 8 insertions(+), 7 deletions(-)
 
 commit be02c4975efc4ccdee0833efb0691b9dd8f19ccc
 Author: Perberos <perberos@gmail.com>
@@ -82,7 +231,7 @@ Date:   Mon Nov 7 14:57:39 2011 -0300
     cambiando el nombre para no confundirlo
 
  data/eom.desktop.in.in |    2 +-
- 1 files changed, 1 insertions(+), 1 deletions(-)
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit a3d575a698ed6183b4c28b459889986255429c84
 Author: Perberos <perberos@gmail.com>
@@ -90,8 +239,8 @@ Date:   Mon Nov 7 14:03:12 2011 -0300
 
     allman
 
- plugins/fullscreen/eom-fullscreen-plugin.c |   96 +++++++++++----------------
- plugins/fullscreen/eom-fullscreen-plugin.h |   34 ++++++----
+ plugins/fullscreen/eom-fullscreen-plugin.c |   96 +++++++++++-----------------
+ plugins/fullscreen/eom-fullscreen-plugin.h |   34 +++++-----
  2 files changed, 58 insertions(+), 72 deletions(-)
 
 commit 064bcd4d28a9b35ab0870293d8eb50abb8e8e59c
@@ -101,7 +250,7 @@ Date:   Mon Nov 7 14:03:06 2011 -0300
     cero a la izquierda rompe codigo
 
  configure.ac |    2 +-
- 1 files changed, 1 insertions(+), 1 deletions(-)
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 299dcd0080fb0a00b6c6a8dc883588367b319491
 Author: Perberos <perberos@gmail.com>
@@ -185,7 +334,7 @@ Date:   Mon Nov 7 13:54:58 2011 -0300
  help/zh_CN/zh_CN.po                           | 1887 ++++++++++++++++++++++
  help/zh_TW/figures/eom_start_window.png       |  Bin 0 -> 9553 bytes
  help/zh_TW/zh_TW.po                           |  815 ++++++++++
- 76 files changed, 38369 insertions(+), 0 deletions(-)
+ 76 files changed, 38369 insertions(+)
 
 commit d1657897e41a627d5ef43732afbf104ab6d5733e
 Author: Perberos <perberos@gmail.com>
@@ -194,7 +343,7 @@ Date:   Mon Nov 7 13:51:34 2011 -0300
     quitando archivo sobrante
 
  po/Makefile.in.in |  217 -----------------------------------------------------
- 1 files changed, 0 insertions(+), 217 deletions(-)
+ 1 file changed, 217 deletions(-)
 
 commit 4b9207bbe1bee560adf730772ed4c45bbf3204cb
 Author: Perberos <perberos@gmail.com>
@@ -221,7 +370,7 @@ Date:   Sun Nov 6 19:31:31 2011 -0300
  jpegutils/Makefile.in                     |  601 -------------
  plugins/Makefile.in                       |  767 -----------------
  src/Makefile.in                           | 1326 -----------------------------
- 19 files changed, 0 insertions(+), 12770 deletions(-)
+ 19 files changed, 12770 deletions(-)
 
 commit a8d28a6ce7e0c56dacba5d527d9134573a008902
 Author: Perberos <perberos@gmail.com>
@@ -594,4 +743,4 @@ Date:   Sun Nov 6 19:30:49 2011 -0300
  src/uta.h                                          |   75 +
  src/zoom.c                                         |  118 +
  src/zoom.h                                         |   38 +
- 365 files changed, 222093 insertions(+), 0 deletions(-)
+ 365 files changed, 222093 insertions(+)
