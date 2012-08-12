@@ -32,6 +32,8 @@
 #include <glib.h>
 #include <glib-object.h>
 
+#include <libpeas/peas-extension-set.h>
+
 G_BEGIN_DECLS
 
 typedef struct _EomApplication EomApplication;
@@ -56,6 +58,8 @@ struct _EomApplication {
 	EomPluginEngine  *plugin_engine;
 
 	EomStartupFlags   flags;
+
+	PeasExtensionSet *extensions;
 };
 
 struct _EomApplicationClass {

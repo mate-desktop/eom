@@ -30,6 +30,7 @@
 #include "eom-session.h"
 #include "eom-window.h"
 #include "eom-application.h"
+#include "eom-application-activatable.h"
 #include "eom-util.h"
 
 #include <string.h>
@@ -86,6 +87,9 @@ eom_application_finalize (GObject *object)
 		g_free (application->toolbars_file);
 		application->toolbars_file = NULL;
 	}
+
+	g_clear_object (&application->extensions);
+
 	if (application->plugin_engine) {
 		g_object_unref (application->plugin_engine);
 		application->plugin_engine = NULL;
@@ -147,6 +151,24 @@ eom_application_class_init (EomApplicationClass *eom_application_class)
 }
 
 static void
+on_extension_added (PeasExtensionSet *set,
+                    PeasPluginInfo   *info,
+                    PeasExtension    *exten,
+                    EomApplication   *app)
+{
+	eom_application_activatable_activate (EOM_APPLICATION_ACTIVATABLE (exten));
+}
+
+static void
+on_extension_removed (PeasExtensionSet *set,
+                      PeasPluginInfo   *info,
+                      PeasExtension    *exten,
+                      EomApplication   *app)
+{
+	eom_application_activatable_deactivate (EOM_APPLICATION_ACTIVATABLE (exten));
+}
+
+static void
 eom_application_init (EomApplication *eom_application)
 {
 	const gchar *dot_dir = eom_util_dot_dir ();
@@ -175,6 +197,17 @@ eom_application_init (EomApplication *eom_application)
 				      EGG_TB_MODEL_NOT_REMOVABLE);
 
 	eom_application_load_accelerators ();
+
+	eom_application->extensions = peas_extension_set_new (
+	                           PEAS_ENGINE (eom_application->plugin_engine),
+	                           EOM_TYPE_APPLICATION_ACTIVATABLE,
+	                           "app",  EOM_APPLICATION (eom_application),
+	                           NULL);
+	peas_extension_set_call (eom_application->extensions, "activate");
+	g_signal_connect (eom_application->extensions, "extension-added",
+	                  G_CALLBACK (on_extension_added), eom_application);
+	g_signal_connect (eom_application->extensions, "extension-removed",
+	                  G_CALLBACK (on_extension_removed), eom_application);
 }
 
 /**

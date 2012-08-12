@@ -38,6 +38,7 @@ NOINST_H_FILES =			\
 
 INST_H_FILES =				\
 	eom-application.h		\
+	eom-application-activatable.h	\
 	eom-debug.h			\
 	eom-window.h			\
 	eom-window-activatable.h	\
@@ -62,6 +63,7 @@ INST_H_FILES =				\
 
 libeom_c_files =			\
 	eom-application.c		\
+	eom-application-activatable.c	\
 	eom-session.c			\
 	eom-debug.c			\
 	eom-util.c			\
