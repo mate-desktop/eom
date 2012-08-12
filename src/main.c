@@ -35,6 +35,7 @@
 #include "eom-thumbnail.h"
 #include "eom-job-queue.h"
 #include "eom-application.h"
+#include "eom-application-internal.h"
 #include "eom-util.h"
 
 #include <string.h>
@@ -161,7 +162,7 @@ main (int argc, char **argv)
 	gtk_window_set_default_icon_name ("eom");
 	g_set_application_name (_("Eye of MATE Image Viewer"));
 
-	EOM_APP->flags = flags;
+	EOM_APP->priv->flags = flags;
 	if (force_new_instance) {
 		GApplicationFlags app_flags = g_application_get_flags (G_APPLICATION (EOM_APP));
 		app_flags |= G_APPLICATION_NON_UNIQUE;

@@ -31,6 +31,7 @@
 #include "eom-window.h"
 #include "eom-application.h"
 #include "eom-application-activatable.h"
+#include "eom-application-internal.h"
 #include "eom-util.h"
 
 #include <string.h>
@@ -55,7 +56,7 @@ eom_application_activate (GApplication *application)
 {
 	eom_application_open_window (EOM_APPLICATION (application),
 				     GDK_CURRENT_TIME,
-				     EOM_APPLICATION (application)->flags,
+				     EOM_APPLICATION (application)->priv->flags,
 				     NULL);
 }
 
@@ -72,7 +73,7 @@ eom_application_open (GApplication *application,
 
 	eom_application_open_file_list (EOM_APPLICATION (application),
 					list, GDK_CURRENT_TIME,
-					EOM_APPLICATION (application)->flags,
+					EOM_APPLICATION (application)->priv->flags,
 					NULL);
 }
 
@@ -80,19 +81,20 @@ static void
 eom_application_finalize (GObject *object)
 {
 	EomApplication *application = EOM_APPLICATION (object);
+	EomApplicationPrivate *priv = application->priv;
 
-	if (application->toolbars_model) {
-		g_object_unref (application->toolbars_model);
-		application->toolbars_model = NULL;
-		g_free (application->toolbars_file);
-		application->toolbars_file = NULL;
+	if (priv->toolbars_model) {
+		g_object_unref (priv->toolbars_model);
+		priv->toolbars_model = NULL;
+		g_free (priv->toolbars_file);
+		priv->toolbars_file = NULL;
 	}
 
-	g_clear_object (&application->extensions);
+	g_clear_object (&priv->extensions);
 
-	if (application->plugin_engine) {
-		g_object_unref (application->plugin_engine);
-		application->plugin_engine = NULL;
+	if (priv->plugin_engine) {
+		g_object_unref (priv->plugin_engine);
+		priv->plugin_engine = NULL;
 	}
 	eom_application_save_accelerators ();
 }
@@ -106,10 +108,10 @@ eom_application_add_platform_data (GApplication *application,
 	G_APPLICATION_CLASS (eom_application_parent_class)->add_platform_data (application,
 									       builder);
 
-	if (app->flags) {
+	if (app->priv->flags) {
 		g_variant_builder_add (builder, "{sv}",
 				       "eom-application-startup-flags",
-				       g_variant_new_byte (app->flags));
+				       g_variant_new_byte (app->priv->flags));
 	}
 }
 
@@ -121,11 +123,11 @@ eom_application_before_emit (GApplication *application,
 	const gchar *key;
 	GVariant *value;
 
-	EOM_APPLICATION (application)->flags = 0;
+	EOM_APPLICATION (application)->priv->flags = 0;
 	g_variant_iter_init (&iter, platform_data);
 	while (g_variant_iter_loop (&iter, "{&sv}", &key, &value)) {
 		if (strcmp (key, "eom-application-startup-flags") == 0) {
-			EOM_APPLICATION (application)->flags = g_variant_get_byte (value);
+			EOM_APPLICATION (application)->priv->flags = g_variant_get_byte (value);
 		}
 	}
 
@@ -138,6 +140,9 @@ eom_application_class_init (EomApplicationClass *eom_application_class)
 {
 	GApplicationClass *application_class;
 	GObjectClass *object_class;
+
+	g_type_class_add_private (eom_application_class,
+	                          sizeof (EomApplicationPrivate));
 
 	application_class = (GApplicationClass *) eom_application_class;
 	object_class = (GObjectClass *) eom_application_class;
@@ -171,42 +176,46 @@ on_extension_removed (PeasExtensionSet *set,
 static void
 eom_application_init (EomApplication *eom_application)
 {
+	EomApplicationPrivate *priv;
 	const gchar *dot_dir = eom_util_dot_dir ();
 
 	eom_session_init (eom_application);
 
-	eom_application->toolbars_model = egg_toolbars_model_new ();
-	eom_application->plugin_engine = eom_plugin_engine_new ();
-	eom_application->flags = 0;
+	eom_application->priv = EOM_APPLICATION_GET_PRIVATE (eom_application);
+	priv = eom_application->priv;
 
-	egg_toolbars_model_load_names (eom_application->toolbars_model,
+	priv->toolbars_model = egg_toolbars_model_new ();
+	priv->plugin_engine = eom_plugin_engine_new ();
+	priv->flags = 0;
+
+	egg_toolbars_model_load_names (priv->toolbars_model,
 				       EOM_DATA_DIR "/eom-toolbar.xml");
 
 	if (G_LIKELY (dot_dir != NULL))
-		eom_application->toolbars_file = g_build_filename
+		priv->toolbars_file = g_build_filename
 			(dot_dir, "eom_toolbar.xml", NULL);
 
-	if (!dot_dir || !egg_toolbars_model_load_toolbars (eom_application->toolbars_model,
-					       eom_application->toolbars_file)) {
+	if (!dot_dir || !egg_toolbars_model_load_toolbars (priv->toolbars_model,
+					       priv->toolbars_file)) {
 
-		egg_toolbars_model_load_toolbars (eom_application->toolbars_model,
+		egg_toolbars_model_load_toolbars (priv->toolbars_model,
 						  EOM_DATA_DIR "/eom-toolbar.xml");
 	}
 
-	egg_toolbars_model_set_flags (eom_application->toolbars_model, 0,
+	egg_toolbars_model_set_flags (priv->toolbars_model, 0,
 				      EGG_TB_MODEL_NOT_REMOVABLE);
 
 	eom_application_load_accelerators ();
 
-	eom_application->extensions = peas_extension_set_new (
-	                           PEAS_ENGINE (eom_application->plugin_engine),
+	priv->extensions = peas_extension_set_new (
+	                           PEAS_ENGINE (priv->plugin_engine),
 	                           EOM_TYPE_APPLICATION_ACTIVATABLE,
 	                           "app",  EOM_APPLICATION (eom_application),
 	                           NULL);
-	peas_extension_set_call (eom_application->extensions, "activate");
-	g_signal_connect (eom_application->extensions, "extension-added",
+	peas_extension_set_call (priv->extensions, "activate");
+	g_signal_connect (priv->extensions, "extension-added",
 	                  G_CALLBACK (on_extension_added), eom_application);
-	g_signal_connect (eom_application->extensions, "extension-removed",
+	g_signal_connect (priv->extensions, "extension-removed",
 	                  G_CALLBACK (on_extension_removed), eom_application);
 }
 
@@ -475,7 +484,7 @@ eom_application_get_toolbars_model (EomApplication *application)
 {
 	g_return_val_if_fail (EOM_IS_APPLICATION (application), NULL);
 
-	return application->toolbars_model;
+	return application->priv->toolbars_model;
 }
 
 /**
@@ -487,9 +496,9 @@ eom_application_get_toolbars_model (EomApplication *application)
 void
 eom_application_save_toolbars_model (EomApplication *application)
 {
-	if (G_LIKELY(application->toolbars_file != NULL))
-        	egg_toolbars_model_save_toolbars (application->toolbars_model,
-				 	          application->toolbars_file,
+	if (G_LIKELY(application->priv->toolbars_file != NULL))
+        	egg_toolbars_model_save_toolbars (application->priv->toolbars_model,
+				 	          application->priv->toolbars_file,
 						  "1.0");
 }
 
@@ -502,17 +511,20 @@ eom_application_save_toolbars_model (EomApplication *application)
 void
 eom_application_reset_toolbars_model (EomApplication *app)
 {
+	EomApplicationPrivate *priv;
 	g_return_if_fail (EOM_IS_APPLICATION (app));
 
-	g_object_unref (app->toolbars_model);
+	priv = app->priv;
 
-	app->toolbars_model = egg_toolbars_model_new ();
+	g_object_unref (app->priv->toolbars_model);
 
-	egg_toolbars_model_load_names (app->toolbars_model,
+	priv->toolbars_model = egg_toolbars_model_new ();
+
+	egg_toolbars_model_load_names (priv->toolbars_model,
 				       EOM_DATA_DIR "/eom-toolbar.xml");
-	egg_toolbars_model_load_toolbars (app->toolbars_model,
+	egg_toolbars_model_load_toolbars (priv->toolbars_model,
 					  EOM_DATA_DIR "/eom-toolbar.xml");
-	egg_toolbars_model_set_flags (app->toolbars_model, 0,
+	egg_toolbars_model_set_flags (priv->toolbars_model, 0,
 				      EGG_TB_MODEL_NOT_REMOVABLE);
 }
 
