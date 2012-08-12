@@ -16,6 +16,7 @@ MARSHAL_OUTPUT = 	\
 	eom-marshal.c
 
 NOINST_H_FILES =			\
+	eom-application-internal.h	\
 	eom-session.h			\
 	eom-util.h			\
 	eom-pixbuf-util.h		\

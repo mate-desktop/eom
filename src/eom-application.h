@@ -25,14 +25,12 @@
 #ifndef __EOM_APPLICATION_H__
 #define __EOM_APPLICATION_H__
 
-#include "eom-window.h"
-#include "eom-plugin-engine.h"
-#include "egg-toolbars-model.h"
-
 #include <glib.h>
 #include <glib-object.h>
 
 #include <libpeas/peas-extension-set.h>
+#include <gtk/gtk.h>
+#include "eom-window.h"
 
 G_BEGIN_DECLS
 
@@ -52,14 +50,7 @@ typedef struct _EomApplicationPrivate EomApplicationPrivate;
 struct _EomApplication {
 	GtkApplication base_instance;
 
-	EggToolbarsModel *toolbars_model;
-	gchar            *toolbars_file;
-
-	EomPluginEngine  *plugin_engine;
-
-	EomStartupFlags   flags;
-
-	PeasExtensionSet *extensions;
+	EomApplicationPrivate *priv;
 };
 
 struct _EomApplicationClass {
@@ -92,12 +83,6 @@ gboolean          eom_application_open_uris           (EomApplication *applicati
 						       guint           timestamp,
 						       EomStartupFlags flags,
 						       GError        **error);
-
-EggToolbarsModel *eom_application_get_toolbars_model  (EomApplication *application);
-
-void              eom_application_save_toolbars_model (EomApplication *application);
-
-void		  eom_application_reset_toolbars_model (EomApplication *app);
 
 G_END_DECLS
 
