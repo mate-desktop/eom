@@ -455,6 +455,8 @@ fi
 
 AM_CONDITIONAL([ENABLE_PYTHON],[test "x$enable_python" = "xyes"])
 
+AC_SEARCH_LIBS([floor],[m])
+
 AC_CONFIG_FILES([
 Makefile
 src/Makefile
