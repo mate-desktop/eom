@@ -4,8 +4,6 @@ endif
 
 toolbar_LIB = $(top_builddir)/cut-n-paste/toolbar-editor/libtoolbareditor.la
 
-screensaver_LIB = $(top_builddir)/cut-n-paste/totem-screensaver/libtotemscrsaver.la
-
 noinst_LTLIBRARIES = libeom.la
 
 bin_PROGRAMS = eom
@@ -128,7 +126,6 @@ endif HAVE_EXEMPI
 libeom_la_CPPFLAGS =						\
 	-I$(top_srcdir)/jpegutils				\
 	-I$(top_srcdir)/cut-n-paste/toolbar-editor		\
-	-I$(top_srcdir)/cut-n-paste/totem-screensaver		\
 	-DG_LOG_DOMAIN=\"EOM\"					\
 	-DEOM_DATA_DIR=\""$(pkgdatadir)"\"			\
 	-DEOM_LOCALE_DIR=\""$(datadir)/locale"\"		\
@@ -154,7 +151,6 @@ eom_SOURCES = main.c
 
 eom_CFLAGS = 							\
 	-I$(top_srcdir)/cut-n-paste/toolbar-editor		\
-	-I$(top_srcdir)/cut-n-paste/totem-screensaver		\
 	$(EOM_CFLAGS)						\
 	-DEOM_DATA_DIR=\""$(pkgdatadir)"\"			\
 	-DEOM_LOCALE_DIR=\""$(datadir)/locale"\"		\
@@ -165,7 +161,6 @@ eom_LDADD = 				\
 	$(EOM_LIBS)			\
 	$(LIBJPEG)			\
 	$(toolbar_LIB)			\
-	$(screensaver_LIB)		\
 	$(jpeg_LIB)			\
 	$(INTROSPECTION_LIBS)
 

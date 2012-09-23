@@ -29,8 +29,6 @@
 #include "eom-plugin-engine.h"
 #include "egg-toolbars-model.h"
 
-#include "totem-scrsaver.h"
-
 #include <glib.h>
 #include <glib-object.h>
 
@@ -57,7 +55,6 @@ struct _EomApplication {
 
 	EomPluginEngine  *plugin_engine;
 
-	TotemScrsaver    *scr_saver;
 	EomStartupFlags   flags;
 };
 
@@ -97,10 +94,6 @@ EggToolbarsModel *eom_application_get_toolbars_model  (EomApplication *applicati
 void              eom_application_save_toolbars_model (EomApplication *application);
 
 void		  eom_application_reset_toolbars_model (EomApplication *app);
-
-void              eom_application_screensaver_enable  (EomApplication *application);
-
-void              eom_application_screensaver_disable (EomApplication *application);
 
 G_END_DECLS
 
