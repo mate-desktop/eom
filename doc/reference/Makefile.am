@@ -87,7 +87,6 @@ AM_CPPFLAGS= \
 	-I$(top_srcdir)/plugins \
 	-I$(top_srcdir)/jpegutils				\
 	-I$(top_srcdir)/cut-n-paste/toolbar-editor		\
-	-I$(top_srcdir)/cut-n-paste/totem-screensaver		\
 	$(EOM_CFLAGS)
 
 if ENABLE_JPEG
@@ -97,7 +96,6 @@ endif
 GTKDOC_LIBS=\
 	$(top_builddir)/src/libeom.la 	\
 	$(top_builddir)/cut-n-paste/toolbar-editor/libtoolbareditor.la \
-	$(top_builddir)/cut-n-paste/totem-screensaver/libtotemscrsaver.la \
 	$(BINDING_LIBS)			\
 	$(LIBJPEG)			\
 	$(X_LIBS)			\

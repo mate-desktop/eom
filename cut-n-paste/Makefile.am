@@ -1,3 +1,3 @@
-SUBDIRS = toolbar-editor totem-screensaver
+SUBDIRS = toolbar-editor
 
 -include $(top_srcdir)/git.mk
