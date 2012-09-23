@@ -32,8 +32,6 @@
 #include "eom-application.h"
 #include "eom-util.h"
 
-#include "totem-scrsaver.h"
-
 #include <string.h>
 #include <glib.h>
 #include <glib/gi18n.h>
@@ -483,34 +481,6 @@ eom_application_reset_toolbars_model (EomApplication *app)
 					  EOM_DATA_DIR "/eom-toolbar.xml");
 	egg_toolbars_model_set_flags (app->toolbars_model, 0,
 				      EGG_TB_MODEL_NOT_REMOVABLE);
-}
-
-/**
- * eom_application_screensaver_enable:
- * @application: an #EomApplication.
- *
- * Enables the screensaver. Usually necessary after a call to
- * eom_application_screensaver_disable().
- **/
-void
-eom_application_screensaver_enable (EomApplication *application)
-{
-        if (application->scr_saver)
-                totem_scrsaver_enable (application->scr_saver);
-}
-
-/**
- * eom_application_screensaver_disable:
- * @application: an #EomApplication.
- *
- * Disables the screensaver. Useful when the application is in fullscreen or
- * similar mode.
- **/
-void
-eom_application_screensaver_disable (EomApplication *application)
-{
-        if (application->scr_saver)
-                totem_scrsaver_disable (application->scr_saver);
 }
 
 static void
