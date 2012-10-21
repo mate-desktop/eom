@@ -8,11 +8,12 @@ DESKTOP_FILES= $(DESKTOP_IN_FILES:.desktop.in.in=.desktop)
 desktopdir = $(datadir)/applications
 desktop_DATA = $(DESKTOP_FILES)
 
-@INTLTOOL_SCHEMAS_RULE@
+@INTLTOOL_XML_NOMERGE_RULE@
+gsettings_SCHEMAS = org.mate.eom.gschema.xml
+@GSETTINGS_RULES@
 
-schemas_in_files = eom.schemas.in
-schemasdir = $(MATECONF_SCHEMA_FILE_DIR)
-schemas_DATA = $(schemas_in_files:.schemas.in=.schemas)
+%.gschema.xml.in: %.gschema.xml.in.in Makefile
+	$(AM_V_GEN) $(SED) -e 's^\@datadir\@^$(datadir)^g' -e 's^\@GETTEXT_PACKAGE\@^$(GETTEXT_PACKAGE)^g' < $< > $@
 
 gladedir = $(pkgdatadir)
 glade_DATA = eom-image-properties-dialog.ui \
@@ -32,24 +33,16 @@ pkgconfig_DATA = eom.pc
 gtkrcdir = $(pkgdatadir)
 gtkrc_DATA = gtkrc
 
-install-data-local:
-if MATECONF_SCHEMAS_INSTALL
-	if test -z "$(DESTDIR)" ; then \
-	for p in $(schemas_DATA) ; do \
-	MATECONF_CONFIG_SOURCE=$(MATECONF_SCHEMA_CONFIG_SOURCE) $(MATECONFTOOL) --makefile-install-rule $(top_builddir)/data/$$p >&1 > /dev/null; \
-	done \
-	fi
-endif
-
-EXTRA_DIST =			\
-        $(gtkrc_DATA)		\
-        $(glade_DATA)		\
-        $(DESKTOP_IN_FILES)	\
-        $(schemas_in_files)	\
+EXTRA_DIST =				\
+        $(gtkrc_DATA)			\
+        $(glade_DATA)			\
+        $(DESKTOP_IN_FILES)		\
+        $(gsettings_SCHEMAS_in_in)	\
 	$(UI_FILES)
 
 DISTCLEANFILES = 		\
-        $(DESKTOP_FILES)        \
-        $(schemas_DATA)
+        $(DESKTOP_FILES)	\
+        $(gsettings_SCHEMAS_in)	\
+	$(gsettings_SCHEMAS)
 
 -include $(top_srcdir)/git.mk
