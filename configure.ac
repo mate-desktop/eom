@@ -85,9 +85,9 @@ MATE_DOC_INIT
 
 GTK_REQUIRED=2.18.0
 GLIB_REQUIRED=2.25.9
-MATE_DESKTOP_REQUIRED=1.1.0
+GIO_REQUIRED=2.25.9
+MATE_DESKTOP_REQUIRED=1.5.0
 GDKPIXBUF_REQUIRED=2.4.0
-MATECONF_REQUIRED=1.1.0
 GTK_PRINT_REQUIRED=2.10.0
 MATE_ICON_THEME_REQUIRED=1.1.0
 SHARED_MIME_INFO_REQUIRED=0.20
@@ -101,7 +101,7 @@ EOM_MODULES="gtk+-2.0 >= $GTK_REQUIRED \
              gthread-2.0 >= $GLIB_REQUIRED \
              mate-desktop-2.0 >= $MATE_DESKTOP_REQUIRED \
              gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED \
-             mateconf-2.0 >= $MATECONF_REQUIRED \
+             gio-2.0 >= $GIO_REQUIRED \
              gtk+-unix-print-2.0 >= $GTK_PRINT_REQUIRED \
              mate-icon-theme >= $MATE_ICON_THEME_REQUIRED \
              shared-mime-info >= $SHARED_MIME_INFO_REQUIRED"
@@ -327,16 +327,10 @@ if test "x$have_lcms" = "xyes" || test "$gdk_target" = "x11"; then
 fi
 
 # *****
-# MateConf
+# GSettings
 # *****
 
-AM_MATECONF_SOURCE_2
-
-AC_PATH_PROG([MATECONFTOOL], [mateconftool-2], [no])
-
-if test "$MATECONFTOOL" = "no"; then
-        AC_MSG_ERROR([mateconftool-2 not found])
-fi
+GLIB_GSETTINGS
 
 # ************
 # Sun Keyboard
