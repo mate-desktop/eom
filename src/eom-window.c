@@ -2835,7 +2835,7 @@ eom_window_cmd_about (GtkAction *action, gpointer user_data)
 	static const char *documenters[] = {
 		"Eliot Landrum <eliot@landrum.cx>",
 		"Federico Mena-Quintero <federico@gnu.org>",
-		"Sun MATE Documentation Team <gdocteam@sun.com>",
+		"Sun GNOME Documentation Team <gdocteam@sun.com>",
 		NULL
 	};
 
