@@ -29,7 +29,7 @@
 #include <glib.h>
 #include <glib-object.h>
 #include <gtk/gtk.h>
-#include <mateconf/mateconf-client.h>
+#include <gio/gio.h>
 
 G_BEGIN_DECLS
 
@@ -58,8 +58,7 @@ G_GNUC_INTERNAL
 GType	    eom_preferences_dialog_get_type	  (void) G_GNUC_CONST;
 
 G_GNUC_INTERNAL
-GObject    *eom_preferences_dialog_get_instance	  (GtkWindow   *parent,
-					 	   MateConfClient *client);
+GObject    *eom_preferences_dialog_get_instance	  (GtkWindow   *parent);
 
 G_END_DECLS
 

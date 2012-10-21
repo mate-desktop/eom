@@ -38,15 +38,13 @@
 
 #include <glib/gi18n.h>
 #include <glib.h>
-#include <mateconf/mateconf-client.h>
+#include <gio/gio.h>
 
 #ifdef ENABLE_PYTHON
 #include "eom-python-module.h"
 #endif
 
 #define USER_EOM_PLUGINS_LOCATION "plugins/"
-
-#define EOM_PLUGINS_ENGINE_BASE_KEY "/apps/eom/plugins"
 
 #define PLUGIN_EXT	".eom-plugin"
 
@@ -80,14 +78,13 @@ struct _EomPluginInfo
 	gint               available : 1;
 };
 
-static void	eom_plugin_engine_active_plugins_changed (MateConfClient *client,
-							  guint cnxn_id,
-							  MateConfEntry *entry,
+static void	eom_plugin_engine_active_plugins_changed (GSettings *settings,
+							  gchar *key,
 							  gpointer user_data);
 
 static GList *eom_plugins_list = NULL;
 
-static MateConfClient *eom_plugin_engine_mateconf_client = NULL;
+static GSettings *eom_plugin_engine_settings = NULL;
 
 static GSList *active_plugins = NULL;
 
@@ -296,7 +293,7 @@ eom_plugin_engine_load_dir (const gchar *dir)
 		return;
 	}
 
-	g_return_if_fail (eom_plugin_engine_mateconf_client != NULL);
+	g_return_if_fail (eom_plugin_engine_settings != NULL);
 
 	eom_debug_message (DEBUG_PLUGINS, "DIR: %s", dir);
 
@@ -369,6 +366,22 @@ eom_plugin_engine_load_all (void)
 	eom_plugin_engine_load_dir (EOM_PLUGIN_DIR "/");
 }
 
+static void
+eom_plugin_engine_get_active_plugins (void)
+{
+	gchar **array;
+	gint i;
+
+	active_plugins = NULL;
+	array = g_settings_get_strv (eom_plugin_engine_settings, EOM_CONF_PLUGINS_ACTIVE_PLUGINS);
+	if (array != NULL) {
+		for (i = 0; array[i]; i++) {
+			active_plugins = g_slist_append (active_plugins, g_strdup (array[i]));
+		}
+	}
+	g_strfreev (array);
+}
+
 gboolean
 eom_plugin_engine_init (void)
 {
@@ -382,24 +395,14 @@ eom_plugin_engine_init (void)
 		return FALSE;
 	}
 
-	eom_plugin_engine_mateconf_client = mateconf_client_get_default ();
+	eom_plugin_engine_settings = g_settings_new (EOM_CONF_PLUGINS_SCHEMA);
 
-	g_return_val_if_fail (eom_plugin_engine_mateconf_client != NULL, FALSE);
+	g_signal_connect (eom_plugin_engine_settings,
+			  "changed::" EOM_CONF_PLUGINS_ACTIVE_PLUGINS,
+			  G_CALLBACK (eom_plugin_engine_active_plugins_changed),
+			  NULL);
 
-	mateconf_client_add_dir (eom_plugin_engine_mateconf_client,
-			      EOM_PLUGINS_ENGINE_BASE_KEY,
-			      MATECONF_CLIENT_PRELOAD_ONELEVEL,
-			      NULL);
-
-	mateconf_client_notify_add (eom_plugin_engine_mateconf_client,
-				 EOM_CONF_PLUGINS_ACTIVE_PLUGINS,
-				 eom_plugin_engine_active_plugins_changed,
-				 NULL, NULL, NULL);
-
-	active_plugins = mateconf_client_get_list (eom_plugin_engine_mateconf_client,
-						EOM_CONF_PLUGINS_ACTIVE_PLUGINS,
-						MATECONF_VALUE_STRING,
-						NULL);
+	eom_plugin_engine_get_active_plugins ();
 
 	eom_plugin_engine_load_all ();
 
@@ -431,7 +434,7 @@ eom_plugin_engine_shutdown (void)
 	eom_python_shutdown ();
 #endif
 
-	g_return_if_fail (eom_plugin_engine_mateconf_client != NULL);
+	g_return_if_fail (eom_plugin_engine_settings != NULL);
 
 	for (pl = eom_plugins_list; pl; pl = pl->next) {
 		EomPluginInfo *info = (EomPluginInfo*) pl->data;
@@ -447,8 +450,8 @@ eom_plugin_engine_shutdown (void)
 	g_list_free (eom_plugins_list);
 	eom_plugins_list = NULL;
 
-	g_object_unref (eom_plugin_engine_mateconf_client);
-	eom_plugin_engine_mateconf_client = NULL;
+	g_object_unref (eom_plugin_engine_settings);
+	eom_plugin_engine_settings = NULL;
 }
 
 const GList *
@@ -619,7 +622,6 @@ eom_plugin_engine_activate_plugin (EomPluginInfo *info)
 		return TRUE;
 
 	if (eom_plugin_engine_activate_plugin_real (info)) {
-		gboolean res;
 		GSList *list;
 
 		/* Update plugin state */
@@ -641,14 +643,15 @@ eom_plugin_engine_activate_plugin (EomPluginInfo *info)
 						        g_strdup (info->location),
 						        (GCompareFunc)strcmp);
 
-		res = mateconf_client_set_list (eom_plugin_engine_mateconf_client,
-		    			     EOM_CONF_PLUGINS_ACTIVE_PLUGINS,
-					     MATECONF_VALUE_STRING,
-					     active_plugins,
-					     NULL);
-
-		if (!res)
-			g_warning ("Error saving the list of active plugins.");
+		GArray *array;
+		GSList *l;
+		array = g_array_new (TRUE, TRUE, sizeof (gchar *));
+		for (l = active_plugins; l; l = l->next) {
+			array = g_array_append_val (array, l->data);
+		}
+		g_settings_set_strv (eom_plugin_engine_settings, EOM_CONF_PLUGINS_ACTIVE_PLUGINS,
+				(const gchar **) array->data);
+		g_array_free (array, TRUE);
 
 		return TRUE;
 	}
@@ -707,14 +710,15 @@ eom_plugin_engine_deactivate_plugin (EomPluginInfo *info)
 		return TRUE;
 	}
 
-	res = mateconf_client_set_list (eom_plugin_engine_mateconf_client,
-	    			     EOM_CONF_PLUGINS_ACTIVE_PLUGINS,
-				     MATECONF_VALUE_STRING,
-				     active_plugins,
-				     NULL);
-
-	if (!res)
-		g_warning ("Error saving the list of active plugins.");
+	GArray *array;
+	GSList *l;
+	array = g_array_new (TRUE, TRUE, sizeof (gchar *));
+	for (l = active_plugins; l; l = l->next) {
+		array = g_array_append_val (array, l->data);
+	}
+	g_settings_set_strv (eom_plugin_engine_settings, EOM_CONF_PLUGINS_ACTIVE_PLUGINS,
+			(const gchar **) array->data);
+	g_array_free (array, TRUE);
 
 	return TRUE;
 }
@@ -837,9 +841,8 @@ eom_plugin_engine_configure_plugin (EomPluginInfo *info,
 }
 
 static void
-eom_plugin_engine_active_plugins_changed (MateConfClient *client,
-					  guint cnxn_id,
-					  MateConfEntry *entry,
+eom_plugin_engine_active_plugins_changed (GSettings *settings,
+					  gchar *key,
 					  gpointer user_data)
 {
 	GList *pl;
@@ -847,19 +850,10 @@ eom_plugin_engine_active_plugins_changed (MateConfClient *client,
 
 	eom_debug (DEBUG_PLUGINS);
 
-	g_return_if_fail (entry->key != NULL);
-	g_return_if_fail (entry->value != NULL);
+	g_return_if_fail (settings != NULL);
+	g_return_if_fail (key != NULL);
 
-	if (!((entry->value->type == MATECONF_VALUE_LIST) &&
-	      (mateconf_value_get_list_type (entry->value) == MATECONF_VALUE_STRING))) {
-		g_warning ("The mateconf key '%s' may be corrupted.", EOM_CONF_PLUGINS_ACTIVE_PLUGINS);
-		return;
-	}
-
-	active_plugins = mateconf_client_get_list (eom_plugin_engine_mateconf_client,
-						EOM_CONF_PLUGINS_ACTIVE_PLUGINS,
-						MATECONF_VALUE_STRING,
-						NULL);
+	eom_plugin_engine_get_active_plugins ();
 
 	for (pl = eom_plugins_list; pl; pl = pl->next) {
 		EomPluginInfo *info = (EomPluginInfo*)pl->data;

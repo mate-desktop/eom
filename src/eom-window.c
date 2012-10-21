@@ -65,7 +65,6 @@
 #include <gio/gio.h>
 #include <gdk/gdkkeysyms.h>
 #include <gtk/gtk.h>
-#include <mateconf/mateconf-client.h>
 
 #if HAVE_LCMS
 #include <X11/Xlib.h>
@@ -116,32 +115,16 @@ enum {
 
 static gint signals[SIGNAL_LAST];
 
-/* MateConfNotifications */
-enum {
-	EOM_WINDOW_NOTIFY_INTERPOLATE,
-	EOM_WINDOW_NOTIFY_EXTRAPOLATE,
-	EOM_WINDOW_NOTIFY_SCROLLWHEEL_ZOOM,
-	EOM_WINDOW_NOTIFY_ZOOM_MULTIPLIER,
-	EOM_WINDOW_NOTIFY_BACKGROUND_COLOR,
-	EOM_WINDOW_NOTIFY_USE_BG_COLOR,
-	EOM_WINDOW_NOTIFY_TRANSPARENCY,
-	EOM_WINDOW_NOTIFY_TRANS_COLOR,
-	EOM_WINDOW_NOTIFY_SCROLL_BUTTONS,
-	EOM_WINDOW_NOTIFY_COLLECTION_POS,
-	EOM_WINDOW_NOTIFY_COLLECTION_RESIZABLE,
-	EOM_WINDOW_NOTIFY_CAN_SAVE,
-	EOM_WINDOW_NOTIFY_PROPSDIALOG_NETBOOK_MODE,
-	EOM_WINDOW_NOTIFY_LENGTH
-};
-
 struct _EomWindowPrivate {
-        MateConfClient         *client;
-        guint                client_notifications[EOM_WINDOW_NOTIFY_LENGTH];
+        GSettings           *view_settings;
+        GSettings           *ui_settings;
+        GSettings           *fullscreen_settings;
+        GSettings           *lockdown_settings;
 
         EomListStore        *store;
         EomImage            *image;
-	EomWindowMode        mode;
-	EomWindowStatus      status;
+        EomWindowMode        mode;
+        EomWindowStatus      status;
 
         GtkUIManager        *ui_mgr;
         GtkWidget           *box;
@@ -152,16 +135,16 @@ struct _EomWindowPrivate {
         GtkWidget           *thumbview;
         GtkWidget           *statusbar;
         GtkWidget           *nav;
-	GtkWidget           *message_area;
-	GtkWidget           *toolbar;
-	GObject             *properties_dlg;
+        GtkWidget           *message_area;
+        GtkWidget           *toolbar;
+        GObject             *properties_dlg;
 
         GtkActionGroup      *actions_window;
         GtkActionGroup      *actions_image;
         GtkActionGroup      *actions_collection;
         GtkActionGroup      *actions_recent;
 
-	GtkWidget           *fullscreen_popup;
+        GtkWidget           *fullscreen_popup;
 	GSource             *fullscreen_timeout_source;
 
 	gboolean             slideshow_loop;
@@ -234,10 +217,7 @@ eom_window_error_quark (void)
 }
 
 static void
-eom_window_interp_in_type_changed_cb (MateConfClient *client,
-				      guint       cnxn_id,
-				      MateConfEntry  *entry,
-				      gpointer    user_data)
+eom_window_interp_in_type_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
 {
 	EomWindowPrivate *priv;
 	gboolean interpolate_in = TRUE;
@@ -250,19 +230,14 @@ eom_window_interp_in_type_changed_cb (MateConfClient *client,
 
 	g_return_if_fail (EOM_IS_SCROLL_VIEW (priv->view));
 
-	if (entry->value != NULL && entry->value->type == MATECONF_VALUE_BOOL) {
-		interpolate_in = mateconf_value_get_bool (entry->value);
-	}
+	interpolate_in = g_settings_get_boolean (settings, key);
 
 	eom_scroll_view_set_antialiasing_in (EOM_SCROLL_VIEW (priv->view),
 					  interpolate_in);
 }
 
 static void
-eom_window_interp_out_type_changed_cb (MateConfClient *client,
-				       guint       cnxn_id,
-				       MateConfEntry  *entry,
-				       gpointer    user_data)
+eom_window_interp_out_type_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
 {
 	EomWindowPrivate *priv;
 	gboolean interpolate_out = TRUE;
@@ -275,19 +250,14 @@ eom_window_interp_out_type_changed_cb (MateConfClient *client,
 
 	g_return_if_fail (EOM_IS_SCROLL_VIEW (priv->view));
 
-	if (entry->value != NULL && entry->value->type == MATECONF_VALUE_BOOL) {
-		interpolate_out = mateconf_value_get_bool (entry->value);
-	}
+	interpolate_out = g_settings_get_boolean (settings, key);
 
 	eom_scroll_view_set_antialiasing_out (EOM_SCROLL_VIEW (priv->view),
 					  interpolate_out);
 }
 
 static void
-eom_window_scroll_wheel_zoom_changed_cb (MateConfClient *client,
-				         guint       cnxn_id,
-				         MateConfEntry  *entry,
-				         gpointer    user_data)
+eom_window_scroll_wheel_zoom_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
 {
 	EomWindowPrivate *priv;
 	gboolean scroll_wheel_zoom = FALSE;
@@ -300,19 +270,14 @@ eom_window_scroll_wheel_zoom_changed_cb (MateConfClient *client,
 
 	g_return_if_fail (EOM_IS_SCROLL_VIEW (priv->view));
 
-	if (entry->value != NULL && entry->value->type == MATECONF_VALUE_BOOL) {
-		scroll_wheel_zoom = mateconf_value_get_bool (entry->value);
-	}
+	scroll_wheel_zoom = g_settings_get_boolean (settings, key);
 
 	eom_scroll_view_set_scroll_wheel_zoom (EOM_SCROLL_VIEW (priv->view),
 					       scroll_wheel_zoom);
 }
 
 static void
-eom_window_zoom_multiplier_changed_cb (MateConfClient *client,
-				       guint       cnxn_id,
-				       MateConfEntry  *entry,
-				       gpointer    user_data)
+eom_window_zoom_multiplier_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
 {
 	EomWindowPrivate *priv;
 	gdouble multiplier = 0.05;
@@ -325,22 +290,17 @@ eom_window_zoom_multiplier_changed_cb (MateConfClient *client,
 
 	g_return_if_fail (EOM_IS_SCROLL_VIEW (priv->view));
 
-	if (entry->value != NULL && entry->value->type == MATECONF_VALUE_FLOAT) {
-		multiplier = mateconf_value_get_float (entry->value);
-	}
+	multiplier = g_settings_get_double (settings, key);
 
 	eom_scroll_view_set_zoom_multiplier (EOM_SCROLL_VIEW (priv->view),
 					     multiplier);
 }
 
 static void
-eom_window_transparency_changed_cb (MateConfClient *client,
-				    guint       cnxn_id,
-				    MateConfEntry  *entry,
-				    gpointer    user_data)
+eom_window_transparency_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
 {
 	EomWindowPrivate *priv;
-	const char *value = NULL;
+	char *value = NULL;
 
 	g_return_if_fail (EOM_IS_WINDOW (user_data));
 
@@ -350,9 +310,7 @@ eom_window_transparency_changed_cb (MateConfClient *client,
 
 	g_return_if_fail (EOM_IS_SCROLL_VIEW (priv->view));
 
-	if (entry->value != NULL && entry->value->type == MATECONF_VALUE_STRING) {
-		value = mateconf_value_get_string (entry->value);
-	}
+	value = g_settings_get_string (settings, key);
 
 	if (value == NULL) {
 		return;
@@ -360,8 +318,7 @@ eom_window_transparency_changed_cb (MateConfClient *client,
 		GdkColor color;
 		char *color_str;
 
-		color_str = mateconf_client_get_string (priv->client,
-						     EOM_CONF_VIEW_TRANS_COLOR, NULL);
+		color_str = g_settings_get_string (priv->view_settings, EOM_CONF_VIEW_TRANS_COLOR);
 		if (gdk_color_parse (color_str, &color)) {
 			eom_scroll_view_set_transparency (EOM_SCROLL_VIEW (priv->view),
 							  EOM_TRANSP_COLOR, &color);
@@ -374,17 +331,15 @@ eom_window_transparency_changed_cb (MateConfClient *client,
 		eom_scroll_view_set_transparency (EOM_SCROLL_VIEW (priv->view),
 						  EOM_TRANSP_BACKGROUND, NULL);
 	}
+	g_free (value);
 }
 
 static void
-eom_window_bg_color_changed_cb (MateConfClient *client,
-				guint       cnxn_id,
-				MateConfEntry  *entry,
-				gpointer    user_data)
+eom_window_bg_color_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
 {
 	EomWindowPrivate *priv;
 	GdkColor color;
-	const char *color_str;
+	char *color_str;
 
 	g_return_if_fail (EOM_IS_WINDOW (user_data));
 
@@ -394,20 +349,16 @@ eom_window_bg_color_changed_cb (MateConfClient *client,
 
 	g_return_if_fail (EOM_IS_SCROLL_VIEW (priv->view));
 
-	if (entry->value != NULL && entry->value->type == MATECONF_VALUE_STRING) {
-		color_str = mateconf_value_get_string (entry->value);
+	color_str = g_settings_get_string (settings, key);
 
-		if (gdk_color_parse (color_str, &color)) {
-			eom_scroll_view_set_background_color (EOM_SCROLL_VIEW (priv->view), &color);
-		}
+	if (gdk_color_parse (color_str, &color)) {
+		eom_scroll_view_set_background_color (EOM_SCROLL_VIEW (priv->view), &color);
 	}
+	g_free (color_str);
 }
 
 static void
-eom_window_use_bg_color_changed_cb (MateConfClient *client,
-				      guint       cnxn_id,
-				      MateConfEntry  *entry,
-				      gpointer    user_data)
+eom_window_use_bg_color_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
 {
 	EomWindowPrivate *priv;
 	gboolean use_bg_color = TRUE;
@@ -420,9 +371,7 @@ eom_window_use_bg_color_changed_cb (MateConfClient *client,
 
 	g_return_if_fail (EOM_IS_SCROLL_VIEW (priv->view));
 
-	if (entry->value != NULL && entry->value->type == MATECONF_VALUE_BOOL) {
-		use_bg_color = mateconf_value_get_bool (entry->value);
-	}
+	use_bg_color = g_settings_get_boolean (settings, key);
 
 	eom_scroll_view_set_use_bg_color (EOM_SCROLL_VIEW (priv->view),
 					  use_bg_color);
@@ -430,14 +379,11 @@ eom_window_use_bg_color_changed_cb (MateConfClient *client,
 
 
 static void
-eom_window_trans_color_changed_cb (MateConfClient *client,
-				   guint       cnxn_id,
-				   MateConfEntry  *entry,
-				   gpointer    user_data)
+eom_window_trans_color_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
 {
 	EomWindowPrivate *priv;
 	GdkColor color;
-	const char *color_str;
+	char *color_str;
 	char *value;
 
 	g_return_if_fail (EOM_IS_WINDOW (user_data));
@@ -448,31 +394,25 @@ eom_window_trans_color_changed_cb (MateConfClient *client,
 
 	g_return_if_fail (EOM_IS_SCROLL_VIEW (priv->view));
 
-	value = mateconf_client_get_string (priv->client,
-					 EOM_CONF_VIEW_TRANSPARENCY,
-					 NULL);
+	value = g_settings_get_string (priv->view_settings, EOM_CONF_VIEW_TRANSPARENCY);
 
 	if (!value || g_ascii_strcasecmp (value, "COLOR") != 0) {
 		g_free (value);
 		return;
 	}
 
-	if (entry->value != NULL && entry->value->type == MATECONF_VALUE_STRING) {
-		color_str = mateconf_value_get_string (entry->value);
+	color_str = g_settings_get_string (settings, key);
 
-		if (gdk_color_parse (color_str, &color)) {
-			eom_scroll_view_set_transparency (EOM_SCROLL_VIEW (priv->view),
-							  EOM_TRANSP_COLOR, &color);
-		}
+	if (gdk_color_parse (color_str, &color)) {
+		eom_scroll_view_set_transparency (EOM_SCROLL_VIEW (priv->view),
+						  EOM_TRANSP_COLOR, &color);
 	}
 	g_free (value);
+	g_free (color_str);
 }
 
 static void
-eom_window_scroll_buttons_changed_cb (MateConfClient *client,
-				      guint       cnxn_id,
-				      MateConfEntry  *entry,
-				      gpointer    user_data)
+eom_window_scroll_buttons_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
 {
 	EomWindowPrivate *priv;
 	gboolean show_buttons = TRUE;
@@ -485,22 +425,16 @@ eom_window_scroll_buttons_changed_cb (MateConfClient *client,
 
 	g_return_if_fail (EOM_IS_SCROLL_VIEW (priv->view));
 
-	if (entry->value != NULL && entry->value->type == MATECONF_VALUE_BOOL) {
-		show_buttons = mateconf_value_get_bool (entry->value);
-	}
+	show_buttons = g_settings_get_boolean (settings, key);
 
 	eom_thumb_nav_set_show_buttons (EOM_THUMB_NAV (priv->nav),
 					show_buttons);
 }
 
 static void
-eom_window_collection_mode_changed_cb (MateConfClient *client,
-				       guint       cnxn_id,
-				       MateConfEntry  *entry,
-				       gpointer    user_data)
+eom_window_collection_mode_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
 {
 	EomWindowPrivate *priv;
-	MateConfEntry *mode_entry;
 	GtkWidget *hpaned;
 	EomThumbNavMode mode = EOM_THUMB_NAV_MODE_ONE_ROW;
 	gint position = 0;
@@ -512,29 +446,8 @@ eom_window_collection_mode_changed_cb (MateConfClient *client,
 
 	priv = EOM_WINDOW (user_data)->priv;
 
-	mode_entry = mateconf_client_get_entry (priv->client,
-		 			     EOM_CONF_UI_IMAGE_COLLECTION_POSITION,
-					     NULL, TRUE, NULL);
-
-	if (G_LIKELY (mode_entry != NULL)) {
-		if (mode_entry->value != NULL &&
-		    mode_entry->value->type == MATECONF_VALUE_INT) {
-			position = mateconf_value_get_int (mode_entry->value);
-		}
-		mateconf_entry_unref (mode_entry);
-	}
-
-	mode_entry = mateconf_client_get_entry (priv->client,
-					     EOM_CONF_UI_IMAGE_COLLECTION_RESIZABLE,
-					     NULL, TRUE, NULL);
-
-	if (G_LIKELY (mode_entry != NULL)) {
-		if (mode_entry->value != NULL &&
-		    mode_entry->value->type == MATECONF_VALUE_BOOL) {
-			resizable = mateconf_value_get_bool (mode_entry->value);
-		}
-		mateconf_entry_unref (mode_entry);
-	}
+	position = g_settings_get_int (priv->ui_settings, EOM_CONF_UI_IMAGE_COLLECTION_POSITION);
+	resizable = g_settings_get_boolean (priv->ui_settings, EOM_CONF_UI_IMAGE_COLLECTION_RESIZABLE);
 
 	if (priv->collection_position == position &&
 	    priv->collection_resizable == resizable)
@@ -624,10 +537,7 @@ eom_window_collection_mode_changed_cb (MateConfClient *client,
 }
 
 static void
-eom_window_can_save_changed_cb (MateConfClient *client,
-				guint       cnxn_id,
-				MateConfEntry  *entry,
-				gpointer    user_data)
+eom_window_can_save_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
 {
 	EomWindowPrivate *priv;
 	EomWindow *window;
@@ -641,9 +551,7 @@ eom_window_can_save_changed_cb (MateConfClient *client,
 	window = EOM_WINDOW (user_data);
 	priv = EOM_WINDOW (user_data)->priv;
 
-	if (entry->value != NULL && entry->value->type == MATECONF_VALUE_BOOL) {
-		save_disabled = mateconf_value_get_bool (entry->value);
-	}
+	save_disabled = g_settings_get_boolean (settings, key);
 
 	priv->save_disabled = save_disabled;
 
@@ -668,10 +576,7 @@ eom_window_can_save_changed_cb (MateConfClient *client,
 }
 
 static void
-eom_window_pd_nbmode_changed_cb (MateConfClient *client,
-				 guint       cnxn_id,
-				 MateConfEntry  *entry,
-				 gpointer    user_data)
+eom_window_pd_nbmode_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
 {
 	EomWindow *window = EOM_WINDOW (user_data);
 
@@ -679,7 +584,7 @@ eom_window_pd_nbmode_changed_cb (MateConfClient *client,
 		gboolean netbook_mode;
 		EomPropertiesDialog *dlg;
 
-		netbook_mode = mateconf_value_get_bool (entry->value);
+		netbook_mode = g_settings_get_boolean (settings, key);
 		dlg = EOM_PROPERTIES_DIALOG (window->priv->properties_dlg);
 
 		eom_properties_dialog_set_netbook_mode (dlg, netbook_mode);
@@ -821,7 +726,11 @@ update_status_bar (EomWindow *window)
 		if ((width > 0) && (height > 0)) {
 			char *size_string;
 
-			size_string = g_format_size_for_display (bytes);
+			#if GLIB_CHECK_VERSION(2, 30, 0)
+				size_string = g_format_size (bytes);
+			#else
+				size_string = g_format_size_for_display (bytes);
+			#endif
 
 			/* Translators: This is the string displayed in the statusbar
 			 * The tokens are from left to right:
@@ -942,17 +851,12 @@ update_action_groups_state (EomWindow *window)
 		}
 	} else {
 		if (priv->flags & EOM_STARTUP_DISABLE_COLLECTION) {
-			mateconf_client_set_bool (priv->client,
-					       EOM_CONF_UI_IMAGE_COLLECTION,
-					       FALSE,
-					       NULL);
+			g_settings_set_boolean (priv->ui_settings, EOM_CONF_UI_IMAGE_COLLECTION, FALSE);
 
 			show_image_collection = FALSE;
 		} else {
 			show_image_collection =
-				mateconf_client_get_bool (priv->client,
-						       EOM_CONF_UI_IMAGE_COLLECTION,
-						       NULL);
+				g_settings_get_boolean (priv->ui_settings, EOM_CONF_UI_IMAGE_COLLECTION);
 		}
 
 		show_image_collection = show_image_collection &&
@@ -987,17 +891,15 @@ update_action_groups_state (EomWindow *window)
 			gtk_widget_grab_focus (priv->view);
 	}
 
-	print_disabled = mateconf_client_get_bool (priv->client,
-						EOM_CONF_DESKTOP_CAN_PRINT,
-						NULL);
+	print_disabled = g_settings_get_boolean (priv->lockdown_settings,
+						EOM_CONF_LOCKDOWN_CAN_PRINT);
 
 	if (print_disabled) {
 		gtk_action_set_sensitive (action_print, FALSE);
 	}
 
-	page_setup_disabled = mateconf_client_get_bool (priv->client,
-						     EOM_CONF_DESKTOP_CAN_SETUP_PAGE,
-						     NULL);
+	page_setup_disabled = g_settings_get_boolean (priv->lockdown_settings,
+						     EOM_CONF_LOCKDOWN_CAN_SETUP_PAGE);
 
 	if (eom_sidebar_is_empty (EOM_SIDEBAR (priv->sidebar))) {
 		gtk_action_set_sensitive (action_sidebar, FALSE);
@@ -2226,7 +2128,6 @@ update_ui_visibility (EomWindow *window)
 
 	GtkAction *action;
 	GtkWidget *menubar;
-	GError *error = NULL;
 
 	gboolean fullscreen_mode, visible;
 
@@ -2242,32 +2143,24 @@ update_ui_visibility (EomWindow *window)
 	menubar = gtk_ui_manager_get_widget (priv->ui_mgr, "/MainMenu");
 	g_assert (GTK_IS_WIDGET (menubar));
 
-	visible = mateconf_client_get_bool (priv->client, EOM_CONF_UI_TOOLBAR, &error);
+	visible = g_settings_get_boolean (priv->ui_settings, EOM_CONF_UI_TOOLBAR);
 	visible = visible && !fullscreen_mode;
-	if (error) {
-		g_error_free (error);
-		error = NULL;
-		visible = !fullscreen_mode;
-	}
+
 	action = gtk_ui_manager_get_action (priv->ui_mgr, "/MainMenu/View/ToolbarToggle");
 	g_assert (action != NULL);
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), visible);
 	g_object_set (G_OBJECT (priv->toolbar), "visible", visible, NULL);
 
-	visible = mateconf_client_get_bool (priv->client, EOM_CONF_UI_STATUSBAR, &error);
+	visible = g_settings_get_boolean (priv->ui_settings, EOM_CONF_UI_STATUSBAR);
 	visible = visible && !fullscreen_mode;
-	if (error) {
-		g_error_free (error);
-		error = NULL;
-		visible = !fullscreen_mode;
-	}
+
 	action = gtk_ui_manager_get_action (priv->ui_mgr, "/MainMenu/View/StatusbarToggle");
 	g_assert (action != NULL);
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), visible);
 	g_object_set (G_OBJECT (priv->statusbar), "visible", visible, NULL);
 
 	if (priv->status != EOM_WINDOW_STATUS_INIT) {
-		visible = mateconf_client_get_bool (priv->client, EOM_CONF_UI_IMAGE_COLLECTION, NULL);
+		visible = g_settings_get_boolean (priv->ui_settings, EOM_CONF_UI_IMAGE_COLLECTION);
 		visible = visible && priv->mode != EOM_WINDOW_MODE_SLIDESHOW;
 		action = gtk_ui_manager_get_action (priv->ui_mgr, "/MainMenu/View/ImageCollectionToggle");
 		g_assert (action != NULL);
@@ -2279,7 +2172,7 @@ update_ui_visibility (EomWindow *window)
 		}
 	}
 
-	visible = mateconf_client_get_bool (priv->client, EOM_CONF_UI_SIDEBAR, NULL);
+	visible = g_settings_get_boolean (priv->ui_settings, EOM_CONF_UI_SIDEBAR);
 	visible = visible && !fullscreen_mode;
 	action = gtk_ui_manager_get_action (priv->ui_mgr, "/MainMenu/View/SidebarToggle");
 	g_assert (action != NULL);
@@ -2350,21 +2243,18 @@ eom_window_run_fullscreen (EomWindow *window, gboolean slideshow)
 
 	if (slideshow) {
 		priv->slideshow_loop =
-				mateconf_client_get_bool (priv->client,
-						       EOM_CONF_FULLSCREEN_LOOP,
-						       NULL);
+				g_settings_get_boolean (priv->fullscreen_settings,
+						       EOM_CONF_FULLSCREEN_LOOP);
 
 		priv->slideshow_switch_timeout =
-				mateconf_client_get_int (priv->client,
-						      EOM_CONF_FULLSCREEN_SECONDS,
-						      NULL);
+				g_settings_get_int (priv->fullscreen_settings,
+						      EOM_CONF_FULLSCREEN_SECONDS);
 
 		slideshow_set_timeout (window);
 	}
 
-	upscale = mateconf_client_get_bool (priv->client,
-					 EOM_CONF_FULLSCREEN_UPSCALE,
-					 NULL);
+	upscale = g_settings_get_boolean (priv->fullscreen_settings,
+					 EOM_CONF_FULLSCREEN_UPSCALE);
 
 	eom_scroll_view_set_zoom_upscale (EOM_SCROLL_VIEW (priv->view),
 					  upscale);
@@ -2546,9 +2436,8 @@ eom_window_cmd_file_open (GtkAction *action, gpointer user_data)
 		const gchar *pics_dir;
 		gboolean use_fallback;
 
-		use_fallback = mateconf_client_get_bool (priv->client,
-					   EOM_CONF_UI_FILECHOOSER_XDG_FALLBACK,
-					   NULL);
+		use_fallback = g_settings_get_boolean (priv->fullscreen_settings,
+					   EOM_CONF_UI_FILECHOOSER_XDG_FALLBACK);
 		pics_dir = g_get_user_special_dir (G_USER_DIRECTORY_PICTURES);
 		if (use_fallback && pics_dir) {
 			gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER (dlg),
@@ -2691,8 +2580,7 @@ eom_window_cmd_preferences (GtkAction *action, gpointer user_data)
 
 	window = EOM_WINDOW (user_data);
 
-	pref_dlg = eom_preferences_dialog_get_instance (GTK_WINDOW (window),
-							window->priv->client);
+	pref_dlg = eom_preferences_dialog_get_instance (GTK_WINDOW (window));
 
 	eom_dialog_show (EOM_DIALOG (pref_dlg));
 }
@@ -2903,13 +2791,13 @@ eom_window_cmd_show_hide_bar (GtkAction *action, gpointer user_data)
 		g_object_set (G_OBJECT (priv->toolbar), "visible", visible, NULL);
 
 		if (priv->mode == EOM_WINDOW_MODE_NORMAL)
-			mateconf_client_set_bool (priv->client, EOM_CONF_UI_TOOLBAR, visible, NULL);
+			g_settings_set_boolean (priv->ui_settings, EOM_CONF_UI_TOOLBAR, visible);
 
 	} else if (g_ascii_strcasecmp (gtk_action_get_name (action), "ViewStatusbar") == 0) {
 		g_object_set (G_OBJECT (priv->statusbar), "visible", visible, NULL);
 
 		if (priv->mode == EOM_WINDOW_MODE_NORMAL)
-			mateconf_client_set_bool (priv->client, EOM_CONF_UI_STATUSBAR, visible, NULL);
+			g_settings_set_boolean (priv->ui_settings, EOM_CONF_UI_STATUSBAR, visible);
 
 	} else if (g_ascii_strcasecmp (gtk_action_get_name (action), "ViewImageCollection") == 0) {
 		if (visible) {
@@ -2946,7 +2834,7 @@ eom_window_cmd_show_hide_bar (GtkAction *action, gpointer user_data)
 #endif
 				gtk_widget_grab_focus (priv->view);
 		}
-		mateconf_client_set_bool (priv->client, EOM_CONF_UI_IMAGE_COLLECTION, visible, NULL);
+		g_settings_set_boolean (priv->ui_settings, EOM_CONF_UI_IMAGE_COLLECTION, visible);
 
 	} else if (g_ascii_strcasecmp (gtk_action_get_name (action), "ViewSidebar") == 0) {
 		if (visible) {
@@ -2954,7 +2842,7 @@ eom_window_cmd_show_hide_bar (GtkAction *action, gpointer user_data)
 		} else {
 			gtk_widget_hide (priv->sidebar);
 		}
-		mateconf_client_set_bool (priv->client, EOM_CONF_UI_SIDEBAR, visible, NULL);
+		g_settings_set_boolean (priv->ui_settings, EOM_CONF_UI_SIDEBAR, visible);
 	}
 }
 
@@ -2986,12 +2874,13 @@ eom_window_set_wallpaper (EomWindow *window, const gchar *filename, const gchar 
 	gchar *markup;
 	gchar *text;
 	gchar *basename;
+	GSettings *wallpaper_settings;
 
-
-	mateconf_client_set_string (priv->client,
-				 EOM_CONF_DESKTOP_WALLPAPER,
-				 filename,
-				 NULL);
+	wallpaper_settings = g_settings_new (EOM_CONF_BACKGROUND_SCHEMA);
+	g_settings_set_string (wallpaper_settings,
+				 EOM_CONF_BACKGROUND_FILE,
+				 filename);
+	g_object_unref (wallpaper_settings);
 
 	/* I18N: When setting mnemonics for these strings, watch out to not
 	   clash with mnemonics from eom's menubar */
@@ -3313,9 +3202,8 @@ eom_window_cmd_properties (GtkAction *action, gpointer user_data)
 		eom_properties_dialog_update (EOM_PROPERTIES_DIALOG (priv->properties_dlg),
 					      priv->image);
 		netbook_mode =
-			mateconf_client_get_bool (priv->client,
-					       EOM_CONF_UI_PROPSDIALOG_NETBOOK_MODE,
-					       NULL);
+			g_settings_get_boolean (priv->ui_settings,
+					       EOM_CONF_UI_PROPSDIALOG_NETBOOK_MODE);
 		eom_properties_dialog_set_netbook_mode (EOM_PROPERTIES_DIALOG (priv->properties_dlg),
 							netbook_mode);
 	}
@@ -3473,11 +3361,9 @@ show_move_to_trash_confirm_dialog (EomWindow *window, GList *images, gboolean ca
 	gboolean neverask = FALSE;
 	GtkWidget* dontask_cbutton = NULL;
 
-	/* Check if the user never wants to be bugged. Ignore the error as
-	 * it returns FALSE for safety anyway */
-	neverask = mateconf_client_get_bool (window->priv->client,
-					 EOM_CONF_UI_DISABLE_TRASH_CONFIRMATION,
-					 NULL);
+	/* Check if the user never wants to be bugged. */
+	neverask = g_settings_get_boolean (window->priv->ui_settings,
+					 EOM_CONF_UI_DISABLE_TRASH_CONFIRMATION);
 
 	/* Assume agreement, if the user doesn't want to be
 	 * asked and the trash is available */
@@ -4323,10 +4209,9 @@ eom_window_sidebar_visibility_changed (GtkWidget *widget, EomWindow *window)
 
 	visible = gtk_widget_get_visible (window->priv->sidebar);
 
-	mateconf_client_set_bool (window->priv->client,
+	g_settings_set_boolean (window->priv->ui_settings,
 			       EOM_CONF_UI_SIDEBAR,
-			       visible,
-			       NULL);
+			       visible);
 
 	action = gtk_action_group_get_action (window->priv->actions_window,
 					      "ViewSidebar");
@@ -4400,8 +4285,6 @@ eom_window_construct_ui (EomWindow *window)
 	GtkWidget *view_popup;
 	GtkWidget *hpaned;
 	GtkWidget *menuitem;
-
-	MateConfEntry *entry;
 
 	g_return_if_fail (EOM_IS_WINDOW (window));
 
@@ -4619,9 +4502,8 @@ eom_window_construct_ui (EomWindow *window)
 
 	priv->nav = eom_thumb_nav_new (priv->thumbview,
 				       EOM_THUMB_NAV_MODE_ONE_ROW,
-				       mateconf_client_get_bool (priv->client,
-							      EOM_CONF_UI_SCROLL_BUTTONS,
-							      NULL));
+				       g_settings_get_boolean (priv->ui_settings,
+							      EOM_CONF_UI_SCROLL_BUTTONS));
 
 	thumb_popup = gtk_ui_manager_get_widget (priv->ui_mgr, "/ThumbnailPopup");
 	eom_thumb_view_set_thumbnail_popup (EOM_THUMB_VIEW (priv->thumbview),
@@ -4631,96 +4513,36 @@ eom_window_construct_ui (EomWindow *window)
 
 	gtk_box_pack_end (GTK_BOX (priv->cbox), priv->layout, TRUE, TRUE, 0);
 
-
-	entry = mateconf_client_get_entry (priv->client,
+	eom_window_interp_in_type_changed_cb (priv->view_settings,
 					EOM_CONF_VIEW_EXTRAPOLATE,
-					NULL, TRUE, NULL);
-	if (entry != NULL) {
-		eom_window_interp_in_type_changed_cb (priv->client, 0, entry, window);
-		mateconf_entry_unref (entry);
-		entry = NULL;
-	}
-
-	entry = mateconf_client_get_entry (priv->client,
+					window);
+	eom_window_interp_out_type_changed_cb (priv->view_settings,
 					EOM_CONF_VIEW_INTERPOLATE,
-					NULL, TRUE, NULL);
-	if (entry != NULL) {
-		eom_window_interp_out_type_changed_cb (priv->client, 0, entry, window);
-		mateconf_entry_unref (entry);
-		entry = NULL;
-	}
-
-	entry = mateconf_client_get_entry (priv->client,
+					window);
+	eom_window_scroll_wheel_zoom_changed_cb (priv->view_settings,
 					EOM_CONF_VIEW_SCROLL_WHEEL_ZOOM,
-					NULL, TRUE, NULL);
-	if (entry != NULL) {
-		eom_window_scroll_wheel_zoom_changed_cb (priv->client, 0, entry, window);
-		mateconf_entry_unref (entry);
-		entry = NULL;
-	}
-
-	entry = mateconf_client_get_entry (priv->client,
+					window);
+	eom_window_zoom_multiplier_changed_cb (priv->view_settings,
 					EOM_CONF_VIEW_ZOOM_MULTIPLIER,
-					NULL, TRUE, NULL);
-	if (entry != NULL) {
-		eom_window_zoom_multiplier_changed_cb (priv->client, 0, entry, window);
-		mateconf_entry_unref (entry);
-		entry = NULL;
-	}
-
-	entry = mateconf_client_get_entry (priv->client,
+					window);
+	eom_window_bg_color_changed_cb (priv->view_settings,
 					EOM_CONF_VIEW_BACKGROUND_COLOR,
-					NULL, TRUE, NULL);
-	if (entry != NULL) {
-		eom_window_bg_color_changed_cb (priv->client, 0, entry, window);
-		mateconf_entry_unref (entry);
-		entry = NULL;
-	}
-
-	entry = mateconf_client_get_entry (priv->client,
+					window);
+	eom_window_use_bg_color_changed_cb (priv->view_settings,
 					EOM_CONF_VIEW_USE_BG_COLOR,
-					NULL, TRUE, NULL);
-	if (entry != NULL) {
-		eom_window_use_bg_color_changed_cb (priv->client, 0, entry, window);
-		mateconf_entry_unref (entry);
-		entry = NULL;
-	}
-
-	entry = mateconf_client_get_entry (priv->client,
+					window);
+	eom_window_transparency_changed_cb (priv->view_settings,
 					EOM_CONF_VIEW_TRANSPARENCY,
-					NULL, TRUE, NULL);
-	if (entry != NULL) {
-		eom_window_transparency_changed_cb (priv->client, 0, entry, window);
-		mateconf_entry_unref (entry);
-		entry = NULL;
-	}
-
-	entry = mateconf_client_get_entry (priv->client,
+					window);
+	eom_window_trans_color_changed_cb (priv->view_settings,
 					EOM_CONF_VIEW_TRANS_COLOR,
-					NULL, TRUE, NULL);
-	if (entry != NULL) {
-		eom_window_trans_color_changed_cb (priv->client, 0, entry, window);
-		mateconf_entry_unref (entry);
-		entry = NULL;
-	}
-
-	entry = mateconf_client_get_entry (priv->client,
+					window);
+	eom_window_collection_mode_changed_cb (priv->ui_settings,
 					EOM_CONF_UI_IMAGE_COLLECTION_POSITION,
-					NULL, TRUE, NULL);
-	if (entry != NULL) {
-		eom_window_collection_mode_changed_cb (priv->client, 0, entry, window);
-		mateconf_entry_unref (entry);
-		entry = NULL;
-	}
-
-	entry = mateconf_client_get_entry (priv->client,
-					EOM_CONF_DESKTOP_CAN_SAVE,
-					NULL, TRUE, NULL);
-	if (entry != NULL) {
-		eom_window_can_save_changed_cb (priv->client, 0, entry, window);
-		mateconf_entry_unref (entry);
-		entry = NULL;
-	}
+					window);
+	eom_window_can_save_changed_cb (priv->lockdown_settings,
+					EOM_CONF_LOCKDOWN_CAN_SAVE,
+					window);
 
 	if ((priv->flags & EOM_STARTUP_FULLSCREEN) ||
 	    (priv->flags & EOM_STARTUP_SLIDE_SHOW)) {
@@ -4749,88 +4571,75 @@ eom_window_init (EomWindow *window)
 
 	priv = window->priv = EOM_WINDOW_GET_PRIVATE (window);
 
-	priv->client = mateconf_client_get_default ();
+	priv->view_settings = g_settings_new (EOM_CONF_VIEW_SCHEMA);
+	priv->ui_settings = g_settings_new (EOM_CONF_UI_SCHEMA);
+	priv->fullscreen_settings = g_settings_new (EOM_CONF_FULLSCREEN_SCHEMA);
+	priv->lockdown_settings = g_settings_new (EOM_CONF_LOCKDOWN_SCHEMA);
 
-	mateconf_client_add_dir (window->priv->client, EOM_CONF_DIR,
-			      MATECONF_CLIENT_PRELOAD_RECURSIVE, NULL);
+	g_signal_connect (priv->view_settings,
+					  "changed::" EOM_CONF_VIEW_EXTRAPOLATE,
+					  G_CALLBACK (eom_window_interp_in_type_changed_cb),
+					  window);
 
-	priv->client_notifications[EOM_WINDOW_NOTIFY_EXTRAPOLATE] =
-		mateconf_client_notify_add (window->priv->client,
-				 	EOM_CONF_VIEW_EXTRAPOLATE,
-					 eom_window_interp_in_type_changed_cb,
-					 window, NULL, NULL);
+	g_signal_connect (priv->view_settings,
+					  "changed::" EOM_CONF_VIEW_INTERPOLATE,
+					  G_CALLBACK (eom_window_interp_out_type_changed_cb),
+					  window);
 
-	priv->client_notifications[EOM_WINDOW_NOTIFY_INTERPOLATE] =
-		mateconf_client_notify_add (window->priv->client,
-				 	 EOM_CONF_VIEW_INTERPOLATE,
-					 eom_window_interp_out_type_changed_cb,
-					 window, NULL, NULL);
+	g_signal_connect (priv->view_settings,
+					  "changed::" EOM_CONF_VIEW_SCROLL_WHEEL_ZOOM,
+					  G_CALLBACK (eom_window_scroll_wheel_zoom_changed_cb),
+					  window);
 
-	priv->client_notifications[EOM_WINDOW_NOTIFY_SCROLLWHEEL_ZOOM] =
-		mateconf_client_notify_add (window->priv->client,
-					 EOM_CONF_VIEW_SCROLL_WHEEL_ZOOM,
-					 eom_window_scroll_wheel_zoom_changed_cb,
-					 window, NULL, NULL);
+	g_signal_connect (priv->view_settings,
+					  "changed::" EOM_CONF_VIEW_ZOOM_MULTIPLIER,
+					  G_CALLBACK (eom_window_zoom_multiplier_changed_cb),
+					  window);
 
-	priv->client_notifications[EOM_WINDOW_NOTIFY_ZOOM_MULTIPLIER] =
-		mateconf_client_notify_add (window->priv->client,
-					 EOM_CONF_VIEW_ZOOM_MULTIPLIER,
-					 eom_window_zoom_multiplier_changed_cb,
-					 window, NULL, NULL);
+	g_signal_connect (priv->view_settings,
+					  "changed::" EOM_CONF_VIEW_BACKGROUND_COLOR,
+					  G_CALLBACK (eom_window_bg_color_changed_cb),
+					  window);
 
-	priv->client_notifications[EOM_WINDOW_NOTIFY_BACKGROUND_COLOR] =
-		mateconf_client_notify_add (window->priv->client,
-					 EOM_CONF_VIEW_BACKGROUND_COLOR,
-					 eom_window_bg_color_changed_cb,
-					 window, NULL, NULL);
+	g_signal_connect (priv->view_settings,
+					  "changed::" EOM_CONF_VIEW_USE_BG_COLOR,
+					  G_CALLBACK (eom_window_use_bg_color_changed_cb),
+					  window);
 
-	priv->client_notifications[EOM_WINDOW_NOTIFY_USE_BG_COLOR] =
-		mateconf_client_notify_add (window->priv->client,
-					 EOM_CONF_VIEW_USE_BG_COLOR,
-					 eom_window_use_bg_color_changed_cb,
-					 window, NULL, NULL);
+	g_signal_connect (priv->view_settings,
+					  "changed::" EOM_CONF_VIEW_TRANSPARENCY,
+					  G_CALLBACK (eom_window_transparency_changed_cb),
+					  window);
 
-	priv->client_notifications[EOM_WINDOW_NOTIFY_TRANSPARENCY] =
-		mateconf_client_notify_add (window->priv->client,
-					 EOM_CONF_VIEW_TRANSPARENCY,
-					 eom_window_transparency_changed_cb,
-					 window, NULL, NULL);
+	g_signal_connect (priv->view_settings,
+					  "changed::" EOM_CONF_VIEW_TRANS_COLOR,
+					  G_CALLBACK (eom_window_trans_color_changed_cb),
+					  window);
 
-	priv->client_notifications[EOM_WINDOW_NOTIFY_TRANS_COLOR] =
-		mateconf_client_notify_add (window->priv->client,
-					 EOM_CONF_VIEW_TRANS_COLOR,
-					 eom_window_trans_color_changed_cb,
-					 window, NULL, NULL);
+	g_signal_connect (priv->ui_settings,
+					  "changed::" EOM_CONF_UI_SCROLL_BUTTONS,
+					  G_CALLBACK (eom_window_scroll_buttons_changed_cb),
+					  window);
 
-	priv->client_notifications[EOM_WINDOW_NOTIFY_SCROLL_BUTTONS] =
-		mateconf_client_notify_add (window->priv->client,
-					 EOM_CONF_UI_SCROLL_BUTTONS,
-					 eom_window_scroll_buttons_changed_cb,
-					 window, NULL, NULL);
+	g_signal_connect (priv->ui_settings,
+					  "changed::" EOM_CONF_UI_IMAGE_COLLECTION_POSITION,
+					  G_CALLBACK (eom_window_collection_mode_changed_cb),
+					  window);
 
-	priv->client_notifications[EOM_WINDOW_NOTIFY_COLLECTION_POS] =
-		mateconf_client_notify_add (window->priv->client,
-					 EOM_CONF_UI_IMAGE_COLLECTION_POSITION,
-					 eom_window_collection_mode_changed_cb,
-					 window, NULL, NULL);
+	g_signal_connect (priv->ui_settings,
+					  "changed::" EOM_CONF_UI_IMAGE_COLLECTION_RESIZABLE,
+					  G_CALLBACK (eom_window_collection_mode_changed_cb),
+					  window);
 
-	priv->client_notifications[EOM_WINDOW_NOTIFY_COLLECTION_RESIZABLE] =
-		mateconf_client_notify_add (window->priv->client,
-					 EOM_CONF_UI_IMAGE_COLLECTION_RESIZABLE,
-					 eom_window_collection_mode_changed_cb,
-					 window, NULL, NULL);
+	g_signal_connect (priv->ui_settings,
+					  "changed::" EOM_CONF_UI_PROPSDIALOG_NETBOOK_MODE,
+					  G_CALLBACK (eom_window_pd_nbmode_changed_cb),
+					  window);
 
-	priv->client_notifications[EOM_WINDOW_NOTIFY_CAN_SAVE] =
-		mateconf_client_notify_add (window->priv->client,
-					 EOM_CONF_DESKTOP_CAN_SAVE,
-					 eom_window_can_save_changed_cb,
-					 window, NULL, NULL);
-
-	priv->client_notifications[EOM_WINDOW_NOTIFY_PROPSDIALOG_NETBOOK_MODE] =
-		mateconf_client_notify_add (window->priv->client,
-					 EOM_CONF_UI_PROPSDIALOG_NETBOOK_MODE,
-					 eom_window_pd_nbmode_changed_cb,
-					 window, NULL, NULL);
+	g_signal_connect (priv->lockdown_settings,
+					  "changed::" EOM_CONF_LOCKDOWN_CAN_SAVE,
+					  G_CALLBACK (eom_window_can_save_changed_cb),
+					  window);
 
 	window->priv->store = NULL;
 	window->priv->image = NULL;
@@ -4950,16 +4759,21 @@ eom_window_dispose (GObject *object)
 
 	eom_window_clear_transform_job (window);
 
-	if (priv->client) {
-		int i;
-
-		for (i = 0; i < EOM_WINDOW_NOTIFY_LENGTH; ++i) {
-			mateconf_client_notify_remove (priv->client,
-						 priv->client_notifications[i]);
-		}
-		mateconf_client_remove_dir (priv->client, EOM_CONF_DIR, NULL);
-		g_object_unref (priv->client);
-		priv->client = NULL;
+	if (priv->view_settings) {
+		g_object_unref (priv->view_settings);
+		priv->view_settings = NULL;
+	}
+	if (priv->ui_settings) {
+		g_object_unref (priv->ui_settings);
+		priv->ui_settings = NULL;
+	}
+	if (priv->fullscreen_settings) {
+		g_object_unref (priv->fullscreen_settings);
+		priv->fullscreen_settings = NULL;
+	}
+	if (priv->lockdown_settings) {
+		g_object_unref (priv->lockdown_settings);
+		priv->lockdown_settings = NULL;
 	}
 
 	if (priv->file_list != NULL) {
@@ -5495,7 +5309,7 @@ eom_job_model_cb (EomJobModel *job, gpointer data)
 	n_images = eom_list_store_length (EOM_LIST_STORE (priv->store));
 
 #ifdef HAVE_EXIF
-	if (mateconf_client_get_bool (priv->client, EOM_CONF_VIEW_AUTOROTATE, NULL)) {
+	if (g_settings_get_boolean (priv->view_settings, EOM_CONF_VIEW_AUTOROTATE)) {
 		for (i = 0; i < n_images; i++) {
 			image = eom_list_store_get_image_by_pos (priv->store, i);
 			eom_image_autorotate (image);

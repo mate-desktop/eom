@@ -29,7 +29,6 @@
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 #include <gtk/gtk.h>
-#include <mateconf/mateconf-client.h>
 
 /* We must define MATE_DESKTOP_USE_UNSTABLE_API to be able
    to use MateDesktopThumbnail */
