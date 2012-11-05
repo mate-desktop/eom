@@ -63,6 +63,11 @@
       <_summary>Allow zoom greater than 100% initially</_summary>
       <_description>If this is set to FALSE small images will not be stretched to fit into the screen initially.</_description>
     </key>
+    <key name="filechooser-xdg-fallback" type="b">
+      <default>true</default>
+      <_summary>Whether the file chooser should show the user's pictures folder if no images are loaded.</_summary>
+      <_description>If activated and no image is loaded in the active window, the file chooser will display the user's pictures folder using the XDG special user directories. If deactivated or the pictures folder has not been set up, it will show the current working directory.</_description>
+    </key>
     <key name="seconds" type="i">
       <default>5</default>
       <_summary>Delay in seconds until showing the next image</_summary>
@@ -102,11 +107,6 @@
       <default>false</default>
       <_summary>Trash images without asking</_summary>
       <_description>If activated, Eye of MATE won't ask for confirmation when moving images to the trash. It will still ask if any of the files cannot be moved to the trash and would be deleted instead.</_description>
-    </key>
-    <key name="filechooser-xdg-fallback" type="b">
-      <default>true</default>
-      <_summary>Whether the file chooser should show the user's pictures folder if no images are loaded.</_summary>
-      <_description>If activated and no image is loaded in the active window, the file chooser will display the user's pictures folder using the XDG special user directories. If deactivated or the pictures folder has not been set up, it will show the current working directory.</_description>
     </key>
     <key name="propsdialog-netbook-mode" type="b">
       <default>true</default>
