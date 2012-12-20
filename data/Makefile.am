@@ -15,6 +15,9 @@ gsettings_SCHEMAS = org.mate.eom.gschema.xml
 %.gschema.xml.in: %.gschema.xml.in.in Makefile
 	$(AM_V_GEN) $(SED) -e 's^\@datadir\@^$(datadir)^g' -e 's^\@GETTEXT_PACKAGE\@^$(GETTEXT_PACKAGE)^g' < $< > $@
 
+convertdir = $(datadir)/MateConf/gsettings
+convert_DATA = eom.convert
+
 gladedir = $(pkgdatadir)
 glade_DATA = eom-image-properties-dialog.ui \
 	     eom-multiple-save-as-dialog.ui \
@@ -36,6 +39,7 @@ gtkrc_DATA = gtkrc
 EXTRA_DIST =				\
         $(gtkrc_DATA)			\
         $(glade_DATA)			\
+	$(convert_DATA)			\
         $(DESKTOP_IN_FILES)		\
         $(gsettings_SCHEMAS_in_in)	\
 	$(UI_FILES)
