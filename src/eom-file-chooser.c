@@ -271,10 +271,18 @@ set_preview_pixbuf (EomFileChooser *chooser, GdkPixbuf *pixbuf, goffset size)
 		bytes_str = gdk_pixbuf_get_option (pixbuf, "tEXt::Thumb::Size");
 		if (bytes_str != NULL) {
 			bytes = atoi (bytes_str);
+#if GLIB_CHECK_VERSION (2, 30, 0)
+			size_str = g_format_size (bytes);
+#else
 			size_str = g_format_size_for_display (bytes);
+#endif
 		}
 		else {
+#if GLIB_CHECK_VERSION (2, 30, 0)
+			size_str = g_format_size (size);
+#else
 			size_str = g_format_size_for_display (size);
+#endif
 		}
 
 		/* try to read image dimensions */

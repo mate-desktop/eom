@@ -161,7 +161,11 @@ pd_update_general_tab (EomPropertiesDialog *prop_dlg,
 	gtk_label_set_text (GTK_LABEL (prop_dlg->priv->type_label), type_str);
 
 	bytes = eom_image_get_bytes (image);
+#if GLIB_CHECK_VERSION (2, 30, 0)
+	bytes_str = g_format_size (bytes);
+#else
 	bytes_str = g_format_size_for_display (bytes);
+#endif
 
 	gtk_label_set_text (GTK_LABEL (prop_dlg->priv->bytes_label), bytes_str);
 
@@ -491,8 +495,8 @@ pd_close_button_clicked_cb (GtkButton *button,
 
 static gboolean
 eom_properties_dialog_page_switch (GtkNotebook     *notebook,
-				   GtkNotebookPage *page,
-				   gint             page_index,
+				   gpointer         page,
+				   guint            page_index,
 				   EomPropertiesDialog *prop_dlg)
 {
 
