@@ -2436,7 +2436,7 @@ eom_window_cmd_file_open (GtkAction *action, gpointer user_data)
 		const gchar *pics_dir;
 		gboolean use_fallback;
 
-		use_fallback = g_settings_get_boolean (priv->fullscreen_settings,
+		use_fallback = g_settings_get_boolean (priv->ui_settings,
 					   EOM_CONF_UI_FILECHOOSER_XDG_FALLBACK);
 		pics_dir = g_get_user_special_dir (G_USER_DIRECTORY_PICTURES);
 		if (use_fallback && pics_dir) {

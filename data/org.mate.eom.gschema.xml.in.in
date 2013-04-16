@@ -63,11 +63,6 @@
       <_summary>Allow zoom greater than 100% initially</_summary>
       <_description>If this is set to FALSE small images will not be stretched to fit into the screen initially.</_description>
     </key>
-    <key name="filechooser-xdg-fallback" type="b">
-      <default>true</default>
-      <_summary>Whether the file chooser should show the user's pictures folder if no images are loaded.</_summary>
-      <_description>If activated and no image is loaded in the active window, the file chooser will display the user's pictures folder using the XDG special user directories. If deactivated or the pictures folder has not been set up, it will show the current working directory.</_description>
-    </key>
     <key name="seconds" type="i">
       <default>5</default>
       <_summary>Delay in seconds until showing the next image</_summary>
@@ -112,6 +107,11 @@
       <default>true</default>
       <_summary>Whether the metadata list in the properties dialog should have its own page.</_summary>
       <_description>If activated, the detailed metadata list in the properties dialog will be moved to its own page in the dialog. This should make the dialog more usable on smaller screens, e.g. as used by netbooks. If disabled, the widget will be embedded on the "Metadata" page.</_description>
+    </key>
+    <key name="filechooser-xdg-fallback" type="b">
+      <default>true</default>
+      <_summary>Whether the file chooser should show the user's pictures folder if no images are loaded.</_summary>
+      <_description>If activated and no image is loaded in the active window, the file chooser will display the user's pictures folder using the XDG special user directories. If deactivated or the pictures folder has not been set up, it will show the current working directory.</_description>
     </key>
   </schema>
   <schema id="org.mate.eom.plugins" path="/org/mate/eom/plugins/">
