@@ -868,19 +868,19 @@ key_press_event_cb (GtkWidget   *widget,
 	delta = 0;
 
 	switch (event->keyval) {
-	case GDK_Left:
+	case GDK_KEY_Left:
 		property = "image-x-align";
 		delta = -0.01;
 		break;
-	case GDK_Right:
+	case GDK_KEY_Right:
 		property = "image-x-align";
 		delta = 0.01;
 		break;
-	case GDK_Up:
+	case GDK_KEY_Up:
 		property = "image-y-align";
 		delta = -0.01;
 		break;
-	case GDK_Down:
+	case GDK_KEY_Down:
 		property = "image-y-align";
 		delta = 0.01;
 		break;
