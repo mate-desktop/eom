@@ -1339,13 +1339,13 @@ display_key_press_event (GtkWidget *widget, GdkEventKey *event, gpointer data)
 	}
 
 	switch (event->keyval) {
-	case GDK_Up:
+	case GDK_KEY_Up:
 		do_scroll = TRUE;
 		xofs = 0;
 		yofs = -SCROLL_STEP_SIZE;
 		break;
 
-	case GDK_Page_Up:
+	case GDK_KEY_Page_Up:
 		do_scroll = TRUE;
 		if (event->state & GDK_CONTROL_MASK) {
 			xofs = -(allocation.width * 3) / 4;
@@ -1356,13 +1356,13 @@ display_key_press_event (GtkWidget *widget, GdkEventKey *event, gpointer data)
 		}
 		break;
 
-	case GDK_Down:
+	case GDK_KEY_Down:
 		do_scroll = TRUE;
 		xofs = 0;
 		yofs = SCROLL_STEP_SIZE;
 		break;
 
-	case GDK_Page_Down:
+	case GDK_KEY_Page_Down:
 		do_scroll = TRUE;
 		if (event->state & GDK_CONTROL_MASK) {
 			xofs = (allocation.width * 3) / 4;
@@ -1373,32 +1373,32 @@ display_key_press_event (GtkWidget *widget, GdkEventKey *event, gpointer data)
 		}
 		break;
 
-	case GDK_Left:
+	case GDK_KEY_Left:
 		do_scroll = TRUE;
 		xofs = -SCROLL_STEP_SIZE;
 		yofs = 0;
 		break;
 
-	case GDK_Right:
+	case GDK_KEY_Right:
 		do_scroll = TRUE;
 		xofs = SCROLL_STEP_SIZE;
 		yofs = 0;
 		break;
 
-	case GDK_plus:
-	case GDK_equal:
-	case GDK_KP_Add:
+	case GDK_KEY_plus:
+	case GDK_KEY_equal:
+	case GDK_KEY_KP_Add:
 		do_zoom = TRUE;
 		zoom = priv->zoom * priv->zoom_multiplier;
 		break;
 
-	case GDK_minus:
-	case GDK_KP_Subtract:
+	case GDK_KEY_minus:
+	case GDK_KEY_KP_Subtract:
 		do_zoom = TRUE;
 		zoom = priv->zoom / priv->zoom_multiplier;
 		break;
 
-	case GDK_1:
+	case GDK_KEY_1:
 		do_zoom = TRUE;
 		zoom = 1.0;
 		break;
