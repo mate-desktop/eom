@@ -2,7 +2,7 @@ if ENABLE_JPEG
 jpeg_DIRS = jpegutils
 endif
 
-SUBDIRS = $(jpeg_DIRS) cut-n-paste bindings src plugins po help data doc
+SUBDIRS = $(jpeg_DIRS) cut-n-paste bindings src man plugins po help data doc
 
 EXTRA_DIST = 			\
 	HACKING			\

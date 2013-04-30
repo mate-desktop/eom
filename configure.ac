@@ -454,6 +454,7 @@ AC_SEARCH_LIBS([floor],[m])
 AC_CONFIG_FILES([
 Makefile
 src/Makefile
+man/Makefile
 jpegutils/Makefile
 cut-n-paste/Makefile
 cut-n-paste/toolbar-editor/Makefile
