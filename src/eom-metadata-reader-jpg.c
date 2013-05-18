@@ -576,10 +576,15 @@ eom_metadata_reader_jpg_get_icc_profile (EomMetadataReaderJpg *emr)
 
 				r = exif_get_rational (entry->data + offset, o);
 				whitepoint.y = (double) r.numerator / r.denominator;
+
 				whitepoint.Y = 1.0;
 			} else {
-				eom_debug_message (DEBUG_LCMS, "No whitepoint found");
-				break;
+				eom_debug_message (DEBUG_LCMS, "No whitepoint found, assuming sRGB");
+
+				whitepoint.x = 0.3127;
+				whitepoint.y = 0.2390;
+
+				whitepoint.Y = 1.0;
 			}
 
 			entry = exif_data_get_entry (exif, EXIF_TAG_PRIMARY_CHROMATICITIES);
@@ -605,8 +610,18 @@ eom_metadata_reader_jpg_get_icc_profile (EomMetadataReaderJpg *emr)
 
 				primaries.Red.Y = primaries.Green.Y = primaries.Blue.Y = 1.0;
 			} else {
-				eom_debug_message (DEBUG_LCMS, "No primary chromaticities found");
-				break;
+				eom_debug_message (DEBUG_LCMS, "No primary chromaticities found, assuming sRGB");
+
+				primaries.Red.x = 0.6400;
+				primaries.Red.y = 0.3300;
+
+				primaries.Green.x = 0.300;
+				primaries.Green.y = 0.600;
+
+				primaries.Blue.x = 0.1500;
+				primaries.Blue.y = 0.0600;
+
+				primaries.Red.Y = primaries.Green.Y = primaries.Blue.Y = 1.0;
 			}
 
 			entry = exif_data_get_entry (exif, EXIF_TAG_GAMMA);
@@ -614,12 +629,15 @@ eom_metadata_reader_jpg_get_icc_profile (EomMetadataReaderJpg *emr)
 			if (entry) {
 				r = exif_get_rational (entry->data, o);
 				gammaValue = (double) r.numerator / r.denominator;
-			} else {
-				eom_debug_message (DEBUG_LCMS, "No gamma found");
-				gammaValue = 2.2;
-			}
 
-			gamma[0] = gamma[1] = gamma[2] = cmsBuildGamma (256, gammaValue);
+				gamma[0] = gamma[1] = gamma[2] = cmsBuildGamma (256, gammaValue);
+			} else {
+				eom_debug_message (DEBUG_LCMS, "No gamma found, assuming sRGB");
+
+				gammaValue = 2.2; // sRGB gamma averages out at 2.2, but a more complex shape is built below
+
+				gamma[0] = gamma[1] = gamma[2] = Build_sRGBGamma();
+			}
 
 			profile = cmsCreateRGBProfile (&whitepoint, &primaries, gamma);
 
