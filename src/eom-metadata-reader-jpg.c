@@ -502,6 +502,34 @@ eom_metadata_reader_jpg_get_xmp_data (EomMetadataReaderJpg *emr )
  * the profile.
  */
 #ifdef HAVE_LCMS
+
+cmsHPROFILE
+eom_create_adobergb_profile (void)
+{
+	cmsCIExyY       D65;
+	cmsCIExyYTRIPLE AdobePrimaries = {
+		{0.6400, 0.3300, 1.0},
+		{0.2100, 0.7100, 1.0},
+		{0.1500, 0.0600, 1.0}
+		};
+
+	LPGAMMATABLE Gamma22[3];
+	cmsHPROFILE  hAdobeRGB;
+
+	cmsWhitePointFromTemp(6504, &D65);
+	Gamma22[0] = Gamma22[1] = Gamma22[2] = cmsBuildGamma (256, 2.2);
+
+	hAdobeRGB = cmsCreateRGBProfile (&D65, &AdobePrimaries, Gamma22);
+	cmsFreeGamma(Gamma22[0]);
+	if (hAdobeRGB == NULL) return NULL;
+
+	cmsAddTag(hAdobeRGB, icSigDeviceMfgDescTag,      (LPVOID) "(lcms internal)");
+	cmsAddTag(hAdobeRGB, icSigDeviceModelDescTag,    (LPVOID) "AdobeRGB built-in");
+	cmsAddTag(hAdobeRGB, icSigProfileDescriptionTag, (LPVOID) "AdobeRGB built-in");
+
+	return hAdobeRGB;
+}
+
 static gpointer
 eom_metadata_reader_jpg_get_icc_profile (EomMetadataReaderJpg *emr)
 {
@@ -552,10 +580,9 @@ eom_metadata_reader_jpg_get_icc_profile (EomMetadataReaderJpg *emr)
 
 			break;
 		case 2:
-			eom_debug_message (DEBUG_LCMS, "JPEG is Adobe RGB (Disabled)");
+			eom_debug_message (DEBUG_LCMS, "JPEG is Adobe RGB");
 
-			/* TODO: create Adobe RGB profile */
-			//profile = cmsCreate_Adobe1998Profile ();
+			profile = eom_create_adobergb_profile ();
 
 			break;
 		case 0xFFFF:
