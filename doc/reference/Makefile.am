@@ -83,7 +83,7 @@ expand_content_files=
 # signals and properties.
 # e.g. INCLUDES=-I$(top_srcdir) -I$(top_builddir) $(GTK_DEBUG_FLAGS)
 # e.g. GTKDOC_LIBS=$(top_builddir)/gtk/$(gtktargetlib)
-INCLUDES= \
+AM_CPPFLAGS= \
 	-I$(top_srcdir)		\
 	-I$(top_builddir)	\
 	-I$(top_srcdir)/src	\
