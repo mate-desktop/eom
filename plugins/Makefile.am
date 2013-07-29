@@ -2,7 +2,7 @@ AUTOMAKE_OPTIONS = subdir-objects
 
 pluginsdir = $(libdir)/eom/plugins
 
-INCLUDES = \
+AM_CPPFLAGS = \
 	-I$(top_srcdir)/src 				\
 	$(EOM_CFLAGS) 					\
 	$(WARN_CFLAGS)					\
