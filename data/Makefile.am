@@ -41,7 +41,7 @@ EXTRA_DIST =				\
         $(glade_DATA)			\
 	$(convert_DATA)			\
         $(DESKTOP_IN_FILES)		\
-        $(gsettings_SCHEMAS_in_in)	\
+        $(gsettings_SCHEMAS).in.in	\
 	$(UI_FILES)
 
 DISTCLEANFILES = 		\
