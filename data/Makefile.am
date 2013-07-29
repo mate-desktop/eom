@@ -23,7 +23,7 @@ glade_DATA = eom-image-properties-dialog.ui \
 	     eom-multiple-save-as-dialog.ui \
 	     eom-preferences-dialog.ui
 
-uidir = $(datadir)/eom
+uidir = $(pkgdatadir)
 UI_FILES = \
 	eom-ui.xml \
 	eom-toolbar.xml
