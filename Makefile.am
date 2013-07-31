@@ -4,8 +4,16 @@ endif
 
 SUBDIRS = $(jpeg_DIRS) cut-n-paste bindings src man plugins po help data doc
 
-EXTRA_DIST = 			\
+EXTRA_DIST = 		\
+	AUTHORS			\
+	Changelog		\
+	COPYING			\
 	HACKING			\
+	NEWS			\
+	NEWS.gnome		\
+	README			\
+	THANKS			\
+	TODO			\
 	mate-doc-utils.make
 
 DISTCLEANFILES =                \
