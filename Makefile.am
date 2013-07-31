@@ -4,15 +4,21 @@ endif
 
 SUBDIRS = $(jpeg_DIRS) cut-n-paste bindings src man plugins po help data doc
 
-EXTRA_DIST = 			\
+EXTRA_DIST = 		\
+	AUTHORS			\
+	Changelog		\
+	COPYING			\
 	HACKING			\
-	mate-doc-utils.make
+	NEWS			\
+	NEWS.gnome		\
+	README			\
+	THANKS			\
+	TODO
 
 DISTCLEANFILES =                \
         intltool-extract        \
         intltool-merge          \
-        intltool-update         \
-	mate-doc-utils.make
+        intltool-update         
 
 DISTCHECK_CONFIGURE_FLAGS = --disable-schemas-install --disable-scrollkeeper --enable-gtk-doc
 
