@@ -77,7 +77,8 @@ AC_SUBST(LDFLAGS)
 # ***************
 
 PKG_PROG_PKG_CONFIG
-MATE_DOC_INIT
+
+YELP_HELP_INIT
 
 # **********
 # MATE Libs
