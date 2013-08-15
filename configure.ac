@@ -85,6 +85,26 @@ YELP_HELP_INIT
 # **********
 
 GTK_REQUIRED=2.18.0
+
+AC_MSG_CHECKING([which gtk+ version to compile against])
+AC_ARG_WITH([gtk],
+  [AS_HELP_STRING([--with-gtk=2.0|3.0],[which gtk+ version to compile against (default: 2.0)])],
+  [case "$with_gtk" in
+     2.0|3.0) ;;
+     *) AC_MSG_ERROR([invalid gtk version specified]) ;;
+   esac],
+  [with_gtk=2.0])
+AC_MSG_RESULT([$with_gtk])
+
+case "$with_gtk" in
+  2.0) GTK_API_VERSION=2.0
+       GTK_REQUIRED=2.18.0
+       ;;
+  3.0) GTK_API_VERSION=3.0
+       GTK_REQUIRED=3.0.0
+       ;;
+esac
+
 GLIB_REQUIRED=2.25.9
 GIO_REQUIRED=2.25.9
 MATE_DESKTOP_REQUIRED=1.5.0
@@ -95,7 +115,7 @@ SHARED_MIME_INFO_REQUIRED=0.20
 EXEMPI_REQUIRED=1.99.5
 
 PKG_CHECK_MODULES(GMODULE, gmodule-2.0, [GMODULE_ADD="gmodule-2.0"],[GMODULE_ADD=""])
-EOM_MODULES="gtk+-2.0 >= $GTK_REQUIRED \
+EOM_MODULES="gtk+-$GTK_API_VERSION >= $GTK_REQUIRED \
              glib-2.0 >= $GLIB_REQUIRED \
              $GMODULE_ADD \
              gio-2.0 >= $GLIB_REQUIRED \
