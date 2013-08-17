@@ -2853,14 +2853,10 @@ wallpaper_info_bar_response (GtkInfoBar *bar, gint response, EomWindow *window)
 
 		screen = gtk_widget_get_screen (GTK_WIDGET (window));
 		#if GTK_CHECK_VERSION(3, 0, 0)
-		/*
-		
-		commented out, since my setup does not have the latest libmate-desktop with this function to call
-
 		mate_gdk_spawn_command_line_on_screen (screen,
 						  "mate-appearance-properties"
 						  " --show-page=background",
-						  NULL);*/
+						  NULL);
 		#else
 		gdk_spawn_command_line_on_screen (screen,
 						  "mate-appearance-properties"
