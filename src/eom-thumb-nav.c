@@ -32,6 +32,10 @@
 #include <gtk/gtk.h>
 #include <string.h>
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+ 	#define gtk_widget_hide_all(w) gtk_widget_hide(w)
+#endif
+
 #define EOM_THUMB_NAV_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_THUMB_NAV, EomThumbNavPrivate))
 

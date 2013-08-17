@@ -70,6 +70,16 @@ eom_thumb_view_finalize (GObject *object)
 	G_OBJECT_CLASS (eom_thumb_view_parent_class)->finalize (object);
 }
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+eom_thumb_view_dispose (GObject *object)
+{
+	EomThumbView *thumbview;
+	g_return_if_fail (EOM_IS_THUMB_VIEW (object));
+	thumbview = EOM_THUMB_VIEW (object);
+
+	G_OBJECT_CLASS (eom_thumb_view_parent_class)->dispose (object);
+}
+#else
 static void
 eom_thumb_view_destroy (GtkObject *object)
 {
@@ -79,15 +89,23 @@ eom_thumb_view_destroy (GtkObject *object)
 
 	GTK_OBJECT_CLASS (eom_thumb_view_parent_class)->destroy (object);
 }
+#endif
 
 static void
 eom_thumb_view_class_init (EomThumbViewClass *class)
 {
+	#if GTK_CHECK_VERSION(3, 0, 0)
+	GObjectClass *gobject_class = G_OBJECT_CLASS (class);
+
+	gobject_class->constructed = eom_thumb_view_init;
+	gobject_class->dispose = eom_thumb_view_dispose;
+	#else
 	GObjectClass *gobject_class = G_OBJECT_CLASS (class);
 	GtkObjectClass *object_class = GTK_OBJECT_CLASS (class);
 
 	gobject_class->finalize = eom_thumb_view_finalize;
 	object_class->destroy = eom_thumb_view_destroy;
+	#endif
 
 	g_type_class_add_private (class, sizeof (EomThumbViewPrivate));
 }
@@ -225,7 +243,11 @@ thumbview_on_adjustment_changed_cb (EomThumbView *thumbview,
 
 static void
 thumbview_on_parent_set_cb (GtkWidget *widget,
+				#if GTK_CHECK_VERSION(3, 0, 0)
+			    GtkWidget *old_parent,
+				#else
 			    GtkObject *old_parent,
+			    #endif
 			    gpointer   user_data)
 {
 	EomThumbView *thumbview = EOM_THUMB_VIEW (widget);

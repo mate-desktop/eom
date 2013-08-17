@@ -51,6 +51,10 @@
 #include "eom-exif-details.h"
 #endif
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+ 	#define gtk_widget_hide_all(w) gtk_widget_hide(w)
+#endif
+
 #define EOM_PROPERTIES_DIALOG_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_PROPERTIES_DIALOG, EomPropertiesDialogPrivate))
 

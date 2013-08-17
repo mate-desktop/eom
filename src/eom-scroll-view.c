@@ -17,6 +17,8 @@
 #include "uta.h"
 #include "zoom.h"
 
+#include <gdk/gdk.h>
+
 /* Maximum size of delayed repaint rectangles */
 #define PAINT_RECT_WIDTH 128
 #define PAINT_RECT_HEIGHT 128
@@ -2118,9 +2120,11 @@ eom_scroll_view_set_image (EomScrollView *view, EomImage *image)
 
 	if (priv->image != NULL) {
 		free_image_resources (view);
+		#if !GTK_CHECK_VERSION(3, 0, 0)
 		if (gtk_widget_is_drawable (priv->display) && image == NULL) {
 			gdk_window_clear (gtk_widget_get_window (priv->display));
 		}
+		#endif
 	}
 	g_assert (priv->image == NULL);
 	g_assert (priv->pixbuf == NULL);
