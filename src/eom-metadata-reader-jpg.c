@@ -513,8 +513,6 @@ eom_metadata_reader_jpg_get_icc_profile (EomMetadataReaderJpg *emr)
 	priv = emr->priv;
 
 	if (priv->icc_chunk) {
-		cmsErrorAction (LCMS_ERROR_SHOW);
-
 		profile = cmsOpenProfileFromMem(priv->icc_chunk + 14, priv->icc_len - 14);
 
 		if (profile) {
@@ -562,7 +560,7 @@ eom_metadata_reader_jpg_get_icc_profile (EomMetadataReaderJpg *emr)
 		  	{
 			cmsCIExyY whitepoint;
 			cmsCIExyYTRIPLE primaries;
-			LPGAMMATABLE gamma[3];
+			cmsToneCurve *gamma[3];
 			double gammaValue;
 			ExifRational r;
 
@@ -619,11 +617,11 @@ eom_metadata_reader_jpg_get_icc_profile (EomMetadataReaderJpg *emr)
 				gammaValue = 2.2;
 			}
 
-			gamma[0] = gamma[1] = gamma[2] = cmsBuildGamma (256, gammaValue);
+			gamma[0] = gamma[1] = gamma[2] = cmsBuildGamma (NULL, gammaValue);
 
 			profile = cmsCreateRGBProfile (&whitepoint, &primaries, gamma);
 
-			cmsFreeGamma(gamma[0]);
+			cmsFreeToneCurve(gamma[0]);
 
 			eom_debug_message (DEBUG_LCMS, "JPEG is calibrated");
 

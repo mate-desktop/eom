@@ -72,7 +72,7 @@
 #ifdef GDK_WINDOWING_X11
 #include <gdk/gdkx.h>
 #endif
-#include <lcms.h>
+#include <lcms2.h>
 #endif
 
 #define EOM_WINDOW_GET_PRIVATE(object) \
@@ -652,16 +652,7 @@ eom_window_get_display_profile (GdkScreen *screen)
 				return NULL;
 		}
 
-		/* Make lcms errors non-fatal here, as it is possible
-		 * to load invalid profiles with XICC.
-		 * We don't want lcms to abort EOM in that case.
-		 */
-		lcms_error_action = cmsErrorAction (LCMS_ERROR_IGNORE);
-
 		profile = cmsOpenProfileFromMem (str, length);
-
-		// Restore the previous error setting
-		cmsErrorAction (lcms_error_action);
 
 		if (G_UNLIKELY (profile == NULL)) {
 			eom_debug_message (DEBUG_LCMS,

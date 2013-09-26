@@ -563,8 +563,6 @@ eom_metadata_reader_png_get_icc_profile (EomMetadataReaderPng *emr)
 			return NULL;
 		}
 
-		cmsErrorAction (LCMS_ERROR_SHOW);
-
 		profile = cmsOpenProfileFromMem(outbuf, zstr.total_out);
 		inflateEnd (&zstr);
 		g_free (outbuf);
@@ -583,7 +581,7 @@ eom_metadata_reader_png_get_icc_profile (EomMetadataReaderPng *emr)
 	if (!profile && priv->cHRM_chunk) {
 		cmsCIExyY whitepoint;
 		cmsCIExyYTRIPLE primaries;
-		LPGAMMATABLE gamma[3];
+		cmsToneCurve *gamma[3];
 		double gammaValue = 2.2; // 2.2 should be a sane default gamma
 
 		/* This uglyness extracts the chromacity and whitepoint values
@@ -611,11 +609,11 @@ eom_metadata_reader_png_get_icc_profile (EomMetadataReaderPng *emr)
 		if (priv->gAMA_chunk)
 			gammaValue = (double) 1.0/EXTRACT_DOUBLE_UINT_BLOCK_OFFSET (priv->gAMA_chunk, 0, 100000);
 
-		gamma[0] = gamma[1] = gamma[2] = cmsBuildGamma (256, gammaValue);
+		gamma[0] = gamma[1] = gamma[2] = cmsBuildGamma (NULL, gammaValue);
 
 		profile = cmsCreateRGBProfile (&whitepoint, &primaries, gamma);
 
-		cmsFreeGamma(gamma[0]);
+		cmsFreeToneCurve(gamma[0]);
 	}
 
 	return profile;

@@ -150,11 +150,11 @@ AM_CONDITIONAL([HAVE_EXIF], [test "x$have_exif" = "xyes"])
 AC_ARG_WITH([cms], AC_HELP_STRING([--without-cms], [disable colour management support]))
 have_lcms=no
 if test x$with_cms != xno; then
-    PKG_CHECK_MODULES(LCMS, lcms, have_lcms=yes, have_lcms=no)
+    PKG_CHECK_MODULES(LCMS, lcms2, have_lcms=yes, have_lcms=no)
 fi
 if test "x$have_lcms" = "xyes"; then
   AC_DEFINE(HAVE_LCMS, 1, [Little CMS Support.])
-  EOM_MODULES="$EOM_MODULES lcms"
+  EOM_MODULES="$EOM_MODULES lcms2"
 fi
 
 AM_CONDITIONAL([HAVE_LCMS], [test "x$have_lcms" = "xyes"])

@@ -30,7 +30,7 @@
 #include <exempi/xmp.h>
 #endif
 #if HAVE_LCMS
-#include <lcms.h>
+#include <lcms2.h>
 #endif
 
 G_BEGIN_DECLS
