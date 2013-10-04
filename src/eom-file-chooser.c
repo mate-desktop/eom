@@ -41,10 +41,6 @@ static char *last_dir[] = { NULL, NULL, NULL, NULL };
 
 #define FILE_FORMAT_KEY "file-format"
 
-#define EOM_FILE_CHOOSER_GET_PRIVATE(object)(G_TYPE_INSTANCE_GET_PRIVATE ((object), \
-					     EOM_TYPE_FILE_CHOOSER,		    \
-					     EomFileChooserPrivate))
-
 struct _EomFileChooserPrivate
 {
 	MateDesktopThumbnailFactory *thumb_factory;
@@ -55,7 +51,7 @@ struct _EomFileChooserPrivate
 	GtkWidget *creator_label;
 };
 
-G_DEFINE_TYPE(EomFileChooser, eom_file_chooser, GTK_TYPE_FILE_CHOOSER_DIALOG)
+G_DEFINE_TYPE_WITH_PRIVATE (EomFileChooser, eom_file_chooser, GTK_TYPE_FILE_CHOOSER_DIALOG)
 
 static void
 eom_file_chooser_finalize (GObject *object)
@@ -76,14 +72,12 @@ eom_file_chooser_class_init (EomFileChooserClass *klass)
 	GObjectClass *object_class = (GObjectClass *) klass;
 
 	object_class->finalize = eom_file_chooser_finalize;
-
-	g_type_class_add_private (object_class, sizeof (EomFileChooserPrivate));
 }
 
 static void
 eom_file_chooser_init (EomFileChooser *chooser)
 {
-	chooser->priv = EOM_FILE_CHOOSER_GET_PRIVATE (chooser);
+	chooser->priv = eom_file_chooser_get_instance_private (chooser);
 }
 
 static void

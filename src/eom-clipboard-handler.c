@@ -47,10 +47,7 @@ struct _EomClipboardHandlerPrivate {
 	gchar     *uri;
 };
 
-#define EOM_CLIPBOARD_HANDLER_GET_PRIVATE(object) \
-	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_CLIPBOARD_HANDLER, EomClipboardHandlerPrivate))
-
-G_DEFINE_TYPE(EomClipboardHandler, eom_clipboard_handler, G_TYPE_INITIALLY_UNOWNED)
+G_DEFINE_TYPE_WITH_PRIVATE (EomClipboardHandler, eom_clipboard_handler, G_TYPE_INITIALLY_UNOWNED)
 
 static GdkPixbuf*
 eom_clipboard_handler_get_pixbuf (EomClipboardHandler *handler)
@@ -178,15 +175,13 @@ eom_clipboard_handler_dispose (GObject *obj)
 static void
 eom_clipboard_handler_init (EomClipboardHandler *handler)
 {
-	handler->priv = EOM_CLIPBOARD_HANDLER_GET_PRIVATE (handler);
+	handler->priv = eom_clipboard_handler_get_instance_private (handler);
 }
 
 static void
 eom_clipboard_handler_class_init (EomClipboardHandlerClass *klass)
 {
 	GObjectClass *g_obj_class = G_OBJECT_CLASS (klass);
-
-	g_type_class_add_private (klass, sizeof (EomClipboardHandlerPrivate));
 
 	g_obj_class->get_property = eom_clipboard_handler_get_property;
 	g_obj_class->set_property = eom_clipboard_handler_set_property;

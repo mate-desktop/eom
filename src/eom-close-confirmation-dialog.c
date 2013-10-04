@@ -67,18 +67,13 @@ struct _EomCloseConfirmationDialogPrivate
 	GtkCellRenderer *toggle_renderer;
 };
 
-
-#define EOM_CLOSE_CONFIRMATION_DIALOG_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), \
-							EOM_TYPE_CLOSE_CONFIRMATION_DIALOG, \
-							EomCloseConfirmationDialogPrivate))
-
 #define GET_MODE(priv) (((priv->unsaved_images != NULL) && \
 			 (priv->unsaved_images->next == NULL)) ? \
 			  SINGLE_IMG_MODE : MULTIPLE_IMGS_MODE)
 
 #define IMAGE_COLUMN_HEIGHT 40
 
-G_DEFINE_TYPE(EomCloseConfirmationDialog, eom_close_confirmation_dialog, GTK_TYPE_DIALOG)
+G_DEFINE_TYPE_WITH_PRIVATE (EomCloseConfirmationDialog, eom_close_confirmation_dialog, GTK_TYPE_DIALOG)
 
 static void 	 set_unsaved_image 		(EomCloseConfirmationDialog *dlg,
 						 const GList                  *list);
@@ -175,7 +170,7 @@ eom_close_confirmation_dialog_init (EomCloseConfirmationDialog *dlg)
 {
 	AtkObject *atk_obj;
 
-	dlg->priv = EOM_CLOSE_CONFIRMATION_DIALOG_GET_PRIVATE (dlg);
+	dlg->priv = eom_close_confirmation_dialog_get_instance_private (dlg);
 
 	gtk_container_set_border_width (GTK_CONTAINER (dlg), 5);		
 	gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dlg))), 14);
@@ -266,8 +261,6 @@ eom_close_confirmation_dialog_class_init (EomCloseConfirmationDialogClass *klass
 	gobject_class->set_property = eom_close_confirmation_dialog_set_property;
 	gobject_class->get_property = eom_close_confirmation_dialog_get_property;
 	gobject_class->finalize = eom_close_confirmation_dialog_finalize;
-
-	g_type_class_add_private (klass, sizeof (EomCloseConfirmationDialogPrivate));
 
 	g_object_class_install_property (gobject_class,
 					 PROP_UNSAVED_IMAGES,
