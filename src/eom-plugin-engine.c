@@ -38,23 +38,11 @@
 
 #define USER_EOM_PLUGINS_LOCATION "plugins/"
 
-G_DEFINE_TYPE (EomPluginEngine, eom_plugin_engine, PEAS_TYPE_ENGINE)
-
 struct _EomPluginEnginePrivate {
 	GSettings *plugins_settings;
 };
 
-static void
-eom_plugin_engine_init (EomPluginEngine *engine)
-{
-	eom_debug (DEBUG_PLUGINS);
-
-	engine->priv = G_TYPE_INSTANCE_GET_PRIVATE (engine,
-	                                            EOM_TYPE_PLUGIN_ENGINE,
-	                                            EomPluginEnginePrivate);
-
-	engine->priv->plugins_settings = g_settings_new (EOM_CONF_PLUGINS);
-}
+G_DEFINE_TYPE_WITH_PRIVATE (EomPluginEngine, eom_plugin_engine, PEAS_TYPE_ENGINE)
 
 static void
 eom_plugin_engine_dispose (GObject *object)
@@ -76,8 +64,16 @@ eom_plugin_engine_class_init (EomPluginEngineClass *klass)
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
 	object_class->dispose = eom_plugin_engine_dispose;
+}
 
-	g_type_class_add_private (klass, sizeof (EomPluginEnginePrivate));
+static void
+eom_plugin_engine_init (EomPluginEngine *engine)
+{
+	eom_debug (DEBUG_PLUGINS);
+
+	engine->priv = eom_plugin_engine_get_instance_private (engine);
+
+	engine->priv->plugins_settings = g_settings_new (EOM_CONF_PLUGINS);
 }
 
 EomPluginEngine *
