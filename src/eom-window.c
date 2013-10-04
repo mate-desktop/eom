@@ -85,11 +85,6 @@
 #define MATE_DESKTOP_USE_UNSTABLE_API
 #include <libmate-desktop/mate-desktop-utils.h>
 
-#define EOM_WINDOW_GET_PRIVATE(object) \
-	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_WINDOW, EomWindowPrivate))
-
-G_DEFINE_TYPE (EomWindow, eom_window, GTK_TYPE_APPLICATION_WINDOW);
-
 #define EOM_WINDOW_MIN_WIDTH  440
 #define EOM_WINDOW_MIN_HEIGHT 350
 
@@ -198,6 +193,8 @@ struct _EomWindowPrivate {
 	cmsHPROFILE         *display_profile;
 #endif
 };
+
+G_DEFINE_TYPE_WITH_PRIVATE (EomWindow, eom_window, GTK_TYPE_APPLICATION_WINDOW);
 
 static void eom_window_cmd_fullscreen (GtkAction *action, gpointer user_data);
 static void eom_window_run_fullscreen (EomWindow *window, gboolean slideshow);
@@ -4597,7 +4594,7 @@ eom_window_init (EomWindow *window)
 
 	screen = gtk_widget_get_screen (GTK_WIDGET (window));
 
-	priv = window->priv = EOM_WINDOW_GET_PRIVATE (window);
+	priv = window->priv = eom_window_get_instance_private (window);
 
 	priv->view_settings = g_settings_new (EOM_CONF_VIEW);
 	priv->ui_settings = g_settings_new (EOM_CONF_UI);
@@ -5215,8 +5212,6 @@ eom_window_class_init (EomWindowClass *class)
 			      NULL, NULL,
 			      g_cclosure_marshal_VOID__VOID,
 			      G_TYPE_NONE, 0);
-
-	g_type_class_add_private (g_object_class, sizeof (EomWindowPrivate));
 }
 
 /**

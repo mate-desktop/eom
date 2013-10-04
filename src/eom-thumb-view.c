@@ -45,9 +45,6 @@ enum {
 
 #define EOM_THUMB_VIEW_SPACING 0
 
-#define EOM_THUMB_VIEW_GET_PRIVATE(object)				\
-	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_THUMB_VIEW, EomThumbViewPrivate))
-
 static void eom_thumb_view_init (EomThumbView *thumbview);
 
 static EomImage* eom_thumb_view_get_image_from_path (EomThumbView      *thumbview,
@@ -57,9 +54,6 @@ static void      eom_thumb_view_popup_menu          (EomThumbView      *widget,
 						     GdkEventButton    *event);
 
 static void      eom_thumb_view_update_columns (EomThumbView *view);
-
-G_DEFINE_TYPE_WITH_CODE (EomThumbView, eom_thumb_view, GTK_TYPE_ICON_VIEW,
-						 G_IMPLEMENT_INTERFACE (GTK_TYPE_ORIENTABLE, NULL));
 
 static gboolean
 thumbview_on_query_tooltip_cb (GtkWidget  *widget,
@@ -93,6 +87,10 @@ struct _EomThumbViewPrivate {
 	gulong image_add_id;
 	gulong image_removed_id;
 };
+
+G_DEFINE_TYPE_WITH_CODE (EomThumbView, eom_thumb_view, GTK_TYPE_ICON_VIEW,
+			 G_IMPLEMENT_INTERFACE (GTK_TYPE_ORIENTABLE, NULL) \
+			 G_ADD_PRIVATE (EomThumbView));
 
 /* Drag 'n Drop */
 
@@ -237,8 +235,6 @@ eom_thumb_view_class_init (EomThumbViewClass *class)
 
 	g_object_class_override_property (gobject_class, PROP_ORIENTATION,
 	                                  "orientation");
-
-	g_type_class_add_private (class, sizeof (EomThumbViewPrivate));
 }
 
 static void
@@ -640,7 +636,7 @@ thumbview_on_query_tooltip_cb (GtkWidget  *widget,
 static void
 eom_thumb_view_init (EomThumbView *thumbview)
 {
-	thumbview->priv = EOM_THUMB_VIEW_GET_PRIVATE (thumbview);
+	thumbview->priv = eom_thumb_view_get_instance_private (thumbview);
 
 	thumbview->priv->visible_range_changed_id = 0;
 	thumbview->priv->image_add_id = 0;

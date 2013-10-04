@@ -47,21 +47,18 @@ typedef struct {
 /* Convert degrees into radians */
 #define EOM_DEG_TO_RAD(degree) ((degree) * (G_PI/180.0)) 
 
-#define EOM_TRANSFORM_GET_PRIVATE(object) \
-	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_TRANSFORM, EomTransformPrivate))
-
-G_DEFINE_TYPE (EomTransform, eom_transform, G_TYPE_OBJECT)
+G_DEFINE_TYPE_WITH_PRIVATE (EomTransform, eom_transform, G_TYPE_OBJECT)
 
 static void
 eom_transform_init (EomTransform *trans)
 {
-	trans->priv = EOM_TRANSFORM_GET_PRIVATE (trans);
+	trans->priv = eom_transform_get_instance_private (trans);
 }
 
 static void
 eom_transform_class_init (EomTransformClass *klass)
 {
-	g_type_class_add_private (klass, sizeof (EomTransformPrivate));
+
 }
 
 /**

@@ -51,11 +51,6 @@
 #include "eom-exif-details.h"
 #endif
 
-#define EOM_PROPERTIES_DIALOG_GET_PRIVATE(object) \
-	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_PROPERTIES_DIALOG, EomPropertiesDialogPrivate))
-
-G_DEFINE_TYPE (EomPropertiesDialog, eom_properties_dialog, EOM_TYPE_DIALOG);
-
 enum {
         PROP_0,
         PROP_THUMBVIEW,
@@ -111,6 +106,8 @@ struct _EomPropertiesDialogPrivate {
 
 	gboolean        netbook_mode;
 };
+
+G_DEFINE_TYPE_WITH_PRIVATE (EomPropertiesDialog, eom_properties_dialog, EOM_TYPE_DIALOG);
 
 static void
 pd_update_general_tab (EomPropertiesDialog *prop_dlg,
@@ -594,8 +591,6 @@ eom_properties_dialog_class_init (EomPropertiesDialogClass *class)
 							      FALSE,
 							      G_PARAM_READWRITE |
 							      G_PARAM_STATIC_STRINGS));
-
-	g_type_class_add_private (g_object_class, sizeof (EomPropertiesDialogPrivate));
 }
 
 static void
@@ -610,7 +605,7 @@ eom_properties_dialog_init (EomPropertiesDialog *prop_dlg)
 	GtkWidget *sw;
 #endif
 
-	prop_dlg->priv = EOM_PROPERTIES_DIALOG_GET_PRIVATE (prop_dlg);
+	prop_dlg->priv = eom_properties_dialog_get_instance_private (prop_dlg);
 
 	priv = prop_dlg->priv;
 
