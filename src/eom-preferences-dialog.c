@@ -38,11 +38,6 @@
 #include <gio/gio.h>
 #include <libpeas-gtk/peas-gtk-plugin-manager.h>
 
-#define EOM_PREFERENCES_DIALOG_GET_PRIVATE(object) \
-	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_PREFERENCES_DIALOG, EomPreferencesDialogPrivate))
-
-G_DEFINE_TYPE (EomPreferencesDialog, eom_preferences_dialog, EOM_TYPE_DIALOG);
-
 #define GSETTINGS_OBJECT_KEY		"GSETTINGS_KEY"
 #define GSETTINGS_OBJECT_VALUE		"GSETTINGS_VALUE"
 
@@ -53,6 +48,8 @@ struct _EomPreferencesDialogPrivate {
 };
 
 static GObject *instance = NULL;
+
+G_DEFINE_TYPE_WITH_PRIVATE (EomPreferencesDialog, eom_preferences_dialog, EOM_TYPE_DIALOG);
 
 static gboolean
 pd_string_to_rgba_mapping (GValue   *value,
@@ -329,14 +326,12 @@ eom_preferences_dialog_class_init (EomPreferencesDialogClass *class)
 
 	g_object_class->constructor = eom_preferences_dialog_constructor;
 	g_object_class->dispose = eom_preferences_dialog_dispose;
-
-	g_type_class_add_private (g_object_class, sizeof (EomPreferencesDialogPrivate));
 }
 
 static void
 eom_preferences_dialog_init (EomPreferencesDialog *pref_dlg)
 {
-	pref_dlg->priv = EOM_PREFERENCES_DIALOG_GET_PRIVATE (pref_dlg);
+	pref_dlg->priv = eom_preferences_dialog_get_instance_private (pref_dlg);
 
 	pref_dlg->priv->view_settings = g_settings_new (EOM_CONF_VIEW);
 	pref_dlg->priv->fullscreen_settings = g_settings_new (EOM_CONF_FULLSCREEN);
