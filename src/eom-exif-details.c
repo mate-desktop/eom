@@ -40,11 +40,6 @@
 
 #include <string.h>
 
-#define EOM_EXIF_DETAILS_GET_PRIVATE(object) \
-	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_EXIF_DETAILS, EomExifDetailsPrivate))
-
-G_DEFINE_TYPE (EomExifDetails, eom_exif_details, GTK_TYPE_TREE_VIEW)
-
 typedef enum {
 	EXIF_CATEGORY_CAMERA,
 	EXIF_CATEGORY_IMAGE_DATA,
@@ -209,6 +204,8 @@ static char*  set_row_data (GtkTreeStore *store, char *path, char *parent, const
 
 static void eom_exif_details_reset (EomExifDetails *exif_details);
 
+G_DEFINE_TYPE_WITH_PRIVATE (EomExifDetails, eom_exif_details, GTK_TYPE_TREE_VIEW)
+
 static void
 eom_exif_details_dispose (GObject *object)
 {
@@ -240,7 +237,7 @@ eom_exif_details_init (EomExifDetails *exif_details)
 	GtkTreeViewColumn *column;
 	GtkCellRenderer *cell;
 
-	exif_details->priv = EOM_EXIF_DETAILS_GET_PRIVATE (exif_details);
+	exif_details->priv = eom_exif_details_get_instance_private (exif_details);
 
 	priv = exif_details->priv;
 
@@ -277,8 +274,6 @@ eom_exif_details_class_init (EomExifDetailsClass *klass)
 	GObjectClass *object_class = (GObjectClass*) klass;
 
 	object_class->dispose = eom_exif_details_dispose;
-
-	g_type_class_add_private (object_class, sizeof (EomExifDetailsPrivate));
 }
 
 #ifdef HAVE_EXIF

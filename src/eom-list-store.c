@@ -32,8 +32,6 @@
 #define EOM_LIST_STORE_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_LIST_STORE, EomListStorePrivate))
 
-G_DEFINE_TYPE (EomListStore, eom_list_store, GTK_TYPE_LIST_STORE);
-
 struct _EomListStorePrivate {
 	GList *monitors;          /* Monitors for the directories */
 	gint initial_image;       /* The image that should be selected firstly by the view. */
@@ -41,6 +39,8 @@ struct _EomListStorePrivate {
 	GdkPixbuf *missing_image; /* Missing image icon */
 	GMutex mutex;            /* Mutex for saving the jobs in the model */
 };
+
+G_DEFINE_TYPE_WITH_PRIVATE (EomListStore, eom_list_store, GTK_TYPE_LIST_STORE);
 
 static void
 foreach_monitors_free (gpointer data, gpointer user_data)
@@ -81,8 +81,6 @@ eom_list_store_class_init (EomListStoreClass *klass)
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
 	object_class->dispose = eom_list_store_dispose;
-
-	g_type_class_add_private (object_class, sizeof (EomListStorePrivate));
 }
 
 /*
@@ -152,7 +150,7 @@ eom_list_store_init (EomListStore *self)
 	gtk_list_store_set_column_types (GTK_LIST_STORE (self),
 					 EOM_LIST_STORE_NUM_COLUMNS, types);
 
-	self->priv = EOM_LIST_STORE_GET_PRIVATE (self);
+	self->priv = eom_list_store_get_instance_private (self);
 
 	self->priv->monitors = NULL;
 	self->priv->initial_image = -1;

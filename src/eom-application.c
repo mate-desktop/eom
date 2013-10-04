@@ -46,10 +46,7 @@
 static void eom_application_load_accelerators (void);
 static void eom_application_save_accelerators (void);
 
-#define EOM_APPLICATION_GET_PRIVATE(object) \
-	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_APPLICATION, EomApplicationPrivate))
-
-G_DEFINE_TYPE (EomApplication, eom_application, GTK_TYPE_APPLICATION);
+G_DEFINE_TYPE_WITH_PRIVATE (EomApplication, eom_application, GTK_TYPE_APPLICATION);
 
 static void
 eom_application_activate (GApplication *application)
@@ -141,9 +138,6 @@ eom_application_class_init (EomApplicationClass *eom_application_class)
 	GApplicationClass *application_class;
 	GObjectClass *object_class;
 
-	g_type_class_add_private (eom_application_class,
-	                          sizeof (EomApplicationPrivate));
-
 	application_class = (GApplicationClass *) eom_application_class;
 	object_class = (GObjectClass *) eom_application_class;
 
@@ -181,7 +175,7 @@ eom_application_init (EomApplication *eom_application)
 
 	eom_session_init (eom_application);
 
-	eom_application->priv = EOM_APPLICATION_GET_PRIVATE (eom_application);
+	eom_application->priv = eom_application_get_instance_private (eom_application);
 	priv = eom_application->priv;
 
 	priv->toolbars_model = egg_toolbars_model_new ();
