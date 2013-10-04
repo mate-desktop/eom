@@ -165,12 +165,9 @@ static void view_on_drag_data_get_cb (GtkWidget *widget,
 				      GtkSelectionData *data, guint info,
 				      guint time, gpointer user_data);
 
-#define EOM_SCROLL_VIEW_GET_PRIVATE(object) \
-	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_SCROLL_VIEW, EomScrollViewPrivate))
-
 static gboolean _eom_gdk_rgba_equal0 (const GdkRGBA *a, const GdkRGBA *b);
 
-G_DEFINE_TYPE (EomScrollView, eom_scroll_view, GTK_TYPE_GRID)
+G_DEFINE_TYPE_WITH_PRIVATE (EomScrollView, eom_scroll_view, GTK_TYPE_GRID)
 
 /*===================================
     widget size changing handler &
@@ -1815,7 +1812,7 @@ eom_scroll_view_init (EomScrollView *view)
 	GSettings *settings;
 	EomScrollViewPrivate *priv;
 
-	priv = view->priv = EOM_SCROLL_VIEW_GET_PRIVATE (view);
+	priv = view->priv = eom_scroll_view_get_instance_private (view);
 	settings = g_settings_new (EOM_CONF_VIEW);
 
 	priv->zoom = 1.0;
@@ -2171,8 +2168,6 @@ eom_scroll_view_class_init (EomScrollViewClass *klass)
 			      G_TYPE_DOUBLE);
 
 	widget_class->size_allocate = eom_scroll_view_size_allocate;
-
-	g_type_class_add_private (klass, sizeof (EomScrollViewPrivate));
 }
 
 static void
