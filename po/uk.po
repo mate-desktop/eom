@@ -3,20 +3,24 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Rax Garfield <admin@dvizho.ks.ua>, 2012.
+# Koljan1970 <Stuartlittle1970@gmail.com>, 2013
+# Rax Garfield <admin@dvizho.ks.ua>, 2012
+# zubr139 <zubr139@ukr.net>, 2012
+# zubr139 <zubr139@ukr.net>, 2012
+# Koljan1970 <Stuartlittle1970@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/Perberos/Mate-Desktop-Environment/issues\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
 "POT-Creation-Date: 2011-12-30 15:48+0100\n"
-"PO-Revision-Date: 2012-02-20 13:07+0000\n"
-"Last-Translator: Rax Garfield <admin@dvizho.ks.ua>\n"
-"Language-Team: Ukrainian (http://www.transifex.net/projects/p/MATE/language/uk/)\n"
+"PO-Revision-Date: 2013-06-16 19:32+0000\n"
+"Last-Translator: Koljan1970 <Stuartlittle1970@gmail.com>\n"
+"Language-Team: Ukrainian (http://www.transifex.com/projects/p/MATE/language/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: uk\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -40,19 +44,19 @@ msgstr "Перемістити виділений пункт на панель �
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1399
 msgid "_Remove from Toolbar"
-msgstr "В_идалити з панелі"
+msgstr "В_илучити з панелі"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1400
 msgid "Remove the selected item from the toolbar"
-msgstr "Видалити виділений пункт з панелі"
+msgstr "Вилучити виділений пункт з панелі"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1401
 msgid "_Delete Toolbar"
-msgstr "В_идалити панель"
+msgstr "В_илучити панель"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1402
 msgid "Remove the selected toolbar"
-msgstr "Видалити виділену панель"
+msgstr "Вилучити виділену панель"
 
 #: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:485
 msgid "Separator"
@@ -64,7 +68,7 @@ msgstr "Активувати повноекранний режим подвій�
 
 #: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:2
 msgid "Fullscreen with double-click"
-msgstr "На весь екран подвійним клацанням"
+msgstr "На увесь екран подвійним клацанням"
 
 #: ../plugins/reload/reload.eom-plugin.desktop.in.h:1
 #: ../plugins/reload/eom-reload-plugin.c:38
@@ -82,7 +86,7 @@ msgstr "Дата у рядку стану"
 
 #: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:2
 msgid "Shows the image date in the window statusbar"
-msgstr "Показати чи приховати жату у рядку стану"
+msgstr "Показати чи приховати дату у рядку стану"
 
 #: ../data/eom.desktop.in.in.h:1
 msgid "Browse and rotate images"
@@ -358,7 +362,7 @@ msgid ""
 "Determines how transparency should be indicated. Valid values are "
 "CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
 "determines the color value used."
-msgstr "Визначає, як слід позначати прозорість. Коректні значення: CHECK_PATTERN, COLOR, NONE. Якщо обрано COLOR, то колір визнчається трансколірним ключем."
+msgstr "Визначає, як слід позначати прозорість. Коректні значення: CHECK_PATTERN, COLOR, NONE. Якщо обрано COLOR, то колір визначається трансколірним ключем."
 
 #: ../data/eom.schemas.in.h:9
 msgid "Extrapolate Image"
@@ -370,14 +374,14 @@ msgid ""
 "will display the user's pictures folder using the XDG special user "
 "directories. If deactivated or the pictures folder has not been set up, it "
 "will show the current working directory."
-msgstr ""
+msgstr "Якщо функція активована й у активному вікні немає завантажених зображень, буде показано теку з зображеннями, задану засобами XDG. Якщо функція неактивна, або теку користувача не задано, буде показано поточний робочий каталог."
 
 #: ../data/eom.schemas.in.h:11
 msgid ""
 "If activated, Eye of MATE won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
 "trash and would be deleted instead."
-msgstr ""
+msgstr "Якщо функція активована, програма «Око MATE» не буде питати підтвердження перед відправленням зображень у смітник; але запитає перед вилученням, якщо якийсь з файлів не може бути переміщено у смітник."
 
 #: ../data/eom.schemas.in.h:12
 msgid ""
@@ -385,7 +389,7 @@ msgid ""
 "moved to its own page in the dialog. This should make the dialog more usable"
 " on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
 "be embedded on the \"Metadata\" page."
-msgstr ""
+msgstr "Якщо функція активована, детальний список метаданих у діалоговому вікні властивостей буде поміщено у окрему сторінку у діалоговому вікні. Це зручно при перегляді діалогового вікна на малих екранах таких пристроїв, як нетбуки. Якщо функцію вимкнено, віджет буде вбудовано у сторінку «Метадані»."
 
 #: ../data/eom.schemas.in.h:13
 msgid ""
@@ -398,7 +402,7 @@ msgid ""
 "If this is active, the color set by the background-color key will be used to"
 " fill the area behind the image. If it is not set, the current GTK+ theme "
 "will determine the fill color."
-msgstr ""
+msgstr "Якщо увімкнено, для заливки ділянки поза зображенням буде використовуватися колір, встановлений ключем background-color. У протилежному випадку, колір заливки буде визначено поточною темою GTK+."
 
 #: ../data/eom.schemas.in.h:15
 msgid ""
@@ -410,7 +414,7 @@ msgstr "Якщо не відмічено, то малі зображення н�
 msgid ""
 "Image collection pane position. Set to 0 for bottom; 1 for left; 2 for top; "
 "3 for right."
-msgstr "Положення панелі колекції зображень. Встановіть 0 - знизу; 1 - ліворуч; 2 - згори; 3 - праворуч."
+msgstr "Розташування панелі колекції зображень. Встановіть 0 - знизу; 1 - ліворуч; 2 - згори; 3 - праворуч."
 
 #: ../data/eom.schemas.in.h:17
 msgid "Interpolate Image"
@@ -503,7 +507,7 @@ msgstr "Визначає, чи потрібно екстраполювати з�
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
-msgstr ""
+msgstr "Чи повинно інтерполювати зображення при зменшенні (масштабуванні). Це дозволяє поліпшити якість, але зменшує швидкість обробки зображення."
 
 #: ../data/eom.schemas.in.h:37
 msgid ""
@@ -586,7 +590,7 @@ msgstr "Всі файли"
 
 #: ../src/eom-file-chooser.c:171
 msgid "All Images"
-msgstr "Всі зображення"
+msgstr "Усі зображення"
 
 #. Filter name: First description then file extension, eg. "The PNG-Format
 #. (*.png)".
@@ -751,23 +755,23 @@ msgstr "Інформація про сторінку, на якій буде н�
 
 #: ../src/eom-print-image-setup.c:870
 msgid "Position"
-msgstr "Положення"
+msgstr "Розташування"
 
 #: ../src/eom-print-image-setup.c:875
 msgid "_Left:"
-msgstr "З_ліва:"
+msgstr "Лі_воруч:"
 
 #: ../src/eom-print-image-setup.c:876
 msgid "_Right:"
-msgstr "С_права:"
+msgstr "Пра_воруч:"
 
 #: ../src/eom-print-image-setup.c:877
 msgid "_Top:"
-msgstr "С_гори:"
+msgstr "З_гори:"
 
 #: ../src/eom-print-image-setup.c:878
 msgid "_Bottom:"
-msgstr "С_низу:"
+msgstr "З_низу:"
 
 #: ../src/eom-print-image-setup.c:880
 msgid "C_enter:"
@@ -945,7 +949,7 @@ msgstr "_Типове розташування"
 
 #: ../src/eom-window.c:2844
 msgid "translator-credits"
-msgstr "Юрій Сирота\nМаксим Дзюманенко <dziumanenko@gmail.com>"
+msgstr "Юрій Сирота\nМаксим Дзюманенко <dziumanenko@gmail.com>\nМикола Ткач <Stuartlittle1970@gmail.com>"
 
 #: ../src/eom-window.c:2847
 msgid ""
@@ -991,7 +995,7 @@ msgstr "_Налаштувати тло"
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
-msgstr "Зображення «%s» встановлено у якості тла робочого столу.\nЗмінити його зовнішній вигляд?"
+msgstr "Зображення «%s» встановлено у якості тла стільниці.\nЗмінити його зовнішній вигляд?"
 
 #: ../src/eom-window.c:3410
 msgid "Saving image locally…"
@@ -1050,7 +1054,7 @@ msgstr "Не можу знищити файл"
 #: ../src/eom-window.c:3662
 #, c-format
 msgid "Error on deleting image %s"
-msgstr "Помилка при видаленні зображення %s"
+msgstr "Помилка при вилученні зображення %s"
 
 #: ../src/eom-window.c:3904
 msgid "_Image"
@@ -1195,15 +1199,15 @@ msgstr "В_ластивості"
 
 #: ../src/eom-window.c:3960
 msgid "Show the properties and metadata of the selected image"
-msgstr "Відобразити властивості та метадані виділених зображень"
+msgstr "Показати властивості та метадані виділених зображень"
 
 #: ../src/eom-window.c:3962
 msgid "_Undo"
-msgstr "В_ернути"
+msgstr "Пов_ернути"
 
 #: ../src/eom-window.c:3963
 msgid "Undo the last change in the image"
-msgstr "Вернути останню зміну у зображенні"
+msgstr "Повернути останню зміну у зображенні"
 
 #: ../src/eom-window.c:3965
 msgid "Flip _Horizontal"
@@ -1243,7 +1247,7 @@ msgstr "Встановити як _тло"
 
 #: ../src/eom-window.c:3978
 msgid "Set the selected image as the desktop background"
-msgstr "Встановити обране зображення як тло робочого столу"
+msgstr "Встановити обране зображення як тло стільниці"
 
 #: ../src/eom-window.c:3981
 msgid "Move the selected image to the trash folder"
@@ -1271,7 +1275,7 @@ msgstr "_Нормальний розмір"
 
 #: ../src/eom-window.c:3990
 msgid "Show the image at its normal size"
-msgstr "Відобразити зображення зі звичайними розмірами"
+msgstr "Показати зображення зі звичайними розмірами"
 
 #: ../src/eom-window.c:3992
 msgid "Best _Fit"
@@ -1283,11 +1287,11 @@ msgstr "Розмістити зображення цілком у вікні"
 
 #: ../src/eom-window.c:4010
 msgid "_Fullscreen"
-msgstr "На _весь екран"
+msgstr "На _увесь екран"
 
 #: ../src/eom-window.c:4011
 msgid "Show the current image in fullscreen mode"
-msgstr "Відобразити зображення у повноекранному режимі"
+msgstr "Показати зображення у повноекранному режимі"
 
 #: ../src/eom-window.c:4013
 msgid "Pause Slideshow"
@@ -1404,11 +1408,11 @@ msgstr "_Налаштувати"
 
 #: ../src/eom-plugin-manager.c:535
 msgid "Ac_tivate All"
-msgstr "_Активувати всі"
+msgstr "_Активувати усі"
 
 #: ../src/eom-plugin-manager.c:540
 msgid "_Deactivate All"
-msgstr "_Деактивувати всі"
+msgstr "_Деактивувати усі"
 
 #: ../src/eom-plugin-manager.c:834
 msgid "Active _Plugins:"
@@ -1436,7 +1440,7 @@ msgstr "Відкрити у режимі перегляду слайдів"
 
 #: ../src/main.c:77
 msgid "Start a new instance instead of reusing an existing one"
-msgstr "Запускати новий екземпляр замість використанні існуючого"
+msgstr "Запускати новий екземпляр замість використання існуючого"
 
 #: ../src/main.c:80
 msgid "Show the application's version"

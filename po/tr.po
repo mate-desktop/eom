@@ -3,20 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-#   <mauron@vmail.me>, 2012.
+# mauron, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
 "POT-Creation-Date: 2011-12-30 15:48+0100\n"
-"PO-Revision-Date: 2012-04-29 08:31+0000\n"
-"Last-Translator: mauron <mauron@vmail.me>\n"
+"PO-Revision-Date: 2012-10-03 20:09+0000\n"
+"Last-Translator: mauron\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/MATE/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: tr\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -308,7 +308,7 @@ msgstr "Yakınlaştırırken resimleri _yumuşat"
 
 #: ../data/eom-preferences-dialog.ui.h:17
 msgid "Smooth images when zoomed-_out"
-msgstr "Uzaklaştırıken resimleri _yumuşat"
+msgstr "Uzaklaştırırken resimleri _yumuşat"
 
 #: ../data/eom-preferences-dialog.ui.h:18
 msgid "Transparent Parts"
@@ -554,6 +554,7 @@ msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] "Değişiklikleri kaydedilmeyen %d resim bulunuyor. Kapatmadan önce değişiklikleri kaydetmek ister misiniz?"
+msgstr[1] "Değişiklikleri kaydedilmeyen %d resim bulunuyor. Kapatmadan önce değişiklikleri kaydetmek ister misiniz?"
 
 #: ../src/eom-close-confirmation-dialog.c:621
 msgid "S_elect the images you want to save:"
@@ -599,6 +600,7 @@ msgstr "%s (*.%s)"
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "piksel"
+msgstr[1] "piksel"
 
 #: ../src/eom-file-chooser.c:437
 msgid "Open Image"
@@ -883,6 +885,7 @@ msgstr "(geçersiz Unikod)"
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i piksel  %s    %i%%"
+msgstr[1] "%i × %i piksel  %s    %i%%"
 
 #: ../src/eom-window.c:1138
 msgid "_Reload"
@@ -1014,6 +1017,7 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] "%d seçili resmi çöpe taşımak istediğinize\nemin misiniz?"
+msgstr[1] "%d seçili resmi çöpe taşımak istediğinize\nemin misiniz?"
 
 #: ../src/eom-window.c:3505
 msgid ""
@@ -1027,7 +1031,7 @@ msgstr "Çöpe _Taşı"
 
 #: ../src/eom-window.c:3524
 msgid "_Do not ask again during this session"
-msgstr "_Bu oturumda boyucna bir daha sorma"
+msgstr "_Bu oturum boyunca bir daha sorma"
 
 #: ../src/eom-window.c:3569 ../src/eom-window.c:3583
 #, c-format
@@ -1295,7 +1299,7 @@ msgstr "Ö_nceki Resim"
 
 #: ../src/eom-window.c:4020
 msgid "Go to the previous image of the collection"
-msgstr "Kolleksiyondaki bir önceki resme git"
+msgstr "Koleksiyondaki bir önceki resme git"
 
 #: ../src/eom-window.c:4022
 msgid "_Next Image"
@@ -1303,7 +1307,7 @@ msgstr "_Sonraki Resim"
 
 #: ../src/eom-window.c:4023
 msgid "Go to the next image of the collection"
-msgstr "Kolleksiyondaki bir sonraki resme git"
+msgstr "Koleksiyondaki bir sonraki resme git"
 
 #: ../src/eom-window.c:4025 ../src/eom-window.c:4037
 msgid "_First Image"
@@ -1311,7 +1315,7 @@ msgstr "_İlk Resim"
 
 #: ../src/eom-window.c:4026
 msgid "Go to the first image of the collection"
-msgstr "Kolleksiyondaki ilk resme git"
+msgstr "Koleksiyondaki ilk resme git"
 
 #: ../src/eom-window.c:4028 ../src/eom-window.c:4040
 msgid "_Last Image"
@@ -1319,7 +1323,7 @@ msgstr "_Son Resim"
 
 #: ../src/eom-window.c:4029
 msgid "Go to the last image of the collection"
-msgstr "Kolleksiyondaki son resme git"
+msgstr "Koleksiyondaki son resme git"
 
 #: ../src/eom-window.c:4031
 msgid "_Random Image"
@@ -1404,7 +1408,7 @@ msgstr "Hepsini Et_kinsizleştir"
 
 #: ../src/eom-plugin-manager.c:834
 msgid "Active _Plugins:"
-msgstr "Etkin _Eklentiler"
+msgstr "Etkin _Eklentiler:"
 
 #: ../src/eom-plugin-manager.c:863
 msgid "_About Plugin"

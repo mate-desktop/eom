@@ -3,19 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Wei-Lun Chao <bluebat@member.fsf.org>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
 "POT-Creation-Date: 2011-12-30 15:48+0100\n"
-"PO-Revision-Date: 2011-12-30 15:24+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2012-11-08 15:27+0000\n"
+"Last-Translator: Wei-Lun Chao <bluebat@member.fsf.org>\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/MATE/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_TW\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -247,7 +248,7 @@ msgstr "以背景表示(_B)"
 
 #: ../data/eom-preferences-dialog.ui.h:2
 msgid "As check _pattern"
-msgstr "以方格表示(_P)"
+msgstr "以勾選胚騰表示(_P)"
 
 #: ../data/eom-preferences-dialog.ui.h:3
 msgid "As custom c_olor:"
@@ -255,7 +256,7 @@ msgstr "以自選顏色表示(_O):"
 
 #: ../data/eom-preferences-dialog.ui.h:4
 msgid "As custom color:"
-msgstr "如同自訂顏色："
+msgstr "以自選顏色表示："
 
 #: ../data/eom-preferences-dialog.ui.h:5
 msgid "Background"
@@ -397,7 +398,7 @@ msgid ""
 "If this is active, the color set by the background-color key will be used to"
 " fill the area behind the image. If it is not set, the current GTK+ theme "
 "will determine the fill color."
-msgstr "如果使用這個選項，會使用 background-color 設定鍵指定的顏色填滿圖片後的區域。如果沒有指定，則由目前的  GTK+ 佈景主題決定要填入的顏色。"
+msgstr "如果使用這個選項，會使用 background-color 設定鍵指定的顏色填滿圖片後的區域。如果沒有指定，則由目前的  GTK+ 布景主題決定要填入的顏色。"
 
 #: ../data/eom.schemas.in.h:15
 msgid ""
@@ -455,7 +456,7 @@ msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
 "theme instead."
-msgstr "用來填滿圖片後方區域的顏色。如果沒有設定 use-background-color 設定鍵，則由使用的  GTK+ 佈景主題來代替。"
+msgstr "用來填滿圖片後方區域的顏色。如果沒有設定 use-background-color 設定鍵，則由使用的  GTK+ 布景主題來代替。"
 
 #: ../data/eom.schemas.in.h:28
 #, no-c-format
@@ -552,7 +553,7 @@ msgstr "關閉前要儲存修改到圖片「%s」嗎？"
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
-msgstr[0] ""
+msgstr[0] "%d 張圖像有未儲存的變更。要在關閉之前儲存變更？"
 
 #: ../src/eom-close-confirmation-dialog.c:621
 msgid "S_elect the images you want to save:"
@@ -597,7 +598,7 @@ msgstr "%s (*.%s)"
 #: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:380
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] ""
+msgstr[0] "像素"
 
 #: ../src/eom-file-chooser.c:437
 msgid "Open Image"
@@ -869,7 +870,7 @@ msgstr "無法顯示 Eye of MATE 的說明文件。"
 
 #: ../src/eom-util.c:116
 msgid " (invalid Unicode)"
-msgstr "（無效的統一碼）"
+msgstr "（無效的萬國碼）"
 
 #. Translators: This is the string displayed in the statusbar
 #. * The tokens are from left to right:
@@ -881,7 +882,7 @@ msgstr "（無效的統一碼）"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] ""
+msgstr[0] "%i × %i  像素   %s    %i%%"
 
 #: ../src/eom-window.c:1138
 msgid "_Reload"
@@ -938,7 +939,7 @@ msgstr "重設為預設值(_R)"
 
 #: ../src/eom-window.c:2844
 msgid "translator-credits"
-msgstr "如對翻譯有任何意見，請送一封電子郵件給\n以下地址，MATE 翻譯團隊會盡快回覆您：\nzh-l10n@lists.linux.org.tw\n\nWoodman Tuen <wmtuen@gmail.com>, 2005-07\nChing-Hung Lin <2billlin@yahoo.com.tw>, 2004\nLawrence Leung <hksarhong@yahoo.com>, 2004\nAbel Cheung <abel@oaka.org>, 2001-2003\nJing-Jong Shyue <shyue@sonoma.com.tw>, 2000"
+msgstr "趙惟倫 <bluebat@member.fsf.org>, 2012\nWoodman Tuen <wmtuen@gmail.com>, 2005-07\nChing-Hung Lin <2billlin@yahoo.com.tw>, 2004\nLawrence Leung <hksarhong@yahoo.com>, 2004\nAbel Cheung <abel@oaka.org>, 2001-2003\nJing-Jong Shyue <shyue@sonoma.com.tw>, 2000"
 
 #: ../src/eom-window.c:2847
 msgid ""
@@ -988,7 +989,7 @@ msgstr "圖片「%s」已被設為桌面背景。\n您是否想要修改它的�
 
 #: ../src/eom-window.c:3410
 msgid "Saving image locally…"
-msgstr "將圖片儲存到本地端..."
+msgstr "將圖片儲存到本地端…"
 
 #: ../src/eom-window.c:3492
 #, c-format
@@ -1012,7 +1013,7 @@ msgid ""
 msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
-msgstr[0] ""
+msgstr[0] "確定要將\n%d 個所選影像移動到回收筒？"
 
 #: ../src/eom-window.c:3505
 msgid ""
@@ -1166,7 +1167,7 @@ msgstr "使用不同的應用程式開啟選定的圖片"
 
 #: ../src/eom-window.c:3953
 msgid "Save _As…"
-msgstr "儲存為(_A)..."
+msgstr "儲存為(_A)…"
 
 #: ../src/eom-window.c:3954
 msgid "Save the selected images with a different name"
@@ -1174,7 +1175,7 @@ msgstr "將選定的圖片儲存為不同的名稱"
 
 #: ../src/eom-window.c:3956
 msgid "_Print…"
-msgstr "列印(_P)..."
+msgstr "列印(_P)…"
 
 #: ../src/eom-window.c:3957
 msgid "Print the selected image"
@@ -1435,7 +1436,7 @@ msgstr "顯示應用程式的版本"
 
 #: ../src/main.c:81
 msgid "[FILE…]"
-msgstr "[檔案...]"
+msgstr "[檔案…]"
 
 #. I18N: The '%s' is replaced with eom's command name.
 #: ../src/main.c:207

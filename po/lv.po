@@ -3,19 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Imants Liepiņš <imzzinator@gmail.com>, 2012
+# Rihards Priedītis <rprieditis@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
 "POT-Creation-Date: 2011-12-30 15:48+0100\n"
-"PO-Revision-Date: 2011-12-30 15:15+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2013-07-23 21:51+0000\n"
+"Last-Translator: Rihards Priedītis <rprieditis@gmail.com>\n"
+"Language-Team: Latvian (http://www.transifex.com/projects/p/MATE/language/lv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: lv\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2)\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -81,7 +83,7 @@ msgstr "Datums statusa joslā"
 
 #: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:2
 msgid "Shows the image date in the window statusbar"
-msgstr "Parāda attēla izveides datumu loga statusa joslā"
+msgstr "Loga statusa joslā parāda attēla izveides datumu"
 
 #: ../data/eom.desktop.in.in.h:1
 msgid "Browse and rotate images"
@@ -190,7 +192,7 @@ msgstr "Ie_priekšējais"
 #: ../data/eom-multiple-save-as-dialog.ui.h:2
 #, no-c-format
 msgid "<b>%f:</b> original filename"
-msgstr "<b>%f:</b> oriģinālais faila nosaukums"
+msgstr "<b>%f:</b> sākotnējais faila nosaukums"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:4
 #, no-c-format
@@ -211,7 +213,7 @@ msgstr "Faila nosaukuma priekšskatījums"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:8
 msgid "File Path Specifications"
-msgstr "Faila ceļa instrukcijas"
+msgstr "Faila ceļa specifikācija"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:9
 msgid "Filename format:"
@@ -243,27 +245,27 @@ msgstr "Uz:"
 
 #: ../data/eom-preferences-dialog.ui.h:1
 msgid "As _background"
-msgstr "Rādīt _fonu"
+msgstr "Kā _fonu"
 
 #: ../data/eom-preferences-dialog.ui.h:2
 msgid "As check _pattern"
-msgstr "Rādīt _rūtiņrakstu"
+msgstr "Kā _rūtiņrakstu"
 
 #: ../data/eom-preferences-dialog.ui.h:3
 msgid "As custom c_olor:"
-msgstr "Rādīt šo _krāsu:"
+msgstr "Kā pielāgota _krāsa:"
 
 #: ../data/eom-preferences-dialog.ui.h:4
 msgid "As custom color:"
-msgstr ""
+msgstr "Kā pielāgota krāsa :"
 
 #: ../data/eom-preferences-dialog.ui.h:5
 msgid "Background"
-msgstr ""
+msgstr "Fons"
 
 #: ../data/eom-preferences-dialog.ui.h:6 ../data/eom.schemas.in.h:6
 msgid "Background Color"
-msgstr ""
+msgstr "Fona krāsa"
 
 #: ../data/eom-preferences-dialog.ui.h:7
 msgid "Color for Transparent Areas"
@@ -303,15 +305,15 @@ msgstr "Slīdrāde"
 
 #: ../data/eom-preferences-dialog.ui.h:16
 msgid "Smooth images when zoomed-_in"
-msgstr "Nogludināt attēlus palielinot"
+msgstr "Noglud_ināt attēlus palielinot"
 
 #: ../data/eom-preferences-dialog.ui.h:17
 msgid "Smooth images when zoomed-_out"
-msgstr "Nogludināt attēlus samazinot"
+msgstr "N_ogludināt attēlus samazinot"
 
 #: ../data/eom-preferences-dialog.ui.h:18
 msgid "Transparent Parts"
-msgstr "Caurspīdīgajās daļās"
+msgstr "Caurspīdīgas daļas"
 
 #: ../data/eom-preferences-dialog.ui.h:19
 msgid "_Automatic orientation"
@@ -319,7 +321,7 @@ msgstr "_Automātiski pagriezt"
 
 #: ../data/eom-preferences-dialog.ui.h:20
 msgid "_Loop sequence"
-msgstr "Automātiski _atkārtot"
+msgstr "At_kārtojuma secība"
 
 #: ../data/eom-preferences-dialog.ui.h:21
 msgid "_Switch image after:"
@@ -357,7 +359,7 @@ msgid ""
 "Determines how transparency should be indicated. Valid values are "
 "CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
 "determines the color value used."
-msgstr ""
+msgstr "Nosaka, kā jānorāda caurspīdīgums . Derīgas vērtības ir CHECK_PATTERN, COLOR un NONE. Ja izvēlēta COLOR, tad krāsu nosaka stapkrāsu atslēga."
 
 #: ../data/eom.schemas.in.h:9
 msgid "Extrapolate Image"
@@ -369,14 +371,14 @@ msgid ""
 "will display the user's pictures folder using the XDG special user "
 "directories. If deactivated or the pictures folder has not been set up, it "
 "will show the current working directory."
-msgstr ""
+msgstr "Ja ir ieslēgts un aktīvajā logā nav ielādēts neviens attēls, tad tiks attēlota lietotāja attēlu mape, izmantojot XDG īpašo lietotāju katalogu. Ja nav ieslēgts vai nav norādīta attēlu mape, tad tiks attēlota pašreizējā darba mape."
 
 #: ../data/eom.schemas.in.h:11
 msgid ""
 "If activated, Eye of MATE won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
 "trash and would be deleted instead."
-msgstr ""
+msgstr "Ja ir ieslēgts, Eye of MATE nelūgs apstirināt attēlu pārvietošanu uz atkritni. Tā jautās, ja kādu no failiem nevar pārvietot uz atkritni, bet tas tiks izdzēsts pavisam."
 
 #: ../data/eom.schemas.in.h:12
 msgid ""
@@ -384,7 +386,7 @@ msgid ""
 "moved to its own page in the dialog. This should make the dialog more usable"
 " on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
 "be embedded on the \"Metadata\" page."
-msgstr ""
+msgstr "Ja ieslēgts, tad sīkāki metadati īpašību logā tiks pārvietoti atsevišķā šķirklī. Tam vajadzētu padarīt loga lietošanu vieglāku mazākos ekrānos, piemēram portatīvajos datoros. Ja izslēgts, tad logrīks tiks iegults \"Metadata\" lapā."
 
 #: ../data/eom.schemas.in.h:13
 msgid ""
@@ -397,7 +399,7 @@ msgid ""
 "If this is active, the color set by the background-color key will be used to"
 " fill the area behind the image. If it is not set, the current GTK+ theme "
 "will determine the fill color."
-msgstr ""
+msgstr "Ja šis ir ieslēgts, tad pamatkrāsas atslēgas noteiktā krāsa aizpildīs laukumu aiz attēla. Ja tā nav uzstādīta, tad patreizējā GTK+ tēma noteiks aizpildīšanas krāsu."
 
 #: ../data/eom.schemas.in.h:15
 msgid ""
@@ -455,7 +457,7 @@ msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
 "theme instead."
-msgstr ""
+msgstr "Krāsa, kas aizpilda laukumu aiz attēla. Ja nav uzstādīta izmantot-pamata-krāsu atslēga, šo krāsu noteiks patreizējā GTK+ tēma."
 
 #: ../data/eom.schemas.in.h:28
 #, no-c-format
@@ -480,7 +482,7 @@ msgstr "Izmest attēlus miskastē bez vaicāšanas"
 
 #: ../data/eom.schemas.in.h:32
 msgid "Use a custom background color"
-msgstr ""
+msgstr "Izmantot pielāgotu pamata krāsu"
 
 #: ../data/eom.schemas.in.h:33
 msgid ""
@@ -502,7 +504,7 @@ msgstr "Vai attēlu vajadzētu ekstrapolēt tuvināšanas laikā. Tas var pieš�
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
-msgstr ""
+msgstr "Vai attēlu vajadzētu interpolēt attālināšanas laikā. Tas var piešķirt attēliem labāku kvalitāti, taču var aizņemt vairāk laika."
 
 #: ../data/eom.schemas.in.h:37
 msgid ""
@@ -552,9 +554,9 @@ msgstr "Saglabāt \"%s\" izmaiņas pirms aizvēršanas?"
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Atvērtajam %d attēlam nav saglabātas izmaiņas. Vai saglabāt izmaiņas, pirms to aizvērt? "
+msgstr[1] "Atvērtajam %d attēlam nav saglabātas izmaiņas. Vai saglabāt izmaiņas, pirms to aizvērt? "
+msgstr[2] "Atvērtajiem %d attēliem nav saglabātas izmaiņas. Vai saglabāt izmaiņas, pirms tos aizvērt? "
 
 #: ../src/eom-close-confirmation-dialog.c:621
 msgid "S_elect the images you want to save:"
@@ -599,13 +601,13 @@ msgstr "%s (*.%s)"
 #: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:380
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "pikselis"
+msgstr[1] "pikselis"
+msgstr[2] "pikseļi"
 
 #: ../src/eom-file-chooser.c:437
 msgid "Open Image"
-msgstr ""
+msgstr "Atvērt attēlu"
 
 #: ../src/eom-file-chooser.c:445
 msgid "Save Image"
@@ -873,7 +875,7 @@ msgstr "Neizdevās parādīt Eye of MATE palīdzību"
 
 #: ../src/eom-util.c:116
 msgid " (invalid Unicode)"
-msgstr " (nepareizs Unicode)"
+msgstr " (nederīgs Unicode)"
 
 #. Translators: This is the string displayed in the statusbar
 #. * The tokens are from left to right:
@@ -885,18 +887,18 @@ msgstr " (nepareizs Unicode)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%i × %i pkselis  %s    %i%%"
+msgstr[1] "%i × %i pikselis  %s    %i%%"
+msgstr[2] "%i × %i pikseļi  %s    %i%%"
 
 #: ../src/eom-window.c:1138
 msgid "_Reload"
-msgstr ""
+msgstr "_Pārlādēt"
 
 #: ../src/eom-window.c:1140 ../src/eom-window.c:3000
 msgctxt "MessageArea"
 msgid "Hi_de"
-msgstr ""
+msgstr "Pa_slēpt"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
@@ -905,7 +907,7 @@ msgstr ""
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
-msgstr ""
+msgstr "Attēls \"%s\" ir izmainīts ar ārēju programmu.⏎ Vai Jūs vēlaties to pārlādēt?"
 
 #: ../src/eom-window.c:1305
 #, c-format
@@ -925,7 +927,7 @@ msgstr "Saglabā attēlu \"%s\" (%u/%u)"
 #: ../src/eom-window.c:1808
 #, c-format
 msgid "Opening image \"%s\""
-msgstr ""
+msgstr "Atver attēlu \"%s\""
 
 #: ../src/eom-window.c:2498
 #, c-format
@@ -981,7 +983,7 @@ msgstr "MATE attēlu skatītājs."
 #. clash with mnemonics from eom's menubar
 #: ../src/eom-window.c:2998
 msgid "_Open Background Preferences"
-msgstr ""
+msgstr "_Atvērt Fona Iestatījumus"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
@@ -1018,9 +1020,9 @@ msgid ""
 msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Vai esat pārliecināts, ka vēlaties pārvietot\nizvēlēlēto %d attēlu uz atkritni?"
+msgstr[1] "Vai esat pārliecināts, ka vēlaties pārvietot\nizvēlēlēto %d attēlu uz atkritni?"
+msgstr[2] "Vai esat pārliecināts, ka vēlaties pārvietot\nizvēlēlētos %d attēlus uz atkritni?"
 
 #: ../src/eom-window.c:3505
 msgid ""
@@ -1198,11 +1200,11 @@ msgstr "Parādīt izvēlētā attēla īpašības un metadatus"
 
 #: ../src/eom-window.c:3962
 msgid "_Undo"
-msgstr "_Atcelt"
+msgstr "_Atsaukt"
 
 #: ../src/eom-window.c:3963
 msgid "Undo the last change in the image"
-msgstr "Atcelt pēdējo attēlā veikto izmaiņu"
+msgstr "Atsaukt pēdējo attēlā veikto izmaiņu"
 
 #: ../src/eom-window.c:3965
 msgid "Flip _Horizontal"
@@ -1266,11 +1268,11 @@ msgstr "Samazināt attēlu"
 
 #: ../src/eom-window.c:3989
 msgid "_Normal Size"
-msgstr "_Normāls izmērs"
+msgstr "_Parastais izmērs"
 
 #: ../src/eom-window.c:3990
 msgid "Show the image at its normal size"
-msgstr "Parādīt attēlu normālā izmērā"
+msgstr "Parādīt attēlu parastajā izmērā"
 
 #: ../src/eom-window.c:3992
 msgid "Best _Fit"
@@ -1290,11 +1292,11 @@ msgstr "Parādīt izvēlēto attēlu pilnekrāna režīmā"
 
 #: ../src/eom-window.c:4013
 msgid "Pause Slideshow"
-msgstr ""
+msgstr "Apturēt slīdrādi"
 
 #: ../src/eom-window.c:4014
 msgid "Pause or resume the slideshow"
-msgstr ""
+msgstr "Aptur vai atjauno slīdrādi"
 
 #: ../src/eom-window.c:4019 ../src/eom-window.c:4034
 msgid "_Previous Image"
@@ -1370,7 +1372,7 @@ msgstr "Tālāk"
 
 #: ../src/eom-window.c:4133
 msgid "Normal"
-msgstr "Normāls"
+msgstr "Parasts"
 
 #: ../src/eom-window.c:4136
 msgid "Fit"
@@ -1439,7 +1441,7 @@ msgstr "Sākt jaunu instanci, neizmantojot jau eksistējošo"
 
 #: ../src/main.c:80
 msgid "Show the application's version"
-msgstr ""
+msgstr "Parādīt programmas versiju"
 
 #: ../src/main.c:81
 msgid "[FILE…]"
