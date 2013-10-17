@@ -1,3 +1,5 @@
+ACLOCAL_AMFLAGS = -I m4
+
 if ENABLE_JPEG
 jpeg_DIRS = jpegutils
 endif

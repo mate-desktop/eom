@@ -1,4 +1,5 @@
 AC_PREREQ(2.59)
+AC_CONFIG_MACRO_DIR([m4])
 
 m4_define(eom_major_version, 1)
 m4_define(eom_minor_version, 6)
@@ -83,8 +84,6 @@ YELP_HELP_INIT
 # **********
 # MATE Libs
 # **********
-
-GTK_REQUIRED=2.18.0
 
 AC_MSG_CHECKING([which gtk+ version to compile against])
 AC_ARG_WITH([gtk],
