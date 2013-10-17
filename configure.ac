@@ -1,4 +1,5 @@
 AC_PREREQ(2.59)
+AC_CONFIG_MACRO_DIR([m4])
 
 m4_define(eom_major_version, 1)
 m4_define(eom_minor_version, 6)
