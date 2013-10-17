@@ -1,4 +1,4 @@
-pkgname=mate-image-viewer
+pkgname=eom
 pkgver=1.1.0
 pkgrel=1
 pkgdesc="An image viewing and cataloging program for MATE"
@@ -10,7 +10,7 @@ options=('!emptydirs' '!libtool')
 conflicts=('eom')
 url="http://matsusoft.com.ar/projects"
 groups=('mate-extras')
-install=mate-image-viewer.install
+install=eom.install
 source=(http://sourceforge.net/projects/matede/files/${pkgver}/${pkgname}.tar.gz/download)
 sha256sums=('5cb6b424af115645061850d2c730744475ef979da36871e144291ddd4cae99bc')
 
