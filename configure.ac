@@ -6,7 +6,7 @@ m4_define(eom_minor_version, 6)
 m4_define(eom_micro_version, 1)
 m4_define(eom_version, eom_major_version.eom_minor_version.eom_micro_version)
 
-AC_INIT([eom], eom_version, [http://www.mate-desktop.org], [mate-image-viewer])
+AC_INIT([eom], eom_version, [http://www.mate-desktop.org], [eom])
 AM_INIT_AUTOMAKE([1.9 foreign no-dist-gzip dist-xz])
 
 # Support silencing the build output if supported (automake-1.11+)
