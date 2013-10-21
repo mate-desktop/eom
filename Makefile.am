@@ -1,4 +1,4 @@
-ACLOCAL_AMFLAGS = -I m4
+ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 if ENABLE_JPEG
 jpeg_DIRS = jpegutils
@@ -8,7 +8,7 @@ SUBDIRS = $(jpeg_DIRS) cut-n-paste bindings src man plugins po help data doc
 
 EXTRA_DIST = 		\
 	AUTHORS			\
-	Changelog		\
+	ChangeLog		\
 	COPYING			\
 	HACKING			\
 	NEWS			\
