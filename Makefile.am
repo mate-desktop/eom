@@ -1,11 +1,21 @@
+ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
+
 if ENABLE_JPEG
 jpeg_DIRS = jpegutils
 endif
 
 SUBDIRS = $(jpeg_DIRS) cut-n-paste bindings src man plugins po help data doc
 
-EXTRA_DIST = 			\
+EXTRA_DIST = 		\
+	AUTHORS			\
+	ChangeLog		\
+	COPYING			\
 	HACKING			\
+	NEWS			\
+	NEWS.gnome		\
+	README			\
+	THANKS			\
+	TODO			\
 	mate-doc-utils.make
 
 DISTCLEANFILES =                \
