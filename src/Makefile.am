@@ -111,23 +111,24 @@ libeom_la_SOURCES =			\
 
 if HAVE_EXIF
 INST_H_FILES +=				\
-	eom-exif-util.h			\
-	eom-exif-details.h
+	eom-metadata-details.h  \
+	eom-exif-util.h
+
 libeom_c_files +=			\
-	eom-exif-util.c			\
-	eom-exif-details.c
+	eom-metadata-details.c  \
+	eom-exif-util.c
 endif
 
 if HAVE_EXEMPI
-# We need to make sure eom-exif-details.h
+# We need to make sure eom-metadata-details.h
 # is only listed once in INST_H_FILES
 # or the build will break with automake-1.11
 if !HAVE_EXIF
 INST_H_FILES +=				\
-	eom-exif-details.h
+	eom-metadata-details.h
 endif !HAVE_EXIF
 libeom_la_SOURCES +=			\
-	eom-exif-details.c
+	eom-metadata-details.c
 endif HAVE_EXEMPI
 
 libeom_la_CPPFLAGS =						\

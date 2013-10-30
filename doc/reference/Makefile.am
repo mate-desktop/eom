@@ -58,7 +58,7 @@ if !HAVE_EXIF
 if !HAVE_EXEMPI
 IGNORE_HFILES +=			\
 	eom-exif-util.h			\
-	eom-exif-details.h
+	eom-metadata-details.h
 endif
 endif
 
