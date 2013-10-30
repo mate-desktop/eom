@@ -111,8 +111,10 @@ libeom_la_SOURCES =			\
 
 if HAVE_EXIF
 INST_H_FILES +=				\
-	eom-metadata-details.h  \
 	eom-exif-util.h
+
+NOINST_H_FILES +=			\
+	eom-metadata-details.h
 
 libeom_c_files +=			\
 	eom-metadata-details.c  \
@@ -124,7 +126,7 @@ if HAVE_EXEMPI
 # is only listed once in INST_H_FILES
 # or the build will break with automake-1.11
 if !HAVE_EXIF
-INST_H_FILES +=				\
+NOINST_H_FILES +=				\
 	eom-metadata-details.h
 endif !HAVE_EXIF
 libeom_la_SOURCES +=			\

@@ -54,15 +54,19 @@ struct _EomMetadataDetailsClass {
 	GtkTreeViewClass parent_class;
 };
 
+G_GNUC_INTERNAL
 GType               eom_metadata_details_get_type    (void) G_GNUC_CONST;
 
+G_GNUC_INTERNAL
 GtkWidget          *eom_metadata_details_new         (void);
 
 #if HAVE_EXIF
+G_GNUC_INTERNAL
 void                eom_metadata_details_update      (EomMetadataDetails *details,
                                                       ExifData       *data);
 #endif
 #if HAVE_EXEMPI
+G_GNUC_INTERNAL
 void                eom_metadata_details_xmp_update  (EomMetadataDetails *details,
                                                       XmpPtr          xmp_data);
 #endif
