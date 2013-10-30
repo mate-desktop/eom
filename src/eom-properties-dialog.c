@@ -48,7 +48,7 @@
 #endif
 
 #if HAVE_METADATA
-#include "eom-exif-details.h"
+#include "eom-metadata-details.h"
 #endif
 
 enum {
@@ -320,7 +320,7 @@ pd_update_metadata_tab (EomPropertiesDialog *prop_dlg,
 	eom_exif_util_set_label_text (GTK_LABEL (priv->exif_date_label),
 				      exif_data, EXIF_TAG_DATE_TIME_ORIGINAL);
 
-	eom_exif_details_update (EOM_EXIF_DETAILS (priv->exif_details),
+	eom_metadata_details_update (EOM_METADATA_DETAILS (priv->exif_details),
 				 exif_data);
 
 	/* exif_data_unref can handle NULL-values */
@@ -356,7 +356,7 @@ pd_update_metadata_tab (EomPropertiesDialog *prop_dlg,
 				   "rights",
 				   priv->xmp_rights_label);
 
-		eom_exif_details_xmp_update (EOM_EXIF_DETAILS (priv->exif_details), xmp_data);
+		eom_metadata_details_xmp_update (EOM_METADATA_DETAILS (priv->exif_details), xmp_data);
 
 		xmp_free (xmp_data);
 	} else {
@@ -690,7 +690,7 @@ eom_properties_dialog_init (EomPropertiesDialog *prop_dlg)
 					GTK_POLICY_AUTOMATIC,
 					GTK_POLICY_AUTOMATIC);
 
-	priv->exif_details = eom_exif_details_new ();
+	priv->exif_details = eom_metadata_details_new ();
 	gtk_widget_set_size_request (priv->exif_details, -1, 170);
 	gtk_container_set_border_width (GTK_CONTAINER (sw), 6);
 	gtk_widget_set_vexpand (priv->exif_details, TRUE);
