@@ -506,6 +506,10 @@ eom_metadata_sidebar_init (EomMetadataSidebar *sidebar)
 					    &priv->size_label, _("File size:"));
 	label = _gtk_grid_append_prop_line (GTK_GRID (priv->grid), label,
 					    NULL, _("Folder:"));
+	/* Enable wrapping at char boundaries as fallback for the filename
+	 * as it is possible for it to not contain any "words" to wrap on. */
+	gtk_label_set_line_wrap_mode (GTK_LABEL (priv->name_label),
+	                              PANGO_WRAP_WORD_CHAR);
 
 {
 	priv->folder_button = gtk_button_new_with_label ("");
