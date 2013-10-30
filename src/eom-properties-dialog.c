@@ -97,9 +97,9 @@ struct _EomPropertiesDialogPrivate {
 	GtkWidget      *xmp_rights_label;
 #endif
 #if HAVE_METADATA
-	GtkWidget      *exif_box;
-	GtkWidget      *exif_details_expander;
-	GtkWidget      *exif_details;
+	GtkWidget      *metadata_box;
+	GtkWidget      *metadata_details_expander;
+	GtkWidget      *metadata_details;
 	GtkWidget      *metadata_details_box;
 	GtkWidget      *metadata_details_sw;
 #endif
@@ -275,8 +275,8 @@ pd_update_metadata_tab (EomPropertiesDialog *prop_dlg,
 			gtk_notebook_set_current_page (notebook, EOM_PROPERTIES_DIALOG_PAGE_GENERAL);
 		}
 
-		if (gtk_widget_get_visible (priv->exif_box)) {
-			gtk_widget_hide (priv->exif_box);
+		if (gtk_widget_get_visible (priv->metadata_box)) {
+			gtk_widget_hide (priv->metadata_box);
 		}
 		if (gtk_widget_get_visible (priv->metadata_details_box)) {
 			gtk_widget_hide (priv->metadata_details_box);
@@ -284,12 +284,12 @@ pd_update_metadata_tab (EomPropertiesDialog *prop_dlg,
 
 		return;
 	} else {
-		if (!gtk_widget_get_visible (priv->exif_box))
-			gtk_widget_show_all (priv->exif_box);
+		if (!gtk_widget_get_visible (priv->metadata_box))
+			gtk_widget_show_all (priv->metadata_box);
 		if (priv->netbook_mode &&
 		    !gtk_widget_get_visible (priv->metadata_details_box)) {
 			gtk_widget_show_all (priv->metadata_details_box);
-			gtk_widget_hide (priv->exif_details_expander);
+			gtk_widget_hide (priv->metadata_details_expander);
 		}
 	}
 
@@ -320,7 +320,7 @@ pd_update_metadata_tab (EomPropertiesDialog *prop_dlg,
 	eom_exif_util_set_label_text (GTK_LABEL (priv->exif_date_label),
 				      exif_data, EXIF_TAG_DATE_TIME_ORIGINAL);
 
-	eom_metadata_details_update (EOM_METADATA_DETAILS (priv->exif_details),
+	eom_metadata_details_update (EOM_METADATA_DETAILS (priv->metadata_details),
 				 exif_data);
 
 	/* exif_data_unref can handle NULL-values */
@@ -356,7 +356,7 @@ pd_update_metadata_tab (EomPropertiesDialog *prop_dlg,
 				   "rights",
 				   priv->xmp_rights_label);
 
-		eom_metadata_details_xmp_update (EOM_METADATA_DETAILS (priv->exif_details), xmp_data);
+		eom_metadata_details_xmp_update (EOM_METADATA_DETAILS (priv->metadata_details), xmp_data);
 
 		xmp_free (xmp_data);
 	} else {
@@ -476,17 +476,17 @@ eom_properties_dialog_set_netbook_mode (EomPropertiesDialog *dlg,
 		gtk_container_add (GTK_CONTAINER (priv->metadata_details_box), priv->metadata_details_sw);
 		g_object_unref (priv->metadata_details_sw);
 		// Only show details box if metadata is being displayed
-		if (gtk_widget_get_visible (priv->exif_box))
+		if (gtk_widget_get_visible (priv->metadata_box))
 			gtk_widget_show_all (priv->metadata_details_box);
 
-		gtk_widget_hide (priv->exif_details_expander);
+		gtk_widget_hide (priv->metadata_details_expander);
 	} else {
 		g_object_ref (priv->metadata_details_sw);
 		gtk_container_remove (GTK_CONTAINER (gtk_widget_get_parent (priv->metadata_details_sw)),
 				      priv->metadata_details_sw);
-		gtk_container_add (GTK_CONTAINER (priv->exif_details_expander), priv->metadata_details_sw);
+		gtk_container_add (GTK_CONTAINER (priv->metadata_details_expander), priv->metadata_details_sw);
 		g_object_unref (priv->metadata_details_sw);
-		gtk_widget_show_all (priv->exif_details_expander);
+		gtk_widget_show_all (priv->metadata_details_expander);
 
 		if (gtk_notebook_get_current_page (GTK_NOTEBOOK (priv->notebook)) == EOM_PROPERTIES_DIALOG_PAGE_DETAILS)
 			gtk_notebook_prev_page (GTK_NOTEBOOK (priv->notebook));
@@ -652,8 +652,8 @@ eom_properties_dialog_init (EomPropertiesDialog *prop_dlg)
 				 "xmp_box_label", &xmp_box_label,
 #endif
 #ifdef HAVE_METADATA
-			         "exif_box", &priv->exif_box,
-				 "exif_details_expander", &priv->exif_details_expander,
+				 "metadata_box", &priv->metadata_box,
+				 "metadata_details_expander", &priv->metadata_details_expander,
 				 "metadata_details_box", &priv->metadata_details_box,
 #endif
 			         NULL);
@@ -690,26 +690,26 @@ eom_properties_dialog_init (EomPropertiesDialog *prop_dlg)
 					GTK_POLICY_AUTOMATIC,
 					GTK_POLICY_AUTOMATIC);
 
-	priv->exif_details = eom_metadata_details_new ();
-	gtk_widget_set_size_request (priv->exif_details, -1, 170);
+	priv->metadata_details = eom_metadata_details_new ();
+	gtk_widget_set_size_request (priv->metadata_details, -1, 170);
 	gtk_container_set_border_width (GTK_CONTAINER (sw), 6);
-	gtk_widget_set_vexpand (priv->exif_details, TRUE);
+	gtk_widget_set_vexpand (priv->metadata_details, TRUE);
 
-	gtk_container_add (GTK_CONTAINER (sw), priv->exif_details);
+	gtk_container_add (GTK_CONTAINER (sw), priv->metadata_details);
 	gtk_widget_show_all (sw);
 
 	priv->metadata_details_sw = sw;
 
 	if (priv->netbook_mode) {
-		gtk_widget_hide (priv->exif_details_expander);
+		gtk_widget_hide (priv->metadata_details_expander);
 		gtk_box_pack_start (GTK_BOX (priv->metadata_details_box),
 				    sw, TRUE, TRUE, 6);
 	} else {
-		gtk_container_add (GTK_CONTAINER (priv->exif_details_expander),
+		gtk_container_add (GTK_CONTAINER (priv->metadata_details_expander),
 				   sw);
 	}
 
-	g_signal_connect_after (G_OBJECT (priv->exif_details_expander),
+	g_signal_connect_after (G_OBJECT (priv->metadata_details_expander),
 			        "notify::expanded",
 			  	G_CALLBACK (pd_exif_details_activated_cb),
 			  	dlg);
