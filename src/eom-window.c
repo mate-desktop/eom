@@ -76,9 +76,9 @@
 #endif
 
 #if GTK_CHECK_VERSION(3, 0, 0)
- 	#define gtk_widget_hide_all(w) gtk_widget_hide(w)
- 	#define MATE_DESKTOP_USE_UNSTABLE_API
- 	#include <libmate/mate-desktop-utils.h>
+#define gtk_widget_hide_all(w) gtk_widget_hide(w)
+#define MATE_DESKTOP_USE_UNSTABLE_API
+#include <libmate-desktop/mate-desktop-utils.h>
 #endif
 
 #define EOM_WINDOW_GET_PRIVATE(object) \
