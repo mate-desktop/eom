@@ -510,6 +510,7 @@ Configure summary:
 	Compiler ...................:  ${CC}
 	Extra Compiler Warnings ....:  ${WARN_CFLAGS}
 
+	GTK version ................:  ${GTK_API_VERSION}
 	Python support .............:  ${have_python}
 	EXIF support ...............:  ${have_exif}
 	XMP support ................:  ${have_exempi}
