@@ -31,7 +31,7 @@
 #ifndef MATE_DESKTOP_USE_UNSTABLE_API
 #define MATE_DESKTOP_USE_UNSTABLE_API
 #endif
-#include <libmateui/mate-desktop-thumbnail.h>
+#include <libmate-desktop/mate-desktop-thumbnail.h>
 
 #include "eom-thumbnail.h"
 #include "eom-list-store.h"
