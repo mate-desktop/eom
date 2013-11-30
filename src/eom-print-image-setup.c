@@ -36,8 +36,10 @@
 #include "eom-print-image-setup.h"
 #include "eom-print-preview.h"
 
-#if GTK_CHECK_VERSION(3, 0, 0)
- 	#define gtk_combo_box_new_text() gtk_combo_box_text_new()
+#if !GTK_CHECK_VERSION(2,24,0)
+	#define gtk_combo_box_text_new() gtk_combo_box_new_text()
+	#define gtk_combo_box_text_insert_text(x,y,z) gtk_combo_box_insert_text(x,y,z)
+	#define GTK_COMBO_BOX_TEXT(x) GTK_COMBO_BOX(x)
 #endif
 
 /**
@@ -884,14 +886,14 @@ eom_print_image_setup_init (EomPrintImageSetup *setup)
 	label = gtk_label_new_with_mnemonic (_("C_enter:"));
 	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
 
-	combobox = gtk_combo_box_new_text ();
-	gtk_combo_box_insert_text (GTK_COMBO_BOX (combobox),
+	combobox = gtk_combo_box_text_new ();
+	gtk_combo_box_text_insert_text (GTK_COMBO_BOX_TEXT (combobox),
 				   CENTER_NONE, _("None"));
-	gtk_combo_box_insert_text (GTK_COMBO_BOX (combobox),
+	gtk_combo_box_text_insert_text (GTK_COMBO_BOX_TEXT (combobox),
 				   CENTER_HORIZONTAL, _("Horizontal"));
-	gtk_combo_box_insert_text (GTK_COMBO_BOX (combobox),
+	gtk_combo_box_text_insert_text (GTK_COMBO_BOX_TEXT (combobox),
 				   CENTER_VERTICAL, _("Vertical"));
-	gtk_combo_box_insert_text (GTK_COMBO_BOX (combobox),
+	gtk_combo_box_text_insert_text (GTK_COMBO_BOX_TEXT (combobox),
 				   CENTER_BOTH, _("Both"));
 	gtk_combo_box_set_active (GTK_COMBO_BOX (combobox), CENTER_NONE);
 	gtk_table_attach (GTK_TABLE (table), label,
@@ -934,10 +936,10 @@ eom_print_image_setup_init (EomPrintImageSetup *setup)
 	label = gtk_label_new_with_mnemonic (_("_Unit:"));
 	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
 
-	combobox = gtk_combo_box_new_text ();
-	gtk_combo_box_insert_text (GTK_COMBO_BOX (combobox), UNIT_MM,
+	combobox = gtk_combo_box_text_new ();
+	gtk_combo_box_text_insert_text (GTK_COMBO_BOX_TEXT (combobox), UNIT_MM,
 				   _("Millimeters"));
-	gtk_combo_box_insert_text (GTK_COMBO_BOX (combobox), UNIT_INCH,
+	gtk_combo_box_text_insert_text (GTK_COMBO_BOX_TEXT (combobox), UNIT_INCH,
 				   _("Inches"));
 
 #ifdef HAVE__NL_MEASUREMENT_MEASUREMENT
