@@ -98,9 +98,11 @@ AC_MSG_RESULT([$with_gtk])
 case "$with_gtk" in
   2.0) GTK_API_VERSION=2.0
        GTK_REQUIRED=2.18.0
+       GTK_PRINT_REQUIRED=2.10.0
        ;;
   3.0) GTK_API_VERSION=3.0
        GTK_REQUIRED=3.0.0
+       GTK_PRINT_REQUIRED=3.0.0
        ;;
 esac
 
@@ -108,7 +110,6 @@ GLIB_REQUIRED=2.25.9
 GIO_REQUIRED=2.25.9
 MATE_DESKTOP_REQUIRED=1.5.0
 GDKPIXBUF_REQUIRED=2.4.0
-GTK_PRINT_REQUIRED=2.10.0
 MATE_ICON_THEME_REQUIRED=1.1.0
 SHARED_MIME_INFO_REQUIRED=0.20
 EXEMPI_REQUIRED=1.99.5
@@ -122,7 +123,7 @@ EOM_MODULES="gtk+-$GTK_API_VERSION >= $GTK_REQUIRED \
              mate-desktop-2.0 >= $MATE_DESKTOP_REQUIRED \
              gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED \
              gio-2.0 >= $GIO_REQUIRED \
-             gtk+-unix-print-2.0 >= $GTK_PRINT_REQUIRED \
+             gtk+-unix-print-$GTK_API_VERSION >= $GTK_PRINT_REQUIRED \
              mate-icon-theme >= $MATE_ICON_THEME_REQUIRED \
              shared-mime-info >= $SHARED_MIME_INFO_REQUIRED"
 
