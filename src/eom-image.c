@@ -294,7 +294,6 @@ eom_image_init (EomImage *img)
 	g_mutex_init (&img->priv->status_mutex);
 	img->priv->status = EOM_IMAGE_STATUS_UNKNOWN;
 	img->priv->metadata_status = EOM_IMAGE_METADATA_NOT_READ;
-	img->priv->is_monitored = FALSE;
 	img->priv->undo_stack = NULL;
 	img->priv->trans = NULL;
 	img->priv->trans_autorotate = NULL;

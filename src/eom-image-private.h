@@ -34,13 +34,12 @@ struct _EomImagePrivate {
 
 	EomImageStatus    status;
 	EomImageStatus    prev_status;
-	gboolean          is_monitored;
-        EomImageMetadataStatus metadata_status;
+	EomImageMetadataStatus metadata_status;
 
-	GdkPixbuf        *image;
+	gboolean          is_playing;
 	GdkPixbufAnimation     *anim;
 	GdkPixbufAnimationIter *anim_iter;
-	gboolean          is_playing;
+	GdkPixbuf        *image;
 	GdkPixbuf        *thumbnail;
 #ifdef HAVE_RSVG
 	RsvgHandle       *svg;
@@ -56,9 +55,11 @@ struct _EomImagePrivate {
 	guint             exif_chunk_len;
 	guchar           *exif_chunk;
 
+#if 0
 	/* Holds IPTC raw data */
 	guchar           *iptc_chunk;
 	guint             iptc_chunk_len;
+#endif
 
 	gboolean          modified;
 	gboolean          file_is_changed;
