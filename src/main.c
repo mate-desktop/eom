@@ -188,9 +188,9 @@ main (int argc, char **argv)
 	if (!g_thread_supported ())
 		g_thread_init (NULL);
 
-	bindtextdomain (PACKAGE, EOM_LOCALE_DIR);
-	bind_textdomain_codeset (PACKAGE, "UTF-8");
-	textdomain (PACKAGE);
+	bindtextdomain (GETTEXT_PACKAGE, EOM_LOCALE_DIR);
+	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+	textdomain (GETTEXT_PACKAGE);
 
 	gtk_rc_parse (EOM_DATA_DIR G_DIR_SEPARATOR_S "gtkrc");
 
