@@ -120,7 +120,7 @@ eom_plugin_engine_new (void)
 
 	engine = EOM_PLUGIN_ENGINE (g_object_new (EOM_TYPE_PLUGIN_ENGINE, NULL));
 
-	peas_engine_enable_loader (PEAS_ENGINE (engine), "python");
+	peas_engine_enable_loader (PEAS_ENGINE (engine), "python3");
 
 	user_plugin_path = g_build_filename (eom_util_dot_dir (),
 	                                     USER_EOM_PLUGINS_LOCATION, NULL);
