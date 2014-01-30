@@ -153,6 +153,7 @@ struct _EomWindowPrivate {
         GtkWidget           *fullscreen_popup;
 	GSource             *fullscreen_timeout_source;
 
+	gboolean             slideshow_random;
 	gboolean             slideshow_loop;
 	gint                 slideshow_switch_timeout;
 	GSource             *slideshow_switch_source;
@@ -1918,6 +1919,12 @@ slideshow_switch_cb (gpointer data)
 
 	eom_debug (DEBUG_WINDOW);
 
+	if (priv->slideshow_random) {
+		eom_thumb_view_select_single (EOM_THUMB_VIEW (priv->thumbview),
+					      EOM_THUMB_VIEW_SELECT_RANDOM);
+		return TRUE;
+	}
+
 	if (!priv->slideshow_loop && slideshow_is_loop_end (window)) {
 		eom_window_stop_fullscreen (window, TRUE);
 		return FALSE;
@@ -2239,6 +2246,10 @@ eom_window_run_fullscreen (EomWindow *window, gboolean slideshow)
 	fullscreen_set_timeout (window);
 
 	if (slideshow) {
+		priv->slideshow_random =
+				g_settings_get_boolean (priv->fullscreen_settings,
+						       EOM_CONF_FULLSCREEN_RANDOM);
+
 		priv->slideshow_loop =
 				g_settings_get_boolean (priv->fullscreen_settings,
 						       EOM_CONF_FULLSCREEN_LOOP);
@@ -4653,6 +4664,7 @@ eom_window_init (EomWindow *window)
 
 	window->priv->fullscreen_popup = NULL;
 	window->priv->fullscreen_timeout_source = NULL;
+	window->priv->slideshow_random = FALSE;
 	window->priv->slideshow_loop = FALSE;
 	window->priv->slideshow_switch_timeout = 0;
 	window->priv->slideshow_switch_source = NULL;

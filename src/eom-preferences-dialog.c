@@ -95,6 +95,12 @@ pd_radio_toggle_cb (GtkWidget *widget, GSettings *settings)
 }
 
 static void
+random_change_cb (GSettings *settings, gchar *key, GtkWidget *widget)
+{
+	gtk_widget_set_sensitive (widget, !g_settings_get_boolean (settings, key));
+}
+
+static void
 eom_preferences_response_cb (GtkDialog *dlg, gint res_id, gpointer data)
 {
 	switch (res_id) {
@@ -125,6 +131,7 @@ eom_preferences_dialog_constructor (GType type,
 	GtkWidget *background_radio;
 	GtkWidget *color_button;
 	GtkWidget *upscale_check;
+	GtkWidget *random_check;
 	GtkWidget *loop_check;
 	GtkWidget *seconds_spin;
 	GtkWidget *plugin_manager;
@@ -154,6 +161,7 @@ eom_preferences_dialog_constructor (GType type,
 			         "background_radio", &background_radio,
 			         "color_button", &color_button,
 			         "upscale_check", &upscale_check,
+			         "random_check", &random_check,
 			         "loop_check", &loop_check,
 			         "seconds_spin", &seconds_spin,
 			         "plugin_manager_container", &plugin_manager_container,
@@ -286,6 +294,19 @@ eom_preferences_dialog_constructor (GType type,
 					 G_OBJECT (loop_check),
 					 "active",
 					 G_SETTINGS_BIND_DEFAULT);
+
+	g_settings_bind (priv->fullscreen_settings,
+					 EOM_CONF_FULLSCREEN_RANDOM,
+					 G_OBJECT (random_check),
+					 "active",
+					 G_SETTINGS_BIND_DEFAULT);
+	g_signal_connect (priv->fullscreen_settings,
+					  "changed::" EOM_CONF_FULLSCREEN_RANDOM,
+					  G_CALLBACK (random_change_cb),
+					  loop_check);
+	random_change_cb (priv->fullscreen_settings,
+					  EOM_CONF_FULLSCREEN_RANDOM,
+					  loop_check);
 
 	g_settings_bind (priv->fullscreen_settings,
 					 EOM_CONF_FULLSCREEN_SECONDS,

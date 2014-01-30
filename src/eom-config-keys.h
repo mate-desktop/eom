@@ -47,6 +47,7 @@
 #define EOM_CONF_VIEW_USE_BG_COLOR              "use-background-color"
 
 #define EOM_CONF_FULLSCREEN_SCHEMA              "org.mate.eom.full-screen"
+#define EOM_CONF_FULLSCREEN_RANDOM              "random"
 #define EOM_CONF_FULLSCREEN_LOOP                "loop"
 #define EOM_CONF_FULLSCREEN_UPSCALE             "upscale"
 #define EOM_CONF_FULLSCREEN_SECONDS             "seconds"

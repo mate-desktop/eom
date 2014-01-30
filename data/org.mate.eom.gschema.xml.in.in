@@ -53,6 +53,11 @@
     </key>
   </schema>
   <schema id="org.mate.eom.full-screen" path="/org/mate/eom/full-screen/">
+    <key name="random" type="b">
+      <default>false</default>
+      <_summary>Randomize the image sequence</_summary>
+      <_description>Whether the sequence of images should be shown in an random loop.</_description>
+    </key>
     <key name="loop" type="b">
       <default>true</default>
       <_summary>Loop through the image sequence</_summary>
