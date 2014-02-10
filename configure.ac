@@ -105,6 +105,7 @@ case "$with_gtk" in
        GTK_PRINT_REQUIRED=3.0.0
        ;;
 esac
+AC_SUBST(GTK_API_VERSION)
 
 GLIB_REQUIRED=2.25.9
 GIO_REQUIRED=2.25.9
