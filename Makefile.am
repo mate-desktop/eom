@@ -8,6 +8,7 @@ SUBDIRS = $(jpeg_DIRS) cut-n-paste bindings src man plugins po help data doc
 
 EXTRA_DIST = 		\
 	AUTHORS			\
+	autogen.sh		\
 	ChangeLog		\
 	COPYING			\
 	HACKING			\
