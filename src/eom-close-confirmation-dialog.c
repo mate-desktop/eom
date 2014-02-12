@@ -6,7 +6,7 @@
  *
  * Based on gedit code (gedit/gedit-close-confirmation.c) by gedit Team
  *
- * Copyright (C) 2004-2009 MATE Foundation 
+ * Copyright (C) 2004-2009 GNOME Foundation 
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
