@@ -5,13 +5,15 @@
 # Translators:
 # Ján Ďanovský <dagsoftware@yahoo.com>, 2013
 # SGOrava <sgd.orava@gmail.com>, 2013
+# SGOrava <sgd.orava@gmail.com>, 2013
+# Tibor Kaputa <tibbbi2@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
-"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-12-30 15:48+0100\n"
-"PO-Revision-Date: 2013-06-10 15:13+0000\n"
-"Last-Translator: Ján Ďanovský <dagsoftware@yahoo.com>\n"
+"PO-Revision-Date: 2014-02-10 18:37+0000\n"
+"Last-Translator: tibbi <tibbbi2@gmail.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/projects/p/MATE/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,7 +31,7 @@ msgstr ""
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:934
 #, c-format
 msgid "Show “_%s”"
-msgstr "Zobraziť “_%s”"
+msgstr "Zobraziť „_%s“"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1397
 msgid "_Move on Toolbar"
@@ -163,7 +165,7 @@ msgstr "Umiestnenie:"
 
 #: ../data/eom-image-properties-dialog.ui.h:18
 msgid "Metadata"
-msgstr "Metaúdaje"
+msgstr "Metadáta"
 
 #: ../data/eom-image-properties-dialog.ui.h:19
 msgid "Metering Mode:"
@@ -386,7 +388,7 @@ msgid ""
 "moved to its own page in the dialog. This should make the dialog more usable"
 " on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
 "be embedded on the \"Metadata\" page."
-msgstr "Ak je aktivované, podrobný zoznam s metadátami v okne vlastností bude premiestnený na vlastnú stránku v okne. Malo by to pomôcť s ergonómiou na menších obrazovkách, aké sú napr. používané na netbookoch. Ak zakázané, widget bude vložený na \\\"Metadata\\\" stránku."
+msgstr "Ak je aktivované, podrobný zoznam s metadátami v okne vlastností bude premiestnený na vlastnú stránku v okne. Malo by to pomôcť s ergonómiou na menších obrazovkách, aké sú napr. používané na netbookoch. Ak je zakázané, widget bude vložený na stránku „Metadata“."
 
 #: ../data/eom.schemas.in.h:13
 msgid ""
@@ -422,7 +424,7 @@ msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
 "plugin."
-msgstr "Zoznam aktívnych zásuvných modulov. Neobsahuje to \"Umiestnenie\" aktívnych zásuvných modulov. Ak chcete zistiť \"Umiestnenie\" aktívnych modulov, prosím pozrite súbor .eom-plugin"
+msgstr "Zoznam aktívnych zásuvných modulov. Neobsahuje to „Umiestnenie“ aktívnych zásuvných modulov. Ak chcete zistiť „Umiestnenie“ aktívnych modulov, prosím pozrite súbor .eom-plugin"
 
 #: ../data/eom.schemas.in.h:19
 msgid "Loop through the image sequence"
@@ -466,7 +468,7 @@ msgid ""
 "This value defines the zooming step used for each scroll event. For example,"
 " 0.05 results in a 5% zoom increment for each scroll event and 1.00 result "
 "in a 100% zoom increment."
-msgstr "Násobič, ktorý sa má použiť pri zväčšovaní pomocou skrolovacieho tlačítka. Táto hodnota reprezentuje krok zväčšenia použitý pre každú udalosť skrolovacieho tlačítka. Napríklad, hodnota 0.05 znamená priblíženie o 5% a 1.00 znamená priblíženie o 100%."
+msgstr "Násobok, ktorý sa má použiť pri zväčšovaní pomocou skrolovacieho tlačidla. Táto hodnota reprezentuje krok zväčšenia použitý pre každú udalosť skrolovacieho tlačidla. Napríklad, hodnota 0.05 znamená priblíženie o 5% a 1.00 znamená priblíženie o 100%."
 
 #: ../data/eom.schemas.in.h:29
 msgid "Transparency color"
@@ -478,7 +480,7 @@ msgstr "Indikátor priesvitnosti"
 
 #: ../data/eom.schemas.in.h:31
 msgid "Trash images without asking"
-msgstr "Presunúť obrázky do koša bez opýtania"
+msgstr "Presunúť obrázky do Koša bez opýtania"
 
 #: ../data/eom.schemas.in.h:32
 msgid "Use a custom background color"
@@ -498,13 +500,13 @@ msgstr "Či je možné meniť veľkosť panelu zbierky obrázkov."
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
-msgstr "Či sa má pri zväčšení obrázok extrapolovať. Zobrazenie je rozmazané a je o niečo málo pomalšie ako neextrapolované obrázky."
+msgstr "Či sa má pri zväčšení obrázok extrapolovať. Zobrazenie je rozmazané a je o niečo pomalšie ako neextrapolované obrázky."
 
 #: ../data/eom.schemas.in.h:36
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
-msgstr "Či sa má pri zmenšení obrázok interpolovať. Zobrazenie je kvalitnejšie, ale je o niečo málo pomalšie ako neinterpolované obrázky."
+msgstr "Či sa má pri zmenšení obrázok interpolovať. Zobrazenie je kvalitnejšie, ale je o niečo pomalšie ako neinterpolované obrázky."
 
 #: ../data/eom.schemas.in.h:37
 msgid ""
@@ -547,7 +549,7 @@ msgstr "Ak neuložíte, vaše zmeny budú stratené."
 #: ../src/eom-close-confirmation-dialog.c:409
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
-msgstr "Uložiť zmeny v obrázku \"%s\" pred ukončením?"
+msgstr "Uložiť zmeny v obrázku „%s“ pred ukončením?"
 
 #: ../src/eom-close-confirmation-dialog.c:604
 #, c-format
@@ -907,12 +909,12 @@ msgstr "_Skryť"
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
-msgstr "Obrázok \"%s\" bol upravený externou aplikáciou.\nChcete ho znovu načítať?"
+msgstr "Obrázok „%s“ bol upravený externou aplikáciou.\nChcete ho znovu načítať?"
 
 #: ../src/eom-window.c:1305
 #, c-format
 msgid "Use \"%s\" to open the selected image"
-msgstr "Použiť  \"%s\" na otvorenie vybraného obrázku"
+msgstr "Použiť  „%s“ na otvorenie vybraného obrázku"
 
 #. Translators: This string is displayed in the statusbar
 #. * while saving images. The tokens are from left to right:
@@ -922,12 +924,12 @@ msgstr "Použiť  \"%s\" na otvorenie vybraného obrázku"
 #: ../src/eom-window.c:1455
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
-msgstr "Ukladám obrázok \"%s\" (%u/%u)"
+msgstr "Ukladám obrázok „%s“ (%u/%u)"
 
 #: ../src/eom-window.c:1808
 #, c-format
 msgid "Opening image \"%s\""
-msgstr "Otvára sa obrázok \"%s\""
+msgstr "Otvára sa obrázok „%s“"
 
 #: ../src/eom-window.c:2498
 #, c-format
@@ -946,7 +948,7 @@ msgstr "_Obnoviť základné nastavenia"
 
 #: ../src/eom-window.c:2844
 msgid "translator-credits"
-msgstr "Stanislav Višňovský\nIvan Noris\nPeter Tuhársky <tuharsky@misbb.sk>"
+msgstr "Stanislav Višňovský\nIvan Noris\nPeter Tuhársky <tuharsky@misbb.sk>\nTibor Kaputa <tibbbi2@gmail.com>"
 
 #: ../src/eom-window.c:2847
 msgid ""
@@ -954,7 +956,7 @@ msgid ""
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version.\n"
-msgstr "Tento program je free software; môžete ho redistribuovať a/alebo modifikovať za podmienok GNU General Public License publikovaných Free Software Foundation; a to buď verzie licencie 2, alebo (podľa vášho uváženia) ľubovoľnej neskoršej verzie.\n"
+msgstr "Tento program je slobodný softvér; môžete ho šíriť a/alebo modifikovať za podmienok GNU General Public License publikovaných Free Software Foundation; a to buď verzie licencie 2, alebo (podľa vášho uváženia) ľubovoľnej neskoršej verzie.\n"
 
 #: ../src/eom-window.c:2851
 msgid ""
@@ -962,7 +964,7 @@ msgid ""
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details.\n"
-msgstr "Tento program je distribuovaný v nádeji, že bude užitočný, ale BEZ AKEJKOĽVEK ZÁRUKY; a to ani bez predpokladanej záruky PREDAJNOSTI, alebo VHODNOSTI PRE KONKRÉTNY ÚČEL. Pre ďalšie podrobnosti viz. GNU General Public License.\n"
+msgstr "Tento program je distribuovaný v nádeji, že bude užitočný, ale BEZ AKEJKOĽVEK ZÁRUKY; a to ani bez predpokladanej záruky PREDAJNOSTI, alebo VHODNOSTI PRE KONKRÉTNY ÚČEL. Pre ďalšie podrobnosti viď GNU General Public License.\n"
 
 #: ../src/eom-window.c:2855
 msgid ""
@@ -992,25 +994,25 @@ msgstr "_Otvoriť nastavenia pozadia"
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
-msgstr "Obrázok \"%s\" bol nastavený ako pozadie plochy.\nChcete upraviť jej vzhľad?"
+msgstr "Obrázok „%s“ bol nastavený ako pozadie plochy.\nChcete upraviť jeho vzhľad?"
 
 #: ../src/eom-window.c:3410
 msgid "Saving image locally…"
-msgstr "Obrázok sa ukladá miestne..."
+msgstr "Obrázok sa ukladá miestne…"
 
 #: ../src/eom-window.c:3492
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
-msgstr "Chcete presunúť obrázok \"%s\" do koša?"
+msgstr "Chcete presunúť obrázok „%s“ do Koša?"
 
 #: ../src/eom-window.c:3495
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
-msgstr "Kôš pre \"%s\" nie je dostupný. Chcete tento obrázok odstrániť natrvalo??"
+msgstr "Kôš pre „%s“ nebol nájdený. Chcete tento obrázok odstrániť natrvalo?"
 
 #: ../src/eom-window.c:3500
 #, c-format
@@ -1021,18 +1023,18 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] "Chcete presunúť obrázok do koša?"
-msgstr[1] "Chcete presunúť %d obrázky do koša?"
-msgstr[2] "Chcete presunúť %d obrázkov do koša?"
+msgstr[1] "Chcete presunúť %d obrázky do Koša?"
+msgstr[2] "Chcete presunúť %d obrázkov do Koša?"
 
 #: ../src/eom-window.c:3505
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
-msgstr "Niektoré z vybraných obrázkov nie je možné presunúť do koša a budú odstránené natrvalo. Ste si istý, že chcete pokračovať?"
+msgstr "Niektoré z vybraných obrázkov nie je možné presunúť do Koša a budú trvale odstránené. Ste si istý, že chcete pokračovať?"
 
 #: ../src/eom-window.c:3522 ../src/eom-window.c:3980 ../src/eom-window.c:4004
 msgid "Move to _Trash"
-msgstr "Presunúť do _koša"
+msgstr "Presunúť do _Koša"
 
 #: ../src/eom-window.c:3524
 msgid "_Do not ask again during this session"
@@ -1041,7 +1043,7 @@ msgstr "_Nepýtať sa znovu počas tejto relácie"
 #: ../src/eom-window.c:3569 ../src/eom-window.c:3583
 #, c-format
 msgid "Couldn't access trash."
-msgstr "Nepodarilo sa použiť kôš."
+msgstr "Nepodarilo sa použiť Kôš."
 
 #: ../src/eom-window.c:3591
 #, c-format
@@ -1079,11 +1081,11 @@ msgstr "_Pomocník"
 
 #: ../src/eom-window.c:3911
 msgid "_Open…"
-msgstr "_Otvoriť..."
+msgstr "_Otvoriť…"
 
 #: ../src/eom-window.c:3912
 msgid "Open a file"
-msgstr "Otvorí súbor"
+msgstr "Otvoriť súbor"
 
 #: ../src/eom-window.c:3914
 msgid "_Close"
@@ -1091,7 +1093,7 @@ msgstr "_Zavrieť"
 
 #: ../src/eom-window.c:3915
 msgid "Close window"
-msgstr "Zavrie okno"
+msgstr "Zavrieť okno"
 
 #: ../src/eom-window.c:3917
 msgid "T_oolbar"
@@ -1220,7 +1222,7 @@ msgstr "Prevrátiť _vertikálne"
 
 #: ../src/eom-window.c:3969
 msgid "Mirror the image vertically"
-msgstr "Preklopiť vertikálne (zhora nadol)"
+msgstr "Preklopiť zvislo"
 
 #: ../src/eom-window.c:3971
 msgid "_Rotate Clockwise"
