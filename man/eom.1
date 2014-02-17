@@ -1,28 +1,64 @@
+.\" Man page for EOM
+.TH EOM 1 "31 January 2014" "MATE Desktop Environment"
+.\" Please adjust this date when revising the manpage.
 .\"
-.\" eom manual page.
-.\" (C) 2013 Scott Balneaves (sbalneav@mate-desktop.org)
-.\"
-.TH EOM 1 "MATE"
-.SH NAME
-eom \- Eye of Mate image viewer
-.SH SYNOPSIS
-.B eom [\-\-fullscreen] [\-\-disable-image-collection] [\-\-slide-show] [\-\-new instance]
-.SH DESCRIPTION
-The \fIeom\fP program allows you to view and perform some rudimentary image manipulation operations (rotate, flip, etc.).
-desktop.
-.SH OPTIONS
+.SH "NAME"
+eom \- The Eye of MATE Image Viewer
+.SH "SYNOPSIS"
+.B eom [\-\-fullscreen] [\-\-disable-image-collection] [\-\-slide-show] [\-\-new instance] [FILES...]
+.SH "DESCRIPTION"
+\fBeom\fR or the Eye of MATE is the official image viewer for the MATE Desktop Environment. It aims to be simplistic, lightweight, and easy to use. The Eye of MATE may also be used to perform basic tasks like image flipping and rotation.
+.PP
+Eye of MATE features a flexible plugin system which can be used to dynamically add new advanced features to \fBeom\fR itself. \fBeom\fR uses the gdk-pixbuf library, it can handle large images, zoom, and scroll with low memory usage.
+.PP
+This manual page briefly documents the \fBeom\fR command.
+.SH "OPTIONS"
 .TP
-.I \-\-fullscreen
-Start eom in fullscreen mode.
+\fBfilename(s)...\fR
+Specifies the image to open when \fBeom\fR starts. If this is not specified, \fBeom\fR will start with a blank window and you may open a file from the menu or by using the shortcut CTRL+O. \fBeom\fR also supports handling of remote files.
 .TP
-.I \-\-disable-image-collection
-Disable image collection.
+\fB\-\-display=DISPLAY\fR
+X display to use.
 .TP
-.I \-\-slide-show
+\fB\-f, \-\-fullscreen\fR
+Start \fBeom\fR in fullscreen mode.
+.TP
+\fB\-c, \-\-disable-image-collection\fR
+Disable image collection viewer.
+.TP
+\fB\-s, \-\-slide-show\fR
 Open in slideshow mode.
 .TP
-.I \-\-new-instance
-Start a new instance instead of reusing an existing one.
-.SH BUGS
-If you find bugs in the \fIeom\fP program, please report
-these on https://github.com/mate-desktop/eom/issues.
+\fB\-n, \-\-new-instance\fR
+Start a new instance instead of reusing an existing window.
+.TP
+\fB\-\-version\fR
+Output version information and exit.
+.TP
+\fB\-h, \-\-help\fR
+Print standard command line options.
+.TP
+\fB\-\-help\-all\fR
+Print all command line options.
+.P
+This program also accepts the standard GTK options.
+.SH "EXAMPLES"
+\fBeom -f http://mate-desktop.org/assets/img/icons/mate.png\fR
+.RS 4
+Open http://mate-desktop.org/assets/img/icons/mate.png in fullscreen mode.
+.RE
+.PP
+\fBeom -s /usr/share/eom/icons/hicolor/scalable/actions\fR
+.RS 4
+Open the images in the directory "/usr/share/eom/icons/hicolor/scalable/actions" in slideshow mode.
+.SH "BUGS"
+.SS Should you encounter any bugs, they may be reported at: 
+http://github.com/mate-desktop/eom/issues
+.SH "AUTHORS"
+.SS This Manual Page has been written for the MATE Desktop Environment by:
+Scott Balneaves <sbalneav@mate-desktop.org> (2013)
+Adam Erdman <hekel@archlinux.info> (2014)
+.SH "SEE ALSO"
+.SS
+Eye of MATE documentation can be found from the "Help" menu, or by pressing the F1 key. 
+Further information may also be available at: http://wiki.mate-desktop.org/docs
