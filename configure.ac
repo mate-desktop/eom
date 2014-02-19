@@ -3,11 +3,11 @@ AC_CONFIG_MACRO_DIR([m4])
 
 m4_define(eom_major_version, 1)
 m4_define(eom_minor_version, 7)
-m4_define(eom_micro_version, 0)
+m4_define(eom_micro_version, 90)
 m4_define(eom_version, eom_major_version.eom_minor_version.eom_micro_version)
 
 AC_INIT([eom], eom_version, [http://www.mate-desktop.org], [eom])
-AM_INIT_AUTOMAKE([1.9 foreign no-dist-gzip dist-xz])
+AM_INIT_AUTOMAKE([1.9 foreign no-dist-gzip dist-xz check-news])
 
 # Support silencing the build output if supported (automake-1.11+)
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
