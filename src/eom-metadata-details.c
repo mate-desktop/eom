@@ -39,6 +39,7 @@
 #include <gtk/gtk.h>
 
 #include <string.h>
+#include <math.h>
 
 typedef enum {
     EXIF_CATEGORY_CAMERA,
@@ -372,7 +373,7 @@ eom_exif_entry_get_value (ExifEntry    *e,
         {
             gsize rational_size;
             ExifRational r;
-            gfloat h = 0., m = 0.;
+            gfloat h = 0., m = 0., s = 0.;
 
 
             rational_size = exif_format_get_size (EXIF_FORMAT_RATIONAL);
@@ -385,15 +386,33 @@ eom_exif_entry_get_value (ExifEntry    *e,
                 h = (gfloat)r.numerator / r.denominator;
 
             r = exif_get_rational (e->data + rational_size, bo);
-            if (r.denominator != 0)
-                m = (gfloat)r.numerator / (gfloat)r.denominator;
+			if (r.denominator != 0) {
+				if (r.numerator != 0) {
+					m = (gfloat)r.numerator /
+					    (gfloat)r.denominator;
+				} else {
+					double integ;
+
+					m = (gfloat)(modf (h, &integ) * 60.0);
+					h = (gfloat) integ;
+				}
+			}
 
             r = exif_get_rational (e->data + (2 * rational_size),
                            bo);
-            if (r.numerator != 0 && r.denominator != 0) {
-                gfloat s;
+			if (r.denominator != 0) {
+				if (r.numerator != 0) {
+					s = (gfloat)r.numerator /
+					    (gfloat)r.denominator;
+				} else {
+					double integ;
 
-                s = (gfloat)r.numerator / (gfloat)r.denominator;
+					s = (gfloat)(modf (m, &integ) * 60.0);
+					m = (gfloat) integ;
+				}
+			}
+
+			if (s != 0.0) {
                 g_snprintf (buf, n_buf,
                         "%.0f° %.0f' %.2f\"",
                         h, m, s);
