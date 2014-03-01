@@ -5,13 +5,14 @@
 # Translators:
 # kentarch <bkrhlim@aol.com>, 2013
 # kentarch <bkrhlim@aol.com>, 2013
+# Darkcircle <darkcircle.0426@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-15 15:23+0100\n"
-"PO-Revision-Date: 2014-02-15 14:33+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"PO-Revision-Date: 2014-02-27 13:25+0000\n"
+"Last-Translator: Darkcircle <darkcircle.0426@gmail.com>\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/MATE/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,11 +30,11 @@ msgstr ""
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:934
 #, c-format
 msgid "Show “_%s”"
-msgstr "“%s” 보이기"
+msgstr "“_%s” 보이기"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1397
 msgid "_Move on Toolbar"
-msgstr "도구 모음 옮기기(_M)"
+msgstr "도구 모음에서 옮기기(_M)"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1398
 msgid "Move the selected item on the toolbar"
@@ -322,7 +323,7 @@ msgstr "초"
 
 #: ../data/eom-preferences-dialog.ui.h:20
 msgid "_Random sequence"
-msgstr ""
+msgstr "임의 순서(_R)"
 
 #: ../data/eom-preferences-dialog.ui.h:21
 msgid "_Loop sequence"
@@ -350,18 +351,18 @@ msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
 "theme instead."
-msgstr ""
+msgstr "이미지 뒤 영역을 칠할 색상입니다. use-background-color 키를 설정하지 않으면, 활성화된 GTK+ 테마에서 대신 색상을 선택합니다."
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:5
 msgid "Use a custom background color"
-msgstr ""
+msgstr "사용자 정의 배경색 사용"
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:6
 msgid ""
 "If this is active, the color set by the background-color key will be used to"
 " fill the area behind the image. If it is not set, the current GTK+ theme "
 "will determine the fill color."
-msgstr ""
+msgstr "활성화하면, 배경색 키로 설정한 색상 설정을 이미지 뒤의 공간을 채우는데 사용합니다. 설정하지 않았다면 현재 GTK+ 테마가 채울 색상을 결정합니다."
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:7
 msgid "Interpolate Image"
@@ -371,7 +372,7 @@ msgstr "그림 인터폴레이션"
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
-msgstr ""
+msgstr "축소 보기할 때 이미지를 인터폴레이션 할지 결정합니다. 인터폴레이션을 적용하지 않은 그림보다 화질은 좋아질 수 있으나 표시 속도는 느려집니다."
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:9
 msgid "Extrapolate Image"
@@ -392,7 +393,7 @@ msgid ""
 "Determines how transparency should be indicated. Valid values are "
 "CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
 "determines the color value used."
-msgstr ""
+msgstr "투명함을 어떻게 나타낼지 결정합니다. 유효한 값은 CHECK_PATTERN, COLOR, NONE 입니다. COLOR를 선택하면 trans-color`키로 사용할 색상 값을 결정합니다."
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:13
 msgid "Scroll wheel zoom"
@@ -427,11 +428,11 @@ msgstr "transparency 키 값이 COLOR일 경우, 이 키 값이 투명한 부분
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:20
 msgid "Randomize the image sequence"
-msgstr ""
+msgstr "그림 순서를 임의화합니다"
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:21
 msgid "Whether the sequence of images should be shown in an random loop."
-msgstr ""
+msgstr "이미지 표시 순서의 임의 순환 방식 표시 여부입니다."
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:22
 msgid "Loop through the image sequence"
@@ -454,7 +455,7 @@ msgstr "거짓이면, 최초의 작은 그림을 화면에 맞게 늘리지 않�
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:27
 msgid "Delay in seconds until showing the next image"
-msgstr "다음 그림을 표시할 때까지의 지연 시간 (초 단위)"
+msgstr "다음 그림을 표시할 때까지 지연 시간(초 단위)"
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:28
 msgid ""
@@ -501,7 +502,7 @@ msgid ""
 "If activated, Eye of MATE won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
 "trash and would be deleted instead."
-msgstr ""
+msgstr "활성화하면, 그림을 휴지통으로 이동할 때 마테의 눈에서 물어보지 않습니다. 휴지통에 옮길 수 없어 대신 삭제할 경우에도 묻습니다."
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:38
 msgid ""
@@ -514,7 +515,7 @@ msgid ""
 "moved to its own page in the dialog. This should make the dialog more usable"
 " on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
 "be embedded on the \"Metadata\" page."
-msgstr ""
+msgstr "활성화하면, 속성 대화 상자의 자세한 메타데이터 목록을 대화 상자의 자체 페이지로 이동합니다. 이 동작은 작은 화면(예: 넷북 사용)에서 대화 상자를 쓸모있게 합니다. 비활성화하면, 위젯을 \"메타데이터\" 페이지에 내장합니다."
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:40
 msgid ""
@@ -528,7 +529,7 @@ msgid ""
 "will display the user's pictures folder using the XDG special user "
 "directories. If deactivated or the pictures folder has not been set up, it "
 "will show the current working directory."
-msgstr ""
+msgstr "활성화하고 활성 창에 불러온 그림이 없다면, 파일 선택 항은 XDG 특수 사용자 디렉터리를 활용하여 사용자의 그림 폴더 내용을 표시합니다. 비활성화하거나 그림 폴더를 설정하지 않았다면 현재 작업 디렉터리를 보여줍니다."
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:42
 msgid "Active plugins"
@@ -590,7 +591,7 @@ msgstr "마테의 눈이 파일 이름으로 저장할 수 있는 파일 형식�
 
 #: ../src/eom-file-chooser.c:133
 msgid "Please try a different file extension like .png or .jpg."
-msgstr ".png나 .jpg같은 파일 확장자로 다시 시도하시기 바랍니다."
+msgstr ".png나 .jpg같은 파일 확장자로 다시 시도하십시오."
 
 #: ../src/eom-file-chooser.c:165
 msgid "All Files"
@@ -616,7 +617,7 @@ msgstr[0] "픽셀"
 
 #: ../src/eom-file-chooser.c:444
 msgid "Open Image"
-msgstr ""
+msgstr "그림 열기"
 
 #: ../src/eom-file-chooser.c:452
 msgid "Save Image"
@@ -713,13 +714,13 @@ msgstr "값"
 #. A strftime-formatted string, to display the date the image was taken.
 #: ../src/eom-exif-util.c:113 ../src/eom-exif-util.c:153
 msgid "%a, %d %B %Y  %X"
-msgstr "%Y %B %d %a  %X"
+msgstr "%Y년 %B %d일 %a  %X"
 
 #. A strftime-formatted string, to display the date the image was taken, for
 #. the case we don't have the time.
 #: ../src/eom-exif-util.c:147
 msgid "%a, %d %B %Y"
-msgstr "%Y %B %d %a"
+msgstr "%Y년 %B %d일 %a"
 
 #: ../src/eom-error-message-area.c:107
 msgid "_Retry"
@@ -900,12 +901,12 @@ msgstr[0] "%i × %i 픽셀  %s    %i%%"
 
 #: ../src/eom-window.c:1038
 msgid "_Reload"
-msgstr ""
+msgstr "다시 읽기(_R)"
 
 #: ../src/eom-window.c:1040 ../src/eom-window.c:2907
 msgctxt "MessageArea"
 msgid "Hi_de"
-msgstr ""
+msgstr "숨기기(_D)"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
@@ -914,7 +915,7 @@ msgstr ""
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
-msgstr ""
+msgstr "\"%s\" 그림을 외부 프로그램에서 수정했습니다.\n다시 읽으시겠습니까?"
 
 #: ../src/eom-window.c:1205
 #, c-format
@@ -934,7 +935,7 @@ msgstr "\"%s\" 그림을 저장하는 중 (%u/%u)"
 #: ../src/eom-window.c:1708
 #, c-format
 msgid "Opening image \"%s\""
-msgstr ""
+msgstr "\"%s\" 그림 여는중"
 
 #: ../src/eom-window.c:2396
 #, c-format
@@ -976,7 +977,7 @@ msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
-msgstr ""
+msgstr "GNU 일반 공중 사용 허가서 사본을 이 프로그램과 받아야 합니다. 못받으셨다면 Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA에 요청하십시오."
 
 #: ../src/eom-window.c:2766
 msgid "Eye of MATE"
@@ -990,7 +991,7 @@ msgstr "마테 그림 뷰어."
 #. clash with mnemonics from eom's menubar
 #: ../src/eom-window.c:2905
 msgid "_Open Background Preferences"
-msgstr ""
+msgstr "배경 기본 설정 열기(_O)"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
@@ -1297,11 +1298,11 @@ msgstr "현재 그림을 전체화면 모드에서 봅니다"
 
 #: ../src/eom-window.c:3917
 msgid "Pause Slideshow"
-msgstr ""
+msgstr "슬라이드 쇼 일시 정지"
 
 #: ../src/eom-window.c:3918
 msgid "Pause or resume the slideshow"
-msgstr ""
+msgstr "슬라이드 쇼를 잠시 멈추거나 재개합니다"
 
 #: ../src/eom-window.c:3923 ../src/eom-window.c:3938
 msgid "_Previous Image"
@@ -1446,7 +1447,7 @@ msgstr "현재 실행 중인 창을 사용하지 않고 새로 시작합니다"
 
 #: ../src/main.c:80
 msgid "Show the application's version"
-msgstr ""
+msgstr "프로그램 버전 표시"
 
 #: ../src/main.c:81
 msgid "[FILE…]"
