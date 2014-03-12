@@ -22,7 +22,6 @@
 #ifndef __EOM_PROPERTIES_DIALOG_H__
 #define __EOM_PROPERTIES_DIALOG_H__
 
-#include "eom-dialog.h"
 #include "eom-image.h"
 #include "eom-thumb-view.h"
 
@@ -51,21 +50,21 @@ typedef enum {
 } EomPropertiesDialogPage;
 
 struct _EomPropertiesDialog {
-	EomDialog dialog;
+	GtkDialog dialog;
 
 	EomPropertiesDialogPrivate *priv;
 };
 
 struct _EomPropertiesDialogClass {
-	EomDialogClass parent_class;
+	GtkDialogClass parent_class;
 };
 
 GType	    eom_properties_dialog_get_type	(void) G_GNUC_CONST;
 
-GObject    *eom_properties_dialog_new	  	(GtkWindow               *parent,
-                                                 EomThumbView            *thumbview,
-						 GtkAction               *next_image_action,
-						 GtkAction               *previous_image_action);
+GtkWidget   *eom_properties_dialog_new	  	(GtkWindow               *parent,
+                                             EomThumbView            *thumbview,
+                                             GtkAction               *next_image_action,
+                                             GtkAction               *previous_image_action);
 
 void	    eom_properties_dialog_update  	(EomPropertiesDialog     *prop,
 						 EomImage                *image);

@@ -144,7 +144,7 @@ struct _EomWindowPrivate {
 	GtkWidget           *nav;
 	GtkWidget           *message_area;
 	GtkWidget           *toolbar;
-	GObject             *properties_dlg;
+	GtkWidget           *properties_dlg;
 
 	GtkActionGroup      *actions_window;
 	GtkActionGroup      *actions_image;
@@ -3044,7 +3044,7 @@ eom_window_cmd_print (GtkAction *action, gpointer user_data)
  * Returns: (transfer none): a #GtkDialog.
  */
 
-EomDialog*
+GtkWidget*
 eom_window_get_properties_dialog (EomWindow *window)
 {
 	EomWindowPrivate *priv;
@@ -3077,7 +3077,7 @@ eom_window_get_properties_dialog (EomWindow *window)
 				 G_SETTINGS_BIND_GET);
 	}
 
-	return EOM_DIALOG (priv->properties_dlg);
+	return priv->properties_dlg;
 }
 
 static void
@@ -3085,12 +3085,12 @@ eom_window_cmd_properties (GtkAction *action, gpointer user_data)
 {
 	EomWindow *window = EOM_WINDOW (user_data);
 	EomWindowPrivate *priv;
-	EomDialog *dialog;
+	GtkWidget *dialog;
 
 	priv = window->priv;
 
 	dialog = eom_window_get_properties_dialog (window);
-	eom_dialog_show (dialog);
+	gtk_widget_show (dialog);
 }
 
 static void

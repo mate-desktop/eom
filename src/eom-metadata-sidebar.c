@@ -304,7 +304,7 @@ static void
 _details_button_clicked_cb (GtkButton *button, gpointer user_data)
 {
 	EomMetadataSidebarPrivate *priv = EOM_METADATA_SIDEBAR(user_data)->priv;
-	EomDialog *dlg;
+	GtkWidget *dlg;
 
 	g_return_if_fail (priv->parent_window != NULL);
 
@@ -313,7 +313,7 @@ _details_button_clicked_cb (GtkButton *button, gpointer user_data)
 	g_return_if_fail (dlg != NULL);
 	eom_properties_dialog_set_page (EOM_PROPERTIES_DIALOG (dlg),
 					EOM_PROPERTIES_DIALOG_PAGE_DETAILS);
-	eom_dialog_show (dlg);
+	gtk_widget_show (dlg);
 }
 #endif /* HAVE_METADATA */
 
