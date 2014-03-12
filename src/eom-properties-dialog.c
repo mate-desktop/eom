@@ -105,7 +105,7 @@ struct _EomPropertiesDialogPrivate {
 	gboolean        netbook_mode;
 };
 
-G_DEFINE_TYPE_WITH_PRIVATE (EomPropertiesDialog, eom_properties_dialog, EOM_TYPE_DIALOG);
+G_DEFINE_TYPE_WITH_PRIVATE (EomPropertiesDialog, eom_properties_dialog, GTK_TYPE_DIALOG);
 
 static void
 pd_update_general_tab (EomPropertiesDialog *prop_dlg,
@@ -403,19 +403,11 @@ pd_exif_details_activated_cb (GtkExpander *expander,
 #endif
 
 static void
-pd_close_button_clicked_cb (GtkButton *button,
-			    gpointer   user_data)
-{
-	eom_dialog_hide (EOM_DIALOG (user_data));
-}
-
-static void
 pd_folder_button_clicked_cb (GtkButton *button, gpointer data)
 {
 	EomPropertiesDialogPrivate *priv = EOM_PROPERTIES_DIALOG (data)->priv;
 	GdkScreen *screen;
 	guint32 timestamp;
-
 
 	if (!priv->folder_button_uri)
 		return;
@@ -432,21 +424,8 @@ eom_properties_dialog_page_switch (GtkNotebook     *notebook,
 				   guint            page_index,
 				   EomPropertiesDialog *prop_dlg)
 {
-
 	if (prop_dlg->priv->update_page)
 		prop_dlg->priv->current_page = page_index;
-
-	return TRUE;
-}
-
-static gint
-eom_properties_dialog_delete (GtkWidget   *widget,
-			      GdkEventAny *event,
-			      gpointer     user_data)
-{
-	g_return_val_if_fail (EOM_IS_PROPERTIES_DIALOG (user_data), FALSE);
-
-	eom_dialog_hide (EOM_DIALOG (user_data));
 
 	return TRUE;
 }
@@ -563,9 +542,9 @@ eom_properties_dialog_dispose (GObject *object)
 }
 
 static void
-eom_properties_dialog_class_init (EomPropertiesDialogClass *class)
+eom_properties_dialog_class_init (EomPropertiesDialogClass *klass)
 {
-	GObjectClass *g_object_class = (GObjectClass *) class;
+	GObjectClass *g_object_class = (GObjectClass *) klass;
 
 	g_object_class->dispose = eom_properties_dialog_dispose;
 	g_object_class->set_property = eom_properties_dialog_set_property;
@@ -589,13 +568,125 @@ eom_properties_dialog_class_init (EomPropertiesDialogClass *class)
 							      FALSE,
 							      G_PARAM_READWRITE |
 							      G_PARAM_STATIC_STRINGS));
+
+	gchar* data;
+	gsize data_size;
+	g_file_get_contents(g_build_filename (EOM_DATA_DIR, "eom-image-properties-dialog.ui", NULL), &data, &data_size, NULL);
+	GBytes *bytes = g_bytes_new_static(data, data_size);
+	gtk_widget_class_set_template((GtkWidgetClass *) klass, bytes);
+
+	GtkWidgetClass *wklass = (GtkWidgetClass*) klass;
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     notebook);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     previous_button);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     next_button);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     close_button);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     thumbnail_image);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     general_box);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     name_label);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     width_label);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     height_label);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     type_label);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     bytes_label);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     folder_button);
+
+#if HAVE_EXIF
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     exif_aperture_label);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     exif_exposure_label);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     exif_focal_label);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     exif_flash_label);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     exif_iso_label);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     exif_metering_label);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     exif_model_label);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     exif_date_label);
+#endif
+#if HAVE_EXEMPI
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     xmp_location_label);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     xmp_description_label);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     xmp_keywords_label);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     xmp_creator_label);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     xmp_rights_label);
+#else
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     xmp_box);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     xmp_box_label);
+#endif
+#ifdef HAVE_METADATA
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     metadata_box);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     metadata_details_expander);
+	gtk_widget_class_bind_template_child_private(wklass,
+						     EomPropertiesDialog,
+						     metadata_details_box);
+
+	gtk_widget_class_bind_template_callback(wklass,
+						pd_exif_details_activated_cb);
+#endif
+	gtk_widget_class_bind_template_callback(wklass,
+						eom_properties_dialog_page_switch);
+	gtk_widget_class_bind_template_callback(wklass,
+						pd_folder_button_clicked_cb);
 }
 
 static void
 eom_properties_dialog_init (EomPropertiesDialog *prop_dlg)
 {
 	EomPropertiesDialogPrivate *priv;
-	GtkWidget *dlg;
 #ifndef HAVE_EXEMPI
 	GtkWidget *xmp_box, *xmp_box_label;
 #endif
@@ -609,70 +700,17 @@ eom_properties_dialog_init (EomPropertiesDialog *prop_dlg)
 
 	priv->update_page = FALSE;
 
-	eom_dialog_construct (EOM_DIALOG (prop_dlg),
-			      "eom-image-properties-dialog.ui",
-			      "eom_image_properties_dialog");
+	gtk_widget_init_template (GTK_WIDGET (prop_dlg));
 
-	eom_dialog_get_controls (EOM_DIALOG (prop_dlg),
-			         "eom_image_properties_dialog", &dlg,
-			         "notebook", &priv->notebook,
-			         "previous_button", &priv->previous_button,
-			         "next_button", &priv->next_button,
-			         "close_button", &priv->close_button,
-			         "thumbnail_image", &priv->thumbnail_image,
-			         "general_box", &priv->general_box,
-			         "name_label", &priv->name_label,
-			         "width_label", &priv->width_label,
-			         "height_label", &priv->height_label,
-			         "type_label", &priv->type_label,
-			         "bytes_label", &priv->bytes_label,
-			         "folder_button", &priv->folder_button,
-#ifdef HAVE_EXIF
-			         "exif_aperture_label", &priv->exif_aperture_label,
-			         "exif_exposure_label", &priv->exif_exposure_label,
-			         "exif_focal_label", &priv->exif_focal_label,
-			         "exif_flash_label", &priv->exif_flash_label,
-			         "exif_iso_label", &priv->exif_iso_label,
-			         "exif_metering_label", &priv->exif_metering_label,
-			         "exif_model_label", &priv->exif_model_label,
-			         "exif_date_label", &priv->exif_date_label,
-#endif
-#ifdef HAVE_EXEMPI
-				 "xmp_location_label", &priv->xmp_location_label,
-				 "xmp_description_label", &priv->xmp_description_label,
-				 "xmp_keywords_label", &priv->xmp_keywords_label,
-				 "xmp_creator_label", &priv->xmp_creator_label,
-				 "xmp_rights_label", &priv->xmp_rights_label,
-#else
-				 "xmp_box", &xmp_box,
-				 "xmp_box_label", &xmp_box_label,
-#endif
-#ifdef HAVE_METADATA
-				 "metadata_box", &priv->metadata_box,
-				 "metadata_details_expander", &priv->metadata_details_expander,
-				 "metadata_details_box", &priv->metadata_details_box,
-#endif
-			         NULL);
+	g_signal_connect (prop_dlg,
+	                  "delete-event",
+	                 G_CALLBACK (gtk_widget_hide_on_delete),
+	                 prop_dlg);
 
-	g_signal_connect (dlg,
-			  "delete-event",
-			  G_CALLBACK (eom_properties_dialog_delete),
-			  prop_dlg);
-
-	g_signal_connect (priv->notebook,
-			  "switch-page",
-			  G_CALLBACK (eom_properties_dialog_page_switch),
-			  prop_dlg);
-
-	g_signal_connect (priv->close_button,
-			  "clicked",
-			  G_CALLBACK (pd_close_button_clicked_cb),
-			  prop_dlg);
-
-	g_signal_connect (priv->folder_button,
-			  "clicked",
-			  G_CALLBACK (pd_folder_button_clicked_cb),
-			  prop_dlg);
+	g_signal_connect_swapped (priv->close_button,
+	                          "clicked",
+	                          G_CALLBACK (gtk_widget_hide_on_delete),
+	                          prop_dlg);
 
 	gtk_widget_set_size_request (priv->thumbnail_image, 100, 100);
 
@@ -705,11 +743,6 @@ eom_properties_dialog_init (EomPropertiesDialog *prop_dlg)
 				   sw);
 	}
 
-	g_signal_connect_after (G_OBJECT (priv->metadata_details_expander),
-			        "notify::expanded",
-			  	G_CALLBACK (pd_exif_details_activated_cb),
-			  	dlg);
-
 #ifndef HAVE_EXEMPI
 	gtk_widget_hide (xmp_box);
 	gtk_widget_hide (xmp_box_label);
@@ -737,7 +770,7 @@ eom_properties_dialog_init (EomPropertiesDialog *prop_dlg)
  * Returns: (transfer full) (type EomPropertiesDialog): a new #EomPropertiesDialog
  **/
 
-GObject *
+GtkWidget *
 eom_properties_dialog_new (GtkWindow    *parent,
 			   EomThumbView *thumbview,
 			   GtkAction    *next_image_action,
@@ -751,15 +784,18 @@ eom_properties_dialog_new (GtkWindow    *parent,
 	g_return_val_if_fail (GTK_IS_ACTION (previous_image_action), NULL);
 
 	prop_dlg = g_object_new (EOM_TYPE_PROPERTIES_DIALOG,
-				 "parent-window", parent,
-			     	 "thumbview", thumbview,
-			     	 NULL);
+	                         "thumbview", thumbview,
+	                         NULL);
+
+	if (parent) {
+		gtk_window_set_transient_for (GTK_WINDOW (prop_dlg), parent);
+	}
 
 	gtk_activatable_set_related_action (GTK_ACTIVATABLE (EOM_PROPERTIES_DIALOG (prop_dlg)->priv->next_button), next_image_action);
 
 	gtk_activatable_set_related_action (GTK_ACTIVATABLE (EOM_PROPERTIES_DIALOG (prop_dlg)->priv->previous_button), previous_image_action);
 
-	return prop_dlg;
+	return GTK_WIDGET (prop_dlg);
 }
 
 void
