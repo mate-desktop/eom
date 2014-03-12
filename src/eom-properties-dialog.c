@@ -77,8 +77,6 @@ struct _EomPropertiesDialogPrivate {
 	GtkWidget      *bytes_label;
 	GtkWidget      *folder_button;
 	gchar          *folder_button_uri;
-	GtkWidget      *created_label;
-	GtkWidget      *modified_label;
 #ifdef HAVE_EXIF
 	GtkWidget      *exif_aperture_label;
 	GtkWidget      *exif_exposure_label;
@@ -629,8 +627,6 @@ eom_properties_dialog_init (EomPropertiesDialog *prop_dlg)
 			         "type_label", &priv->type_label,
 			         "bytes_label", &priv->bytes_label,
 			         "folder_button", &priv->folder_button,
-			         "created_label", &priv->created_label,
-			         "modified_label", &priv->modified_label,
 #ifdef HAVE_EXIF
 			         "exif_aperture_label", &priv->exif_aperture_label,
 			         "exif_exposure_label", &priv->exif_exposure_label,
