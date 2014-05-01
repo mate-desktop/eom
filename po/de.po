@@ -4,13 +4,14 @@
 # 
 # Translators:
 # bambuhle <politik@philippoi.de>, 2014
+# to_ba, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-15 15:23+0100\n"
-"PO-Revision-Date: 2014-02-15 18:44+0000\n"
-"Last-Translator: bambuhle <politik@philippoi.de>\n"
+"PO-Revision-Date: 2014-04-28 15:14+0000\n"
+"Last-Translator: to_ba\n"
 "Language-Team: German (http://www.transifex.com/projects/p/MATE/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -281,7 +282,7 @@ msgstr "Transparente Bereiche"
 
 #: ../data/eom-preferences-dialog.ui.h:10
 msgid "As check _pattern"
-msgstr "Als _Karo-Muster"
+msgstr "Als _Karomuster"
 
 #: ../data/eom-preferences-dialog.ui.h:11
 msgid "As custom c_olor:"
@@ -333,7 +334,7 @@ msgstr "Diaschau"
 
 #: ../data/eom-preferences-dialog.ui.h:23
 msgid "Plugins"
-msgstr "Plugins"
+msgstr "Erweiterungen"
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:1
 msgid "Automatic orientation"
@@ -500,7 +501,7 @@ msgid ""
 "If activated, Eye of MATE won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
 "trash and would be deleted instead."
-msgstr "Legt fest, ob Eye of MATE nicht nach Bestätigung fragt, wenn Bilder in den Mülleimer verschoben werden. Es wird aber in jedem Fall nachgefragt, wenn das Bild nicht in den Müll verschoben werden kann und stattdessen gelöscht wird."
+msgstr "Legt fest, ob Eye of MATE nicht nach Bestätigung fragt, wenn Bilder in den Papierkorb verschoben werden. Es wird aber in jedem Fall nachgefragt, wenn das Bild nicht in den Papierkorb verschoben werden kann und stattdessen gelöscht wird."
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:38
 msgid ""
@@ -531,14 +532,14 @@ msgstr "Wenn dieser Schlüssel auf »Wahr« gesetzt ist und kein Bild im aktiven
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:42
 msgid "Active plugins"
-msgstr "Aktivierte Plugins"
+msgstr "Aktivierte Erweiterungen"
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:43
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
 "plugin."
-msgstr "Liste aktivierter Plugins. Sie enthält nicht den »Ort« aktiver Plugins. Sehen Sie in der ».eom-plugin«-Datei eines Plugins nach, um den »Ort« (»Location«) zu erfahren."
+msgstr "Liste aktivierter Erweiterungen. Sie enthält nicht den »Ort« aktiver Erweiterungen. Sehen Sie in der ».eom-plugin«-Datei einer Erweiterung nach, um den »Ort« (»Location«) zu erfahren."
 
 #: ../src/eom-application.c:123
 msgid "Running in fullscreen mode"
@@ -1012,14 +1013,14 @@ msgstr "Bild wird lokal gespeichert …"
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
-msgstr "Soll »%s« wirklich\nin den Mülleimer verschoben werden?"
+msgstr "Soll »%s« wirklich\nin den Papierkorb verschoben werden?"
 
 #: ../src/eom-window.c:3399
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
-msgstr "Es konnte kein Müll für »%s« gefunden werden. Wollen Sie das Bild unwiderruflich löschen?"
+msgstr "Es konnte kein Papierkorb für »%s« gefunden werden. Wollen Sie das Bild unwiderruflich löschen?"
 
 #: ../src/eom-window.c:3404
 #, c-format
@@ -1029,18 +1030,18 @@ msgid ""
 msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
-msgstr[0] "Soll das ausgewählte Bild wirklich\nin den Müll verschoben werden?"
-msgstr[1] "Sollen die %d ausgewählten Bilder\nwirklich in den Müll verschoben werden?"
+msgstr[0] "Soll das ausgewählte Bild wirklich\nin den Papierkorb verschoben werden?"
+msgstr[1] "Sollen die %d ausgewählten Bilder\nwirklich in den Papierkorb verschoben werden?"
 
 #: ../src/eom-window.c:3409
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
-msgstr "Einige der zu löschenden Bilder können nicht in den Müll verschoben werden und werden daher unwiderruflich gelöscht. Sind Sie sicher, dass Sie fortfahren wollen?"
+msgstr "Einige der zu löschenden Bilder können nicht in den Papierkorb verschoben werden und werden daher unwiderruflich gelöscht. Sind Sie sicher, dass Sie fortfahren wollen?"
 
 #: ../src/eom-window.c:3426 ../src/eom-window.c:3884 ../src/eom-window.c:3908
 msgid "Move to _Trash"
-msgstr "In den _Müll verschieben"
+msgstr "In den _Papierkorb verschieben"
 
 #: ../src/eom-window.c:3428
 msgid "_Do not ask again during this session"
@@ -1049,7 +1050,7 @@ msgstr "Während _der laufenden Sitzung nicht erneut fragen"
 #: ../src/eom-window.c:3473 ../src/eom-window.c:3487
 #, c-format
 msgid "Couldn't access trash."
-msgstr "Auf den Mülleimer konnte nicht zugegriffen werden."
+msgstr "Auf den Papierkorb konnte nicht zugegriffen werden."
 
 #: ../src/eom-window.c:3495
 #, c-format
@@ -1127,11 +1128,11 @@ msgstr "Hilfe zu dieser Anwendung"
 
 #: ../src/eom-window.c:3830 ../src/eom-plugin-manager.c:505
 msgid "_About"
-msgstr "_Info"
+msgstr "_Über"
 
 #: ../src/eom-window.c:3831
 msgid "About this application"
-msgstr "Info zu dieser Anwendung"
+msgstr "Über diese Anwendung"
 
 #: ../src/eom-window.c:3836
 msgid "_Toolbar"
@@ -1252,11 +1253,11 @@ msgstr "Als _Hintergrundbild"
 
 #: ../src/eom-window.c:3882
 msgid "Set the selected image as the desktop background"
-msgstr "Legt das ausgewählte Bild als Hintergrund der Arbeitsfläche fest"
+msgstr "Legt das ausgewählte Bild als Hintergrund des Schreibtisches fest"
 
 #: ../src/eom-window.c:3885
 msgid "Move the selected image to the trash folder"
-msgstr "Das gewählte Bild in den Mülleimer verschieben"
+msgstr "Das gewählte Bild in den Papierkorb verschieben"
 
 #: ../src/eom-window.c:3887 ../src/eom-window.c:3899 ../src/eom-window.c:3902
 msgid "_Zoom In"
@@ -1393,11 +1394,11 @@ msgstr "Sammlung"
 #: ../src/eom-window.c:4046
 msgctxt "action (to trash)"
 msgid "Trash"
-msgstr "Müll"
+msgstr "Papierkorb"
 
 #: ../src/eom-plugin-manager.c:51
 msgid "Plugin"
-msgstr "Plugin"
+msgstr "Erweiterung"
 
 #: ../src/eom-plugin-manager.c:52
 msgid "Enabled"
@@ -1421,15 +1422,15 @@ msgstr "Alle _deaktivieren"
 
 #: ../src/eom-plugin-manager.c:834
 msgid "Active _Plugins:"
-msgstr "Aktivierte _Plugins:"
+msgstr "Aktivierte _Erweiterungen:"
 
 #: ../src/eom-plugin-manager.c:863
 msgid "_About Plugin"
-msgstr "_Info zu Plugin"
+msgstr "_Über die Erweiterung"
 
 #: ../src/eom-plugin-manager.c:870
 msgid "C_onfigure Plugin"
-msgstr "Plugin _konfigurieren"
+msgstr "Erweiterung _konfigurieren"
 
 #: ../src/main.c:73
 msgid "Open in fullscreen mode"
