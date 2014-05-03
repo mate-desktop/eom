@@ -22,7 +22,6 @@ gsettings_SCHEMAS = org.mate.eom.gschema.xml
 
 uidir = $(pkgdatadir)
 ui_DATA = \
-	eom-preferences-dialog.ui \
 	eom-toolbar.xml
 
 pkgconfigdir = $(libdir)/pkgconfig
@@ -33,6 +32,7 @@ EXTRA_DIST = \
 	eom.css			\
 	eom-image-properties-dialog.ui	\
 	eom-multiple-save-as-dialog.ui	\
+	eom-preferences-dialog.ui \
 	eom-ui.xml		\
 	metadata-sidebar.ui	\
 	$(DESKTOP_IN_FILES) \

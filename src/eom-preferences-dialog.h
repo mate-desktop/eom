@@ -22,7 +22,6 @@
 #ifndef __EOM_PREFERENCES_DIALOG_H__
 #define __EOM_PREFERENCES_DIALOG_H__
 
-#include "eom-dialog.h"
 #include "eom-image.h"
 #include "eom-thumb-view.h"
 
@@ -45,20 +44,20 @@ typedef struct _EomPreferencesDialogPrivate EomPreferencesDialogPrivate;
 #define EOM_PREFERENCES_DIALOG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS((obj),  EOM_TYPE_PREFERENCES_DIALOG, EomPreferencesDialogClass))
 
 struct _EomPreferencesDialog {
-	EomDialog dialog;
+	GtkDialog dialog;
 
 	EomPreferencesDialogPrivate *priv;
 };
 
 struct _EomPreferencesDialogClass {
-	EomDialogClass parent_class;
+	GtkDialogClass parent_class;
 };
 
 G_GNUC_INTERNAL
 GType	    eom_preferences_dialog_get_type	  (void) G_GNUC_CONST;
 
 G_GNUC_INTERNAL
-GObject    *eom_preferences_dialog_get_instance	  (GtkWindow   *parent);
+GtkWidget    *eom_preferences_dialog_get_instance	  (GtkWindow   *parent);
 
 G_END_DECLS
 
