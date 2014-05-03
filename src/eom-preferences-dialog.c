@@ -45,11 +45,28 @@ struct _EomPreferencesDialogPrivate {
 	GSettings    *view_settings;
 	GSettings    *ui_settings;
 	GSettings    *fullscreen_settings;
+
+	GtkWidget     *interpolate_check;
+	GtkWidget     *extrapolate_check;
+	GtkWidget     *autorotate_check;
+	GtkWidget     *bg_color_check;
+	GtkWidget     *bg_color_button;
+	GtkWidget     *color_radio;
+	GtkWidget     *checkpattern_radio;
+	GtkWidget     *background_radio;
+	GtkWidget     *transp_color_button;
+
+	GtkWidget     *upscale_check;
+	GtkWidget     *random_check;
+	GtkWidget     *loop_check;
+	GtkWidget     *seconds_spin;
+
+	GtkWidget     *plugin_manager;
 };
 
 static GObject *instance = NULL;
 
-G_DEFINE_TYPE_WITH_PRIVATE (EomPreferencesDialog, eom_preferences_dialog, EOM_TYPE_DIALOG);
+G_DEFINE_TYPE_WITH_PRIVATE (EomPreferencesDialog, eom_preferences_dialog, GTK_TYPE_DIALOG);
 
 static gboolean
 pd_string_to_rgba_mapping (GValue   *value,
@@ -123,229 +140,191 @@ eom_preferences_response_cb (GtkDialog *dlg, gint res_id, gpointer data)
 	}
 }
 
-static GObject *
-eom_preferences_dialog_constructor (GType type,
-				    guint n_construct_properties,
-				    GObjectConstructParam *construct_params)
+static void
+eom_preferences_dialog_class_init (EomPreferencesDialogClass *klass)
+{
+	GtkWidgetClass *widget_class = (GtkWidgetClass*) klass;
 
+	gtk_widget_class_set_template_from_resource (widget_class,
+	                                             "/org/mate/eom/ui/eom-preferences-dialog.ui");
+	gtk_widget_class_bind_template_child_private (widget_class,
+	                                              EomPreferencesDialog,
+	                                              interpolate_check);
+	gtk_widget_class_bind_template_child_private (widget_class,
+	                                              EomPreferencesDialog,
+	                                              extrapolate_check);
+	gtk_widget_class_bind_template_child_private (widget_class,
+	                                              EomPreferencesDialog,
+	                                              autorotate_check);
+	gtk_widget_class_bind_template_child_private (widget_class,
+	                                              EomPreferencesDialog,
+	                                              bg_color_check);
+	gtk_widget_class_bind_template_child_private (widget_class,
+	                                              EomPreferencesDialog,
+	                                              bg_color_button);
+	gtk_widget_class_bind_template_child_private (widget_class,
+	                                              EomPreferencesDialog,
+	                                              color_radio);
+	gtk_widget_class_bind_template_child_private (widget_class,
+	                                              EomPreferencesDialog,
+	                                              checkpattern_radio);
+	gtk_widget_class_bind_template_child_private (widget_class,
+	                                              EomPreferencesDialog,
+	                                              background_radio);
+	gtk_widget_class_bind_template_child_private (widget_class,
+	                                              EomPreferencesDialog,
+	                                              transp_color_button);
+
+	gtk_widget_class_bind_template_child_private (widget_class,
+	                                              EomPreferencesDialog,
+	                                              upscale_check);
+	gtk_widget_class_bind_template_child_private (widget_class,
+	                                              EomPreferencesDialog,
+	                                              random_check);
+	gtk_widget_class_bind_template_child_private (widget_class,
+	                                              EomPreferencesDialog,
+	                                              loop_check);
+	gtk_widget_class_bind_template_child_private (widget_class,
+	                                              EomPreferencesDialog,
+	                                              seconds_spin);
+
+	gtk_widget_class_bind_template_child_private (widget_class,
+	                                              EomPreferencesDialog,
+	                                              plugin_manager);
+}
+ 
+static void
+eom_preferences_dialog_init (EomPreferencesDialog *pref_dlg)
 {
 	EomPreferencesDialogPrivate *priv;
-	GtkWidget *dlg;
-	GtkWidget *interpolate_check;
-	GtkWidget *extrapolate_check;
-	GtkWidget *autorotate_check;
-	GtkWidget *bg_color_check;
-	GtkWidget *bg_color_button;
-	GtkWidget *color_radio;
-	GtkWidget *checkpattern_radio;
-	GtkWidget *background_radio;
-	GtkWidget *color_button;
-	GtkWidget *upscale_check;
-	GtkWidget *random_check;
-	GtkWidget *loop_check;
-	GtkWidget *seconds_spin;
-	GtkWidget *plugin_manager;
-	GtkWidget *plugin_manager_container;
-	GObject *object;
 
-	object = G_OBJECT_CLASS (eom_preferences_dialog_parent_class)->constructor
-			(type, n_construct_properties, construct_params);
+	pref_dlg->priv = eom_preferences_dialog_get_instance_private (pref_dlg);
+	priv = pref_dlg->priv;
 
-	priv = EOM_PREFERENCES_DIALOG (object)->priv;
+	gtk_widget_init_template (GTK_WIDGET (pref_dlg));
 
 	priv->view_settings = g_settings_new (EOM_CONF_VIEW);
 	priv->fullscreen_settings = g_settings_new (EOM_CONF_FULLSCREEN);
 
-	eom_dialog_construct (EOM_DIALOG (object),
-			      "eom-preferences-dialog.ui",
-			      "eom_preferences_dialog");
-
-	eom_dialog_get_controls (EOM_DIALOG (object),
-			         "eom_preferences_dialog", &dlg,
-			         "interpolate_check", &interpolate_check,
-			         "extrapolate_check", &extrapolate_check,
-			         "autorotate_check", &autorotate_check,
-			         "bg_color_check", &bg_color_check,
-			         "bg_color_button", &bg_color_button,
-			         "color_radio", &color_radio,
-			         "checkpattern_radio", &checkpattern_radio,
-			         "background_radio", &background_radio,
-			         "color_button", &color_button,
-			         "upscale_check", &upscale_check,
-			         "random_check", &random_check,
-			         "loop_check", &loop_check,
-			         "seconds_spin", &seconds_spin,
-			         "plugin_manager_container", &plugin_manager_container,
-			         NULL);
-
-	g_signal_connect (G_OBJECT (dlg),
-			  "response",
-			  G_CALLBACK (eom_preferences_response_cb),
-			  dlg);
+	g_signal_connect (G_OBJECT (pref_dlg),
+	                  "response",
+	                  G_CALLBACK (eom_preferences_response_cb),
+	                  pref_dlg);
 
 	g_settings_bind (priv->view_settings,
-					 EOM_CONF_VIEW_INTERPOLATE,
-					 G_OBJECT (interpolate_check),
-					 "active",
-					 G_SETTINGS_BIND_DEFAULT);
+	                 EOM_CONF_VIEW_INTERPOLATE,
+	                 priv->interpolate_check, "active",
+	                 G_SETTINGS_BIND_DEFAULT);
 	g_settings_bind (priv->view_settings,
-					 EOM_CONF_VIEW_EXTRAPOLATE,
-					 G_OBJECT (extrapolate_check),
-					 "active",
-					 G_SETTINGS_BIND_DEFAULT);
+	                 EOM_CONF_VIEW_EXTRAPOLATE,
+	                 priv->extrapolate_check, "active",
+	                 G_SETTINGS_BIND_DEFAULT);
 	g_settings_bind (priv->view_settings,
-					 EOM_CONF_VIEW_AUTOROTATE,
-					 G_OBJECT (autorotate_check),
-					 "active",
-					 G_SETTINGS_BIND_DEFAULT);
+	                 EOM_CONF_VIEW_AUTOROTATE,
+	                 priv->autorotate_check, "active",
+	                 G_SETTINGS_BIND_DEFAULT);
 	g_settings_bind (priv->view_settings,
-					 EOM_CONF_VIEW_USE_BG_COLOR,
-					 G_OBJECT (bg_color_check),
-					 "active",
-					 G_SETTINGS_BIND_DEFAULT);
+	                 EOM_CONF_VIEW_USE_BG_COLOR,
+	                 priv->bg_color_check, "active",
+	                 G_SETTINGS_BIND_DEFAULT);
 
 	g_settings_bind_with_mapping (priv->view_settings,
-				      EOM_CONF_VIEW_BACKGROUND_COLOR,
-				      bg_color_button, "rgba",
-				      G_SETTINGS_BIND_DEFAULT,
-				      pd_string_to_rgba_mapping,
-				      pd_rgba_to_string_mapping,
-				      NULL, NULL);
+	                              EOM_CONF_VIEW_BACKGROUND_COLOR,
+	                              priv->bg_color_button, "rgba",
+	                              G_SETTINGS_BIND_DEFAULT,
+	                              pd_string_to_rgba_mapping,
+	                              pd_rgba_to_string_mapping,
+	                              NULL, NULL);
+	g_object_set_data (G_OBJECT (priv->color_radio),
+	                   GSETTINGS_OBJECT_VALUE,
+	                   GINT_TO_POINTER (EOM_TRANSP_COLOR));
 
-	g_object_set_data (G_OBJECT (color_radio),
-			   GSETTINGS_OBJECT_VALUE,
-			   GINT_TO_POINTER (EOM_TRANSP_COLOR));
+	g_signal_connect (G_OBJECT (priv->color_radio),
+	                  "toggled",
+	                  G_CALLBACK (pd_transp_radio_toggle_cb),
+	                  priv->view_settings);
 
-	g_signal_connect (G_OBJECT (color_radio),
-			  "toggled",
-			  G_CALLBACK (pd_transp_radio_toggle_cb),
-			  priv->view_settings);
+	g_object_set_data (G_OBJECT (priv->checkpattern_radio),
+	                   GSETTINGS_OBJECT_VALUE,
+	                   GINT_TO_POINTER (EOM_TRANSP_CHECKED));
 
-	g_object_set_data (G_OBJECT (checkpattern_radio),
-			   GSETTINGS_OBJECT_VALUE,
-			   GINT_TO_POINTER (EOM_TRANSP_CHECKED));
+	g_signal_connect (G_OBJECT (priv->checkpattern_radio),
+	                  "toggled",
+	                  G_CALLBACK (pd_transp_radio_toggle_cb),
+	                  priv->view_settings);
 
-	g_signal_connect (G_OBJECT (checkpattern_radio),
-			  "toggled",
-			  G_CALLBACK (pd_transp_radio_toggle_cb),
-			  priv->view_settings);
+	g_object_set_data (G_OBJECT (priv->background_radio),
+	                   GSETTINGS_OBJECT_VALUE,
+	                   GINT_TO_POINTER (EOM_TRANSP_BACKGROUND));
 
-	g_object_set_data (G_OBJECT (background_radio),
-			   GSETTINGS_OBJECT_VALUE,
-			   GINT_TO_POINTER (EOM_TRANSP_BACKGROUND));
-
-	g_signal_connect (G_OBJECT (background_radio),
-			  "toggled",
-			  G_CALLBACK (pd_transp_radio_toggle_cb),
-			  priv->view_settings);
+	g_signal_connect (G_OBJECT (priv->background_radio),
+	                  "toggled",
+	                  G_CALLBACK (pd_transp_radio_toggle_cb),
+	                  priv->view_settings);
 
 	switch (g_settings_get_enum (priv->view_settings,
 				    EOM_CONF_VIEW_TRANSPARENCY))
 	{
 	case EOM_TRANSP_COLOR:
-		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (color_radio), TRUE);
+		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (priv->color_radio), TRUE);
 		break;
 	case EOM_TRANSP_CHECKED:
-		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (checkpattern_radio), TRUE);
+		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (priv->checkpattern_radio), TRUE);
 		break;
 	default:
 		// Log a warning and use EOM_TRANSP_BACKGROUND as fallback
 		g_warn_if_reached ();
 	case EOM_TRANSP_BACKGROUND:
-		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (background_radio), TRUE);
+		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (priv->background_radio), TRUE);
 		break;
 	}
 
 	g_settings_bind_with_mapping (priv->view_settings,
-				      EOM_CONF_VIEW_TRANS_COLOR,
-				      color_button, "rgba",
-				      G_SETTINGS_BIND_DEFAULT,
-				      pd_string_to_rgba_mapping,
-				      pd_rgba_to_string_mapping,
-				      NULL, NULL);
+	                              EOM_CONF_VIEW_TRANS_COLOR,
+	                              priv->transp_color_button, "rgba",
+	                              G_SETTINGS_BIND_DEFAULT,
+	                              pd_string_to_rgba_mapping,
+	                              pd_rgba_to_string_mapping,
+	                              NULL, NULL);
 
 	g_settings_bind (priv->fullscreen_settings, EOM_CONF_FULLSCREEN_UPSCALE,
-			 upscale_check, "active", G_SETTINGS_BIND_DEFAULT);
+	                 priv->upscale_check, "active",
+	                 G_SETTINGS_BIND_DEFAULT);
 
 	g_settings_bind (priv->fullscreen_settings,
-					 EOM_CONF_FULLSCREEN_LOOP,
-					 G_OBJECT (loop_check),
-					 "active",
-					 G_SETTINGS_BIND_DEFAULT);
+	                 EOM_CONF_FULLSCREEN_LOOP,
+	                 priv->loop_check, "active",
+	                 G_SETTINGS_BIND_DEFAULT);
 
 	g_settings_bind (priv->fullscreen_settings,
-					 EOM_CONF_FULLSCREEN_RANDOM,
-					 G_OBJECT (random_check),
-					 "active",
-					 G_SETTINGS_BIND_DEFAULT);
+	                 EOM_CONF_FULLSCREEN_RANDOM,
+	                 priv->random_check, "active",
+	                 G_SETTINGS_BIND_DEFAULT);
 	g_signal_connect (priv->fullscreen_settings,
-					  "changed::" EOM_CONF_FULLSCREEN_RANDOM,
-					  G_CALLBACK (random_change_cb),
-					  loop_check);
+	                  "changed::" EOM_CONF_FULLSCREEN_RANDOM,
+	                  G_CALLBACK (random_change_cb),
+	                  priv->loop_check);
 	random_change_cb (priv->fullscreen_settings,
-					  EOM_CONF_FULLSCREEN_RANDOM,
-					  loop_check);
+	                  EOM_CONF_FULLSCREEN_RANDOM,
+	                  priv->loop_check);
 
 	g_settings_bind (priv->fullscreen_settings,
-					 EOM_CONF_FULLSCREEN_SECONDS,
-					 G_OBJECT (seconds_spin),
-					 "value",
-					 G_SETTINGS_BIND_DEFAULT);
+	                 EOM_CONF_FULLSCREEN_SECONDS,
+	                 priv->seconds_spin, "value",
+	                 G_SETTINGS_BIND_DEFAULT);
 
-	plugin_manager = peas_gtk_plugin_manager_new (NULL);
-
-	g_assert (plugin_manager != NULL);
-
-	gtk_box_pack_start (GTK_BOX (plugin_manager_container),
-	                    plugin_manager,
-	                    TRUE,
-	                    TRUE,
-	                    0);
-
-	gtk_widget_show_all (plugin_manager);
-
-	return object;
+	gtk_widget_show_all (priv->plugin_manager);
 }
 
-static void
-eom_preferences_dialog_dispose (GObject *object)
-{
-	EomPreferencesDialog *pref_dlg = EOM_PREFERENCES_DIALOG (object);
-
-	g_object_unref (pref_dlg->priv->view_settings);
-	g_object_unref (pref_dlg->priv->fullscreen_settings);
-	g_object_unref (pref_dlg->priv->ui_settings);
-
-	G_OBJECT_CLASS (eom_preferences_dialog_parent_class)->dispose (object);
-}
-
-static void
-eom_preferences_dialog_class_init (EomPreferencesDialogClass *class)
-{
-	GObjectClass *g_object_class = (GObjectClass *) class;
-
-	g_object_class->constructor = eom_preferences_dialog_constructor;
-	g_object_class->dispose = eom_preferences_dialog_dispose;
-}
-
-static void
-eom_preferences_dialog_init (EomPreferencesDialog *pref_dlg)
-{
-	pref_dlg->priv = eom_preferences_dialog_get_instance_private (pref_dlg);
-
-	pref_dlg->priv->view_settings = g_settings_new (EOM_CONF_VIEW);
-	pref_dlg->priv->fullscreen_settings = g_settings_new (EOM_CONF_FULLSCREEN);
-	pref_dlg->priv->ui_settings = g_settings_new (EOM_CONF_UI);
-}
-
-GObject *
-eom_preferences_dialog_get_instance (GtkWindow *parent)
+GtkWidget *eom_preferences_dialog_get_instance (GtkWindow *parent)
 {
 	if (instance == NULL) {
 		instance = g_object_new (EOM_TYPE_PREFERENCES_DIALOG,
-				 	 "parent-window", parent,
 				 	 NULL);
 	}
 
-	return instance;
+	if (parent)
+		gtk_window_set_transient_for (GTK_WINDOW (instance), parent);
+
+	return GTK_WIDGET(instance);
 }

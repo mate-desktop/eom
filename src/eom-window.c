@@ -2400,7 +2400,7 @@ static void
 eom_window_cmd_preferences (GtkAction *action, gpointer user_data)
 {
 	EomWindow *window;
-	GObject *pref_dlg;
+	GtkWidget *pref_dlg;
 
 	g_return_if_fail (EOM_IS_WINDOW (user_data));
 
@@ -2408,7 +2408,7 @@ eom_window_cmd_preferences (GtkAction *action, gpointer user_data)
 
 	pref_dlg = eom_preferences_dialog_get_instance (GTK_WINDOW (window));
 
-	eom_dialog_show (EOM_DIALOG (pref_dlg));
+	gtk_widget_show (pref_dlg);
 }
 
 #define EOM_TB_EDITOR_DLG_RESET_RESPONSE 128
