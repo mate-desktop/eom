@@ -44,7 +44,6 @@ INST_H_FILES =				\
 	eom-window.h			\
 	eom-window-activatable.h	\
 	eom-sidebar.h			\
-	eom-dialog.h			\
 	eom-properties-dialog.h		\
 	eom-error-message-area.h	\
 	eom-file-chooser.h		\
@@ -72,7 +71,6 @@ libeom_c_files =			\
 	eom-window.c			\
 	eom-window-activatable.c	\
 	eom-sidebar.c			\
-	eom-dialog.c			\
 	eom-preferences-dialog.c	\
 	eom-properties-dialog.c		\
 	eom-error-message-area.c	\

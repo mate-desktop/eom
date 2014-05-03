@@ -32,7 +32,6 @@
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
 
-#include "eom-dialog.h"
 #include "eom-image.h"
 #include "eom-metadata-sidebar.h"
 #include "eom-properties-dialog.h"
