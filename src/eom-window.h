@@ -30,7 +30,6 @@
 
 #include "eom-list-store.h"
 #include "eom-image.h"
-#include "eom-dialog.h"
 
 #include <glib.h>
 #include <glib-object.h>
