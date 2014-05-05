@@ -286,6 +286,7 @@ update_scrollbar_values (EomScrollView *view)
 	if (gtk_widget_get_visible (GTK_WIDGET (priv->hbar))) {
 		/* Set scroll increments */
 		page_size = MIN (scaled_width, allocation.width);
+
 		page_increment = allocation.width / 2;
 		step_increment = SCROLL_STEP_SIZE;
 
@@ -293,7 +294,9 @@ update_scrollbar_values (EomScrollView *view)
 		lower = 0;
 		upper = scaled_width;
 		xofs = CLAMP (priv->xofs, 0, upper - page_size);
-		if (gtk_adjustment_get_value (priv->hadj) != xofs) {
+
+		if (gtk_adjustment_get_value (priv->hadj) != xofs
+		     || gtk_adjustment_get_page_size (priv->hadj) != page_size) {
 			value = xofs;
 			priv->xofs = xofs;
 
@@ -320,7 +323,8 @@ update_scrollbar_values (EomScrollView *view)
 		upper = scaled_height;
 		yofs = CLAMP (priv->yofs, 0, upper - page_size);
 
-		if (gtk_adjustment_get_value (priv->vadj) != yofs) {
+		if (gtk_adjustment_get_value (priv->vadj) != yofs
+		     || gtk_adjustment_get_page_size (priv->vadj) != page_size) {
 			value = yofs;
 			priv->yofs = yofs;
 
