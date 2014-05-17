@@ -39,7 +39,7 @@ struct _EomListStorePrivate {
 	gint initial_image;       /* The image that should be selected firstly by the view. */
 	GdkPixbuf *busy_image;    /* Loading image icon */
 	GdkPixbuf *missing_image; /* Missing image icon */
-	GMutex *mutex;            /* Mutex for saving the jobs in the model */
+	GMutex mutex;            /* Mutex for saving the jobs in the model */
 };
 
 static void
@@ -83,7 +83,7 @@ eom_list_store_dispose (GObject *object)
 		store->priv->missing_image = NULL;
 	}
 
-	g_mutex_free (store->priv->mutex);
+	g_mutex_clear (&store->priv->mutex);
 
 	G_OBJECT_CLASS (eom_list_store_parent_class)->dispose (object);
 }
@@ -174,7 +174,7 @@ eom_list_store_init (EomListStore *self)
 	self->priv->busy_image = eom_list_store_get_icon ("image-loading");
 	self->priv->missing_image = eom_list_store_get_icon ("image-missing");
 
-	self->priv->mutex = g_mutex_new ();
+	g_mutex_init (&self->priv->mutex);
 
 	gtk_tree_sortable_set_default_sort_func (GTK_TREE_SORTABLE (self),
 						 eom_list_store_compare_func,
@@ -816,12 +816,12 @@ eom_list_store_remove_thumbnail_job (EomListStore *store,
 			    -1);
 
 	if (job != NULL) {
-		g_mutex_lock (store->priv->mutex);
+		g_mutex_lock (&store->priv->mutex);
 		eom_job_queue_remove_job (job);
 		gtk_list_store_set (GTK_LIST_STORE (store), iter,
 				    EOM_LIST_STORE_EOM_JOB, NULL,
 				    -1);
-		g_mutex_unlock (store->priv->mutex);
+		g_mutex_unlock (&store->priv->mutex);
 	}
 
 
@@ -850,12 +850,12 @@ eom_list_store_add_thumbnail_job (EomListStore *store, GtkTreeIter *iter)
 			  G_CALLBACK (eom_job_thumbnail_cb),
 			  store);
 
-	g_mutex_lock (store->priv->mutex);
+	g_mutex_lock (&store->priv->mutex);
 	gtk_list_store_set (GTK_LIST_STORE (store), iter,
 			    EOM_LIST_STORE_EOM_JOB, job,
 			    -1);
 	eom_job_queue_add_job (job);
-	g_mutex_unlock (store->priv->mutex);
+	g_mutex_unlock (&store->priv->mutex);
 	g_object_unref (job);
 	g_object_unref (image);
 }

@@ -64,7 +64,9 @@ static void eom_job_transform_run (EomJob *ejob);
 
 static void eom_job_init (EomJob *job)
 {
-	job->mutex = g_mutex_new();
+	/* NOTE: We need to allocate the mutex here so the ABI stays the same when it used to use g_mutex_new */
+	job->mutex = g_malloc (sizeof (GMutex));
+	g_mutex_init (job->mutex);
 	job->progress = 0.0;
 }
 
@@ -81,8 +83,8 @@ eom_job_dispose (GObject *object)
 	}
 
 	if (job->mutex) {
-		g_mutex_free (job->mutex);
-		job->mutex = NULL;
+		g_mutex_clear (job->mutex);
+		g_free (job->mutex);
 	}
 
 	(* G_OBJECT_CLASS (eom_job_parent_class)->dispose) (object);
