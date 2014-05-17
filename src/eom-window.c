@@ -724,11 +724,7 @@ update_status_bar (EomWindow *window)
 		if ((width > 0) && (height > 0)) {
 			char *size_string;
 
-			#if GLIB_CHECK_VERSION(2, 30, 0)
 				size_string = g_format_size (bytes);
-			#else
-				size_string = g_format_size_for_display (bytes);
-			#endif
 
 			/* Translators: This is the string displayed in the statusbar
 			 * The tokens are from left to right:

@@ -543,11 +543,7 @@ eom_application_screensaver_disable (EomApplication *application)
 static void
 eom_application_load_accelerators (void)
 {
-	#if GLIB_CHECK_VERSION(2, 6, 0)
 		gchar* accelfile = g_build_filename(g_get_user_config_dir(), "mate", "accels", "eom", NULL);
-	#else // glib version < 2.6.0
-		gchar* accelfile = g_build_filename(g_get_home_dir(), ".config", "mate", "accels", "eom", NULL);
-	#endif
 
 	/* gtk_accel_map_load does nothing if the file does not exist */
 	gtk_accel_map_load (accelfile);
@@ -557,11 +553,7 @@ eom_application_load_accelerators (void)
 static void
 eom_application_save_accelerators (void)
 {
-	#if GLIB_CHECK_VERSION(2, 6, 0)
 		gchar* accelfile = g_build_filename(g_get_user_config_dir(), "mate", "accels", "eom", NULL);
-	#else // glib version < 2.6.0
-		gchar* accelfile = g_build_filename(g_get_home_dir(), ".config", "mate", "accels", "eom", NULL);
-	#endif
 
 	gtk_accel_map_save (accelfile);
 	g_free (accelfile);

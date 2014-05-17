@@ -367,11 +367,7 @@ thumbview_get_tooltip_string (EomImage *image)
 	ExifData *exif_data;
 #endif
 
-#if GLIB_CHECK_VERSION (2, 30, 0)
 	bytes = g_format_size (eom_image_get_bytes (image));
-#else
-	bytes = g_format_size_for_display (eom_image_get_bytes (image));
-#endif
 
 	eom_image_get_size (image, &width, &height);
 
