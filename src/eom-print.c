@@ -30,7 +30,7 @@
 #include "eom-debug.h"
 
 #ifdef HAVE_RSVG
-#include <librsvg/rsvg-cairo.h>
+#include <librsvg/rsvg.h>
 #endif
 
 #define EOM_PRINT_SETTINGS_FILE "eom-print-settings.ini"

@@ -197,7 +197,7 @@ eom_uri_converter_set_property (GObject      *object,
 		break;
 
 	case PROP_SPACE_CHARACTER:
-		priv->space_character = g_value_get_char (value);
+		priv->space_character = g_value_get_schar (value);
 		break;
 
 	case PROP_COUNTER_START:
@@ -249,7 +249,7 @@ eom_uri_converter_get_property (GObject    *object,
 		break;
 
 	case PROP_SPACE_CHARACTER:
-		g_value_set_char (value, priv->space_character);
+		g_value_set_schar (value, priv->space_character);
 		break;
 
 	case PROP_COUNTER_START:

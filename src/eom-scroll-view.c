@@ -8,7 +8,6 @@
 #include <gdk/gdkkeysyms.h>
 #ifdef HAVE_RSVG
 #include <librsvg/rsvg.h>
-#include <librsvg/rsvg-cairo.h>
 #endif
 
 #include "eom-marshal.h"

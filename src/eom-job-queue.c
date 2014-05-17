@@ -154,8 +154,6 @@ eom_render_thread (gpointer data)
 void
 eom_job_queue_init (void)
 {
-	if (!g_thread_supported ()) g_thread_init (NULL);
-
 	render_cond = g_cond_new ();
 	eom_queue_mutex = g_mutex_new ();
 

@@ -185,9 +185,6 @@ main (int argc, char **argv)
 	GError *error = NULL;
 	GOptionContext *ctx;
 
-	if (!g_thread_supported ())
-		g_thread_init (NULL);
-
 	bindtextdomain (GETTEXT_PACKAGE, EOM_LOCALE_DIR);
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);
@@ -231,9 +228,6 @@ main (int argc, char **argv)
 #ifdef HAVE_EXEMPI
  	xmp_init();
 #endif
-#ifdef HAVE_RSVG
-	rsvg_init();
-#endif
 	eom_debug_init ();
 	eom_job_queue_init ();
 	gdk_threads_init ();
@@ -260,9 +254,6 @@ main (int argc, char **argv)
 
 	eom_plugin_engine_shutdown ();
 
-#ifdef HAVE_RSVG
-	rsvg_term();
-#endif
 #ifdef HAVE_EXEMPI
 	xmp_terminate();
 #endif
