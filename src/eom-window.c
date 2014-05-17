@@ -1388,11 +1388,7 @@ eom_window_obtain_desired_size (EomImage  *image,
 	img_width = width;
 	img_height = height;
 
-#if GTK_CHECK_VERSION (2, 20, 0)
 	if (!gtk_widget_get_realized (window->priv->view)) {
-#else
-	if (!GTK_WIDGET_REALIZED (window->priv->view)) {
-#endif
 		gtk_widget_realize (window->priv->view);
 	}
 
@@ -1400,11 +1396,7 @@ eom_window_obtain_desired_size (EomImage  *image,
 	view_width  = allocation.width;
 	view_height = allocation.height;
 
-#if GTK_CHECK_VERSION (2, 20, 0)
 	if (!gtk_widget_get_realized (GTK_WIDGET (window))) {
-#else
-	if (!GTK_WIDGET_REALIZED (GTK_WIDGET (window))) {
-#endif
 		gtk_widget_realize (GTK_WIDGET (window));
 	}
 
@@ -2809,11 +2801,7 @@ eom_window_cmd_show_hide_bar (GtkAction *action, gpointer user_data)
 		if (visible) {
 			/* Make sure the focus widget is realized to
 			 * avoid warnings on keypress events */
-#if GTK_CHECK_VERSION (2, 20, 0)
 			if (!gtk_widget_get_realized (window->priv->thumbview))
-#else
-			if (!GTK_WIDGET_REALIZED (window->priv->thumbview))
-#endif
 				gtk_widget_realize (window->priv->thumbview);
 
 			gtk_widget_show (priv->nav);
@@ -2823,21 +2811,13 @@ eom_window_cmd_show_hide_bar (GtkAction *action, gpointer user_data)
 			 * avoid warnings on keypress events.
 			 * Don't do it during init phase or the view
 			 * will get a bogus allocation. */
-#if GTK_CHECK_VERSION (2, 20, 0)
 			if (!gtk_widget_get_realized (priv->view)
-#else
-			if (!GTK_WIDGET_REALIZED (priv->view)
-#endif
 			    && priv->status == EOM_WINDOW_STATUS_NORMAL)
 				gtk_widget_realize (priv->view);
 
 			gtk_widget_hide (priv->nav);
 
-#if GTK_CHECK_VERSION (2, 20, 0)
 			if (gtk_widget_get_realized (priv->view))
-#else
-			if (GTK_WIDGET_REALIZED (priv->view))
-#endif
 				gtk_widget_grab_focus (priv->view);
 		}
 		g_settings_set_boolean (priv->ui_settings, EOM_CONF_UI_IMAGE_COLLECTION, visible);
@@ -5010,11 +4990,7 @@ eom_window_key_press (GtkWidget *widget, GdkEventKey *event)
 	/* If the focus is not in the toolbar and we still haven't handled the
 	   event, give the scrollview a chance to do it.  */
 	if (!gtk_container_get_focus_child (tbcontainer) && result == FALSE &&
-#if GTK_CHECK_VERSION (2, 20, 0)
 		gtk_widget_get_realized (GTK_WIDGET (EOM_WINDOW (widget)->priv->view))) {
-#else
-		GTK_WIDGET_REALIZED(GTK_WIDGET (EOM_WINDOW (widget)->priv->view))) {
-#endif
 			result = gtk_widget_event (GTK_WIDGET (EOM_WINDOW (widget)->priv->view),
 						   (GdkEvent *) event);
 	}

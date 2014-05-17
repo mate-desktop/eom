@@ -36,12 +36,6 @@
 #include "eom-print-image-setup.h"
 #include "eom-print-preview.h"
 
-#if !GTK_CHECK_VERSION(2,24,0)
-	#define gtk_combo_box_text_new() gtk_combo_box_new_text()
-	#define gtk_combo_box_text_insert_text(x,y,z) gtk_combo_box_insert_text(x,y,z)
-	#define GTK_COMBO_BOX_TEXT(x) GTK_COMBO_BOX(x)
-#endif
-
 /**
  * SECTION:
  * @Title: Printing Custom Widget
