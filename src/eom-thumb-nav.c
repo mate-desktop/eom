@@ -32,10 +32,6 @@
 #include <gtk/gtk.h>
 #include <string.h>
 
-#if GTK_CHECK_VERSION(3, 0, 0)
- 	#define gtk_widget_hide_all(w) gtk_widget_hide(w)
-#endif
-
 #define EOM_THUMB_NAV_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_THUMB_NAV, EomThumbNavPrivate))
 
@@ -487,8 +483,8 @@ eom_thumb_nav_set_show_buttons (EomThumbNav *nav, gboolean show_buttons)
 		gtk_widget_show_all (nav->priv->button_left);
 		gtk_widget_show_all (nav->priv->button_right);
 	} else {
-		gtk_widget_hide_all (nav->priv->button_left);
-		gtk_widget_hide_all (nav->priv->button_right);
+		gtk_widget_hide (nav->priv->button_left);
+		gtk_widget_hide (nav->priv->button_right);
 	}
 }
 
@@ -555,8 +551,8 @@ eom_thumb_nav_set_mode (EomThumbNav *nav, EomThumbNavMode mode)
 						GTK_POLICY_NEVER,
 						GTK_POLICY_AUTOMATIC);
 
-		gtk_widget_hide_all (priv->button_left);
-		gtk_widget_hide_all (priv->button_right);
+		gtk_widget_hide (priv->button_left);
+		gtk_widget_hide (priv->button_right);
 
 		break;
 
@@ -571,8 +567,8 @@ eom_thumb_nav_set_mode (EomThumbNav *nav, EomThumbNavMode mode)
 						GTK_POLICY_NEVER,
 						GTK_POLICY_AUTOMATIC);
 
-		gtk_widget_hide_all (priv->button_left);
-		gtk_widget_hide_all (priv->button_right);
+		gtk_widget_hide (priv->button_left);
+		gtk_widget_hide (priv->button_right);
 
 		break;
 
@@ -587,8 +583,8 @@ eom_thumb_nav_set_mode (EomThumbNav *nav, EomThumbNavMode mode)
 						GTK_POLICY_NEVER,
 						GTK_POLICY_AUTOMATIC);
 
-		gtk_widget_hide_all (priv->button_left);
-		gtk_widget_hide_all (priv->button_right);
+		gtk_widget_hide (priv->button_left);
+		gtk_widget_hide (priv->button_right);
 
 		break;
 	}

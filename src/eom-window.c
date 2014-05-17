@@ -76,7 +76,6 @@
 #endif
 
 #if GTK_CHECK_VERSION(3, 0, 0)
-#define gtk_widget_hide_all(w) gtk_widget_hide(w)
 #define MATE_DESKTOP_USE_UNSTABLE_API
 #include <libmate-desktop/mate-desktop-utils.h>
 #endif
@@ -1884,7 +1883,7 @@ fullscreen_timeout_cb (gpointer data)
 {
 	EomWindow *window = EOM_WINDOW (data);
 
-	gtk_widget_hide_all (window->priv->fullscreen_popup);
+	gtk_widget_hide (window->priv->fullscreen_popup);
 
 	eom_scroll_view_hide_cursor (EOM_SCROLL_VIEW (window->priv->view));
 
@@ -2184,7 +2183,7 @@ update_ui_visibility (EomWindow *window)
 	}
 
 	if (priv->fullscreen_popup != NULL) {
-		gtk_widget_hide_all (priv->fullscreen_popup);
+		gtk_widget_hide (priv->fullscreen_popup);
 	}
 }
 
@@ -5121,7 +5120,7 @@ eom_window_focus_out_event (GtkWidget *widget, GdkEventFocus *event)
 		     priv->mode == EOM_WINDOW_MODE_SLIDESHOW;
 
 	if (fullscreen) {
-		gtk_widget_hide_all (priv->fullscreen_popup);
+		gtk_widget_hide (priv->fullscreen_popup);
 	}
 
 	return GTK_WIDGET_CLASS (eom_window_parent_class)->focus_out_event (widget, event);
