@@ -313,6 +313,8 @@ fi
 if test "x$have_rsvg" = "xyes"; then
   AC_DEFINE(HAVE_RSVG, 1, [RSVG Support.])
   EOM_MODULES="$EOM_MODULES librsvg-2.0 >= $LIBRSVG_REQUIRED"
+else
+  AC_WARN([LIBRSVG support disabled, svg files will not scale])
 fi
 
 AM_CONDITIONAL([HAVE_RSVG], [test "x$have_rsvg" = "xyes"])
@@ -517,6 +519,7 @@ Configure summary:
 	EXIF support ...............:  ${have_exif}
 	XMP support ................:  ${have_exempi}
 	JPEG support ...............:  ${have_jpeg}
+	RSVG support ...............:  ${have_rsvg}
 	Colour management support ..:  ${have_lcms}
 	D-Bus activation............:  ${have_dbus}
 "
