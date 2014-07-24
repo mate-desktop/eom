@@ -178,13 +178,9 @@ create_surface_from_pixbuf (EomScrollView *view, GdkPixbuf *pixbuf)
 {
 	cairo_surface_t *surface;
 	cairo_t *cr;
-	cairo_format_t format;
-	cairo_content_t content;
 
-	format = CAIRO_FORMAT_ARGB32;
-	content = CAIRO_CONTENT_COLOR | CAIRO_CONTENT_ALPHA;
 	surface = gdk_window_create_similar_surface (gtk_widget_get_window (view->priv->display),
-							content,
+							CAIRO_CONTENT_COLOR | CAIRO_CONTENT_ALPHA,
 							gdk_pixbuf_get_width (pixbuf),
 							gdk_pixbuf_get_height (pixbuf));
 	cr = cairo_create (surface);
