@@ -13,7 +13,9 @@
 #include "eom-marshal.h"
 #include "eom-scroll-view.h"
 #include "eom-debug.h"
+#if 0
 #include "uta.h"
+#endif
 #include "zoom.h"
 
 #include <gdk/gdk.h>
@@ -113,10 +115,12 @@ struct _EomScrollViewPrivate {
 	/* Current scrolling offsets */
 	int xofs, yofs;
 
+#if 0
 	/* Microtile arrays for dirty region.  This represents the dirty region
 	 * for interpolated drawing.
 	 */
 	EomUta *uta;
+#endif
 
 	/* handler ID for paint idle callback */
 	guint idle_id;
@@ -1112,9 +1116,11 @@ scroll_to (EomScrollView *view, int x, int y, gboolean change_adjustments)
 	GtkAllocation allocation;
 	int xofs, yofs;
 	GdkWindow *window;
+#if 0
 	int src_x, src_y;
 	int dest_x, dest_y;
 	int twidth, theight;
+#endif
 
 	priv = view->priv;
 
@@ -1152,7 +1158,7 @@ scroll_to (EomScrollView *view, int x, int y, gboolean change_adjustments)
 	window = gtk_widget_get_window (GTK_WIDGET (priv->display));
 
 	/* Ensure that the uta has the full size */
-
+#if 0
 	twidth = (allocation.width + EOM_UTILE_SIZE - 1) >> EOM_UTILE_SHIFT;
 	theight = (allocation.height + EOM_UTILE_SIZE - 1) >> EOM_UTILE_SHIFT;
 
@@ -1178,7 +1184,7 @@ scroll_to (EomScrollView *view, int x, int y, gboolean change_adjustments)
 		       dest_x, dest_y,
 		       allocation.width - abs (xofs),
 		       allocation.height - abs (yofs));
-
+#endif
 	/* Scroll the window area and process exposure synchronously. */
 
 	gdk_window_scroll (window, -xofs, -yofs);
@@ -2380,7 +2386,7 @@ eom_scroll_view_init (EomScrollView *view)
 	priv->min_zoom = MIN_ZOOM_FACTOR;
 	priv->zoom_mode = ZOOM_MODE_FIT;
 	priv->upscale = FALSE;
-	priv->uta = NULL;
+	/* priv->uta = NULL; */
 	priv->interp_type_in = CAIRO_FILTER_BILINEAR;
 	priv->interp_type_out = CAIRO_FILTER_BILINEAR;
 	priv->scroll_wheel_zoom = FALSE;
@@ -2409,10 +2415,12 @@ eom_scroll_view_dispose (GObject *object)
 	view = EOM_SCROLL_VIEW (object);
 	priv = view->priv;
 
+#if 0
 	if (priv->uta != NULL) {
 		eom_uta_free (priv->uta);
 		priv->uta = NULL;
 	}
+#endif
 
 	if (priv->idle_id != 0) {
 		g_source_remove (priv->idle_id);
