@@ -1765,17 +1765,25 @@ eom_scroll_view_focus_out_event (GtkWidget     *widget,
 }
 
 static gboolean
+#if GTK_CHECK_VERSION (3, 0, 0)
+display_draw (GtkWidget *widget, cairo_t *cr, gpointer data)
+#else
 display_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer data)
+#endif
 {
 	EomScrollView *view;
 	EomScrollViewPrivate *priv;
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	cairo_t *cr;
+#endif
 	GtkAllocation allocation;
 	int scaled_width, scaled_height;
 	int xofs, yofs;
 
 	g_return_val_if_fail (GTK_IS_DRAWING_AREA (widget), FALSE);
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	g_return_val_if_fail (event != NULL, FALSE);
+#endif
 	g_return_val_if_fail (EOM_IS_SCROLL_VIEW (data), FALSE);
 
 	view = EOM_SCROLL_VIEW (data);
@@ -1804,9 +1812,11 @@ display_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer data)
 	eom_debug_message (DEBUG_WINDOW, "zoom %.2f, xofs: %i, yofs: %i scaled w: %i h: %i\n",
 	priv->zoom, xofs, yofs, scaled_width, scaled_height);
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	cr = gdk_cairo_create (GDK_DRAWABLE (gtk_widget_get_window (GTK_WIDGET (view->priv->display))));
 	gdk_cairo_region (cr, event->region);
 	cairo_clip (cr);
+#endif
 
 	/* Paint the background */
 	cairo_set_source (cr, gdk_window_get_background_pattern (gtk_widget_get_window (priv->display)));
@@ -1883,7 +1893,9 @@ display_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer data)
 		cairo_paint (cr);
 	}
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	cairo_destroy (cr);
+#endif
 	return TRUE;
 }
 
@@ -2619,7 +2631,11 @@ eom_scroll_view_new (void)
 			       | GDK_SCROLL_MASK
 			       | GDK_KEY_PRESS_MASK);
 	g_signal_connect (G_OBJECT (priv->display), "configure_event", G_CALLBACK (display_size_change), view);
+#if GTK_CHECK_VERSION (3, 0, 0)
+	g_signal_connect (G_OBJECT (priv->display), "draw", G_CALLBACK (display_draw), view);
+#else
 	g_signal_connect (G_OBJECT (priv->display), "expose_event", G_CALLBACK (display_expose_event), view);
+#endif
 	g_signal_connect (G_OBJECT (priv->display), "map_event", G_CALLBACK (display_map_event), view);
 	g_signal_connect (G_OBJECT (priv->display), "button_press_event", G_CALLBACK (eom_scroll_view_button_press_event), view);
 	g_signal_connect (G_OBJECT (priv->display), "motion_notify_event", G_CALLBACK (eom_scroll_view_motion_event), view);
