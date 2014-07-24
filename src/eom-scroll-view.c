@@ -1831,6 +1831,24 @@ image_loading_cancelled_cb (EomImage *img, gpointer data)
 	}
 }
 */
+
+/* Use when the pixbuf in the view is changed, to keep a
+   reference to it and create its cairo surface. */
+static void
+update_pixbuf (EomScrollView *view, GdkPixbuf *pixbuf)
+{
+	EomScrollViewPrivate *priv;
+
+	priv = view->priv;
+
+	if (priv->pixbuf != NULL) {
+		g_object_unref (priv->pixbuf);
+		priv->pixbuf = NULL;
+	}
+
+	priv->pixbuf = pixbuf;
+}
+
 static void
 image_changed_cb (EomImage *img, gpointer data)
 {
@@ -1838,12 +1856,7 @@ image_changed_cb (EomImage *img, gpointer data)
 
 	priv = EOM_SCROLL_VIEW (data)->priv;
 
-	if (priv->pixbuf != NULL) {
-		g_object_unref (priv->pixbuf);
-		priv->pixbuf = NULL;
-	}
-
-	priv->pixbuf = eom_image_get_pixbuf (img);
+	update_pixbuf (EOM_SCROLL_VIEW (data), eom_image_get_pixbuf (img));
 
 	set_zoom_fit (EOM_SCROLL_VIEW (data));
 	check_scrollbar_visibility (EOM_SCROLL_VIEW (data), NULL);
@@ -2099,12 +2112,7 @@ display_next_frame_cb (EomImage *image, gint delay, gpointer data)
 	view = EOM_SCROLL_VIEW (data);
 	priv = view->priv;
 
-	if (priv->pixbuf != NULL) {
-		g_object_unref (priv->pixbuf);
-		priv->pixbuf = NULL;
-	}
-
-	priv->pixbuf = eom_image_get_pixbuf (image);
+	update_pixbuf (view, eom_image_get_pixbuf (image));
 	gtk_widget_queue_draw (GTK_WIDGET (priv->display)); 
 }
 
@@ -2137,7 +2145,7 @@ eom_scroll_view_set_image (EomScrollView *view, EomImage *image)
 		eom_image_data_ref (image);
 
 		if (priv->pixbuf == NULL) {
-			priv->pixbuf = eom_image_get_pixbuf (image);
+			update_pixbuf (view, eom_image_get_pixbuf (image));
 			priv->progressive_state = PROGRESSIVE_NONE;
 			set_zoom_fit (view);
 			check_scrollbar_visibility (view, NULL);
