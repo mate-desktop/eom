@@ -623,6 +623,42 @@ get_transparency_params (EomScrollView *view, int *size, guint32 *color1, guint3
 	*size = CHECK_MEDIUM;
 }
 
+static cairo_surface_t *
+create_background_surface (EomScrollView *view)
+{
+	int check_size;
+	guint32 check_1 = 0;
+	guint32 check_2 = 0;
+	cairo_surface_t *surface;
+
+	get_transparency_params (view, &check_size, &check_1, &check_2);
+	surface = gdk_window_create_similar_surface (gtk_widget_get_window (view->priv->display),
+						     CAIRO_CONTENT_COLOR,
+						     check_size * 2, check_size * 2);
+	cairo_t* cr = cairo_create (surface);
+	cairo_set_source_rgba (cr,
+			       ((check_1 & 0xff0000) >> 16) / 255.,
+			       ((check_1 & 0x00ff00) >> 8)  / 255.,
+			       (check_1 & 0x0000ff)         / 255.,
+			       1.);
+	cairo_rectangle (cr, 0, 0, check_size, check_size);
+	cairo_rectangle (cr, check_size, check_size, check_size, check_size);
+	cairo_fill (cr);
+
+	cairo_set_source_rgba (cr,
+			       ((check_2 & 0xff0000) >> 16) / 255.,
+			       ((check_2 & 0x00ff00) >> 8)  / 255.,
+			       (check_2 & 0x0000ff)         / 255.,
+			       1.);
+	cairo_rectangle (cr, 0, check_size, check_size, check_size);
+	cairo_rectangle (cr, check_size, 0, check_size, check_size);
+	cairo_fill (cr);
+
+	cairo_destroy (cr);
+
+	return surface;
+}
+#if 0
 #ifdef HAVE_RSVG
 static cairo_surface_t *
 create_background_surface (EomScrollView *view)
@@ -1060,6 +1096,7 @@ request_paint_area (EomScrollView *view, GdkRectangle *area)
 
 	priv->uta = uta_add_rect (priv->uta, r.x0, r.y0, r.x1, r.y1);
 }
+#endif
 
 
 /* =======================================
@@ -1121,10 +1158,12 @@ scroll_to (EomScrollView *view, int x, int y, gboolean change_adjustments)
 	twidth = (allocation.width + EOM_UTILE_SIZE - 1) >> EOM_UTILE_SHIFT;
 	theight = (allocation.height + EOM_UTILE_SIZE - 1) >> EOM_UTILE_SHIFT;
 
+#if 0
 	if (priv->uta)
 		g_assert (priv->idle_id != 0);
 	else
 		priv->idle_id = g_idle_add (paint_iteration_idle, view);
+#endif
 
 	priv->uta = uta_ensure_size (priv->uta, 0, 0, twidth, theight);
 
@@ -1727,18 +1766,16 @@ eom_scroll_view_focus_out_event (GtkWidget     *widget,
 	return FALSE;
 }
 
-/* Expose event handler for the drawing area.  First we process the whole dirty
- * region by drawing a non-interpolated version, which is "instantaneous", and
- * we do this synchronously.  Then, if we are set to use interpolation, we queue
- * an idle handler to handle interpolated drawing there.
- */
 static gboolean
 display_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer data)
 {
 	EomScrollView *view;
-	GdkRectangle *rects;
-	gint n_rects;
-	int i;
+	EomScrollViewPrivate *priv;
+	cairo_t *cr;
+	GtkAllocation allocation;
+	int scaled_width, scaled_height;
+	int xofs, yofs;
+	EomIRect r, d;
 
 	g_return_val_if_fail (GTK_IS_DRAWING_AREA (widget), FALSE);
 	g_return_val_if_fail (event != NULL, FALSE);
@@ -1746,14 +1783,56 @@ display_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer data)
 
 	view = EOM_SCROLL_VIEW (data);
 
-	gdk_region_get_rectangles (event->region, &rects, &n_rects);
+	priv = view->priv;
 
-	for (i = 0; i < n_rects; i++) {
-		request_paint_area (view, rects + i);
+	if (priv->pixbuf == NULL)
+		return TRUE;
+
+	compute_scaled_size (view, priv->zoom, &scaled_width, &scaled_height);
+
+	gtk_widget_get_allocation (GTK_WIDGET (priv->display), &allocation);
+
+	/* Compute image offsets with respect to the window */
+
+	if (scaled_width <= allocation.width)
+		xofs = (allocation.width - scaled_width) / 2;
+	else
+		xofs = -priv->xofs;
+
+	if (scaled_height <= allocation.height)
+		yofs = (allocation.height - scaled_height) / 2;
+	else
+		yofs = -priv->yofs;
+
+	eom_debug_message (DEBUG_WINDOW, "zoom %.2f, xofs: %i, yofs: %i scaled w: %i h: %i\n",
+	priv->zoom, xofs, yofs, scaled_width, scaled_height);
+
+	cr = gdk_cairo_create (GDK_DRAWABLE (gtk_widget_get_window (GTK_WIDGET (view->priv->display))));
+	gdk_cairo_region (cr, event->region);
+	cairo_clip (cr);
+
+	/* Paint the background */
+	cairo_set_source (cr, gdk_window_get_background_pattern (gtk_widget_get_window (priv->display)));
+	cairo_rectangle (cr, 0, 0, allocation.width, allocation.height);
+	cairo_rectangle (cr, MAX (0, xofs), MAX (0, yofs),
+	scaled_width, scaled_height);
+	cairo_set_fill_rule (cr, CAIRO_FILL_RULE_EVEN_ODD);
+	cairo_fill (cr);
+
+	if (gdk_pixbuf_get_has_alpha (priv->pixbuf)) {
+		if (priv->background_surface == NULL) {
+			priv->background_surface = create_background_surface (view);
+		}
+		cairo_set_source_surface (cr, priv->background_surface, xofs, yofs);
+		cairo_pattern_set_extend (cairo_get_source (cr), CAIRO_EXTEND_REPEAT);
+		cairo_rectangle (cr, xofs, yofs, scaled_width, scaled_height);
+		cairo_fill (cr);
 	}
 
-	g_free (rects);
-
+	cairo_scale (cr, priv->zoom, priv->zoom);
+	cairo_set_source_surface (cr, priv->surface, xofs/priv->zoom, yofs/priv->zoom);
+	cairo_paint (cr);
+	cairo_destroy (cr);
 	return TRUE;
 }
 
