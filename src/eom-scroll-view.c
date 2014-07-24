@@ -181,14 +181,8 @@ create_surface_from_pixbuf (EomScrollView *view, GdkPixbuf *pixbuf)
 	cairo_format_t format;
 	cairo_content_t content;
 
-	if (gdk_pixbuf_get_has_alpha (pixbuf)) {
-		format = CAIRO_FORMAT_ARGB32;
-		content = CAIRO_CONTENT_COLOR | CAIRO_CONTENT_ALPHA;
-	} else {
-		format = CAIRO_FORMAT_RGB24;
-		content = CAIRO_CONTENT_COLOR;
-	}
-
+	format = CAIRO_FORMAT_ARGB32;
+	content = CAIRO_CONTENT_COLOR | CAIRO_CONTENT_ALPHA;
 	surface = gdk_window_create_similar_surface (gtk_widget_get_window (view->priv->display),
 							content,
 							gdk_pixbuf_get_width (pixbuf),
@@ -1882,8 +1876,11 @@ display_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer data)
 	} else
 #endif /* HAVE_RSVG */
 	{
+		cairo_rectangle (cr, xofs, yofs, scaled_width, scaled_height);
+		cairo_clip (cr);
 		cairo_scale (cr, priv->zoom, priv->zoom);
 		cairo_set_source_surface (cr, priv->surface, xofs/priv->zoom, yofs/priv->zoom);
+		cairo_pattern_set_extend (cairo_get_source (cr), CAIRO_EXTEND_PAD);
 		if ((is_zoomed_in (view) && priv->interp_type_in == CAIRO_FILTER_NEAREST) ||
 		    (is_zoomed_out (view) && priv->interp_type_out == CAIRO_FILTER_NEAREST))
 			cairo_pattern_set_filter (cairo_get_source (cr), CAIRO_FILTER_NEAREST);
