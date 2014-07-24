@@ -48,12 +48,14 @@ typedef enum {
 	ZOOM_MODE_FREE		/* The image remains at its current zoom factor even if the scrollview changes size  */
 } ZoomMode;
 
+#if 0
 /* Progressive loading state */
 typedef enum {
 	PROGRESSIVE_NONE,	/* We are not loading an image or it is already loaded */
 	PROGRESSIVE_LOADING,	/* An image is being loaded */
 	PROGRESSIVE_POLISHING	/* We have finished loading an image but have not scaled it with interpolation */
 } ProgressiveState;
+#endif
 
 /* Signal IDs */
 enum {
@@ -136,8 +138,10 @@ struct _EomScrollViewPrivate {
 	int drag_ofs_x, drag_ofs_y;
 	guint dragging : 1;
 
+#if 0
 	/* status of progressive loading */
 	ProgressiveState progressive_state;
+#endif
 
 	/* how to indicate transparency in images */
 	EomTransparencyStyle transp_style;
@@ -155,7 +159,7 @@ struct _EomScrollViewPrivate {
 
 static void scroll_by (EomScrollView *view, int xofs, int yofs);
 static void set_zoom_fit (EomScrollView *view);
-static void request_paint_area (EomScrollView *view, GdkRectangle *area);
+/* static void request_paint_area (EomScrollView *view, GdkRectangle *area); */
 static void set_minimum_zoom_factor (EomScrollView *view);
 
 #define EOM_SCROLL_VIEW_GET_PRIVATE(object) \
@@ -481,6 +485,7 @@ check_scrollbar_visibility (EomScrollView *view, GtkAllocation *alloc)
 #define DOUBLE_EQUAL_MAX_DIFF 1e-6
 #define DOUBLE_EQUAL(a,b) (fabs (a - b) < DOUBLE_EQUAL_MAX_DIFF)
 
+#if 0
 /* Returns whether the zoom factor is 1.0 */
 static gboolean
 is_unity_zoom (EomScrollView *view)
@@ -490,6 +495,7 @@ is_unity_zoom (EomScrollView *view)
 	priv = view->priv;
 	return DOUBLE_EQUAL (priv->zoom, 1.0);
 }
+#endif
 
 /* Returns whether the image is zoomed in */
 static gboolean
@@ -559,6 +565,7 @@ get_image_offsets (EomScrollView *view, int *xofs, int *yofs)
   ---------------------------------*/
 
 
+#if 0
 /* Pulls a rectangle from the specified microtile array.  The rectangle is the
  * first one that would be glommed together by art_rect_list_from_uta(), and its
  * size is bounded by max_width and max_height.  The rectangle is also removed
@@ -589,6 +596,7 @@ paint_background (EomScrollView *view, EomIRect *r, EomIRect *rect)
 				       d.x1 - d.x0, d.y1 - d.y0);
 	}
 }
+#endif
 
 static void
 get_transparency_params (EomScrollView *view, int *size, guint32 *color1, guint32 *color2)
@@ -1775,7 +1783,6 @@ display_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer data)
 	GtkAllocation allocation;
 	int scaled_width, scaled_height;
 	int xofs, yofs;
-	EomIRect r, d;
 
 	g_return_val_if_fail (GTK_IS_DRAWING_AREA (widget), FALSE);
 	g_return_val_if_fail (event != NULL, FALSE);
@@ -2306,18 +2313,19 @@ eom_scroll_view_set_image (EomScrollView *view, EomImage *image)
 	g_assert (priv->image == NULL);
 	g_assert (priv->pixbuf == NULL);
 
-	priv->progressive_state = PROGRESSIVE_NONE;
+	/* priv->progressive_state = PROGRESSIVE_NONE; */
 	if (image != NULL) {
 		eom_image_data_ref (image);
 
 		if (priv->pixbuf == NULL) {
 			update_pixbuf (view, eom_image_get_pixbuf (image));
-			priv->progressive_state = PROGRESSIVE_NONE;
+			/* priv->progressive_state = PROGRESSIVE_NONE; */
 			set_zoom_fit (view);
 			check_scrollbar_visibility (view, NULL);
 			gtk_widget_queue_draw (GTK_WIDGET (priv->display));
 
 		}
+#if 0
 		else if ((is_zoomed_in (view) && priv->interp_type_in != GDK_INTERP_NEAREST) ||
 			 (is_zoomed_out (view) && priv->interp_type_out != GDK_INTERP_NEAREST))
 		{
@@ -2325,6 +2333,7 @@ eom_scroll_view_set_image (EomScrollView *view, EomImage *image)
 			priv->progressive_state = PROGRESSIVE_POLISHING;
 			gtk_widget_queue_draw (GTK_WIDGET (priv->display));
 		}
+#endif
 
 		priv->image_changed_id = g_signal_connect (image, "changed",
 							   (GCallback) image_changed_cb, view);
@@ -2371,7 +2380,7 @@ eom_scroll_view_init (EomScrollView *view)
 	priv->image = NULL;
 	priv->pixbuf = NULL;
 	priv->surface = NULL;
-	priv->progressive_state = PROGRESSIVE_NONE;
+	/* priv->progressive_state = PROGRESSIVE_NONE; */
 	priv->transp_style = EOM_TRANSP_BACKGROUND;
 	priv->transp_color = 0;
 	priv->cursor = EOM_SCROLL_VIEW_CURSOR_NORMAL;
