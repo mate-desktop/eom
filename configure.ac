@@ -303,7 +303,7 @@ PKG_CHECK_MODULES(LIBXML2, [libxml-2.0 >= $LIBXML2_REQUIRED])
 # RSVG (optional for scaling svg image)
 # ***************
 
-LIBRSVG_REQUIRED=2.26.0
+LIBRSVG_REQUIRED=2.36.2
 
 AC_ARG_WITH([librsvg], AC_HELP_STRING([--without-librsvg], [disable RSVG support]))
 have_rsvg=no
