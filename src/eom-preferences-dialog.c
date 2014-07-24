@@ -37,6 +37,8 @@
 #include <gtk/gtk.h>
 #include <gio/gio.h>
 
+#include <libmate-desktop/mate-colorbutton.h>
+
 #define EOM_PREFERENCES_DIALOG_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_PREFERENCES_DIALOG, EomPreferencesDialogPrivate))
 
@@ -54,13 +56,13 @@ struct _EomPreferencesDialogPrivate {
 static GObject *instance = NULL;
 
 static void
-pd_color_change_cb (GtkColorButton *button, GSettings *settings)
+pd_color_change_cb (MateColorButton *button, GSettings *settings)
 {
 	GdkColor color;
 	char *key = NULL;
 	char *value = NULL;
 
-	gtk_color_button_get_color (button, &color);
+	mate_color_button_get_color (button, &color);
 
 	value = g_strdup_printf ("#%02X%02X%02X",
 				 color.red / 256,
@@ -196,7 +198,7 @@ eom_preferences_dialog_constructor (GType type,
 	value = g_settings_get_string (priv->view_settings,
 					 EOM_CONF_VIEW_BACKGROUND_COLOR);
 	if (gdk_color_parse (value, &color)){
-		gtk_color_button_set_color (GTK_COLOR_BUTTON (bg_color_button),
+		mate_color_button_set_color (MATE_COLOR_BUTTON (bg_color_button),
 					    &color);
 	}
 	g_free (value);
@@ -268,7 +270,7 @@ eom_preferences_dialog_constructor (GType type,
 					 EOM_CONF_VIEW_TRANS_COLOR);
 
 	if (gdk_color_parse (value, &color)) {
-		gtk_color_button_set_color (GTK_COLOR_BUTTON (color_button),
+		mate_color_button_set_color (MATE_COLOR_BUTTON (color_button),
 					    &color);
 	}
 
