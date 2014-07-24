@@ -122,10 +122,10 @@ struct _EomScrollViewPrivate {
 	guint idle_id;
 
 	/* Interpolation type when zoomed in*/
-	GdkInterpType interp_type_in;
+	cairo_filter_t interp_type_in;
 
 	/* Interpolation type when zoomed out*/
-	GdkInterpType interp_type_out;
+	cairo_filter_t interp_type_out;
 
 	/* Scroll wheel zoom */
 	gboolean scroll_wheel_zoom;
@@ -820,7 +820,7 @@ draw_svg (EomScrollView *view, EomIRect *render_rect, EomIRect *image_rect)
 
 /* Paints a rectangle of the dirty region */
 static void
-paint_rectangle (EomScrollView *view, EomIRect *rect, GdkInterpType interp_type)
+paint_rectangle (EomScrollView *view, EomIRect *rect, cairo_filter_t interp_type)
 {
 	EomScrollViewPrivate *priv;
 	GdkPixbuf *tmp;
@@ -926,7 +926,7 @@ paint_rectangle (EomScrollView *view, EomIRect *rect, GdkInterpType interp_type)
 		return;
 
 	switch (interp_type) {
-	case GDK_INTERP_NEAREST:
+	case CAIRO_FILTER_NEAREST:
 		str = "NEAREST";
 		break;
 	default:
@@ -937,7 +937,7 @@ paint_rectangle (EomScrollView *view, EomIRect *rect, GdkInterpType interp_type)
 			   str, d.x0, d.y0, d.x1, d.y1);
 
 #ifdef HAVE_RSVG
-	if (eom_image_is_svg (view->priv->image) && interp_type != GDK_INTERP_NEAREST) {
+	if (eom_image_is_svg (view->priv->image) && interp_type != CAIRO_FILTER_NEAREST) {
 		draw_svg (view, &d, &r);
 		return;
 	}
@@ -988,7 +988,7 @@ paint_rectangle (EomScrollView *view, EomIRect *rect, GdkInterpType interp_type)
 				    d.x1 - d.x0, d.y1 - d.y0,
 				    -(d.x0 - xofs), -(d.y0 - yofs),
 				    priv->zoom, priv->zoom,
-				    is_unity_zoom (view) ? GDK_INTERP_NEAREST : interp_type,
+				    is_unity_zoom (view) ? CAIRO_FILTER_NEAREST : interp_type,
 				    255,
 				    d.x0 - xofs, d.y0 - yofs,
 				    check_size,
@@ -1034,7 +1034,7 @@ paint_iteration_idle (gpointer data)
 		else if (is_zoomed_out (view))
 			paint_rectangle (view, &rect, priv->interp_type_out);
 		else
-			paint_rectangle (view, &rect, GDK_INTERP_NEAREST);
+			paint_rectangle (view, &rect, CAIRO_FILTER_NEAREST);
 	}
 		
 	if (!priv->uta) {
@@ -1076,11 +1076,11 @@ request_paint_area (EomScrollView *view, GdkRectangle *area)
 		return;
 
 	/* Do nearest neighbor, 1:1 zoom or active progressive loading synchronously for speed.  */
-	if ((is_zoomed_in (view) && priv->interp_type_in == GDK_INTERP_NEAREST) ||
-	    (is_zoomed_out (view) && priv->interp_type_out == GDK_INTERP_NEAREST) ||
+	if ((is_zoomed_in (view) && priv->interp_type_in == CAIRO_FILTER_NEAREST) ||
+	    (is_zoomed_out (view) && priv->interp_type_out == CAIRO_FILTER_NEAREST) ||
 	    is_unity_zoom (view) ||
 	    priv->progressive_state == PROGRESSIVE_LOADING) {
-		paint_rectangle (view, &r, GDK_INTERP_NEAREST);
+		paint_rectangle (view, &r, CAIRO_FILTER_NEAREST);
 		return;
 	}
 
@@ -1092,7 +1092,7 @@ request_paint_area (EomScrollView *view, GdkRectangle *area)
 	else if (!priv->image || !eom_image_is_animation (priv->image))
 		/* do nearest neigbor before anti aliased version,
 		   except for animations to avoid a "blinking" effect. */
-		paint_rectangle (view, &r, GDK_INTERP_NEAREST);
+		paint_rectangle (view, &r, CAIRO_FILTER_NEAREST);
 
 	/* All other interpolation types are delayed.  */
 	if (priv->uta)
@@ -1954,7 +1954,7 @@ image_loading_finished_cb (EomImage *img, gpointer data)
 		gtk_widget_queue_draw (GTK_WIDGET (priv->display));
 
 	}
-	else if (priv->interp_type != GDK_INTERP_NEAREST &&
+	else if (priv->interp_type != CAIRO_FILTER_NEAREST &&
 		 !is_unity_zoom (view))
 	{
 		// paint antialiased image version
@@ -2077,13 +2077,13 @@ void
 eom_scroll_view_set_antialiasing_in (EomScrollView *view, gboolean state)
 {
 	EomScrollViewPrivate *priv;
-	GdkInterpType new_interp_type;
+	cairo_filter_t new_interp_type;
 
 	g_return_if_fail (EOM_IS_SCROLL_VIEW (view));
 
 	priv = view->priv;
 
-	new_interp_type = state ? GDK_INTERP_BILINEAR : GDK_INTERP_NEAREST;
+	new_interp_type = state ? CAIRO_FILTER_BILINEAR : CAIRO_FILTER_NEAREST;
 
 	if (priv->interp_type_in != new_interp_type) {
 		priv->interp_type_in = new_interp_type;
@@ -2095,13 +2095,13 @@ void
 eom_scroll_view_set_antialiasing_out (EomScrollView *view, gboolean state)
 {
 	EomScrollViewPrivate *priv;
-	GdkInterpType new_interp_type;
+	cairo_filter_t new_interp_type;
 
 	g_return_if_fail (EOM_IS_SCROLL_VIEW (view));
 
 	priv = view->priv;
 
-	new_interp_type = state ? GDK_INTERP_BILINEAR : GDK_INTERP_NEAREST;
+	new_interp_type = state ? CAIRO_FILTER_BILINEAR : CAIRO_FILTER_NEAREST;
 
 	if (priv->interp_type_out != new_interp_type) {
 		priv->interp_type_out = new_interp_type;
@@ -2326,8 +2326,8 @@ eom_scroll_view_set_image (EomScrollView *view, EomImage *image)
 
 		}
 #if 0
-		else if ((is_zoomed_in (view) && priv->interp_type_in != GDK_INTERP_NEAREST) ||
-			 (is_zoomed_out (view) && priv->interp_type_out != GDK_INTERP_NEAREST))
+		else if ((is_zoomed_in (view) && priv->interp_type_in != CAIRO_FILTER_NEAREST) ||
+			 (is_zoomed_out (view) && priv->interp_type_out != CAIRO_FILTER_NEAREST))
 		{
 			/* paint antialiased image version */
 			priv->progressive_state = PROGRESSIVE_POLISHING;
@@ -2373,8 +2373,8 @@ eom_scroll_view_init (EomScrollView *view)
 	priv->zoom_mode = ZOOM_MODE_FIT;
 	priv->upscale = FALSE;
 	priv->uta = NULL;
-	priv->interp_type_in = GDK_INTERP_BILINEAR;
-	priv->interp_type_out = GDK_INTERP_BILINEAR;
+	priv->interp_type_in = CAIRO_FILTER_BILINEAR;
+	priv->interp_type_out = CAIRO_FILTER_BILINEAR;
 	priv->scroll_wheel_zoom = FALSE;
 	priv->zoom_multiplier = IMAGE_VIEW_ZOOM_MULTIPLIER;
 	priv->image = NULL;
