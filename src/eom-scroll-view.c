@@ -1884,6 +1884,9 @@ display_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer data)
 	{
 		cairo_scale (cr, priv->zoom, priv->zoom);
 		cairo_set_source_surface (cr, priv->surface, xofs/priv->zoom, yofs/priv->zoom);
+		if ((is_zoomed_in (view) && priv->interp_type_in == CAIRO_FILTER_NEAREST) ||
+		    (is_zoomed_out (view) && priv->interp_type_out == CAIRO_FILTER_NEAREST))
+			cairo_pattern_set_filter (cairo_get_source (cr), CAIRO_FILTER_NEAREST);
 		cairo_paint (cr);
 	}
 
