@@ -88,11 +88,11 @@ eom_sidebar_destroy (GtkObject *object)
 		eom_sidebar->priv->page_model = NULL;
 	}
 
-	#if GTK_CHECK_VERSION(3, 0, 0)
+#if GTK_CHECK_VERSION(3, 0, 0)
 	(* GTK_WIDGET_CLASS (eom_sidebar_parent_class)->destroy) (object);
-	#else
+#else
 	(* GTK_OBJECT_CLASS (eom_sidebar_parent_class)->destroy) (object);
-	#endif
+#endif
 }
 
 static void
@@ -187,28 +187,25 @@ eom_sidebar_get_property (GObject    *object,
 static void
 eom_sidebar_class_init (EomSidebarClass *eom_sidebar_class)
 {
-	// REFERENCE:
-	// https://git.gnome.org/browse/eog/tree/src/eog-sidebar.c?h=gnome-3-0
-
 	GObjectClass *g_object_class;
 	GtkWidgetClass *widget_class;
-	#if !GTK_CHECK_VERSION(3, 0, 0)
+#if !GTK_CHECK_VERSION(3, 0, 0)
 	GtkObjectClass *gtk_object_klass;
-	#endif
+#endif
 
 	g_object_class = G_OBJECT_CLASS (eom_sidebar_class);
 	widget_class = GTK_WIDGET_CLASS (eom_sidebar_class);
-	#if !GTK_CHECK_VERSION(3, 0, 0)
+#if !GTK_CHECK_VERSION(3, 0, 0)
 	gtk_object_klass = GTK_OBJECT_CLASS (eom_sidebar_class);
-	#endif
+#endif
 
 	g_type_class_add_private (g_object_class, sizeof (EomSidebarPrivate));
 
-	#if GTK_CHECK_VERSION(3, 0, 0)
+#if GTK_CHECK_VERSION(3, 0, 0)
 	widget_class->destroy = eom_sidebar_destroy;
-	#else
+#else
 	gtk_object_klass->destroy = eom_sidebar_destroy;
-	#endif
+#endif
 	g_object_class->get_property = eom_sidebar_get_property;
 	g_object_class->set_property = eom_sidebar_set_property;
 
