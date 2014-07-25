@@ -60,6 +60,7 @@
 #define EOM_CONF_UI_IMAGE_COLLECTION_RESIZABLE  "image-collection-resizable"
 #define EOM_CONF_UI_SIDEBAR                     "sidebar"
 #define EOM_CONF_UI_SCROLL_BUTTONS              "scroll-buttons"
+#define EOM_CONF_UI_DISABLE_CLOSE_CONFIRMATION	"disable-close-confirmation"
 #define EOM_CONF_UI_DISABLE_TRASH_CONFIRMATION  "disable-trash-confirmation"
 #define EOM_CONF_UI_FILECHOOSER_XDG_FALLBACK    "filechooser-xdg-fallback"
 #define EOM_CONF_UI_PROPSDIALOG_NETBOOK_MODE    "propsdialog-netbook-mode"
