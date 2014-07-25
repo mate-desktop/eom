@@ -440,7 +440,7 @@ eom_thumbnail_load (EomImage *image, GError **error)
 	GdkPixbuf *thumb = NULL;
 	GFile *file;
 	EomThumbData *data;
-	GdkPixbuf *pixbuf;
+	GdkPixbuf *pixbuf = NULL;
 
 	g_return_val_if_fail (image != NULL, NULL);
 	g_return_val_if_fail (error != NULL && *error == NULL, NULL);
@@ -465,7 +465,9 @@ eom_thumbnail_load (EomImage *image, GError **error)
 	if (thumb != NULL) {
 		eom_debug_message (DEBUG_THUMBNAIL, "%s: loaded from cache",data->uri_str);
 	} else if (mate_desktop_thumbnail_factory_can_thumbnail (factory, data->uri_str, data->mime_type, data->mtime)) {
-		pixbuf = eom_image_get_pixbuf (image);
+		/* Only use the image pixbuf when it is up to date. */
+		if (!eom_image_is_file_changed (image))
+			pixbuf = eom_image_get_pixbuf (image);
 
 		if (pixbuf != NULL) {
 			/* generate a thumbnail from the in-memory image,
