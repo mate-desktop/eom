@@ -2675,6 +2675,11 @@ eom_window_cmd_edit_toolbar (GtkAction *action, gpointer *user_data)
 
 	gtk_container_set_border_width (GTK_CONTAINER (editor), 5);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	// Use as much vertical space as available
+	gtk_widget_set_vexpand (GTK_WIDGET (editor), TRUE);
+#endif
+
 	gtk_box_set_spacing (GTK_BOX (EGG_TOOLBAR_EDITOR (editor)), 5);
 
 	gtk_container_add (GTK_CONTAINER (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), editor);
