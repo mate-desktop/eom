@@ -2237,3 +2237,11 @@ eom_image_file_changed (EomImage *img)
 	img->priv->file_is_changed = TRUE;
 	g_signal_emit (img, signals[SIGNAL_FILE_CHANGED], 0);
 }
+
+gboolean
+eom_image_is_file_changed (EomImage *img)
+{
+	g_return_val_if_fail (EOM_IS_IMAGE (img), TRUE);
+
+	return img->priv->file_is_changed;
+}

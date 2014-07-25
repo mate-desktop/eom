@@ -212,6 +212,7 @@ EomTransform     *eom_image_get_transform            (EomImage *img);
 #endif
 
 void              eom_image_file_changed             (EomImage *img);
+gboolean          eom_image_is_file_changed         (EomImage *img);
 
 G_END_DECLS
 
