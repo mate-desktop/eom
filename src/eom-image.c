@@ -289,6 +289,7 @@ eom_image_init (EomImage *img)
 	img->priv->width = -1;
 	img->priv->height = -1;
 	img->priv->modified = FALSE;
+	img->priv->file_is_changed = FALSE;
 	g_mutex_init (&img->priv->status_mutex);
 	img->priv->status = EOM_IMAGE_STATUS_UNKNOWN;
         img->priv->metadata_status = EOM_IMAGE_METADATA_NOT_READ;
@@ -1147,6 +1148,8 @@ eom_image_real_load (EomImage *img,
 			if (format != NULL) {
 				priv->file_type = gdk_pixbuf_format_get_name (format);
 			}
+
+			priv->file_is_changed = FALSE;
 
 			/* If it's non-threadsafe loader, then trigger window
  			 * showing in the end of the process. */
@@ -2223,12 +2226,14 @@ eom_image_get_transform (EomImage *img)
  * eom_image_file_changed:
  * @img: a #EomImage
  *
- * Emits EomImage::file-changed signal
+ * Marks the image files contents as changed. Also, emits
+ * EomImage::file-changed signal
  **/
 void
 eom_image_file_changed (EomImage *img)
 {
 	g_return_if_fail (EOM_IS_IMAGE (img));
 
+	img->priv->file_is_changed = TRUE;
 	g_signal_emit (img, signals[SIGNAL_FILE_CHANGED], 0);
 }
