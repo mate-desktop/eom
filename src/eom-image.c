@@ -1884,11 +1884,11 @@ eom_image_cancel_load (EomImage *img)
 	g_mutex_unlock (&priv->status_mutex);
 }
 
-gpointer
+EomExifData *
 eom_image_get_exif_info (EomImage *img)
 {
 	EomImagePrivate *priv;
-	gpointer data = NULL;
+	EomExifData *data = NULL;
 
 	g_return_val_if_fail (EOM_IS_IMAGE (img), NULL);
 

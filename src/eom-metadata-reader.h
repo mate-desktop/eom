@@ -24,7 +24,7 @@
 
 #include <glib-object.h>
 #if HAVE_EXIF
-#include <libexif/exif-data.h>
+#include "eom-exif-util.h"
 #endif
 #if HAVE_EXEMPI
 #include <exempi/xmp.h>
@@ -89,7 +89,7 @@ void                 eom_metadata_reader_get_exif_chunk (EomMetadataReader *emr,
 
 #ifdef HAVE_EXIF
 G_GNUC_INTERNAL
-ExifData*            eom_metadata_reader_get_exif_data	(EomMetadataReader *emr);
+EomExifData*         eom_metadata_reader_get_exif_data	(EomMetadataReader *emr);
 #endif
 
 #ifdef HAVE_EXEMPI

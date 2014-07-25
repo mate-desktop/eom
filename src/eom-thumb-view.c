@@ -422,7 +422,7 @@ thumbview_get_tooltip_string (EomImage *image)
 		gchar time_buffer[32];
 
 		date = eom_exif_util_format_date (
-			eom_exif_util_get_value (exif_data, EXIF_TAG_DATE_TIME_ORIGINAL, time_buffer, 32));
+			eom_exif_data_get_value (exif_data, EXIF_TAG_DATE_TIME_ORIGINAL, time_buffer, 32));
 
 		if (date) {
 			extra_info = g_strdup_printf ("\n%s %s", _("Taken on"), date);

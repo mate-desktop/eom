@@ -102,7 +102,7 @@ eom_metadata_reader_get_exif_chunk (EomMetadataReader *emr, guchar **data, guint
 }
 
 #ifdef HAVE_EXIF
-ExifData*
+EomExifData*
 eom_metadata_reader_get_exif_data (EomMetadataReader *emr)
 {
 	gpointer exif_data = NULL;
@@ -113,7 +113,7 @@ eom_metadata_reader_get_exif_data (EomMetadataReader *emr)
 	if (iface->get_exif_data)
 		exif_data = iface->get_exif_data (emr);
 
-	return exif_data;
+	return (EomExifData *)exif_data;
 }
 #endif
 

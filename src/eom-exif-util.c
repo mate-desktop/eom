@@ -185,7 +185,7 @@ eom_exif_util_format_date (const gchar *date)
 }
 
 /**
- * eom_exif_util_get_value:
+ * eom_exif_data_get_value:
  * @exif_data: pointer to an <structname>ExifData</structname> struct
  * @tag_id: the requested tag's id. See <filename>exif-tag.h</filename>
  * from the libexif package for possible values (e.g. %EXIF_TAG_EXPOSURE_MODE).
@@ -199,7 +199,7 @@ eom_exif_util_format_date (const gchar *date)
  * Returns: a pointer to @buffer.
  */
 const gchar *
-eom_exif_util_get_value (ExifData *exif_data, gint tag_id, gchar *buffer, guint buf_size)
+eom_exif_data_get_value (EomExifData *exif_data, gint tag_id, gchar *buffer, guint buf_size)
 {
 	ExifEntry *exif_entry;
 	const gchar *exif_value;
@@ -211,4 +211,30 @@ eom_exif_util_get_value (ExifData *exif_data, gint tag_id, gchar *buffer, guint 
 	exif_value = exif_entry_get_value (exif_entry, buffer, buf_size);
 
 	return exif_value;
+}
+
+EomExifData *
+eom_exif_data_copy (EomExifData *data)
+{
+	exif_data_ref (data);
+
+	return data;
+}
+
+void
+eom_exif_data_free (EomExifData *data)
+{
+	exif_data_unref (data);
+}
+
+GType
+eom_exif_data_get_type (void)
+{
+	static GType our_type = 0;
+
+	if (our_type == 0)
+		our_type = g_boxed_type_register_static ("EomExifData",
+							(GBoxedCopyFunc) eom_exif_data_copy,
+							(GBoxedFreeFunc) eom_exif_data_free);
+	return our_type;
 }

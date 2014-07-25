@@ -28,8 +28,6 @@
 #include <gmodule.h>
 #include <glib/gi18n-lib.h>
 
-#include <libexif/exif-data.h>
-
 #include <eom-debug.h>
 #include <eom-scroll-view.h>
 #include <eom-image.h>
@@ -60,7 +58,7 @@ static void statusbar_set_date(GtkStatusbar* statusbar, EomThumbView* view)
 	EomImage* image;
 	gchar* date = NULL;
 	gchar time_buffer[32];
-	ExifData* exif_data;
+	EomExifData* exif_data;
 
 	if (eom_thumb_view_get_n_selected(view) == 0)
 	{
@@ -79,12 +77,12 @@ static void statusbar_set_date(GtkStatusbar* statusbar, EomThumbView* view)
 		}
 	}
 
-	exif_data = (ExifData*) eom_image_get_exif_info(image);
+	exif_data = eom_image_get_exif_info (image);
 
 	if (exif_data)
 	{
-		date = eom_exif_util_format_date(eom_exif_util_get_value(exif_data, EXIF_TAG_DATE_TIME_ORIGINAL, time_buffer, 32));
-		exif_data_unref(exif_data);
+		date = eom_exif_util_format_date(eom_exif_data_get_value(exif_data, EXIF_TAG_DATE_TIME_ORIGINAL, time_buffer, 32));
+		exif_data_free (exif_data);
 	}
 
 	if (date)
