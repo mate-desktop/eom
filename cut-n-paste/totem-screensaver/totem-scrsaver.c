@@ -281,7 +281,7 @@ screensaver_finalize_dbus (TotemScrsaver *scr)
 static void
 screensaver_enable_x11 (TotemScrsaver *scr)
 {
-
+	Display *display;
 #ifdef HAVE_XTEST
 	if (scr->priv->have_xtest != FALSE)
 	{
@@ -290,13 +290,14 @@ screensaver_enable_x11 (TotemScrsaver *scr)
 	}
 #endif /* HAVE_XTEST */
 
-	XLockDisplay (gdk_x11_get_default_xdisplay());
-	XSetScreenSaver (gdk_x11_get_default_xdisplay(),
+	display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default());
+	XLockDisplay (display);
+	XSetScreenSaver (display,
 			scr->priv->timeout,
 			scr->priv->interval,
 			scr->priv->prefer_blanking,
 			scr->priv->allow_exposures);
-	XUnlockDisplay (gdk_x11_get_default_xdisplay());
+	XUnlockDisplay (display);
 }
 
 #ifdef HAVE_XTEST
@@ -305,12 +306,15 @@ fake_event (TotemScrsaver *scr)
 {
 	if (scr->priv->disabled)
 	{
-		XLockDisplay (gdk_x11_get_default_xdisplay());
-		XTestFakeKeyEvent (gdk_x11_get_default_xdisplay(), *scr->priv->keycode,
+		Display *display;
+
+		display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default());
+		XLockDisplay (display);
+		XTestFakeKeyEvent (display, *scr->priv->keycode,
 				True, CurrentTime);
-		XTestFakeKeyEvent (gdk_x11_get_default_xdisplay(), *scr->priv->keycode,
+		XTestFakeKeyEvent (display, *scr->priv->keycode,
 				False, CurrentTime);
-		XUnlockDisplay (gdk_x11_get_default_xdisplay());
+		XUnlockDisplay (display);
 		/* Swap the keycode */
 		if (scr->priv->keycode == &scr->priv->keycode1)
 			scr->priv->keycode = &scr->priv->keycode2;
@@ -325,16 +329,19 @@ fake_event (TotemScrsaver *scr)
 static void
 screensaver_disable_x11 (TotemScrsaver *scr)
 {
+	Display *display;
+
+	display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default());
 
 #ifdef HAVE_XTEST
 	if (scr->priv->have_xtest != FALSE)
 	{
-		XLockDisplay (gdk_x11_get_default_xdisplay());
-		XGetScreenSaver(gdk_x11_get_default_xdisplay(), &scr->priv->timeout,
+		XLockDisplay (display);
+		XGetScreenSaver(display, &scr->priv->timeout,
 				&scr->priv->interval,
 				&scr->priv->prefer_blanking,
 				&scr->priv->allow_exposures);
-		XUnlockDisplay (gdk_x11_get_default_xdisplay());
+		XUnlockDisplay (display);
 
 		if (scr->priv->timeout != 0) {
 			g_timeout_add_seconds (scr->priv->timeout / 2,
@@ -348,14 +355,14 @@ screensaver_disable_x11 (TotemScrsaver *scr)
 	}
 #endif /* HAVE_XTEST */
 
-	XLockDisplay (gdk_x11_get_default_xdisplay());
-	XGetScreenSaver(gdk_x11_get_default_xdisplay(), &scr->priv->timeout,
+	XLockDisplay (display);
+	XGetScreenSaver(display, &scr->priv->timeout,
 			&scr->priv->interval,
 			&scr->priv->prefer_blanking,
 			&scr->priv->allow_exposures);
-	XSetScreenSaver(gdk_x11_get_default_xdisplay(), 0, 0,
+	XSetScreenSaver(display, 0, 0,
 			DontPreferBlanking, DontAllowExposures);
-	XUnlockDisplay (gdk_x11_get_default_xdisplay());
+	XUnlockDisplay (display);
 }
 
 static void
@@ -363,25 +370,28 @@ screensaver_init_x11 (TotemScrsaver *scr)
 {
 #ifdef HAVE_XTEST
 	int a, b, c, d;
+	Display *display;
 
-	XLockDisplay (gdk_x11_get_default_xdisplay());
-	scr->priv->have_xtest = (XTestQueryExtension (gdk_x11_get_default_xdisplay(), &a, &b, &c, &d) == True);
+	display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default());
+
+	XLockDisplay (display);
+	scr->priv->have_xtest = (XTestQueryExtension (display, &a, &b, &c, &d) == True);
 	if (scr->priv->have_xtest != FALSE)
 	{
-		scr->priv->keycode1 = XKeysymToKeycode (gdk_x11_get_default_xdisplay(), XK_Alt_L);
+		scr->priv->keycode1 = XKeysymToKeycode (display, XK_Alt_L);
 		if (scr->priv->keycode1 == 0) {
 			g_warning ("scr->priv->keycode1 not existant");
 		}
-		scr->priv->keycode2 = XKeysymToKeycode (gdk_x11_get_default_xdisplay(), XK_Alt_R);
+		scr->priv->keycode2 = XKeysymToKeycode (display, XK_Alt_R);
 		if (scr->priv->keycode2 == 0) {
-			scr->priv->keycode2 = XKeysymToKeycode (gdk_x11_get_default_xdisplay(), XK_Alt_L);
+			scr->priv->keycode2 = XKeysymToKeycode (display, XK_Alt_L);
 			if (scr->priv->keycode2 == 0) {
 				g_warning ("scr->priv->keycode2 not existant");
 			}
 		}
 		scr->priv->keycode = &scr->priv->keycode1;
 	}
-	XUnlockDisplay (gdk_x11_get_default_xdisplay());
+	XUnlockDisplay (display);
 #endif /* HAVE_XTEST */
 }
 
