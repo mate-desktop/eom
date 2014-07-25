@@ -1253,9 +1253,11 @@ eom_image_load (EomImage *img, EomImageData data2read, EomJob *job, GError **err
 
 #ifdef HAVE_EXIF
 	/* Check that the metadata was loaded at least once before
-	 * trying to autorotate. */
+	 * trying to autorotate. Also only an imatge load job should try to
+	 * autorotate and image */
 	if (priv->autorotate && 
-	    priv->metadata_status == EOM_IMAGE_METADATA_READY) {
+	    priv->metadata_status == EOM_IMAGE_METADATA_READY &&
+	      data2read & EOM_IMAGE_DATA_IMAGE) {
 		eom_image_real_autorotate (img);
 	}
 #endif
