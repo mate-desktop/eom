@@ -128,6 +128,16 @@ EOM_MODULES="gtk+-$GTK_API_VERSION >= $GTK_REQUIRED \
              mate-icon-theme >= $MATE_ICON_THEME_REQUIRED \
              shared-mime-info >= $SHARED_MIME_INFO_REQUIRED"
 
+# Introspection
+GOBJECT_INTROSPECTION_CHECK([0.9.3])
+
+if test "$found_introspection" = "yes"; then
+	have_introspection=yes
+	AC_DEFINE([HAVE_INTROSPECTION], [1], [Define to enable GObject Introspection])
+else
+	have_introspection=no
+fi
+
 # ***************
 # ZLIB (required)
 # ***************
@@ -522,4 +532,5 @@ Configure summary:
 	RSVG support ...............:  ${have_rsvg}
 	Colour management support ..:  ${have_lcms}
 	D-Bus activation............:  ${have_dbus}
+	GObject Introspection.......:  ${have_introspection}
 "

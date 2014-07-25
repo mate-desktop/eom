@@ -30,6 +30,9 @@
 #include <dbus/dbus-glib-bindings.h>
 #include <gdk/gdkx.h>
 #endif
+#ifdef HAVE_INSTROSPECTION
+#include <girepository.h>
+#endif
 
 #include "eom-session.h"
 #include "eom-debug.h"
@@ -196,6 +199,9 @@ main (int argc, char **argv)
 	/* Option groups are free'd together with the context 
 	 * Using gtk_get_option_group here initializes gtk during parsing */
 	g_option_context_add_group (ctx, gtk_get_option_group (TRUE));
+#ifdef HAVE_INTROSPECTION
+	g_option_context_add_group (ctx, g_irepository_get_option_group ());
+#endif
 
 	if (!g_option_context_parse (ctx, &argc, &argv, &error)) {
 		gchar *help_msg;

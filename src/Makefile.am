@@ -70,7 +70,7 @@ INST_H_FILES =				\
 	eom-jobs.h			\
 	eom-plugin.h
 
-libeom_la_SOURCES =			\
+libeom_c_files =			\
 	eom-application.c		\
 	eom-session.c			\
 	eom-debug.c			\
@@ -110,7 +110,10 @@ libeom_la_SOURCES =			\
 	eom-plugin-engine.c            	\
 	eom-clipboard-handler.c		\
 	uta.c				\
-	zoom.c				\
+	zoom.c
+
+libeom_la_SOURCES =			\
+	$(libeom_c_files)		\
 	$(BUILT_SOURCES)		\
 	$(NOINST_H_FILES)		\
 	$(INST_H_FILES)
@@ -119,7 +122,7 @@ if HAVE_EXIF
 INST_H_FILES +=				\
 	eom-exif-util.h			\
 	eom-exif-details.h
-libeom_la_SOURCES +=			\
+libeom_c_files +=			\
 	eom-exif-util.c			\
 	eom-exif-details.c
 endif
@@ -144,18 +147,20 @@ libeom_la_SOURCES +=			\
 	eom-exif-details.c
 endif HAVE_EXEMPI
 
-libeom_la_CFLAGS =						\
+libeom_la_CPPFLAGS =						\
 	-I$(top_srcdir)/jpegutils				\
 	-I$(top_srcdir)/cut-n-paste/toolbar-editor		\
 	-I$(top_srcdir)/cut-n-paste/totem-screensaver		\
-	$(EOM_CFLAGS)						\
-	$(WARN_CFLAGS)						\
 	-DG_LOG_DOMAIN=\"EOM\"					\
 	-DEOM_PREFIX=\""${prefix}"\"				\
 	-DEOM_DATA_DIR=\""$(pkgdatadir)"\"			\
 	-DEOM_LOCALE_DIR=\""$(datadir)/locale"\"		\
 	-DEOM_PIXMAPS_DIR=\""$(datadir)/pixmaps/eom"\"		\
 	-DEOM_PLUGIN_DIR=\""$(libdir)/eom/plugins"\"
+
+libeom_la_CFLAGS =						\
+	$(EOM_CFLAGS)						\
+	$(WARN_CFLAGS)
 
 libeom_la_LIBADD = \
 	$(EOM_LIBS)
@@ -186,7 +191,8 @@ eom_CFLAGS = 							\
 	-I$(top_srcdir)/cut-n-paste/totem-screensaver		\
 	$(EOM_CFLAGS)						\
 	-DEOM_DATA_DIR=\""$(pkgdatadir)"\"			\
-	-DEOM_LOCALE_DIR=\""$(datadir)/locale"\"
+	-DEOM_LOCALE_DIR=\""$(datadir)/locale"\"		\
+	$(INTROSPECTION_CFLAGS)
 
 eom_LDADD = 				\
 	libeom.la			\
@@ -194,7 +200,8 @@ eom_LDADD = 				\
 	$(LIBJPEG)			\
 	$(toolbar_LIB)			\
 	$(screensaver_LIB)		\
-	$(jpeg_LIB)
+	$(jpeg_LIB)			\
+	$(INTROSPECTION_LIBS)
 
 BUILT_SOURCES = 			\
 	eom-enum-types.c		\
@@ -230,6 +237,27 @@ eom-application-service.h: eom-application-service.xml
 endif
 
 CLEANFILES = $(BUILT_SOURCES)
+
+if HAVE_INTROSPECTION
+-include $(INTROSPECTION_MAKEFILE)
+INTROSPECTION_GIRS = Eom-1.0.gir
+INTROSPECTION_SCANNER_ARGS = -I$(top_srcdir) --warn-all $(libeom_la_CPPFLAGS)
+
+Eom-1.0.gir: eom
+Eom_1_0_gir_INCLUDES = Gtk-${GTK_API_VERSION}
+Eom_1_0_gir_FILES = $(INST_H_FILES) $(libeom_c_files) $(BUILT_SOURCES)
+Eom_1_0_gir_VERSION = 1.0
+Eom_1_0_gir_PROGRAM = $(builddir)/eom
+Eom_1_0_gir_NAMESPACE = Eom
+Eom_1_0_gir_CFLAGS = $(EOM_CFLAGS)
+girdir = $(datadir)/eom/gir-1.0
+gir_DATA = $(INTROSPECTION_GIRS)
+
+typelibdir = $(libdir)/eom/girepository-1.0
+typelib_DATA = $(INTROSPECTION_GIRS:.gir=.typelib)
+
+CLEANFILES += $(gir_DATA) $(typelib_DATA)
+endif
 
 dist-hook:
 	cd $(distdir); rm -f $(BUILT_SOURCES)
