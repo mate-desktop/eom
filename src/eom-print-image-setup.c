@@ -53,7 +53,7 @@
 
 G_DEFINE_TYPE (EomPrintImageSetup, eom_print_image_setup, GTK_TYPE_TABLE);
 
-struct EomPrintImageSetupPrivate {
+struct _EomPrintImageSetupPrivate {
 	GtkWidget *left;
 	GtkWidget *right;
 	GtkWidget *top;
