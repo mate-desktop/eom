@@ -18,8 +18,8 @@ gsettings_SCHEMAS = org.mate.eom.gschema.xml
 convertdir = $(datadir)/MateConf/gsettings
 convert_DATA = eom.convert
 
-gladedir = $(pkgdatadir)
-glade_DATA = eom-image-properties-dialog.ui \
+uidir = $(pkgdatadir)
+ui_DATA = eom-image-properties-dialog.ui \
 	     eom-multiple-save-as-dialog.ui \
 	     eom-preferences-dialog.ui
 
@@ -38,7 +38,7 @@ gtkrc_DATA = gtkrc
 
 EXTRA_DIST =				\
         $(gtkrc_DATA)			\
-        $(glade_DATA)			\
+        $(ui_DATA)			\
 	$(convert_DATA)			\
         $(DESKTOP_IN_FILES)		\
         $(gsettings_SCHEMAS).in.in	\

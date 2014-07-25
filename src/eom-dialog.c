@@ -47,7 +47,7 @@ struct _EomDialogPrivate {
 
 static void
 eom_dialog_construct_impl (EomDialog   *dialog,
-			   const gchar *glade_file,
+			   const gchar *ui_file,
 			   const gchar *dlg_node)
 {
 	EomDialogPrivate *priv;
@@ -58,7 +58,7 @@ eom_dialog_construct_impl (EomDialog   *dialog,
 
 	priv = dialog->priv;
 
-	filename = g_build_filename (EOM_DATA_DIR, glade_file, NULL);
+	filename = g_build_filename (EOM_DATA_DIR, ui_file, NULL);
 
 	priv->xml = gtk_builder_new ();
 	gtk_builder_set_translation_domain (priv->xml, GETTEXT_PACKAGE);
@@ -187,11 +187,11 @@ eom_dialog_init (EomDialog *dialog)
 
 void
 eom_dialog_construct (EomDialog   *dialog,
-		      const gchar *glade_file,
+		      const gchar *ui_file,
 		      const gchar *dlg_node)
 {
 	EomDialogClass *klass = EOM_DIALOG_GET_CLASS (dialog);
-	klass->construct (dialog, glade_file, dlg_node);
+	klass->construct (dialog, ui_file, dlg_node);
 }
 
 void
