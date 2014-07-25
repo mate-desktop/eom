@@ -116,6 +116,10 @@ eom_statusbar_set_image_number (EomStatusbar *statusbar,
 
 	gtk_statusbar_pop (GTK_STATUSBAR (statusbar->priv->img_num_statusbar), 0);
 
+	/* Hide number display if values don't make sense */
+	if (G_UNLIKELY (num <= 0 || tot <= 0))
+		return;
+
 	/* Translators: This string is displayed in the statusbar.
 	 * The first token is the image number, the second is total image
 	 * count.

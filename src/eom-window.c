@@ -680,7 +680,7 @@ static void
 update_image_pos (EomWindow *window)
 {
 	EomWindowPrivate *priv;
-	gint pos, n_images;
+	gint pos = -1, n_images = 0;
 
 	priv = window->priv;
 
@@ -689,12 +689,12 @@ update_image_pos (EomWindow *window)
 	if (n_images > 0) {
 		pos = eom_list_store_get_pos_by_image (EOM_LIST_STORE (priv->store),
 						       priv->image);
-
-		/* Images: (image pos) / (n_total_images) */
-		eom_statusbar_set_image_number (EOM_STATUSBAR (priv->statusbar),
-						pos + 1,
-						n_images);
 	}
+	/* Images: (image pos) / (n_total_images) */
+	eom_statusbar_set_image_number (EOM_STATUSBAR (priv->statusbar),
+					pos + 1,
+					n_images);
+
 }
 
 static void
@@ -1642,6 +1642,15 @@ handle_image_selection_changed_cb (EomThumbView *thumbview, EomWindow *window)
 	gchar *str_image;
 
 	priv = window->priv;
+
+	if (eom_list_store_length (EOM_LIST_STORE (priv->store)) == 0) {
+		gtk_window_set_title (GTK_WINDOW (window),
+				      g_get_application_name());
+		gtk_statusbar_remove_all (GTK_STATUSBAR (priv->statusbar),
+					  priv->image_info_message_cid);
+		eom_scroll_view_set_image (EOM_SCROLL_VIEW (priv->view),
+					   NULL);
+}
 
 	if (eom_thumb_view_get_n_selected (EOM_THUMB_VIEW (priv->thumbview)) == 0)
 		return;
