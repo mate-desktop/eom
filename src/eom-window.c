@@ -4189,11 +4189,24 @@ eom_window_drag_data_received (GtkWidget *widget,
         GSList *file_list;
         EomWindow *window;
 	GdkAtom target;
+	GtkWidget *src;
 
 	target = gtk_selection_data_get_target (selection_data);
 
         if (!gtk_targets_include_uri (&target, 1))
                 return;
+
+	/* if the request is from another process this will return NULL */
+	src = gtk_drag_get_source_widget (context);
+
+	/* if the drag request originates from the current eog instance, ignore
+	   the request if the source window is the same as the dest window */
+	if (src &&
+	    gtk_widget_get_toplevel (src) == gtk_widget_get_toplevel (widget))
+	{
+		gdk_drag_status (context, 0, time);
+		return;
+	}
 
         if (gdk_drag_context_get_suggested_action (context) == GDK_ACTION_COPY) {
                 window = EOM_WINDOW (widget);
