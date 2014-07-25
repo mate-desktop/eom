@@ -337,11 +337,13 @@ update_preview_cb (GtkFileChooser *file_chooser, gpointer data)
 	file = g_file_new_for_uri (uri);
 	file_info = g_file_query_info (file,
 				       G_FILE_ATTRIBUTE_TIME_MODIFIED ","
+				       G_FILE_ATTRIBUTE_STANDARD_TYPE ","
 				       G_FILE_ATTRIBUTE_STANDARD_SIZE,
 				       0, NULL, NULL);
 	g_object_unref (file);
 
-	if ((file_info != NULL) && (priv->thumb_factory != NULL)) {
+	if ((file_info != NULL) && (priv->thumb_factory != NULL)
+	    && g_file_info_get_file_type (file_info) != G_FILE_TYPE_SPECIAL) {
 		guint64 mtime;
 
 		mtime = g_file_info_get_attribute_uint64 (file_info,
