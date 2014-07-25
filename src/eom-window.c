@@ -478,7 +478,11 @@ eom_window_collection_mode_changed_cb (GSettings *settings, gchar *key, gpointer
 		if (resizable) {
 			mode = EOM_THUMB_NAV_MODE_MULTIPLE_ROWS;
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+			priv->layout = gtk_paned_new (GTK_ORIENTATION_VERTICAL);
+#else
 			priv->layout = gtk_vpaned_new ();
+#endif
 
 			if (position == 0) {
 				gtk_paned_pack1 (GTK_PANED (priv->layout), hpaned, TRUE, FALSE);
@@ -507,7 +511,11 @@ eom_window_collection_mode_changed_cb (GSettings *settings, gchar *key, gpointer
 		if (resizable) {
 			mode = EOM_THUMB_NAV_MODE_MULTIPLE_COLUMNS;
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+			priv->layout = gtk_paned_new (GTK_ORIENTATION_HORIZONTAL);
+#else
 			priv->layout = gtk_hpaned_new ();
+#endif
 
 			if (position == 1) {
 				gtk_paned_pack1 (GTK_PANED (priv->layout), priv->nav, FALSE, TRUE);
@@ -4437,7 +4445,11 @@ eom_window_construct_ui (EomWindow *window)
 
 	priv->layout = gtk_vbox_new (FALSE, 2);
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+	hpaned = gtk_paned_new (GTK_ORIENTATION_HORIZONTAL);
+#else
 	hpaned = gtk_hpaned_new ();
+#endif
 
 	priv->sidebar = eom_sidebar_new ();
 	/* The sidebar shouldn't be shown automatically on show_all(),
