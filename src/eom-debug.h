@@ -31,7 +31,7 @@
 #include <glib.h>
 
 typedef enum {
-	EOM_NO_DEBUG           = 0,
+	EOM_DEBUG_NO_DEBUG           = 0,
 	EOM_DEBUG_WINDOW       = 1 << 0,
 	EOM_DEBUG_VIEW         = 1 << 1,
 	EOM_DEBUG_JOBS         = 1 << 2,
@@ -44,7 +44,7 @@ typedef enum {
 	EOM_DEBUG_PRINTING     = 1 << 9,
 	EOM_DEBUG_LCMS         = 1 << 10,
 	EOM_DEBUG_PLUGINS      = 1 << 11
-} EomDebugSection;
+} EomDebug;
 
 #define	DEBUG_WINDOW		EOM_DEBUG_WINDOW,      __FILE__, __LINE__, G_STRFUNC
 #define	DEBUG_VIEW		EOM_DEBUG_VIEW,        __FILE__, __LINE__, G_STRFUNC
@@ -61,12 +61,12 @@ typedef enum {
 
 void   eom_debug_init        (void);
 
-void   eom_debug             (EomDebugSection    section,
+void   eom_debug             (EomDebug    section,
           	              const gchar       *file,
           	              gint               line,
           	              const gchar       *function);
 
-void   eom_debug_message     (EomDebugSection    section,
+void   eom_debug_message     (EomDebug    section,
 			      const gchar       *file,
 			      gint               line,
 			      const gchar       *function,
