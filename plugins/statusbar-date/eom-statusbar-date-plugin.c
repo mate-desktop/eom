@@ -82,7 +82,7 @@ static void statusbar_set_date(GtkStatusbar* statusbar, EomThumbView* view)
 	if (exif_data)
 	{
 		date = eom_exif_util_format_date(eom_exif_data_get_value(exif_data, EXIF_TAG_DATE_TIME_ORIGINAL, time_buffer, 32));
-		exif_data_free (exif_data);
+		eom_exif_data_free (exif_data);
 	}
 
 	if (date)

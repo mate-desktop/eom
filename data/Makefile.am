@@ -19,16 +19,12 @@ convertdir = $(datadir)/MateConf/gsettings
 convert_DATA = eom.convert
 
 uidir = $(pkgdatadir)
-ui_DATA = eom-image-properties-dialog.ui \
-	     eom-multiple-save-as-dialog.ui \
-	     eom-preferences-dialog.ui
-
-uidir = $(pkgdatadir)
-UI_FILES = \
+ui_DATA = \
+	eom-image-properties-dialog.ui \
+	eom-multiple-save-as-dialog.ui \
+	eom-preferences-dialog.ui \
 	eom-ui.xml \
 	eom-toolbar.xml
-
-ui_DATA = $(UI_FILES)
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = eom.pc
@@ -41,8 +37,7 @@ EXTRA_DIST =				\
         $(ui_DATA)			\
 	$(convert_DATA)			\
         $(DESKTOP_IN_FILES)		\
-        $(gsettings_SCHEMAS).in.in	\
-	$(UI_FILES)
+        $(gsettings_SCHEMAS).in.in
 
 DISTCLEANFILES = 		\
         $(DESKTOP_FILES)	\
