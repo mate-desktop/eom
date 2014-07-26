@@ -3512,6 +3512,63 @@ move_to_trash_real (EomImage *image, GError **error)
 }
 
 static void
+eom_window_cmd_copy_path (GtkAction *action, gpointer user_data)
+{
+	EomWindow *window;
+	EomWindowPrivate *priv;
+	EomImage *image;
+	GFile *file;
+	char *filename = NULL;
+	GtkClipboard *clipboard;
+
+	g_return_if_fail (EOM_IS_WINDOW (user_data));
+
+	window = EOM_WINDOW (user_data);
+	priv = window->priv;
+
+	image = eom_thumb_view_get_first_selected_image (EOM_THUMB_VIEW (priv->thumbview));
+
+	g_return_if_fail (EOM_IS_IMAGE (image));
+
+	file = eom_image_get_file (image);
+
+	filename = g_file_get_path (file);
+
+	clipboard = gtk_clipboard_get (GDK_SELECTION_CLIPBOARD);
+	gtk_clipboard_set_text (clipboard, filename, -1);
+
+	g_object_unref (file);
+	g_free (filename);
+
+}
+
+static void
+eom_window_cmd_copy_image (GtkAction *action, gpointer user_data)
+{
+	GtkClipboard *clipboard;
+	GdkPixbuf *pix;
+	EomWindow *window;
+	EomWindowPrivate *priv;
+	EomImage *image;
+
+	g_return_if_fail (EOM_IS_WINDOW (user_data));
+
+	window = EOM_WINDOW (user_data);
+	priv = window->priv;
+
+	image = eom_thumb_view_get_first_selected_image (EOM_THUMB_VIEW (priv->thumbview));
+
+	g_return_if_fail (EOM_IS_IMAGE (image));
+
+	pix = eom_image_get_pixbuf (image);
+
+	clipboard = gtk_clipboard_get (GDK_SELECTION_CLIPBOARD);
+	gtk_clipboard_set_image (clipboard, pix);
+
+	g_object_unref (pix);
+}
+
+static void
 eom_window_cmd_move_to_trash (GtkAction *action, gpointer user_data)
 {
 	GList *images;
@@ -3894,6 +3951,12 @@ static const GtkActionEntry action_entries_image[] = {
 	{ "EditMoveToTrash", "user-trash", N_("Move to _Trash"), NULL,
 	  N_("Move the selected image to the trash folder"),
 	  G_CALLBACK (eom_window_cmd_move_to_trash) },
+	{ "EditCopyPath", NULL, N_("Copy _Path"), NULL,
+	  N_("Copy the image file path to the clipboard"),
+	  G_CALLBACK (eom_window_cmd_copy_path) },
+	{ "EditCopyImage", NULL, N_("Copy _Image"), NULL,
+	  N_("Copy the image to the clipboard"),
+	  G_CALLBACK (eom_window_cmd_copy_image) },
 	{ "ViewZoomIn", GTK_STOCK_ZOOM_IN, N_("_Zoom In"), "<control>plus",
 	  N_("Enlarge the image"),
 	  G_CALLBACK (eom_window_cmd_zoom_in) },
