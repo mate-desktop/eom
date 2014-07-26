@@ -7,7 +7,7 @@
 
 G_BEGIN_DECLS
 
-#ifndef __EOM_IMAGE_DCLR__
+#ifndef __EOM_IMAGE_DECLR__
 #define __EOM_IMAGE_DECLR__
 typedef struct _EomImage EomImage;
 #endif
