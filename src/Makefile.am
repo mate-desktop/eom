@@ -38,6 +38,7 @@ NOINST_H_FILES =			\
 	eom-plugin-engine.h             \
 	uta.h				\
 	eom-close-confirmation-dialog.h	\
+	eom-clipboard-handler.h		\
 	zoom.h
 
 if ENABLE_PYTHON
@@ -107,6 +108,7 @@ libeom_la_SOURCES =			\
 	eom-plugin.c            	\
 	eom-plugin-manager.c            \
 	eom-plugin-engine.c            	\
+	eom-clipboard-handler.c		\
 	uta.c				\
 	zoom.c				\
 	$(BUILT_SOURCES)		\
