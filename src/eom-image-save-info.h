@@ -7,7 +7,10 @@
 
 G_BEGIN_DECLS
 
-struct EomImage;
+#ifndef __EOM_IMAGE_DCLR__
+#define __EOM_IMAGE_DECLR__
+typedef struct _EomImage EomImage;
+#endif
 
 #define EOM_TYPE_IMAGE_SAVE_INFO            (eom_image_save_info_get_type ())
 #define EOM_IMAGE_SAVE_INFO(o)         (G_TYPE_CHECK_INSTANCE_CAST ((o), EOM_TYPE_IMAGE_SAVE_INFO, EomImageSaveInfo))
@@ -39,15 +42,15 @@ struct _EomImageSaveInfoClass {
 
 #define EOM_FILE_FORMAT_JPEG   "jpeg"
 
-GType             eom_image_save_info_get_type     (void) G_GNUC_CONST;
+GType             eom_image_save_info_get_type         (void) G_GNUC_CONST;
 
-EomImageSaveInfo *eom_image_save_info_from_image   (gpointer        data);
+EomImageSaveInfo *eom_image_save_info_new_from_image   (EomImage        *image);
 
-EomImageSaveInfo *eom_image_save_info_from_uri     (const char      *uri,
-						    GdkPixbufFormat *format);
+EomImageSaveInfo *eom_image_save_info_new_from_uri     (const char      *uri,
+						       GdkPixbufFormat  *format);
 
-EomImageSaveInfo *eom_image_save_info_from_file    (GFile           *file,
-						    GdkPixbufFormat *format);
+EomImageSaveInfo *eom_image_save_info_new_from_file    (GFile           *file,
+						       GdkPixbufFormat  *format);
 
 G_END_DECLS
 
