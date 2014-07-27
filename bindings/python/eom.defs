@@ -826,13 +826,21 @@
   )
 )
 
+(define-method set_transparency_color
+  (of-object "EomScrollView")
+  (c-name "eom_scroll_view_set_transparency_color")
+  (return-type "none")
+  (parameters
+    '("GdkColor*" "color")
+  )
+)
+
 (define-method set_transparency
   (of-object "EomScrollView")
   (c-name "eom_scroll_view_set_transparency")
   (return-type "none")
   (parameters
     '("EomTransparencyStyle" "style")
-    '("GdkColor*" "color")
   )
 )
 
