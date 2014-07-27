@@ -48,6 +48,8 @@
 #define GPOINTER_TO_BOOLEAN(i) ((gboolean) ((GPOINTER_TO_INT (i) == 2) ? TRUE : FALSE))
 #endif
 
+typedef ExifData EomExifData;
+
 /* Define EomExifData type */
 G_DEFINE_BOXED_TYPE(EomExifData, eom_exif_data, eom_exif_data_copy, eom_exif_data_free)
 

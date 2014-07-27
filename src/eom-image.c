@@ -1884,11 +1884,11 @@ eom_image_cancel_load (EomImage *img)
 }
 
 #ifdef HAVE_EXIF
-EomExifData *
+ExifData *
 eom_image_get_exif_info (EomImage *img)
 {
 	EomImagePrivate *priv;
-	EomExifData *data = NULL;
+	ExifData *data = NULL;
 
 	g_return_val_if_fail (EOM_IS_IMAGE (img), NULL);
 

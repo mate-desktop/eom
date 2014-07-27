@@ -33,16 +33,16 @@
 
 G_BEGIN_DECLS
 
-typedef ExifData EomExifData;
+#define EOM_TYPE_EXIF_DATA eom_exif_data_get_type()
 
 gchar*       eom_exif_util_format_date           (const gchar *date);
 
-const gchar *eom_exif_data_get_value             (EomExifData *exif_data, gint tag_id, gchar *buffer, guint buf_size);
+const gchar *eom_exif_data_get_value             (ExifData *exif_data, gint tag_id, gchar *buffer, guint buf_size);
 
 GType        eom_exif_data_get_type              (void) G_GNUC_CONST;
 
-EomExifData * eom_exif_data_copy (EomExifData *data);
-void          eom_exif_data_free (EomExifData *data);
+ExifData *   eom_exif_data_copy (ExifData *data);
+void         eom_exif_data_free (ExifData *data);
 
 G_END_DECLS
 

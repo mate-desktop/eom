@@ -58,7 +58,7 @@ static void statusbar_set_date(GtkStatusbar* statusbar, EomThumbView* view)
 	EomImage* image;
 	gchar* date = NULL;
 	gchar time_buffer[32];
-	EomExifData* exif_data;
+	ExifData* exif_data;
 
 	if (eom_thumb_view_get_n_selected(view) == 0)
 	{

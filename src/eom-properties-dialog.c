@@ -178,7 +178,7 @@ pd_update_general_tab (EomPropertiesDialog *prop_dlg,
 
 #if HAVE_EXIF
 static void
-eom_exif_set_label (GtkWidget *w, EomExifData *exif_data, gint tag_id)
+eom_exif_set_label (GtkWidget *w, ExifData *exif_data, gint tag_id)
 {
 	gchar exif_buffer[512];
 	const gchar *buf_ptr;

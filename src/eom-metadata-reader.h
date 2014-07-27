@@ -89,7 +89,7 @@ void                 eom_metadata_reader_get_exif_chunk (EomMetadataReader *emr,
 
 #ifdef HAVE_EXIF
 G_GNUC_INTERNAL
-EomExifData*         eom_metadata_reader_get_exif_data	(EomMetadataReader *emr);
+ExifData*            eom_metadata_reader_get_exif_data	(EomMetadataReader *emr);
 #endif
 
 #ifdef HAVE_EXEMPI
