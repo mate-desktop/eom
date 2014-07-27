@@ -269,7 +269,7 @@ static void
 eom_window_transparency_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
 {
 	EomWindowPrivate *priv;
-	char *value = NULL;
+	gchar *value = NULL;
 
 	g_return_if_fail (EOM_IS_WINDOW (user_data));
 
@@ -285,7 +285,7 @@ eom_window_transparency_changed_cb (GSettings *settings, gchar *key, gpointer us
 		return;
 	} else if (g_ascii_strcasecmp (value, "COLOR") == 0) {
 		GdkColor color;
-		char *color_str;
+		gchar *color_str;
 
 		color_str = g_settings_get_string (priv->view_settings, EOM_CONF_VIEW_TRANS_COLOR);
 		if (gdk_color_parse (color_str, &color)) {
@@ -304,56 +304,12 @@ eom_window_transparency_changed_cb (GSettings *settings, gchar *key, gpointer us
 }
 
 static void
-eom_window_bg_color_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
-{
-	EomWindowPrivate *priv;
-	GdkColor color;
-	char *color_str;
-
-	g_return_if_fail (EOM_IS_WINDOW (user_data));
-
-	eom_debug (DEBUG_PREFERENCES);
-
-	priv = EOM_WINDOW (user_data)->priv;
-
-	g_return_if_fail (EOM_IS_SCROLL_VIEW (priv->view));
-
-	color_str = g_settings_get_string (settings, key);
-
-	if (gdk_color_parse (color_str, &color)) {
-		eom_scroll_view_set_background_color (EOM_SCROLL_VIEW (priv->view), &color);
-	}
-	g_free (color_str);
-}
-
-static void
-eom_window_use_bg_color_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
-{
-	EomWindowPrivate *priv;
-	gboolean use_bg_color = TRUE;
-
-	eom_debug (DEBUG_PREFERENCES);
-
-	g_return_if_fail (EOM_IS_WINDOW (user_data));
-
-	priv = EOM_WINDOW (user_data)->priv;
-
-	g_return_if_fail (EOM_IS_SCROLL_VIEW (priv->view));
-
-	use_bg_color = g_settings_get_boolean (settings, key);
-
-	eom_scroll_view_set_use_bg_color (EOM_SCROLL_VIEW (priv->view),
-					  use_bg_color);
-}
-
-
-static void
 eom_window_trans_color_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
 {
 	EomWindowPrivate *priv;
 	GdkColor color;
-	char *color_str;
-	char *value;
+	gchar *color_str = NULL;
+	gchar *value = NULL;
 
 	g_return_if_fail (EOM_IS_WINDOW (user_data));
 
@@ -4543,12 +4499,6 @@ eom_window_construct_ui (EomWindow *window)
 	eom_window_interp_out_type_changed_cb (priv->view_settings,
 					EOM_CONF_VIEW_INTERPOLATE,
 					window);
-	eom_window_bg_color_changed_cb (priv->view_settings,
-					EOM_CONF_VIEW_BACKGROUND_COLOR,
-					window);
-	eom_window_use_bg_color_changed_cb (priv->view_settings,
-					EOM_CONF_VIEW_USE_BG_COLOR,
-					window);
 	eom_window_transparency_changed_cb (priv->view_settings,
 					EOM_CONF_VIEW_TRANSPARENCY,
 					window);
@@ -4589,9 +4539,9 @@ eom_window_init (EomWindow *window)
 
 	priv = window->priv = EOM_WINDOW_GET_PRIVATE (window);
 
-	priv->view_settings = g_settings_new (EOM_CONF_VIEW_SCHEMA);
-	priv->ui_settings = g_settings_new (EOM_CONF_UI_SCHEMA);
-	priv->fullscreen_settings = g_settings_new (EOM_CONF_FULLSCREEN_SCHEMA);
+	priv->view_settings = g_settings_new (EOM_CONF_VIEW);
+	priv->ui_settings = g_settings_new (EOM_CONF_UI);
+	priv->fullscreen_settings = g_settings_new (EOM_CONF_FULLSCREEN);
 	priv->lockdown_settings = g_settings_new (EOM_CONF_LOCKDOWN_SCHEMA);
 
 	g_signal_connect (priv->view_settings,
@@ -4602,16 +4552,6 @@ eom_window_init (EomWindow *window)
 	g_signal_connect (priv->view_settings,
 					  "changed::" EOM_CONF_VIEW_INTERPOLATE,
 					  G_CALLBACK (eom_window_interp_out_type_changed_cb),
-					  window);
-
-	g_signal_connect (priv->view_settings,
-					  "changed::" EOM_CONF_VIEW_BACKGROUND_COLOR,
-					  G_CALLBACK (eom_window_bg_color_changed_cb),
-					  window);
-
-	g_signal_connect (priv->view_settings,
-					  "changed::" EOM_CONF_VIEW_USE_BG_COLOR,
-					  G_CALLBACK (eom_window_use_bg_color_changed_cb),
 					  window);
 
 	g_signal_connect (priv->view_settings,

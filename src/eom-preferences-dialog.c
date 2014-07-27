@@ -55,27 +55,45 @@ struct _EomPreferencesDialogPrivate {
 
 static GObject *instance = NULL;
 
-static void
-pd_color_change_cb (MateColorButton *button, GSettings *settings)
+static gboolean
+pd_string_to_color_mapping (GValue   *value,
+			    GVariant *variant,
+			    gpointer user_data)
 {
 	GdkColor color;
-	char *key = NULL;
-	char *value = NULL;
 
-	mate_color_button_get_color (button, &color);
+	g_return_val_if_fail (g_variant_is_of_type (variant, G_VARIANT_TYPE_STRING), FALSE);
 
-	value = g_strdup_printf ("#%02X%02X%02X",
-				 color.red / 256,
-				 color.green / 256,
-				 color.blue / 256);
+	if (gdk_color_parse (g_variant_get_string (variant, NULL), &color)) {
+		g_value_set_boxed (value, &color);
+		return TRUE;
+	}
 
-	key = g_object_get_data (G_OBJECT (button), GSETTINGS_OBJECT_KEY);
+	return FALSE;
+}
 
-	if (key == NULL || value == NULL)
-		return;
+static GVariant*
+pd_color_to_string_mapping (const GValue       *value,
+			    const GVariantType *expected_type,
+			    gpointer            user_data)
+{
 
-	g_settings_set_string (settings, key, value);
-	g_free (value);
+	GVariant *variant = NULL;
+	GdkColor *color;
+	gchar *hex_val;
+
+	g_return_val_if_fail (G_VALUE_TYPE (value) == GDK_TYPE_COLOR, NULL);
+	g_return_val_if_fail (g_variant_type_equal (expected_type, G_VARIANT_TYPE_STRING), NULL);
+
+	color = g_value_get_boxed (value);
+	hex_val = g_strdup_printf ("#%02X%02X%02X",
+				 color->red / 256,
+				 color->green / 256,
+				 color->blue / 256);
+	variant = g_variant_new_string (hex_val);
+	g_free (hex_val);
+
+	return variant;
 }
 
 static void
@@ -147,6 +165,9 @@ eom_preferences_dialog_constructor (GType type,
 
 	priv = EOM_PREFERENCES_DIALOG (object)->priv;
 
+	priv->view_settings = g_settings_new (EOM_CONF_VIEW);
+	priv->fullscreen_settings = g_settings_new (EOM_CONF_FULLSCREEN);
+
 	eom_dialog_construct (EOM_DIALOG (object),
 			      "eom-preferences-dialog.ui",
 			      "eom_preferences_dialog");
@@ -195,22 +216,13 @@ eom_preferences_dialog_constructor (GType type,
 					 "active",
 					 G_SETTINGS_BIND_DEFAULT);
 
-	value = g_settings_get_string (priv->view_settings,
-					 EOM_CONF_VIEW_BACKGROUND_COLOR);
-	if (gdk_color_parse (value, &color)){
-		mate_color_button_set_color (MATE_COLOR_BUTTON (bg_color_button),
-					    &color);
-	}
-	g_free (value);
-
-	g_object_set_data (G_OBJECT (bg_color_button),
-			   GSETTINGS_OBJECT_KEY,
-			   EOM_CONF_VIEW_BACKGROUND_COLOR);
-
-	g_signal_connect (G_OBJECT (bg_color_button),
-			  "color-set",
-			  G_CALLBACK (pd_color_change_cb),
-			  priv->view_settings);
+	g_settings_bind_with_mapping (priv->view_settings,
+				      EOM_CONF_VIEW_BACKGROUND_COLOR,
+				      bg_color_button, "color",
+				      G_SETTINGS_BIND_DEFAULT,
+				      pd_string_to_color_mapping,
+				      pd_color_to_string_mapping,
+				      NULL, NULL);
 
 	g_object_set_data (G_OBJECT (color_radio),
 			   GSETTINGS_OBJECT_KEY,
@@ -266,30 +278,16 @@ eom_preferences_dialog_constructor (GType type,
 
 	g_free (value);
 
-	value = g_settings_get_string (priv->view_settings,
-					 EOM_CONF_VIEW_TRANS_COLOR);
+	g_settings_bind_with_mapping (priv->view_settings,
+				      EOM_CONF_VIEW_TRANS_COLOR,
+				      color_button, "color",
+				      G_SETTINGS_BIND_DEFAULT,
+				      pd_string_to_color_mapping,
+				      pd_color_to_string_mapping,
+				      NULL, NULL);
 
-	if (gdk_color_parse (value, &color)) {
-		mate_color_button_set_color (MATE_COLOR_BUTTON (color_button),
-					    &color);
-	}
-
-	g_object_set_data (G_OBJECT (color_button),
-			   GSETTINGS_OBJECT_KEY,
-			   EOM_CONF_VIEW_TRANS_COLOR);
-
-	g_signal_connect (G_OBJECT (color_button),
-			  "color-set",
-			  G_CALLBACK (pd_color_change_cb),
-			  priv->view_settings);
-
-	g_free (value);
-
-	g_settings_bind (priv->fullscreen_settings,
-					 EOM_CONF_FULLSCREEN_UPSCALE,
-					 G_OBJECT (upscale_check),
-					 "active",
-					 G_SETTINGS_BIND_DEFAULT);
+	g_settings_bind (priv->fullscreen_settings, EOM_CONF_FULLSCREEN_UPSCALE,
+			 upscale_check, "active", G_SETTINGS_BIND_DEFAULT);
 
 	g_settings_bind (priv->fullscreen_settings,
 					 EOM_CONF_FULLSCREEN_LOOP,
@@ -357,9 +355,9 @@ eom_preferences_dialog_init (EomPreferencesDialog *pref_dlg)
 {
 	pref_dlg->priv = EOM_PREFERENCES_DIALOG_GET_PRIVATE (pref_dlg);
 
-	pref_dlg->priv->view_settings = g_settings_new (EOM_CONF_VIEW_SCHEMA);
-	pref_dlg->priv->fullscreen_settings = g_settings_new (EOM_CONF_FULLSCREEN_SCHEMA);
-	pref_dlg->priv->ui_settings = g_settings_new (EOM_CONF_UI_SCHEMA);
+	pref_dlg->priv->view_settings = g_settings_new (EOM_CONF_VIEW);
+	pref_dlg->priv->fullscreen_settings = g_settings_new (EOM_CONF_FULLSCREEN);
+	pref_dlg->priv->ui_settings = g_settings_new (EOM_CONF_UI);
 }
 
 GObject *

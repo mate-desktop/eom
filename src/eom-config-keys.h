@@ -27,6 +27,12 @@
 #ifndef __EOM_CONFIG_KEYS_H__
 #define __EOM_CONFIG_KEYS_H__
 
+#define EOM_CONF_DOMAIN				"org.mate.eom"
+#define EOM_CONF_FULLSCREEN			EOM_CONF_DOMAIN".full-screen"
+#define EOM_CONF_PLUGINS			EOM_CONF_DOMAIN".plugins"
+#define EOM_CONF_UI				EOM_CONF_DOMAIN".ui"
+#define EOM_CONF_VIEW				EOM_CONF_DOMAIN".view"
+
 #define EOM_CONF_BACKGROUND_SCHEMA              "org.mate.background"
 #define EOM_CONF_BACKGROUND_FILE                "picture-filename"
 
@@ -35,7 +41,6 @@
 #define EOM_CONF_LOCKDOWN_CAN_PRINT             "disable-printing"
 #define EOM_CONF_LOCKDOWN_CAN_SETUP_PAGE        "disable-print-setup"
 
-#define EOM_CONF_VIEW_SCHEMA                    "org.mate.eom.view"
 #define EOM_CONF_VIEW_BACKGROUND_COLOR          "background-color"
 #define EOM_CONF_VIEW_INTERPOLATE               "interpolate"
 #define EOM_CONF_VIEW_EXTRAPOLATE               "extrapolate"
@@ -46,13 +51,11 @@
 #define EOM_CONF_VIEW_TRANS_COLOR               "trans-color"
 #define EOM_CONF_VIEW_USE_BG_COLOR              "use-background-color"
 
-#define EOM_CONF_FULLSCREEN_SCHEMA              "org.mate.eom.full-screen"
 #define EOM_CONF_FULLSCREEN_RANDOM              "random"
 #define EOM_CONF_FULLSCREEN_LOOP                "loop"
 #define EOM_CONF_FULLSCREEN_UPSCALE             "upscale"
 #define EOM_CONF_FULLSCREEN_SECONDS             "seconds"
 
-#define EOM_CONF_UI_SCHEMA                      "org.mate.eom.ui"
 #define EOM_CONF_UI_TOOLBAR                     "toolbar"
 #define EOM_CONF_UI_STATUSBAR                   "statusbar"
 #define EOM_CONF_UI_IMAGE_COLLECTION            "image-collection"
@@ -65,7 +68,6 @@
 #define EOM_CONF_UI_FILECHOOSER_XDG_FALLBACK    "filechooser-xdg-fallback"
 #define EOM_CONF_UI_PROPSDIALOG_NETBOOK_MODE    "propsdialog-netbook-mode"
 
-#define EOM_CONF_PLUGINS_SCHEMA                 "org.mate.eom.plugins"
 #define EOM_CONF_PLUGINS_ACTIVE_PLUGINS         "active-plugins"
 
 #endif /* __EOM_CONFIG_KEYS_H__ */

@@ -10,6 +10,7 @@
 #include <librsvg/rsvg.h>
 #endif
 
+#include "eom-config-keys.h"
 #include "eom-marshal.h"
 #include "eom-scroll-view.h"
 #include "eom-debug.h"
@@ -2383,12 +2384,54 @@ eom_scroll_view_scrollbars_visible (EomScrollView *view)
     object creation/freeing
   ---------------------------------*/
 
+static gboolean
+sv_string_to_color_mapping (GValue   *value,
+			    GVariant *variant,
+			    gpointer  user_data)
+{
+	GdkColor color;
+
+	g_return_val_if_fail (g_variant_is_of_type (variant, G_VARIANT_TYPE_STRING), FALSE);
+
+	if (gdk_color_parse (g_variant_get_string (variant, NULL), &color)) {
+		g_value_set_boxed (value, &color);
+		return TRUE;
+	}
+
+	return FALSE;
+}
+
+static GVariant*
+sv_color_to_string_mapping (const GValue       *value,
+			    const GVariantType *expected_type,
+			    gpointer            user_data)
+{
+	GVariant *variant = NULL;
+	GdkColor *color;
+	gchar *hex_val;
+
+	g_return_val_if_fail (G_VALUE_TYPE (value) == GDK_TYPE_COLOR, NULL);
+	g_return_val_if_fail (g_variant_type_equal (expected_type, G_VARIANT_TYPE_STRING), NULL);
+
+	color = g_value_get_boxed (value);
+	hex_val = g_strdup_printf ("#%02X%02X%02X",
+				   color->red / 256,
+				   color->green / 256,
+				   color->blue / 256);
+	variant = g_variant_new_string (hex_val);
+	g_free (hex_val);
+
+	return variant;
+}
+
 static void
 eom_scroll_view_init (EomScrollView *view)
 {
+	GSettings *settings;
 	EomScrollViewPrivate *priv;
 
 	priv = view->priv = EOM_SCROLL_VIEW_GET_PRIVATE (view);
+	settings = g_settings_new (EOM_CONF_VIEW);
 
 	priv->zoom = 1.0;
 	priv->min_zoom = MIN_ZOOM_FACTOR;
@@ -2408,8 +2451,6 @@ eom_scroll_view_init (EomScrollView *view)
 	priv->cursor = EOM_SCROLL_VIEW_CURSOR_NORMAL;
 	priv->menu = NULL;
 	priv->background_color = NULL;
-	priv->override_bg_color = NULL;
-	priv->background_surface = NULL;
 
 	priv->hadj = GTK_ADJUSTMENT (gtk_adjustment_new (0, 100, 0, 10, 10, 100));
 	g_signal_connect (priv->hadj, "value_changed",
@@ -2488,6 +2529,17 @@ eom_scroll_view_init (EomScrollView *view)
 			  GTK_FILL, GTK_FILL,
 			  0, 0);
 
+	g_settings_bind (settings, EOM_CONF_VIEW_USE_BG_COLOR, view,
+			 "use-background-color", G_SETTINGS_BIND_DEFAULT);
+	g_settings_bind_with_mapping (settings, EOM_CONF_VIEW_BACKGROUND_COLOR,
+				      view, "background-color",
+				      G_SETTINGS_BIND_DEFAULT,
+				      sv_string_to_color_mapping,
+				      sv_color_to_string_mapping, NULL, NULL);
+	g_object_unref (settings);
+
+	priv->override_bg_color = NULL;
+	priv->background_surface = NULL;
 }
 
 static void
@@ -2805,12 +2857,12 @@ _eom_scroll_view_update_bg_color (EomScrollView *view)
 	const GdkColor *selected;
 	EomScrollViewPrivate *priv = view->priv;
 
-	if (priv->override_bg_color)
-		selected = priv->override_bg_color;
-	else if (priv->use_bg_color)
-		selected = priv->background_color;
-	else
+	if (!priv->use_bg_color)
 		selected = NULL;
+	else if (priv->override_bg_color)
+		selected = priv->override_bg_color;
+	else
+		selected = priv->background_color;
 
 	if (priv->transp_style == EOM_TRANSP_BACKGROUND
 	    && priv->background_surface != NULL) {

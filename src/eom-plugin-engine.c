@@ -395,7 +395,7 @@ eom_plugin_engine_init (void)
 		return FALSE;
 	}
 
-	eom_plugin_engine_settings = g_settings_new (EOM_CONF_PLUGINS_SCHEMA);
+	eom_plugin_engine_settings = g_settings_new (EOM_CONF_PLUGINS);
 
 	g_signal_connect (eom_plugin_engine_settings,
 			  "changed::" EOM_CONF_PLUGINS_ACTIVE_PLUGINS,
