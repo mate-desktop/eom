@@ -47,7 +47,8 @@ void     eom_scroll_view_set_zoom_upscale (EomScrollView *view, gboolean upscale
 void     eom_scroll_view_set_zoom_multiplier (EomScrollView *view, gdouble multiplier);
 void     eom_scroll_view_set_antialiasing_in (EomScrollView *view, gboolean state);
 void     eom_scroll_view_set_antialiasing_out (EomScrollView *view, gboolean state);
-void     eom_scroll_view_set_transparency (EomScrollView *view, EomTransparencyStyle style, GdkColor *color);
+void     eom_scroll_view_set_transparency_color (EomScrollView *view, GdkColor *color);
+void     eom_scroll_view_set_transparency (EomScrollView *view, EomTransparencyStyle style);
 gboolean eom_scroll_view_scrollbars_visible (EomScrollView *view);
 void	 eom_scroll_view_set_popup (EomScrollView *view, GtkMenu *menu);
 void	 eom_scroll_view_set_background_color (EomScrollView *view,

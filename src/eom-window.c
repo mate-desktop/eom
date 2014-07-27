@@ -244,56 +244,16 @@ eom_window_transparency_changed_cb (GSettings *settings, gchar *key, gpointer us
 	if (value == NULL) {
 		return;
 	} else if (g_ascii_strcasecmp (value, "COLOR") == 0) {
-		GdkColor color;
-		gchar *color_str;
-
-		color_str = g_settings_get_string (priv->view_settings, EOM_CONF_VIEW_TRANS_COLOR);
-		if (gdk_color_parse (color_str, &color)) {
-			eom_scroll_view_set_transparency (EOM_SCROLL_VIEW (priv->view),
-							  EOM_TRANSP_COLOR, &color);
-		}
-		g_free (color_str);
+		eom_scroll_view_set_transparency (EOM_SCROLL_VIEW (priv->view),
+							  EOM_TRANSP_COLOR);
 	} else if (g_ascii_strcasecmp (value, "CHECK_PATTERN") == 0) {
 		eom_scroll_view_set_transparency (EOM_SCROLL_VIEW (priv->view),
-						  EOM_TRANSP_CHECKED, NULL);
+						  EOM_TRANSP_CHECKED);
 	} else {
 		eom_scroll_view_set_transparency (EOM_SCROLL_VIEW (priv->view),
-						  EOM_TRANSP_BACKGROUND, NULL);
+						  EOM_TRANSP_BACKGROUND);
 	}
 	g_free (value);
-}
-
-static void
-eom_window_trans_color_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
-{
-	EomWindowPrivate *priv;
-	GdkColor color;
-	gchar *color_str = NULL;
-	gchar *value = NULL;
-
-	g_return_if_fail (EOM_IS_WINDOW (user_data));
-
-	eom_debug (DEBUG_PREFERENCES);
-
-	priv = EOM_WINDOW (user_data)->priv;
-
-	g_return_if_fail (EOM_IS_SCROLL_VIEW (priv->view));
-
-	value = g_settings_get_string (priv->view_settings, EOM_CONF_VIEW_TRANSPARENCY);
-
-	if (!value || g_ascii_strcasecmp (value, "COLOR") != 0) {
-		g_free (value);
-		return;
-	}
-
-	color_str = g_settings_get_string (settings, key);
-
-	if (gdk_color_parse (color_str, &color)) {
-		eom_scroll_view_set_transparency (EOM_SCROLL_VIEW (priv->view),
-						  EOM_TRANSP_COLOR, &color);
-	}
-	g_free (value);
-	g_free (color_str);
 }
 
 static void
@@ -4456,9 +4416,6 @@ eom_window_construct_ui (EomWindow *window)
 	eom_window_transparency_changed_cb (priv->view_settings,
 					EOM_CONF_VIEW_TRANSPARENCY,
 					window);
-	eom_window_trans_color_changed_cb (priv->view_settings,
-					EOM_CONF_VIEW_TRANS_COLOR,
-					window);
 	eom_window_collection_mode_changed_cb (priv->ui_settings,
 					EOM_CONF_UI_IMAGE_COLLECTION_POSITION,
 					window);
@@ -4501,11 +4458,6 @@ eom_window_init (EomWindow *window)
 	g_signal_connect (priv->view_settings,
 					  "changed::" EOM_CONF_VIEW_TRANSPARENCY,
 					  G_CALLBACK (eom_window_transparency_changed_cb),
-					  window);
-
-	g_signal_connect (priv->view_settings,
-					  "changed::" EOM_CONF_VIEW_TRANS_COLOR,
-					  G_CALLBACK (eom_window_trans_color_changed_cb),
 					  window);
 
 	g_signal_connect (priv->ui_settings,

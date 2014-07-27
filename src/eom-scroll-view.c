@@ -84,6 +84,7 @@ enum {
 	PROP_ANTIALIAS_OUT,
 	PROP_BACKGROUND_COLOR,
 	PROP_SCROLLWHEEL_ZOOM,
+	PROP_TRANSP_COLOR,
 	PROP_USE_BG_COLOR,
 	PROP_ZOOM_MULTIPLIER
 };
@@ -2137,13 +2138,28 @@ eom_scroll_view_set_antialiasing_out (EomScrollView *view, gboolean state)
 	}
 }
 
-void
-eom_scroll_view_set_transparency (EomScrollView *view, EomTransparencyStyle style, GdkColor *color)
+static void
+_transp_background_changed (EomScrollView *view)
 {
-	EomScrollViewPrivate *priv;
+	EomScrollViewPrivate *priv = view->priv;
+
+	if (priv->pixbuf != NULL && gdk_pixbuf_get_has_alpha (priv->pixbuf)) {
+		if (priv->background_surface) {
+			cairo_surface_destroy (priv->background_surface);
+			/* Will be recreated if needed during redraw */
+			priv->background_surface = NULL;
+		}
+		gtk_widget_queue_draw (GTK_WIDGET (priv->display));
+	}
+
+}
+
+void
+eom_scroll_view_set_transparency_color (EomScrollView *view, GdkColor *color)
+{
 	guint32 col = 0;
 	guint32 red, green, blue;
-	gboolean changed = FALSE;
+	EomScrollViewPrivate *priv;
 
 	g_return_if_fail (EOM_IS_SCROLL_VIEW (view));
 
@@ -2156,23 +2172,28 @@ eom_scroll_view_set_transparency (EomScrollView *view, EomTransparencyStyle styl
 		col = red + green + blue;
 	}
 
+	if (priv->transp_style != col) {
+		priv->transp_color = col;
+		if (priv->transp_style == EOM_TRANSP_COLOR)
+		    _transp_background_changed (view);
+
+		g_object_notify (G_OBJECT (view), "transparency-color");
+	}
+}
+
+void
+eom_scroll_view_set_transparency (EomScrollView        *view,
+				  EomTransparencyStyle  style)
+{
+	EomScrollViewPrivate *priv;
+
+	g_return_if_fail (EOM_IS_SCROLL_VIEW (view));
+
+	priv = view->priv;
+
 	if (priv->transp_style != style) {
 		priv->transp_style = style;
-		changed = TRUE;
-	}
-
-	if (priv->transp_style == EOM_TRANSP_COLOR && priv->transp_color != col) {
-		priv->transp_color = col;
-		changed = TRUE;
-	}
-
-	if (changed && priv->pixbuf != NULL && gdk_pixbuf_get_has_alpha (priv->pixbuf)) {
-		if (priv->background_surface) {
-			cairo_surface_destroy (priv->background_surface);
-			/* Will be recreated if needed during redraw */
-			priv->background_surface = NULL;
-		}
-		gtk_widget_queue_draw (GTK_WIDGET (priv->display));
+		_transp_background_changed (view);
 	}
 }
 
@@ -2545,7 +2566,11 @@ eom_scroll_view_init (EomScrollView *view)
 			 "antialiasing-in", G_SETTINGS_BIND_GET);
 	g_settings_bind (settings, EOM_CONF_VIEW_INTERPOLATE, view,
 			 "antialiasing-out", G_SETTINGS_BIND_GET);
-
+	g_settings_bind_with_mapping (settings, EOM_CONF_VIEW_TRANS_COLOR,
+				      view, "transparency-color",
+				      G_SETTINGS_BIND_GET,
+				      sv_string_to_color_mapping,
+				      sv_color_to_string_mapping, NULL, NULL);
 	g_object_unref (settings);
 
 	priv->override_bg_color = NULL;
@@ -2669,6 +2694,9 @@ eom_scroll_view_set_property (GObject *object, guint property_id,
 	case PROP_SCROLLWHEEL_ZOOM:
 		eom_scroll_view_set_scroll_wheel_zoom (view, g_value_get_boolean (value));
 		break;
+	case PROP_TRANSP_COLOR:
+		eom_scroll_view_set_transparency_color (view, g_value_get_boxed (value));
+		break;
 	case PROP_ZOOM_MULTIPLIER:
 		eom_scroll_view_set_zoom_multiplier (view, g_value_get_double (value));
 		break;
@@ -2729,6 +2757,12 @@ eom_scroll_view_class_init (EomScrollViewClass *klass)
 		gobject_class, PROP_SCROLLWHEEL_ZOOM,
 		g_param_spec_boolean ("scrollwheel-zoom", NULL, NULL, TRUE,
 		G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
+
+	g_object_class_install_property (
+		gobject_class, PROP_TRANSP_COLOR,
+		g_param_spec_boxed ("transparency-color", NULL, NULL,
+				    GDK_TYPE_COLOR,
+				    G_PARAM_WRITABLE | G_PARAM_STATIC_NAME));
 
 	view_signals [SIGNAL_ZOOM_CHANGED] =
 		g_signal_new ("zoom_changed",
