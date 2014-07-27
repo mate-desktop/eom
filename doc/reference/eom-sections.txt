@@ -40,6 +40,12 @@ eom_image_get_supported_mime_types
 eom_image_is_supported_mime_type
 eom_image_file_changed
 eom_image_is_file_changed
+eom_image_get_metadata_status
+eom_image_get_svg
+eom_image_get_transform
+eom_image_is_animation
+eom_image_is_svg
+eom_image_start_animation
 <SUBSECTION Standard>
 EOM_IMAGE
 EOM_IS_IMAGE
@@ -122,6 +128,7 @@ EomTransform
 eom_transform_apply
 eom_transform_reverse
 eom_transform_compose
+eom_transform_get_affine
 eom_transform_is_identity
 eom_transform_identity_new
 eom_transform_rotate_new
@@ -185,6 +192,7 @@ EomPropertiesDialog
 eom_properties_dialog_new
 eom_properties_dialog_update
 eom_properties_dialog_set_page
+eom_properties_dialog_set_netbook_mode
 <SUBSECTION Standard>
 EOM_PROPERTIES_DIALOG
 EOM_IS_PROPERTIES_DIALOG
@@ -331,6 +339,7 @@ EOM_URI_CONVERTER_GET_CLASS
 EomPrintImageSetup
 eom_print_image_setup_new
 eom_print_image_setup_get_options
+eom_print_image_setup_update
 <SUBSECTION Standard>
 EOM_PRINT_IMAGE_SETUP
 EOM_IS_PRINT_IMAGE_SETUP
@@ -456,6 +465,10 @@ eom_scroll_view_get_zoom_is_min
 eom_scroll_view_get_zoom_is_max
 eom_scroll_view_show_cursor
 eom_scroll_view_hide_cursor
+eom_scroll_view_override_bg_color
+eom_scroll_view_set_background_color
+eom_scroll_view_set_transparency_color
+eom_scroll_view_set_use_bg_color
 <SUBSECTION Standard>
 EOM_SCROLL_VIEW
 EOM_IS_SCROLL_VIEW
@@ -486,6 +499,7 @@ eom_window_get_statusbar
 eom_window_get_image
 eom_window_open_file_list
 eom_window_is_empty
+eom_window_reload_image
 <SUBSECTION Standard>
 EOM_WINDOW
 EOM_IS_WINDOW
@@ -613,7 +627,7 @@ EOM_THUMBNAIL_ORIGINAL_HEIGHT
 
 <SECTION>
 <FILE>eom-debug</FILE>
-EomDebugSection
+EomDebug
 DEBUG_WINDOW
 DEBUG_VIEW
 DEBUG_JOBS
@@ -641,7 +655,12 @@ eom_job_queue_remove_job
 <SECTION>
 <FILE>eom-exif-util</FILE>
 eom_exif_util_format_date
-eom_exif_util_get_value
+EomExifData
+eom_exif_data_copy
+eom_exif_data_free
+eom_exif_data_get_value
+<SUBSECTION Standard>
+eom_exif_data_get_type
 </SECTION>
 
 <SECTION>
@@ -688,17 +707,20 @@ eom_pixbuf_get_common_suffix
 
 <SECTION>
 <FILE>eom-config-keys</FILE>
-EOM_CONF_DIR
 EOM_CONF_DESKTOP_WALLPAPER
 EOM_CONF_DESKTOP_CAN_SAVE
 EOM_CONF_DESKTOP_CAN_PRINT
 EOM_CONF_DESKTOP_CAN_SETUP_PAGE
+EOM_CONF_VIEW
 EOM_CONF_VIEW_INTERPOLATE
 EOM_CONF_VIEW_SCROLL_WHEEL_ZOOM
 EOM_CONF_VIEW_ZOOM_MULTIPLIER
 EOM_CONF_VIEW_AUTOROTATE
 EOM_CONF_VIEW_TRANSPARENCY
 EOM_CONF_VIEW_TRANS_COLOR
+EOM_CONF_VIEW_BACKGROUND_COLOR
+EOM_CONF_VIEW_EXTRAPOLATE
+EOM_CONF_VIEW_USE_BG_COLOR
 EOM_CONF_FULLSCREEN_LOOP
 EOM_CONF_FULLSCREEN_UPSCALE
 EOM_CONF_FULLSCREEN_SECONDS
@@ -709,6 +731,15 @@ EOM_CONF_UI_IMAGE_COLLECTION_POSITION
 EOM_CONF_UI_IMAGE_COLLECTION_RESIZABLE
 EOM_CONF_UI_SIDEBAR
 EOM_CONF_UI_SCROLL_BUTTONS
+EOM_CONF_UI_DISABLE_CLOSE_CONFIRMATION
+EOM_CONF_UI_DISABLE_TRASH_CONFIRMATION
+EOM_CONF_UI_EXTERNAL_EDITOR
+EOM_CONF_UI_FILECHOOSER_XDG_FALLBACK
+EOM_CONF_UI_IMAGE_GALLERY
+EOM_CONF_UI_IMAGE_GALLERY_POSITION
+EOM_CONF_UI_IMAGE_GALLERY_RESIZABLE
+EOM_CONF_UI_PROPSDIALOG_NETBOOK_MODE
+EOM_CONF_UI
 EOM_CONF_PLUGINS_ACTIVE_PLUGINS
 </SECTION>
 
@@ -755,5 +786,20 @@ eom_util_string_array_make_absolute
 eom_util_launch_desktop_file
 eom_util_dot_dir
 eom_util_file_is_persistent
+eom_util_filename_get_extension
 </SECTION>
 
+<SECTION>
+<FILE>eom-clipboard-handler</FILE>
+EomClipboardHandler
+eom_clipboard_handler_new
+eom_clipboard_handler_copy_to_clipboard
+<SUBSECTION Standard>
+EOM_CLIPBOARD_HANDLER
+EOM_IS_CLIPBOARD_HANDLER
+EOM_TYPE_CLIPBOARD_HANDLER
+eom_clipboard_handler_get_type
+EOM_CLIPBOARD_HANDLER_CLASS
+EOM_CLIPBOARD_HANDLER_GET_CLASS
+EOM_IS_CLIPBOARD_HANDLER_CLASS
+</SECTION>
