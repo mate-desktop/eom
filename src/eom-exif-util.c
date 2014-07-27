@@ -48,9 +48,6 @@
 #define GPOINTER_TO_BOOLEAN(i) ((gboolean) ((GPOINTER_TO_INT (i) == 2) ? TRUE : FALSE))
 #endif
 
-/* Define EogExifData type */
-G_DEFINE_BOXED_TYPE(EomExifData, eom_exif_data, eom_exif_data_copy, eom_exif_data_free)
-
 static gpointer
 _check_strptime_updates_wday (gpointer data)
 {
@@ -228,4 +225,16 @@ void
 eom_exif_data_free (EomExifData *data)
 {
 	exif_data_unref (data);
+}
+
+GType
+eom_exif_data_get_type (void)
+{
+	static GType our_type = 0;
+
+	if (our_type == 0)
+		our_type = g_boxed_type_register_static ("EomExifData",
+							(GBoxedCopyFunc) eom_exif_data_copy,
+							(GBoxedFreeFunc) eom_exif_data_free);
+	return our_type;
 }
