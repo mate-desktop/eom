@@ -286,26 +286,6 @@ eom_window_scroll_wheel_zoom_changed_cb (GSettings *settings, gchar *key, gpoint
 }
 
 static void
-eom_window_zoom_multiplier_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
-{
-	EomWindowPrivate *priv;
-	gdouble multiplier = 0.05;
-
-	eom_debug (DEBUG_PREFERENCES);
-
-	g_return_if_fail (EOM_IS_WINDOW (user_data));
-
-	priv = EOM_WINDOW (user_data)->priv;
-
-	g_return_if_fail (EOM_IS_SCROLL_VIEW (priv->view));
-
-	multiplier = g_settings_get_double (settings, key);
-
-	eom_scroll_view_set_zoom_multiplier (EOM_SCROLL_VIEW (priv->view),
-					     multiplier);
-}
-
-static void
 eom_window_transparency_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
 {
 	EomWindowPrivate *priv;
@@ -4244,7 +4224,7 @@ eom_window_drag_data_received (GtkWidget *widget,
 	/* if the request is from another process this will return NULL */
 	src = gtk_drag_get_source_widget (context);
 
-	/* if the drag request originates from the current eog instance, ignore
+	/* if the drag request originates from the current eom instance, ignore
 	   the request if the source window is the same as the dest window */
 	if (src &&
 	    gtk_widget_get_toplevel (src) == gtk_widget_get_toplevel (widget))
@@ -4548,6 +4528,9 @@ eom_window_construct_ui (EomWindow *window)
 			  G_CALLBACK (view_zoom_changed_cb),
 			  window);
 
+	g_settings_bind (priv->view_settings, EOM_CONF_VIEW_ZOOM_MULTIPLIER,
+			 priv->view, "zoom-multiplier", G_SETTINGS_BIND_GET);
+
 	view_popup = gtk_ui_manager_get_widget (priv->ui_mgr, "/ViewPopup");
 	eom_scroll_view_set_popup (EOM_SCROLL_VIEW (priv->view),
 				   GTK_MENU (view_popup));
@@ -4596,9 +4579,6 @@ eom_window_construct_ui (EomWindow *window)
 					window);
 	eom_window_scroll_wheel_zoom_changed_cb (priv->view_settings,
 					EOM_CONF_VIEW_SCROLL_WHEEL_ZOOM,
-					window);
-	eom_window_zoom_multiplier_changed_cb (priv->view_settings,
-					EOM_CONF_VIEW_ZOOM_MULTIPLIER,
 					window);
 	eom_window_bg_color_changed_cb (priv->view_settings,
 					EOM_CONF_VIEW_BACKGROUND_COLOR,
@@ -4664,11 +4644,6 @@ eom_window_init (EomWindow *window)
 	g_signal_connect (priv->view_settings,
 					  "changed::" EOM_CONF_VIEW_SCROLL_WHEEL_ZOOM,
 					  G_CALLBACK (eom_window_scroll_wheel_zoom_changed_cb),
-					  window);
-
-	g_signal_connect (priv->view_settings,
-					  "changed::" EOM_CONF_VIEW_ZOOM_MULTIPLIER,
-					  G_CALLBACK (eom_window_zoom_multiplier_changed_cb),
 					  window);
 
 	g_signal_connect (priv->view_settings,

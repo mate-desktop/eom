@@ -80,7 +80,8 @@ static GtkTargetEntry target_table[] = {
 enum {
 	PROP_0,
 	PROP_USE_BG_COLOR,
-	PROP_BACKGROUND_COLOR
+	PROP_BACKGROUND_COLOR,
+	PROP_ZOOM_MULTIPLIER
 };
 
 /* Private part of the EomScrollView structure */
@@ -2551,6 +2552,9 @@ eom_scroll_view_get_property (GObject *object, guint property_id,
 		//FIXME: This doesn't really handle the NULL color.
 		g_value_set_boxed (value, priv->background_color);
 		break;
+	case PROP_ZOOM_MULTIPLIER:
+		g_value_set_double (value, priv->zoom_multiplier);
+		break;
 	default:
 		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
 	}
@@ -2578,6 +2582,9 @@ eom_scroll_view_set_property (GObject *object, guint property_id,
 		eom_scroll_view_set_background_color (view, color);
 		break;
 	}
+	case PROP_ZOOM_MULTIPLIER:
+		eom_scroll_view_set_zoom_multiplier (view, g_value_get_double (value));
+		break;
 	default:
 		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
 	}
@@ -2614,6 +2621,12 @@ eom_scroll_view_class_init (EomScrollViewClass *klass)
 		gobject_class, PROP_USE_BG_COLOR,
 		g_param_spec_boolean ("use-background-color", NULL, NULL, FALSE,
 				      G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
+
+	g_object_class_install_property (
+		gobject_class, PROP_ZOOM_MULTIPLIER,
+		g_param_spec_double ("zoom-multiplier", NULL, NULL,
+				     -G_MAXDOUBLE, G_MAXDOUBLE, 0.05,
+				     G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
 
 	view_signals [SIGNAL_ZOOM_CHANGED] =
 		g_signal_new ("zoom_changed",
@@ -2854,4 +2867,6 @@ eom_scroll_view_set_zoom_multiplier (EomScrollView *view,
 	g_return_if_fail (EOM_IS_SCROLL_VIEW (view));
 
         view->priv->zoom_multiplier = 1.0 + zoom_multiplier;
+
+	g_object_notify (G_OBJECT (view), "zoom-multiplier");
 }
