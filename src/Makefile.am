@@ -179,8 +179,6 @@ libeom_la_LIBADD += \
 	$(top_builddir)/bindings/python/eom.la
 endif
 
-libeom_la_LDFLAGS = -export-dynamic -no-undefined -export-symbols-regex "^[[^_]].*"
-
 eom_SOURCES = main.c
 
 eom_CFLAGS = 							\
@@ -197,8 +195,6 @@ eom_LDADD = 				\
 	$(toolbar_LIB)			\
 	$(screensaver_LIB)		\
 	$(jpeg_LIB)
-
-eom_LDFLAGS = -export-dynamic -no-undefined -export-symbols-regex "^[[^_]].*"
 
 BUILT_SOURCES = 			\
 	eom-enum-types.c		\
