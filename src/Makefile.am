@@ -250,10 +250,10 @@ Eom_1_0_gir_VERSION = 1.0
 Eom_1_0_gir_PROGRAM = $(builddir)/eom
 Eom_1_0_gir_NAMESPACE = Eom
 Eom_1_0_gir_CFLAGS = $(EOM_CFLAGS)
-girdir = $(datadir)/eom/gir-1.0
+girdir = $(datadir)/gir-1.0
 gir_DATA = $(INTROSPECTION_GIRS)
 
-typelibdir = $(libdir)/eom/girepository-1.0
+typelibdir = $(libdir)/girepository-1.0
 typelib_DATA = $(INTROSPECTION_GIRS:.gir=.typelib)
 
 CLEANFILES += $(gir_DATA) $(typelib_DATA)
