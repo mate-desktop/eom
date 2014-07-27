@@ -266,26 +266,6 @@ eom_window_interp_out_type_changed_cb (GSettings *settings, gchar *key, gpointer
 }
 
 static void
-eom_window_scroll_wheel_zoom_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
-{
-	EomWindowPrivate *priv;
-	gboolean scroll_wheel_zoom = FALSE;
-
-	eom_debug (DEBUG_PREFERENCES);
-
-	g_return_if_fail (EOM_IS_WINDOW (user_data));
-
-	priv = EOM_WINDOW (user_data)->priv;
-
-	g_return_if_fail (EOM_IS_SCROLL_VIEW (priv->view));
-
-	scroll_wheel_zoom = g_settings_get_boolean (settings, key);
-
-	eom_scroll_view_set_scroll_wheel_zoom (EOM_SCROLL_VIEW (priv->view),
-					       scroll_wheel_zoom);
-}
-
-static void
 eom_window_transparency_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
 {
 	EomWindowPrivate *priv;
@@ -4528,6 +4508,8 @@ eom_window_construct_ui (EomWindow *window)
 			  G_CALLBACK (view_zoom_changed_cb),
 			  window);
 
+	g_settings_bind (priv->view_settings, EOM_CONF_VIEW_SCROLL_WHEEL_ZOOM,
+			 priv->view, "scrollwheel-zoom", G_SETTINGS_BIND_GET);
 	g_settings_bind (priv->view_settings, EOM_CONF_VIEW_ZOOM_MULTIPLIER,
 			 priv->view, "zoom-multiplier", G_SETTINGS_BIND_GET);
 
@@ -4576,9 +4558,6 @@ eom_window_construct_ui (EomWindow *window)
 					window);
 	eom_window_interp_out_type_changed_cb (priv->view_settings,
 					EOM_CONF_VIEW_INTERPOLATE,
-					window);
-	eom_window_scroll_wheel_zoom_changed_cb (priv->view_settings,
-					EOM_CONF_VIEW_SCROLL_WHEEL_ZOOM,
 					window);
 	eom_window_bg_color_changed_cb (priv->view_settings,
 					EOM_CONF_VIEW_BACKGROUND_COLOR,
@@ -4639,11 +4618,6 @@ eom_window_init (EomWindow *window)
 	g_signal_connect (priv->view_settings,
 					  "changed::" EOM_CONF_VIEW_INTERPOLATE,
 					  G_CALLBACK (eom_window_interp_out_type_changed_cb),
-					  window);
-
-	g_signal_connect (priv->view_settings,
-					  "changed::" EOM_CONF_VIEW_SCROLL_WHEEL_ZOOM,
-					  G_CALLBACK (eom_window_scroll_wheel_zoom_changed_cb),
 					  window);
 
 	g_signal_connect (priv->view_settings,
