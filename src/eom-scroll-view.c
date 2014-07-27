@@ -2798,12 +2798,23 @@ eom_scroll_view_class_init (EomScrollViewClass *klass)
 		g_param_spec_boolean ("scrollwheel-zoom", NULL, NULL, TRUE,
 		G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
 
+	/**
+	 * EomScrollView:transparency-color:
+	 *
+	 * This is the color used to fill the transparent parts of an image
+	 * if :transparency-style is set to use a custom color.
+	 */
 	g_object_class_install_property (
 		gobject_class, PROP_TRANSP_COLOR,
 		g_param_spec_boxed ("transparency-color", NULL, NULL,
 				    GDK_TYPE_COLOR,
 				    G_PARAM_WRITABLE | G_PARAM_STATIC_NAME));
 
+	/**
+	 * EomScrollView:transparency-style:
+	 *
+	 * Determines how to fill the shown image's transparent areas.
+	 */
 	g_object_class_install_property (
 		gobject_class, PROP_TRANSPARENCY_STYLE,
 		g_param_spec_enum ("transparency-style", NULL, NULL,
