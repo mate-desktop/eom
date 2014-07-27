@@ -226,26 +226,6 @@ eom_window_error_quark (void)
 }
 
 static void
-eom_window_interp_in_type_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
-{
-	EomWindowPrivate *priv;
-	gboolean interpolate_in = TRUE;
-
-	eom_debug (DEBUG_PREFERENCES);
-
-	g_return_if_fail (EOM_IS_WINDOW (user_data));
-
-	priv = EOM_WINDOW (user_data)->priv;
-
-	g_return_if_fail (EOM_IS_SCROLL_VIEW (priv->view));
-
-	interpolate_in = g_settings_get_boolean (settings, key);
-
-	eom_scroll_view_set_antialiasing_in (EOM_SCROLL_VIEW (priv->view),
-					  interpolate_in);
-}
-
-static void
 eom_window_interp_out_type_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
 {
 	EomWindowPrivate *priv;
@@ -4493,9 +4473,6 @@ eom_window_construct_ui (EomWindow *window)
 
 	gtk_box_pack_end (GTK_BOX (priv->cbox), priv->layout, TRUE, TRUE, 0);
 
-	eom_window_interp_in_type_changed_cb (priv->view_settings,
-					EOM_CONF_VIEW_EXTRAPOLATE,
-					window);
 	eom_window_interp_out_type_changed_cb (priv->view_settings,
 					EOM_CONF_VIEW_INTERPOLATE,
 					window);
@@ -4543,11 +4520,6 @@ eom_window_init (EomWindow *window)
 	priv->ui_settings = g_settings_new (EOM_CONF_UI);
 	priv->fullscreen_settings = g_settings_new (EOM_CONF_FULLSCREEN);
 	priv->lockdown_settings = g_settings_new (EOM_CONF_LOCKDOWN_SCHEMA);
-
-	g_signal_connect (priv->view_settings,
-					  "changed::" EOM_CONF_VIEW_EXTRAPOLATE,
-					  G_CALLBACK (eom_window_interp_in_type_changed_cb),
-					  window);
 
 	g_signal_connect (priv->view_settings,
 					  "changed::" EOM_CONF_VIEW_INTERPOLATE,

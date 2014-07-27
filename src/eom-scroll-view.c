@@ -80,6 +80,7 @@ static GtkTargetEntry target_table[] = {
 
 enum {
 	PROP_0,
+	PROP_ANTIALIAS_IN,
 	PROP_BACKGROUND_COLOR,
 	PROP_SCROLLWHEEL_ZOOM,
 	PROP_USE_BG_COLOR,
@@ -2111,6 +2112,7 @@ eom_scroll_view_set_antialiasing_in (EomScrollView *view, gboolean state)
 	if (priv->interp_type_in != new_interp_type) {
 		priv->interp_type_in = new_interp_type;
 		gtk_widget_queue_draw (GTK_WIDGET (priv->display));
+		g_object_notify (G_OBJECT (view), "antialiasing-in");
 	}
 }
 
@@ -2536,6 +2538,9 @@ eom_scroll_view_init (EomScrollView *view)
 				      G_SETTINGS_BIND_DEFAULT,
 				      sv_string_to_color_mapping,
 				      sv_color_to_string_mapping, NULL, NULL);
+	g_settings_bind (settings, EOM_CONF_VIEW_EXTRAPOLATE, view,
+			 "antialiasing-in", G_SETTINGS_BIND_GET);
+
 	g_object_unref (settings);
 
 	priv->override_bg_color = NULL;
@@ -2598,6 +2603,12 @@ eom_scroll_view_get_property (GObject *object, guint property_id,
 	priv = view->priv;
 
 	switch (property_id) {
+	case PROP_ANTIALIAS_IN:
+	{
+		gboolean filter = (priv->interp_type_in != GDK_INTERP_NEAREST);
+		g_value_set_boolean (value, filter);
+		break;
+	}
 	case PROP_USE_BG_COLOR:
 		g_value_set_boolean (value, priv->use_bg_color);
 		break;
@@ -2629,6 +2640,9 @@ eom_scroll_view_set_property (GObject *object, guint property_id,
 	priv = view->priv;
 
 	switch (property_id) {
+	case PROP_ANTIALIAS_IN:
+		eom_scroll_view_set_antialiasing_in (view, g_value_get_boolean (value));
+		break;
 	case PROP_USE_BG_COLOR:
 		eom_scroll_view_set_use_bg_color (view, g_value_get_boolean (value));
 		break;
@@ -2662,6 +2676,11 @@ eom_scroll_view_class_init (EomScrollViewClass *klass)
 	gobject_class->dispose = eom_scroll_view_dispose;
         gobject_class->set_property = eom_scroll_view_set_property;
         gobject_class->get_property = eom_scroll_view_get_property;
+
+	g_object_class_install_property (
+		gobject_class, PROP_ANTIALIAS_IN,
+		g_param_spec_boolean ("antialiasing-in", NULL, NULL, TRUE,
+				      G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
 
 	/**
 	 * EomScrollView:background-color:
