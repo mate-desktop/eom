@@ -65,6 +65,7 @@
 #include <glib/gi18n.h>
 #include <gio/gio.h>
 #include <gdk/gdkkeysyms.h>
+#include <gio/gdesktopappinfo.h>
 #include <gtk/gtk.h>
 
 #if HAVE_LCMS
@@ -213,6 +214,7 @@ static void eom_window_list_store_image_removed (GtkTreeModel *tree_model,
 static void eom_window_set_wallpaper (EomWindow *window, const gchar *filename, const gchar *visible_filename);
 static gboolean eom_window_save_images (EomWindow *window, GList *images);
 static void eom_window_finish_saving (EomWindow *window);
+static GAppInfo *get_appinfo_for_editor (EomWindow *window);
 
 static GQuark
 eom_window_error_quark (void)
@@ -926,6 +928,8 @@ open_with_launch_application_cb (GtkAction *action, gpointer data) {
 static void
 eom_window_update_openwith_menu (EomWindow *window, EomImage *image)
 {
+	gboolean edit_button_active;
+	GAppInfo *editor_app;
 	GFile *file;
 	GFileInfo *file_info;
 	GList *iter;
@@ -940,6 +944,9 @@ eom_window_update_openwith_menu (EomWindow *window, EomImage *image)
         GtkWidget *menuitem;
 
 	priv = window->priv;
+
+	edit_button_active = FALSE;
+	editor_app = get_appinfo_for_editor (window);
 
 	file = eom_image_get_file (image);
 	file_info = g_file_query_info (file,
@@ -982,6 +989,10 @@ eom_window_update_openwith_menu (EomWindow *window, EomImage *image)
         for (iter = apps; iter; iter = iter->next) {
                 GAppInfo *app = iter->data;
                 gchar name[64];
+
+                if (g_app_info_equal (editor_app, app)) {
+                        edit_button_active = TRUE;
+                }
 
                 /* Do not include eom itself */
                 if (g_ascii_strcasecmp (g_app_info_get_executable (app),
@@ -1070,6 +1081,12 @@ eom_window_update_openwith_menu (EomWindow *window, EomImage *image)
         }
 
         g_list_free (apps);
+
+        action = gtk_action_group_get_action (window->priv->actions_image,
+                                              "OpenEditor");
+        if (action != NULL) {
+                gtk_action_set_sensitive (action, edit_button_active);
+        }
 }
 
 static void
@@ -4129,6 +4146,108 @@ eom_window_finish_saving (EomWindow *window)
 	} while (priv->save_job != NULL);
 }
 
+static GAppInfo *
+get_appinfo_for_editor (EomWindow *window)
+{
+	/* We want this function to always return the same thing, not
+	 * just for performance reasons, but because if someone edits
+	 * GConf while eom is running, the application could get into an
+	 * inconsistent state.  If the editor exists once, it gets added
+	 * to the "available" list of the EggToolbarsModel (for which
+	 * there is no API to remove it).  If later the editor no longer
+	 * existed when constructing a new window, we'd be unable to
+	 * construct a GtkAction for the editor for that window, causing
+	 * assertion failures when viewing the "Edit Toolbars" dialog
+	 * (item is available, but can't find the GtkAction for it).
+	 *
+	 * By ensuring we keep the GAppInfo around, we avoid the
+	 * possibility of that situation occuring.
+	 */
+	static GDesktopAppInfo *app_info = NULL;
+	static gboolean initialised;
+
+	if (!initialised) {
+		gchar *editor;
+
+		editor = g_settings_get_string (window->priv->ui_settings,
+		                                EOM_CONF_UI_EXTERNAL_EDITOR);
+
+		if (editor != NULL) {
+			app_info = g_desktop_app_info_new (editor);
+		}
+
+		initialised = TRUE;
+		g_free (editor);
+	}
+
+	return (GAppInfo *) app_info;
+}
+
+static void
+eom_window_open_editor (GtkAction *action,
+                        EomWindow *window)
+{
+	GdkAppLaunchContext *context;
+	GAppInfo *app_info;
+	GList files;
+
+	app_info = get_appinfo_for_editor (window);
+
+	if (app_info == NULL)
+		return;
+
+	context = gdk_app_launch_context_new ();
+	gdk_app_launch_context_set_screen (context,
+	  gtk_widget_get_screen (GTK_WIDGET (window)));
+	gdk_app_launch_context_set_icon (context,
+	  g_app_info_get_icon (app_info));
+	gdk_app_launch_context_set_timestamp (context,
+	  gtk_get_current_event_time ());
+
+	{
+		GList f = { eom_image_get_file (window->priv->image) };
+		files = f;
+	}
+
+	g_app_info_launch (app_info, &files,
+                           G_APP_LAUNCH_CONTEXT (context), NULL);
+
+	g_object_unref (files.data);
+	g_object_unref (context);
+}
+
+static void
+eom_window_add_open_editor_action (EomWindow *window)
+{
+        EggToolbarsModel *model;
+	GAppInfo *app_info;
+	GtkAction *action;
+        gchar *tooltip;
+
+	app_info = get_appinfo_for_editor (window);
+
+	if (app_info == NULL)
+		return;
+
+	model = eom_application_get_toolbars_model (EOM_APP);
+	egg_toolbars_model_set_name_flags (model, "OpenEditor",
+	                                   EGG_TB_MODEL_NAME_KNOWN);
+
+	tooltip = g_strdup_printf (_("Edit the current image using %s"),
+	                           g_app_info_get_name (app_info));
+	action = gtk_action_new ("OpenEditor", _("Edit Image"), tooltip, NULL);
+	gtk_action_set_gicon (action, g_app_info_get_icon (app_info));
+	gtk_action_set_is_important (action, TRUE);
+
+	g_signal_connect (action, "activate",
+	                  G_CALLBACK (eom_window_open_editor), window);
+
+	gtk_action_group_add_action (window->priv->actions_image, action);
+
+	g_object_unref (action);
+	g_free (tooltip);
+}
+
 static void
 eom_window_construct_ui (EomWindow *window)
 {
@@ -4177,6 +4296,8 @@ eom_window_construct_ui (EomWindow *window)
 				      action_entries_image,
 				      G_N_ELEMENTS (action_entries_image),
 				      window);
+
+	eom_window_add_open_editor_action (window);
 
 	gtk_action_group_add_toggle_actions (priv->actions_image,
 					     toggle_entries_image,

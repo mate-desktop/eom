@@ -117,6 +117,11 @@
       <_summary>Whether the metadata list in the properties dialog should have its own page.</_summary>
       <_description>If activated, the detailed metadata list in the properties dialog will be moved to its own page in the dialog. This should make the dialog more usable on smaller screens, e.g. as used by netbooks. If disabled, the widget will be embedded on the "Metadata" page.</_description>
     </key>
+    <key name="external-editor" type="s">
+      <default>''</default>
+      <_summary>External program to use for editing images</_summary>
+      <_description>The desktop file name (including the ".desktop") of the application to use for editing images (when the "Edit Image" toolbar button is clicked). Set to the empty string to disable this feature.</_description>
+    </key>
     <key name="filechooser-xdg-fallback" type="b">
       <default>true</default>
       <_summary>Whether the file chooser should show the user's pictures folder if no images are loaded.</_summary>
