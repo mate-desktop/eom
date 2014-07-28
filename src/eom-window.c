@@ -990,7 +990,7 @@ eom_window_update_openwith_menu (EomWindow *window, EomImage *image)
                 GAppInfo *app = iter->data;
                 gchar name[64];
 
-                if (g_app_info_equal (editor_app, app)) {
+                if (editor_app != NULL && g_app_info_equal (editor_app, app)) {
                         edit_button_active = TRUE;
                 }
 
