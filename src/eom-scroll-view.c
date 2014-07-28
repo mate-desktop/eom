@@ -2989,7 +2989,11 @@ _eom_scroll_view_update_bg_color (EomScrollView *view)
 		priv->background_surface = NULL;
 	}
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gtk_widget_modify_bg (GTK_WIDGET (priv->display),
+#else
 	gtk_widget_modify_bg (GTK_WIDGET (view),
+#endif
 			      GTK_STATE_NORMAL,
 			      selected);
 }
