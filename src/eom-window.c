@@ -3735,7 +3735,7 @@ static const GtkActionEntry action_entries_image[] = {
 	{ "ViewZoomNormal", GTK_STOCK_ZOOM_100, N_("_Normal Size"), "<control>0",
 	  N_("Show the image at its normal size"),
 	  G_CALLBACK (eom_window_cmd_zoom_normal) },
-	{ "ViewZoomFit", GTK_STOCK_ZOOM_FIT, N_("Best _Fit"), "F",
+	{ "ViewZoomFit", GTK_STOCK_ZOOM_FIT, N_("_Best Fit"), "F",
 	  N_("Fit the image to the window"),
 	  G_CALLBACK (eom_window_cmd_zoom_fit) },
 	{ "ControlEqual", GTK_STOCK_ZOOM_IN, N_("_Zoom In"), "<control>equal",
@@ -3789,7 +3789,7 @@ static const GtkActionEntry action_entries_collection[] = {
 };
 
 static const GtkToggleActionEntry toggle_entries_collection[] = {
-	{ "ViewSlideshow", "slideshow-play", N_("_Slideshow"), "F5",
+	{ "ViewSlideshow", "slideshow-play", N_("S_lideshow"), "F5",
 	  N_("Start a slideshow view of the images"),
 	  G_CALLBACK (eom_window_cmd_slideshow), FALSE },
 };
