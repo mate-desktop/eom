@@ -2669,13 +2669,13 @@ eom_scroll_view_get_property (GObject *object, guint property_id,
 	switch (property_id) {
 	case PROP_ANTIALIAS_IN:
 	{
-		gboolean filter = (priv->interp_type_in != GDK_INTERP_NEAREST);
+		gboolean filter = (priv->interp_type_in != CAIRO_FILTER_NEAREST);
 		g_value_set_boolean (value, filter);
 		break;
 	}
 	case PROP_ANTIALIAS_OUT:
 	{
-		gboolean filter = (priv->interp_type_out != GDK_INTERP_NEAREST);
+		gboolean filter = (priv->interp_type_out != CAIRO_FILTER_NEAREST);
 		g_value_set_boolean (value, filter);
 		break;
 	}
