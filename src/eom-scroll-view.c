@@ -2774,12 +2774,24 @@ eom_scroll_view_class_init (EomScrollViewClass *klass)
 		g_param_spec_boolean ("use-background-color", NULL, NULL, FALSE,
 				      G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
 
+	/**
+	 * EomScrollView:zoom-multiplier:
+	 *
+	 * The current zoom factor is multiplied with this value + 1.0 when
+	 * scrolling with the scrollwheel to determine the next zoom factor.
+	 */
 	g_object_class_install_property (
 		gobject_class, PROP_ZOOM_MULTIPLIER,
 		g_param_spec_double ("zoom-multiplier", NULL, NULL,
-				     -G_MAXDOUBLE, G_MAXDOUBLE, 0.05,
+				     -G_MAXDOUBLE, G_MAXDOUBLE -1.0, 0.05,
 				     G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
 
+	/**
+	 * EomScrollView:scrollwheel-zoom:
+	 *
+	 * If %TRUE the scrollwheel will zoom the view, otherwise it will be
+	 * used for scrolling a zoomed image.
+	 */
 	g_object_class_install_property (
 		gobject_class, PROP_SCROLLWHEEL_ZOOM,
 		g_param_spec_boolean ("scrollwheel-zoom", NULL, NULL, TRUE,
