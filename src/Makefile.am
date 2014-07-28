@@ -38,7 +38,6 @@ NOINST_H_FILES =			\
 	eom-plugin-engine.h             \
 	uta.h				\
 	eom-close-confirmation-dialog.h	\
-	eom-clipboard-handler.h		\
 	zoom.h
 
 if ENABLE_PYTHON
@@ -67,6 +66,7 @@ INST_H_FILES =				\
 	eom-list-store.h		\
 	eom-thumbnail.h			\
 	eom-job-queue.h			\
+	eom-clipboard-handler.h		\
 	eom-jobs.h			\
 	eom-plugin.h
 
