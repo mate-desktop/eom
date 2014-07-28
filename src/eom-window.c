@@ -379,22 +379,6 @@ eom_window_can_save_changed_cb (GSettings *settings, gchar *key, gpointer user_d
 	}
 }
 
-static void
-eom_window_pd_nbmode_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
-{
-	EomWindow *window = EOM_WINDOW (user_data);
-
-	if (window->priv->properties_dlg != NULL) {
-		gboolean netbook_mode;
-		EomPropertiesDialog *dlg;
-
-		netbook_mode = g_settings_get_boolean (settings, key);
-		dlg = EOM_PROPERTIES_DIALOG (window->priv->properties_dlg);
-
-		eom_properties_dialog_set_netbook_mode (dlg, netbook_mode);
-	}
-}
-
 #ifdef HAVE_LCMS
 static cmsHPROFILE *
 eom_window_get_display_profile (GdkScreen *screen)
@@ -3022,7 +3006,6 @@ eom_window_cmd_properties (GtkAction *action, gpointer user_data)
 					     "GoPrevious");
 
 	if (window->priv->properties_dlg == NULL) {
-		gboolean netbook_mode;
 
 		window->priv->properties_dlg =
 			eom_properties_dialog_new (GTK_WINDOW (window),
@@ -3032,11 +3015,10 @@ eom_window_cmd_properties (GtkAction *action, gpointer user_data)
 
 		eom_properties_dialog_update (EOM_PROPERTIES_DIALOG (priv->properties_dlg),
 					      priv->image);
-		netbook_mode =
-			g_settings_get_boolean (priv->ui_settings,
-					       EOM_CONF_UI_PROPSDIALOG_NETBOOK_MODE);
-		eom_properties_dialog_set_netbook_mode (EOM_PROPERTIES_DIALOG (priv->properties_dlg),
-							netbook_mode);
+		g_settings_bind (priv->ui_settings,
+				 EOM_CONF_UI_PROPSDIALOG_NETBOOK_MODE,
+				 priv->properties_dlg, "netbook-mode",
+				 G_SETTINGS_BIND_GET);
 	}
 
 	eom_dialog_show (EOM_DIALOG (window->priv->properties_dlg));
@@ -4555,11 +4537,6 @@ eom_window_init (EomWindow *window)
 	g_signal_connect (priv->ui_settings,
 					  "changed::" EOM_CONF_UI_IMAGE_COLLECTION_RESIZABLE,
 					  G_CALLBACK (eom_window_collection_mode_changed_cb),
-					  window);
-
-	g_signal_connect (priv->ui_settings,
-					  "changed::" EOM_CONF_UI_PROPSDIALOG_NETBOOK_MODE,
-					  G_CALLBACK (eom_window_pd_nbmode_changed_cb),
 					  window);
 
 	g_signal_connect (priv->lockdown_settings,
