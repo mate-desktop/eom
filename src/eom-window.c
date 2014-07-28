@@ -4369,6 +4369,11 @@ eom_window_construct_ui (EomWindow *window)
 			       "model", eom_application_get_toolbars_model (EOM_APP),
 			       NULL));
 
+#if GTK_CHECK_VERSION (3, 0, 2)
+	gtk_style_context_add_class (gtk_widget_get_style_context (GTK_WIDGET (priv->toolbar)),
+				     GTK_STYLE_CLASS_PRIMARY_TOOLBAR);
+#endif
+
 	egg_editable_toolbar_show (EGG_EDITABLE_TOOLBAR (priv->toolbar),
 				   "Toolbar");
 
