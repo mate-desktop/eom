@@ -112,6 +112,8 @@ typedef enum {
 
 enum {
 	PROP_0,
+	PROP_COLLECTION_POS,
+	PROP_COLLECTION_RESIZABLE,
 	PROP_STARTUP_FLAGS
 };
 
@@ -174,7 +176,7 @@ struct _EomWindowPrivate {
         EomStartupFlags      flags;
 	GSList              *file_list;
 
-	gint                 collection_position;
+	EomWindowCollectionPos collection_position;
 	gboolean             collection_resizable;
 
         GtkActionGroup      *actions_open_with;
@@ -228,22 +230,17 @@ eom_window_error_quark (void)
 }
 
 static void
-eom_window_collection_mode_changed_cb (GSettings *settings, gchar *key, gpointer user_data)
+eom_window_set_collection_mode (EomWindow *window, EomWindowCollectionPos position, gboolean resizable)
 {
 	EomWindowPrivate *priv;
 	GtkWidget *hpaned;
 	EomThumbNavMode mode = EOM_THUMB_NAV_MODE_ONE_ROW;
-	gint position = 0;
-	gboolean resizable = FALSE;
 
 	eom_debug (DEBUG_PREFERENCES);
 
-	g_return_if_fail (EOM_IS_WINDOW (user_data));
+	g_return_if_fail (EOM_IS_WINDOW (window));
 
-	priv = EOM_WINDOW (user_data)->priv;
-
-	position = g_settings_get_int (priv->ui_settings, EOM_CONF_UI_IMAGE_COLLECTION_POSITION);
-	resizable = g_settings_get_boolean (priv->ui_settings, EOM_CONF_UI_IMAGE_COLLECTION_RESIZABLE);
+	priv = window->priv;
 
 	if (priv->collection_position == position &&
 	    priv->collection_resizable == resizable)
@@ -263,8 +260,8 @@ eom_window_collection_mode_changed_cb (GSettings *settings, gchar *key, gpointer
 	gtk_widget_destroy (priv->layout);
 
 	switch (position) {
-	case 0:
-	case 2:
+	case EOM_WINDOW_COLLECTION_POS_BOTTOM:
+	case EOM_WINDOW_COLLECTION_POS_TOP:
 		if (resizable) {
 			mode = EOM_THUMB_NAV_MODE_MULTIPLE_ROWS;
 
@@ -274,7 +271,7 @@ eom_window_collection_mode_changed_cb (GSettings *settings, gchar *key, gpointer
 			priv->layout = gtk_vpaned_new ();
 #endif
 
-			if (position == 0) {
+			if (position == EOM_WINDOW_COLLECTION_POS_BOTTOM) {
 				gtk_paned_pack1 (GTK_PANED (priv->layout), hpaned, TRUE, FALSE);
 				gtk_paned_pack2 (GTK_PANED (priv->layout), priv->nav, FALSE, TRUE);
 			} else {
@@ -286,7 +283,7 @@ eom_window_collection_mode_changed_cb (GSettings *settings, gchar *key, gpointer
 
 			priv->layout = gtk_vbox_new (FALSE, 2);
 
-			if (position == 0) {
+			if (position == EOM_WINDOW_COLLECTION_POS_BOTTOM) {
 				gtk_box_pack_start (GTK_BOX (priv->layout), hpaned, TRUE, TRUE, 0);
 				gtk_box_pack_start (GTK_BOX (priv->layout), priv->nav, FALSE, FALSE, 0);
 			} else {
@@ -296,8 +293,8 @@ eom_window_collection_mode_changed_cb (GSettings *settings, gchar *key, gpointer
 		}
 		break;
 
-	case 1:
-	case 3:
+	case EOM_WINDOW_COLLECTION_POS_LEFT:
+	case EOM_WINDOW_COLLECTION_POS_RIGHT:
 		if (resizable) {
 			mode = EOM_THUMB_NAV_MODE_MULTIPLE_COLUMNS;
 
@@ -307,7 +304,7 @@ eom_window_collection_mode_changed_cb (GSettings *settings, gchar *key, gpointer
 			priv->layout = gtk_hpaned_new ();
 #endif
 
-			if (position == 1) {
+			if (position == EOM_WINDOW_COLLECTION_POS_LEFT) {
 				gtk_paned_pack1 (GTK_PANED (priv->layout), priv->nav, FALSE, TRUE);
 				gtk_paned_pack2 (GTK_PANED (priv->layout), hpaned, TRUE, FALSE);
 			} else {
@@ -319,7 +316,7 @@ eom_window_collection_mode_changed_cb (GSettings *settings, gchar *key, gpointer
 
 			priv->layout = gtk_hbox_new (FALSE, 2);
 
-			if (position == 1) {
+			if (position == EOM_WINDOW_COLLECTION_POS_LEFT) {
 				gtk_box_pack_start (GTK_BOX (priv->layout), priv->nav, FALSE, FALSE, 0);
 				gtk_box_pack_start (GTK_BOX (priv->layout), hpaned, TRUE, TRUE, 0);
 			} else {
@@ -336,7 +333,7 @@ eom_window_collection_mode_changed_cb (GSettings *settings, gchar *key, gpointer
 	eom_thumb_nav_set_mode (EOM_THUMB_NAV (priv->nav), mode);
 
 	if (priv->mode != EOM_WINDOW_STATUS_UNKNOWN) {
-		update_action_groups_state (EOM_WINDOW (user_data));
+		update_action_groups_state (window);
 	}
 }
 
@@ -4490,12 +4487,13 @@ eom_window_construct_ui (EomWindow *window)
 
 	gtk_box_pack_end (GTK_BOX (priv->cbox), priv->layout, TRUE, TRUE, 0);
 
-	eom_window_collection_mode_changed_cb (priv->ui_settings,
-					EOM_CONF_UI_IMAGE_COLLECTION_POSITION,
-					window);
 	eom_window_can_save_changed_cb (priv->lockdown_settings,
 					EOM_CONF_LOCKDOWN_CAN_SAVE,
 					window);
+g_settings_bind (priv->ui_settings, EOM_CONF_UI_IMAGE_COLLECTION_POSITION,
+			 window, "collection-position", G_SETTINGS_BIND_GET);
+	g_settings_bind (priv->ui_settings, EOM_CONF_UI_IMAGE_COLLECTION_RESIZABLE,
+			 window, "collection-resizable", G_SETTINGS_BIND_GET);
 
 	if ((priv->flags & EOM_STARTUP_FULLSCREEN) ||
 	    (priv->flags & EOM_STARTUP_SLIDE_SHOW)) {
@@ -4528,16 +4526,6 @@ eom_window_init (EomWindow *window)
 	priv->ui_settings = g_settings_new (EOM_CONF_UI);
 	priv->fullscreen_settings = g_settings_new (EOM_CONF_FULLSCREEN);
 	priv->lockdown_settings = g_settings_new (EOM_CONF_LOCKDOWN_SCHEMA);
-
-	g_signal_connect (priv->ui_settings,
-					  "changed::" EOM_CONF_UI_IMAGE_COLLECTION_POSITION,
-					  G_CALLBACK (eom_window_collection_mode_changed_cb),
-					  window);
-
-	g_signal_connect (priv->ui_settings,
-					  "changed::" EOM_CONF_UI_IMAGE_COLLECTION_RESIZABLE,
-					  G_CALLBACK (eom_window_collection_mode_changed_cb),
-					  window);
 
 	g_signal_connect (priv->lockdown_settings,
 					  "changed::" EOM_CONF_LOCKDOWN_CAN_SAVE,
@@ -5029,6 +5017,14 @@ eom_window_set_property (GObject      *object,
 	priv = window->priv;
 
         switch (property_id) {
+	case PROP_COLLECTION_POS:
+		eom_window_set_collection_mode (window, g_value_get_int (value),
+					     priv->collection_resizable);
+		break;
+	case PROP_COLLECTION_RESIZABLE:
+		eom_window_set_collection_mode (window, priv->collection_position,
+					     g_value_get_boolean (value));
+		break;
 	case PROP_STARTUP_FLAGS:
 		priv->flags = g_value_get_flags (value);
 		break;
@@ -5053,6 +5049,12 @@ eom_window_get_property (GObject    *object,
 	priv = window->priv;
 
         switch (property_id) {
+	case PROP_COLLECTION_POS:
+		g_value_set_int (value, priv->collection_position);
+		break;
+	case PROP_COLLECTION_RESIZABLE:
+		g_value_set_boolean (value, priv->collection_resizable);
+		break;
 	case PROP_STARTUP_FLAGS:
 		g_value_set_flags (value, priv->flags);
 		break;
@@ -5099,6 +5101,28 @@ eom_window_class_init (EomWindowClass *class)
         widget_class->window_state_event = eom_window_window_state_event;
 	widget_class->unrealize = eom_window_unrealize;
 	widget_class->focus_out_event = eom_window_focus_out_event;
+
+/**
+ * EomWindow:collection-position:
+ *
+ * Determines the position of the image collection in the window
+ * relative to the image.
+ */
+	g_object_class_install_property (
+		g_object_class, PROP_COLLECTION_POS,
+		g_param_spec_int ("collection-position", NULL, NULL, 0, 3, 0,
+				  G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
+
+/**
+ * EomWindow:collection-resizable:
+ *
+ * If %TRUE the collection will be resizable by the user otherwise it will be
+ * in single column/row mode.
+ */
+	g_object_class_install_property (
+		g_object_class, PROP_COLLECTION_RESIZABLE,
+		g_param_spec_boolean ("collection-resizable", NULL, NULL, FALSE,
+				      G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
 
 /**
  * EomWindow:startup-flags:
