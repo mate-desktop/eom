@@ -77,10 +77,8 @@
 #include <lcms2.h>
 #endif
 
-#if GTK_CHECK_VERSION(3, 0, 0)
 #define MATE_DESKTOP_USE_UNSTABLE_API
 #include <libmate-desktop/mate-desktop-utils.h>
-#endif
 
 #define EOM_WINDOW_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_WINDOW, EomWindowPrivate))
@@ -2658,17 +2656,10 @@ wallpaper_info_bar_response (GtkInfoBar *bar, gint response, EomWindow *window)
 		GdkScreen *screen;
 
 		screen = gtk_widget_get_screen (GTK_WIDGET (window));
-		#if GTK_CHECK_VERSION(3, 0, 0)
 		mate_gdk_spawn_command_line_on_screen (screen,
 						  "mate-appearance-properties"
 						  " --show-page=background",
 						  NULL);
-		#else
-		gdk_spawn_command_line_on_screen (screen,
-						  "mate-appearance-properties"
-						  " --show-page=background",
-						  NULL);
-		#endif
 	}
 
 	/* Close message area on every response */
