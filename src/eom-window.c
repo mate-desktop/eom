@@ -564,7 +564,6 @@ update_action_groups_state (EomWindow *window)
 	GtkAction *action_sshow;
 	GtkAction *action_print;
 	gboolean print_disabled = FALSE;
-	gboolean page_setup_disabled = FALSE;
 	gboolean show_image_collection = FALSE;
 	gint n_images = 0;
 
@@ -667,9 +666,6 @@ update_action_groups_state (EomWindow *window)
 	if (print_disabled) {
 		gtk_action_set_sensitive (action_print, FALSE);
 	}
-
-	page_setup_disabled = g_settings_get_boolean (priv->lockdown_settings,
-						     EOM_CONF_LOCKDOWN_CAN_SETUP_PAGE);
 
 	if (eom_sidebar_is_empty (EOM_SIDEBAR (priv->sidebar))) {
 		gtk_action_set_sensitive (action_sidebar, FALSE);
@@ -2159,6 +2155,7 @@ eom_window_print (EomWindow *window)
 	GtkPrintOperationResult res;
 	GtkPageSetup *page_setup;
 	GtkPrintSettings *print_settings;
+	gboolean page_setup_disabled = FALSE;
 
 	eom_debug (DEBUG_PRINTING);
 
@@ -2175,6 +2172,12 @@ eom_window_print (EomWindow *window)
 	print = eom_print_operation_new (window->priv->image,
 					 print_settings,
 					 page_setup);
+
+	// Disable page setup options if they are locked down
+	page_setup_disabled = g_settings_get_boolean (window->priv->lockdown_settings,
+						      EOM_CONF_LOCKDOWN_CAN_SETUP_PAGE);
+	if (page_setup_disabled)
+		gtk_print_operation_set_embed_page_setup (print, FALSE);
 
 	res = gtk_print_operation_run (print,
 				       GTK_PRINT_OPERATION_ACTION_PRINT_DIALOG,
