@@ -5009,7 +5009,7 @@ eom_window_set_property (GObject      *object,
 
         switch (property_id) {
 	case PROP_COLLECTION_POS:
-		eom_window_set_collection_mode (window, g_value_get_int (value),
+		eom_window_set_collection_mode (window, g_value_get_enum (value),
 					     priv->collection_resizable);
 		break;
 	case PROP_COLLECTION_RESIZABLE:
@@ -5041,7 +5041,7 @@ eom_window_get_property (GObject    *object,
 
         switch (property_id) {
 	case PROP_COLLECTION_POS:
-		g_value_set_int (value, priv->collection_position);
+		g_value_set_enum (value, priv->collection_position);
 		break;
 	case PROP_COLLECTION_RESIZABLE:
 		g_value_set_boolean (value, priv->collection_resizable);
@@ -5101,8 +5101,10 @@ eom_window_class_init (EomWindowClass *class)
  */
 	g_object_class_install_property (
 		g_object_class, PROP_COLLECTION_POS,
-		g_param_spec_int ("collection-position", NULL, NULL, 0, 3, 0,
-				  G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
+		g_param_spec_enum ("collection-position", NULL, NULL,
+				   EOM_TYPE_WINDOW_COLLECTION_POS,
+				   EOM_WINDOW_COLLECTION_POS_BOTTOM,
+				   G_PARAM_READWRITE | G_PARAM_STATIC_NAME));
 
 /**
  * EomWindow:collection-resizable:
