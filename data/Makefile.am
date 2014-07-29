@@ -9,6 +9,10 @@ desktopdir = $(datadir)/applications
 desktop_DATA = $(DESKTOP_FILES)
 
 @INTLTOOL_XML_NOMERGE_RULE@
+gsettings_ENUM_NAMESPACE = org.mate.eom
+gsettings_ENUM_FILES = $(top_srcdir)/src/eom-scroll-view.h	\
+                       $(top_srcdir)/src/eom-window.h
+
 gsettings_SCHEMAS = org.mate.eom.gschema.xml
 @GSETTINGS_RULES@
 
