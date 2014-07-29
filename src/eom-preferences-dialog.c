@@ -154,7 +154,6 @@ eom_preferences_dialog_constructor (GType type,
 	GtkWidget *plugin_manager;
 	GtkWidget *plugin_manager_container;
 	GObject *object;
-	GdkColor color;
 
 	object = G_OBJECT_CLASS (eom_preferences_dialog_parent_class)->constructor
 			(type, n_construct_properties, construct_params);

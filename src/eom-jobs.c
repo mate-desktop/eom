@@ -346,23 +346,8 @@ eom_job_load_run (EomJob *job)
 static void eom_job_model_init (EomJobModel *job) { /* Do Nothing */ }
 
 static void
-eom_job_model_dispose (GObject *object)
-{
-	EomJobModel *job;
-
-	job = EOM_JOB_MODEL (object);
-
-	(* G_OBJECT_CLASS (eom_job_model_parent_class)->dispose) (object);
-}
-
-static void
 eom_job_model_class_init (EomJobModelClass *class)
 {
-	GObjectClass *oclass;
-
-	oclass = G_OBJECT_CLASS (class);
-
-	oclass->dispose = eom_job_model_dispose;
 	EOM_JOB_CLASS (class)->run = eom_job_model_run;
 }
 
@@ -880,15 +865,12 @@ eom_job_copy_run (EomJob *ejob)
 {
 	EomJobCopy *job;
 	GList *it;
-	guint n_images;
 	GFile *src, *dest;
 	gchar *filename, *dest_filename;
 
 	g_return_if_fail (EOM_IS_JOB_COPY (ejob));
 
 	job = EOM_JOB_COPY (ejob);
-
-	n_images = g_list_length (job->images);
 
 	job->current_pos = 0;
 

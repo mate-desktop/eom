@@ -566,13 +566,11 @@ expose_event_cb (GtkDrawingArea *drawing_area,
 		 gpointer  user_data)
 {
 	GtkWidget *widget;
-	EomPrintPreviewPrivate *priv;
 #if !GTK_CHECK_VERSION (3, 0, 0)
 	cairo_t *cr;
 #endif
 
 	widget = GTK_WIDGET (drawing_area);
-	priv = EOM_PRINT_PREVIEW (user_data)->priv;
 
 	update_relative_sizes (EOM_PRINT_PREVIEW (user_data));
 
@@ -882,12 +880,9 @@ key_press_event_cb (GtkWidget   *widget,
 		    GdkEventKey *event,
 		    gpointer     user_data)
 {
-	EomPrintPreviewPrivate *priv;
 	gfloat delta, align;
 	gboolean stop_emission = FALSE;
 	const gchar *property;
-
-	priv = EOM_PRINT_PREVIEW (user_data)->priv;
 
 	delta = 0;
 

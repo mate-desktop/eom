@@ -188,14 +188,16 @@ static void
 eom_sidebar_class_init (EomSidebarClass *eom_sidebar_class)
 {
 	GObjectClass *g_object_class;
+#if GTK_CHECK_VERSION(3, 0, 0)
 	GtkWidgetClass *widget_class;
-#if !GTK_CHECK_VERSION(3, 0, 0)
+#else
 	GtkObjectClass *gtk_object_klass;
 #endif
 
 	g_object_class = G_OBJECT_CLASS (eom_sidebar_class);
+#if GTK_CHECK_VERSION(3, 0, 0)
 	widget_class = GTK_WIDGET_CLASS (eom_sidebar_class);
-#if !GTK_CHECK_VERSION(3, 0, 0)
+#else
 	gtk_object_klass = GTK_OBJECT_CLASS (eom_sidebar_class);
 #endif
 

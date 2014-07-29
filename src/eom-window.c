@@ -330,7 +330,7 @@ eom_window_set_collection_mode (EomWindow *window, EomWindowCollectionPos positi
 
 	eom_thumb_nav_set_mode (EOM_THUMB_NAV (priv->nav), mode);
 
-	if (priv->mode != EOM_WINDOW_STATUS_UNKNOWN) {
+	if (priv->mode != EOM_WINDOW_MODE_UNKNOWN) {
 		update_action_groups_state (window);
 	}
 }
@@ -388,7 +388,6 @@ eom_window_get_display_profile (GdkScreen *screen)
 	int result;
 	cmsHPROFILE *profile;
 	char *atom_name;
-	int lcms_error_action;
 
 	dpy = GDK_DISPLAY_XDISPLAY (gdk_screen_get_display (screen));
 
@@ -2672,7 +2671,6 @@ wallpaper_info_bar_response (GtkInfoBar *bar, gint response, EomWindow *window)
 static void
 eom_window_set_wallpaper (EomWindow *window, const gchar *filename, const gchar *visible_filename)
 {
-	EomWindowPrivate *priv = EOM_WINDOW_GET_PRIVATE (window);
 	GtkWidget *info_bar;
 	GtkWidget *image;
 	GtkWidget *label;
@@ -4929,20 +4927,7 @@ eom_window_button_press (GtkWidget *widget, GdkEventButton *event)
 	return result;
 }
 
-static gboolean
-eom_window_configure_event (GtkWidget *widget, GdkEventConfigure *event)
-{
-	EomWindow *window;
-
-	g_return_val_if_fail (EOM_IS_WINDOW (widget), TRUE);
-
-	window = EOM_WINDOW (widget);
-
-	GTK_WIDGET_CLASS (eom_window_parent_class)->configure_event (widget, event);
-
-	return FALSE;
-}
-
+#if !GTK_CHECK_VERSION (3, 0, 0)
 static gboolean
 eom_window_window_state_event (GtkWidget *widget,
 			       GdkEventWindowState *event)
@@ -4959,23 +4944,14 @@ eom_window_window_state_event (GtkWidget *widget,
 
 		show = !(event->new_window_state &
 		         (GDK_WINDOW_STATE_MAXIMIZED | GDK_WINDOW_STATE_FULLSCREEN));
+
+		eom_statusbar_set_has_resize_grip (EOM_STATUSBAR (window->priv->statusbar),
+						   show);
 	}
 
 	return FALSE;
 }
-
-static void
-eom_window_unrealize (GtkWidget *widget)
-{
-	EomWindow *window;
-
-	g_return_if_fail (EOM_IS_WINDOW (widget));
-
-	window = EOM_WINDOW (widget);
-
-	GTK_WIDGET_CLASS (eom_window_parent_class)->unrealize (widget);
-}
-
+#endif
 
 static gboolean
 eom_window_focus_out_event (GtkWidget *widget, GdkEventFocus *event)
@@ -5091,9 +5067,9 @@ eom_window_class_init (EomWindowClass *class)
 	widget_class->key_press_event = eom_window_key_press;
 	widget_class->button_press_event = eom_window_button_press;
 	widget_class->drag_data_received = eom_window_drag_data_received;
-        widget_class->configure_event = eom_window_configure_event;
+#if !GTK_CHECK_VERSION (3, 0, 0)
         widget_class->window_state_event = eom_window_window_state_event;
-	widget_class->unrealize = eom_window_unrealize;
+#endif
 	widget_class->focus_out_event = eom_window_focus_out_event;
 
 /**

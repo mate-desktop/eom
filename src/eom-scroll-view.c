@@ -2664,12 +2664,10 @@ eom_scroll_view_set_property (GObject *object, guint property_id,
 			      const GValue *value, GParamSpec *pspec)
 {
 	EomScrollView *view;
-	EomScrollViewPrivate *priv;
 
 	g_return_if_fail (EOM_IS_SCROLL_VIEW (object));
 
 	view = EOM_SCROLL_VIEW (object);
-	priv = view->priv;
 
 	switch (property_id) {
 	case PROP_ANTIALIAS_IN:
