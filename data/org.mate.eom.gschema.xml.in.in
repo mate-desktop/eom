@@ -31,10 +31,10 @@
       <_summary>Extrapolate Image</_summary>
       <_description>Whether the image should be extrapolated on zoom-in. This leads to blurry quality and is somewhat slower than non-extrapolated images.</_description>
     </key>
-    <key name="transparency" type="s">
-      <default>'CHECK_PATTERN'</default>
+    <key name="transparency" enum="org.mate.eom.EomTransparencyStyle">
+      <default>'checked'</default>
       <_summary>Transparency indicator</_summary>
-      <_description>Determines how transparency should be indicated. Valid values are CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key determines the color value used.</_description>
+      <_description>Determines how transparency should be indicated. Valid values are checked, color and none. If color is chosen, then the trans-color key determines the color value used.</_description>
     </key>
     <key name="scroll-wheel-zoom" type="b">
       <default>true</default>

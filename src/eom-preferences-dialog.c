@@ -28,6 +28,7 @@
 
 #include "eom-preferences-dialog.h"
 #include "eom-plugin-manager.h"
+#include "eom-scroll-view.h"
 #include "eom-util.h"
 #include "eom-config-keys.h"
 
@@ -97,21 +98,17 @@ pd_color_to_string_mapping (const GValue       *value,
 }
 
 static void
-pd_radio_toggle_cb (GtkWidget *widget, GSettings *settings)
+pd_transp_radio_toggle_cb (GtkWidget *widget, gpointer data)
 {
-	char *key = NULL;
-	char *value = NULL;
+	gpointer value = NULL;
 
 	if (!gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (widget)))
 	    return;
 
-	key = g_object_get_data (G_OBJECT (widget), GSETTINGS_OBJECT_KEY);
 	value = g_object_get_data (G_OBJECT (widget), GSETTINGS_OBJECT_VALUE);
 
-	if (key == NULL || value == NULL)
-		return;
-
-	g_settings_set_string (settings, key, value);
+	g_settings_set_enum (G_SETTINGS (data), EOM_CONF_VIEW_TRANSPARENCY,
+			     GPOINTER_TO_INT (value));
 }
 
 static void
@@ -158,7 +155,6 @@ eom_preferences_dialog_constructor (GType type,
 	GtkWidget *plugin_manager_container;
 	GObject *object;
 	GdkColor color;
-	gchar *value;
 
 	object = G_OBJECT_CLASS (eom_preferences_dialog_parent_class)->constructor
 			(type, n_construct_properties, construct_params);
@@ -225,58 +221,47 @@ eom_preferences_dialog_constructor (GType type,
 				      NULL, NULL);
 
 	g_object_set_data (G_OBJECT (color_radio),
-			   GSETTINGS_OBJECT_KEY,
-			   EOM_CONF_VIEW_TRANSPARENCY);
-
-	g_object_set_data (G_OBJECT (color_radio),
 			   GSETTINGS_OBJECT_VALUE,
-			   "COLOR");
+			   GINT_TO_POINTER (EOM_TRANSP_COLOR));
 
 	g_signal_connect (G_OBJECT (color_radio),
 			  "toggled",
-			  G_CALLBACK (pd_radio_toggle_cb),
+			  G_CALLBACK (pd_transp_radio_toggle_cb),
 			  priv->view_settings);
 
 	g_object_set_data (G_OBJECT (checkpattern_radio),
-			   GSETTINGS_OBJECT_KEY,
-			   EOM_CONF_VIEW_TRANSPARENCY);
-
-	g_object_set_data (G_OBJECT (checkpattern_radio),
 			   GSETTINGS_OBJECT_VALUE,
-			   "CHECK_PATTERN");
+			   GINT_TO_POINTER (EOM_TRANSP_CHECKED));
 
 	g_signal_connect (G_OBJECT (checkpattern_radio),
 			  "toggled",
-			  G_CALLBACK (pd_radio_toggle_cb),
+			  G_CALLBACK (pd_transp_radio_toggle_cb),
 			  priv->view_settings);
-
-	g_object_set_data (G_OBJECT (background_radio),
-			   GSETTINGS_OBJECT_KEY,
-			   EOM_CONF_VIEW_TRANSPARENCY);
 
 	g_object_set_data (G_OBJECT (background_radio),
 			   GSETTINGS_OBJECT_VALUE,
-			   "NONE");
+			   GINT_TO_POINTER (EOM_TRANSP_BACKGROUND));
 
 	g_signal_connect (G_OBJECT (background_radio),
 			  "toggled",
-			  G_CALLBACK (pd_radio_toggle_cb),
+			  G_CALLBACK (pd_transp_radio_toggle_cb),
 			  priv->view_settings);
 
-	value = g_settings_get_string (priv->view_settings,
-					 EOM_CONF_VIEW_TRANSPARENCY);
-
-	if (g_ascii_strcasecmp (value, "COLOR") == 0) {
+	switch (g_settings_get_enum (priv->view_settings,
+				    EOM_CONF_VIEW_TRANSPARENCY))
+	{
+	case EOM_TRANSP_COLOR:
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (color_radio), TRUE);
-	}
-	else if (g_ascii_strcasecmp (value, "CHECK_PATTERN") == 0) {
+		break;
+	case EOM_TRANSP_CHECKED:
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (checkpattern_radio), TRUE);
-	}
-	else {
+		break;
+	default:
+		// Log a warning and use EOM_TRANSP_BACKGROUND as fallback
+		g_warn_if_reached ();
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (background_radio), TRUE);
+		break;
 	}
-
-	g_free (value);
 
 	g_settings_bind_with_mapping (priv->view_settings,
 				      EOM_CONF_VIEW_TRANS_COLOR,
