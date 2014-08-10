@@ -145,7 +145,7 @@ _gtk_grid_append_prop_line (GtkGrid *grid, GtkWidget *sibling,
 		gtk_label_set_line_wrap (GTK_LABEL(*data_label), TRUE);
 		gtk_misc_set_alignment (GTK_MISC (*data_label), 0.0, 0.0);
 		// Add a small margin to make it a sublabel to the first label
-		gtk_widget_set_margin_left (*data_label, 12);
+		gtk_widget_set_margin_start (*data_label, 12);
 		gtk_box_pack_end (GTK_BOX(box), *data_label, FALSE, FALSE, 0);
 	}
 	gtk_grid_attach_next_to (grid, box, sibling, GTK_POS_BOTTOM,  2, 1);
@@ -515,8 +515,8 @@ eom_metadata_sidebar_init (EomMetadataSidebar *sidebar)
 	priv->folder_button = gtk_button_new_with_label ("");
 	g_signal_connect (priv->folder_button, "clicked",
 			  G_CALLBACK (_folder_button_clicked_cb), sidebar);
-	gtk_widget_set_margin_left (priv->folder_button, 12);
-	gtk_widget_set_margin_right (priv->folder_button, 12);
+	gtk_widget_set_margin_start (priv->folder_button, 12);
+	gtk_widget_set_margin_end (priv->folder_button, 12);
 	gtk_widget_set_margin_top (priv->folder_button, 3);
 	gtk_widget_set_tooltip_text (priv->folder_button, _("Show the folder "
 	                             "which contains this file in the file manager"));
