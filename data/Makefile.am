@@ -9,6 +9,10 @@ desktopdir = $(datadir)/applications
 desktop_DATA = $(DESKTOP_FILES)
 
 @INTLTOOL_XML_NOMERGE_RULE@
+appdatadir = $(datadir)/appdata
+dist_appdata_DATA = $(appdata_in_files:.xml.in=.xml)
+appdata_in_files = eom.appdata.xml.in
+
 gsettings_ENUM_NAMESPACE = org.mate.eom
 gsettings_ENUM_FILES = $(top_srcdir)/src/eom-scroll-view.h	\
                        $(top_srcdir)/src/eom-window.h
@@ -42,6 +46,9 @@ EXTRA_DIST =				\
 	$(convert_DATA)			\
         $(DESKTOP_IN_FILES)		\
         $(gsettings_SCHEMAS).in.in
+
+CLEANFILES = 			\
+	eom.appdata.xml
 
 DISTCLEANFILES = 		\
         $(DESKTOP_FILES)	\
