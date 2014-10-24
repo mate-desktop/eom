@@ -10,7 +10,6 @@ desktop_DATA = $(DESKTOP_FILES)
 
 @INTLTOOL_XML_NOMERGE_RULE@
 appdatadir = $(datadir)/appdata
-dist_appdata_DATA = $(appdata_in_files:.xml.in=.xml)
 appdata_in_files = eom.appdata.xml.in
 
 gsettings_ENUM_NAMESPACE = org.mate.eom
@@ -45,6 +44,7 @@ EXTRA_DIST =				\
         $(ui_DATA)			\
 	$(convert_DATA)			\
         $(DESKTOP_IN_FILES)		\
+	$(appdata_in_files)		\
         $(gsettings_SCHEMAS).in.in
 
 CLEANFILES = 			\
