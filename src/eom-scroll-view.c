@@ -66,7 +66,8 @@ enum {
 	SIGNAL_ZOOM_CHANGED,
 	SIGNAL_LAST
 };
-static gint view_signals [SIGNAL_LAST];
+
+static guint view_signals [SIGNAL_LAST] = { 0 };
 
 typedef enum {
 	EOM_SCROLL_VIEW_CURSOR_NORMAL,

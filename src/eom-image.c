@@ -80,7 +80,7 @@ enum {
 	SIGNAL_LAST
 };
 
-static gint signals[SIGNAL_LAST];
+static guint signals[SIGNAL_LAST] = { 0 };
 
 static GList *supported_mime_types = NULL;
 

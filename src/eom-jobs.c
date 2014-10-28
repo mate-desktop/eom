@@ -52,7 +52,7 @@ enum
 	SIGNAL_LAST_SIGNAL
 };
 
-static guint job_signals[SIGNAL_LAST_SIGNAL];
+static guint job_signals[SIGNAL_LAST_SIGNAL] = { 0 };
 
 static void eom_job_copy_run      (EomJob *ejob);
 static void eom_job_load_run 	  (EomJob *ejob);

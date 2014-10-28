@@ -79,7 +79,8 @@ enum {
 	SIGNAL_IMAGE_MOVED,
 	SIGNAL_LAST
 };
-static gint preview_signals [SIGNAL_LAST];
+
+static guint preview_signals [SIGNAL_LAST] = { 0 };
 
 enum {
 	PROP_IMAGE = 1,
