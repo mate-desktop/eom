@@ -52,7 +52,7 @@ enum {
 	SIGNAL_LAST
 };
 
-static gint signals[SIGNAL_LAST];
+static guint signals[SIGNAL_LAST] = { 0 };
 
 struct _EomSidebarPrivate {
 	GtkWidget *notebook;
