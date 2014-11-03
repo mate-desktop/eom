@@ -834,14 +834,14 @@ eom_uri_converter_preview (const char *format_str, EomImage *img, GdkPixbufForma
 
 	n_digits = ceil (MIN (log10 (G_MAXULONG), MAX (log10 (counter), log10 (n_images))));
 
-	str = g_string_new ("");
-
 	if (!g_utf8_validate (format_str, -1, NULL))
 	    return NULL;
 
 	len = g_utf8_strlen (format_str, -1);
 	s = format_str;
 	token_next = FALSE;
+
+	str = g_string_new ("");
 
 	for (i = 0; i < len; i++, s = g_utf8_next_char (s)) {
 		c = g_utf8_get_char (s);
