@@ -365,6 +365,14 @@ _save_any_as_jpeg (EomImage *image, const char *file, EomImageSaveInfo *source,
 	priv = image->priv;
 	pixbuf = priv->image;
 
+	rowstride = gdk_pixbuf_get_rowstride (pixbuf);
+	w = gdk_pixbuf_get_width (pixbuf);
+	h = gdk_pixbuf_get_height (pixbuf);
+
+	/* no image data? abort */
+	pixels = gdk_pixbuf_get_pixels (pixbuf);
+	g_return_val_if_fail (pixels != NULL, FALSE);
+
 	outfile = fopen (file, "wb");
 	if (outfile == NULL) {
 		g_set_error (error,             /* FIXME: Better error message */
@@ -374,14 +382,6 @@ _save_any_as_jpeg (EomImage *image, const char *file, EomImageSaveInfo *source,
 			     file);
 		return FALSE;
 	}
-
-	rowstride = gdk_pixbuf_get_rowstride (pixbuf);
-	w = gdk_pixbuf_get_width (pixbuf);
-	h = gdk_pixbuf_get_height (pixbuf);
-
-	/* no image data? abort */
-	pixels = gdk_pixbuf_get_pixels (pixbuf);
-	g_return_val_if_fail (pixels != NULL, FALSE);
 
 	/* allocate a small buffer to convert image data */
 	buf = g_try_malloc (w * 3 * sizeof (guchar));
