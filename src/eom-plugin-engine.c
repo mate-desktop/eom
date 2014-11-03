@@ -509,11 +509,11 @@ load_plugin_module (EomPluginInfo *info)
 			return FALSE;
 		}
 
-		dir = g_path_get_dirname (info->file);
-
 		g_return_val_if_fail ((info->location != NULL) &&
 		                      (info->location[0] != '\0'),
 		                      FALSE);
+
+		dir = g_path_get_dirname (info->file);
 
 		info->module = G_TYPE_MODULE (
 				eom_python_module_new (dir, info->location));
