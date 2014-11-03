@@ -89,12 +89,13 @@ fatal_error_handler (j_common_ptr cinfo)
          * crappy JPEG library
          */
         if (errmgr->error && *errmgr->error == NULL) {
+                gchar *str = g_path_get_basename (errmgr->filename);
                 g_set_error (errmgr->error,
 			     0,
 			     0,
 			     "Error interpreting JPEG image file: %s\n\n%s",
-			     g_path_get_basename (errmgr->filename),
-                             buffer);
+			     str, buffer);
+                g_free (str);
         }
 
 	siglongjmp (errmgr->setjmp_buffer, 1);
