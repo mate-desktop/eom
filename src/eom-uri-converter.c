@@ -836,8 +836,10 @@ eom_uri_converter_preview (const char *format_str, EomImage *img, GdkPixbufForma
 
 	str = g_string_new ("");
 
-	if (!g_utf8_validate (format_str, -1, NULL))
+	if (!g_utf8_validate (format_str, -1, NULL)) {
+	    g_string_free (str, TRUE);
 	    return NULL;
+    }
 
 	len = g_utf8_strlen (format_str, -1);
 	s = format_str;
