@@ -23,10 +23,9 @@ DISTCLEANFILES =                \
         intltool-merge          \
         intltool-update         
 
-DISTCHECK_CONFIGURE_FLAGS = --disable-schemas-install --disable-scrollkeeper --enable-gtk-doc
+DISTCHECK_CONFIGURE_FLAGS = --disable-schemas-install --enable-gtk-doc
 
-# Ignore scrollkeeper issues for now.  @#*$& scrollkeeper
-distuninstallcheck_listfiles = find . -type f -print | grep -v scrollkeeper | grep -v /share/mate/help/ | grep -v \.omf
+distuninstallcheck_listfiles = find . -type f -print | grep -v /share/mate/help/ | grep -v \.omf
 
 MAINTAINERCLEANFILES = \
 	$(srcdir)/aclocal.m4 \
