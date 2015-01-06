@@ -149,6 +149,7 @@ eom_image_free_mem_private (EomImage *image)
 #endif
 
 		priv->status = EOM_IMAGE_STATUS_UNKNOWN;
+		priv->metadata_status = EOM_IMAGE_METADATA_NOT_READ;
 	}
 }
 
@@ -1195,17 +1196,17 @@ eom_image_has_data (EomImage *img, EomImageData req_data)
 	priv = img->priv;
 
 	if ((req_data & EOM_IMAGE_DATA_IMAGE) > 0) {
-		req_data = (req_data & !EOM_IMAGE_DATA_IMAGE);
+		req_data = (req_data & ~EOM_IMAGE_DATA_IMAGE);
 		has_data = has_data && (priv->image != NULL);
 	}
 
 	if ((req_data & EOM_IMAGE_DATA_DIMENSION) > 0 ) {
-		req_data = (req_data & !EOM_IMAGE_DATA_DIMENSION);
+		req_data = (req_data & ~EOM_IMAGE_DATA_DIMENSION);
 		has_data = has_data && (priv->width >= 0) && (priv->height >= 0);
 	}
 
 	if ((req_data & EOM_IMAGE_DATA_EXIF) > 0) {
-		req_data = (req_data & !EOM_IMAGE_DATA_EXIF);
+		req_data = (req_data & ~EOM_IMAGE_DATA_EXIF);
 #ifdef HAVE_EXIF
 		has_data = has_data && (priv->exif != NULL);
 #else
@@ -1214,7 +1215,7 @@ eom_image_has_data (EomImage *img, EomImageData req_data)
 	}
 
 	if ((req_data & EOM_IMAGE_DATA_XMP) > 0) {
-		req_data = (req_data & !EOM_IMAGE_DATA_XMP);
+		req_data = (req_data & ~EOM_IMAGE_DATA_XMP);
 #ifdef HAVE_EXEMPI
 		has_data = has_data && (priv->xmp != NULL);
 #endif
