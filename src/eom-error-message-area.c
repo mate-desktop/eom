@@ -60,7 +60,7 @@ set_message_area_text_and_icon (GtkInfoBar   *message_area,
 	gtk_widget_show (vbox);
 	gtk_box_pack_start (GTK_BOX (hbox_content), vbox, TRUE, TRUE, 0);
 
-	primary_markup = g_strdup_printf ("<b>%s</b>", primary_text);
+	primary_markup = g_markup_printf_escaped ("<b>%s</b>", primary_text);
 	primary_label = gtk_label_new (primary_markup);
 	g_free (primary_markup);
 
@@ -75,9 +75,9 @@ set_message_area_text_and_icon (GtkInfoBar   *message_area,
 
 	gtk_label_set_selectable (GTK_LABEL (primary_label), TRUE);
 
-  	if (secondary_text != NULL) {
-  		secondary_markup = g_strdup_printf ("<small>%s</small>",
-  						    secondary_text);
+	if (secondary_text != NULL) {
+		secondary_markup = g_markup_printf_escaped ("<small>%s</small>",
+		                                            secondary_text);
 		secondary_label = gtk_label_new (secondary_markup);
 		g_free (secondary_markup);
 
