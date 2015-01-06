@@ -487,7 +487,7 @@ update_status_bar (EomWindow *window)
 	priv = window->priv;
 
 	if (priv->image != NULL &&
-	    eom_image_has_data (priv->image, EOM_IMAGE_DATA_ALL)) {
+	    eom_image_has_data (priv->image, EOM_IMAGE_DATA_DIMENSION)) {
 		int zoom, width, height;
 		goffset bytes = 0;
 
@@ -847,7 +847,7 @@ eom_window_display_image (EomWindow *window, EomImage *image)
 
 	eom_debug (DEBUG_WINDOW);
 
-	g_assert (eom_image_has_data (image, EOM_IMAGE_DATA_ALL));
+	g_assert (eom_image_has_data (image, EOM_IMAGE_DATA_IMAGE));
 
 	priv = window->priv;
 
@@ -1438,7 +1438,7 @@ handle_image_selection_changed_cb (EomThumbView *thumbview, EomWindow *window)
 					  priv->image_info_message_cid);
 		eom_scroll_view_set_image (EOM_SCROLL_VIEW (priv->view),
 					   NULL);
-}
+	}
 
 	if (eom_thumb_view_get_n_selected (EOM_THUMB_VIEW (priv->thumbview)) == 0)
 		return;
@@ -1461,7 +1461,11 @@ handle_image_selection_changed_cb (EomThumbView *thumbview, EomWindow *window)
 		return;
 	}
 
-	if (eom_image_has_data (image, EOM_IMAGE_DATA_ALL)) {
+	if (eom_image_has_data (image, EOM_IMAGE_DATA_IMAGE)) {
+		if (priv->image != NULL)
+			g_object_unref (priv->image);
+
+		priv->image = image;
 		eom_window_display_image (window, image);
 		return;
 	}
