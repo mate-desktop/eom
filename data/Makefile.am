@@ -34,6 +34,7 @@ EXTRA_DIST = \
 	$(ui_DATA) \
 	eom.css			\
 	eom-ui.xml		\
+	metadata-sidebar.ui	\
 	$(DESKTOP_IN_FILES) \
 	$(appdata_in_files)
 
