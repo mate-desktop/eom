@@ -350,9 +350,6 @@ eom_sidebar_init (EomSidebar *eom_sidebar)
 	GtkWidget *arrow;
 	GtkWidget *image;
 
-	gtk_orientable_set_orientation (GTK_ORIENTABLE (eom_sidebar),
-					GTK_ORIENTATION_VERTICAL);
-
 	eom_sidebar->priv = EOM_SIDEBAR_GET_PRIVATE (eom_sidebar);
 
 	/* data model */
@@ -445,7 +442,9 @@ eom_sidebar_new (void)
 {
 	GtkWidget *eom_sidebar;
 
-	eom_sidebar = g_object_new (EOM_TYPE_SIDEBAR, NULL);
+	eom_sidebar = g_object_new (EOM_TYPE_SIDEBAR,
+	                            "orientation", GTK_ORIENTATION_VERTICAL,
+	                            NULL);
 
 	return eom_sidebar;
 }
