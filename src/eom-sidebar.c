@@ -60,6 +60,7 @@ struct _EomSidebarPrivate {
 	GtkWidget *menu;
 	GtkWidget *hbox;
 	GtkWidget *label;
+	GtkWidget *arrow;
 
 	GtkTreeModel *page_model;
 };
@@ -337,6 +338,16 @@ eom_sidebar_menu_item_activate_cb (GtkWidget *widget,
 }
 
 static void
+eom_sidebar_update_arrow_visibility (EomSidebar *sidebar)
+{
+	EomSidebarPrivate *priv = sidebar->priv;
+	const gint n_pages = eom_sidebar_get_n_pages (sidebar);
+
+	gtk_widget_set_visible (GTK_WIDGET (priv->arrow),
+				n_pages > 1);
+}
+
+static void
 eom_sidebar_init (EomSidebar *eom_sidebar)
 {
 	GtkWidget *hbox;
@@ -373,9 +384,10 @@ eom_sidebar_init (EomSidebar *eom_sidebar)
 			  G_CALLBACK (eom_sidebar_select_button_key_press_cb),
 			  eom_sidebar);
 
-	select_hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+	select_hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
 
 	eom_sidebar->priv->label = gtk_label_new ("");
+	gtk_widget_set_name (eom_sidebar->priv->label, "eom-sidebar-title");
 
 	gtk_box_pack_start (GTK_BOX (select_hbox),
 			    eom_sidebar->priv->label,
@@ -385,12 +397,13 @@ eom_sidebar_init (EomSidebar *eom_sidebar)
 
 	arrow = gtk_image_new_from_icon_name ("pan-down-symbolic", GTK_ICON_SIZE_BUTTON);
 	gtk_box_pack_end (GTK_BOX (select_hbox), arrow, FALSE, FALSE, 0);
-	gtk_widget_show (arrow);
+	eom_sidebar->priv->arrow = arrow;
+	gtk_widget_set_visible (arrow, FALSE);
 
 	gtk_container_add (GTK_CONTAINER (eom_sidebar->priv->select_button), select_hbox);
 	gtk_widget_show (select_hbox);
 
-	gtk_box_pack_start (GTK_BOX (hbox), eom_sidebar->priv->select_button, TRUE, TRUE, 0);
+	gtk_box_set_center_widget (GTK_BOX (hbox), eom_sidebar->priv->select_button);
 	gtk_widget_show (eom_sidebar->priv->select_button);
 
 	close_button = gtk_button_new ();
@@ -501,6 +514,8 @@ eom_sidebar_add_page (EomSidebar   *eom_sidebar,
 
 	g_free (label_title);
 
+	eom_sidebar_update_arrow_visibility (eom_sidebar);
+
 	g_signal_emit (G_OBJECT (eom_sidebar),
 		       signals[SIGNAL_PAGE_ADDED], 0, main_widget);
 }
@@ -544,6 +559,8 @@ eom_sidebar_remove_page (EomSidebar *eom_sidebar, GtkWidget *main_widget)
 
 		gtk_list_store_remove (GTK_LIST_STORE (eom_sidebar->priv->page_model),
 				       &iter);
+
+		eom_sidebar_update_arrow_visibility (eom_sidebar);
 
 		g_signal_emit (G_OBJECT (eom_sidebar),
 			       signals[SIGNAL_PAGE_REMOVED], 0, main_widget);
