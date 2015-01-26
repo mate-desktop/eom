@@ -4471,7 +4471,7 @@ eom_window_construct_ui (EomWindow *window)
  	priv->view = eom_scroll_view_new ();
 
 	eom_sidebar_add_page (EOM_SIDEBAR (priv->sidebar),
-			      _("Image Properties"),
+			      _("Properties"),
 			      GTK_WIDGET (eom_metadata_sidebar_new (window)));
 
 	gtk_widget_set_size_request (GTK_WIDGET (priv->view), 100, 100);
