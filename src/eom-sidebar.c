@@ -438,6 +438,8 @@ eom_sidebar_init (EomSidebar *eom_sidebar)
 
 	gtk_notebook_set_show_border (GTK_NOTEBOOK (eom_sidebar->priv->notebook), FALSE);
 	gtk_notebook_set_show_tabs (GTK_NOTEBOOK (eom_sidebar->priv->notebook), FALSE);
+	gtk_widget_set_margin_start (eom_sidebar->priv->notebook, 6);
+	gtk_widget_set_margin_end (eom_sidebar->priv->notebook, 6);
 
 	gtk_box_pack_start (GTK_BOX (eom_sidebar), eom_sidebar->priv->notebook,
 			    TRUE, TRUE, 0);
