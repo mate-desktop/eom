@@ -3,16 +3,17 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# ANIS El Achèche <elachecheanis@gmail.com>, 2012
-# ANIS El Achèche <elachecheanis@gmail.com>, 2012
-# moceap <moceap@hotmail.com>, 2013
+# alibacha19 <alibacha19@gmail.com>, 2015
+# elachecheanis <elachecheanis@gmail.com>, 2012
+# elachecheanis <elachecheanis@gmail.com>, 2012
+# Mosaab Alzoubi <moceap@hotmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-15 15:23+0100\n"
-"PO-Revision-Date: 2014-02-15 14:33+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"POT-Creation-Date: 2014-11-10 15:27+0100\n"
+"PO-Revision-Date: 2015-03-07 10:57+0000\n"
+"Last-Translator: مهدي السطيفي <chinoune.mehdi@gmail.com>\n"
 "Language-Team: Arabic (http://www.transifex.com/projects/p/MATE/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,32 +28,32 @@ msgstr ""
 #. * produce duplicates, but don't worry about it. If your language
 #. * normally has a mnemonic at the start, please use the _. If not,
 #. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:934
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:922
 #, c-format
 msgid "Show “_%s”"
 msgstr "اعرض “_%s”"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1397
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1385
 msgid "_Move on Toolbar"
 msgstr "ا_نقل على شريط الأدوات"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1398
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1386
 msgid "Move the selected item on the toolbar"
 msgstr "انقل العنصر المحدد على شريط الأدوات"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1399
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1387
 msgid "_Remove from Toolbar"
 msgstr "ا_حذف من شريط الأدوات"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1400
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1388
 msgid "Remove the selected item from the toolbar"
 msgstr "احذف العنصر المحدد من شريط الأدوات"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1401
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1389
 msgid "_Delete Toolbar"
 msgstr "ا_حذف شريط الأدوات"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1402
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1390
 msgid "Remove the selected toolbar"
 msgstr "احذف شريط الأدوات المحدد"
 
@@ -86,7 +87,22 @@ msgstr "التاريخ في شريط الحالة"
 msgid "Shows the image date in the window statusbar"
 msgstr "أظهرالتاريخ في شريط حالة النّافذة"
 
-#: ../data/eom.desktop.in.in.h:1 ../src/main.c:66 ../src/main.c:248
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2573
+msgid "Eye of MATE"
+msgstr "عين متّة"
+
+#: ../data/eom.appdata.xml.in.h:2
+msgid "Simple image viewer"
+msgstr ""
+
+#: ../data/eom.appdata.xml.in.h:3
+msgid ""
+"<p> Eye of MATE is a simple viewer for browsing images on your computer. "
+"Once an image is loaded, you can zoom and rotate the image, and also view "
+"subsequent images in the directory the image was loaded from. </p>"
+msgstr ""
+
+#: ../data/eom.desktop.in.in.h:1 ../src/main.c:69 ../src/main.c:248
 msgid "Eye of MATE Image Viewer"
 msgstr "عارض الصور عين متّة"
 
@@ -390,10 +406,10 @@ msgstr "مبيّن الشّفافيّة"
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:12
 msgid ""
-"Determines how transparency should be indicated. Valid values are "
-"CHECK_PATTERN, COLOR and NONE. If COLOR is chosen, then the trans-color key "
-"determines the color value used."
-msgstr "يحدد كيفيّة الإشارة للشّفافيّة. القيم الممكنة هي CHECK_PATTERN و COLOR و NONE. إن اختيرت القيمة COLOR فسيحدد مفتاح trans_color قيمة اللّون المستخدم."
+"Determines how transparency should be indicated. Valid values are checked, "
+"color and none. If color is chosen, then the trans-color key determines the "
+"color value used."
+msgstr ""
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:13
 msgid "Scroll wheel zoom"
@@ -476,10 +492,8 @@ msgid "Show/Hide the image collection pane."
 msgstr "أظهر\\أخفِ لوحة مجموعة الصور."
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:32
-msgid ""
-"Image collection pane position. Set to 0 for bottom; 1 for left; 2 for top; "
-"3 for right."
-msgstr "مكان لوح مجموعة الصور. حدد بـ 0 للأسفل، 1 للجهة اليسرى، 2 للأعلى، 3 للجهة اليمني."
+msgid "Image collection pane position."
+msgstr ""
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:33
 msgid "Whether the image collection pane should be resizable."
@@ -494,22 +508,26 @@ msgid "Show/Hide the image collection pane scroll buttons."
 msgstr "أظهر\\أخفِ أزرار لوحة مجموعة الصور."
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:36
+msgid "Close main window without asking to save changes."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.in.h:37
 msgid "Trash images without asking"
 msgstr "أرسل الصور إلى المهملات دون سؤال"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:37
+#: ../data/org.mate.eom.gschema.xml.in.in.h:38
 msgid ""
 "If activated, Eye of MATE won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
 "trash and would be deleted instead."
 msgstr "إذا فُعّل فلن تسأل «عين متّة» تأكيد نقل الصور إلى المهملات. لكن ستظل تسأل إذا تعذّر نقل أي ملف إلى المهملات وكان سيُحذف بدلا من هذا."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:38
+#: ../data/org.mate.eom.gschema.xml.in.in.h:39
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
 msgstr "ما إذا كانت قائمة البيانات الفوقية المفصّلة في صفحة منفصلة."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:39
+#: ../data/org.mate.eom.gschema.xml.in.in.h:40
 msgid ""
 "If activated, the detailed metadata list in the properties dialog will be "
 "moved to its own page in the dialog. This should make the dialog more usable"
@@ -517,13 +535,24 @@ msgid ""
 "be embedded on the \"Metadata\" page."
 msgstr "إذا فُعّل ستُنقل قائمة البيانات الفوقية المفصّلة في حوار الخصائص إلى صفحة مستقلة. سيجعل هذا الحوار مناسبا أكثر للشاشات الصغيرة مثل حواسيب النت. إذا عُطّل فستضمن القائمة في صفحة البيانات الفوقية."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:40
+#: ../data/org.mate.eom.gschema.xml.in.in.h:41
+msgid "External program to use for editing images"
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.in.h:42
+msgid ""
+"The desktop file name (including the \".desktop\") of the application to use"
+" for editing images (when the \"Edit Image\" toolbar button is clicked). Set"
+" to the empty string to disable this feature."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.in.h:43
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images"
 " are loaded."
 msgstr "ما إذا كان مخير الملفات سيعرض مجلد صور المستخدم إذا لم تُحمّل أي صور."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:41
+#: ../data/org.mate.eom.gschema.xml.in.in.h:44
 msgid ""
 "If activated and no image is loaded in the active window, the file chooser "
 "will display the user's pictures folder using the XDG special user "
@@ -531,11 +560,11 @@ msgid ""
 "will show the current working directory."
 msgstr "إذا فُعّل ولم تُحمّل أي صورة في النافذة النشطة فسيعرض مخير الملفات مجلد صور المستخدم باستخدام مجلدات XDG الخاصة. إذا عُطّل أو لم يكن مجلد الصور موجودا فسيستخدم المجلد الحالي."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:42
+#: ../data/org.mate.eom.gschema.xml.in.in.h:45
 msgid "Active plugins"
 msgstr "الملحقات النشِطة"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:43
+#: ../data/org.mate.eom.gschema.xml.in.in.h:46
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
@@ -550,20 +579,20 @@ msgstr "شغل في نمط ملء الشاشة"
 msgid "Close _without Saving"
 msgstr "أغلق _دون حفظ"
 
-#: ../src/eom-close-confirmation-dialog.c:195
+#: ../src/eom-close-confirmation-dialog.c:192
 msgid "Question"
 msgstr "سؤال"
 
-#: ../src/eom-close-confirmation-dialog.c:376
+#: ../src/eom-close-confirmation-dialog.c:373
 msgid "If you don't save, your changes will be lost."
 msgstr "إذا لم تحفظ ستضيع جميع التغييرات."
 
-#: ../src/eom-close-confirmation-dialog.c:411
+#: ../src/eom-close-confirmation-dialog.c:408
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "أأحفظ التغييرات على الصورة \"%s\" قبل الإغلاق؟"
 
-#: ../src/eom-close-confirmation-dialog.c:606
+#: ../src/eom-close-confirmation-dialog.c:603
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
@@ -575,12 +604,12 @@ msgstr[3] "هناك %d صور تحتوي تغييراتٍ غير محفوظة. �
 msgstr[4] "هناك %d صورة تحتوي تغييراتٍ غير محفوظة. أأحفظ التغييرات قبل الإغلاق؟"
 msgstr[5] "هناك %d صورة تحتوي تغييراتٍ غير محفوظة. أأحفظ التغييرات قبل الإغلاق؟"
 
-#: ../src/eom-close-confirmation-dialog.c:623
+#: ../src/eom-close-confirmation-dialog.c:620
 msgid "S_elect the images you want to save:"
 msgstr "ا_ختر الصور التي تريد حفظها:"
 
 #. Secondary label
-#: ../src/eom-close-confirmation-dialog.c:641
+#: ../src/eom-close-confirmation-dialog.c:638
 msgid "If you don't save, all your changes will be lost."
 msgstr "إذا لم تحفظ ستضيع جميع التغييرات."
 
@@ -614,8 +643,8 @@ msgid "%s (*.%s)"
 msgstr "‏%s ‏(*.%s)"
 
 #. Pixel size of image: width x height in pixel
-#: ../src/eom-file-chooser.c:295 ../src/eom-properties-dialog.c:141
-#: ../src/eom-properties-dialog.c:143 ../src/eom-thumb-view.c:406
+#: ../src/eom-file-chooser.c:287 ../src/eom-properties-dialog.c:137
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:492
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "بكسل"
@@ -625,54 +654,54 @@ msgstr[3] "بكسلات"
 msgstr[4] "بكسلا"
 msgstr[5] "بكسل"
 
-#: ../src/eom-file-chooser.c:444
+#: ../src/eom-file-chooser.c:438
 msgid "Open Image"
 msgstr "افتح صورة"
 
-#: ../src/eom-file-chooser.c:452
+#: ../src/eom-file-chooser.c:446
 msgid "Save Image"
 msgstr "احفظ الصّورة"
 
-#: ../src/eom-file-chooser.c:460
+#: ../src/eom-file-chooser.c:454
 msgid "Open Folder"
 msgstr "افتح مجلّدا"
 
-#: ../src/eom-image.c:598
+#: ../src/eom-image.c:597
 #, c-format
 msgid "Transformation on unloaded image."
 msgstr "التحويل عند رفع صورة."
 
-#: ../src/eom-image.c:626
+#: ../src/eom-image.c:625
 #, c-format
 msgid "Transformation failed."
 msgstr "فشل التحويل."
 
-#: ../src/eom-image.c:1053
+#: ../src/eom-image.c:1052
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "إكسيف(EXIF) غير مدعوم لهذا النسق من الملفّات."
 
-#: ../src/eom-image.c:1180
+#: ../src/eom-image.c:1181
 #, c-format
 msgid "Image loading failed."
 msgstr "فشل تحميل الصورة."
 
-#: ../src/eom-image.c:1585 ../src/eom-image.c:1687
+#: ../src/eom-image.c:1586 ../src/eom-image.c:1688
 #, c-format
 msgid "No image loaded."
 msgstr "لم تحمّل صورة."
 
-#: ../src/eom-image.c:1595 ../src/eom-image.c:1699
+#: ../src/eom-image.c:1596 ../src/eom-image.c:1700
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "فشل إنشاء الملف المؤقّت."
 
-#: ../src/eom-image-jpeg.c:364
+#: ../src/eom-image-jpeg.c:373
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr "تعذّر إنشاء ملف مؤقّت لحفظ: %s"
 
-#: ../src/eom-image-jpeg.c:383
+#: ../src/eom-image-jpeg.c:392
 #, c-format
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "تعذّر تخصيص ذاكرة لتحميل ملف JPEG"
@@ -722,13 +751,13 @@ msgid "Value"
 msgstr "القيمة"
 
 #. A strftime-formatted string, to display the date the image was taken.
-#: ../src/eom-exif-util.c:113 ../src/eom-exif-util.c:153
+#: ../src/eom-exif-util.c:118 ../src/eom-exif-util.c:158
 msgid "%a, %d %B %Y  %X"
 msgstr "%A، %Oe %B %Y  %X"
 
 #. A strftime-formatted string, to display the date the image was taken, for
 #. the case we don't have the time.
-#: ../src/eom-exif-util.c:147
+#: ../src/eom-exif-util.c:152
 msgid "%a, %d %B %Y"
 msgstr "%A، %Oe %B %Y"
 
@@ -754,101 +783,101 @@ msgstr "الأمكنة المعطاة لا تحتوي على أية صور."
 msgid "Image Settings"
 msgstr "إعدادات الصورة"
 
-#: ../src/eom-print-image-setup.c:840
+#: ../src/eom-print-image-setup.c:834
 msgid "Image"
 msgstr "صورة"
 
-#: ../src/eom-print-image-setup.c:841
+#: ../src/eom-print-image-setup.c:835
 msgid "The image whose printing properties will be set up"
 msgstr "الصورّة التي ستعد خصائص طباعتها"
 
-#: ../src/eom-print-image-setup.c:847
+#: ../src/eom-print-image-setup.c:841
 msgid "Page Setup"
 msgstr "إعداد الصفحة"
 
-#: ../src/eom-print-image-setup.c:848
+#: ../src/eom-print-image-setup.c:842
 msgid "The information for the page where the image will be printed"
 msgstr "معلومات الصفحة حيث ستطبع الصورة"
 
-#: ../src/eom-print-image-setup.c:876
+#: ../src/eom-print-image-setup.c:870
 msgid "Position"
 msgstr "الموضع"
 
-#: ../src/eom-print-image-setup.c:881
+#: ../src/eom-print-image-setup.c:875
 msgid "_Left:"
 msgstr "_يسار:"
 
-#: ../src/eom-print-image-setup.c:882
+#: ../src/eom-print-image-setup.c:876
 msgid "_Right:"
 msgstr "ي_مين:"
 
-#: ../src/eom-print-image-setup.c:883
+#: ../src/eom-print-image-setup.c:877
 msgid "_Top:"
 msgstr "أ_على:"
 
-#: ../src/eom-print-image-setup.c:884
+#: ../src/eom-print-image-setup.c:878
 msgid "_Bottom:"
 msgstr "أ_سفل:"
 
-#: ../src/eom-print-image-setup.c:886
+#: ../src/eom-print-image-setup.c:880
 msgid "C_enter:"
 msgstr "_مركز:"
 
-#: ../src/eom-print-image-setup.c:891
+#: ../src/eom-print-image-setup.c:885
 msgid "None"
 msgstr "لا شيء"
 
-#: ../src/eom-print-image-setup.c:893
+#: ../src/eom-print-image-setup.c:887
 msgid "Horizontal"
 msgstr "أفقيا"
 
-#: ../src/eom-print-image-setup.c:895
+#: ../src/eom-print-image-setup.c:889
 msgid "Vertical"
 msgstr "رأسيا"
 
-#: ../src/eom-print-image-setup.c:897
+#: ../src/eom-print-image-setup.c:891
 msgid "Both"
 msgstr "كلاهما"
 
-#: ../src/eom-print-image-setup.c:913
+#: ../src/eom-print-image-setup.c:907
 msgid "Size"
 msgstr "المقاس"
 
-#: ../src/eom-print-image-setup.c:918
+#: ../src/eom-print-image-setup.c:912
 msgid "_Width:"
 msgstr "ال_عرض:"
 
-#: ../src/eom-print-image-setup.c:920
+#: ../src/eom-print-image-setup.c:914
 msgid "_Height:"
 msgstr "الا_رتفاع:"
 
-#: ../src/eom-print-image-setup.c:923
+#: ../src/eom-print-image-setup.c:917
 msgid "_Scaling:"
 msgstr "ال_تحجيم:"
 
-#: ../src/eom-print-image-setup.c:936
+#: ../src/eom-print-image-setup.c:930
 msgid "_Unit:"
 msgstr "ال_وحدة:"
 
-#: ../src/eom-print-image-setup.c:941
+#: ../src/eom-print-image-setup.c:935
 msgid "Millimeters"
 msgstr "ملي مترات"
 
-#: ../src/eom-print-image-setup.c:943
+#: ../src/eom-print-image-setup.c:937
 msgid "Inches"
 msgstr "بوصات"
 
-#: ../src/eom-print-image-setup.c:973
+#: ../src/eom-print-image-setup.c:967
 msgid "Preview"
 msgstr "مُعاينة"
 
-#: ../src/eom-properties-dialog.c:158
+#: ../src/eom-properties-dialog.c:154
 msgid "Unknown"
 msgstr "مجهول"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../src/eom-properties-dialog.c:240
+#: ../src/eom-properties-dialog.c:232
 #, c-format
 msgid "%.1f (lens)"
 msgstr "%I.1f (عدسة)"
@@ -856,7 +885,7 @@ msgstr "%I.1f (عدسة)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../src/eom-properties-dialog.c:251
+#: ../src/eom-properties-dialog.c:243
 #, c-format
 msgid "%.1f (35mm film)"
 msgstr "%I.1f (فيلم 35مم)"
@@ -875,12 +904,12 @@ msgstr "كما هي"
 #. * Note that translating this doesn't guarantee that you get localized
 #. * digits. That needs support from your system and locale definition
 #. * too.
-#: ../src/eom-statusbar.c:129
+#: ../src/eom-statusbar.c:133
 #, c-format
 msgid "%d / %d"
 msgstr "‏%Id ‏\\ %Id"
 
-#: ../src/eom-thumb-view.c:434
+#: ../src/eom-thumb-view.c:520
 msgid "Taken on"
 msgstr "أخذت على"
 
@@ -903,7 +932,7 @@ msgstr " (الترميز العالمي غير سليم)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/eom-window.c:739
+#: ../src/eom-window.c:511
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
@@ -914,25 +943,25 @@ msgstr[3] "‏%i × %i بكسل  %s    %i%%"
 msgstr[4] "‏%i × %i بكسل  %s    %i%%"
 msgstr[5] "‏%i × %i بكسل  %s    %i%%"
 
-#: ../src/eom-window.c:1038
+#: ../src/eom-window.c:806
 msgid "_Reload"
 msgstr "أ_عد التحميل"
 
-#: ../src/eom-window.c:1040 ../src/eom-window.c:2907
+#: ../src/eom-window.c:808 ../src/eom-window.c:2694
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "أ_خفِ"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:1050
+#: ../src/eom-window.c:818
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
 msgstr "عدّل تطبيق خارجي الصورة \"%s\".\nأتريد إعادة تحميلها؟"
 
-#: ../src/eom-window.c:1205
+#: ../src/eom-window.c:982
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "استعمل \"%s\" لفتح العنصر المنتقى"
@@ -942,36 +971,36 @@ msgstr "استعمل \"%s\" لفتح العنصر المنتقى"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1355
+#: ../src/eom-window.c:1138
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "يحفظ الصورة ‏\"%s\" ‏(%Iu‏/%Iu)"
 
-#: ../src/eom-window.c:1708
+#: ../src/eom-window.c:1492
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "يفتح الصورة “%s”"
 
-#: ../src/eom-window.c:2396
+#: ../src/eom-window.c:2191
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
 msgstr "خطأ أثناء طباعة الملف:\n%s"
 
-#: ../src/eom-window.c:2647
+#: ../src/eom-window.c:2453
 msgid "Toolbar Editor"
 msgstr "محرر شريط الأدوات"
 
-#: ../src/eom-window.c:2650
+#: ../src/eom-window.c:2456
 msgid "_Reset to Default"
 msgstr "أ_عد الضبط للمبدئي"
 
-#: ../src/eom-window.c:2742
+#: ../src/eom-window.c:2549
 msgid "translator-credits"
 msgstr "فريق عيون العرب للترجمة http://www.arabeyes.org :\nعرفات المديني\t<lumina@silverpen.de>\nعبدالعزيز العرفج\t<alarfaj0@yahoo.com>\nخالد حسني\t<khaledhosny@eglug.org>\nمصعب الزعبي\t<moceap@hotmail.com>\n\nمراجعة و إتمام بواسطة عيون العرب http://arabeyes.org و مجتمع لينكس العربي http://linuxac.org عام 1434 بإشراف مصعب الزعبي moceap@hotmail.com"
 
-#: ../src/eom-window.c:2745
+#: ../src/eom-window.c:2552
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -979,7 +1008,7 @@ msgid ""
 "any later version.\n"
 msgstr "هذا البرنامج حر؛ بامكانك إعادة توزيعه و/أو تعديله تحت شروط الرخصة العمومية العامة لجنو والتي نشرتها منظمة البرمجيات الحرة؛ سواء الإصدارة 2 من الرخصة أو أي إصدارة بعدها حسب رغبتك.\n"
 
-#: ../src/eom-window.c:2749
+#: ../src/eom-window.c:2556
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -987,55 +1016,51 @@ msgid ""
 "more details.\n"
 msgstr "يوزّع هذا البرنامج على أمل أن يكون مفيدًا لمن يستخدمه دون أدنى مسؤولية؛ ولا حتى أي ضمان يضمن صلاحية العرض في السوق أو توافقه مع أي استخدام محدد. يمكنك مراجعة الرخصة العمومية العامة لجنو لمزيد من التفاصيل.\n"
 
-#: ../src/eom-window.c:2753
+#: ../src/eom-window.c:2560
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 
-#: ../src/eom-window.c:2766
-msgid "Eye of MATE"
-msgstr "عين متّة"
-
-#: ../src/eom-window.c:2771
+#: ../src/eom-window.c:2578
 msgid "The MATE image viewer."
 msgstr "عارِض صور متّة."
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2905
+#: ../src/eom-window.c:2692
 msgid "_Open Background Preferences"
 msgstr "افتح تف_ضيلات الخلفية"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2921
+#: ../src/eom-window.c:2708
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
 msgstr "لقد جعلت الصورة \"%s\" خلفية سطح المكتب.\nأتريد تغيير مظهرها؟"
 
-#: ../src/eom-window.c:3316
+#: ../src/eom-window.c:3101
 msgid "Saving image locally…"
 msgstr "يحفظ الصورة محليا…"
 
-#: ../src/eom-window.c:3396
+#: ../src/eom-window.c:3181
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
 msgstr "أتريد فعلًا نقل الصورة \"%s\" إلى المهملات؟"
 
-#: ../src/eom-window.c:3399
+#: ../src/eom-window.c:3184
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr "تعذّر العثور على مهملات ل\"%s\". أتريد إزالة هذه الصورة بشكل دائم؟"
 
-#: ../src/eom-window.c:3404
+#: ../src/eom-window.c:3189
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1050,368 +1075,385 @@ msgstr[3] "هل تريد فعلًا نقل %i صور محددة إلى المه�
 msgstr[4] "هل تريد فعلًا نقل %i صورة محددة إلى المهملات؟"
 msgstr[5] "هل تريد فعلًا نقل %i صور محددة إلى المهملات؟"
 
-#: ../src/eom-window.c:3409
+#: ../src/eom-window.c:3194
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
 msgstr "بعض الصورة المختارة لا يمكن نقلها إلى المهملات وستحذف بشكل دائم. أمتأكد أنك تريد المتابعة؟"
 
-#: ../src/eom-window.c:3426 ../src/eom-window.c:3884 ../src/eom-window.c:3908
+#: ../src/eom-window.c:3211 ../src/eom-window.c:3695 ../src/eom-window.c:3722
 msgid "Move to _Trash"
 msgstr "انقل إلى  ال_مهملات"
 
-#: ../src/eom-window.c:3428
+#: ../src/eom-window.c:3213
 msgid "_Do not ask again during this session"
 msgstr "_لا تسأل ثانيا خلال هذه الجلسة"
 
-#: ../src/eom-window.c:3473 ../src/eom-window.c:3487
+#: ../src/eom-window.c:3258 ../src/eom-window.c:3272
 #, c-format
 msgid "Couldn't access trash."
 msgstr "تعذّر الوصول إلى المهملات."
 
-#: ../src/eom-window.c:3495
+#: ../src/eom-window.c:3280
 #, c-format
 msgid "Couldn't delete file"
 msgstr "تعذر حذف الملف"
 
-#: ../src/eom-window.c:3566
+#: ../src/eom-window.c:3377
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "خطأ أثناء حذف الصّورة %s"
 
-#: ../src/eom-window.c:3808
+#: ../src/eom-window.c:3619
 msgid "_Image"
 msgstr "_صورة"
 
-#: ../src/eom-window.c:3809
+#: ../src/eom-window.c:3620
 msgid "_Edit"
 msgstr "_تحرير"
 
-#: ../src/eom-window.c:3810
+#: ../src/eom-window.c:3621
 msgid "_View"
 msgstr "_عرض"
 
-#: ../src/eom-window.c:3811
+#: ../src/eom-window.c:3622
 msgid "_Go"
 msgstr "ا_ذهب"
 
-#: ../src/eom-window.c:3812
+#: ../src/eom-window.c:3623
 msgid "_Tools"
 msgstr "أد_وات"
 
-#: ../src/eom-window.c:3813
+#: ../src/eom-window.c:3624
 msgid "_Help"
 msgstr "_مساعدة"
 
-#: ../src/eom-window.c:3815
+#: ../src/eom-window.c:3626
 msgid "_Open…"
 msgstr "ا_فتح…"
 
-#: ../src/eom-window.c:3816
+#: ../src/eom-window.c:3627
 msgid "Open a file"
 msgstr "افتح ملف"
 
-#: ../src/eom-window.c:3818
+#: ../src/eom-window.c:3629
 msgid "_Close"
 msgstr "أ_غلق"
 
-#: ../src/eom-window.c:3819
+#: ../src/eom-window.c:3630
 msgid "Close window"
 msgstr "أغلق النّافذة"
 
-#: ../src/eom-window.c:3821
+#: ../src/eom-window.c:3632
 msgid "T_oolbar"
 msgstr "ش_ريط الأدوات"
 
-#: ../src/eom-window.c:3822
+#: ../src/eom-window.c:3633
 msgid "Edit the application toolbar"
 msgstr "حرّر شريط الأدوات"
 
-#: ../src/eom-window.c:3824
+#: ../src/eom-window.c:3635
 msgid "Prefere_nces"
 msgstr "التّف_ضيلات"
 
-#: ../src/eom-window.c:3825
+#: ../src/eom-window.c:3636
 msgid "Preferences for Eye of MATE"
 msgstr "تفضيلات عين متّة"
 
-#: ../src/eom-window.c:3827
+#: ../src/eom-window.c:3638
 msgid "_Contents"
 msgstr "ال_محتويات"
 
-#: ../src/eom-window.c:3828
+#: ../src/eom-window.c:3639
 msgid "Help on this application"
 msgstr "مساعدة حول هذا التّطبيق"
 
-#: ../src/eom-window.c:3830 ../src/eom-plugin-manager.c:505
+#: ../src/eom-window.c:3641 ../src/eom-plugin-manager.c:505
 msgid "_About"
 msgstr "_عنْ"
 
-#: ../src/eom-window.c:3831
+#: ../src/eom-window.c:3642
 msgid "About this application"
 msgstr "عنْ هذا التّطبيق"
 
-#: ../src/eom-window.c:3836
+#: ../src/eom-window.c:3647
 msgid "_Toolbar"
 msgstr "شريط الأ_دوات"
 
-#: ../src/eom-window.c:3837
+#: ../src/eom-window.c:3648
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "تُغَيّر رؤية شريط الأدوات في النافذة الحالية"
 
-#: ../src/eom-window.c:3839
+#: ../src/eom-window.c:3650
 msgid "_Statusbar"
 msgstr "شريط ال_حالة"
 
-#: ../src/eom-window.c:3840
+#: ../src/eom-window.c:3651
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "تُغَيّر رؤية شريط الحالة في النافذة الحالية"
 
-#: ../src/eom-window.c:3842
+#: ../src/eom-window.c:3653
 msgid "_Image Collection"
 msgstr "م_جموعة صور"
 
-#: ../src/eom-window.c:3843
+#: ../src/eom-window.c:3654
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "تغيير رؤية لوح مجموعة الصور في النافذة الحالية"
 
-#: ../src/eom-window.c:3845
+#: ../src/eom-window.c:3656
 msgid "Side _Pane"
 msgstr "ال_لوحة الجانبية"
 
-#: ../src/eom-window.c:3846
+#: ../src/eom-window.c:3657
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "تغيير رؤية لوح مجموعة الصور في النافذة الحالية"
 
-#: ../src/eom-window.c:3851
+#: ../src/eom-window.c:3662
 msgid "_Save"
 msgstr "ا_حفظ"
 
-#: ../src/eom-window.c:3852
+#: ../src/eom-window.c:3663
 msgid "Save changes in currently selected images"
 msgstr "احفظ التغييرات في الصور المحددة"
 
-#: ../src/eom-window.c:3854
+#: ../src/eom-window.c:3665
 msgid "Open _with"
 msgstr "افتح بـا_ستخدام"
 
-#: ../src/eom-window.c:3855
+#: ../src/eom-window.c:3666
 msgid "Open the selected image with a different application"
 msgstr "افتح الصورة المحددة بتطبيق آخر"
 
-#: ../src/eom-window.c:3857
+#: ../src/eom-window.c:3668
 msgid "Save _As…"
 msgstr "احفظ با_سم…"
 
-#: ../src/eom-window.c:3858
+#: ../src/eom-window.c:3669
 msgid "Save the selected images with a different name"
 msgstr "احفظ الصورة المحددة باسم آخر"
 
-#: ../src/eom-window.c:3860
+#: ../src/eom-window.c:3671
 msgid "_Print…"
 msgstr "ا_طبع…"
 
-#: ../src/eom-window.c:3861
+#: ../src/eom-window.c:3672
 msgid "Print the selected image"
 msgstr "اطبع الصورة المحددة"
 
-#: ../src/eom-window.c:3863
+#: ../src/eom-window.c:3674
 msgid "Prope_rties"
 msgstr "خ_صائص"
 
-#: ../src/eom-window.c:3864
+#: ../src/eom-window.c:3675
 msgid "Show the properties and metadata of the selected image"
 msgstr "اعرض خصائص وبيانات الصورة المحددة"
 
-#: ../src/eom-window.c:3866
+#: ../src/eom-window.c:3677
 msgid "_Undo"
 msgstr "_تراجع"
 
-#: ../src/eom-window.c:3867
+#: ../src/eom-window.c:3678
 msgid "Undo the last change in the image"
 msgstr "تراجع عن آخر تغيير في الصورة"
 
-#: ../src/eom-window.c:3869
+#: ../src/eom-window.c:3680
 msgid "Flip _Horizontal"
 msgstr "اقلب أ_فقيا"
 
-#: ../src/eom-window.c:3870
+#: ../src/eom-window.c:3681
 msgid "Mirror the image horizontally"
 msgstr "اعكس الصورة أفقيا"
 
-#: ../src/eom-window.c:3872
+#: ../src/eom-window.c:3683
 msgid "Flip _Vertical"
 msgstr "اقلب _رأسيا"
 
-#: ../src/eom-window.c:3873
+#: ../src/eom-window.c:3684
 msgid "Mirror the image vertically"
 msgstr "اعكس الصورة رأسيا"
 
-#: ../src/eom-window.c:3875
+#: ../src/eom-window.c:3686
 msgid "_Rotate Clockwise"
 msgstr "ا_ستدر مع عقارب الساعة"
 
-#: ../src/eom-window.c:3876
+#: ../src/eom-window.c:3687
 msgid "Rotate the image 90 degrees to the right"
 msgstr "أدِر الصورة 90 درجة لليمين"
 
-#: ../src/eom-window.c:3878
+#: ../src/eom-window.c:3689
 msgid "Rotate Counterc_lockwise"
 msgstr "استدر _عكس عقارب الساعة"
 
-#: ../src/eom-window.c:3879
+#: ../src/eom-window.c:3690
 msgid "Rotate the image 90 degrees to the left"
 msgstr "أدِر الصورة 90 درجة لليسار"
 
-#: ../src/eom-window.c:3881
+#: ../src/eom-window.c:3692
 msgid "Set as _Desktop Background"
 msgstr "اضبط كخلفية _سطح المكتب"
 
-#: ../src/eom-window.c:3882
+#: ../src/eom-window.c:3693
 msgid "Set the selected image as the desktop background"
 msgstr "يضبط الصورة المختارة كخلفية سطح المكتب"
 
-#: ../src/eom-window.c:3885
+#: ../src/eom-window.c:3696
 msgid "Move the selected image to the trash folder"
 msgstr "انقل الصورة المحددة إلى مجلد المهملات"
 
-#: ../src/eom-window.c:3887 ../src/eom-window.c:3899 ../src/eom-window.c:3902
+#: ../src/eom-window.c:3698
+msgid "_Copy"
+msgstr ""
+
+#: ../src/eom-window.c:3699
+msgid "Copy the selected image to the clipboard"
+msgstr ""
+
+#: ../src/eom-window.c:3701 ../src/eom-window.c:3713 ../src/eom-window.c:3716
 msgid "_Zoom In"
 msgstr "_قرّب"
 
-#: ../src/eom-window.c:3888 ../src/eom-window.c:3900
+#: ../src/eom-window.c:3702 ../src/eom-window.c:3714
 msgid "Enlarge the image"
 msgstr "كبّر الصورة"
 
-#: ../src/eom-window.c:3890 ../src/eom-window.c:3905
+#: ../src/eom-window.c:3704 ../src/eom-window.c:3719
 msgid "Zoom _Out"
 msgstr "_بعّد"
 
-#: ../src/eom-window.c:3891 ../src/eom-window.c:3903 ../src/eom-window.c:3906
+#: ../src/eom-window.c:3705 ../src/eom-window.c:3717 ../src/eom-window.c:3720
 msgid "Shrink the image"
 msgstr "صغّر الصورة"
 
-#: ../src/eom-window.c:3893
+#: ../src/eom-window.c:3707
 msgid "_Normal Size"
 msgstr "حجم _عادي"
 
-#: ../src/eom-window.c:3894
+#: ../src/eom-window.c:3708
 msgid "Show the image at its normal size"
 msgstr "اعرض الصورة في حجمها العادي"
 
-#: ../src/eom-window.c:3896
-msgid "Best _Fit"
-msgstr "أفضل ملا_ئمة"
+#: ../src/eom-window.c:3710
+msgid "_Best Fit"
+msgstr ""
 
-#: ../src/eom-window.c:3897
+#: ../src/eom-window.c:3711
 msgid "Fit the image to the window"
 msgstr "لائم الصورة مع النافذة"
 
-#: ../src/eom-window.c:3914
+#: ../src/eom-window.c:3728
 msgid "_Fullscreen"
 msgstr "_ملء الشّاشة"
 
-#: ../src/eom-window.c:3915
+#: ../src/eom-window.c:3729
 msgid "Show the current image in fullscreen mode"
 msgstr "اعرض الصورة الحالية في نمط ملء الشاشة"
 
-#: ../src/eom-window.c:3917
+#: ../src/eom-window.c:3731
 msgid "Pause Slideshow"
 msgstr "ألبث شرائح"
 
-#: ../src/eom-window.c:3918
+#: ../src/eom-window.c:3732
 msgid "Pause or resume the slideshow"
 msgstr "ألبث أو استأنف عرض الشرائح"
 
-#: ../src/eom-window.c:3923 ../src/eom-window.c:3938
+#: ../src/eom-window.c:3737 ../src/eom-window.c:3752
 msgid "_Previous Image"
 msgstr "الصّ_ورة السّابقة"
 
-#: ../src/eom-window.c:3924
+#: ../src/eom-window.c:3738
 msgid "Go to the previous image of the collection"
 msgstr "اذهب للصّورة السّابقة للمجموعة"
 
-#: ../src/eom-window.c:3926
+#: ../src/eom-window.c:3740
 msgid "_Next Image"
 msgstr "الصّورة ال_تّالية"
 
-#: ../src/eom-window.c:3927
+#: ../src/eom-window.c:3741
 msgid "Go to the next image of the collection"
 msgstr "اذهب للصورة التالية للمجموعة"
 
-#: ../src/eom-window.c:3929 ../src/eom-window.c:3941
+#: ../src/eom-window.c:3743 ../src/eom-window.c:3755
 msgid "_First Image"
 msgstr "الصّورة ال_أولى"
 
-#: ../src/eom-window.c:3930
+#: ../src/eom-window.c:3744
 msgid "Go to the first image of the collection"
 msgstr "اذهب للصورة الأولى للمجموعة"
 
-#: ../src/eom-window.c:3932 ../src/eom-window.c:3944
+#: ../src/eom-window.c:3746 ../src/eom-window.c:3758
 msgid "_Last Image"
 msgstr "الصّورة الأ_خيرة"
 
-#: ../src/eom-window.c:3933
+#: ../src/eom-window.c:3747
 msgid "Go to the last image of the collection"
 msgstr "اذهب للصورة الأخيرة للمجموعة"
 
-#: ../src/eom-window.c:3935
+#: ../src/eom-window.c:3749
 msgid "_Random Image"
 msgstr "صورة _عشوائية"
 
-#: ../src/eom-window.c:3936
+#: ../src/eom-window.c:3750
 msgid "Go to a random image of the collection"
 msgstr "اذهب لصورة عشوائية من المجموعة"
 
-#: ../src/eom-window.c:3950
-msgid "_Slideshow"
-msgstr "عرض _شرائح"
+#: ../src/eom-window.c:3764
+msgid "S_lideshow"
+msgstr ""
 
-#: ../src/eom-window.c:3951
+#: ../src/eom-window.c:3765
 msgid "Start a slideshow view of the images"
 msgstr "ابدأ عرض شرائح للصور"
 
-#: ../src/eom-window.c:4017
+#: ../src/eom-window.c:3831
 msgid "Previous"
 msgstr "السّابقة"
 
-#: ../src/eom-window.c:4021
+#: ../src/eom-window.c:3835
 msgid "Next"
 msgstr "التّالية"
 
-#: ../src/eom-window.c:4025
+#: ../src/eom-window.c:3839
 msgid "Right"
 msgstr "اليمين"
 
-#: ../src/eom-window.c:4028
+#: ../src/eom-window.c:3842
 msgid "Left"
 msgstr "اليسار"
 
-#: ../src/eom-window.c:4031
+#: ../src/eom-window.c:3845
 msgid "In"
 msgstr "داخل"
 
-#: ../src/eom-window.c:4034
+#: ../src/eom-window.c:3848
 msgid "Out"
 msgstr "خارج"
 
-#: ../src/eom-window.c:4037
+#: ../src/eom-window.c:3851
 msgid "Normal"
 msgstr "عادي"
 
-#: ../src/eom-window.c:4040
+#: ../src/eom-window.c:3854
 msgid "Fit"
 msgstr "ملائمة"
 
-#: ../src/eom-window.c:4043
+#: ../src/eom-window.c:3857
 msgid "Collection"
 msgstr "مجموعة"
 
-#: ../src/eom-window.c:4046
+#: ../src/eom-window.c:3860
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "المهملات"
+
+#: ../src/eom-window.c:4208
+#, c-format
+msgid "Edit the current image using %s"
+msgstr ""
+
+#: ../src/eom-window.c:4210
+msgid "Edit Image"
+msgstr ""
 
 #: ../src/eom-plugin-manager.c:51
 msgid "Plugin"
@@ -1449,32 +1491,32 @@ msgstr "_عنْ الملحق"
 msgid "C_onfigure Plugin"
 msgstr "ا_ضبط الملحق"
 
-#: ../src/main.c:73
+#: ../src/main.c:76
 msgid "Open in fullscreen mode"
 msgstr "افتح في نمط ملء الشاشة"
 
-#: ../src/main.c:74
+#: ../src/main.c:77
 msgid "Disable image collection"
 msgstr "عطل مجموعة الصور"
 
-#: ../src/main.c:75
+#: ../src/main.c:78
 msgid "Open in slideshow mode"
 msgstr "اعرض في نمط عرض الشرائح"
 
-#: ../src/main.c:77
+#: ../src/main.c:80
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "ابدأ سيرورة جديدا بدلا من استخدام الموجودة"
 
-#: ../src/main.c:80
+#: ../src/main.c:83
 msgid "Show the application's version"
 msgstr "أظهر نسخة التطبيق"
 
-#: ../src/main.c:81
+#: ../src/main.c:84
 msgid "[FILE…]"
 msgstr "[ملف…]"
 
 #. I18N: The '%s' is replaced with eom's command name.
-#: ../src/main.c:207
+#: ../src/main.c:210
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "نفّذ '%s --help' لرؤية قائمة كاملة بخيارات سطر الأوامر المتوفرة."
