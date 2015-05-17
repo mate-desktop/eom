@@ -1150,7 +1150,10 @@ eom_image_real_load (EomImage *img,
 
 			/* Set orientation again for safety, eg. if we don't
 			 * have Exif data or HAVE_EXIF is undefined. */
-			eom_image_set_orientation (img);
+			if (priv->autorotate) {
+				eom_image_set_orientation (img);
+				eom_image_emit_size_prepared (img);
+			}
 
 		} else {
 			/* Some loaders don't report errors correctly.
