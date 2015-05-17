@@ -1032,8 +1032,6 @@ eom_image_real_load (EomImage *img,
 					break;
 				}
 
-				eom_image_emit_size_prepared (img);
-
 				priv->metadata_status = EOM_IMAGE_METADATA_NOT_AVAILABLE;
 			}
 
