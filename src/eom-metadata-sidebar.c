@@ -107,6 +107,7 @@ eom_metadata_sidebar_update_general_section (EomMetadataSidebar *sidebar)
 		gtk_label_set_text (GTK_LABEL (priv->size_label), NULL);
 		gtk_label_set_text (GTK_LABEL (priv->type_label), NULL);
 		gtk_label_set_text (GTK_LABEL (priv->filesize_label), NULL);
+		gtk_label_set_text (GTK_LABEL (priv->folder_label), NULL);
 		return;		
 	}
 
