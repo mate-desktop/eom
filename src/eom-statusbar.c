@@ -58,14 +58,7 @@ eom_statusbar_init (EomStatusbar *statusbar)
 	statusbar->priv = EOM_STATUSBAR_GET_PRIVATE (statusbar);
 	priv = statusbar->priv;
 
-	#if !GTK_CHECK_VERSION(3, 0, 0)
-	gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (statusbar), TRUE);
-	#endif
-
 	priv->img_num_statusbar = gtk_statusbar_new ();
-	#if !GTK_CHECK_VERSION(3, 0, 0)
-	gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (priv->img_num_statusbar), FALSE);
-	#endif
 	gtk_widget_set_size_request (priv->img_num_statusbar, 100, 10);
 	gtk_widget_show (priv->img_num_statusbar);
 
@@ -155,13 +148,3 @@ eom_statusbar_set_progress (EomStatusbar *statusbar,
 	}
 }
 
-#if !GTK_CHECK_VERSION(3, 0, 0)
-void
-eom_statusbar_set_has_resize_grip (EomStatusbar *statusbar, gboolean has_resize_grip)
-{
-	g_return_if_fail (EOM_IS_STATUSBAR (statusbar));
-
-	gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (statusbar),
-					   has_resize_grip);
-}
-#endif

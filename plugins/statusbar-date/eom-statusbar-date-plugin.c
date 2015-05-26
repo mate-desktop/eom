@@ -124,9 +124,6 @@ static void impl_activate(EomPlugin* plugin, EomWindow* window)
 
 	data = g_new(WindowData, 1);
 	data->statusbar_date = gtk_statusbar_new();
-#if !GTK_CHECK_VERSION (3, 0, 0)
-	gtk_statusbar_set_has_resize_grip(GTK_STATUSBAR(data->statusbar_date), FALSE);
-#endif
 	gtk_widget_set_size_request(data->statusbar_date, 200, 10);
 	gtk_box_pack_end(GTK_BOX(statusbar), data->statusbar_date, FALSE, FALSE, 0);
 

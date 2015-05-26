@@ -63,11 +63,6 @@ void		 eom_statusbar_set_image_number		(EomStatusbar   *statusbar,
 void		 eom_statusbar_set_progress		(EomStatusbar   *statusbar,
 							 gdouble        progress);
 
-#if !GTK_CHECK_VERSION(3, 0, 0)
-void		 eom_statusbar_set_has_resize_grip	(EomStatusbar   *statusbar,
-							 gboolean        has_resize_grip);
-#endif
-
 G_END_DECLS
 
 #endif /* __EOM_STATUSBAR_H__ */
