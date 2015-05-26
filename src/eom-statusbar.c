@@ -58,6 +58,11 @@ eom_statusbar_init (EomStatusbar *statusbar)
 	statusbar->priv = EOM_STATUSBAR_GET_PRIVATE (statusbar);
 	priv = statusbar->priv;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gtk_widget_set_margin_top (GTK_WIDGET (statusbar), 0);
+	gtk_widget_set_margin_bottom (GTK_WIDGET (statusbar), 0);
+#endif
+
 	priv->img_num_label = gtk_label_new (NULL);
 	gtk_widget_set_size_request (priv->img_num_label, 100, 10);
 	gtk_widget_show (priv->img_num_label);
