@@ -4932,29 +4932,6 @@ eom_window_button_press (GtkWidget *widget, GdkEventButton *event)
 	return result;
 }
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
-static gboolean
-eom_window_window_state_event (GtkWidget *widget,
-			       GdkEventWindowState *event)
-{
-	EomWindow *window;
-
-	g_return_val_if_fail (EOM_IS_WINDOW (widget), TRUE);
-
-	window = EOM_WINDOW (widget);
-
-	if (event->changed_mask &
-	    (GDK_WINDOW_STATE_MAXIMIZED | GDK_WINDOW_STATE_FULLSCREEN))	{
-		gboolean show;
-
-		show = !(event->new_window_state &
-		         (GDK_WINDOW_STATE_MAXIMIZED | GDK_WINDOW_STATE_FULLSCREEN));
-	}
-
-	return FALSE;
-}
-#endif
-
 static gboolean
 eom_window_focus_out_event (GtkWidget *widget, GdkEventFocus *event)
 {
@@ -5069,9 +5046,6 @@ eom_window_class_init (EomWindowClass *class)
 	widget_class->key_press_event = eom_window_key_press;
 	widget_class->button_press_event = eom_window_button_press;
 	widget_class->drag_data_received = eom_window_drag_data_received;
-#if !GTK_CHECK_VERSION (3, 0, 0)
-        widget_class->window_state_event = eom_window_window_state_event;
-#endif
 	widget_class->focus_out_event = eom_window_focus_out_event;
 
 /**
