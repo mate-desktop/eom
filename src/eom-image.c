@@ -1431,6 +1431,110 @@ transfer_progress_cb (goffset cur_bytes,
 	}
 }
 
+static void
+tmp_file_restore_unix_attributes (GFile *temp_file,
+				  GFile *target_file)
+{
+	GFileInfo *file_info;
+	guint      uid;
+	guint      gid;
+	guint      mode;
+	guint      mode_mask = 00600;
+
+	GError    *error = NULL;
+
+	g_return_if_fail (G_IS_FILE (temp_file));
+	g_return_if_fail (G_IS_FILE (target_file));
+
+	/* check if file exists */
+	if (!g_file_query_exists (target_file, NULL)) {
+		eom_debug_message (DEBUG_IMAGE_SAVE,
+				   "Target file doesn't exist. Setting default attributes.");
+		return;
+	}
+
+	/* retrieve UID, GID, and MODE of the original file info */
+	file_info = g_file_query_info (target_file,
+				       "unix::uid,unix::gid,unix::mode",
+				       G_FILE_QUERY_INFO_NONE,
+				       NULL,
+				       &error);
+
+	/* check that there aren't any error */
+	if (error != NULL) {
+		eom_debug_message (DEBUG_IMAGE_SAVE,
+				   "File information not available. Setting default attributes.");
+
+		/* free objects */
+		g_object_unref (file_info);
+		g_clear_error (&error);
+
+		return;
+	}
+
+	/* save UID, GID and MODE values */
+	uid = g_file_info_get_attribute_uint32 (file_info,
+						G_FILE_ATTRIBUTE_UNIX_UID);
+
+	gid = g_file_info_get_attribute_uint32 (file_info,
+						G_FILE_ATTRIBUTE_UNIX_GID);
+
+	mode = g_file_info_get_attribute_uint32 (file_info,
+						 G_FILE_ATTRIBUTE_UNIX_MODE);
+
+	/* apply default mode mask to file mode */
+	mode |= mode_mask;
+
+	/* restore original UID, GID, and MODE into the temporal file */
+	g_file_set_attribute_uint32 (temp_file,
+				     G_FILE_ATTRIBUTE_UNIX_UID,
+				     uid,
+				     G_FILE_QUERY_INFO_NONE,
+				     NULL,
+				     &error);
+
+	/* check that there aren't any error */
+	if (error != NULL) {
+		eom_debug_message (DEBUG_IMAGE_SAVE,
+				   "You do not have the permissions necessary to change the file UID.");
+
+		g_clear_error (&error);
+	}
+
+	g_file_set_attribute_uint32 (temp_file,
+				     G_FILE_ATTRIBUTE_UNIX_GID,
+				     gid,
+				     G_FILE_QUERY_INFO_NONE,
+				     NULL,
+				     &error);
+
+	/* check that there aren't any error */
+	if (error != NULL) {
+		eom_debug_message (DEBUG_IMAGE_SAVE,
+				   "You do not have the permissions necessary to change the file GID. Setting user default GID.");
+
+		g_clear_error (&error);
+	}
+
+	g_file_set_attribute_uint32 (temp_file,
+				     G_FILE_ATTRIBUTE_UNIX_MODE,
+				     mode,
+				     G_FILE_QUERY_INFO_NONE,
+				     NULL,
+				     &error);
+
+	/* check that there aren't any error */
+	if (error != NULL) {
+		eom_debug_message (DEBUG_IMAGE_SAVE,
+				   "You do not have the permissions necessary to change the file MODE.");
+
+		g_clear_error (&error);
+	}
+
+	/* free objects */
+	g_object_unref (file_info);
+}
+
 static gboolean
 tmp_file_move_to_uri (EomImage *image,
 		      GFile *tmpfile,
@@ -1441,6 +1545,10 @@ tmp_file_move_to_uri (EomImage *image,
 	gboolean result;
 	GError *ioerror = NULL;
 
+	/* try to restore target file unix attributes */
+	tmp_file_restore_unix_attributes (tmpfile, file);
+
+	/* replace target file with temporal file */
 	result = g_file_move (tmpfile,
 			      file,
 			      (overwrite ? G_FILE_COPY_OVERWRITE : 0) |
