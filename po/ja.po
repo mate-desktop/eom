@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# ABE Tsunehiko, 2015
 # Mika Kobayashi, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-10 15:27+0100\n"
-"PO-Revision-Date: 2015-02-23 23:19+0000\n"
-"Last-Translator: Mika Kobayashi\n"
+"PO-Revision-Date: 2015-05-30 15:00+0000\n"
+"Last-Translator: ABE Tsunehiko\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/MATE/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -97,7 +98,7 @@ msgid ""
 "<p> Eye of MATE is a simple viewer for browsing images on your computer. "
 "Once an image is loaded, you can zoom and rotate the image, and also view "
 "subsequent images in the directory the image was loaded from. </p>"
-msgstr ""
+msgstr "<p> Eye of MATE はコンピューター内の画像を閲覧するためのシンプルなビューアーです。拡大縮小や回転、画像と同じフォルダー内に存在する画像の閲覧などが可能です。</p>"
 
 #: ../data/eom.desktop.in.in.h:1 ../src/main.c:69 ../src/main.c:248
 msgid "Eye of MATE Image Viewer"
@@ -406,7 +407,7 @@ msgid ""
 "Determines how transparency should be indicated. Valid values are checked, "
 "color and none. If color is chosen, then the trans-color key determines the "
 "color value used."
-msgstr ""
+msgstr "画像を透過する部分をどのように表示させるかを指定します。指定可能な値は checked、color、none です。color を選択した場合、キー trans_color には使用する色の値を指定します。"
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:13
 msgid "Scroll wheel zoom"
@@ -490,7 +491,7 @@ msgstr "画像コレクションのペインを表示するかどうか。"
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:32
 msgid "Image collection pane position."
-msgstr ""
+msgstr "画像コレクションのペインの位置"
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:33
 msgid "Whether the image collection pane should be resizable."
@@ -534,14 +535,14 @@ msgstr "この項目が有効だと、プロパティダイアログ中の詳細
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:41
 msgid "External program to use for editing images"
-msgstr ""
+msgstr "編集に使用する外部プログラム"
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:42
 msgid ""
 "The desktop file name (including the \".desktop\") of the application to use"
 " for editing images (when the \"Edit Image\" toolbar button is clicked). Set"
 " to the empty string to disable this feature."
-msgstr ""
+msgstr "編集ボタンを押した際に画像を編集するために使用するアプリケーションのファイル名(.desktopファイルも可)。空にすると機能自体を無効化できます。"
 
 #: ../data/org.mate.eom.gschema.xml.in.in.h:43
 msgid ""
@@ -1284,7 +1285,7 @@ msgstr "コピー(_C)"
 
 #: ../src/eom-window.c:3699
 msgid "Copy the selected image to the clipboard"
-msgstr ""
+msgstr "選択された画像をクリップボードへコピーします。"
 
 #: ../src/eom-window.c:3701 ../src/eom-window.c:3713 ../src/eom-window.c:3716
 msgid "_Zoom In"
@@ -1312,7 +1313,7 @@ msgstr "元の大きさで画像を表示します"
 
 #: ../src/eom-window.c:3710
 msgid "_Best Fit"
-msgstr ""
+msgstr "全体に合わせる(_B)"
 
 #: ../src/eom-window.c:3711
 msgid "Fit the image to the window"

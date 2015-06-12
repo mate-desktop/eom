@@ -3,7 +3,7 @@ AC_CONFIG_MACRO_DIR([m4])
 
 m4_define(eom_major_version, 1)
 m4_define(eom_minor_version, 10)
-m4_define(eom_micro_version, 0)
+m4_define(eom_micro_version, 1)
 m4_define(eom_version, eom_major_version.eom_minor_version.eom_micro_version)
 
 AC_INIT([eom], eom_version, [http://www.mate-desktop.org], [eom])
@@ -396,7 +396,7 @@ fi
 if test "x$have_python" != "xno"; then
 	PY_PREFIX=`$PYTHON -c 'import sys ; print sys.prefix'`
 	PY_EXEC_PREFIX=`$PYTHON -c 'import sys ; print sys.exec_prefix'`
-	PYTHON_LIBS="-lpython$PYTHON_VERSION"
+	PYTHON_LIBS="-lpython$PYTHON_VERSION -lutil"
 	PYTHON_LIB_LOC="-L$PY_EXEC_PREFIX/lib/python$PYTHON_VERSION/config"
 	PYTHON_CFLAGS="-I$PY_PREFIX/include/python$PYTHON_VERSION"
 	PYTHON_MAKEFILE="$libdir/python$PYTHON_VERSION/config/Makefile"

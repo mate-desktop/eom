@@ -708,9 +708,6 @@ eom_job_save_as_run (EomJob *ejob)
 	EomJobSaveAs *saveas_job;
 	GList *it;
 	guint n_images;
-	guint file_permissions = 00000;
-	guint permissions_mask = 00600;
-	GFileInfo *info;
 
 	g_return_if_fail (EOM_IS_JOB_SAVE_AS (ejob));
 
@@ -796,26 +793,6 @@ eom_job_save_as_run (EomJob *ejob)
 						     dest_info,
 						     &ejob->error);
 
-		/* get file permissions */
-		info = g_file_query_info (saveas_job->file,
-					  G_FILE_ATTRIBUTE_UNIX_MODE,
-					  G_FILE_QUERY_INFO_NONE,
-					  NULL,
-					  NULL);
-
-		file_permissions = g_file_info_get_attribute_uint32 (info, G_FILE_ATTRIBUTE_UNIX_MODE);
-
-		/* apply permission mask to file permissions */
-		file_permissions |= permissions_mask;
-
-		g_file_set_attribute_uint32 (saveas_job->file,
-					     G_FILE_ATTRIBUTE_UNIX_MODE,
-					     file_permissions,
-					     G_FILE_QUERY_INFO_NONE,
-					     NULL,
-					     NULL);
-
-		g_object_unref (info);
 		if (src_info)
 			g_object_unref (src_info);
 
