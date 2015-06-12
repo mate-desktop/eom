@@ -38,7 +38,7 @@ G_DEFINE_TYPE (EomStatusbar, eom_statusbar, GTK_TYPE_STATUSBAR)
 struct _EomStatusbarPrivate
 {
 	GtkWidget *progressbar;
-	GtkWidget *img_num_statusbar;
+	GtkWidget *img_num_label;
 };
 
 static void
@@ -58,19 +58,17 @@ eom_statusbar_init (EomStatusbar *statusbar)
 	statusbar->priv = EOM_STATUSBAR_GET_PRIVATE (statusbar);
 	priv = statusbar->priv;
 
-	#if !GTK_CHECK_VERSION(3, 0, 0)
-	gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (statusbar), TRUE);
-	#endif
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gtk_widget_set_margin_top (GTK_WIDGET (statusbar), 0);
+	gtk_widget_set_margin_bottom (GTK_WIDGET (statusbar), 0);
+#endif
 
-	priv->img_num_statusbar = gtk_statusbar_new ();
-	#if !GTK_CHECK_VERSION(3, 0, 0)
-	gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (priv->img_num_statusbar), FALSE);
-	#endif
-	gtk_widget_set_size_request (priv->img_num_statusbar, 100, 10);
-	gtk_widget_show (priv->img_num_statusbar);
+	priv->img_num_label = gtk_label_new (NULL);
+	gtk_widget_set_size_request (priv->img_num_label, 100, 10);
+	gtk_widget_show (priv->img_num_label);
 
 	gtk_box_pack_end (GTK_BOX (statusbar),
-			  priv->img_num_statusbar,
+			  priv->img_num_label,
 			  FALSE,
 			  TRUE,
 			  0);
@@ -114,8 +112,6 @@ eom_statusbar_set_image_number (EomStatusbar *statusbar,
 
 	g_return_if_fail (EOM_IS_STATUSBAR (statusbar));
 
-	gtk_statusbar_pop (GTK_STATUSBAR (statusbar->priv->img_num_statusbar), 0);
-
 	/* Hide number display if values don't make sense */
 	if (G_UNLIKELY (num <= 0 || tot <= 0))
 		return;
@@ -132,7 +128,7 @@ eom_statusbar_set_image_number (EomStatusbar *statusbar,
 	 * too.*/
 	msg = g_strdup_printf (_("%d / %d"), num, tot);
 
-	gtk_statusbar_push (GTK_STATUSBAR (statusbar->priv->img_num_statusbar), 0, msg);
+	gtk_label_set_text (GTK_LABEL (statusbar->priv->img_num_label), msg);
 
       	g_free (msg);
 }
@@ -148,20 +144,10 @@ eom_statusbar_set_progress (EomStatusbar *statusbar,
 
 	if (progress > 0 && progress < 1) {
 		gtk_widget_show (statusbar->priv->progressbar);
-		gtk_widget_hide (statusbar->priv->img_num_statusbar);
+		gtk_widget_hide (statusbar->priv->img_num_label);
 	} else {
 		gtk_widget_hide (statusbar->priv->progressbar);
-		gtk_widget_show (statusbar->priv->img_num_statusbar);
+		gtk_widget_show (statusbar->priv->img_num_label);
 	}
 }
 
-#if !GTK_CHECK_VERSION(3, 0, 0)
-void
-eom_statusbar_set_has_resize_grip (EomStatusbar *statusbar, gboolean has_resize_grip)
-{
-	g_return_if_fail (EOM_IS_STATUSBAR (statusbar));
-
-	gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (statusbar),
-					   has_resize_grip);
-}
-#endif
