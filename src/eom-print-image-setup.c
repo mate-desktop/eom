@@ -975,7 +975,11 @@ eom_print_image_setup_init (EomPrintImageSetup *setup)
 #endif
 
 	label = gtk_label_new_with_mnemonic (_("_Scaling:"));
+#if GTK_CHECK_VERSION (3, 0, 0)
+	hscale = gtk_scale_new_with_range (GTK_ORIENTATION_HORIZONTAL, 1, 100, 1);
+#else
 	hscale = gtk_hscale_new_with_range (1, 100, 1);
+#endif
 	gtk_scale_set_value_pos (GTK_SCALE (hscale), GTK_POS_RIGHT);
 	gtk_range_set_value (GTK_RANGE (hscale), 100);
 #if GTK_CHECK_VERSION (3, 4, 0)
