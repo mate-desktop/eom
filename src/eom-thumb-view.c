@@ -102,7 +102,9 @@ eom_thumb_view_constructed (GObject *object)
 				    FALSE);
 
 	g_object_set (thumbview->priv->pixbuf_cell,
+#if !GTK_CHECK_VERSION (3, 16, 0)
 	              "follow-state", FALSE,
+#endif
 	              "height", 100,
 	              "width", 115,
 	              "yalign", 0.5,
