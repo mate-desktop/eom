@@ -48,7 +48,11 @@ set_message_area_text_and_icon (GtkInfoBar   *message_area,
 	GtkWidget *primary_label;
 	GtkWidget *secondary_label;
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+	hbox_content = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 8);
+#else
 	hbox_content = gtk_hbox_new (FALSE, 8);
+#endif
 	gtk_widget_show (hbox_content);
 
 	image = gtk_image_new_from_stock (icon_stock_id, GTK_ICON_SIZE_DIALOG);
@@ -56,7 +60,11 @@ set_message_area_text_and_icon (GtkInfoBar   *message_area,
 	gtk_box_pack_start (GTK_BOX (hbox_content), image, FALSE, FALSE, 0);
 	gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0);
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+	vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+#else
 	vbox = gtk_vbox_new (FALSE, 6);
+#endif
 	gtk_widget_show (vbox);
 	gtk_box_pack_start (GTK_BOX (hbox_content), vbox, TRUE, TRUE, 0);
 

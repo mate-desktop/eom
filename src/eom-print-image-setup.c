@@ -650,7 +650,11 @@ wrap_in_frame (const gchar *label,
 	gtk_label_set_markup (GTK_LABEL (label_widget), bold_text);
 	g_free (bold_text);
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+	frame = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+#else
 	frame = gtk_vbox_new (FALSE, 6);
+#endif
 	gtk_box_pack_start (GTK_BOX (frame), label_widget, FALSE, FALSE, 0);
 
 	alignment = gtk_alignment_new (0.0, 0.0, 1.0, 1.0);

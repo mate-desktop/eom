@@ -280,7 +280,11 @@ eom_window_set_collection_mode (EomWindow *window, EomWindowCollectionPos positi
 		} else {
 			mode = EOM_THUMB_NAV_MODE_ONE_ROW;
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+			priv->layout = gtk_box_new (GTK_ORIENTATION_VERTICAL, 2);
+#else
 			priv->layout = gtk_vbox_new (FALSE, 2);
+#endif
 
 			if (position == EOM_WINDOW_COLLECTION_POS_BOTTOM) {
 				gtk_box_pack_start (GTK_BOX (priv->layout), hpaned, TRUE, TRUE, 0);
@@ -313,7 +317,11 @@ eom_window_set_collection_mode (EomWindow *window, EomWindowCollectionPos positi
 		} else {
 			mode = EOM_THUMB_NAV_MODE_ONE_COLUMN;
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+			priv->layout = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 2);
+#else
 			priv->layout = gtk_hbox_new (FALSE, 2);
+#endif
 
 			if (position == EOM_WINDOW_COLLECTION_POS_LEFT) {
 				gtk_box_pack_start (GTK_BOX (priv->layout), priv->nav, FALSE, FALSE, 0);
@@ -822,7 +830,11 @@ image_file_changed_cb (EomImage *img, EomWindow *window)
 	g_free (text);
 	g_free (markup);
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 8);
+#else
 	hbox = gtk_hbox_new (FALSE, 8);
+#endif
 	gtk_box_pack_start (GTK_BOX (hbox), image, FALSE, FALSE, 0);
 	gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0);
 	gtk_box_pack_start (GTK_BOX (hbox), label, TRUE, TRUE, 0);
@@ -1879,7 +1891,11 @@ eom_window_create_fullscreen_popup (EomWindow *window)
 
 	popup = gtk_window_new (GTK_WINDOW_POPUP);
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+#else
 	hbox = gtk_hbox_new (FALSE, 0);
+#endif
 	gtk_container_add (GTK_CONTAINER (popup), hbox);
 
 	toolbar = gtk_ui_manager_get_widget (window->priv->ui_mgr,
@@ -2719,7 +2735,11 @@ eom_window_set_wallpaper (EomWindow *window, const gchar *filename, const gchar 
 	if (!visible_filename)
 		g_free (basename);
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 8);
+#else
 	hbox = gtk_hbox_new (FALSE, 8);
+#endif
 	gtk_box_pack_start (GTK_BOX (hbox), image, FALSE, FALSE, 0);
 	gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0);
 	gtk_box_pack_start (GTK_BOX (hbox), label, TRUE, TRUE, 0);
@@ -4241,7 +4261,11 @@ eom_window_construct_ui (EomWindow *window)
 
 	priv = window->priv;
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+	priv->box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+#else
 	priv->box = gtk_vbox_new (FALSE, 0);
+#endif
 	gtk_container_add (GTK_CONTAINER (window), priv->box);
 	gtk_widget_show (priv->box);
 
@@ -4376,7 +4400,11 @@ eom_window_construct_ui (EomWindow *window)
 
 	gtk_ui_manager_insert_action_group (priv->ui_mgr, priv->actions_recent, 0);
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+	priv->cbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+#else
 	priv->cbox = gtk_vbox_new (FALSE, 0);
+#endif
 	gtk_box_pack_start (GTK_BOX (priv->box), priv->cbox, TRUE, TRUE, 0);
 	gtk_widget_show (priv->cbox);
 
@@ -4393,11 +4421,13 @@ eom_window_construct_ui (EomWindow *window)
 		gtk_statusbar_get_context_id (GTK_STATUSBAR (priv->statusbar),
 					      "tip_message");
 
-	priv->layout = gtk_vbox_new (FALSE, 2);
-
 #if GTK_CHECK_VERSION (3, 2, 0)
+	priv->layout = gtk_box_new (GTK_ORIENTATION_VERTICAL, 2);
+
 	hpaned = gtk_paned_new (GTK_ORIENTATION_HORIZONTAL);
 #else
+	priv->layout = gtk_vbox_new (FALSE, 2);
+
 	hpaned = gtk_hpaned_new ();
 #endif
 

@@ -73,7 +73,11 @@ eom_statusbar_init (EomStatusbar *statusbar)
 			  TRUE,
 			  0);
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+	vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
+#else
 	vbox = gtk_vbox_new (FALSE, 0);
+#endif
 
 	gtk_box_pack_end (GTK_BOX (statusbar),
 			  vbox,

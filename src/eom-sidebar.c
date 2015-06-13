@@ -401,7 +401,11 @@ eom_sidebar_init (EomSidebar *eom_sidebar)
 					    G_TYPE_INT);
 
 	/* top option menu */
+#if GTK_CHECK_VERSION (3, 2, 0)
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+#else
 	hbox = gtk_hbox_new (FALSE, 0);
+#endif
 	eom_sidebar->priv->hbox = hbox;
 	gtk_box_pack_start (GTK_BOX (eom_sidebar), hbox, FALSE, FALSE, 0);
 	gtk_widget_show (hbox);
@@ -418,7 +422,11 @@ eom_sidebar_init (EomSidebar *eom_sidebar)
 			  G_CALLBACK (eom_sidebar_select_button_key_press_cb),
 			  eom_sidebar);
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+	select_hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+#else
 	select_hbox = gtk_hbox_new (FALSE, 0);
+#endif
 
 	eom_sidebar->priv->label = gtk_label_new ("");
 
