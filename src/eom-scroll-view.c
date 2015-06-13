@@ -405,7 +405,11 @@ eom_scroll_view_set_cursor (EomScrollView *view, EomScrollViewCursor new_cursor)
 
 	if (cursor) {
 		gdk_window_set_cursor (gtk_widget_get_window (widget), cursor);
+#if GTK_CHECK_VERSION (3, 0, 0)
+		g_object_unref (cursor);
+#else
 		gdk_cursor_unref (cursor);
+#endif
 		gdk_flush();
 	}
 }

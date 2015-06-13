@@ -977,7 +977,11 @@ motion_notify_event_cb (GtkWidget      *widget,
 							     GDK_FLEUR);
 			gdk_window_set_cursor (gtk_widget_get_window (widget),
 					       cursor);
+#if GTK_CHECK_VERSION (3, 0, 0)
+			g_object_unref (cursor);
+#else
 			gdk_cursor_unref (cursor);
+#endif
 		} else {
 			gdk_window_set_cursor (gtk_widget_get_window (widget),
 					       NULL);
