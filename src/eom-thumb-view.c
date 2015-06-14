@@ -38,18 +38,34 @@
 #include <stdlib.h>
 #include <string.h>
 
+#if GTK_CHECK_VERSION (3, 4, 3)
+enum {
+  PROP_0,
+  PROP_ORIENTATION
+};
+#endif
+
 #define EOM_THUMB_VIEW_SPACING 0
 
 #define EOM_THUMB_VIEW_GET_PRIVATE(object)				\
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_THUMB_VIEW, EomThumbViewPrivate))
 
+#if GTK_CHECK_VERSION (3, 4, 3)
+static void eom_thumb_view_init (EomThumbView *thumbview);
+#else
 G_DEFINE_TYPE (EomThumbView, eom_thumb_view, GTK_TYPE_ICON_VIEW);
+#endif
 
 static EomImage* eom_thumb_view_get_image_from_path (EomThumbView      *thumbview,
 						     GtkTreePath       *path);
 
 static void      eom_thumb_view_popup_menu          (EomThumbView      *widget,
 						     GdkEventButton    *event);
+
+#if GTK_CHECK_VERSION (3, 4, 3)
+G_DEFINE_TYPE_WITH_CODE (EomThumbView, eom_thumb_view, GTK_TYPE_ICON_VIEW,
+						 G_IMPLEMENT_INTERFACE (GTK_TYPE_ORIENTABLE, NULL));
+#endif
 
 static gboolean
 thumbview_on_query_tooltip_cb (GtkWidget  *widget,
@@ -81,6 +97,10 @@ struct _EomThumbViewPrivate {
 	GtkWidget *menu;  /* a contextual menu for thumbnails */
 	GtkCellRenderer *pixbuf_cell;
 	gint visible_range_changed_id;
+
+#if GTK_CHECK_VERSION (3, 4, 3)
+	GtkOrientation orientation;
+#endif
 };
 
 /* Drag 'n Drop */
@@ -189,6 +209,47 @@ eom_thumb_view_destroy (GtkObject *object)
 #endif
 }
 
+#if GTK_CHECK_VERSION (3, 4, 3)
+static void
+eom_thumb_view_get_property (GObject    *object,
+			     guint       prop_id,
+			     GValue     *value,
+			     GParamSpec *pspec)
+{
+	EomThumbView *view = EOM_THUMB_VIEW (object);
+
+	switch (prop_id)
+	{
+	case PROP_ORIENTATION:
+		g_value_set_enum (value, view->priv->orientation);
+		break;
+
+	default:
+		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+		break;
+	}
+}
+
+static void
+eom_thumb_view_set_property (GObject      *object,
+			     guint         prop_id,
+			     const GValue *value,
+			     GParamSpec   *pspec)
+{
+	EomThumbView *view = EOM_THUMB_VIEW (object);
+
+	switch (prop_id)
+	{
+	case PROP_ORIENTATION:
+		view->priv->orientation = g_value_get_enum (value);
+		break;
+	default:
+		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+		break;
+	}
+}
+#endif
+
 static void
 eom_thumb_view_class_init (EomThumbViewClass *class)
 {
@@ -200,6 +261,13 @@ eom_thumb_view_class_init (EomThumbViewClass *class)
 #endif
 	gobject_class->constructed = eom_thumb_view_constructed;
 	gobject_class->dispose = eom_thumb_view_dispose;
+#if GTK_CHECK_VERSION (3, 4, 3)
+	gobject_class->get_property = eom_thumb_view_get_property;
+	gobject_class->set_property = eom_thumb_view_set_property;
+
+	g_object_class_override_property (gobject_class, PROP_ORIENTATION,
+	                                  "orientation");
+#endif
 	gobject_class->finalize = eom_thumb_view_finalize;
 #if GTK_CHECK_VERSION(3, 0, 0)
 	widget_class->destroy = eom_thumb_view_destroy;
