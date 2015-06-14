@@ -545,8 +545,13 @@ eom_thumb_nav_set_mode (EomThumbNav *nav, EomThumbNavMode mode)
 	switch (mode)
 	{
 	case EOM_THUMB_NAV_MODE_ONE_ROW:
+#if GTK_CHECK_VERSION (3, 4, 3)
+		gtk_orientable_set_orientation (GTK_ORIENTABLE(priv->thumbview),
+		                                GTK_ORIENTATION_HORIZONTAL);
+#else
 		gtk_icon_view_set_columns (GTK_ICON_VIEW (priv->thumbview),
 					   G_MAXINT);
+#endif
 
 		gtk_widget_set_size_request (priv->thumbview, -1, -1);
 		eom_thumb_view_set_item_height (EOM_THUMB_VIEW (priv->thumbview),
@@ -561,7 +566,12 @@ eom_thumb_nav_set_mode (EomThumbNav *nav, EomThumbNavMode mode)
 		break;
 
 	case EOM_THUMB_NAV_MODE_ONE_COLUMN:
+#if GTK_CHECK_VERSION (3, 4, 3)
+		gtk_orientable_set_orientation (GTK_ORIENTABLE(priv->thumbview),
+		                                GTK_ORIENTATION_VERTICAL);
+#else
 		gtk_icon_view_set_columns (GTK_ICON_VIEW (priv->thumbview), 1);
+#endif
 
 		gtk_widget_set_size_request (priv->thumbview, -1, -1);
 		eom_thumb_view_set_item_height (EOM_THUMB_VIEW (priv->thumbview),
@@ -577,7 +587,12 @@ eom_thumb_nav_set_mode (EomThumbNav *nav, EomThumbNavMode mode)
 		break;
 
 	case EOM_THUMB_NAV_MODE_MULTIPLE_ROWS:
+#if GTK_CHECK_VERSION (3, 4, 3)
+		gtk_orientable_set_orientation (GTK_ORIENTABLE(priv->thumbview),
+		                                GTK_ORIENTATION_VERTICAL);
+#else
 		gtk_icon_view_set_columns (GTK_ICON_VIEW (priv->thumbview), -1);
+#endif
 
 		gtk_widget_set_size_request (priv->thumbview, -1, 220);
 		eom_thumb_view_set_item_height (EOM_THUMB_VIEW (priv->thumbview),
@@ -593,7 +608,12 @@ eom_thumb_nav_set_mode (EomThumbNav *nav, EomThumbNavMode mode)
 		break;
 
 	case EOM_THUMB_NAV_MODE_MULTIPLE_COLUMNS:
+#if GTK_CHECK_VERSION (3, 4, 3)
+		gtk_orientable_set_orientation (GTK_ORIENTABLE(priv->thumbview),
+		                                GTK_ORIENTATION_VERTICAL);
+#else
 		gtk_icon_view_set_columns (GTK_ICON_VIEW (priv->thumbview), -1);
+#endif
 
 		gtk_widget_set_size_request (priv->thumbview, 230, -1);
 		eom_thumb_view_set_item_height (EOM_THUMB_VIEW (priv->thumbview),
