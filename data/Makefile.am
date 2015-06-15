@@ -20,9 +20,6 @@ gsettings_ENUM_FILES = $(top_srcdir)/src/eom-scroll-view.h	\
 gsettings_SCHEMAS = org.mate.eom.gschema.xml
 @GSETTINGS_RULES@
 
-%.gschema.xml.in: %.gschema.xml.in.in Makefile
-	$(AM_V_GEN) $(SED) -e 's^\@datadir\@^$(datadir)^g' -e 's^\@GETTEXT_PACKAGE\@^$(GETTEXT_PACKAGE)^g' < $< > $@
-
 convertdir = $(datadir)/MateConf/gsettings
 convert_DATA = eom.convert
 
@@ -40,20 +37,18 @@ pkgconfig_DATA = eom.pc
 gtkrcdir = $(pkgdatadir)
 gtkrc_DATA = gtkrc
 
-EXTRA_DIST =				\
+EXTRA_DIST =					\
         $(gtkrc_DATA)			\
-        $(ui_DATA)			\
-	$(convert_DATA)			\
+        $(ui_DATA)				\
+        $(convert_DATA)			\
         $(DESKTOP_IN_FILES)		\
-	$(appdata_in_files)		\
-        $(gsettings_SCHEMAS).in.in
+        $(appdata_in_files)
 
-CLEANFILES = 			\
-	eom.appdata.xml
+CLEANFILES = 					\
+        $(appdata_DATA)
 
-DISTCLEANFILES = 		\
-        $(DESKTOP_FILES)	\
-        $(gsettings_SCHEMAS_in)	\
-	$(gsettings_SCHEMAS)
+DISTCLEANFILES = 				\
+        $(DESKTOP_FILES)		\
+        $(gsettings_SCHEMAS)
 
 -include $(top_srcdir)/git.mk
