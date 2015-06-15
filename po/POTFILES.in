@@ -3,25 +3,26 @@
 [encoding: UTF-8]
 cut-n-paste/toolbar-editor/egg-editable-toolbar.c
 cut-n-paste/toolbar-editor/egg-toolbar-editor.c
-plugins/fullscreen/fullscreen.eom-plugin.desktop.in
-plugins/fullscreen/eom-fullscreen-plugin.c
-plugins/reload/reload.eom-plugin.desktop.in
-plugins/reload/eom-reload-plugin.c
-plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in
 data/eom.appdata.xml.in
 data/eom.desktop.in.in
 [type: gettext/glade]data/eom-image-properties-dialog.ui
 [type: gettext/glade]data/eom-multiple-save-as-dialog.ui
 [type: gettext/glade]data/eom-preferences-dialog.ui
-data/org.mate.eom.gschema.xml.in.in
+[type: gettext/gsettings]data/org.mate.eom.gschema.xml.in
+plugins/fullscreen/eom-fullscreen-plugin.c
+plugins/fullscreen/fullscreen.eom-plugin.desktop.in
+plugins/reload/eom-reload-plugin.c
+plugins/reload/reload.eom-plugin.desktop.in
+plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in
 src/eom-application.c
 src/eom-close-confirmation-dialog.c
 src/eom-file-chooser.c
 src/eom-image.c
 src/eom-image-jpeg.c
+src/eom-error-message-area.c
 src/eom-exif-details.c
 src/eom-exif-util.c
-src/eom-error-message-area.c
+src/eom-plugin-manager.c
 src/eom-preferences-dialog.c
 src/eom-print.c
 src/eom-print-image-setup.c
@@ -33,5 +34,4 @@ src/eom-uri-converter.c
 src/eom-uri-converter.h
 src/eom-util.c
 src/eom-window.c
-src/eom-plugin-manager.c
 src/main.c
