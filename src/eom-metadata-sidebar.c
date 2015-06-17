@@ -447,6 +447,7 @@ eom_metadata_sidebar_class_init (EomMetadataSidebarClass *klass)
 	gtk_widget_class_bind_template_child_private (widget_class,
 						      EomMetadataSidebar,
 						      folder_label);
+#if HAVE_EXIF
 	gtk_widget_class_bind_template_child_private (widget_class,
 						      EomMetadataSidebar,
 						      aperture_label);
@@ -471,6 +472,7 @@ eom_metadata_sidebar_class_init (EomMetadataSidebarClass *klass)
 	gtk_widget_class_bind_template_child_private (widget_class,
 						      EomMetadataSidebar,
 						      time_label);
+#endif /* HAVE_EXIF */
 #if HAVE_METADATA
 	gtk_widget_class_bind_template_child_private (widget_class,
 						      EomMetadataSidebar,
