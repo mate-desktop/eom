@@ -51,7 +51,8 @@
 #include <exempi/xmpconsts.h>
 #endif
 
-#if HAVE_EXIF || HAVE_EXEMPI
+/* There's no exempi support in the sidebar yet */
+#if HAVE_EXIF  /*|| HAVE_EXEMPI */
 #define HAVE_METADATA 1
 #endif
 
@@ -82,6 +83,8 @@ struct _EomMetadataSidebarPrivate {
 	GtkWidget *model_label;
 	GtkWidget *date_label;
 	GtkWidget *time_label;
+#else
+	GtkWidget *metadata_grid;
 #endif
 
 #if HAVE_METADATA
@@ -166,18 +169,14 @@ static void
 eom_metadata_sidebar_update_metadata_section (EomMetadataSidebar *sidebar)
 {
 	EomMetadataSidebarPrivate *priv = sidebar->priv;
-	EomImage *img = priv->image;
 #if HAVE_EXIF
+	EomImage *img = priv->image;
 	ExifData *exif_data = NULL;
-#endif
 
 	if (img) {
-#if HAVE_EXIF
 		exif_data = eom_image_get_exif_info (img);
-#endif
 	}
 
-#if HAVE_EXIF
 	eom_exif_util_set_label_text (GTK_LABEL (priv->aperture_label),
 				      exif_data, EXIF_TAG_FNUMBER);
 	eom_exif_util_set_label_text (GTK_LABEL (priv->exposure_label),
@@ -356,6 +355,18 @@ eom_metadata_sidebar_init (EomMetadataSidebar *sidebar)
 	g_signal_connect (priv->details_button, "clicked",
 			  G_CALLBACK (_details_button_clicked_cb), sidebar);
 #endif /* HAVE_METADATA */
+
+#ifndef HAVE_EXIF
+	{
+		/* Remove the lower 8 lines as they are empty without libexif*/
+		guint i;
+
+		for (i = 11; i > 3; i--)
+		{
+			gtk_grid_remove_row (GTK_GRID (priv->metadata_grid), i);
+		}
+	}
+#endif /* !HAVE_EXIF */
 }
 
 static void
@@ -472,6 +483,10 @@ eom_metadata_sidebar_class_init (EomMetadataSidebarClass *klass)
 	gtk_widget_class_bind_template_child_private (widget_class,
 						      EomMetadataSidebar,
 						      time_label);
+#else
+	gtk_widget_class_bind_template_child_private (widget_class,
+						      EomMetadataSidebar,
+						      metadata_grid);
 #endif /* HAVE_EXIF */
 #if HAVE_METADATA
 	gtk_widget_class_bind_template_child_private (widget_class,
