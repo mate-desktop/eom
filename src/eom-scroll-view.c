@@ -351,6 +351,7 @@ update_scrollbar_values (EomScrollView *view)
 		g_signal_handlers_unblock_matched (
 			priv->hadj, G_SIGNAL_MATCH_DATA,
 			0, 0, NULL, NULL, view);
+	}
 
 	if (gtk_widget_get_visible (GTK_WIDGET (priv->vbar))) {
 		page_size = MIN (scaled_height, allocation.height);
@@ -372,7 +373,6 @@ update_scrollbar_values (EomScrollView *view)
 		g_signal_handlers_unblock_matched (
 			priv->vadj, G_SIGNAL_MATCH_DATA,
 			0, 0, NULL, NULL, view);
-		}
 	}
 }
 
