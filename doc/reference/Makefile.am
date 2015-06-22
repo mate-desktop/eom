@@ -55,11 +55,9 @@ IGNORE_HFILES= \
 	eom-enum-types.h
 
 if !HAVE_EXIF
-if !HAVE_EXEMPI
 IGNORE_HFILES +=			\
 	eom-exif-util.h			\
 	eom-metadata-details.h
-endif
 endif
 
 # Images to copy into HTML directory.
