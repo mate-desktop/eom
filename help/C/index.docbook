@@ -2,16 +2,16 @@
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
 "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
   <!ENTITY legal SYSTEM "legal.xml">
-  <!ENTITY appversion "2.18">
-  <!ENTITY manrevision "2.8">
-  <!ENTITY date "February 2007">
+  <!ENTITY appversion "1.10.2">
+  <!ENTITY manrevision "2.9">
+  <!ENTITY date "July 2015">
   <!ENTITY app "<application>Image Viewer</application>">
   <!ENTITY appname "Image Viewer">
 ]>
 <!-- 
       (Do not remove this comment block.)
   Maintained by the MATE Documentation Project
-  http://developer.gnome.org/projects/gdp
+  http://wiki.mate-desktop.org/dev-doc:doc-team-guide
   Template version: 2.0 beta
   Template last modified Feb 12, 2002
   
@@ -22,11 +22,15 @@
 <!-- appropriate code -->
   <articleinfo> 
     <title>&appname; Manual</title>
-    
+
+    <copyright>
+      <year>2015</year>
+      <holder>MATE Documentation Project</holder>
+    </copyright>
     <copyright> 
       <year>2006</year> 
       <year>2007</year>
-      <holder>MATE Documentation Project</holder> 
+      <holder>GNOME Documentation Project</holder>
     </copyright>
     <copyright> 
       <year>2002</year> 
@@ -56,6 +60,9 @@
     <publisher role="maintainer"> 
       <publishername> MATE Documentation Project </publishername> 
     </publisher> 
+    <publisher>
+      <publishername> GNOME Documentation Project </publishername>
+    </publisher>
 
    &legal;
    <!-- This file  contains link to license for the documentation (GNU FDL), and 
@@ -63,29 +70,36 @@
 	any of this. -->
    <authorgroup>
    <author> 
+	<firstname>MATE Documentation Project</firstname>
+	<surname></surname>
+	<affiliation>
+	  <orgname>MATE Desktop</orgname>
+	</affiliation>
+   </author>
+   <author>
 	<firstname>Jens</firstname> 
 	<surname>Finke</surname> 
 	<affiliation> 
-	  <orgname>MATE Documentation Project</orgname>
+	  <orgname>GNOME Documentation Project</orgname>
 	</affiliation>
    </author>
    <author> 
 	<firstname>Angela</firstname> 
 	<surname>Boyle</surname> 
 	<affiliation> 
-	  <orgname>MATE Documentation Project</orgname>
+	  <orgname>GNOME Documentation Project</orgname>
 	</affiliation>
    </author>
    <author> 
 	<firstname>Stuart</firstname> 
 	<surname>Ellis</surname> 
 	<affiliation> 
-	  <orgname>MATE Documentation Project</orgname>
+	  <orgname>GNOME Documentation Project</orgname>
 	</affiliation>
    </author>
    <author> 
 	<firstname>Sun</firstname> 
-	<surname>MATE Documentation Team</surname> 
+	<surname>GNOME Documentation Team</surname>
 	<affiliation> 
 	  <orgname>Sun Microsystems</orgname>  
 	</affiliation> 
@@ -94,14 +108,14 @@
 	<firstname>Eliot</firstname> 
 	<surname>Landrum</surname> 
 	<affiliation> 
-	  <orgname>MATE Documentation Project</orgname> 
+	  <orgname>GNOME Documentation Project</orgname>
 	</affiliation> 
    </author> 
    <author> 
 	<firstname>Federico</firstname> 
 	<surname>Mena Quintero</surname> 
 	<affiliation> 
-	  <orgname>MATE Documentation Project</orgname> 
+	  <orgname>GNOME Documentation Project</orgname>
 	</affiliation> 
    </author>	
 <!-- This is appropriate place for other contributors: translators,
@@ -128,80 +142,88 @@
 		</revdescription> 
     </revision> 
     <revision>
-		<revnumber>&appname; Manual V2.7</revnumber>
+		<revnumber>Eye of GNOME Manual V2.8</revnumber>
+		<date>February 2007</date>
+		<revdescription>
+		    <para role="author">GNOME Documentation Project</para>
+		    <para role="publisher">GNOME Documentation Project</para>
+		</revdescription>
+    </revision>
+    <revision>
+		<revnumber>Eye of GNOME Manual V2.7</revnumber>
 		<date>February 2004</date>
 		<revdescription>
-	  		<para role="author">Sun GNOME Documentation Team</para>
-	  		<para role="publisher">MATE Documentation Project</para>
+		    <para role="author">Sun GNOME Documentation Team</para>
+		    <para role="publisher">GNOME Documentation Project</para>
 		</revdescription>
     </revision>
     <revision> 
-		<revnumber>Eye of MATE Manual V2.6</revnumber> 
+		<revnumber>Eye of GNOME Manual V2.6</revnumber>
 		<date>November 2003</date> 
 		<revdescription> 
-	  		<para role="author">Sun GNOME Documentation Team</para>
-	  		<para role="publisher">MATE Documentation Project</para>
+		    <para role="author">Sun GNOME Documentation Team</para>
+		    <para role="publisher">GNOME Documentation Project</para>
 		</revdescription> 
     </revision>
     <revision> 
-		<revnumber>Eye of MATE Manual V2.5</revnumber> 
+		<revnumber>Eye of GNOME Manual V2.5</revnumber>
 		<date>September 2003</date> 
 		<revdescription> 
-	  		<para role="author">Sun GNOME Documentation Team</para>
-	  		<para role="publisher">MATE Documentation Project</para>
+		    <para role="author">Sun GNOME Documentation Team</para>
+		    <para role="publisher">GNOME Documentation Project</para>
 		</revdescription> 
     </revision>
     <revision> 
-		<revnumber>Eye of MATE Manual V2.4</revnumber> 
+		<revnumber>Eye of GNOME Manual V2.4</revnumber>
 		<date>January 2003</date> 
 		<revdescription> 
-	  		<para role="author">Sun GNOME Documentation Team</para>
-	  		<para role="publisher">MATE Documentation Project</para>
+		    <para role="author">Sun GNOME Documentation Team</para>
+		    <para role="publisher">GNOME Documentation Project</para>
 		</revdescription> 
     </revision>
     <revision> 
-		<revnumber>Eye of MATE Manual V2.3</revnumber> 
+		<revnumber>Eye of GNOME Manual V2.3</revnumber>
 		<date>October 2002</date> 
 		<revdescription> 
-	  		<para role="author">Sun GNOME Documentation Team</para>
-	  		<para role="publisher">MATE Documentation Project</para>
+		    <para role="author">Sun GNOME Documentation Team</para>
+		    <para role="publisher">GNOME Documentation Project</para>
 		</revdescription> 
     </revision>
     <revision> 
-		<revnumber>Eye of MATE Manual V2.2</revnumber> 
+		<revnumber>Eye of GNOME Manual V2.2</revnumber>
 		<date>August 2002</date> 
 		<revdescription> 
-	  		<para role="author">Sun GNOME Documentation Team</para>
-	  		<para role="publisher">MATE Documentation Project</para>
+		    <para role="author">Sun GNOME Documentation Team</para>
+		    <para role="publisher">GNOME Documentation Project</para>
 		</revdescription> 
     </revision>
     <revision> 
-		<revnumber>Eye of MATE Manual V2.1</revnumber> 
+		<revnumber>Eye of GNOME Manual V2.1</revnumber>
 		<date>July 2002</date> 
 		<revdescription> 
-	  		<para role="author">Sun GNOME Documentation Team</para>
-	  		<para role="publisher">MATE Documentation Project</para>
+		    <para role="author">Sun GNOME Documentation Team</para>
+		    <para role="publisher">GNOME Documentation Project</para>
 		</revdescription> 
     </revision> 
     <revision> 
-		<revnumber>Eye of MATE Manual V2.0</revnumber> 
+		<revnumber>Eye of GNOME Manual V2.0</revnumber>
 		<date>May 2002</date> 
 		<revdescription> 
-	  		<para role="author">Sun GNOME Documentation Team</para>
-	  		<para role="publisher">MATE Documentation Project</para>
+		    <para role="author">Sun GNOME Documentation Team</para>
+		    <para role="publisher">GNOME Documentation Project</para>
 		</revdescription> 
     </revision> 
     <revision> 
-		<revnumber>Eye of MATE User's Guide</revnumber> 
+		<revnumber>Eye of GNOME User's Guide</revnumber>
 		<date>2000</date> 
 		<revdescription> 
-	  		<para role="author">Eliot Landrum 
+		    <para role="author">Eliot Landrum
 	    		  <email>eliot@landrum.cx</email>
-	  		</para>
-	  		<para role="author">Federico Mena Quintero 
+		    </para>
+		    <para role="author">Federico Mena Quintero
 	    		  <email>federico@gnu.org</email>
-	  		</para>	  
-	  		<para role="publisher">MATE Documentation Project</para>
+		    </para>
+		    <para role="publisher">GNOME Documentation Project</para>
 		</revdescription> 
       </revision> 
     </revhistory> 
