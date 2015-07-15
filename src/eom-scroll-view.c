@@ -184,7 +184,11 @@ static void view_on_drag_data_get_cb (GtkWidget *widget,
 #define EOM_SCROLL_VIEW_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_SCROLL_VIEW, EomScrollViewPrivate))
 
+#if GTK_CHECK_VERSION (3, 4, 0)
+G_DEFINE_TYPE (EomScrollView, eom_scroll_view, GTK_TYPE_GRID)
+#else
 G_DEFINE_TYPE (EomScrollView, eom_scroll_view, GTK_TYPE_TABLE)
+#endif
 
 
 /*===================================
@@ -405,7 +409,11 @@ eom_scroll_view_set_cursor (EomScrollView *view, EomScrollViewCursor new_cursor)
 
 	if (cursor) {
 		gdk_window_set_cursor (gtk_widget_get_window (widget), cursor);
+#if GTK_CHECK_VERSION (3, 0, 0)
+		g_object_unref (cursor);
+#else
 		gdk_cursor_unref (cursor);
+#endif
 		gdk_flush();
 	}
 }
@@ -441,9 +449,15 @@ check_scrollbar_visibility (EomScrollView *view, GtkAllocation *alloc)
 	compute_scaled_size (view, priv->zoom, &img_width, &img_height);
 
 	/* this should work fairly well in this special case for scrollbars */
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gtk_widget_get_preferred_size (priv->hbar, &req, NULL);
+	bar_height = req.height;
+	gtk_widget_get_preferred_size (priv->vbar, &req, NULL);
+#else
 	gtk_widget_size_request (priv->hbar, &req);
 	bar_height = req.height;
 	gtk_widget_size_request (priv->vbar, &req);
+#endif
 	bar_width = req.width;
 
 	eom_debug_message (DEBUG_WINDOW, "Widget Size allocate: %i, %i   Bar: %i, %i\n",
@@ -2474,7 +2488,11 @@ eom_scroll_view_init (EomScrollView *view)
 			  G_CALLBACK (adjustment_changed_cb),
 			  view);
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	priv->hbar = gtk_scrollbar_new (GTK_ORIENTATION_HORIZONTAL, priv->hadj);
+#else
 	priv->hbar = gtk_hscrollbar_new (priv->hadj);
+#endif
 	priv->vadj = GTK_ADJUSTMENT (gtk_adjustment_new (0, 100, 0, 10, 10, 100));
 	g_signal_connect (priv->vadj, "value_changed",
 			  G_CALLBACK (adjustment_changed_cb),
@@ -2531,6 +2549,18 @@ eom_scroll_view_init (EomScrollView *view)
 	g_signal_connect (G_OBJECT (priv->display), "drag-begin",
 			  G_CALLBACK (view_on_drag_begin_cb), view);
 
+#if GTK_CHECK_VERSION (3, 4, 0)
+	gtk_grid_attach (GTK_GRID (view), priv->display,
+					 0, 0, 1, 1);
+	gtk_widget_set_hexpand (priv->display, TRUE);
+	gtk_widget_set_vexpand (priv->display, TRUE);
+	gtk_grid_attach (GTK_GRID (view), priv->hbar,
+					 0, 1, 1, 1);
+	gtk_widget_set_hexpand (priv->hbar, TRUE);
+	gtk_grid_attach (GTK_GRID (view), priv->vbar,
+					 1, 0, 1, 1);
+	gtk_widget_set_vexpand (priv->vbar, TRUE);
+#else
 	gtk_table_attach (GTK_TABLE (view), priv->display,
 			  0, 1, 0, 1,
 			  GTK_EXPAND | GTK_FILL,
@@ -2545,6 +2575,7 @@ eom_scroll_view_init (EomScrollView *view)
 			  1, 2, 0, 1,
 			  GTK_FILL, GTK_FILL,
 			  0, 0);
+#endif
 
 	g_settings_bind (settings, EOM_CONF_VIEW_USE_BG_COLOR, view,
 			 "use-background-color", G_SETTINGS_BIND_DEFAULT);
@@ -2865,9 +2896,14 @@ eom_scroll_view_new (void)
 
 	widget = g_object_new (EOM_TYPE_SCROLL_VIEW,
 			       "can-focus", TRUE,
+#if GTK_CHECK_VERSION (3, 4, 0)
+			       "row-homogeneous", FALSE,
+			       "column-homogeneous", FALSE,
+#else
 			       "n_rows", 2,
 			       "n_columns", 2,
 			       "homogeneous", FALSE,
+#endif
 			       NULL);
 
 

@@ -390,7 +390,11 @@ eom_file_chooser_add_preview (GtkWidget *widget)
 
 	priv = EOM_FILE_CHOOSER (widget)->priv;
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+	vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+#else
 	vbox = gtk_vbox_new (FALSE, 6);
+#endif
 	gtk_container_set_border_width (GTK_CONTAINER (vbox), 12);
 
 	priv->image      = gtk_image_new ();

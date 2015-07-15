@@ -51,7 +51,11 @@
 #define EOM_PRINT_IMAGE_SETUP_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_PRINT_IMAGE_SETUP, EomPrintImageSetupPrivate))
 
+#if GTK_CHECK_VERSION (3, 4, 0)
+G_DEFINE_TYPE (EomPrintImageSetup, eom_print_image_setup, GTK_TYPE_GRID);
+#else
 G_DEFINE_TYPE (EomPrintImageSetup, eom_print_image_setup, GTK_TYPE_TABLE);
+#endif
 
 struct _EomPrintImageSetupPrivate {
 	GtkWidget *left;
@@ -650,7 +654,11 @@ wrap_in_frame (const gchar *label,
 	gtk_label_set_markup (GTK_LABEL (label_widget), bold_text);
 	g_free (bold_text);
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+	frame = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+#else
 	frame = gtk_vbox_new (FALSE, 6);
+#endif
 	gtk_box_pack_start (GTK_BOX (frame), label_widget, FALSE, FALSE, 0);
 
 	alignment = gtk_alignment_new (0.0, 0.0, 1.0, 1.0);
@@ -667,7 +675,11 @@ wrap_in_frame (const gchar *label,
 }
 
 static GtkWidget *
+#if GTK_CHECK_VERSION (3, 4, 0)
+grid_attach_spin_button_with_label (GtkWidget *grid,
+#else
 table_attach_spin_button_with_label (GtkWidget *table,
+#endif
 				     const gchar* text_label,
 				     gint left, gint top)
 {
@@ -678,10 +690,16 @@ table_attach_spin_button_with_label (GtkWidget *table,
 	spin_button = gtk_spin_button_new_with_range (0, 100, 0.01);
 	gtk_spin_button_set_digits (GTK_SPIN_BUTTON (spin_button), 2);
 	gtk_entry_set_width_chars (GTK_ENTRY (spin_button), 6);
+#if GTK_CHECK_VERSION (3, 4, 0)
+	gtk_grid_attach (GTK_GRID (grid), label, left, top, 1, 1);
+	gtk_grid_attach_next_to (GTK_GRID (grid), spin_button, label,
+							 GTK_POS_RIGHT, 1, 1);
+#else
 	gtk_table_attach (GTK_TABLE (table), label, left, left + 1,
 			  top, top + 1, GTK_FILL, GTK_FILL, 0, 0);
 	gtk_table_attach (GTK_TABLE (table), spin_button, left + 1, left + 2,
 			  top, top + 1, GTK_FILL, GTK_FILL, 0, 0);
+#endif
 	gtk_label_set_mnemonic_widget (GTK_LABEL (label), spin_button);
 
 	return spin_button;
@@ -850,7 +868,11 @@ static void
 eom_print_image_setup_init (EomPrintImageSetup *setup)
 {
 	GtkWidget *frame;
+#if GTK_CHECK_VERSION (3, 4, 0)
+	GtkWidget *grid;
+#else
 	GtkWidget *table;
+#endif
 	GtkWidget *label;
 	GtkWidget *hscale;
 	GtkWidget *combobox;
@@ -864,6 +886,21 @@ eom_print_image_setup_init (EomPrintImageSetup *setup)
 
 	priv->image = NULL;
 
+#if GTK_CHECK_VERSION (3, 4, 0)
+	grid = gtk_grid_new ();
+	gtk_grid_set_row_spacing (GTK_GRID (grid), 6);
+	gtk_grid_set_column_spacing (GTK_GRID (grid), 12);
+	frame = wrap_in_frame (_("Position"), grid);
+	gtk_grid_attach (GTK_GRID (setup), frame, 0, 0, 1, 1);
+
+	priv->left = grid_attach_spin_button_with_label (grid,
+													 _("_Left:"), 0, 0);
+	priv->right = grid_attach_spin_button_with_label (grid,
+													  _("_Right:"), 0, 1);
+	priv->top = grid_attach_spin_button_with_label (grid, _("_Top:"), 2, 0);
+	priv->bottom = grid_attach_spin_button_with_label (grid, _("_Bottom:"),
+													   2, 1);
+#else
 	table = gtk_table_new (3, 4, FALSE);
 	gtk_table_set_row_spacings (GTK_TABLE (table), 6);
 	gtk_table_set_col_spacings (GTK_TABLE (table), 12);
@@ -876,6 +913,7 @@ eom_print_image_setup_init (EomPrintImageSetup *setup)
 	priv->right = table_attach_spin_button_with_label (table, _("_Right:"), 0, 1);
 	priv->top = table_attach_spin_button_with_label (table, _("_Top:"), 2, 0);
 	priv->bottom = table_attach_spin_button_with_label (table, _("_Bottom:"), 2, 1);
+#endif
 
 	label = gtk_label_new_with_mnemonic (_("C_enter:"));
 	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
@@ -890,17 +928,38 @@ eom_print_image_setup_init (EomPrintImageSetup *setup)
 	gtk_combo_box_text_insert_text (GTK_COMBO_BOX_TEXT (combobox),
 				   CENTER_BOTH, _("Both"));
 	gtk_combo_box_set_active (GTK_COMBO_BOX (combobox), CENTER_NONE);
+#if GTK_CHECK_VERSION (3, 4, 0)
+	/* Attach combobox below right margin spinbutton and span until end */
+	gtk_grid_attach_next_to (GTK_GRID (grid), combobox, priv->right,
+							 GTK_POS_BOTTOM, 3, 1);
+	/* Attach the label to the left of the combobox */
+	gtk_grid_attach_next_to (GTK_GRID (grid), label, combobox, GTK_POS_LEFT,
+							 1, 1);
+#else
 	gtk_table_attach (GTK_TABLE (table), label,
 			  0, 1, 2, 3, GTK_FILL, GTK_FILL,
 			  0, 0);
 	gtk_table_attach (GTK_TABLE (table), combobox,
 			  1, 4, 2, 3, GTK_FILL | GTK_EXPAND, GTK_FILL,
 			  0, 0);
+#endif
 	gtk_label_set_mnemonic_widget (GTK_LABEL (label), combobox);
 	priv->center = combobox;
 	g_signal_connect (G_OBJECT (combobox), "changed",
 			  G_CALLBACK (on_center_changed), setup);
 
+#if GTK_CHECK_VERSION (3, 4, 0)
+	grid = gtk_grid_new ();
+	gtk_grid_set_row_spacing (GTK_GRID (grid), 6);
+	gtk_grid_set_column_spacing (GTK_GRID (grid), 12);
+	frame = wrap_in_frame (_("Size"), grid);
+	gtk_grid_attach (GTK_GRID (setup), frame, 0, 1, 1, 1);
+
+	priv->width = grid_attach_spin_button_with_label (grid, _("_Width:"),
+							   0, 0);
+	priv->height = grid_attach_spin_button_with_label (grid, _("_Height:"),
+							    2, 0);
+#else
 	table = gtk_table_new (3, 4, FALSE);
 	gtk_table_set_row_spacings (GTK_TABLE (table), 6);
 	gtk_table_set_col_spacings (GTK_TABLE (table), 12);
@@ -913,17 +972,29 @@ eom_print_image_setup_init (EomPrintImageSetup *setup)
 							   0, 0);
 	priv->height = table_attach_spin_button_with_label (table, _("_Height:"),
 							    2, 0);
+#endif
 
 	label = gtk_label_new_with_mnemonic (_("_Scaling:"));
+#if GTK_CHECK_VERSION (3, 0, 0)
+	hscale = gtk_scale_new_with_range (GTK_ORIENTATION_HORIZONTAL, 1, 100, 1);
+#else
 	hscale = gtk_hscale_new_with_range (1, 100, 1);
+#endif
 	gtk_scale_set_value_pos (GTK_SCALE (hscale), GTK_POS_RIGHT);
 	gtk_range_set_value (GTK_RANGE (hscale), 100);
+#if GTK_CHECK_VERSION (3, 4, 0)
+	gtk_grid_attach_next_to (GTK_GRID (grid), hscale, priv->width,
+							 GTK_POS_BOTTOM, 3, 1);
+	gtk_grid_attach_next_to (GTK_GRID (grid), label, hscale, GTK_POS_LEFT,
+							 1, 1);
+#else
 	gtk_table_attach (GTK_TABLE (table), label,
 			  0, 1, 1, 2, GTK_FILL, GTK_FILL,
 			  0, 0);
 	gtk_table_attach (GTK_TABLE (table), hscale,
 			  1, 4, 1, 2, GTK_FILL | GTK_EXPAND, GTK_FILL,
 			  0, 0);
+#endif
 	gtk_label_set_mnemonic_widget (GTK_LABEL (label), hscale);
 	priv->scaling = hscale;
 
@@ -948,12 +1019,19 @@ eom_print_image_setup_init (EomPrintImageSetup *setup)
 		set_scale_unit (setup, GTK_UNIT_MM);
 	}
 
+#if GTK_CHECK_VERSION (3, 4, 0)
+	gtk_grid_attach_next_to (GTK_GRID (grid), combobox, hscale,
+							 GTK_POS_BOTTOM, 3, 1);
+	gtk_grid_attach_next_to (GTK_GRID (grid), label, combobox, GTK_POS_LEFT,
+							 1, 1);
+#else
 	gtk_table_attach (GTK_TABLE (table), label,
 			  0, 1, 2, 3, GTK_FILL, GTK_FILL,
 			  0, 0);
 	gtk_table_attach (GTK_TABLE (table), combobox,
 			  1, 4, 2, 3, GTK_FILL | GTK_EXPAND, GTK_FILL,
 			  0, 0);
+#endif
 	gtk_label_set_mnemonic_widget (GTK_LABEL (label), combobox);
 	priv->unit = combobox;
 	g_signal_connect (G_OBJECT (combobox), "changed",
@@ -965,9 +1043,14 @@ eom_print_image_setup_init (EomPrintImageSetup *setup)
 	gtk_widget_set_size_request (priv->preview, 250, 250);
 
 	frame = wrap_in_frame (_("Preview"), priv->preview);
+#if GTK_CHECK_VERSION (3, 4, 0)
+	/* The preview widget needs to span the whole grid height */
+	gtk_grid_attach (GTK_GRID (setup), frame, 1, 0, 1, 2);
+#else
 	gtk_table_attach (GTK_TABLE (setup), frame,
 			  1, 2, 0, 2, GTK_FILL, GTK_FILL,
 			  0, 0);
+#endif
 
 	gtk_widget_show_all (GTK_WIDGET (setup));
 }
@@ -992,9 +1075,13 @@ eom_print_image_setup_new (EomImage *image, GtkPageSetup *page_setup)
 	GtkWidget *preview;
 
 	setup = g_object_new (EOM_TYPE_PRINT_IMAGE_SETUP,
+#if GTK_CHECK_VERSION (3, 4, 0)
+			     "orientation", GTK_ORIENTATION_VERTICAL,
+#else
 			     "n-rows", 2,
 			     "n-columns", 2,
 			     "homogeneous", FALSE,
+#endif
 			     "row-spacing", 18,
 			     "column-spacing", 18,
 			     "border-width", 12,

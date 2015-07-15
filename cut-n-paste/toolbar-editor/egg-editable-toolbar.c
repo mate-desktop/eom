@@ -425,7 +425,11 @@ configure_item_cursor (GtkToolItem *item,
           cursor = gdk_cursor_new_for_display (gdk_screen_get_display (screen),
 					       GDK_HAND2);
           gdk_window_set_cursor (gtk_widget_get_window (widget), cursor);
+#if GTK_CHECK_VERSION (3, 0, 0)
+          g_object_unref (cursor);
+#else
           gdk_cursor_unref (cursor);
+#endif
 
           gtk_drag_source_set (widget, GDK_BUTTON1_MASK, dest_drag_types,
                                G_N_ELEMENTS (dest_drag_types), GDK_ACTION_MOVE);
@@ -976,7 +980,11 @@ create_dock (EggEditableToolbar *etoolbar)
 {
   GtkWidget *toolbar, *hbox;
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+#else
   hbox = gtk_hbox_new (0, FALSE);
+#endif
 
   toolbar = gtk_toolbar_new ();
   gtk_toolbar_set_show_arrow (GTK_TOOLBAR (toolbar), TRUE);

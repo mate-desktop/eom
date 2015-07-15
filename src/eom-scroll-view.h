@@ -18,13 +18,21 @@ typedef struct _EomScrollViewPrivate EomScrollViewPrivate;
 
 
 struct _EomScrollView {
+#if GTK_CHECK_VERSION (3, 4, 0)
+	GtkGrid base_instance;
+#else
 	GtkTable  widget;
+#endif
 
 	EomScrollViewPrivate *priv;
 };
 
 struct _EomScrollViewClass {
+#if GTK_CHECK_VERSION (3, 4, 0)
+	GtkGridClass parent_class;
+#else
 	GtkTableClass parent_class;
+#endif
 
 	void (* zoom_changed) (EomScrollView *view, double zoom);
 };
