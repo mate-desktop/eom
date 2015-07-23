@@ -1017,7 +1017,11 @@ eom_print_preview_draw (EomPrintPreview *preview, cairo_t *cr)
 	GtkWidget *area;
 	GtkAllocation allocation;
 	gint x0, y0;
+#if GTK_CHECK_VERSION (3, 4, 0)
+	GdkRGBA color;
+#else
 	GtkStyle *style;
+#endif
 	gboolean has_focus;
 
 	priv = preview->priv;
@@ -1025,17 +1029,29 @@ eom_print_preview_draw (EomPrintPreview *preview, cairo_t *cr)
 
 	has_focus = gtk_widget_has_focus (area);
 
+#if !GTK_CHECK_VERSION (3, 4, 0)
 	style = gtk_widget_get_style (area);
+#endif
 
 	gtk_widget_get_allocation (area, &allocation);
 
 	/* draw the page */
+#if GTK_CHECK_VERSION (3, 4, 0)
+	gdk_rgba_parse (&color, "white");
+	gdk_cairo_set_source_rgba (cr, &color);
+#else
  	gdk_cairo_set_source_color (cr, &style->white);
+#endif
  	cairo_rectangle (cr, 0, 0, allocation.width, allocation.height);
  	cairo_fill (cr);
 
 	/* draw the page margins */
+#if GTK_CHECK_VERSION (3, 4, 0)
+	gdk_rgba_parse (&color, "black");
+	gdk_cairo_set_source_rgba (cr, &color);
+#else
 	gdk_cairo_set_source_color (cr, &style->black);
+#endif
 	cairo_set_line_width (cr, 0.1);
 	cairo_rectangle (cr,
 			 priv->l_rmargin, priv->t_rmargin,
@@ -1077,15 +1093,17 @@ eom_print_preview_draw (EomPrintPreview *preview, cairo_t *cr)
 	}
 
 	if (has_focus) {
-		#if GTK_CHECK_VERSION(3, 0, 0)
-		gtk_paint_focus (style, cr,
-				 GTK_STATE_NORMAL, NULL, NULL,
-				 0, 0, allocation.width, allocation.height);
-		#else
+#if GTK_CHECK_VERSION(3, 0, 0)
+		GtkStyleContext *ctx;
+
+		ctx = gtk_widget_get_style_context (area);
+		gtk_render_focus (ctx, cr, 0, 0,
+				  allocation.width, allocation.height);
+#else
 		gtk_paint_focus (style, gtk_widget_get_window (area),
 				 GTK_STATE_NORMAL, NULL, NULL, NULL,
 				 0, 0, allocation.width, allocation.height);
-		#endif
+#endif
 	}
 }
 
