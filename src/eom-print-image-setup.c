@@ -56,7 +56,11 @@
 #define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
 #endif
 
+#if GTK_CHECK_VERSION (3, 4, 0)
+G_DEFINE_TYPE (EomPrintImageSetup, eom_print_image_setup, GTK_TYPE_GRID);
+#else
 G_DEFINE_TYPE (EomPrintImageSetup, eom_print_image_setup, GTK_TYPE_TABLE);
+#endif
 
 struct _EomPrintImageSetupPrivate {
 	GtkWidget *left;
@@ -873,9 +877,13 @@ eom_print_image_setup_init (EomPrintImageSetup *setup)
 	gtk_table_set_row_spacings (GTK_TABLE (table), 6);
 	gtk_table_set_col_spacings (GTK_TABLE (table), 12);
 	frame = wrap_in_frame (_("Position"), table);
+#if GTK_CHECK_VERSION (3, 4, 0)
+	gtk_grid_attach (GTK_GRID (setup), frame, 0, 0, 1, 1);
+#else
 	gtk_table_attach (GTK_TABLE (setup), frame,
 			  0, 1, 0, 1,  GTK_FILL, 0,
 			  0, 0);
+#endif
 
 	priv->left = table_attach_spin_button_with_label (table, _("_Left:"), 0, 0);
 	priv->right = table_attach_spin_button_with_label (table, _("_Right:"), 0, 1);
@@ -910,9 +918,13 @@ eom_print_image_setup_init (EomPrintImageSetup *setup)
 	gtk_table_set_row_spacings (GTK_TABLE (table), 6);
 	gtk_table_set_col_spacings (GTK_TABLE (table), 12);
 	frame = wrap_in_frame (_("Size"), table);
+#if GTK_CHECK_VERSION (3, 4, 0)
+	gtk_grid_attach (GTK_GRID (setup), frame, 0, 1, 1, 1);
+#else
 	gtk_table_attach (GTK_TABLE (setup), frame,
 			  0, 1, 1, 2,  GTK_FILL, 0,
 			  0, 0);
+#endif
 
 	priv->width = table_attach_spin_button_with_label (table, _("_Width:"),
 							   0, 0);
@@ -970,9 +982,14 @@ eom_print_image_setup_init (EomPrintImageSetup *setup)
 	gtk_widget_set_size_request (priv->preview, 250, 250);
 
 	frame = wrap_in_frame (_("Preview"), priv->preview);
+#if GTK_CHECK_VERSION (3, 4, 0)
+	/* The preview widget needs to span the whole grid height */
+	gtk_grid_attach (GTK_GRID (setup), frame, 1, 0, 1, 2);
+#else
 	gtk_table_attach (GTK_TABLE (setup), frame,
 			  1, 2, 0, 2, GTK_FILL, GTK_FILL,
 			  0, 0);
+#endif
 
 	gtk_widget_show_all (GTK_WIDGET (setup));
 }
@@ -997,9 +1014,13 @@ eom_print_image_setup_new (EomImage *image, GtkPageSetup *page_setup)
 	GtkWidget *preview;
 
 	setup = g_object_new (EOM_TYPE_PRINT_IMAGE_SETUP,
+#if GTK_CHECK_VERSION (3, 4, 0)
+			     "orientation", GTK_ORIENTATION_VERTICAL,
+#else
 			     "n-rows", 2,
 			     "n-columns", 2,
 			     "homogeneous", FALSE,
+#endif
 			     "row-spacing", 18,
 			     "column-spacing", 18,
 			     "border-width", 12,
