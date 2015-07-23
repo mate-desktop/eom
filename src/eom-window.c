@@ -103,6 +103,11 @@ G_DEFINE_TYPE (EomWindow, eom_window, GTK_TYPE_WINDOW);
 
 #define is_rtl (gtk_widget_get_default_direction () == GTK_TEXT_DIR_RTL)
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
+#define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
+#endif
+
 typedef enum {
 	EOM_WINDOW_STATUS_UNKNOWN,
 	EOM_WINDOW_STATUS_INIT,

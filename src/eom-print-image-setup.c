@@ -51,6 +51,11 @@
 #define EOM_PRINT_IMAGE_SETUP_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_PRINT_IMAGE_SETUP, EomPrintImageSetupPrivate))
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
+#define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
+#endif
+
 G_DEFINE_TYPE (EomPrintImageSetup, eom_print_image_setup, GTK_TYPE_TABLE);
 
 struct _EomPrintImageSetupPrivate {

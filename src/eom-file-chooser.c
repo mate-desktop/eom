@@ -45,6 +45,11 @@ static char *last_dir[] = { NULL, NULL, NULL, NULL };
 					     EOM_TYPE_FILE_CHOOSER,		    \
 					     EomFileChooserPrivate))
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
+#define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
+#endif
+
 struct _EomFileChooserPrivate
 {
 	MateDesktopThumbnailFactory *thumb_factory;
