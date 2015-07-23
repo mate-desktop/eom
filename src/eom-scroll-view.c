@@ -184,9 +184,12 @@ static void view_on_drag_data_get_cb (GtkWidget *widget,
 #define EOM_SCROLL_VIEW_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_SCROLL_VIEW, EomScrollViewPrivate))
 
+#if GTK_CHECK_VERSION (3, 4, 0)
+G_DEFINE_TYPE (EomScrollView, eom_scroll_view, GTK_TYPE_GRID)
+#else
 G_DEFINE_TYPE (EomScrollView, eom_scroll_view, GTK_TYPE_TABLE)
+#endif
 
-
 /*===================================
     widget size changing handler &
         util functions
@@ -2535,6 +2538,18 @@ eom_scroll_view_init (EomScrollView *view)
 	g_signal_connect (G_OBJECT (priv->display), "drag-begin",
 			  G_CALLBACK (view_on_drag_begin_cb), view);
 
+#if GTK_CHECK_VERSION (3, 4, 0)
+	gtk_grid_attach (GTK_GRID (view), priv->display,
+					 0, 0, 1, 1);
+	gtk_widget_set_hexpand (priv->display, TRUE);
+	gtk_widget_set_vexpand (priv->display, TRUE);
+	gtk_grid_attach (GTK_GRID (view), priv->hbar,
+					 0, 1, 1, 1);
+	gtk_widget_set_hexpand (priv->hbar, TRUE);
+	gtk_grid_attach (GTK_GRID (view), priv->vbar,
+					 1, 0, 1, 1);
+	gtk_widget_set_vexpand (priv->vbar, TRUE);
+#else
 	gtk_table_attach (GTK_TABLE (view), priv->display,
 			  0, 1, 0, 1,
 			  GTK_EXPAND | GTK_FILL,
@@ -2549,6 +2564,7 @@ eom_scroll_view_init (EomScrollView *view)
 			  1, 2, 0, 1,
 			  GTK_FILL, GTK_FILL,
 			  0, 0);
+#endif
 
 	g_settings_bind (settings, EOM_CONF_VIEW_USE_BG_COLOR, view,
 			 "use-background-color", G_SETTINGS_BIND_DEFAULT);
@@ -2869,9 +2885,14 @@ eom_scroll_view_new (void)
 
 	widget = g_object_new (EOM_TYPE_SCROLL_VIEW,
 			       "can-focus", TRUE,
+#if GTK_CHECK_VERSION (3, 4, 0)
+			       "row-homogeneous", FALSE,
+			       "column-homogeneous", FALSE,
+#else
 			       "n_rows", 2,
 			       "n_columns", 2,
 			       "homogeneous", FALSE,
+#endif
 			       NULL);
 
 
