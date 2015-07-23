@@ -4177,7 +4177,12 @@ eom_window_open_editor (GtkAction *action,
 	if (app_info == NULL)
 		return;
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	context = gdk_display_get_app_launch_context (
+	  gtk_widget_get_display (GTK_WIDGET (window)));
+#else
 	context = gdk_app_launch_context_new ();
+#endif
 	gdk_app_launch_context_set_screen (context,
 	  gtk_widget_get_screen (GTK_WIDGET (window)));
 	gdk_app_launch_context_set_icon (context,
