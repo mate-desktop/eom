@@ -33,6 +33,11 @@
 #define EOM_STATUSBAR_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_STATUSBAR, EomStatusbarPrivate))
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
+#define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
+#endif
+
 G_DEFINE_TYPE (EomStatusbar, eom_statusbar, GTK_TYPE_STATUSBAR)
 
 struct _EomStatusbarPrivate
