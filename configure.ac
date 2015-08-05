@@ -164,9 +164,6 @@ AC_ARG_WITH([libexif], AC_HELP_STRING([--without-libexif], [disable EXIF support
 have_exif=no
 if test x$with_libexif != xno; then
     PKG_CHECK_MODULES(EXIF, libexif >= $LIBEXIF_REQUIRED, have_exif=yes, have_exif=no)
-    if test "x$have_exif" = "xyes"; then
-        AC_CHECK_HEADER([libexif/exif-data.h],[],[have_exif=no])
-    fi
 fi
 if test "x$have_exif" = "xyes"; then
   AC_DEFINE(HAVE_EXIF, 1, [EXIF Support.])
