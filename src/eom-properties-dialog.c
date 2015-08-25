@@ -531,16 +531,22 @@ eom_properties_dialog_set_netbook_mode (EomPropertiesDialog *dlg,
 
 #ifdef HAVE_METADATA
 	if (enable) {
-		gtk_widget_reparent (priv->metadata_details_sw,
-				     priv->metadata_details_box);
+		g_object_ref (priv->metadata_details_sw);
+		gtk_container_remove (GTK_CONTAINER (gtk_widget_get_parent (priv->metadata_details_sw)),
+				      priv->metadata_details_sw);
+		gtk_container_add (GTK_CONTAINER (priv->metadata_details_box), priv->metadata_details_sw);
+		g_object_unref (priv->metadata_details_sw);
 		// Only show details box if metadata is being displayed
 		if (gtk_widget_get_visible (priv->exif_box))
 			gtk_widget_show_all (priv->metadata_details_box);
 
 		gtk_widget_hide (priv->exif_details_expander);
 	} else {
-		gtk_widget_reparent (priv->metadata_details_sw,
-				     priv->exif_details_expander);
+		g_object_ref (priv->metadata_details_sw);
+		gtk_container_remove (GTK_CONTAINER (gtk_widget_get_parent (priv->metadata_details_sw)),
+				      priv->metadata_details_sw);
+		gtk_container_add (GTK_CONTAINER (priv->exif_details_expander), priv->metadata_details_sw);
+		g_object_unref (priv->metadata_details_sw);
 		gtk_widget_show_all (priv->exif_details_expander);
 
 		if (gtk_notebook_get_current_page (GTK_NOTEBOOK (priv->notebook)) == EOM_PROPERTIES_DIALOG_PAGE_DETAILS)
