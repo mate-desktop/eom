@@ -2342,6 +2342,15 @@ eom_image_get_svg (EomImage *img)
 
 #endif
 
+/**
+ * eom_image_get_transform:
+ * @img: a #EomImage
+ *
+ * Get @img transform.
+ *
+ * Returns: (transfer none): A #EomTransform.
+ */
+
 EomTransform *
 eom_image_get_transform (EomImage *img)
 {
@@ -2349,6 +2358,15 @@ eom_image_get_transform (EomImage *img)
 
 	return img->priv->trans;
 }
+
+/**
+ * eom_image_get_autorotate_transform:
+ * @img: a #EomImage
+ *
+ * Get @img autorotate transform.
+ *
+ * Returns: (transfer none): A #EomTransform.
+ */
 
 EomTransform*
 eom_image_get_autorotate_transform (EomImage *img)
