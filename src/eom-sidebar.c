@@ -64,7 +64,11 @@ struct _EomSidebarPrivate {
 	GtkTreeModel *page_model;
 };
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+G_DEFINE_TYPE (EomSidebar, eom_sidebar, GTK_TYPE_BOX)
+#else
 G_DEFINE_TYPE (EomSidebar, eom_sidebar, GTK_TYPE_VBOX)
+#endif
 
 #define EOM_SIDEBAR_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_SIDEBAR, EomSidebarPrivate))
@@ -398,6 +402,11 @@ eom_sidebar_init (EomSidebar *eom_sidebar)
 	GtkWidget *select_hbox;
 	GtkWidget *arrow;
 	GtkWidget *image;
+
+#if GTK_CHECK_VERSION (3, 2, 0)
+	gtk_orientable_set_orientation (GTK_ORIENTABLE (eom_sidebar),
+					GTK_ORIENTATION_VERTICAL);
+#endif
 
 	eom_sidebar->priv = EOM_SIDEBAR_GET_PRIVATE (eom_sidebar);
 

@@ -36,7 +36,11 @@
 #define EOM_THUMB_NAV_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_THUMB_NAV, EomThumbNavPrivate))
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+G_DEFINE_TYPE (EomThumbNav, eom_thumb_nav, GTK_TYPE_BOX);
+#else
 G_DEFINE_TYPE (EomThumbNav, eom_thumb_nav, GTK_TYPE_HBOX);
+#endif
 
 #define EOM_THUMB_NAV_SCROLL_INC      20
 #define EOM_THUMB_NAV_SCROLL_MOVE     20
@@ -44,7 +48,8 @@ G_DEFINE_TYPE (EomThumbNav, eom_thumb_nav, GTK_TYPE_HBOX);
 
 enum
 {
-	PROP_SHOW_BUTTONS = 1,
+	PROP_0,
+	PROP_SHOW_BUTTONS,
 	PROP_THUMB_VIEW,
 	PROP_MODE
 };
@@ -344,6 +349,11 @@ eom_thumb_nav_init (EomThumbNav *nav)
 {
 	EomThumbNavPrivate *priv;
 	GtkWidget *arrow;
+
+#if GTK_CHECK_VERSION (3, 2, 0)
+	gtk_orientable_set_orientation (GTK_ORIENTABLE (nav),
+					GTK_ORIENTATION_HORIZONTAL);
+#endif
 
 	nav->priv = EOM_THUMB_NAV_GET_PRIVATE (nav);
 
