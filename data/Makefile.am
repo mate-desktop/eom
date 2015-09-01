@@ -34,8 +34,13 @@ ui_DATA = \
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = eom.pc
 
+if HAVE_GTK3
+styledir = $(pkgdatadir)
+style_DATA = eom.css
+else
 gtkrcdir = $(pkgdatadir)
 gtkrc_DATA = gtkrc
+endif
 
 EXTRA_DIST =					\
         $(gtkrc_DATA)			\
