@@ -2497,7 +2497,11 @@ eom_scroll_view_init (EomScrollView *view)
 			  G_CALLBACK (adjustment_changed_cb),
 			  view);
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+	priv->vbar = gtk_scrollbar_new (GTK_ORIENTATION_VERTICAL, priv->vadj);
+#else
 	priv->vbar = gtk_vscrollbar_new (priv->vadj);
+#endif
 	priv->display = g_object_new (GTK_TYPE_DRAWING_AREA,
 				      "can-focus", TRUE,
 				      NULL);
