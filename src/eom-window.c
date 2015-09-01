@@ -2065,6 +2065,7 @@ eom_window_run_fullscreen (EomWindow *window, gboolean slideshow)
 	eom_scroll_view_override_bg_color (EOM_SCROLL_VIEW (window->priv->view),
 			  &(gtk_widget_get_style (GTK_WIDGET (window))->black));
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	{
 		GtkStyle *style;
 
@@ -2078,6 +2079,7 @@ eom_window_run_fullscreen (EomWindow *window, gboolean slideshow)
 
 		g_object_unref (style);
 	}
+#endif
 
 	gtk_window_fullscreen (GTK_WINDOW (window));
 	eom_window_update_fullscreen_popup (window);
