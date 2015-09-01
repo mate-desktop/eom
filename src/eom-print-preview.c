@@ -588,9 +588,10 @@ expose_event_cb (GtkDrawingArea *drawing_area,
 
 #if !GTK_CHECK_VERSION (3, 0, 0)
 	cairo_destroy (cr);
-#endif
 
 	gdk_window_get_pointer (gtk_widget_get_window (widget), NULL, NULL, NULL);
+#endif
+
 #if GTK_CHECK_VERSION (3, 0, 0)
 	return TRUE;
 #endif
