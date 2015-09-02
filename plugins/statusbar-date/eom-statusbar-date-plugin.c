@@ -125,6 +125,10 @@ static void impl_activate(EomPlugin* plugin, EomWindow* window)
 	data = g_new(WindowData, 1);
 	data->statusbar_date = gtk_statusbar_new();
 	gtk_widget_set_size_request(data->statusbar_date, 200, 10);
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gtk_widget_set_margin_top (GTK_WIDGET (data->statusbar_date), 0);
+	gtk_widget_set_margin_bottom (GTK_WIDGET (data->statusbar_date), 0);
+#endif
 	gtk_box_pack_end(GTK_BOX(statusbar), data->statusbar_date, FALSE, FALSE, 0);
 
 	data->signal_id = g_signal_connect_after(G_OBJECT(thumbview), "selection_changed", G_CALLBACK(selection_changed_cb), data);
