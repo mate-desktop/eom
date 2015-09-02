@@ -245,7 +245,6 @@ main (int argc, char **argv)
 #endif
 	eom_debug_init ();
 	eom_job_queue_init ();
-	gdk_threads_init ();
 	eom_thumbnail_init ();
 
 #if GTK_CHECK_VERSION (3, 0, 0)
