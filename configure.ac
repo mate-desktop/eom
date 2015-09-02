@@ -44,6 +44,12 @@ GTK_DOC_CHECK(1.9)
 
 AC_CHECK_FUNCS(strptime)
 
+# GLib min/max required versions
+AC_DEFINE([GLIB_VERSION_MAX_ALLOWED], [GLIB_VERSION_2_36],
+	[Warn on use of APIs added after GLib 2.36])
+AC_DEFINE([GLIB_VERSION_MIN_REQUIRED], [GLIB_VERSION_2_36],
+	[Warn on use of APIs deprecated before GLib 2.36])
+
 # ****************************************************************
 # Support for nl_langinfo (_NL_MEASUREMENT_MEASUREMENT) (optional)
 # ****************************************************************
@@ -107,8 +113,8 @@ esac
 AC_SUBST(GTK_API_VERSION)
 AM_CONDITIONAL([HAVE_GTK3], [test "x$GTK_API_VERSION" = "x3.0"])
 
-GLIB_REQUIRED=2.25.9
-GIO_REQUIRED=2.25.9
+GLIB_REQUIRED=2.36.0
+GIO_REQUIRED=2.36.0
 MATE_DESKTOP_REQUIRED=1.9.1
 GDKPIXBUF_REQUIRED=2.4.0
 MATE_ICON_THEME_REQUIRED=1.1.0
