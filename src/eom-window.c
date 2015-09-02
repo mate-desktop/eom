@@ -1988,6 +1988,9 @@ update_ui_visibility (EomWindow *window)
 static void
 eom_window_run_fullscreen (EomWindow *window, gboolean slideshow)
 {
+#if GTK_CHECK_VERSION (3, 0, 0)
+	static const GdkRGBA black = { 0., 0., 0., 1.};
+#endif
 	EomWindowPrivate *priv;
 	GtkWidget *menubar;
 	gboolean upscale;
@@ -2063,7 +2066,11 @@ eom_window_run_fullscreen (EomWindow *window, gboolean slideshow)
 	gtk_widget_grab_focus (priv->view);
 
 	eom_scroll_view_override_bg_color (EOM_SCROLL_VIEW (window->priv->view),
+#if GTK_CHECK_VERSION (3, 0, 0)
+	                                   &black);
+#else
 			  &(gtk_widget_get_style (GTK_WIDGET (window))->black));
+#endif
 
 #if !GTK_CHECK_VERSION (3, 0, 0)
 	{
@@ -2141,7 +2148,9 @@ eom_window_stop_fullscreen (EomWindow *window, gboolean slideshow)
 
 	eom_scroll_view_override_bg_color (EOM_SCROLL_VIEW (window->priv->view),
 					   NULL);
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	gtk_widget_set_style (gtk_widget_get_parent (window->priv->view), NULL);
+#endif
 	gtk_window_unfullscreen (GTK_WINDOW (window));
 
 	if (slideshow) {
