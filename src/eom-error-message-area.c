@@ -59,7 +59,11 @@ set_message_area_text_and_icon (GtkInfoBar   *message_area,
 	image = gtk_image_new_from_stock (icon_stock_id, GTK_ICON_SIZE_DIALOG);
 	gtk_widget_show (image);
 	gtk_box_pack_start (GTK_BOX (hbox_content), image, FALSE, FALSE, 0);
+#if GTK_CHECK_VERSION (3, 14, 0)
+	gtk_widget_set_valign (image, GTK_ALIGN_START);
+#else
 	gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0);
+#endif
 
 	vbox = gtk_vbox_new (FALSE, 6);
 	gtk_widget_show (vbox);
@@ -74,7 +78,11 @@ set_message_area_text_and_icon (GtkInfoBar   *message_area,
 	gtk_box_pack_start (GTK_BOX (vbox), primary_label, TRUE, TRUE, 0);
 	gtk_label_set_use_markup (GTK_LABEL (primary_label), TRUE);
 	gtk_label_set_line_wrap (GTK_LABEL (primary_label), FALSE);
+#if GTK_CHECK_VERSION (3, 14, 0)
+	gtk_widget_set_halign (primary_label, GTK_ALIGN_START);
+#else
 	gtk_misc_set_alignment (GTK_MISC (primary_label), 0, 0.5);
+#endif
 
 	gtk_widget_set_can_focus (primary_label, TRUE);
 
@@ -95,7 +103,11 @@ set_message_area_text_and_icon (GtkInfoBar   *message_area,
 		gtk_label_set_use_markup (GTK_LABEL (secondary_label), TRUE);
 		gtk_label_set_line_wrap (GTK_LABEL (secondary_label), TRUE);
 		gtk_label_set_selectable (GTK_LABEL (secondary_label), TRUE);
+#if GTK_CHECK_VERSION (3, 14, 0)
+		gtk_widget_set_halign (secondary_label, GTK_ALIGN_START);
+#else
 		gtk_misc_set_alignment (GTK_MISC (secondary_label), 0, 0.5);
+#endif
 	}
 
 	gtk_box_pack_start (GTK_BOX (gtk_info_bar_get_content_area (GTK_INFO_BAR (message_area))), hbox_content, TRUE, TRUE, 0);
