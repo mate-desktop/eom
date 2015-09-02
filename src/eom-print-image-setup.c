@@ -648,11 +648,19 @@ static GtkWidget *
 wrap_in_frame (const gchar *label,
                GtkWidget   *child)
 {
+#if GTK_CHECK_VERSION (3, 14, 0)
+	GtkWidget *frame, *label_widget;
+#else
 	GtkWidget *frame, *alignment, *label_widget;
+#endif
 	gchar *bold_text;
 
 	label_widget = gtk_label_new ("");
+#if GTK_CHECK_VERSION (3, 14, 0)
+	gtk_widget_set_halign (label_widget, GTK_ALIGN_START);
+#else
 	gtk_misc_set_alignment (GTK_MISC (label_widget), 0.0, 0.5);
+#endif
 	gtk_widget_show (label_widget);
 
 	bold_text = g_markup_printf_escaped ("<b>%s</b>", label);
@@ -661,6 +669,13 @@ wrap_in_frame (const gchar *label,
 
 	frame = gtk_vbox_new (FALSE, 6);
 	gtk_box_pack_start (GTK_BOX (frame), label_widget, FALSE, FALSE, 0);
+#if GTK_CHECK_VERSION (3, 14, 0)
+	gtk_box_pack_start (GTK_BOX (frame), child, FALSE, FALSE, 0);
+
+	gtk_widget_set_margin_start (child, 12);
+
+	gtk_widget_show (frame);
+#else
 
 	alignment = gtk_alignment_new (0.0, 0.0, 1.0, 1.0);
 	gtk_alignment_set_padding (GTK_ALIGNMENT (alignment),
@@ -671,6 +686,7 @@ wrap_in_frame (const gchar *label,
 
 	gtk_widget_show (frame);
 	gtk_widget_show (alignment);
+#endif
 
 	return frame;
 }
@@ -687,7 +703,11 @@ table_attach_spin_button_with_label (GtkWidget *table,
 	GtkWidget *label, *spin_button;
 
 	label = gtk_label_new_with_mnemonic (text_label);
+#if GTK_CHECK_VERSION (3, 14, 0)
+	gtk_widget_set_halign (label, GTK_ALIGN_START);
+#else
 	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
+#endif
 	spin_button = gtk_spin_button_new_with_range (0, 100, 0.01);
 	gtk_spin_button_set_digits (GTK_SPIN_BUTTON (spin_button), 2);
 	gtk_entry_set_width_chars (GTK_ENTRY (spin_button), 6);
@@ -917,7 +937,11 @@ eom_print_image_setup_init (EomPrintImageSetup *setup)
 #endif
 
 	label = gtk_label_new_with_mnemonic (_("C_enter:"));
+#if GTK_CHECK_VERSION (3, 14, 0)
+	gtk_widget_set_halign (label, GTK_ALIGN_START);
+#else
 	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
+#endif
 
 	combobox = gtk_combo_box_text_new ();
 	gtk_combo_box_text_insert_text (GTK_COMBO_BOX_TEXT (combobox),
@@ -1000,7 +1024,11 @@ eom_print_image_setup_init (EomPrintImageSetup *setup)
 	priv->scaling = hscale;
 
 	label = gtk_label_new_with_mnemonic (_("_Unit:"));
+#if GTK_CHECK_VERSION (3, 14, 0)
+	gtk_widget_set_halign (label, GTK_ALIGN_START);
+#else
 	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
+#endif
 
 	combobox = gtk_combo_box_text_new ();
 	gtk_combo_box_text_insert_text (GTK_COMBO_BOX_TEXT (combobox), UNIT_MM,
