@@ -399,7 +399,7 @@ eom_scroll_view_set_cursor (EomScrollView *view, EomScrollViewCursor new_cursor)
 			gdk_window_set_cursor (gtk_widget_get_window (widget), NULL);
 			break;
                 case EOM_SCROLL_VIEW_CURSOR_HIDDEN:
-                        cursor = gdk_cursor_new (GDK_BLANK_CURSOR);
+                        cursor = gdk_cursor_new_for_display (display, GDK_BLANK_CURSOR);
                         break;
 		case EOM_SCROLL_VIEW_CURSOR_DRAG:
 			cursor = gdk_cursor_new_for_display (display, GDK_FLEUR);
