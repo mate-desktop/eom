@@ -1307,6 +1307,14 @@ eom_image_set_thumbnail (EomImage *img, GdkPixbuf *thumbnail)
 	}
 }
 
+/**
+ * eom_image_get_pixbuf:
+ * @img: a #EomImage
+ *
+ * Gets the #GdkPixbuf of the image
+ *
+ * Returns: (transfer full): a #GdkPixbuf
+ **/
 GdkPixbuf *
 eom_image_get_pixbuf (EomImage *img)
 {
@@ -1335,6 +1343,14 @@ eom_image_get_profile (EomImage *img)
 }
 #endif
 
+/**
+ * eom_image_get_thumbnail:
+ * @img: a #EomImage
+ *
+ * Gets the thumbnail pixbuf for @img
+ *
+ * Returns: (transfer full): a #GdkPixbuf with a thumbnail
+ **/
 GdkPixbuf *
 eom_image_get_thumbnail (EomImage *img)
 {
@@ -2014,6 +2030,15 @@ eom_image_get_exif_info (EomImage *img)
 }
 #endif
 
+/**
+ * eom_image_get_xmp_info:
+ * @img: a #EomImage
+ *
+ * Gets the XMP info for @img or NULL if compiled without
+ * libexempi support.
+ *
+ * Returns: (transfer full): the xmp data
+ **/
 gpointer
 eom_image_get_xmp_info (EomImage *img)
 {
@@ -2034,6 +2059,14 @@ eom_image_get_xmp_info (EomImage *img)
 }
 
 
+/**
+ * eom_image_get_file:
+ * @img: a #EomImage
+ *
+ * Gets the #GFile associated with @img
+ *
+ * Returns: (transfer full): a #GFile
+ **/
 GFile *
 eom_image_get_file (EomImage *img)
 {
@@ -2155,6 +2188,13 @@ compare_quarks (gconstpointer a, gconstpointer b)
 	return quark - GPOINTER_TO_INT (b);
 }
 
+/**
+ * eom_image_get_supported_mime_types:
+ *
+ * Gets the list of supported mimetypes
+ *
+ * Returns: (transfer none)(element-type utf8): a #GList of supported mimetypes
+ **/
 GList *
 eom_image_get_supported_mime_types (void)
 {

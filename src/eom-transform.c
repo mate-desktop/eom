@@ -64,6 +64,16 @@ eom_transform_class_init (EomTransformClass *klass)
 	g_type_class_add_private (klass, sizeof (EomTransformPrivate));
 }
 
+/**
+ * eom_transform_apply:
+ * @trans: a #EomTransform
+ * @pixbuf: a #GdkPixbuf
+ * @job: a #EomJob
+ *
+ * Applies the transformation in @trans to @pixbuf, setting its progress in @job.
+ *
+ * Returns: (transfer full): A new #GdkPixbuf with the transformation applied.
+ **/
 GdkPixbuf*
 eom_transform_apply (EomTransform *trans, GdkPixbuf *pixbuf, EomJob *job)
 {
@@ -220,6 +230,14 @@ _eom_cairo_matrix_flip (cairo_matrix_t *dst, const cairo_matrix_t *src, gboolean
 	dst->y0 = vert ? -src->y0 : src->y0;
 }
 
+/**
+ * eom_transform_reverse:
+ * @trans: a #EomTransform
+ *
+ * Creates the reverse transformation of @trans
+ *
+ * Returns: (transfer full): a new transformation
+ **/
 EomTransform*
 eom_transform_reverse (EomTransform *trans)
 {
@@ -236,6 +254,15 @@ eom_transform_reverse (EomTransform *trans)
 	return reverse;
 }
 
+/**
+ * eom_transform_compose:
+ * @trans: a #EomTransform
+ * @compose: another #EomTransform
+ *
+ *
+ *
+ * Returns: (transfer full): a new transform
+ **/
 EomTransform*
 eom_transform_compose (EomTransform *trans, EomTransform *compose)
 {

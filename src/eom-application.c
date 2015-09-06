@@ -167,7 +167,7 @@ eom_application_init (EomApplication *eom_application)
  * Returns a singleton instance of #EomApplication currently running.
  * If not running yet, it will create one.
  *
- * Returns: a running #EomApplication.
+ * Returns: (transfer none): a running #EomApplication.
  **/
 EomApplication *
 eom_application_get_instance (void)
@@ -286,7 +286,7 @@ eom_application_show_window (EomWindow *window, gpointer user_data)
 /**
  * eom_application_open_file_list:
  * @application: An #EomApplication.
- * @file_list: A list of #GFile<!-- -->s.
+ * @file_list: (element-type GFile): A list of #GFile<!-- -->s
  * @timestamp: The timestamp of the user interaction which triggered this call
  * (see gtk_window_present_with_time()).
  * @flags: A set of #EomStartupFlags influencing a new windows' state.
@@ -336,7 +336,7 @@ eom_application_open_file_list (EomApplication  *application,
 /**
  * eom_application_open_uri_list:
  * @application: An #EomApplication.
- * @uri_list: A list of URIs.
+ * @uri_list: (element-type utf8): A list of URIs.
  * @timestamp: The timestamp of the user interaction which triggered this call
  * (see gtk_window_present_with_time()).
  * @flags: A set of #EomStartupFlags influencing a new windows' state.
@@ -433,7 +433,7 @@ eom_application_shutdown (EomApplication *application)
  * your own references if you want to perform actions that may destroy
  * them.
  *
- * Returns: A new list of #EomWindow<!-- -->s.
+ * Returns: (element-type EomWindow) (transfer container): A new list of #EomWindow<!-- -->s.
  **/
 GList *
 eom_application_get_windows (EomApplication *application)
@@ -462,7 +462,7 @@ eom_application_get_windows (EomApplication *application)
  *
  * Retrieves the #EggToolbarsModel for the toolbar in #EomApplication.
  *
- * Returns: An #EggToolbarsModel.
+ * Returns: (transfer none): An #EggToolbarsModel.
  **/
 EggToolbarsModel *
 eom_application_get_toolbars_model (EomApplication *application)

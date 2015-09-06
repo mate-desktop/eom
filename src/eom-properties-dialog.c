@@ -777,6 +777,18 @@ eom_properties_dialog_init (EomPropertiesDialog *prop_dlg)
 #endif
 }
 
+/**
+ * eom_properties_dialog_new:
+ * @parent: the dialog's parent window
+ * @thumbview:
+ * @next_image_action:
+ * @previous_image_action:
+ *
+ *
+ *
+ * Returns: (transfer full) (type EomPropertiesDialog): a new #EomPropertiesDialog
+ **/
+
 GObject *
 eom_properties_dialog_new (GtkWindow    *parent,
 			   EomThumbView *thumbview,

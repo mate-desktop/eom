@@ -126,6 +126,15 @@ create_error_message_area (const gchar *primary_text,
 	return message_area;
 }
 
+/**
+ * eom_image_load_error_message_area_new:
+ * @caption:
+ * @error:
+ *
+ *
+ *
+ * Returns: (transfer full): a new #GtkInfoArea
+ **/
 GtkWidget *
 eom_image_load_error_message_area_new (const gchar  *caption,
 				       const GError *error)
@@ -159,6 +168,14 @@ eom_image_load_error_message_area_new (const gchar  *caption,
 	return message_area;
 }
 
+/**
+ * eom_no_images_error_message_area_new:
+ * @file:
+ *
+ *
+ *
+ * Returns: (transfer full): a new #GtkInfoBar
+ **/
 GtkWidget *
 eom_no_images_error_message_area_new (GFile *file)
 {

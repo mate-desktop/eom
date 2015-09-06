@@ -893,7 +893,7 @@ eom_thumb_view_get_n_selected (EomThumbView *thumbview)
  * Gets the #EomImage stored in @thumbview's #EomListStore at the position indicated
  * by @path.
  *
- * Returns: A #EomImage.
+ * Returns: (transfer full): A #EomImage.
  **/
 static EomImage *
 eom_thumb_view_get_image_from_path (EomThumbView *thumbview, GtkTreePath *path)
@@ -953,7 +953,7 @@ eom_thumb_view_get_first_selected_image (EomThumbView *thumbview)
  * Gets a list with the currently selected images. Note that a new reference is
  * hold for each image and the list must be freed with g_list_free().
  *
- * Returns: A newly allocated list of #EomImage's.
+ * Returns: (element-type EomImage) (transfer full): A newly allocated list of #EomImage's.
  **/
 GList *
 eom_thumb_view_get_selected_images (EomThumbView *thumbview)

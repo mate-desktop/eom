@@ -377,6 +377,14 @@ eom_thumbnail_stretch_frame_image (GdkPixbuf *frame_image,
         return result_pixbuf;
 }
 
+/**
+ * eom_thumbnail_add_frame:
+ * @thumbnail: a #GdkPixbuf
+ *
+ * Adds a frame to @thumbnail
+ *
+ * Returns: (transfer full): a new #GdkPixbuf, storing @thumbnail nicely framed.
+ **/
 GdkPixbuf *
 eom_thumbnail_add_frame (GdkPixbuf *thumbnail)
 {
@@ -406,6 +414,15 @@ eom_thumbnail_add_frame (GdkPixbuf *thumbnail)
 	return result_pixbuf;
 }
 
+/**
+ * eom_thumbnail_fit_to_size:
+ * @thumbnail: a #GdkPixbuf
+ * @dimension: the maximum width or height desired
+ *
+ * Ensures a pixbuf fits a given @dimension
+ *
+ * Returns: (transfer full): a new #GdkPixbuf
+ **/
 GdkPixbuf *
 eom_thumbnail_fit_to_size (GdkPixbuf *thumbnail, gint dimension)
 {
@@ -434,6 +451,17 @@ eom_thumbnail_fit_to_size (GdkPixbuf *thumbnail, gint dimension)
 	return gdk_pixbuf_copy (thumbnail);
 }
 
+/**
+ * eom_thumbnail_load:
+ * @image: a #EomImage
+ * @error: location to store the error ocurring or %NULL to ignore
+ *
+ * Loads the thumbnail for @image. In case of error, %NULL is returned
+ * and @error is set.
+ *
+ * Returns: (transfer full): a new #GdkPixbuf with the thumbnail for
+ * @image or %NULL in case of error.
+ **/
 GdkPixbuf*
 eom_thumbnail_load (EomImage *image, GError **error)
 {

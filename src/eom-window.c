@@ -5256,7 +5256,7 @@ eom_job_model_cb (EomJobModel *job, gpointer data)
 /**
  * eom_window_open_file_list:
  * @window: An #EomWindow.
- * @file_list: A %NULL-terminated list of #GFile's.
+ * @file_list: (element-type GFile): A %NULL-terminated list of #GFile's.
  *
  * Opens a list of files, adding them to the collection in @window.
  * Files will be checked to be readable and later filtered according
@@ -5291,7 +5291,7 @@ eom_window_open_file_list (EomWindow *window, GSList *file_list)
  *
  * Gets the #GtkUIManager that describes the UI of @window.
  *
- * Returns: A #GtkUIManager.
+ * Returns: (transfer none): A #GtkUIManager.
  **/
 GtkUIManager *
 eom_window_get_ui_manager (EomWindow *window)
@@ -5356,7 +5356,7 @@ eom_window_set_mode (EomWindow *window, EomWindowMode mode)
  * Gets the #EomListStore that contains the images in the collection
  * of @window.
  *
- * Returns: an #EomListStore.
+ * Returns: (transfer none): an #EomListStore.
  **/
 EomListStore *
 eom_window_get_store (EomWindow *window)
@@ -5372,7 +5372,7 @@ eom_window_get_store (EomWindow *window)
  *
  * Gets the #EomScrollView in the window.
  *
- * Returns: the #EomScrollView.
+ * Returns: (transfer none): the #EomScrollView.
  **/
 GtkWidget *
 eom_window_get_view (EomWindow *window)
@@ -5388,7 +5388,7 @@ eom_window_get_view (EomWindow *window)
  *
  * Gets the sidebar widget of @window.
  *
- * Returns: the #EomSidebar.
+ * Returns: (transfer none): the #EomSidebar.
  **/
 GtkWidget *
 eom_window_get_sidebar (EomWindow *window)
@@ -5404,7 +5404,7 @@ eom_window_get_sidebar (EomWindow *window)
  *
  * Gets the thumbnails view in @window.
  *
- * Returns: an #EomThumbView.
+ * Returns: (transfer none): an #EomThumbView.
  **/
 GtkWidget *
 eom_window_get_thumb_view (EomWindow *window)
@@ -5420,7 +5420,7 @@ eom_window_get_thumb_view (EomWindow *window)
  *
  * Gets the thumbnails navigation pane in @window.
  *
- * Returns: an #EomThumbNav.
+ * Returns: (transfer none): an #EomThumbNav.
  **/
 GtkWidget *
 eom_window_get_thumb_nav (EomWindow *window)
@@ -5436,7 +5436,7 @@ eom_window_get_thumb_nav (EomWindow *window)
  *
  * Gets the statusbar in @window.
  *
- * Returns: a #EomStatusBar.
+ * Returns: (transfer none): a #EomStatusBar.
  **/
 GtkWidget *
 eom_window_get_statusbar (EomWindow *window)
@@ -5453,7 +5453,7 @@ eom_window_get_statusbar (EomWindow *window)
  * Gets the image currently displayed in @window or %NULL if
  * no image is being displayed.
  *
- * Returns: an #EomImage.
+ * Returns: (transfer none): an #EomImage.
  **/
 EomImage *
 eom_window_get_image (EomWindow *window)
