@@ -64,7 +64,11 @@ struct _EomSidebarPrivate {
 	GtkTreeModel *page_model;
 };
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+G_DEFINE_TYPE (EomSidebar, eom_sidebar, GTK_TYPE_BOX)
+#else
 G_DEFINE_TYPE (EomSidebar, eom_sidebar, GTK_TYPE_VBOX)
+#endif
 
 #define EOM_SIDEBAR_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_SIDEBAR, EomSidebarPrivate))
@@ -399,6 +403,11 @@ eom_sidebar_init (EomSidebar *eom_sidebar)
 	GtkWidget *arrow;
 	GtkWidget *image;
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+	gtk_orientable_set_orientation (GTK_ORIENTABLE (eom_sidebar),
+					GTK_ORIENTATION_VERTICAL);
+#endif
+
 	eom_sidebar->priv = EOM_SIDEBAR_GET_PRIVATE (eom_sidebar);
 
 	/* data model */
@@ -437,7 +446,11 @@ eom_sidebar_init (EomSidebar *eom_sidebar)
 
 	gtk_widget_show (eom_sidebar->priv->label);
 
-	arrow = gtk_arrow_new (GTK_ARROW_DOWN, GTK_SHADOW_NONE);
+#if GTK_CHECK_VERSION (3, 14, 0)
+	arrow = gtk_image_new_from_icon_name ("pan-down-symbolic", GTK_ICON_SIZE_BUTTON);
+#else
+ 	arrow = gtk_arrow_new (GTK_ARROW_DOWN, GTK_SHADOW_NONE);
+#endif
 	gtk_box_pack_end (GTK_BOX (select_hbox), arrow, FALSE, FALSE, 0);
 	gtk_widget_show (arrow);
 

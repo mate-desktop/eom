@@ -36,7 +36,11 @@
 #define EOM_THUMB_NAV_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_THUMB_NAV, EomThumbNavPrivate))
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+G_DEFINE_TYPE (EomThumbNav, eom_thumb_nav, GTK_TYPE_BOX);
+#else
 G_DEFINE_TYPE (EomThumbNav, eom_thumb_nav, GTK_TYPE_HBOX);
+#endif
 
 #define EOM_THUMB_NAV_SCROLL_INC      20
 #define EOM_THUMB_NAV_SCROLL_MOVE     20
@@ -44,7 +48,8 @@ G_DEFINE_TYPE (EomThumbNav, eom_thumb_nav, GTK_TYPE_HBOX);
 
 enum
 {
-	PROP_SHOW_BUTTONS = 1,
+	PROP_0,
+	PROP_SHOW_BUTTONS,
 	PROP_THUMB_VIEW,
 	PROP_MODE
 };
@@ -345,6 +350,11 @@ eom_thumb_nav_init (EomThumbNav *nav)
 	EomThumbNavPrivate *priv;
 	GtkWidget *arrow;
 
+#if GTK_CHECK_VERSION (3, 2, 0)
+	gtk_orientable_set_orientation (GTK_ORIENTABLE (nav),
+					GTK_ORIENTATION_HORIZONTAL);
+#endif
+
 	nav->priv = EOM_THUMB_NAV_GET_PRIVATE (nav);
 
 	priv = nav->priv;
@@ -353,15 +363,19 @@ eom_thumb_nav_init (EomThumbNav *nav)
 
 	priv->show_buttons = TRUE;
 
-        priv->button_left = gtk_button_new ();
+	priv->button_left = gtk_button_new ();
 	gtk_button_set_relief (GTK_BUTTON (priv->button_left), GTK_RELIEF_NONE);
 
-	arrow = gtk_arrow_new (GTK_ARROW_LEFT, GTK_SHADOW_ETCHED_IN);
+#if GTK_CHECK_VERSION (3, 14, 0)
+	arrow = gtk_image_new_from_icon_name ("pan-start-symbolic", GTK_ICON_SIZE_BUTTON);
+#else
+ 	arrow = gtk_arrow_new (GTK_ARROW_LEFT, GTK_SHADOW_ETCHED_IN);
+#endif
 	gtk_container_add (GTK_CONTAINER (priv->button_left), arrow);
 
 	gtk_widget_set_size_request (GTK_WIDGET (priv->button_left), 25, 0);
 
-        gtk_box_pack_start (GTK_BOX (nav), priv->button_left, FALSE, FALSE, 0);
+	gtk_box_pack_start (GTK_BOX (nav), priv->button_left, FALSE, FALSE, 0);
 
 	g_signal_connect (priv->button_left,
 			  "clicked",
@@ -406,17 +420,21 @@ eom_thumb_nav_init (EomThumbNav *nav)
 			  G_CALLBACK (eom_thumb_nav_adj_value_changed),
 			  nav);
 
-        gtk_box_pack_start (GTK_BOX (nav), priv->sw, TRUE, TRUE, 0);
+	gtk_box_pack_start (GTK_BOX (nav), priv->sw, TRUE, TRUE, 0);
 
-        priv->button_right = gtk_button_new ();
+	priv->button_right = gtk_button_new ();
 	gtk_button_set_relief (GTK_BUTTON (priv->button_right), GTK_RELIEF_NONE);
 
-	arrow = gtk_arrow_new (GTK_ARROW_RIGHT, GTK_SHADOW_NONE);
+#if GTK_CHECK_VERSION (3, 14, 0)
+	arrow = gtk_image_new_from_icon_name ("pan-end-symbolic", GTK_ICON_SIZE_BUTTON);
+#else
+ 	arrow = gtk_arrow_new (GTK_ARROW_RIGHT, GTK_SHADOW_NONE);
+#endif
 	gtk_container_add (GTK_CONTAINER (priv->button_right), arrow);
 
 	gtk_widget_set_size_request (GTK_WIDGET (priv->button_right), 25, 0);
 
-        gtk_box_pack_start (GTK_BOX (nav), priv->button_right, FALSE, FALSE, 0);
+	gtk_box_pack_start (GTK_BOX (nav), priv->button_right, FALSE, FALSE, 0);
 
 	g_signal_connect (priv->button_right,
 			  "clicked",

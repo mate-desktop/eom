@@ -83,7 +83,8 @@ enum {
 static guint preview_signals [SIGNAL_LAST] = { 0 };
 
 enum {
-	PROP_IMAGE = 1,
+	PROP_0,
+	PROP_IMAGE,
 	PROP_IMAGE_X_ALIGN,
 	PROP_IMAGE_Y_ALIGN,
 	PROP_IMAGE_SCALE,
@@ -558,26 +559,32 @@ eom_print_preview_new (void)
 #if GTK_CHECK_VERSION (3, 0, 0)
 static gboolean
 draw_cb (GtkDrawingArea *drawing_area,
-	 cairo_t *cr,
+         cairo_t *cr,
+         gpointer  user_data)
+{
+	update_relative_sizes (EOM_PRINT_PREVIEW (user_data));
+
+	eom_print_preview_draw (EOM_PRINT_PREVIEW (user_data), cr);
+
+	if (cairo_status (cr) != CAIRO_STATUS_SUCCESS) {
+	    fprintf (stderr, "Cairo is unhappy: %s\n",
+	    cairo_status_to_string (cairo_status (cr)));
+	}
+	return TRUE;
+}
 #else
 static void
 expose_event_cb (GtkDrawingArea *drawing_area,
 		 GdkEventExpose *eev,
-#endif
 		 gpointer  user_data)
 {
 	GtkWidget *widget;
-#if !GTK_CHECK_VERSION (3, 0, 0)
 	cairo_t *cr;
-#endif
 
 	widget = GTK_WIDGET (drawing_area);
 
 	update_relative_sizes (EOM_PRINT_PREVIEW (user_data));
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
 	cr = gdk_cairo_create (gtk_widget_get_window (widget));
-#endif
 
 	eom_print_preview_draw (EOM_PRINT_PREVIEW (user_data), cr);
 
@@ -585,16 +592,10 @@ expose_event_cb (GtkDrawingArea *drawing_area,
 		fprintf (stderr, "Cairo is unhappy: %s\n",
 			 cairo_status_to_string (cairo_status (cr)));
 	}
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
 	cairo_destroy (cr);
-#endif
-
 	gdk_window_get_pointer (gtk_widget_get_window (widget), NULL, NULL, NULL);
-#if GTK_CHECK_VERSION (3, 0, 0)
-	return TRUE;
-#endif
 }
+#endif
 
 /**
  * get_current_image_coordinates:

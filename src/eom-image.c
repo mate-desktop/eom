@@ -478,9 +478,9 @@ do_emit_size_prepared_signal (EomImage *img)
 static void
 eom_image_emit_size_prepared (EomImage *img)
 {
-	gdk_threads_add_idle_full (G_PRIORITY_DEFAULT_IDLE,
-				   (GSourceFunc) do_emit_size_prepared_signal,
-				   g_object_ref (img), g_object_unref);
+	g_idle_add_full (G_PRIORITY_DEFAULT_IDLE,
+	                (GSourceFunc) do_emit_size_prepared_signal,
+	                 g_object_ref (img), g_object_unref);
 }
 
 static gboolean
