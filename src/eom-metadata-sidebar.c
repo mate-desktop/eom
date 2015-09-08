@@ -94,13 +94,49 @@ struct _EomMetadataSidebarPrivate {
 G_DEFINE_TYPE_WITH_PRIVATE(EomMetadataSidebar, eom_metadata_sidebar, GTK_TYPE_SCROLLED_WINDOW)
 
 static void
+parent_file_display_name_query_info_cb (GObject *source_object,
+                                        GAsyncResult *res,
+                                        gpointer user_data)
+{
+	EomMetadataSidebar *sidebar = EOM_METADATA_SIDEBAR (user_data);
+	GFile *parent_file = G_FILE (source_object);
+	GFileInfo *file_info;
+	gchar *baseuri;
+	gchar *display_name;
+	gchar *str;
+
+	file_info = g_file_query_info_finish (parent_file, res, NULL);
+	if (file_info == NULL) {
+		display_name = g_file_get_basename (parent_file);
+	} else {
+		display_name = g_strdup (
+			g_file_info_get_display_name (file_info));
+		g_object_unref (file_info);
+	}
+	baseuri = g_file_get_uri (parent_file);
+	str = g_markup_printf_escaped ("<a href=\"%s\">%s</a>",
+				       baseuri,
+				       display_name);
+	gtk_label_set_markup (GTK_LABEL (sidebar->priv->folder_label), str);
+
+	g_free (str);
+	g_free (baseuri);
+	g_free (display_name);
+
+	str = g_file_get_path (parent_file);
+	gtk_widget_set_tooltip_text (GTK_WIDGET (sidebar->priv->folder_label), str);
+	g_free (str);
+
+	g_object_unref (sidebar);
+}
+
+static void
 eom_metadata_sidebar_update_general_section (EomMetadataSidebar *sidebar)
 {
 	EomMetadataSidebarPrivate *priv = sidebar->priv;
 	EomImage *img = priv->image;
 	GFile *file, *parent_file;
 	GFileInfo *file_info;
-	gchar *basename, *baseuri;
 	gchar *str;
 	goffset bytes;
 	gint width, height;
@@ -146,19 +182,14 @@ eom_metadata_sidebar_update_general_section (EomMetadataSidebar *sidebar)
 		/* file is root directory itself */
 		parent_file = g_object_ref (file);
 	}
-	basename = g_file_get_basename (parent_file);
-	baseuri = g_file_get_uri (parent_file);
-	str = g_markup_printf_escaped ("<a href=\"%s\">%s</a>",
-	                               baseuri,
-	                               basename);
-	gtk_label_set_markup (GTK_LABEL (priv->folder_label), str);
-	g_free (str);
-	g_free (baseuri);
-	g_free (basename);
-
-	str = g_file_get_path (parent_file);
-	gtk_widget_set_tooltip_text (GTK_WIDGET (priv->folder_label), str);
-	g_free (str);
+	gtk_label_set_markup (GTK_LABEL (sidebar->priv->folder_label), NULL);
+	g_file_query_info_async (parent_file,
+				 G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME,
+				 G_FILE_QUERY_INFO_NONE,
+				 G_PRIORITY_DEFAULT,
+				 NULL,
+				 parent_file_display_name_query_info_cb,
+				 g_object_ref (sidebar));
 
 	g_object_unref (parent_file);
 }
