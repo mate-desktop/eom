@@ -111,10 +111,37 @@ struct _EomPropertiesDialogPrivate {
 G_DEFINE_TYPE_WITH_PRIVATE (EomPropertiesDialog, eom_properties_dialog, GTK_TYPE_DIALOG);
 
 static void
+parent_file_display_name_query_info_cb (GObject *source_object,
+					GAsyncResult *res,
+					gpointer user_data)
+{
+	EomPropertiesDialog *prop_dlg = EOM_PROPERTIES_DIALOG (user_data);
+	GFile *parent_file = G_FILE (source_object);
+	GFileInfo *file_info;
+	gchar *display_name;
+
+
+	file_info = g_file_query_info_finish (parent_file, res, NULL);
+	if (file_info == NULL) {
+		display_name = g_file_get_basename (parent_file);
+	} else {
+		display_name = g_strdup (
+			g_file_info_get_display_name (file_info));
+		g_object_unref (file_info);
+	}
+	gtk_button_set_label (GTK_BUTTON (prop_dlg->priv->folder_button),
+			      display_name);
+	gtk_widget_set_sensitive (prop_dlg->priv->folder_button, TRUE);
+
+	g_free (display_name);
+	g_object_unref (prop_dlg);
+}
+
+static void
 pd_update_general_tab (EomPropertiesDialog *prop_dlg,
 		       EomImage            *image)
 {
-	gchar *bytes_str, *dir_str, *dir_str_long;
+	gchar *bytes_str, *dir_str_long;
 	gchar *width_str, *height_str;
 	GFile *file, *parent_file;
 	GFileInfo *file_info;
@@ -169,9 +196,9 @@ pd_update_general_tab (EomPropertiesDialog *prop_dlg,
 		/* file is root directory itself */
 		parent_file = g_object_ref (file);
 	}
-	dir_str = g_file_get_basename (parent_file);
-	gtk_button_set_label (GTK_BUTTON (prop_dlg->priv->folder_button),
-			      dir_str);
+
+	gtk_widget_set_sensitive (prop_dlg->priv->folder_button, FALSE);
+	gtk_button_set_label (GTK_BUTTON (prop_dlg->priv->folder_button), NULL);
 
 	dir_str_long = g_file_get_path (parent_file);
 	gtk_widget_set_tooltip_text (GTK_WIDGET (prop_dlg->priv->folder_button),
@@ -179,11 +206,19 @@ pd_update_general_tab (EomPropertiesDialog *prop_dlg,
 
 	g_free (prop_dlg->priv->folder_button_uri);
 	prop_dlg->priv->folder_button_uri = g_file_get_uri (parent_file);
+
+	g_file_query_info_async (parent_file,
+				 G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME,
+				 G_FILE_QUERY_INFO_NONE,
+				 G_PRIORITY_DEFAULT,
+				 NULL,
+				 parent_file_display_name_query_info_cb,
+				 g_object_ref (prop_dlg));
+
 	g_object_unref (parent_file);
 
 	g_free (type_str);
 	g_free (bytes_str);
-	g_free (dir_str);
 	g_free (dir_str_long);
 }
 
