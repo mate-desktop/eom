@@ -117,7 +117,6 @@ GLIB_REQUIRED=2.36.0
 GIO_REQUIRED=2.36.0
 MATE_DESKTOP_REQUIRED=1.9.1
 GDKPIXBUF_REQUIRED=2.4.0
-MATE_ICON_THEME_REQUIRED=1.1.0
 SHARED_MIME_INFO_REQUIRED=0.20
 EXEMPI_REQUIRED=1.99.5
 
@@ -126,13 +125,12 @@ EOM_MODULES="gtk+-$GTK_API_VERSION >= $GTK_REQUIRED \
              glib-2.0 >= $GLIB_REQUIRED \
              $GMODULE_ADD \
              gio-2.0 >= $GLIB_REQUIRED \
-	     gio-unix-2.0 >= $GLIB_REQUIRED \
+	         gio-unix-2.0 >= $GLIB_REQUIRED \
              gthread-2.0 >= $GLIB_REQUIRED \
              mate-desktop-2.0 >= $MATE_DESKTOP_REQUIRED \
              gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED \
              gio-2.0 >= $GIO_REQUIRED \
              gtk+-unix-print-$GTK_API_VERSION >= $GTK_PRINT_REQUIRED \
-             mate-icon-theme >= $MATE_ICON_THEME_REQUIRED \
              shared-mime-info >= $SHARED_MIME_INFO_REQUIRED"
 
 # Introspection
