@@ -125,7 +125,7 @@ EOM_MODULES="gtk+-$GTK_API_VERSION >= $GTK_REQUIRED \
              glib-2.0 >= $GLIB_REQUIRED \
              $GMODULE_ADD \
              gio-2.0 >= $GLIB_REQUIRED \
-	         gio-unix-2.0 >= $GLIB_REQUIRED \
+             gio-unix-2.0 >= $GLIB_REQUIRED \
              gthread-2.0 >= $GLIB_REQUIRED \
              mate-desktop-2.0 >= $MATE_DESKTOP_REQUIRED \
              gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED \
