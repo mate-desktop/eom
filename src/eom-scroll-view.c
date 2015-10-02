@@ -1299,6 +1299,13 @@ display_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer data)
 		cairo_fill (cr);
 	}
 
+	/* Make sure the image is only drawn as large as needed.
+	 * This is especially necessary for SVGs where there might
+	 * be more image data available outside the image boundaries.
+	 */
+	cairo_rectangle (cr, xofs, yofs, scaled_width, scaled_height);
+	cairo_clip (cr);
+
 #ifdef HAVE_RSVG
 	if (eom_image_is_svg (view->priv->image)) {
 		cairo_matrix_t matrix, translate, scale;
@@ -1345,8 +1352,6 @@ display_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer data)
 	} else
 #endif /* HAVE_RSVG */
 	{
-		cairo_rectangle (cr, xofs, yofs, scaled_width, scaled_height);
-		cairo_clip (cr);
 		cairo_scale (cr, priv->zoom, priv->zoom);
 		cairo_set_source_surface (cr, priv->surface, xofs/priv->zoom, yofs/priv->zoom);
 		cairo_pattern_set_extend (cairo_get_source (cr), CAIRO_EXTEND_PAD);
