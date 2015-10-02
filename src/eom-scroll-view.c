@@ -2520,8 +2520,6 @@ eom_scroll_view_init (EomScrollView *view)
 	priv->display = g_object_new (GTK_TYPE_DRAWING_AREA,
 				      "can-focus", TRUE,
 				      NULL);
-	/* We don't want to be double-buffered as we are SuperSmart(tm) */
-	gtk_widget_set_double_buffered (GTK_WIDGET (priv->display), FALSE);
 
 	gtk_widget_add_events (GTK_WIDGET (priv->display),
 			       GDK_EXPOSURE_MASK
