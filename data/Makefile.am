@@ -34,26 +34,23 @@ ui_DATA = \
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = eom.pc
 
-if HAVE_GTK3
-styledir = $(pkgdatadir)
-style_DATA = eom.css
-else
-gtkrcdir = $(pkgdatadir)
-gtkrc_DATA = gtkrc
-endif
+themedir = $(pkgdatadir)
+theme_DATA = \
+        gtkrc \
+        eom.css
 
-EXTRA_DIST =					\
-        $(gtkrc_DATA)			\
-        $(ui_DATA)				\
-        $(convert_DATA)			\
-        $(DESKTOP_IN_FILES)		\
+EXTRA_DIST = \
+        $(theme_DATA) \
+        $(ui_DATA) \
+        $(convert_DATA) \
+        $(DESKTOP_IN_FILES) \
         $(appdata_in_files)
 
-CLEANFILES = 					\
+CLEANFILES = \
         $(appdata_DATA)
 
-DISTCLEANFILES = 				\
-        $(DESKTOP_FILES)		\
+DISTCLEANFILES = \
+        $(DESKTOP_FILES) \
         $(gsettings_SCHEMAS)
 
 -include $(top_srcdir)/git.mk

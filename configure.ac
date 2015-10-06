@@ -111,7 +111,6 @@ case "$with_gtk" in
        ;;
 esac
 AC_SUBST(GTK_API_VERSION)
-AM_CONDITIONAL([HAVE_GTK3], [test "x$GTK_API_VERSION" = "x3.0"])
 
 GLIB_REQUIRED=2.36.0
 GIO_REQUIRED=2.36.0
