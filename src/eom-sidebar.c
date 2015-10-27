@@ -358,6 +358,10 @@ eom_sidebar_init (EomSidebar *eom_sidebar)
 
 	eom_sidebar->priv = eom_sidebar_get_instance_private (eom_sidebar);
 
+	gtk_style_context_add_class (
+	        gtk_widget_get_style_context (GTK_WIDGET (eom_sidebar)),
+	                                      GTK_STYLE_CLASS_SIDEBAR);
+
 	/* data model */
 	eom_sidebar->priv->page_model = (GtkTreeModel *)
 			gtk_list_store_new (PAGE_COLUMN_NUM_COLS,
@@ -368,6 +372,7 @@ eom_sidebar_init (EomSidebar *eom_sidebar)
 
 	/* top option menu */
 	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+	g_object_set (hbox, "border-width", 6, NULL);
 	eom_sidebar->priv->hbox = hbox;
 	gtk_box_pack_start (GTK_BOX (eom_sidebar), hbox, FALSE, FALSE, 0);
 	gtk_widget_show (hbox);
@@ -438,8 +443,6 @@ eom_sidebar_init (EomSidebar *eom_sidebar)
 
 	gtk_notebook_set_show_border (GTK_NOTEBOOK (eom_sidebar->priv->notebook), FALSE);
 	gtk_notebook_set_show_tabs (GTK_NOTEBOOK (eom_sidebar->priv->notebook), FALSE);
-	gtk_widget_set_margin_start (eom_sidebar->priv->notebook, 6);
-	gtk_widget_set_margin_end (eom_sidebar->priv->notebook, 6);
 
 	gtk_box_pack_start (GTK_BOX (eom_sidebar), eom_sidebar->priv->notebook,
 			    TRUE, TRUE, 0);
