@@ -534,7 +534,6 @@ eom_metadata_sidebar_new (EomWindow *window)
 			       "vadjustment", NULL,
 			       "hscrollbar-policy", GTK_POLICY_NEVER,
 			       "vscrollbar-policy", GTK_POLICY_AUTOMATIC,
-			       "border-width", 6,
 			       "parent-window", window,
 			       NULL);
 }
