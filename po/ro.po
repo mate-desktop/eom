@@ -8,10 +8,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-10 15:27+0100\n"
-"PO-Revision-Date: 2015-03-18 09:46+0000\n"
+"POT-Creation-Date: 2015-09-06 17:47+0200\n"
+"PO-Revision-Date: 2015-10-28 06:16+0000\n"
 "Last-Translator: Daniel <danny34ever@yahoo.com>\n"
-"Language-Team: Romanian (http://www.transifex.com/projects/p/MATE/language/ro/)\n"
+"Language-Team: Romanian (http://www.transifex.com/mate/MATE/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,66 +25,40 @@ msgstr ""
 #. * produce duplicates, but don't worry about it. If your language
 #. * normally has a mnemonic at the start, please use the _. If not,
 #. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:922
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:936
 #, c-format
 msgid "Show “_%s”"
 msgstr "Arată „_%s”"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1385
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1399
 msgid "_Move on Toolbar"
-msgstr "_Mută în bara de unelte"
+msgstr "_Mută pe bara de unelte"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1386
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1400
 msgid "Move the selected item on the toolbar"
-msgstr "Mută elementul selectate pe bara de unelte"
+msgstr "Mută elementul selectat pe bara de unelte"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1387
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1401
 msgid "_Remove from Toolbar"
 msgstr "Ște_rge din bara de unelte"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1388
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1402
 msgid "Remove the selected item from the toolbar"
 msgstr "Șterge elementul ales din bara de unelte"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1389
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1403
 msgid "_Delete Toolbar"
 msgstr "Șter_ge bara de unelte"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1390
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1404
 msgid "Remove the selected toolbar"
 msgstr "Șterge bara de unelte aleasă"
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:485
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:498
 msgid "Separator"
 msgstr "Separator"
 
-#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:1
-msgid "Fullscreen with double-click"
-msgstr "Pe tot ecranul cu dublu-clic"
-
-#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:2
-msgid "Activate fullscreen mode with double-click"
-msgstr "Activare mod pe tot ecranul cu dublu-clic"
-
-#: ../plugins/reload/reload.eom-plugin.desktop.in.h:1
-#: ../plugins/reload/eom-reload-plugin.c:38
-msgid "Reload Image"
-msgstr "Reîncarcă imaginea"
-
-#: ../plugins/reload/reload.eom-plugin.desktop.in.h:2
-#: ../plugins/reload/eom-reload-plugin.c:38
-msgid "Reload current image"
-msgstr "Reîncarcă imaginea curentă"
-
-#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:1
-msgid "Date in statusbar"
-msgstr "Data în bara de stare"
-
-#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:2
-msgid "Shows the image date in the window statusbar"
-msgstr "Afișează data imaginii în bara de stare a ferestrei"
-
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2573
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2599
 msgid "Eye of MATE"
 msgstr "Eye of MATE"
 
@@ -99,7 +73,7 @@ msgid ""
 "subsequent images in the directory the image was loaded from. </p>"
 msgstr ""
 
-#: ../data/eom.desktop.in.in.h:1 ../src/main.c:69 ../src/main.c:248
+#: ../data/eom.desktop.in.in.h:1 ../src/main.c:73 ../src/main.c:275
 msgid "Eye of MATE Image Viewer"
 msgstr "Vizualizatorul de imagini Eye of MATE"
 
@@ -283,10 +257,10 @@ msgstr "Fundal"
 
 #: ../data/eom-preferences-dialog.ui.h:7
 msgid "As custom color:"
-msgstr ""
+msgstr "Ca o culoare personalizată:"
 
 #: ../data/eom-preferences-dialog.ui.h:8
-#: ../data/org.mate.eom.gschema.xml.in.in.h:3
+#: ../data/org.mate.eom.gschema.xml.in.h:3
 msgid "Background Color"
 msgstr "Culoare fundal"
 
@@ -336,7 +310,7 @@ msgstr "secunde"
 
 #: ../data/eom-preferences-dialog.ui.h:20
 msgid "_Random sequence"
-msgstr ""
+msgstr "Secvență _aleatoare"
 
 #: ../data/eom-preferences-dialog.ui.h:21
 msgid "_Loop sequence"
@@ -344,83 +318,83 @@ msgstr "_Repetă secvența‌"
 
 #: ../data/eom-preferences-dialog.ui.h:22
 msgid "Slideshow"
-msgstr "Succesiune automată imagini"
+msgstr "Diaporamă"
 
 #: ../data/eom-preferences-dialog.ui.h:23
 msgid "Plugins"
 msgstr "Module"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:1
+#: ../data/org.mate.eom.gschema.xml.in.h:1
 msgid "Automatic orientation"
 msgstr "Orientare automată"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:2
+#: ../data/org.mate.eom.gschema.xml.in.h:2
 msgid ""
 "Whether the image should be rotated automatically based on EXIF orientation."
 msgstr "Imaginile sunt rotite automat în funcție de informațiile de orientare EXIF."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:4
+#: ../data/org.mate.eom.gschema.xml.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
 "theme instead."
 msgstr ""
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:5
+#: ../data/org.mate.eom.gschema.xml.in.h:5
 msgid "Use a custom background color"
-msgstr ""
+msgstr "Utilizează o culoare de fundal personalizată"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:6
+#: ../data/org.mate.eom.gschema.xml.in.h:6
 msgid ""
 "If this is active, the color set by the background-color key will be used to"
 " fill the area behind the image. If it is not set, the current GTK+ theme "
 "will determine the fill color."
 msgstr ""
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:7
+#: ../data/org.mate.eom.gschema.xml.in.h:7
 msgid "Interpolate Image"
 msgstr "Interpolează imaginea"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:8
+#: ../data/org.mate.eom.gschema.xml.in.h:8
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
 msgstr ""
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:9
+#: ../data/org.mate.eom.gschema.xml.in.h:9
 msgid "Extrapolate Image"
 msgstr "Extrapolează imaginea"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:10
+#: ../data/org.mate.eom.gschema.xml.in.h:10
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
 msgstr "Dacă imaginea ar trebui să fie extrapolată la mărire. Aceasta implică o calitate mai bună, dar și o viteză scăzută pentru imaginile extrapolate."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:11
+#: ../data/org.mate.eom.gschema.xml.in.h:11
 msgid "Transparency indicator"
 msgstr "Indicator de transparență"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:12
+#: ../data/org.mate.eom.gschema.xml.in.h:12
 msgid ""
 "Determines how transparency should be indicated. Valid values are checked, "
 "color and none. If color is chosen, then the trans-color key determines the "
 "color value used."
 msgstr ""
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:13
+#: ../data/org.mate.eom.gschema.xml.in.h:13
 msgid "Scroll wheel zoom"
 msgstr "Sclare cu rotița de derulare"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:14
+#: ../data/org.mate.eom.gschema.xml.in.h:14
 msgid "Whether the scroll wheel should be used for zooming."
 msgstr "Dacă rotița de derulare să fie folosită pentru scalare."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:15
+#: ../data/org.mate.eom.gschema.xml.in.h:15
 msgid "Zoom multiplier"
 msgstr "Multiplicator scalare"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:17
+#: ../data/org.mate.eom.gschema.xml.in.h:17
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
@@ -429,102 +403,102 @@ msgid ""
 "in a 100% zoom increment."
 msgstr "Multiplicator care să fie aplicat când se utilizează rotița de derulare a mausului pentru scalare. Aceasta valoare definește pasul scalării pentru fiecare eveniment de derulare. De exemplu, 0.05 înseamnă o creștere de 5% a scalării pentru fiecare eveniment de derulare și 1.00 înseamnă o creștere 100% a scalării."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:18
+#: ../data/org.mate.eom.gschema.xml.in.h:18
 msgid "Transparency color"
 msgstr "Culoare de transparență"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:19
+#: ../data/org.mate.eom.gschema.xml.in.h:19
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
 msgstr "În cazul în care cheia de transparență are valoarea COLOR, atunci această cheie determină culoarea care este utilizată pentru a indica transparența."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:20
+#: ../data/org.mate.eom.gschema.xml.in.h:20
 msgid "Randomize the image sequence"
-msgstr ""
+msgstr "Amestecă secvența imaginilor"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:21
+#: ../data/org.mate.eom.gschema.xml.in.h:21
 msgid "Whether the sequence of images should be shown in an random loop."
 msgstr ""
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:22
+#: ../data/org.mate.eom.gschema.xml.in.h:22
 msgid "Loop through the image sequence"
 msgstr "Repetă în buclă afișarea secvenței de imagini"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:23
+#: ../data/org.mate.eom.gschema.xml.in.h:23
 msgid "Whether the sequence of images should be shown in an endless loop."
 msgstr "Dacă secvența de imagini să fie afișată într-un ciclu infinit."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:25
+#: ../data/org.mate.eom.gschema.xml.in.h:25
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
 msgstr "Permite scalarea inițială mai mare de 100%"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:26
+#: ../data/org.mate.eom.gschema.xml.in.h:26
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
 msgstr "Dacă aceasta este setată la „FALSE” atunci imaginile mici nu vor fi mărite pentru a se potrivi dimensiunii ecranului."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:27
+#: ../data/org.mate.eom.gschema.xml.in.h:27
 msgid "Delay in seconds until showing the next image"
 msgstr "Întârzierea în secunde până la afișarea următoarei imagini"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:28
+#: ../data/org.mate.eom.gschema.xml.in.h:28
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until"
 " the next one is shown automatically. Zero disables the automatic browsing."
 msgstr "O valoare mai mare de 0 determină câte secunde va fi afișată o imagine pe ecran înainte ca următoarea să fie afișată automat. Zero dezactivează navigarea automată."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:29
+#: ../data/org.mate.eom.gschema.xml.in.h:29
 msgid "Show/Hide the window toolbar."
 msgstr "Afișează/ascunde bara de unelte a ferestrei."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:30
+#: ../data/org.mate.eom.gschema.xml.in.h:30
 msgid "Show/Hide the window statusbar."
 msgstr "Afișează/ascunde bara de stare a ferestrei."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:31
+#: ../data/org.mate.eom.gschema.xml.in.h:31
 msgid "Show/Hide the image collection pane."
 msgstr "Afișează/ascunde panoul pentru colecția de imagini."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:32
+#: ../data/org.mate.eom.gschema.xml.in.h:32
 msgid "Image collection pane position."
 msgstr ""
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:33
+#: ../data/org.mate.eom.gschema.xml.in.h:33
 msgid "Whether the image collection pane should be resizable."
 msgstr "Dacă panoul colecției de imagini să fie redimensionabil."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:34
+#: ../data/org.mate.eom.gschema.xml.in.h:34
 msgid "Show/Hide the window side pane."
 msgstr "Arată/ascunde panoul lateral al ferestrei."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:35
+#: ../data/org.mate.eom.gschema.xml.in.h:35
 msgid "Show/Hide the image collection pane scroll buttons."
 msgstr "Arată/ascunde butoanele de derulare a panoului de colecții de imagini."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:36
+#: ../data/org.mate.eom.gschema.xml.in.h:36
 msgid "Close main window without asking to save changes."
-msgstr ""
+msgstr "Închide fereastra principală fără a întreba de salvarea modificărilor."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:37
+#: ../data/org.mate.eom.gschema.xml.in.h:37
 msgid "Trash images without asking"
-msgstr "Mută imaginile la gunoi fără a mai întreba"
+msgstr "Mută imaginile în coșul gunoi fără a mai întreba"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:38
+#: ../data/org.mate.eom.gschema.xml.in.h:38
 msgid ""
 "If activated, Eye of MATE won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
 "trash and would be deleted instead."
 msgstr ""
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:39
+#: ../data/org.mate.eom.gschema.xml.in.h:39
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
 msgstr "Dacă lista de metadate din dialogul de proprietăți ar trebui să aibă pagină proprie."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:40
+#: ../data/org.mate.eom.gschema.xml.in.h:40
 msgid ""
 "If activated, the detailed metadata list in the properties dialog will be "
 "moved to its own page in the dialog. This should make the dialog more usable"
@@ -532,24 +506,24 @@ msgid ""
 "be embedded on the \"Metadata\" page."
 msgstr ""
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:41
+#: ../data/org.mate.eom.gschema.xml.in.h:41
 msgid "External program to use for editing images"
-msgstr ""
+msgstr "Program extern de utilizat pentru editarea imaginilor"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:42
+#: ../data/org.mate.eom.gschema.xml.in.h:42
 msgid ""
 "The desktop file name (including the \".desktop\") of the application to use"
 " for editing images (when the \"Edit Image\" toolbar button is clicked). Set"
 " to the empty string to disable this feature."
 msgstr ""
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:43
+#: ../data/org.mate.eom.gschema.xml.in.h:43
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images"
 " are loaded."
 msgstr "Dacă dialogul de alegere fișiere ar trebui să afișeze dosarul de fotografii al utilizatorului când nu sunt imagini încărcate."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:44
+#: ../data/org.mate.eom.gschema.xml.in.h:44
 msgid ""
 "If activated and no image is loaded in the active window, the file chooser "
 "will display the user's pictures folder using the XDG special user "
@@ -557,39 +531,65 @@ msgid ""
 "will show the current working directory."
 msgstr ""
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:45
+#: ../data/org.mate.eom.gschema.xml.in.h:45
 msgid "Active plugins"
 msgstr "Module active"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:46
+#: ../data/org.mate.eom.gschema.xml.in.h:46
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
 "plugin."
 msgstr "Lista modulelor active. Nu conține „locația” modulelor active. Vezi fișierul .eom-plugin pentru a determina „locația” unui modul activ."
 
+#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:1
+msgid "Fullscreen with double-click"
+msgstr "Pe tot ecranul cu dublu-clic"
+
+#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:2
+msgid "Activate fullscreen mode with double-click"
+msgstr "Activare mod pe tot ecranul cu dublu-clic"
+
+#: ../plugins/reload/eom-reload-plugin.c:38
+#: ../plugins/reload/reload.eom-plugin.desktop.in.h:1
+msgid "Reload Image"
+msgstr "Reîncarcă imaginea"
+
+#: ../plugins/reload/eom-reload-plugin.c:38
+#: ../plugins/reload/reload.eom-plugin.desktop.in.h:2
+msgid "Reload current image"
+msgstr "Reîncarcă imaginea curentă"
+
+#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:1
+msgid "Date in statusbar"
+msgstr "Data în bara de stare"
+
+#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:2
+msgid "Shows the image date in the window statusbar"
+msgstr "Afișează data imaginii în bara de stare a ferestrei"
+
 #: ../src/eom-application.c:123
 msgid "Running in fullscreen mode"
 msgstr "Se ruleză pe tot ecranul"
 
-#: ../src/eom-close-confirmation-dialog.c:159
+#: ../src/eom-close-confirmation-dialog.c:164
 msgid "Close _without Saving"
-msgstr "Mută imaginile la _gunoi fără a salva"
+msgstr "Închide _fără a salva"
 
-#: ../src/eom-close-confirmation-dialog.c:192
+#: ../src/eom-close-confirmation-dialog.c:197
 msgid "Question"
 msgstr "Întrebare"
 
-#: ../src/eom-close-confirmation-dialog.c:373
+#: ../src/eom-close-confirmation-dialog.c:378
 msgid "If you don't save, your changes will be lost."
 msgstr "Dacă nu salvați, modificările vor fi pierdute."
 
-#: ../src/eom-close-confirmation-dialog.c:408
+#: ../src/eom-close-confirmation-dialog.c:421
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "Salvați modificările imaginii „%s” înainge de a închide?"
 
-#: ../src/eom-close-confirmation-dialog.c:603
+#: ../src/eom-close-confirmation-dialog.c:628
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
@@ -598,104 +598,122 @@ msgstr[0] "Există %d imagine cu modificări nesalvate. Salvați modificările �
 msgstr[1] "Există %d imagini cu modificări nesalvate. Salvați modificările înainte de închidere?"
 msgstr[2] "Există %d de imagini cu modificări nesalvate. Salvați modificările înainte de închidere?"
 
-#: ../src/eom-close-confirmation-dialog.c:620
+#: ../src/eom-close-confirmation-dialog.c:645
 msgid "S_elect the images you want to save:"
 msgstr "S_electați imaginile pe care vreți să le salvați:"
 
 #. Secondary label
-#: ../src/eom-close-confirmation-dialog.c:638
+#: ../src/eom-close-confirmation-dialog.c:667
 msgid "If you don't save, all your changes will be lost."
 msgstr "Dacă nu salvați, toate modificările vor fi pierdute."
 
-#: ../src/eom-file-chooser.c:127
+#: ../src/eom-file-chooser.c:132
 msgid "File format is unknown or unsupported"
 msgstr "Formatul fișierului este necunoscut sau nesuportat"
 
-#: ../src/eom-file-chooser.c:132
+#: ../src/eom-file-chooser.c:137
 msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
 msgstr "Eye of MATE nu a putut determina un format inscriptibil de fișier pe baza numelui fișierului."
 
-#: ../src/eom-file-chooser.c:133
+#: ../src/eom-file-chooser.c:138
 msgid "Please try a different file extension like .png or .jpg."
 msgstr "Încercați o altă extensie, cu ar fi .png sau .jpg."
 
-#: ../src/eom-file-chooser.c:165
+#: ../src/eom-file-chooser.c:170
 msgid "All Files"
 msgstr "Toate fișierele"
 
-#: ../src/eom-file-chooser.c:170
+#: ../src/eom-file-chooser.c:175
 msgid "All Images"
 msgstr "Toate imaginile"
 
 #. Filter name: First description then file extension, eg. "The PNG-Format
 #. (*.png)".
-#: ../src/eom-file-chooser.c:191
+#: ../src/eom-file-chooser.c:196
 #, c-format
 msgid "%s (*.%s)"
 msgstr "%s·(*.%s)"
 
 #. Pixel size of image: width x height in pixel
-#: ../src/eom-file-chooser.c:287 ../src/eom-properties-dialog.c:137
-#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:492
+#: ../src/eom-file-chooser.c:292 ../src/eom-properties-dialog.c:137
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:588
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "pixel"
 msgstr[1] "pixeli"
 msgstr[2] "de pixeli"
 
-#: ../src/eom-file-chooser.c:438
+#: ../src/eom-file-chooser.c:443
 msgid "Open Image"
 msgstr "Deschide imagine"
 
-#: ../src/eom-file-chooser.c:446
+#: ../src/eom-file-chooser.c:451
 msgid "Save Image"
 msgstr "Salvează imaginea"
 
-#: ../src/eom-file-chooser.c:454
+#: ../src/eom-file-chooser.c:459
 msgid "Open Folder"
 msgstr "Deschide dosar"
 
-#: ../src/eom-image.c:597
+#: ../src/eom-image.c:598
 #, c-format
 msgid "Transformation on unloaded image."
 msgstr "Transformare asupra unei imagini neîncărcate."
 
-#: ../src/eom-image.c:625
+#: ../src/eom-image.c:626
 #, c-format
 msgid "Transformation failed."
 msgstr "Transformarea a eșuat."
 
-#: ../src/eom-image.c:1052
+#: ../src/eom-image.c:1053
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "EXIF nu este suportat pentru acest tip de fișier."
 
-#: ../src/eom-image.c:1181
+#: ../src/eom-image.c:1182
 #, c-format
 msgid "Image loading failed."
 msgstr "Încărcarea imaginii a eșuat."
 
-#: ../src/eom-image.c:1586 ../src/eom-image.c:1688
+#: ../src/eom-image.c:1711 ../src/eom-image.c:1813
 #, c-format
 msgid "No image loaded."
 msgstr "Nicio imagine încărcată."
 
-#: ../src/eom-image.c:1596 ../src/eom-image.c:1700
+#: ../src/eom-image.c:1721 ../src/eom-image.c:1825
 #, c-format
 msgid "Temporary file creation failed."
-msgstr "Fișierul temporar nu a putut fi creat."
+msgstr "Crearea fișierului temporar a eșuat."
 
-#: ../src/eom-image-jpeg.c:373
+#: ../src/eom-image-jpeg.c:382
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr "Nu s-a putut crea un fișier temporar pentru salvare: %s"
 
-#: ../src/eom-image-jpeg.c:392
+#: ../src/eom-image-jpeg.c:393
 #, c-format
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "Nu s-a putut aloca memorie pentru încărcarea imaginii JPEG"
+
+#: ../src/eom-error-message-area.c:124
+msgid "_Retry"
+msgstr "_Reîncearcă"
+
+#: ../src/eom-error-message-area.c:167
+#, c-format
+msgid "Could not load image '%s'."
+msgstr "Nu s-a putut încărca imaginea „%s”."
+
+#: ../src/eom-error-message-area.c:209
+#, c-format
+msgid "No images found in '%s'."
+msgstr "Nu s-au găsit imagini în „%s”."
+
+#: ../src/eom-error-message-area.c:216
+msgid "The given locations contain no images."
+msgstr "Locația dată nu conține imagini."
 
 #: ../src/eom-exif-details.c:68
 msgid "Camera"
@@ -752,113 +770,135 @@ msgstr "%a, %d %B %Y  %X"
 msgid "%a, %d %B %Y"
 msgstr "%a, %d %B %Y"
 
-#: ../src/eom-error-message-area.c:107
-msgid "_Retry"
-msgstr "_Reîncearcă"
+#: ../src/eom-plugin-manager.c:51
+msgid "Plugin"
+msgstr "Modul"
 
-#: ../src/eom-error-message-area.c:141
-#, c-format
-msgid "Could not load image '%s'."
-msgstr "Nu s-a putut încărca imaginea „%s”."
+#: ../src/eom-plugin-manager.c:52
+msgid "Enabled"
+msgstr "Activat"
 
-#: ../src/eom-error-message-area.c:175
-#, c-format
-msgid "No images found in '%s'."
-msgstr "Nu s-au găsit imagini în „%s”."
+#: ../src/eom-plugin-manager.c:505 ../src/eom-window.c:3673
+msgid "_About"
+msgstr "_Despre"
 
-#: ../src/eom-error-message-area.c:182
-msgid "The given locations contain no images."
-msgstr "Locația dată nu conține imagini."
+#: ../src/eom-plugin-manager.c:513
+msgid "C_onfigure"
+msgstr "C_onfigurează"
+
+#: ../src/eom-plugin-manager.c:523
+msgid "A_ctivate"
+msgstr "A_ctivează"
+
+#: ../src/eom-plugin-manager.c:535
+msgid "Ac_tivate All"
+msgstr "Ac_tivează tot"
+
+#: ../src/eom-plugin-manager.c:540
+msgid "_Deactivate All"
+msgstr "_Dezactivează tot"
+
+#: ../src/eom-plugin-manager.c:834
+msgid "Active _Plugins:"
+msgstr "Module acti_ve:"
+
+#: ../src/eom-plugin-manager.c:867
+msgid "_About Plugin"
+msgstr "_Despre modul"
+
+#: ../src/eom-plugin-manager.c:874
+msgid "C_onfigure Plugin"
+msgstr "C_onfigurează modul"
 
 #: ../src/eom-print.c:219
 msgid "Image Settings"
 msgstr "Preferințe imagine"
 
-#: ../src/eom-print-image-setup.c:834
+#: ../src/eom-print-image-setup.c:873
 msgid "Image"
 msgstr "Imagine"
 
-#: ../src/eom-print-image-setup.c:835
+#: ../src/eom-print-image-setup.c:874
 msgid "The image whose printing properties will be set up"
 msgstr "Imaginea pentru care se configurează proprietățile de tipărire"
 
-#: ../src/eom-print-image-setup.c:841
+#: ../src/eom-print-image-setup.c:880
 msgid "Page Setup"
 msgstr "Configurare pagină"
 
-#: ../src/eom-print-image-setup.c:842
+#: ../src/eom-print-image-setup.c:881
 msgid "The information for the page where the image will be printed"
 msgstr "Informațiile pentru pagina pe care va fi tipărită imaginea"
 
-#: ../src/eom-print-image-setup.c:870
+#: ../src/eom-print-image-setup.c:914 ../src/eom-print-image-setup.c:928
 msgid "Position"
 msgstr "Poziție"
 
-#: ../src/eom-print-image-setup.c:875
+#: ../src/eom-print-image-setup.c:918 ../src/eom-print-image-setup.c:933
 msgid "_Left:"
 msgstr "_Stânga:"
 
-#: ../src/eom-print-image-setup.c:876
+#: ../src/eom-print-image-setup.c:920 ../src/eom-print-image-setup.c:934
 msgid "_Right:"
 msgstr "D_reapta:"
 
-#: ../src/eom-print-image-setup.c:877
+#: ../src/eom-print-image-setup.c:921 ../src/eom-print-image-setup.c:935
 msgid "_Top:"
 msgstr "S_us:"
 
-#: ../src/eom-print-image-setup.c:878
+#: ../src/eom-print-image-setup.c:922 ../src/eom-print-image-setup.c:936
 msgid "_Bottom:"
 msgstr "_Jos:"
 
-#: ../src/eom-print-image-setup.c:880
+#: ../src/eom-print-image-setup.c:939
 msgid "C_enter:"
 msgstr "C_entru:"
 
-#: ../src/eom-print-image-setup.c:885
+#: ../src/eom-print-image-setup.c:948
 msgid "None"
-msgstr "Nici unul"
+msgstr "Niciunul"
 
-#: ../src/eom-print-image-setup.c:887
+#: ../src/eom-print-image-setup.c:950
 msgid "Horizontal"
 msgstr "Orizontal"
 
-#: ../src/eom-print-image-setup.c:889
+#: ../src/eom-print-image-setup.c:952
 msgid "Vertical"
 msgstr "Vertical"
 
-#: ../src/eom-print-image-setup.c:891
+#: ../src/eom-print-image-setup.c:954
 msgid "Both"
 msgstr "Ambele"
 
-#: ../src/eom-print-image-setup.c:907
+#: ../src/eom-print-image-setup.c:980 ../src/eom-print-image-setup.c:991
 msgid "Size"
 msgstr "Mărime"
 
-#: ../src/eom-print-image-setup.c:912
+#: ../src/eom-print-image-setup.c:983 ../src/eom-print-image-setup.c:996
 msgid "_Width:"
 msgstr "_Lățime:"
 
-#: ../src/eom-print-image-setup.c:914
+#: ../src/eom-print-image-setup.c:985 ../src/eom-print-image-setup.c:998
 msgid "_Height:"
 msgstr "Î_nălțime:"
 
-#: ../src/eom-print-image-setup.c:917
+#: ../src/eom-print-image-setup.c:1002
 msgid "_Scaling:"
 msgstr "_Scalare:"
 
-#: ../src/eom-print-image-setup.c:930
+#: ../src/eom-print-image-setup.c:1026
 msgid "_Unit:"
 msgstr "_Unități:"
 
-#: ../src/eom-print-image-setup.c:935
+#: ../src/eom-print-image-setup.c:1035
 msgid "Millimeters"
 msgstr "Milimetri"
 
-#: ../src/eom-print-image-setup.c:937
+#: ../src/eom-print-image-setup.c:1037
 msgid "Inches"
 msgstr "Țoli"
 
-#: ../src/eom-print-image-setup.c:967
+#: ../src/eom-print-image-setup.c:1074
 msgid "Preview"
 msgstr "Previzualizare"
 
@@ -895,12 +935,12 @@ msgstr "ca atare"
 #. * Note that translating this doesn't guarantee that you get localized
 #. * digits. That needs support from your system and locale definition
 #. * too.
-#: ../src/eom-statusbar.c:133
+#: ../src/eom-statusbar.c:134
 #, c-format
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/eom-thumb-view.c:520
+#: ../src/eom-thumb-view.c:616
 msgid "Taken on"
 msgstr "Fotografiat în"
 
@@ -923,7 +963,7 @@ msgstr " (Unicode nevalid)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/eom-window.c:511
+#: ../src/eom-window.c:516
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
@@ -931,25 +971,25 @@ msgstr[0] "%i × %i pixel  %s    %i%%"
 msgstr[1] "%i × %i pixeli  %s    %i%%"
 msgstr[2] "%i × %i de pixeli  %s    %i%%"
 
-#: ../src/eom-window.c:806
+#: ../src/eom-window.c:811
 msgid "_Reload"
 msgstr "_Reîncarcă"
 
-#: ../src/eom-window.c:808 ../src/eom-window.c:2694
+#: ../src/eom-window.c:813 ../src/eom-window.c:2720
 msgctxt "MessageArea"
 msgid "Hi_de"
-msgstr ""
+msgstr "Ascun_de"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:818
+#: ../src/eom-window.c:823
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
 msgstr ""
 
-#: ../src/eom-window.c:982
+#: ../src/eom-window.c:993
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Utilizează „%s” pentru a deschide imaginea aleasă"
@@ -959,36 +999,36 @@ msgstr "Utilizează „%s” pentru a deschide imaginea aleasă"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1138
+#: ../src/eom-window.c:1149
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Se salvează imaginea „%s” (%u/%u)"
 
-#: ../src/eom-window.c:1492
+#: ../src/eom-window.c:1507
 #, c-format
 msgid "Opening image \"%s\""
-msgstr ""
+msgstr "Se deschide imaginea „%s”"
 
-#: ../src/eom-window.c:2191
+#: ../src/eom-window.c:2217
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
 msgstr "Eroare la tipărirea fișierului:\n%s"
 
-#: ../src/eom-window.c:2453
+#: ../src/eom-window.c:2479
 msgid "Toolbar Editor"
 msgstr "Editor bară de unelte"
 
-#: ../src/eom-window.c:2456
+#: ../src/eom-window.c:2482
 msgid "_Reset to Default"
 msgstr "_Restabilește la implicit"
 
-#: ../src/eom-window.c:2549
+#: ../src/eom-window.c:2575
 msgid "translator-credits"
 msgstr "Mugurel Tudor <mugurelu@mate.ro>\n\nLaunchpad Contributions:\n  Adi Roiban https://launchpad.net/~adiroiban\n  Cristian KLEIN https://launchpad.net/~cristiklein\n  Doru Horișco https://launchpad.net/~doruhushhush\n  Ionuț Jula https://launchpad.net/~ionutjula\n  Mircea MITU https://launchpad.net/~mache\n  Mugurel Tudor https://launchpad.net/~mugurelu-mate"
 
-#: ../src/eom-window.c:2552
+#: ../src/eom-window.c:2578
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -996,7 +1036,7 @@ msgid ""
 "any later version.\n"
 msgstr "Acest program este liber; îl puteți redistribui și/sau modifica în conformitate cu termenii licenței Publice Generale GNU așa cum este publicată de Free Software Foundation; fie versiunea 2 a Licenței, fie (la latitudinea dumneavoastră) orice versiune ulterioară.\n"
 
-#: ../src/eom-window.c:2556
+#: ../src/eom-window.c:2582
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1004,51 +1044,51 @@ msgid ""
 "more details.\n"
 msgstr "Acest program este distribuit cu speranța că va fi util, dar FĂRĂ NICI O GARANȚIE, fără garanție implicită de vandabilitate și  conformitate unui anumit scop.  Citiți Licența Publică Generală GNU pentru detalii.\n"
 
-#: ../src/eom-window.c:2560
+#: ../src/eom-window.c:2586
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 
-#: ../src/eom-window.c:2578
+#: ../src/eom-window.c:2604
 msgid "The MATE image viewer."
 msgstr "Vizualizatorul de imagini pentru MATE."
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2692
+#: ../src/eom-window.c:2718
 msgid "_Open Background Preferences"
-msgstr ""
+msgstr "_Deschide preferințe fundal"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2708
+#: ../src/eom-window.c:2734
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
 msgstr "Imaginea „%s” a fost configurată ca fundal al desktopului.\nDoriți să-i modificați aspectul?"
 
-#: ../src/eom-window.c:3101
+#: ../src/eom-window.c:3133
 msgid "Saving image locally…"
 msgstr "Se salvează imaginea local…"
 
-#: ../src/eom-window.c:3181
+#: ../src/eom-window.c:3213
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
-msgstr "Sunteți sigur(ă) că doriți să mutați\n„%s” la gunoi?"
+msgstr "Sigur doriți să mutați\n„%s” în coșul de gunoi?"
 
-#: ../src/eom-window.c:3184
+#: ../src/eom-window.c:3216
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
-msgstr "Nu s-a putut găsi gunoiul pentru „%s”. Doriți să ștergeți permanent această imagine?"
+msgstr "Nu s-a putut găsi un coș de gunoi pentru „%s”. Doriți să ștergeți permanent această imagine?"
 
-#: ../src/eom-window.c:3189
+#: ../src/eom-window.c:3221
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1056,452 +1096,412 @@ msgid ""
 msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
-msgstr[0] "Doriți mutarea la gunoi a\nimaginii selectate?"
-msgstr[1] "Doriți mutarea la gunoi a\ncelor %d imagini selectate?"
-msgstr[2] "Doriți mutarea la gunoi a\ncelor %d de imagini selectate?"
+msgstr[0] "Sigur doriți mutarea în coșul de gunoi a\nimaginii selectate?"
+msgstr[1] "Sigur doriți mutarea în coșul de gunoi a\ncelor %d imagini selectate?"
+msgstr[2] "Sigur doriți mutarea în coșul de gunoi a\ncelor %d de imagini selectate?"
 
-#: ../src/eom-window.c:3194
+#: ../src/eom-window.c:3226
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
 msgstr "O parte din imaginile selectate nu au putut fi mutate la gunoi și voi fi șterse definitiv. Doriți să continuați?"
 
-#: ../src/eom-window.c:3211 ../src/eom-window.c:3695 ../src/eom-window.c:3722
+#: ../src/eom-window.c:3243 ../src/eom-window.c:3727 ../src/eom-window.c:3754
 msgid "Move to _Trash"
 msgstr "Mu_tă la gunoi"
 
-#: ../src/eom-window.c:3213
+#: ../src/eom-window.c:3245
 msgid "_Do not ask again during this session"
 msgstr "_Nu întreba din nou în această sesiune"
 
-#: ../src/eom-window.c:3258 ../src/eom-window.c:3272
+#: ../src/eom-window.c:3290 ../src/eom-window.c:3304
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Nu s-a putut accesa gunoiul."
 
-#: ../src/eom-window.c:3280
+#: ../src/eom-window.c:3312
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Nu s-a putut șterge fișierul"
 
-#: ../src/eom-window.c:3377
+#: ../src/eom-window.c:3409
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Eroare la ștergerea imaginii %s"
 
-#: ../src/eom-window.c:3619
+#: ../src/eom-window.c:3651
 msgid "_Image"
 msgstr "_Imagine"
 
-#: ../src/eom-window.c:3620
+#: ../src/eom-window.c:3652
 msgid "_Edit"
 msgstr "_Editare"
 
-#: ../src/eom-window.c:3621
+#: ../src/eom-window.c:3653
 msgid "_View"
 msgstr "_Vizualizare"
 
-#: ../src/eom-window.c:3622
+#: ../src/eom-window.c:3654
 msgid "_Go"
 msgstr "Navi_gare"
 
-#: ../src/eom-window.c:3623
+#: ../src/eom-window.c:3655
 msgid "_Tools"
 msgstr "Unel_te"
 
-#: ../src/eom-window.c:3624
+#: ../src/eom-window.c:3656
 msgid "_Help"
 msgstr "_Ajutor"
 
-#: ../src/eom-window.c:3626
+#: ../src/eom-window.c:3658
 msgid "_Open…"
 msgstr "_Deschide…"
 
-#: ../src/eom-window.c:3627
+#: ../src/eom-window.c:3659
 msgid "Open a file"
 msgstr "Deschide un fișier"
 
-#: ../src/eom-window.c:3629
+#: ../src/eom-window.c:3661
 msgid "_Close"
 msgstr "În_chide"
 
-#: ../src/eom-window.c:3630
+#: ../src/eom-window.c:3662
 msgid "Close window"
 msgstr "Închide fereastra"
 
-#: ../src/eom-window.c:3632
+#: ../src/eom-window.c:3664
 msgid "T_oolbar"
 msgstr "Bară de _unelte"
 
-#: ../src/eom-window.c:3633
+#: ../src/eom-window.c:3665
 msgid "Edit the application toolbar"
 msgstr "Editează bara de unelte a aplicației"
 
-#: ../src/eom-window.c:3635
+#: ../src/eom-window.c:3667
 msgid "Prefere_nces"
 msgstr "Preferi_nțe"
 
-#: ../src/eom-window.c:3636
+#: ../src/eom-window.c:3668
 msgid "Preferences for Eye of MATE"
 msgstr "Preferințe pentru Eye of MATE"
 
-#: ../src/eom-window.c:3638
+#: ../src/eom-window.c:3670
 msgid "_Contents"
 msgstr "_Conținut"
 
-#: ../src/eom-window.c:3639
+#: ../src/eom-window.c:3671
 msgid "Help on this application"
 msgstr "Ajutor pentru această aplicație"
 
-#: ../src/eom-window.c:3641 ../src/eom-plugin-manager.c:505
-msgid "_About"
-msgstr "_Despre"
-
-#: ../src/eom-window.c:3642
+#: ../src/eom-window.c:3674
 msgid "About this application"
 msgstr "Despre această aplicație"
 
-#: ../src/eom-window.c:3647
+#: ../src/eom-window.c:3679
 msgid "_Toolbar"
 msgstr "Bară de unel_te"
 
-#: ../src/eom-window.c:3648
+#: ../src/eom-window.c:3680
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Comută vizibilitatea barei de unelte în fereastra curentă"
 
-#: ../src/eom-window.c:3650
+#: ../src/eom-window.c:3682
 msgid "_Statusbar"
 msgstr "Bară de _stare"
 
-#: ../src/eom-window.c:3651
+#: ../src/eom-window.c:3683
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Comută vizibilitatea barei de stare în fereastra curentă"
 
-#: ../src/eom-window.c:3653
+#: ../src/eom-window.c:3685
 msgid "_Image Collection"
 msgstr "Colecție _imagini"
 
-#: ../src/eom-window.c:3654
+#: ../src/eom-window.c:3686
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "Comută vizibilitatea panoului pentru colecția de imagini în fereastra curentă"
 
-#: ../src/eom-window.c:3656
+#: ../src/eom-window.c:3688
 msgid "Side _Pane"
 msgstr "_Panou lateral"
 
-#: ../src/eom-window.c:3657
+#: ../src/eom-window.c:3689
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Schimbă vizibilitatea panoului lateral în fereastra curentă"
 
-#: ../src/eom-window.c:3662
+#: ../src/eom-window.c:3694
 msgid "_Save"
 msgstr "_Salvează"
 
-#: ../src/eom-window.c:3663
+#: ../src/eom-window.c:3695
 msgid "Save changes in currently selected images"
 msgstr "Salvează modificările din imaginile selectate curent"
 
-#: ../src/eom-window.c:3665
+#: ../src/eom-window.c:3697
 msgid "Open _with"
 msgstr "Desc_hide cu"
 
-#: ../src/eom-window.c:3666
+#: ../src/eom-window.c:3698
 msgid "Open the selected image with a different application"
 msgstr "Deschide imaginile selectate cu a altă aplicație"
 
-#: ../src/eom-window.c:3668
+#: ../src/eom-window.c:3700
 msgid "Save _As…"
 msgstr "Salvează c_a…"
 
-#: ../src/eom-window.c:3669
+#: ../src/eom-window.c:3701
 msgid "Save the selected images with a different name"
 msgstr "Salvează imaginile selectate sub un alt nume"
 
-#: ../src/eom-window.c:3671
+#: ../src/eom-window.c:3703
 msgid "_Print…"
 msgstr "Ti_părește…"
 
-#: ../src/eom-window.c:3672
+#: ../src/eom-window.c:3704
 msgid "Print the selected image"
 msgstr "Tipărește imaginile selectate"
 
-#: ../src/eom-window.c:3674
+#: ../src/eom-window.c:3706
 msgid "Prope_rties"
 msgstr "Prop_rietăți"
 
-#: ../src/eom-window.c:3675
+#: ../src/eom-window.c:3707
 msgid "Show the properties and metadata of the selected image"
 msgstr "Afișează prioprietățile și informațiile imaginii selectate"
 
-#: ../src/eom-window.c:3677
+#: ../src/eom-window.c:3709
 msgid "_Undo"
 msgstr "_Refă"
 
-#: ../src/eom-window.c:3678
+#: ../src/eom-window.c:3710
 msgid "Undo the last change in the image"
 msgstr "Anulează ultima modificare din imagine"
 
-#: ../src/eom-window.c:3680
+#: ../src/eom-window.c:3712
 msgid "Flip _Horizontal"
 msgstr "Răstoarnă ori_zontal"
 
-#: ../src/eom-window.c:3681
+#: ../src/eom-window.c:3713
 msgid "Mirror the image horizontally"
 msgstr "Oglindește orizontal imaginea"
 
-#: ../src/eom-window.c:3683
+#: ../src/eom-window.c:3715
 msgid "Flip _Vertical"
 msgstr "Răstoarnă _vertical"
 
-#: ../src/eom-window.c:3684
+#: ../src/eom-window.c:3716
 msgid "Mirror the image vertically"
 msgstr "Oglindește vertical imaginea"
 
-#: ../src/eom-window.c:3686
+#: ../src/eom-window.c:3718
 msgid "_Rotate Clockwise"
 msgstr "_Rotește în sens orar"
 
-#: ../src/eom-window.c:3687
+#: ../src/eom-window.c:3719
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Rotește imaginea 90 de grade către dreapta"
 
-#: ../src/eom-window.c:3689
+#: ../src/eom-window.c:3721
 msgid "Rotate Counterc_lockwise"
 msgstr "Rotire în sensulul invers al ace_lor de ceasornic"
 
-#: ../src/eom-window.c:3690
+#: ../src/eom-window.c:3722
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Rotește imaginea 90 de grade către stânga"
 
-#: ../src/eom-window.c:3692
+#: ../src/eom-window.c:3724
 msgid "Set as _Desktop Background"
 msgstr "Definește ca fundal _desktop"
 
-#: ../src/eom-window.c:3693
+#: ../src/eom-window.c:3725
 msgid "Set the selected image as the desktop background"
 msgstr "Definește imaginea selectată ca fundal pentru desktop"
 
-#: ../src/eom-window.c:3696
+#: ../src/eom-window.c:3728
 msgid "Move the selected image to the trash folder"
-msgstr "Mută la gunoi imaginea selectată"
+msgstr "Mută în coșul de gunoi imaginea selectată"
 
-#: ../src/eom-window.c:3698
+#: ../src/eom-window.c:3730
 msgid "_Copy"
-msgstr ""
+msgstr "_Copiază"
 
-#: ../src/eom-window.c:3699
+#: ../src/eom-window.c:3731
 msgid "Copy the selected image to the clipboard"
-msgstr ""
+msgstr "Copiază imaginea selectată în clipboard"
 
-#: ../src/eom-window.c:3701 ../src/eom-window.c:3713 ../src/eom-window.c:3716
+#: ../src/eom-window.c:3733 ../src/eom-window.c:3745 ../src/eom-window.c:3748
 msgid "_Zoom In"
 msgstr "_Mărește"
 
-#: ../src/eom-window.c:3702 ../src/eom-window.c:3714
+#: ../src/eom-window.c:3734 ../src/eom-window.c:3746
 msgid "Enlarge the image"
 msgstr "Mărește imaginea"
 
-#: ../src/eom-window.c:3704 ../src/eom-window.c:3719
+#: ../src/eom-window.c:3736 ../src/eom-window.c:3751
 msgid "Zoom _Out"
 msgstr "Mi_cșorează"
 
-#: ../src/eom-window.c:3705 ../src/eom-window.c:3717 ../src/eom-window.c:3720
+#: ../src/eom-window.c:3737 ../src/eom-window.c:3749 ../src/eom-window.c:3752
 msgid "Shrink the image"
 msgstr "Micșorează imaginea"
 
-#: ../src/eom-window.c:3707
+#: ../src/eom-window.c:3739
 msgid "_Normal Size"
 msgstr "Dimensiune _normală"
 
-#: ../src/eom-window.c:3708
+#: ../src/eom-window.c:3740
 msgid "Show the image at its normal size"
 msgstr "Afișează imaginea la dimensiunea ei normală"
 
-#: ../src/eom-window.c:3710
+#: ../src/eom-window.c:3742
 msgid "_Best Fit"
-msgstr ""
+msgstr "Cea ai _bună potrivire"
 
-#: ../src/eom-window.c:3711
+#: ../src/eom-window.c:3743
 msgid "Fit the image to the window"
 msgstr "Potrivește dimensiunea imaginii în fereastră"
 
-#: ../src/eom-window.c:3728
+#: ../src/eom-window.c:3760
 msgid "_Fullscreen"
 msgstr "Pe _tot ecranul"
 
-#: ../src/eom-window.c:3729
+#: ../src/eom-window.c:3761
 msgid "Show the current image in fullscreen mode"
 msgstr "Afișează imaginea curentă pe tot ecranul"
 
-#: ../src/eom-window.c:3731
+#: ../src/eom-window.c:3763
 msgid "Pause Slideshow"
-msgstr ""
+msgstr "Pune diaporamă în pauză"
 
-#: ../src/eom-window.c:3732
+#: ../src/eom-window.c:3764
 msgid "Pause or resume the slideshow"
-msgstr ""
+msgstr "Suspendă sau reia diaporama"
 
-#: ../src/eom-window.c:3737 ../src/eom-window.c:3752
+#: ../src/eom-window.c:3769 ../src/eom-window.c:3784
 msgid "_Previous Image"
 msgstr "Imaginea _precedentă"
 
-#: ../src/eom-window.c:3738
+#: ../src/eom-window.c:3770
 msgid "Go to the previous image of the collection"
 msgstr "Mergi la imaginea anterioră din colecție"
 
-#: ../src/eom-window.c:3740
+#: ../src/eom-window.c:3772
 msgid "_Next Image"
 msgstr "Imaginea _următoare"
 
-#: ../src/eom-window.c:3741
+#: ../src/eom-window.c:3773
 msgid "Go to the next image of the collection"
 msgstr "Mergi la imaginea următoare din colecție"
 
-#: ../src/eom-window.c:3743 ../src/eom-window.c:3755
+#: ../src/eom-window.c:3775 ../src/eom-window.c:3787
 msgid "_First Image"
 msgstr "P_rima imagine"
 
-#: ../src/eom-window.c:3744
+#: ../src/eom-window.c:3776
 msgid "Go to the first image of the collection"
 msgstr "Mergi la prima imagine din colecție"
 
-#: ../src/eom-window.c:3746 ../src/eom-window.c:3758
+#: ../src/eom-window.c:3778 ../src/eom-window.c:3790
 msgid "_Last Image"
 msgstr "Ul_tima imagine"
 
-#: ../src/eom-window.c:3747
+#: ../src/eom-window.c:3779
 msgid "Go to the last image of the collection"
 msgstr "Mergi la ultima imagine din colecție"
 
-#: ../src/eom-window.c:3749
+#: ../src/eom-window.c:3781
 msgid "_Random Image"
 msgstr "Imagine aleatoa_re"
 
-#: ../src/eom-window.c:3750
+#: ../src/eom-window.c:3782
 msgid "Go to a random image of the collection"
 msgstr "Mergi la o imagine aleatoare din colecție"
 
-#: ../src/eom-window.c:3764
+#: ../src/eom-window.c:3796
 msgid "S_lideshow"
-msgstr ""
+msgstr "_Diaporamă"
 
-#: ../src/eom-window.c:3765
+#: ../src/eom-window.c:3797
 msgid "Start a slideshow view of the images"
 msgstr "Pornește o succesiune automată a imaginilor"
 
-#: ../src/eom-window.c:3831
+#: ../src/eom-window.c:3863
 msgid "Previous"
 msgstr "Precedenta"
 
-#: ../src/eom-window.c:3835
+#: ../src/eom-window.c:3867
 msgid "Next"
 msgstr "Următoarea"
 
-#: ../src/eom-window.c:3839
+#: ../src/eom-window.c:3871
 msgid "Right"
 msgstr "Dreapta"
 
-#: ../src/eom-window.c:3842
+#: ../src/eom-window.c:3874
 msgid "Left"
 msgstr "Stânga"
 
-#: ../src/eom-window.c:3845
+#: ../src/eom-window.c:3877
 msgid "In"
 msgstr "Mărește"
 
-#: ../src/eom-window.c:3848
+#: ../src/eom-window.c:3880
 msgid "Out"
 msgstr "Micșorează"
 
-#: ../src/eom-window.c:3851
+#: ../src/eom-window.c:3883
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/eom-window.c:3854
+#: ../src/eom-window.c:3886
 msgid "Fit"
 msgstr "Potrivește"
 
-#: ../src/eom-window.c:3857
+#: ../src/eom-window.c:3889
 msgid "Collection"
 msgstr "Colecție"
 
-#: ../src/eom-window.c:3860
+#: ../src/eom-window.c:3892
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Gunoi"
 
-#: ../src/eom-window.c:4208
+#: ../src/eom-window.c:4245
 #, c-format
 msgid "Edit the current image using %s"
-msgstr ""
+msgstr "Editează imaginea curentă utilizând %s"
 
-#: ../src/eom-window.c:4210
+#: ../src/eom-window.c:4247
 msgid "Edit Image"
-msgstr ""
+msgstr "Editare Imagine"
 
-#: ../src/eom-plugin-manager.c:51
-msgid "Plugin"
-msgstr "Modul"
-
-#: ../src/eom-plugin-manager.c:52
-msgid "Enabled"
-msgstr "Activat"
-
-#: ../src/eom-plugin-manager.c:513
-msgid "C_onfigure"
-msgstr "C_onfigurează"
-
-#: ../src/eom-plugin-manager.c:523
-msgid "A_ctivate"
-msgstr "A_ctivează"
-
-#: ../src/eom-plugin-manager.c:535
-msgid "Ac_tivate All"
-msgstr "Ac_tivează tot"
-
-#: ../src/eom-plugin-manager.c:540
-msgid "_Deactivate All"
-msgstr "_Dezactivează tot"
-
-#: ../src/eom-plugin-manager.c:834
-msgid "Active _Plugins:"
-msgstr "Module acti_ve:"
-
-#: ../src/eom-plugin-manager.c:863
-msgid "_About Plugin"
-msgstr "_Despre modul"
-
-#: ../src/eom-plugin-manager.c:870
-msgid "C_onfigure Plugin"
-msgstr "C_onfigurează modul"
-
-#: ../src/main.c:76
+#: ../src/main.c:80
 msgid "Open in fullscreen mode"
 msgstr "Deschide pe tot ecranul"
 
-#: ../src/main.c:77
+#: ../src/main.c:81
 msgid "Disable image collection"
 msgstr "Dezactivează colecția de imagini"
 
-#: ../src/main.c:78
+#: ../src/main.c:82
 msgid "Open in slideshow mode"
-msgstr "Deschide în mod succesiune automată a imaginilor"
+msgstr "Deschide în mod diaporamă"
 
-#: ../src/main.c:80
+#: ../src/main.c:84
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "Pornește o nouă instanță în locul refolosirii instanței curente"
 
-#: ../src/main.c:83
+#: ../src/main.c:87
 msgid "Show the application's version"
 msgstr "Arată versiunea aplicației"
 
-#: ../src/main.c:84
+#: ../src/main.c:88
 msgid "[FILE…]"
 msgstr "[FIȘIER…]"
 
 #. I18N: The '%s' is replaced with eom's command name.
-#: ../src/main.c:210
+#: ../src/main.c:219
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "Rulați „%s --help” pentru a vedea lista completă a opțiunilor liniei de comandă."
