@@ -276,11 +276,15 @@ main (int argc, char **argv)
 
 	load_files ();
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	gdk_threads_enter ();
+#endif
 
 	gtk_main ();
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	gdk_threads_leave ();
+#endif
 
   	if (startup_files)
 		g_strfreev (startup_files);
