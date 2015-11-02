@@ -469,7 +469,7 @@ static gboolean key_press_event_cb      (GtkWidget *widget, GdkEventKey *event, 
 #if GTK_CHECK_VERSION (3, 0, 0)
 static gboolean draw_cb (GtkDrawingArea *drawing_area, cairo_t *cr, gpointer user_data);
 #else
-static void expose_event_cb (GtkDrawingArea *drawing_area, GdkEventExpose *eev, gpointer  user_data);
+static gboolean expose_event_cb (GtkDrawingArea *drawing_area, GdkEventExpose *eev, gpointer  user_data);
 #endif
 static void size_allocate_cb (GtkWidget *widget, GtkAllocation *allocation, gpointer user_data);
 
@@ -530,13 +530,13 @@ eom_print_preview_new (void)
 
 /* 	update_relative_sizes (preview); */
 
+	g_signal_connect (G_OBJECT (area),
 #if GTK_CHECK_VERSION (3, 0, 0)
-	g_signal_connect (G_OBJECT (area), "draw",
-			  G_CALLBACK (draw_cb), preview);
+			  "draw", G_CALLBACK (draw_cb),
 #else
-	g_signal_connect (G_OBJECT (area), "expose-event",
-			  G_CALLBACK (expose_event_cb), preview);
+			  "expose-event", G_CALLBACK (expose_event_cb),
 #endif
+			  preview);
 
 	g_signal_connect (G_OBJECT (area), "motion-notify-event",
 			  G_CALLBACK (motion_notify_event_cb), preview);
@@ -556,46 +556,37 @@ eom_print_preview_new (void)
 	return GTK_WIDGET (preview);
 }
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 static gboolean
+#if GTK_CHECK_VERSION (3, 0, 0)
 draw_cb (GtkDrawingArea *drawing_area,
-         cairo_t *cr,
-         gpointer  user_data)
-{
-	update_relative_sizes (EOM_PRINT_PREVIEW (user_data));
-
-	eom_print_preview_draw (EOM_PRINT_PREVIEW (user_data), cr);
-
-	if (cairo_status (cr) != CAIRO_STATUS_SUCCESS) {
-	    fprintf (stderr, "Cairo is unhappy: %s\n",
-	    cairo_status_to_string (cairo_status (cr)));
-	}
-	return TRUE;
-}
+		 cairo_t *cr,
 #else
-static void
 expose_event_cb (GtkDrawingArea *drawing_area,
 		 GdkEventExpose *eev,
+#endif
 		 gpointer  user_data)
 {
-	GtkWidget *widget;
-	cairo_t *cr;
-
-	widget = GTK_WIDGET (drawing_area);
-
 	update_relative_sizes (EOM_PRINT_PREVIEW (user_data));
-	cr = gdk_cairo_create (gtk_widget_get_window (widget));
+
+#if !GTK_CHECK_VERSION (3, 0, 0)
+	GtkWidget *widget = GTK_WIDGET (drawing_area);
+	cairo_t *cr = gdk_cairo_create (gtk_widget_get_window (widget));
+#endif
 
 	eom_print_preview_draw (EOM_PRINT_PREVIEW (user_data), cr);
 
 	if (cairo_status (cr) != CAIRO_STATUS_SUCCESS) {
 		fprintf (stderr, "Cairo is unhappy: %s\n",
-			 cairo_status_to_string (cairo_status (cr)));
+		    cairo_status_to_string (cairo_status (cr)));
 	}
+
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	cairo_destroy (cr);
 	gdk_window_get_pointer (gtk_widget_get_window (widget), NULL, NULL, NULL);
-}
 #endif
+
+	return TRUE;
+}
 
 /**
  * get_current_image_coordinates:
