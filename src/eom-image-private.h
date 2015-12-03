@@ -51,7 +51,6 @@ struct _EomImagePrivate {
 
 	goffset           bytes;
 	gchar            *file_type;
-	gboolean          threadsafe_format;
 
 	/* Holds EXIF raw data */
 	guint             exif_chunk_len;
