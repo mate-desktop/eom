@@ -538,7 +538,7 @@ eom_list_store_append_directory (EomListStore *store,
 /**
  * eom_list_store_add_files:
  * @store: An #EomListStore.
- * @file_list: A %NULL-terminated list of #GFile's.
+ * @file_list: (element-type GFile): A %NULL-terminated list of #GFile's.
  *
  * Adds a list of #GFile's to @store. The given list
  * must be %NULL-terminated.
@@ -667,7 +667,7 @@ eom_list_store_remove_image (EomListStore *store, EomImage *image)
 
 /**
  * eom_list_store_new_from_glist:
- * @list: a %NULL-terminated list of #EomImage's.
+ * @list: (element-type EomImage): a %NULL-terminated list of #EomImage's.
  *
  * Creates a new #EomListStore from a list of #EomImage's.
  * The given list must be %NULL-terminated.
@@ -727,7 +727,7 @@ eom_list_store_get_pos_by_image (EomListStore *store, EomImage *image)
  * Gets the #EomImage in the position @pos of @store. If there is
  * no image at position @pos, %NULL is returned.
  *
- * Returns: the #EomImage in position @pos or %NULL.
+ * Returns: (transfer full): the #EomImage in position @pos or %NULL.
  *
  **/
 EomImage *

@@ -351,6 +351,15 @@ eom_job_model_class_init (EomJobModelClass *class)
 	EOM_JOB_CLASS (class)->run = eom_job_model_run;
 }
 
+/**
+ * eom_job_model_new:
+ * @file_list: (element-type GFile): a #GFile list
+ *
+ * Creates a new #EomJob model.
+ *
+ * Returns: A #EomJob.
+ */
+
 EomJob *
 eom_job_model_new (GSList *file_list)
 {
@@ -477,6 +486,16 @@ eom_job_transform_class_init (EomJobTransformClass *class)
 	EOM_JOB_CLASS (class)->run = eom_job_transform_run;
 }
 
+/**
+ * eom_job_transform_new:
+ * @images: (element-type EomImage) (transfer full): a #EomImage list
+ * @trans: a #EogTransform
+ *
+ * Create a new #EomJob for image transformation.
+ *
+ * Returns: A #EomJob.
+ */
+
 EomJob *
 eom_job_transform_new (GList *images, EomTransform *trans)
 {
@@ -563,6 +582,15 @@ eom_job_save_class_init (EomJobSaveClass *class)
 	G_OBJECT_CLASS (class)->dispose = eom_job_save_dispose;
 	EOM_JOB_CLASS (class)->run = eom_job_save_run;
 }
+
+/**
+ * eom_job_save_new:
+ * @images: (element-type EomImage) (transfer full): a #EomImage list
+ *
+ * Creates a new #EomJob for image saving.
+ *
+ * Returns: A #EomJob.
+ */
 
 EomJob *
 eom_job_save_new (GList *images)
@@ -683,6 +711,17 @@ eom_job_save_as_class_init (EomJobSaveAsClass *class)
 	G_OBJECT_CLASS (class)->dispose = eom_job_save_as_dispose;
 	EOM_JOB_CLASS (class)->run = eom_job_save_as_run;
 }
+
+/**
+ * eom_job_save_as_new:
+ * @images: (element-type EomImage) (transfer full): a #EomImage list
+ * @converter: a URI converter
+ * file: a #GFile
+ *
+ * Creates a new #EomJob for save as.
+ *
+ * Returns: A #EomJob.
+ */
 
 EomJob *
 eom_job_save_as_new (GList *images, EomURIConverter *converter, GFile *file)
@@ -832,6 +871,16 @@ eom_job_copy_class_init (EomJobCopyClass *class)
 	G_OBJECT_CLASS (class)->dispose = eom_job_copy_dispose;
 	EOM_JOB_CLASS (class)->run = eom_job_copy_run;
 }
+
+/**
+ * eom_job_copy_new:
+ * @images: (element-type EomImage) (transfer full): a #EomImage list
+ * @dest: destination path for the copy
+ *
+ * Creates a new #EomJob.
+ *
+ * Returns: A #EomJob.
+ */
 
 EomJob *
 eom_job_copy_new (GList *images, const gchar *dest)

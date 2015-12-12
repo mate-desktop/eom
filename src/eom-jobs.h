@@ -265,7 +265,7 @@ EomJob         *eom_job_save_as_new        (GList           *images,
 					    EomURIConverter *converter,
 					    GFile           *file);
 
-/*EomJobCopy */
+/* EomJobCopy */
 GType          eom_job_copy_get_type      (void) G_GNUC_CONST;
 EomJob        *eom_job_copy_new           (GList            *images,
 					   const gchar      *dest);

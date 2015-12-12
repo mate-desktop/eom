@@ -920,7 +920,7 @@ eom_thumb_view_get_image_from_path (EomThumbView *thumbview, GtkTreePath *path)
  * is not ensured to be really the first selected image in @thumbview, but
  * generally, it will be.
  *
- * Returns: A #EomImage.
+ * Returns: (transfer full): A #EomImage.
  **/
 EomImage *
 eom_thumb_view_get_first_selected_image (EomThumbView *thumbview)
