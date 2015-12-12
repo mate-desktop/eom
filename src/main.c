@@ -30,7 +30,7 @@
 #include <dbus/dbus-glib-bindings.h>
 #include <gdk/gdkx.h>
 #endif
-#ifdef HAVE_INSTROSPECTION
+#ifdef HAVE_INTROSPECTION
 #include <girepository.h>
 #endif
 

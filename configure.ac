@@ -142,6 +142,8 @@ else
 	have_introspection=no
 fi
 
+AM_CONDITIONAL(HAVE_INTROSPECTION, test "x$have_introspection" = xyes)
+
 # ***************
 # ZLIB (required)
 # ***************
