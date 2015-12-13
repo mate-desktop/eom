@@ -345,9 +345,13 @@ AC_SUBST(EOM_LIBS)
 # *******************************************************
 
 # Check GDK rendering target
-gdk_target=`$PKG_CONFIG --variable=target gdk-${GTK_API_VERSION}`
+if test "${GTK_API_VERSION}" = "2.0" ; then
+	gdk_target_has_x11=`$PKG_CONFIG --variable=target gdk-${GTK_API_VERSION} | grep x11`
+else
+	gdk_target_has_x11=`$PKG_CONFIG --variable=targets gdk-${GTK_API_VERSION} | grep x11`
+fi
 
-if test "x$have_lcms" = "xyes" || test "$gdk_target" = "x11"; then
+if test "x$have_lcms" = "xyes" || test "$gdk_target_has_x11" != ""; then
 	PKG_CHECK_MODULES(X11, [x11], have_x11=yes, have_x11=no)
 
 	if test "x$have_x11" != "xyes"; then
