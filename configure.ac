@@ -369,12 +369,6 @@ fi
 
 GLIB_GSETTINGS
 
-# ************
-# Sun Keyboard
-# ************
-
-AC_CHECK_HEADERS(X11/Sunkeysym.h, AC_DEFINE(HAVE_SUNKEYSYM_H, 1, [Sun Keyboard Support]))
-
 # **************
 # Python Support
 # **************
