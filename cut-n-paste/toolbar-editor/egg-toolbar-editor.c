@@ -566,7 +566,11 @@ append_grid (GtkGrid *grid, GList *items, gint y, gint width)
 
       if (y > 0)
         {
+#if GTK_CHECK_VERSION(3, 0, 0)
+          item = gtk_separator_new (GTK_ORIENTATION_HORIZONTAL);
+#else
           item = gtk_hseparator_new ();
+#endif
           alignment = gtk_alignment_new (0.5, 0.5, 1.0, 0.0);
           g_object_set (G_OBJECT (alignment), "expand", TRUE, NULL);
           gtk_container_add (GTK_CONTAINER (alignment), item);
