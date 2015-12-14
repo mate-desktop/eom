@@ -867,7 +867,11 @@ eom_plugin_manager_init (EomPluginManager *pm)
 
 	gtk_label_set_mnemonic_widget (GTK_LABEL (label), pm->priv->tree);
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+	hbuttonbox = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
+#else
 	hbuttonbox = gtk_hbutton_box_new ();
+#endif
 
 	gtk_box_pack_start (GTK_BOX (pm), hbuttonbox, FALSE, FALSE, 0);
 
