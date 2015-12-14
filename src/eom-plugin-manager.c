@@ -746,7 +746,9 @@ plugin_manager_construct_tree (EomPluginManager *pm)
 
 	g_object_unref (model);
 
+#if !GTK_CHECK_VERSION (3, 14, 0)
 	gtk_tree_view_set_rules_hint (GTK_TREE_VIEW (pm->priv->tree), TRUE);
+#endif
 	gtk_tree_view_set_headers_visible (GTK_TREE_VIEW (pm->priv->tree), FALSE);
 
 	/* First column */
