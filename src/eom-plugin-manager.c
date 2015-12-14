@@ -46,7 +46,11 @@ enum {
 #define EOM_PLUGIN_MANAGER_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_PLUGIN_MANAGER, EomPluginManagerPrivate))
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+G_DEFINE_TYPE (EomPluginManager, eom_plugin_manager, GTK_TYPE_BOX)
+#else
 G_DEFINE_TYPE (EomPluginManager, eom_plugin_manager, GTK_TYPE_VBOX)
+#endif
 
 #define PLUGIN_MANAGER_NAME_TITLE   _("Plugin")
 #define PLUGIN_MANAGER_ACTIVE_TITLE _("Enabled")
@@ -836,6 +840,11 @@ eom_plugin_manager_init (EomPluginManager *pm)
 	GtkWidget *hbuttonbox;
 
 	eom_debug (DEBUG_PLUGINS);
+
+#if GTK_CHECK_VERSION (3, 2, 0)
+	gtk_orientable_set_orientation (GTK_ORIENTABLE (pm),
+									GTK_ORIENTATION_VERTICAL);
+#endif
 
 	pm->priv = EOM_PLUGIN_MANAGER_GET_PRIVATE (pm);
 

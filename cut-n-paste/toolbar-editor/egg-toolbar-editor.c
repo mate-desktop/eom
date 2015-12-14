@@ -80,7 +80,11 @@ struct EggToolbarEditorPrivate
   gulong     sig_handlers[SIGNAL_HANDLER_LIST_SIZE];
 };
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+G_DEFINE_TYPE (EggToolbarEditor, egg_toolbar_editor, GTK_TYPE_BOX)
+#else
 G_DEFINE_TYPE (EggToolbarEditor, egg_toolbar_editor, GTK_TYPE_VBOX);
+#endif
 
 static gint
 compare_items (gconstpointer a,
@@ -733,6 +737,11 @@ static void
 setup_editor (EggToolbarEditor *editor)
 {
   GtkWidget *scrolled_window;
+
+#if GTK_CHECK_VERSION (3, 2, 0)
+  gtk_orientable_set_orientation (GTK_ORIENTABLE (editor),
+                                  GTK_ORIENTATION_VERTICAL);
+#endif
 
   gtk_container_set_border_width (GTK_CONTAINER (editor), 12);
   scrolled_window = gtk_scrolled_window_new (NULL, NULL);
