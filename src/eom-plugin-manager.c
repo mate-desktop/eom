@@ -841,7 +841,7 @@ eom_plugin_manager_init (EomPluginManager *pm)
 
 	eom_debug (DEBUG_PLUGINS);
 
-#if GTK_CHECK_VERSION (3, 2, 0)
+#if GTK_CHECK_VERSION (3, 0, 0)
 	gtk_orientable_set_orientation (GTK_ORIENTABLE (pm),
 									GTK_ORIENTATION_VERTICAL);
 #endif

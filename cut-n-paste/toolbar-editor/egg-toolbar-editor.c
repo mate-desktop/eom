@@ -738,7 +738,7 @@ setup_editor (EggToolbarEditor *editor)
 {
   GtkWidget *scrolled_window;
 
-#if GTK_CHECK_VERSION (3, 2, 0)
+#if GTK_CHECK_VERSION (3, 0, 0)
   gtk_orientable_set_orientation (GTK_ORIENTABLE (editor),
                                   GTK_ORIENTATION_VERTICAL);
 #endif
