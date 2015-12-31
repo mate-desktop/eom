@@ -30,6 +30,7 @@
 
 #ifdef HAVE_STRPTIME
 #define _XOPEN_SOURCE
+#define _XOPEN_SOURCE_EXTENDED 1
 #endif
 #include <time.h>
 
