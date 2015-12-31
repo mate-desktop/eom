@@ -53,6 +53,7 @@ typedef ExifData EomExifData;
 /* Define EomExifData type */
 G_DEFINE_BOXED_TYPE(EomExifData, eom_exif_data, eom_exif_data_copy, eom_exif_data_free)
 
+#ifdef HAVE_STRPTIME
 static gpointer
 _check_strptime_updates_wday (gpointer data)
 {
@@ -63,6 +64,7 @@ _check_strptime_updates_wday (gpointer data)
 	/* Check if tm.tm_wday is set to Wednesday (3) now */
 	return GBOOLEAN_TO_POINTER (tm.tm_wday == 3);
 }
+#endif
 
 /**
  * _calculate_wday_yday:
