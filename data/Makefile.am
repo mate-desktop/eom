@@ -20,9 +20,6 @@ gsettings_ENUM_FILES = $(top_srcdir)/src/eom-scroll-view.h	\
 gsettings_SCHEMAS = org.mate.eom.gschema.xml
 @GSETTINGS_RULES@
 
-convertdir = $(datadir)/MateConf/gsettings
-convert_DATA = eom.convert
-
 uidir = $(pkgdatadir)
 ui_DATA = \
 	eom-image-properties-dialog.ui \
@@ -42,7 +39,6 @@ theme_DATA = \
 EXTRA_DIST = \
         $(theme_DATA) \
         $(ui_DATA) \
-        $(convert_DATA) \
         $(DESKTOP_IN_FILES) \
         $(appdata_in_files)
 
