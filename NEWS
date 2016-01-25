@@ -1,6 +1,12 @@
 eom 1.13.0
 ==========
 
+ * fix compilation with enabled GObject Introspection
+ * fix GTK+3 build when --without-cms is set
+ * Gtk+3: fix more deprecations
+ * drop MateConf migration script
+ * use _XOPEN_SOURCE_EXTENDED as OpenBSD needs it for strptime
+
 eom 1.12.1
 ==========
 
