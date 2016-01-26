@@ -656,7 +656,7 @@ wrap_in_frame (const gchar *label,
 	gchar *bold_text;
 
 	label_widget = gtk_label_new ("");
-#if GTK_CHECK_VERSION (3, 14, 0)
+#if GTK_CHECK_VERSION (3, 0, 0)
 	gtk_widget_set_halign (label_widget, GTK_ALIGN_START);
 #else
 	gtk_misc_set_alignment (GTK_MISC (label_widget), 0.0, 0.5);
@@ -703,8 +703,8 @@ table_attach_spin_button_with_label (GtkWidget *table,
 	GtkWidget *label, *spin_button;
 
 	label = gtk_label_new_with_mnemonic (text_label);
-#if GTK_CHECK_VERSION (3, 14, 0)
-	gtk_widget_set_halign (label, GTK_ALIGN_START);
+#if GTK_CHECK_VERSION (3, 16, 0)
+	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
 #else
 	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
 #endif
@@ -937,8 +937,8 @@ eom_print_image_setup_init (EomPrintImageSetup *setup)
 #endif
 
 	label = gtk_label_new_with_mnemonic (_("C_enter:"));
-#if GTK_CHECK_VERSION (3, 14, 0)
-	gtk_widget_set_halign (label, GTK_ALIGN_START);
+#if GTK_CHECK_VERSION (3, 16, 0)
+	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
 #else
 	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
 #endif
@@ -1024,8 +1024,8 @@ eom_print_image_setup_init (EomPrintImageSetup *setup)
 	priv->scaling = hscale;
 
 	label = gtk_label_new_with_mnemonic (_("_Unit:"));
-#if GTK_CHECK_VERSION (3, 14, 0)
-	gtk_widget_set_halign (label, GTK_ALIGN_START);
+#if GTK_CHECK_VERSION (3, 16, 0)
+	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
 #else
 	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
 #endif

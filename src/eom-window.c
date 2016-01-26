@@ -829,14 +829,17 @@ image_file_changed_cb (EomImage *img, EomWindow *window)
 
 	hbox = gtk_hbox_new (FALSE, 8);
 	gtk_box_pack_start (GTK_BOX (hbox), image, FALSE, FALSE, 0);
-#if GTK_CHECK_VERSION (3, 14, 0)
-	gtk_widget_set_valign (image, GTK_ALIGN_START);
-	gtk_box_pack_start (GTK_BOX (hbox), label, TRUE, TRUE, 0);
-	gtk_widget_set_halign (label, GTK_ALIGN_START);
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gtk_widget_set_halign (image, GTK_ALIGN_START);
+	gtk_widget_set_valign (image, GTK_ALIGN_END);
 #else
-	gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0);
+	gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0.0);
+#endif
 	gtk_box_pack_start (GTK_BOX (hbox), label, TRUE, TRUE, 0);
-	gtk_misc_set_alignment (GTK_MISC (label), 0, 0.5);
+#if GTK_CHECK_VERSION (3, 16, 0)
+	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
+#else
+	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
 #endif
 	gtk_box_pack_start (GTK_BOX (gtk_info_bar_get_content_area (GTK_INFO_BAR (info_bar))), hbox, TRUE, TRUE, 0);
 	gtk_widget_show_all (hbox);
@@ -2743,14 +2746,17 @@ eom_window_set_wallpaper (EomWindow *window, const gchar *filename, const gchar 
 
 	hbox = gtk_hbox_new (FALSE, 8);
 	gtk_box_pack_start (GTK_BOX (hbox), image, FALSE, FALSE, 0);
-#if GTK_CHECK_VERSION (3, 14, 0)
-	gtk_widget_set_valign (image, GTK_ALIGN_START);
-	gtk_box_pack_start (GTK_BOX (hbox), label, TRUE, TRUE, 0);
-	gtk_widget_set_halign (label, GTK_ALIGN_START);
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gtk_widget_set_halign (image, GTK_ALIGN_START);
+	gtk_widget_set_valign (image, GTK_ALIGN_END);
 #else
-	gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0);
+	gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0.0);
+#endif
 	gtk_box_pack_start (GTK_BOX (hbox), label, TRUE, TRUE, 0);
-	gtk_misc_set_alignment (GTK_MISC (label), 0, 0.5);
+#if GTK_CHECK_VERSION (3, 16, 0)
+	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
+#else
+	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
 #endif
 	gtk_box_pack_start (GTK_BOX (gtk_info_bar_get_content_area (GTK_INFO_BAR (info_bar))), hbox, TRUE, TRUE, 0);
 	gtk_widget_show_all (hbox);
