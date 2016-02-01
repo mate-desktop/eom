@@ -460,10 +460,7 @@ file_monitor_changed_cb (GFileMonitor *monitor,
 		}
 		g_object_unref (file_info);
 		break;
-	case G_FILE_MONITOR_EVENT_CHANGES_DONE_HINT:
-	case G_FILE_MONITOR_EVENT_PRE_UNMOUNT:
-	case G_FILE_MONITOR_EVENT_UNMOUNTED:
-	case G_FILE_MONITOR_EVENT_MOVED:
+	default:
 		break;
 	}
 }

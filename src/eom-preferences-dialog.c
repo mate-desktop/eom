@@ -314,13 +314,15 @@ eom_preferences_dialog_constructor (GType type,
 }
 
 static void
-eom_preferences_dialog_dispose (EomPreferencesDialog *pref_dlg)
+eom_preferences_dialog_dispose (GObject *object)
 {
-	pref_dlg->priv = EOM_PREFERENCES_DIALOG_GET_PRIVATE (pref_dlg);
+	EomPreferencesDialog *pref_dlg = EOM_PREFERENCES_DIALOG (object);
 
 	g_object_unref (pref_dlg->priv->view_settings);
 	g_object_unref (pref_dlg->priv->fullscreen_settings);
 	g_object_unref (pref_dlg->priv->ui_settings);
+
+	G_OBJECT_CLASS (eom_preferences_dialog_parent_class)->dispose (object);
 }
 
 static void
