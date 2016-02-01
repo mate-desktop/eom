@@ -206,9 +206,7 @@ eom_thumb_view_dispose (GObject *object)
 static void
 eom_thumb_view_finalize (GObject *object)
 {
-	EomThumbView *thumbview;
 	g_return_if_fail (EOM_IS_THUMB_VIEW (object));
-	thumbview = EOM_THUMB_VIEW (object);
 
 	G_OBJECT_CLASS (eom_thumb_view_parent_class)->finalize (object);
 }
@@ -220,9 +218,7 @@ eom_thumb_view_destroy (GtkWidget *object)
 eom_thumb_view_destroy (GtkObject *object)
 #endif
 {
-	EomThumbView *thumbview;
 	g_return_if_fail (EOM_IS_THUMB_VIEW (object));
-	thumbview = EOM_THUMB_VIEW (object);
 
 #if GTK_CHECK_VERSION(3, 0, 0)
 	GTK_WIDGET_CLASS (eom_thumb_view_parent_class)->destroy (object);
@@ -264,9 +260,7 @@ eom_thumb_view_set_property (GObject      *object,
 	{
 	case PROP_ORIENTATION:
 		view->priv->orientation = g_value_get_enum (value);
-#if GTK_CHECK_VERSION (3, 4, 3)
 		eom_thumb_view_update_columns (view);
-#endif
 		break;
 	default:
 		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
