@@ -4551,6 +4551,13 @@ eom_window_init (EomWindow *window)
 
 	eom_debug (DEBUG_WINDOW);
 
+#if GTK_CHECK_VERSION(3, 0, 0)
+    GtkStyleContext *context;
+
+    context = gtk_widget_get_style_context (GTK_WIDGET (window));
+    gtk_style_context_add_class (context, "eom-window");
+#endif
+
 	hints.min_width  = EOM_WINDOW_MIN_WIDTH;
 	hints.min_height = EOM_WINDOW_MIN_HEIGHT;
 
