@@ -41,10 +41,11 @@
 
 #include "totem-scrsaver.h"
 
-#define GS_SERVICE   "org.mate.ScreenSaver"
-#define GS_PATH      "/org/mate/ScreenSaver"
-#define GS_INTERFACE "org.mate.ScreenSaver"
+#define GS_SERVICE   "org.gnome.SessionManager"
+#define GS_PATH      "/org/gnome/SessionManager"
+#define GS_INTERFACE "org.gnome.SessionManager"
 
+#define GSM_INHIBITOR_FLAG_IDLE 1 << 3
 #define XSCREENSAVER_MIN_TIMEOUT 60
 
 enum {
@@ -61,9 +62,8 @@ struct TotemScrsaverPrivate {
 	char *reason;
 
 	GDBusProxy *gs_proxy;
-        gboolean have_screensaver_dbus;
+	gboolean have_session_dbus;
 	guint32 cookie;
-	gboolean old_dbus_api;
 
 	/* To save the screensaver info */
 	int timeout;
@@ -82,7 +82,7 @@ G_DEFINE_TYPE(TotemScrsaver, totem_scrsaver, G_TYPE_OBJECT)
 static gboolean
 screensaver_is_running_dbus (TotemScrsaver *scr)
 {
-        return scr->priv->have_screensaver_dbus;
+	return scr->priv->have_session_dbus;
 }
 
 static void
@@ -97,23 +97,8 @@ on_inhibit_cb (GObject      *source_object,
 
 	value = g_dbus_proxy_call_finish (proxy, res, &error);
 	if (!value) {
-		if (!scr->priv->old_dbus_api &&
-		    g_error_matches (error, G_DBUS_ERROR, G_DBUS_ERROR_UNKNOWN_METHOD)) {
-			g_return_if_fail (scr->priv->reason != NULL);
-			/* try the old API */
-			scr->priv->old_dbus_api = TRUE;
-			g_dbus_proxy_call (proxy,
-					   "InhibitActivation",
-					   g_variant_new ("(s)",
-							  scr->priv->reason),
-					   G_DBUS_CALL_FLAGS_NO_AUTO_START,
-					   -1,
-					   NULL,
-					   on_inhibit_cb,
-					   scr);
-		} else {
-			g_warning ("Problem inhibiting the screensaver: %s", error->message);
-		}
+		g_warning ("Problem inhibiting the screensaver: %s", error->message);
+		g_object_unref (scr);
 		g_error_free (error);
 
 		return;
@@ -125,6 +110,7 @@ on_inhibit_cb (GObject      *source_object,
 	else
 		scr->priv->cookie = 0;
 	g_variant_unref (value);
+	g_object_unref (scr);
 }
 
 static void
@@ -139,21 +125,8 @@ on_uninhibit_cb (GObject      *source_object,
 
 	value = g_dbus_proxy_call_finish (proxy, res, &error);
 	if (!value) {
-		if (!scr->priv->old_dbus_api &&
-		    g_error_matches (error, G_DBUS_ERROR, G_DBUS_ERROR_UNKNOWN_METHOD)) {
-			/* try the old API */
-			scr->priv->old_dbus_api = TRUE;
-			g_dbus_proxy_call (proxy,
-					   "AllowActivation",
-					   g_variant_new ("()"),
-					   G_DBUS_CALL_FLAGS_NO_AUTO_START,
-					   -1,
-					   NULL,
-					   on_uninhibit_cb,
-					   scr);
-		} else {
-			g_warning ("Problem uninhibiting the screensaver: %s", error->message);
-		}
+		g_warning ("Problem uninhibiting the screensaver: %s", error->message);
+		g_object_unref (scr);
 		g_error_free (error);
 
 		return;
@@ -162,34 +135,38 @@ on_uninhibit_cb (GObject      *source_object,
 	/* clear the cookie */
 	scr->priv->cookie = 0;
 	g_variant_unref (value);
+
+	g_object_unref (scr);
 }
 
 static void
 screensaver_inhibit_dbus (TotemScrsaver *scr,
 			  gboolean	 inhibit)
 {
-        TotemScrsaverPrivate *priv = scr->priv;
+	TotemScrsaverPrivate *priv = scr->priv;
 
-        if (!priv->have_screensaver_dbus)
-                return;
+	if (!priv->have_session_dbus)
+		return;
 
-	scr->priv->old_dbus_api = FALSE;
+	g_object_ref (scr);
 
 	if (inhibit) {
 		g_return_if_fail (scr->priv->reason != NULL);
 		g_dbus_proxy_call (priv->gs_proxy,
 				   "Inhibit",
-				   g_variant_new ("(ss)",
+				   g_variant_new ("(susu)",
 						  g_get_application_name (),
-						  scr->priv->reason),
+						  0,
+						  scr->priv->reason,
+						  GSM_INHIBITOR_FLAG_IDLE),
 				   G_DBUS_CALL_FLAGS_NO_AUTO_START,
 				   -1,
 				   NULL,
 				   on_inhibit_cb,
 				   scr);
 	} else {
-                g_dbus_proxy_call (priv->gs_proxy,
-				   "UnInhibit",
+		g_dbus_proxy_call (priv->gs_proxy,
+				   "Uninhibit",
 				   g_variant_new ("(u)", priv->cookie),
 				   G_DBUS_CALL_FLAGS_NO_AUTO_START,
 				   -1,
@@ -214,15 +191,15 @@ screensaver_disable_dbus (TotemScrsaver *scr)
 static void
 screensaver_update_dbus_presence (TotemScrsaver *scr)
 {
-        TotemScrsaverPrivate *priv = scr->priv;
+	TotemScrsaverPrivate *priv = scr->priv;
 	gchar *name_owner;
 
 	name_owner = g_dbus_proxy_get_name_owner (priv->gs_proxy);
 	if (name_owner) {
-		priv->have_screensaver_dbus = TRUE;
+		priv->have_session_dbus = TRUE;
 		g_free (name_owner);
 	} else {
-		priv->have_screensaver_dbus = FALSE;
+		priv->have_session_dbus = FALSE;
 	}
 }
 
@@ -231,7 +208,7 @@ screensaver_dbus_owner_changed_cb (GObject    *object,
                                    GParamSpec *pspec,
                                    gpointer    user_data)
 {
-        TotemScrsaver *scr = TOTEM_SCRSAVER (user_data);
+	TotemScrsaver *scr = TOTEM_SCRSAVER (user_data);
 
 	screensaver_update_dbus_presence (scr);
 }
@@ -258,7 +235,7 @@ screensaver_dbus_proxy_new_cb (GObject      *source,
 static void
 screensaver_init_dbus (TotemScrsaver *scr)
 {
-        g_dbus_proxy_new_for_bus (G_BUS_TYPE_SESSION,
+	g_dbus_proxy_new_for_bus (G_BUS_TYPE_SESSION,
 	                          G_DBUS_PROXY_FLAGS_DO_NOT_LOAD_PROPERTIES,
 	                          NULL,
 	                          GS_SERVICE,
@@ -282,6 +259,7 @@ static void
 screensaver_enable_x11 (TotemScrsaver *scr)
 {
 	Display *display;
+
 #ifdef HAVE_XTEST
 	if (scr->priv->have_xtest != FALSE)
 	{
@@ -290,7 +268,7 @@ screensaver_enable_x11 (TotemScrsaver *scr)
 	}
 #endif /* HAVE_XTEST */
 
-	display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default());
+	display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
 	XLockDisplay (display);
 	XSetScreenSaver (display,
 			scr->priv->timeout,
@@ -308,7 +286,7 @@ fake_event (TotemScrsaver *scr)
 	{
 		Display *display;
 
-		display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default());
+		display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
 		XLockDisplay (display);
 		XTestFakeKeyEvent (display, *scr->priv->keycode,
 				True, CurrentTime);
@@ -331,7 +309,7 @@ screensaver_disable_x11 (TotemScrsaver *scr)
 {
 	Display *display;
 
-	display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default());
+	display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
 
 #ifdef HAVE_XTEST
 	if (scr->priv->have_xtest != FALSE)
@@ -372,7 +350,7 @@ screensaver_init_x11 (TotemScrsaver *scr)
 	int a, b, c, d;
 	Display *display;
 
-	display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default());
+	display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
 
 	XLockDisplay (display);
 	scr->priv->have_xtest = (XTestQueryExtension (display, &a, &b, &c, &d) == True);
@@ -380,13 +358,13 @@ screensaver_init_x11 (TotemScrsaver *scr)
 	{
 		scr->priv->keycode1 = XKeysymToKeycode (display, XK_Alt_L);
 		if (scr->priv->keycode1 == 0) {
-			g_warning ("scr->priv->keycode1 not existant");
+			g_warning ("scr->priv->keycode1 not existent");
 		}
 		scr->priv->keycode2 = XKeysymToKeycode (display, XK_Alt_R);
 		if (scr->priv->keycode2 == 0) {
 			scr->priv->keycode2 = XKeysymToKeycode (display, XK_Alt_L);
 			if (scr->priv->keycode2 == 0) {
-				g_warning ("scr->priv->keycode2 not existant");
+				g_warning ("scr->priv->keycode2 not existent");
 			}
 		}
 		scr->priv->keycode = &scr->priv->keycode1;
@@ -494,7 +472,7 @@ totem_scrsaver_init (TotemScrsaver *scr)
 void
 totem_scrsaver_disable (TotemScrsaver *scr)
 {
-	g_return_if_fail (TOTEM_SCRSAVER (scr));
+	g_return_if_fail (TOTEM_IS_SCRSAVER (scr));
 
 	if (scr->priv->disabled != FALSE)
 		return;
@@ -515,7 +493,7 @@ totem_scrsaver_disable (TotemScrsaver *scr)
 void
 totem_scrsaver_enable (TotemScrsaver *scr)
 {
-	g_return_if_fail (TOTEM_SCRSAVER (scr));
+	g_return_if_fail (TOTEM_IS_SCRSAVER (scr));
 
 	if (scr->priv->disabled == FALSE)
 		return;
@@ -536,7 +514,7 @@ totem_scrsaver_enable (TotemScrsaver *scr)
 void
 totem_scrsaver_set_state (TotemScrsaver *scr, gboolean enable)
 {
-	g_return_if_fail (TOTEM_SCRSAVER (scr));
+	g_return_if_fail (TOTEM_IS_SCRSAVER (scr));
 
 	if (scr->priv->disabled == !enable)
 		return;
@@ -562,5 +540,5 @@ totem_scrsaver_finalize (GObject *object)
 	{}
 #endif
 
-        G_OBJECT_CLASS (totem_scrsaver_parent_class)->finalize (object);
+	G_OBJECT_CLASS (totem_scrsaver_parent_class)->finalize (object);
 }
