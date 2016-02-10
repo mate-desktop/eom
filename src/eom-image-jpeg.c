@@ -121,6 +121,8 @@ init_transform_info (EomImage *image, jpeg_transform_info *info)
 
 	g_return_if_fail (EOM_IS_IMAGE (image));
 
+	memset (info, 0x0, sizeof (jpeg_transform_info));
+
 	priv = image->priv;
 
 	if (priv->trans != NULL && priv->trans_autorotate != NULL) {
