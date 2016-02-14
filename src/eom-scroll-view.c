@@ -1411,7 +1411,7 @@ eom_scroll_view_set_antialiasing_in (EomScrollView *view, gboolean state)
 
 	priv = view->priv;
 
-	new_interp_type = state ? CAIRO_FILTER_BILINEAR : CAIRO_FILTER_NEAREST;
+	new_interp_type = state ? CAIRO_FILTER_GOOD : CAIRO_FILTER_NEAREST;
 
 	if (priv->interp_type_in != new_interp_type) {
 		priv->interp_type_in = new_interp_type;
@@ -1430,7 +1430,7 @@ eom_scroll_view_set_antialiasing_out (EomScrollView *view, gboolean state)
 
 	priv = view->priv;
 
-	new_interp_type = state ? CAIRO_FILTER_BILINEAR : CAIRO_FILTER_NEAREST;
+	new_interp_type = state ? CAIRO_FILTER_GOOD : CAIRO_FILTER_NEAREST;
 
 	if (priv->interp_type_out != new_interp_type) {
 		priv->interp_type_out = new_interp_type;
@@ -1763,8 +1763,8 @@ eom_scroll_view_init (EomScrollView *view)
 	priv->min_zoom = MIN_ZOOM_FACTOR;
 	priv->zoom_mode = ZOOM_MODE_FIT;
 	priv->upscale = FALSE;
-	priv->interp_type_in = CAIRO_FILTER_BILINEAR;
-	priv->interp_type_out = CAIRO_FILTER_BILINEAR;
+	priv->interp_type_in = CAIRO_FILTER_GOOD;
+	priv->interp_type_out = CAIRO_FILTER_GOOD;
 	priv->scroll_wheel_zoom = FALSE;
 	priv->zoom_multiplier = IMAGE_VIEW_ZOOM_MULTIPLIER;
 	priv->image = NULL;
