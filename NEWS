@@ -1,3 +1,14 @@
+eom 1.13.1
+==========
+
+ * plugins: don't use stock icon names
+ * avoid integer overflow when allocating a large block of memory
+ * totem-screensaver: use org.gnome.SessionManager to inhibit screensaver
+ * totem-screensaver: don't use old API and add ref to TotemScrsaver
+ * totem-screensaver: fix assertions on entry to TotemScrsaver methods
+ * GTK+3: add eom-window style class at top level
+ * fix build warnings and remove useless nested #if
+
 eom 1.13.0
 ==========
 
