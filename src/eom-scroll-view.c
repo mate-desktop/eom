@@ -1306,7 +1306,7 @@ display_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer data)
 
 #ifdef HAVE_RSVG
 	if (eom_image_is_svg (view->priv->image)) {
-		cairo_matrix_t matrix, translate, scale;
+		cairo_matrix_t matrix, translate, scale, original;
 		EomTransform *transform = eom_image_get_transform (priv->image);
 		cairo_matrix_init_identity (&matrix);
 		if (transform) {
@@ -1343,6 +1343,8 @@ display_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer data)
 		cairo_matrix_init_translate (&translate, xofs, yofs);
 		cairo_matrix_multiply (&matrix, &matrix, &translate);
 
+		cairo_get_matrix (cr, &original);
+		cairo_matrix_multiply (&matrix, &matrix, &original);
 		cairo_set_matrix (cr, &matrix);
 
 		rsvg_handle_render_cairo (eom_image_get_svg (priv->image), cr);
