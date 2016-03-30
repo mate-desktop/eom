@@ -806,6 +806,12 @@ image_file_changed_cb (EomImage *img, EomWindow *window)
 	if (window->priv->needs_reload_confirmation == FALSE)
 		return;
 
+	if (!eom_image_is_modified (img)) {
+		/* Auto-reload when image is unmodified */
+		eom_window_reload_image (window);
+		return;
+	}
+
 	window->priv->needs_reload_confirmation = FALSE;
 
 	info_bar = gtk_info_bar_new_with_buttons (_("_Reload"),
