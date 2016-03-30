@@ -3390,7 +3390,7 @@ eom_window_cmd_move_to_trash (GtkAction *action, gpointer user_data)
 
 	/* FIXME: make a nice progress dialog */
 	/* Do the work actually. First try to delete the image from the disk. If this
-	 * is successfull, remove it from the screen. Otherwise show error dialog.
+	 * is successful, remove it from the screen. Otherwise show error dialog.
 	 */
 	for (it = images; it != NULL; it = it->next) {
 		GError *error = NULL;
@@ -4165,7 +4165,7 @@ get_appinfo_for_editor (EomWindow *window)
 	 * (item is available, but can't find the GtkAction for it).
 	 *
 	 * By ensuring we keep the GAppInfo around, we avoid the
-	 * possibility of that situation occuring.
+	 * possibility of that situation occurring.
 	 */
 	static GDesktopAppInfo *app_info = NULL;
 	static gboolean initialised;

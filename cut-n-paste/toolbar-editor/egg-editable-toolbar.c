@@ -663,7 +663,7 @@ toolbar_drag_data_received_cb (GtkToolbar         *toolbar,
   char *name = NULL;
   gboolean used = FALSE;
 
-  /* Find out where the drop is occuring, and the name of what is being dropped. */
+  /* Find out where the drop is occurring, and the name of what is being dropped. */
   if (gtk_selection_data_get_length (selection_data) >= 0)
     {
       ipos = gtk_toolbar_get_drop_index (toolbar, x, y);
