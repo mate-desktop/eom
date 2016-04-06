@@ -11,10 +11,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-10 15:27+0100\n"
-"PO-Revision-Date: 2014-11-12 18:45+0000\n"
+"POT-Creation-Date: 2015-11-30 18:12+0300\n"
+"PO-Revision-Date: 2016-03-23 07:56+0000\n"
 "Last-Translator: mauron\n"
-"Language-Team: Turkish (http://www.transifex.com/projects/p/MATE/language/tr/)\n"
+"Language-Team: Turkish (http://www.transifex.com/mate/MATE/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,66 +28,40 @@ msgstr ""
 #. * produce duplicates, but don't worry about it. If your language
 #. * normally has a mnemonic at the start, please use the _. If not,
 #. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:922
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:936
 #, c-format
 msgid "Show “_%s”"
 msgstr "“_%s” Göster"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1385
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1399
 msgid "_Move on Toolbar"
 msgstr "_Araç Çubuğunda Taşı"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1386
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1400
 msgid "Move the selected item on the toolbar"
 msgstr "Seçilen öğeyi araç çubuğu üzerinde taşı"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1387
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1401
 msgid "_Remove from Toolbar"
 msgstr "Araç Çubuğundan _Sil"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1388
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1402
 msgid "Remove the selected item from the toolbar"
 msgstr "Seçilen öğeyi araç çubuğundan sil"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1389
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1403
 msgid "_Delete Toolbar"
 msgstr "Araç Çubuğunu _Sil"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1390
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1404
 msgid "Remove the selected toolbar"
 msgstr "Seçilen araç çubuğunu sil"
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:485
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:498
 msgid "Separator"
 msgstr "Ayraç"
 
-#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:1
-msgid "Fullscreen with double-click"
-msgstr "Çift tıklama ile tam ekran"
-
-#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:2
-msgid "Activate fullscreen mode with double-click"
-msgstr "Çift tıklama ile tam ekran kipini etkinleştir"
-
-#: ../plugins/reload/reload.eom-plugin.desktop.in.h:1
-#: ../plugins/reload/eom-reload-plugin.c:38
-msgid "Reload Image"
-msgstr "Resmi Tekrar Yükle"
-
-#: ../plugins/reload/reload.eom-plugin.desktop.in.h:2
-#: ../plugins/reload/eom-reload-plugin.c:38
-msgid "Reload current image"
-msgstr "Mevcut resmi tekrar yükle"
-
-#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:1
-msgid "Date in statusbar"
-msgstr "Durum çubuğunda tarih"
-
-#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:2
-msgid "Shows the image date in the window statusbar"
-msgstr "Pencere durum çubuğunda resmin tarihini gösterir"
-
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2573
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2599
 msgid "Eye of MATE"
 msgstr "MATE'nin Gözü"
 
@@ -102,7 +76,7 @@ msgid ""
 "subsequent images in the directory the image was loaded from. </p>"
 msgstr "<p> MATE'nin gözü, bilgisayarınızdaki resimleri taramak için kullanabileceğiniz sade bir görüntüleyicidir. Herhangi bir resim yüklendiğinde onu döndürebilir, yakınlaştırabilir ve dosyanın yüklendiği klasördeki diğer resimleri görüntüleyebilirsiniz. </p>"
 
-#: ../data/eom.desktop.in.in.h:1 ../src/main.c:69 ../src/main.c:248
+#: ../data/eom.desktop.in.in.h:1 ../src/main.c:73 ../src/main.c:275
 msgid "Eye of MATE Image Viewer"
 msgstr "MATE'nin Gözü Resim Görüntüleyicisi"
 
@@ -289,7 +263,7 @@ msgid "As custom color:"
 msgstr "Özel renk olarak:"
 
 #: ../data/eom-preferences-dialog.ui.h:8
-#: ../data/org.mate.eom.gschema.xml.in.in.h:3
+#: ../data/org.mate.eom.gschema.xml.in.h:3
 msgid "Background Color"
 msgstr "Arkaplan rengi"
 
@@ -353,77 +327,77 @@ msgstr "Slayt Gösterisi"
 msgid "Plugins"
 msgstr "Eklentiler"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:1
+#: ../data/org.mate.eom.gschema.xml.in.h:1
 msgid "Automatic orientation"
 msgstr "Kendiliğinden yönelme"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:2
+#: ../data/org.mate.eom.gschema.xml.in.h:2
 msgid ""
 "Whether the image should be rotated automatically based on EXIF orientation."
 msgstr "Resmin EXIF yönelim bilgileri temel alınarak kendiliğinden yönlendirilmesi."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:4
+#: ../data/org.mate.eom.gschema.xml.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
 "theme instead."
 msgstr "Resmin arkasındaki kısmı kaplayacak renk. use-background-color anahtarı etkinleştirilmemişse renk faal GTK+ teması tarafından belirlenir."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:5
+#: ../data/org.mate.eom.gschema.xml.in.h:5
 msgid "Use a custom background color"
 msgstr "Özel arka plan rengi kullan"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:6
+#: ../data/org.mate.eom.gschema.xml.in.h:6
 msgid ""
 "If this is active, the color set by the background-color key will be used to"
 " fill the area behind the image. If it is not set, the current GTK+ theme "
 "will determine the fill color."
 msgstr "Etkinse, background-color anahtarı tarafından belirtilen renk resmin arka planını kaplayacaktır. Renk belirtilmemişse, güncel GTK+ teması kaplayacak rengi belirleyecektir."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:7
+#: ../data/org.mate.eom.gschema.xml.in.h:7
 msgid "Interpolate Image"
 msgstr "Resmi Aradeğerle"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:8
+#: ../data/org.mate.eom.gschema.xml.in.h:8
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
 msgstr "Uzaklaştırma sırasında resmin aradeğerlenecek olup olmayacağını ayarlar. Aradeğerlemek kaliteyi arttırır ancak biraz yavaşlamaya yol açabilir."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:9
+#: ../data/org.mate.eom.gschema.xml.in.h:9
 msgid "Extrapolate Image"
 msgstr "Resmi Aradeğerle"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:10
+#: ../data/org.mate.eom.gschema.xml.in.h:10
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
 msgstr "Yakınlaştırma sırasında resmin aradeğerlenecek olup olmayacağını ayarlar. Aradeğerlemek kaliteyi arttırır ancak biraz yavaşlamaya yol açabilir."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:11
+#: ../data/org.mate.eom.gschema.xml.in.h:11
 msgid "Transparency indicator"
 msgstr "Şeffaflık belirteci"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:12
+#: ../data/org.mate.eom.gschema.xml.in.h:12
 msgid ""
 "Determines how transparency should be indicated. Valid values are checked, "
 "color and none. If color is chosen, then the trans-color key determines the "
 "color value used."
 msgstr "Şeffaflığın nasıl belirtileceğini belirler. Geçerli değerleri şunlardır: seçili, renk ve boş. Eğer renk seçiliyse, kullanılan renk değerini trans-renk anahtarı belirler."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:13
+#: ../data/org.mate.eom.gschema.xml.in.h:13
 msgid "Scroll wheel zoom"
 msgstr "Kaydırma tekerleği yakınlaştırması"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:14
+#: ../data/org.mate.eom.gschema.xml.in.h:14
 msgid "Whether the scroll wheel should be used for zooming."
 msgstr "Fare tekerleğinin yakınlaştırma için kullanılıp kullanılmayacağını ayarlar."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:15
+#: ../data/org.mate.eom.gschema.xml.in.h:15
 msgid "Zoom multiplier"
 msgstr "Yakınlaştırma çarpanı"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:17
+#: ../data/org.mate.eom.gschema.xml.in.h:17
 #, no-c-format
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
@@ -432,102 +406,102 @@ msgid ""
 "in a 100% zoom increment."
 msgstr "Fare kaydırma tekerleğini yakınlaştırma için kullanırken uygulanacak çarpan. Bu değer her kaydırma eylemin kullanılacak adımı belirler. Örneğin, 0.05 her kaydırma eyleminde %5 yakınlaştırma ile sonuçlanır ve 1.00 %100 yakınlaştırma ile sonuçlanır."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:18
+#: ../data/org.mate.eom.gschema.xml.in.h:18
 msgid "Transparency color"
 msgstr "Şeffaflık rengi"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:19
+#: ../data/org.mate.eom.gschema.xml.in.h:19
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
 msgstr "Eğer transparency anahtarı, COLOR değerine sahip ise, bu anahtar şeffaflığı ayarlamak için kullanılan rengi belirler."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:20
+#: ../data/org.mate.eom.gschema.xml.in.h:20
 msgid "Randomize the image sequence"
 msgstr "Resim sıralamasını rastgele yap"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:21
+#: ../data/org.mate.eom.gschema.xml.in.h:21
 msgid "Whether the sequence of images should be shown in an random loop."
 msgstr "Resim dizisinin rastgele bir döngü içinde gösterilip gösterilmeyeceğini ayarlar."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:22
+#: ../data/org.mate.eom.gschema.xml.in.h:22
 msgid "Loop through the image sequence"
 msgstr "Resim sıralamasında dön"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:23
+#: ../data/org.mate.eom.gschema.xml.in.h:23
 msgid "Whether the sequence of images should be shown in an endless loop."
 msgstr "Resim dizisinin sonsuz bir döngü içinde gösterilip gösterilmeyeceğini ayarlar."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:25
+#: ../data/org.mate.eom.gschema.xml.in.h:25
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
 msgstr "Başlangıçta %100'den daha fazla yakınlaştırmaya izin ver"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:26
+#: ../data/org.mate.eom.gschema.xml.in.h:26
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
 msgstr "Eğer FALSE olarak seçiliyse, küçük resimler öntanımlı olarak ekrana sığacak biçimde boyutlandırılmaz."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:27
+#: ../data/org.mate.eom.gschema.xml.in.h:27
 msgid "Delay in seconds until showing the next image"
 msgstr "Sonraki resmin görüntülenmesinden önce beklenecek saniye olarak süre"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:28
+#: ../data/org.mate.eom.gschema.xml.in.h:28
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until"
 " the next one is shown automatically. Zero disables the automatic browsing."
 msgstr "0'dan büyük bir değer bir sonraki görüntülemeden önce resmin ekranda kalacağı süreyi saniye olarak belirler. Sıfır değeri otomatik gözatmayı kapatır."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:29
+#: ../data/org.mate.eom.gschema.xml.in.h:29
 msgid "Show/Hide the window toolbar."
 msgstr "Pencere araç çubuğunu göster/gizle."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:30
+#: ../data/org.mate.eom.gschema.xml.in.h:30
 msgid "Show/Hide the window statusbar."
 msgstr "Pencere durum çubuğunu göster/gizle."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:31
+#: ../data/org.mate.eom.gschema.xml.in.h:31
 msgid "Show/Hide the image collection pane."
 msgstr "Resim koleksiyonu panosunu göster/gizle."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:32
+#: ../data/org.mate.eom.gschema.xml.in.h:32
 msgid "Image collection pane position."
 msgstr "Resim koleksiyonu bölmesi konumu."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:33
+#: ../data/org.mate.eom.gschema.xml.in.h:33
 msgid "Whether the image collection pane should be resizable."
 msgstr "Resim koleksiyonu panosunun yeniden boyutlandırılabilir olup olmayacağını ayarlar."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:34
+#: ../data/org.mate.eom.gschema.xml.in.h:34
 msgid "Show/Hide the window side pane."
 msgstr "Pencere köşe panosunu göster/gizle."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:35
+#: ../data/org.mate.eom.gschema.xml.in.h:35
 msgid "Show/Hide the image collection pane scroll buttons."
 msgstr "Resim koleksiyonu panosunun kaydırma düğmelerini göster/gizle."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:36
+#: ../data/org.mate.eom.gschema.xml.in.h:36
 msgid "Close main window without asking to save changes."
 msgstr "Ana pencereyi değişiklikleri kaydetmek için sormadan kapat."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:37
+#: ../data/org.mate.eom.gschema.xml.in.h:37
 msgid "Trash images without asking"
 msgstr "Resimleri sormada çöpe at"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:38
+#: ../data/org.mate.eom.gschema.xml.in.h:38
 msgid ""
 "If activated, Eye of MATE won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
 "trash and would be deleted instead."
 msgstr "Etkinleştirilirse, MATE'nin Gözü resimleri çöpe taşırken teyit istemeyecektir. Ancak resimlerden herhangi biri çöpe taşınamaz ise ve doğrudan silinecekse onay istenecektir."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:39
+#: ../data/org.mate.eom.gschema.xml.in.h:39
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
 msgstr "Özellikler penceresindeki metadata listesinin kendine ait sayfasının olması."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:40
+#: ../data/org.mate.eom.gschema.xml.in.h:40
 msgid ""
 "If activated, the detailed metadata list in the properties dialog will be "
 "moved to its own page in the dialog. This should make the dialog more usable"
@@ -535,24 +509,24 @@ msgid ""
 "be embedded on the \"Metadata\" page."
 msgstr "Etkinleştirilmişse, özellikler diyaloğundaki ayrıntılı meta veriler diyalogda kendi sayfalarına taşınacaktır. Bu, el üstü bilgisayarlarınki gibi küçük ekranlarda diyaloğu daha kullanılır yapar. Devre dışı bırakılırsa, widget \"Üstveri\" sayfasında gömülü bulunacaktır."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:41
+#: ../data/org.mate.eom.gschema.xml.in.h:41
 msgid "External program to use for editing images"
 msgstr "Resimleri düzenlemek için kullanılacak harici program"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:42
+#: ../data/org.mate.eom.gschema.xml.in.h:42
 msgid ""
 "The desktop file name (including the \".desktop\") of the application to use"
 " for editing images (when the \"Edit Image\" toolbar button is clicked). Set"
 " to the empty string to disable this feature."
 msgstr "\"Resmi Düzenle\" araç çubuğu düğmesi seçildiğinde resimlerin düzenlenmesi için kullanılacak uygulamanın masaüstü dosya ismi (buna \".desktop\" dahildir). Bu işlevi devre dışı bırakmak için boş bir dize kullanın."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:43
+#: ../data/org.mate.eom.gschema.xml.in.h:43
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images"
 " are loaded."
 msgstr "Hiçbir resim yüklenmediyse dosya seçicinin kullanıcının resimler dizinini gösterip göstermeyeceğini ayarlar."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:44
+#: ../data/org.mate.eom.gschema.xml.in.h:44
 msgid ""
 "If activated and no image is loaded in the active window, the file chooser "
 "will display the user's pictures folder using the XDG special user "
@@ -560,39 +534,65 @@ msgid ""
 "will show the current working directory."
 msgstr "Etkinleştirilmişse ve faal pencerede hiçbir resim yüklenmemişse, dosya seçici XDG özel kullanıcı dizinlerini kullanarak kullanıcının resim dizinini görüntüleyecektir. Devre dışı bırakılmışsa ya da hiçbir resim dizini belirlenmemişse, güncel çalışma dizinini gösterecektir."
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:45
+#: ../data/org.mate.eom.gschema.xml.in.h:45
 msgid "Active plugins"
 msgstr "Etkin eklentiler"
 
-#: ../data/org.mate.eom.gschema.xml.in.in.h:46
+#: ../data/org.mate.eom.gschema.xml.in.h:46
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
 "plugin."
 msgstr "Etkin eklentilerin listesi. Etkin eklentilerin \"Konumunu\" içermez. Eklentinin \"Konumunu\" öğrenmek için .eom-plugin dosyasını kullanabilirsiniz."
 
+#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:1
+msgid "Fullscreen with double-click"
+msgstr "Çift tıklama ile tam ekran"
+
+#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:2
+msgid "Activate fullscreen mode with double-click"
+msgstr "Çift tıklama ile tam ekran kipini etkinleştir"
+
+#: ../plugins/reload/eom-reload-plugin.c:38
+#: ../plugins/reload/reload.eom-plugin.desktop.in.h:1
+msgid "Reload Image"
+msgstr "Resmi Tekrar Yükle"
+
+#: ../plugins/reload/eom-reload-plugin.c:38
+#: ../plugins/reload/reload.eom-plugin.desktop.in.h:2
+msgid "Reload current image"
+msgstr "Mevcut resmi tekrar yükle"
+
+#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:1
+msgid "Date in statusbar"
+msgstr "Durum çubuğunda tarih"
+
+#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:2
+msgid "Shows the image date in the window statusbar"
+msgstr "Pencere durum çubuğunda resmin tarihini gösterir"
+
 #: ../src/eom-application.c:123
 msgid "Running in fullscreen mode"
 msgstr "Tam ekran kipinde çalışıyor"
 
-#: ../src/eom-close-confirmation-dialog.c:159
+#: ../src/eom-close-confirmation-dialog.c:164
 msgid "Close _without Saving"
 msgstr "Kaydetmeden çı_k"
 
-#: ../src/eom-close-confirmation-dialog.c:192
+#: ../src/eom-close-confirmation-dialog.c:197
 msgid "Question"
 msgstr "Soru"
 
-#: ../src/eom-close-confirmation-dialog.c:373
+#: ../src/eom-close-confirmation-dialog.c:378
 msgid "If you don't save, your changes will be lost."
 msgstr "Kaydetmezseniz değişikliklerinizi kaybedersiniz."
 
-#: ../src/eom-close-confirmation-dialog.c:408
+#: ../src/eom-close-confirmation-dialog.c:421
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "Kapatmadan önce \"%s\" adlı resmin değişikliklerini kaydetmek ister misiniz?"
 
-#: ../src/eom-close-confirmation-dialog.c:603
+#: ../src/eom-close-confirmation-dialog.c:628
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
@@ -600,103 +600,121 @@ msgid_plural ""
 msgstr[0] "Değişiklikleri kaydedilmeyen %d resim bulunuyor. Kapatmadan önce değişiklikleri kaydetmek ister misiniz?"
 msgstr[1] "Değişiklikleri kaydedilmeyen %d resim bulunuyor. Kapatmadan önce değişiklikleri kaydetmek ister misiniz?"
 
-#: ../src/eom-close-confirmation-dialog.c:620
+#: ../src/eom-close-confirmation-dialog.c:645
 msgid "S_elect the images you want to save:"
 msgstr "Kaydetmek istedi_ğiniz resimleri seçin:"
 
 #. Secondary label
-#: ../src/eom-close-confirmation-dialog.c:638
+#: ../src/eom-close-confirmation-dialog.c:667
 msgid "If you don't save, all your changes will be lost."
 msgstr "Kaydetmezseniz tüm değişikliklerinizi kaybedersiniz."
 
-#: ../src/eom-file-chooser.c:127
+#: ../src/eom-file-chooser.c:132
 msgid "File format is unknown or unsupported"
 msgstr "Dosya biçimi bilinmiyor ya da desteklenmiyor"
 
-#: ../src/eom-file-chooser.c:132
+#: ../src/eom-file-chooser.c:137
 msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
 msgstr "MATE'nin Gözü dosya ismine bakarak desteklenen bir yazılabilir dosya biçimine karar veremedi."
 
-#: ../src/eom-file-chooser.c:133
+#: ../src/eom-file-chooser.c:138
 msgid "Please try a different file extension like .png or .jpg."
 msgstr "Lütfen .png ya da .jpg gibi başka bir dosya uzantısı deneyin."
 
-#: ../src/eom-file-chooser.c:165
+#: ../src/eom-file-chooser.c:170
 msgid "All Files"
 msgstr "Tüm Dosyalar"
 
-#: ../src/eom-file-chooser.c:170
+#: ../src/eom-file-chooser.c:175
 msgid "All Images"
 msgstr "Tüm Resimler"
 
 #. Filter name: First description then file extension, eg. "The PNG-Format
 #. (*.png)".
-#: ../src/eom-file-chooser.c:191
+#: ../src/eom-file-chooser.c:196
 #, c-format
 msgid "%s (*.%s)"
 msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
-#: ../src/eom-file-chooser.c:287 ../src/eom-properties-dialog.c:137
-#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:492
+#: ../src/eom-file-chooser.c:292 ../src/eom-properties-dialog.c:137
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:588
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "piksel"
 msgstr[1] "piksel"
 
-#: ../src/eom-file-chooser.c:438
+#: ../src/eom-file-chooser.c:443
 msgid "Open Image"
 msgstr "Resim Aç"
 
-#: ../src/eom-file-chooser.c:446
+#: ../src/eom-file-chooser.c:451
 msgid "Save Image"
 msgstr "Resmi Kaydet"
 
-#: ../src/eom-file-chooser.c:454
+#: ../src/eom-file-chooser.c:459
 msgid "Open Folder"
 msgstr "Dizin Aç"
 
-#: ../src/eom-image.c:597
+#: ../src/eom-image.c:598
 #, c-format
 msgid "Transformation on unloaded image."
 msgstr "Yüklenmemiş resim üzerinde dönüşüm."
 
-#: ../src/eom-image.c:625
+#: ../src/eom-image.c:626
 #, c-format
 msgid "Transformation failed."
 msgstr "Dönüşüm başarısız oldu."
 
-#: ../src/eom-image.c:1052
+#: ../src/eom-image.c:1053
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "Bu dosya biçimi için EXIF desteklenmiyor."
 
-#: ../src/eom-image.c:1181
+#: ../src/eom-image.c:1182
 #, c-format
 msgid "Image loading failed."
 msgstr "Resim yüklemesi başarısız oldu."
 
-#: ../src/eom-image.c:1586 ../src/eom-image.c:1688
+#: ../src/eom-image.c:1711 ../src/eom-image.c:1813
 #, c-format
 msgid "No image loaded."
 msgstr "Resim yüklenmedi."
 
-#: ../src/eom-image.c:1596 ../src/eom-image.c:1700
+#: ../src/eom-image.c:1721 ../src/eom-image.c:1825
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "Geçici dosya oluşturması başarısız."
 
-#: ../src/eom-image-jpeg.c:373
+#: ../src/eom-image-jpeg.c:382
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr "Kayıt için geçici dosya oluşturulamadı: %s"
 
-#: ../src/eom-image-jpeg.c:392
+#: ../src/eom-image-jpeg.c:393
 #, c-format
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "JPEG dosyası yüklemek için bellek ayrılamadı"
+
+#: ../src/eom-error-message-area.c:124
+msgid "_Retry"
+msgstr "_Tekrar dene"
+
+#: ../src/eom-error-message-area.c:167
+#, c-format
+msgid "Could not load image '%s'."
+msgstr "Resim '%s' yüklenemedi."
+
+#: ../src/eom-error-message-area.c:209
+#, c-format
+msgid "No images found in '%s'."
+msgstr "'%s' içerisinde resim bulunamadı."
+
+#: ../src/eom-error-message-area.c:216
+msgid "The given locations contain no images."
+msgstr "Verilen konumlar hiçbir resim içermiyor."
 
 #: ../src/eom-exif-details.c:68
 msgid "Camera"
@@ -753,113 +771,135 @@ msgstr "%a, %d %B %Y  %X"
 msgid "%a, %d %B %Y"
 msgstr "%a, %d %B %Y"
 
-#: ../src/eom-error-message-area.c:107
-msgid "_Retry"
-msgstr "_Tekrar dene"
+#: ../src/eom-plugin-manager.c:51
+msgid "Plugin"
+msgstr "Eklenti"
 
-#: ../src/eom-error-message-area.c:141
-#, c-format
-msgid "Could not load image '%s'."
-msgstr "Resim '%s' yüklenemedi."
+#: ../src/eom-plugin-manager.c:52
+msgid "Enabled"
+msgstr "Etkin"
 
-#: ../src/eom-error-message-area.c:175
-#, c-format
-msgid "No images found in '%s'."
-msgstr "'%s' içerisinde resim bulunamadı."
+#: ../src/eom-plugin-manager.c:505 ../src/eom-window.c:3673
+msgid "_About"
+msgstr "_Hakkında"
 
-#: ../src/eom-error-message-area.c:182
-msgid "The given locations contain no images."
-msgstr "Verilen konumlar hiçbir resim içermiyor."
+#: ../src/eom-plugin-manager.c:513
+msgid "C_onfigure"
+msgstr "_Yapılandır"
+
+#: ../src/eom-plugin-manager.c:523
+msgid "A_ctivate"
+msgstr "_Etkinleştir"
+
+#: ../src/eom-plugin-manager.c:535
+msgid "Ac_tivate All"
+msgstr "Hepsini E_tkinleştir"
+
+#: ../src/eom-plugin-manager.c:540
+msgid "_Deactivate All"
+msgstr "Hepsini Et_kinsizleştir"
+
+#: ../src/eom-plugin-manager.c:834
+msgid "Active _Plugins:"
+msgstr "Etkin _Eklentiler:"
+
+#: ../src/eom-plugin-manager.c:867
+msgid "_About Plugin"
+msgstr "Eklenti _Hakkında"
+
+#: ../src/eom-plugin-manager.c:874
+msgid "C_onfigure Plugin"
+msgstr "Eklentiyi _Yapılandır"
 
 #: ../src/eom-print.c:219
 msgid "Image Settings"
 msgstr "Resim Ayarları"
 
-#: ../src/eom-print-image-setup.c:834
+#: ../src/eom-print-image-setup.c:873
 msgid "Image"
 msgstr "Resim"
 
-#: ../src/eom-print-image-setup.c:835
+#: ../src/eom-print-image-setup.c:874
 msgid "The image whose printing properties will be set up"
 msgstr "Yazdırma özellikleri ayarlanacak resim"
 
-#: ../src/eom-print-image-setup.c:841
+#: ../src/eom-print-image-setup.c:880
 msgid "Page Setup"
 msgstr "Sayfa Ayarı"
 
-#: ../src/eom-print-image-setup.c:842
+#: ../src/eom-print-image-setup.c:881
 msgid "The information for the page where the image will be printed"
 msgstr "Resmi basılacak sayfa için bilgi"
 
-#: ../src/eom-print-image-setup.c:870
+#: ../src/eom-print-image-setup.c:914 ../src/eom-print-image-setup.c:928
 msgid "Position"
 msgstr "Pozisyon"
 
-#: ../src/eom-print-image-setup.c:875
+#: ../src/eom-print-image-setup.c:918 ../src/eom-print-image-setup.c:933
 msgid "_Left:"
 msgstr "_Sol:"
 
-#: ../src/eom-print-image-setup.c:876
+#: ../src/eom-print-image-setup.c:920 ../src/eom-print-image-setup.c:934
 msgid "_Right:"
 msgstr "S_ağ:"
 
-#: ../src/eom-print-image-setup.c:877
+#: ../src/eom-print-image-setup.c:921 ../src/eom-print-image-setup.c:935
 msgid "_Top:"
 msgstr "Ü_st:"
 
-#: ../src/eom-print-image-setup.c:878
+#: ../src/eom-print-image-setup.c:922 ../src/eom-print-image-setup.c:936
 msgid "_Bottom:"
 msgstr "_Alt:"
 
-#: ../src/eom-print-image-setup.c:880
+#: ../src/eom-print-image-setup.c:939
 msgid "C_enter:"
 msgstr "_Merkez:"
 
-#: ../src/eom-print-image-setup.c:885
+#: ../src/eom-print-image-setup.c:948
 msgid "None"
 msgstr "Hiçbiri"
 
-#: ../src/eom-print-image-setup.c:887
+#: ../src/eom-print-image-setup.c:950
 msgid "Horizontal"
 msgstr "Yatay"
 
-#: ../src/eom-print-image-setup.c:889
+#: ../src/eom-print-image-setup.c:952
 msgid "Vertical"
 msgstr "Dikey"
 
-#: ../src/eom-print-image-setup.c:891
+#: ../src/eom-print-image-setup.c:954
 msgid "Both"
 msgstr "İkisi de"
 
-#: ../src/eom-print-image-setup.c:907
+#: ../src/eom-print-image-setup.c:980 ../src/eom-print-image-setup.c:991
 msgid "Size"
 msgstr "Boyut"
 
-#: ../src/eom-print-image-setup.c:912
+#: ../src/eom-print-image-setup.c:983 ../src/eom-print-image-setup.c:996
 msgid "_Width:"
 msgstr "_Genişlik:"
 
-#: ../src/eom-print-image-setup.c:914
+#: ../src/eom-print-image-setup.c:985 ../src/eom-print-image-setup.c:998
 msgid "_Height:"
 msgstr "_Yükseklik:"
 
-#: ../src/eom-print-image-setup.c:917
+#: ../src/eom-print-image-setup.c:1002
 msgid "_Scaling:"
 msgstr "Ö_lçekleme:"
 
-#: ../src/eom-print-image-setup.c:930
+#: ../src/eom-print-image-setup.c:1026
 msgid "_Unit:"
 msgstr "_Birim:"
 
-#: ../src/eom-print-image-setup.c:935
+#: ../src/eom-print-image-setup.c:1035
 msgid "Millimeters"
 msgstr "Milimetre"
 
-#: ../src/eom-print-image-setup.c:937
+#: ../src/eom-print-image-setup.c:1037
 msgid "Inches"
 msgstr "İnç"
 
-#: ../src/eom-print-image-setup.c:967
+#: ../src/eom-print-image-setup.c:1074
 msgid "Preview"
 msgstr "Önizleme"
 
@@ -896,12 +936,12 @@ msgstr "olarak"
 #. * Note that translating this doesn't guarantee that you get localized
 #. * digits. That needs support from your system and locale definition
 #. * too.
-#: ../src/eom-statusbar.c:133
+#: ../src/eom-statusbar.c:134
 #, c-format
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/eom-thumb-view.c:520
+#: ../src/eom-thumb-view.c:616
 msgid "Taken on"
 msgstr "Çekildiği zaman"
 
@@ -924,32 +964,32 @@ msgstr "(geçersiz Unikod)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/eom-window.c:511
+#: ../src/eom-window.c:516
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i piksel  %s    %i%%"
 msgstr[1] "%i × %i piksel  %s    %i%%"
 
-#: ../src/eom-window.c:806
+#: ../src/eom-window.c:811
 msgid "_Reload"
 msgstr "_Terkar Yükle"
 
-#: ../src/eom-window.c:808 ../src/eom-window.c:2694
+#: ../src/eom-window.c:813 ../src/eom-window.c:2720
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "S_akla"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:818
+#: ../src/eom-window.c:823
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
 msgstr "\"%s\" adlı resim harici bir uygulama tarafından değiştirildi.\nTekrar yüklemek ister misiniz?"
 
-#: ../src/eom-window.c:982
+#: ../src/eom-window.c:993
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Seçilen resmi açmak için \"%s\" kullan"
@@ -959,36 +999,36 @@ msgstr "Seçilen resmi açmak için \"%s\" kullan"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1138
+#: ../src/eom-window.c:1149
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Resim \"%s\" kaydediliyor (%u/%u)"
 
-#: ../src/eom-window.c:1492
+#: ../src/eom-window.c:1507
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "\"%s\" görseli açılıyor"
 
-#: ../src/eom-window.c:2191
+#: ../src/eom-window.c:2217
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
 msgstr "Dosya yazdırırken hata:\n%s"
 
-#: ../src/eom-window.c:2453
+#: ../src/eom-window.c:2479
 msgid "Toolbar Editor"
 msgstr "Araç Çubuğu Düzenleyici"
 
-#: ../src/eom-window.c:2456
+#: ../src/eom-window.c:2482
 msgid "_Reset to Default"
 msgstr "Öntanımlılara _Sıfırla"
 
-#: ../src/eom-window.c:2549
+#: ../src/eom-window.c:2575
 msgid "translator-credits"
 msgstr "Barış Çiçek <baris@teamforce.name.tr>"
 
-#: ../src/eom-window.c:2552
+#: ../src/eom-window.c:2578
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -996,7 +1036,7 @@ msgid ""
 "any later version.\n"
 msgstr "Bu program özgür bir yazılımdır, Özgür Yazılım Vakfı'nın yayınladığı GNU Genel Kamu Lisansı'nın 2. veya  daha sonraki sürümlerindeki şartlar altında dağıtabilir ve/veya değiştirilebilir.\n"
 
-#: ../src/eom-window.c:2556
+#: ../src/eom-window.c:2582
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1004,51 +1044,51 @@ msgid ""
 "more details.\n"
 msgstr "Bu program faydalı olacağı umut edilerek dağıtılmaktadır, fakat HİÇBİR GARANTİSİ YOKTUR; hatta ÜRÜN DEĞERİ ya da BİR AMACA UYGUNLUK gibi garantiler de vermez.  Lütfen daha fazla detay için GNU Genel Kamu Lisansı'nı inceleyin.\n"
 
-#: ../src/eom-window.c:2560
+#: ../src/eom-window.c:2586
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr "Bu programla beraber GNU Genel Kamu Lisansını da almış olmalısınız; eğer almadıysanız, Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA adresine yazınız."
 
-#: ../src/eom-window.c:2578
+#: ../src/eom-window.c:2604
 msgid "The MATE image viewer."
 msgstr "MATE resim görüntüleyicisi."
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2692
+#: ../src/eom-window.c:2718
 msgid "_Open Background Preferences"
 msgstr "_Arkaplan Tercihlerini Aç"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2708
+#: ../src/eom-window.c:2734
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
 msgstr "\"%s\" adlı resim Masaüstü Arka Planı olarak tanımlandı.\nGörünümünü değiştirmek ister misiniz?"
 
-#: ../src/eom-window.c:3101
+#: ../src/eom-window.c:3133
 msgid "Saving image locally…"
 msgstr "Resim yerel olarak kaydediliyor..."
 
-#: ../src/eom-window.c:3181
+#: ../src/eom-window.c:3213
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
 msgstr "\"%s\" dosyasını çöpe taşımak istediğinize\nemin misiniz?"
 
-#: ../src/eom-window.c:3184
+#: ../src/eom-window.c:3216
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr "\"%s\" için çöp kutusu bulunamadı. Bu resmi kalıcı olarak silmek istiyor musunuz?"
 
-#: ../src/eom-window.c:3189
+#: ../src/eom-window.c:3221
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1059,448 +1099,408 @@ msgid_plural ""
 msgstr[0] "%d seçili resmi çöpe taşımak istediğinize\nemin misiniz?"
 msgstr[1] "%d seçili resmi çöpe taşımak istediğinize\nemin misiniz?"
 
-#: ../src/eom-window.c:3194
+#: ../src/eom-window.c:3226
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
 msgstr "Seçtiğiniz bazı resimler çöp kutusuna taşınamıyor ve kalıcı olarak silinecek. Bunu yapmak istediğinize emin misiniz?"
 
-#: ../src/eom-window.c:3211 ../src/eom-window.c:3695 ../src/eom-window.c:3722
+#: ../src/eom-window.c:3243 ../src/eom-window.c:3727 ../src/eom-window.c:3754
 msgid "Move to _Trash"
 msgstr "Çöpe _Taşı"
 
-#: ../src/eom-window.c:3213
+#: ../src/eom-window.c:3245
 msgid "_Do not ask again during this session"
 msgstr "_Bu oturum boyunca bir daha sorma"
 
-#: ../src/eom-window.c:3258 ../src/eom-window.c:3272
+#: ../src/eom-window.c:3290 ../src/eom-window.c:3304
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Çöpe erişilemedi."
 
-#: ../src/eom-window.c:3280
+#: ../src/eom-window.c:3312
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Dosya silinemedi"
 
-#: ../src/eom-window.c:3377
+#: ../src/eom-window.c:3409
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "%s resmini silerken hata oluştu"
 
-#: ../src/eom-window.c:3619
+#: ../src/eom-window.c:3651
 msgid "_Image"
 msgstr "_Resim"
 
-#: ../src/eom-window.c:3620
+#: ../src/eom-window.c:3652
 msgid "_Edit"
 msgstr "D_üzenle"
 
-#: ../src/eom-window.c:3621
+#: ../src/eom-window.c:3653
 msgid "_View"
 msgstr "_Görünüm"
 
-#: ../src/eom-window.c:3622
+#: ../src/eom-window.c:3654
 msgid "_Go"
 msgstr "_Git"
 
-#: ../src/eom-window.c:3623
+#: ../src/eom-window.c:3655
 msgid "_Tools"
 msgstr "_Araçlar"
 
-#: ../src/eom-window.c:3624
+#: ../src/eom-window.c:3656
 msgid "_Help"
 msgstr "_Yardım"
 
-#: ../src/eom-window.c:3626
+#: ../src/eom-window.c:3658
 msgid "_Open…"
 msgstr "_Aç..."
 
-#: ../src/eom-window.c:3627
+#: ../src/eom-window.c:3659
 msgid "Open a file"
 msgstr "Bir dosya aç"
 
-#: ../src/eom-window.c:3629
+#: ../src/eom-window.c:3661
 msgid "_Close"
 msgstr "_Kapat"
 
-#: ../src/eom-window.c:3630
+#: ../src/eom-window.c:3662
 msgid "Close window"
 msgstr "Pencereyi kapat"
 
-#: ../src/eom-window.c:3632
+#: ../src/eom-window.c:3664
 msgid "T_oolbar"
 msgstr "_Araç Çubuğu"
 
-#: ../src/eom-window.c:3633
+#: ../src/eom-window.c:3665
 msgid "Edit the application toolbar"
 msgstr "Uygulama araç çubuğunu düzenle"
 
-#: ../src/eom-window.c:3635
+#: ../src/eom-window.c:3667
 msgid "Prefere_nces"
 msgstr "Terci_hler"
 
-#: ../src/eom-window.c:3636
+#: ../src/eom-window.c:3668
 msgid "Preferences for Eye of MATE"
 msgstr "MATE'nin Gözü Tercihleri"
 
-#: ../src/eom-window.c:3638
+#: ../src/eom-window.c:3670
 msgid "_Contents"
 msgstr "_İçindekiler"
 
-#: ../src/eom-window.c:3639
+#: ../src/eom-window.c:3671
 msgid "Help on this application"
 msgstr "Bu uygulama hakkında yardım"
 
-#: ../src/eom-window.c:3641 ../src/eom-plugin-manager.c:505
-msgid "_About"
-msgstr "_Hakkında"
-
-#: ../src/eom-window.c:3642
+#: ../src/eom-window.c:3674
 msgid "About this application"
 msgstr "Bu uygulama hakkında"
 
-#: ../src/eom-window.c:3647
+#: ../src/eom-window.c:3679
 msgid "_Toolbar"
 msgstr "_Araç Çubuğu"
 
-#: ../src/eom-window.c:3648
+#: ../src/eom-window.c:3680
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Etkin penceredeki araç çubuğunun görünürlüğünü değiştir"
 
-#: ../src/eom-window.c:3650
+#: ../src/eom-window.c:3682
 msgid "_Statusbar"
 msgstr "Du_rum Çubuğu"
 
-#: ../src/eom-window.c:3651
+#: ../src/eom-window.c:3683
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Etkin penceredeki durum çubuğunun görünürlüğünü değiştir"
 
-#: ../src/eom-window.c:3653
+#: ../src/eom-window.c:3685
 msgid "_Image Collection"
 msgstr "Resim _Koleksiyonu"
 
-#: ../src/eom-window.c:3654
+#: ../src/eom-window.c:3686
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "Geçerli pencere içindeki resim koleksiyonu panelinin görünürlüğünü değiştirir"
 
-#: ../src/eom-window.c:3656
+#: ../src/eom-window.c:3688
 msgid "Side _Pane"
 msgstr "Kenar _Paneli"
 
-#: ../src/eom-window.c:3657
+#: ../src/eom-window.c:3689
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Etkin penceredeki yan panelinin görünürlüğünü değiştirir"
 
-#: ../src/eom-window.c:3662
+#: ../src/eom-window.c:3694
 msgid "_Save"
 msgstr "_Kaydet"
 
-#: ../src/eom-window.c:3663
+#: ../src/eom-window.c:3695
 msgid "Save changes in currently selected images"
 msgstr "Seçilen resimlerdeki değişiklikleri kaydet"
 
-#: ../src/eom-window.c:3665
+#: ../src/eom-window.c:3697
 msgid "Open _with"
 msgstr "Birlikte _aç"
 
-#: ../src/eom-window.c:3666
+#: ../src/eom-window.c:3698
 msgid "Open the selected image with a different application"
 msgstr "Seçilen resmi başka bir uygulama ile birlikte aç"
 
-#: ../src/eom-window.c:3668
+#: ../src/eom-window.c:3700
 msgid "Save _As…"
 msgstr "_Farklı Kaydet..."
 
-#: ../src/eom-window.c:3669
+#: ../src/eom-window.c:3701
 msgid "Save the selected images with a different name"
 msgstr "Seçilen resmi başka bir isim ile kaydet"
 
-#: ../src/eom-window.c:3671
+#: ../src/eom-window.c:3703
 msgid "_Print…"
 msgstr "_Yazdır..."
 
-#: ../src/eom-window.c:3672
+#: ../src/eom-window.c:3704
 msgid "Print the selected image"
 msgstr "Seçilen resmi bastır"
 
-#: ../src/eom-window.c:3674
+#: ../src/eom-window.c:3706
 msgid "Prope_rties"
 msgstr "Ö_zellikler"
 
-#: ../src/eom-window.c:3675
+#: ../src/eom-window.c:3707
 msgid "Show the properties and metadata of the selected image"
 msgstr "Seçilen resmi özelliklerini ve temel bilgilerini göster"
 
-#: ../src/eom-window.c:3677
+#: ../src/eom-window.c:3709
 msgid "_Undo"
 msgstr "_Geri Al"
 
-#: ../src/eom-window.c:3678
+#: ../src/eom-window.c:3710
 msgid "Undo the last change in the image"
 msgstr "Resimdeki son değişikliği geri al"
 
-#: ../src/eom-window.c:3680
+#: ../src/eom-window.c:3712
 msgid "Flip _Horizontal"
 msgstr "Yatay Ç_evir"
 
-#: ../src/eom-window.c:3681
+#: ../src/eom-window.c:3713
 msgid "Mirror the image horizontally"
 msgstr "Resmi yatay olarak yansıt"
 
-#: ../src/eom-window.c:3683
+#: ../src/eom-window.c:3715
 msgid "Flip _Vertical"
 msgstr "Dikey Çe_vir"
 
-#: ../src/eom-window.c:3684
+#: ../src/eom-window.c:3716
 msgid "Mirror the image vertically"
 msgstr "Resmi dikey olarak yansıt"
 
-#: ../src/eom-window.c:3686
+#: ../src/eom-window.c:3718
 msgid "_Rotate Clockwise"
 msgstr "Saat Yönünde Döndü_r"
 
-#: ../src/eom-window.c:3687
+#: ../src/eom-window.c:3719
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Resmi 90 derece sağa çevir"
 
-#: ../src/eom-window.c:3689
+#: ../src/eom-window.c:3721
 msgid "Rotate Counterc_lockwise"
 msgstr "Saa_t Yönünün Tersine Döndür"
 
-#: ../src/eom-window.c:3690
+#: ../src/eom-window.c:3722
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Resmi 90 derece sola çevir"
 
-#: ../src/eom-window.c:3692
+#: ../src/eom-window.c:3724
 msgid "Set as _Desktop Background"
 msgstr "Masaüstü arkaplanı _olarak ata"
 
-#: ../src/eom-window.c:3693
+#: ../src/eom-window.c:3725
 msgid "Set the selected image as the desktop background"
 msgstr "Seçilen resmi masaüstü arkaplanı olarak ata"
 
-#: ../src/eom-window.c:3696
+#: ../src/eom-window.c:3728
 msgid "Move the selected image to the trash folder"
 msgstr "Seçili resmi çöp dizinine taşı"
 
-#: ../src/eom-window.c:3698
+#: ../src/eom-window.c:3730
 msgid "_Copy"
 msgstr "_Kopyala"
 
-#: ../src/eom-window.c:3699
+#: ../src/eom-window.c:3731
 msgid "Copy the selected image to the clipboard"
 msgstr "Seçili resmi panoya kopyala"
 
-#: ../src/eom-window.c:3701 ../src/eom-window.c:3713 ../src/eom-window.c:3716
+#: ../src/eom-window.c:3733 ../src/eom-window.c:3745 ../src/eom-window.c:3748
 msgid "_Zoom In"
 msgstr "_Yakınlaştır"
 
-#: ../src/eom-window.c:3702 ../src/eom-window.c:3714
+#: ../src/eom-window.c:3734 ../src/eom-window.c:3746
 msgid "Enlarge the image"
 msgstr "Resmi genişlet"
 
-#: ../src/eom-window.c:3704 ../src/eom-window.c:3719
+#: ../src/eom-window.c:3736 ../src/eom-window.c:3751
 msgid "Zoom _Out"
 msgstr "_Uzaklaştır"
 
-#: ../src/eom-window.c:3705 ../src/eom-window.c:3717 ../src/eom-window.c:3720
+#: ../src/eom-window.c:3737 ../src/eom-window.c:3749 ../src/eom-window.c:3752
 msgid "Shrink the image"
 msgstr "Resmi daralt"
 
-#: ../src/eom-window.c:3707
+#: ../src/eom-window.c:3739
 msgid "_Normal Size"
 msgstr "_Normal Boyut"
 
-#: ../src/eom-window.c:3708
+#: ../src/eom-window.c:3740
 msgid "Show the image at its normal size"
 msgstr "Resmi normal boyutunda göster"
 
-#: ../src/eom-window.c:3710
+#: ../src/eom-window.c:3742
 msgid "_Best Fit"
 msgstr "_En Uygun Görünüm"
 
-#: ../src/eom-window.c:3711
+#: ../src/eom-window.c:3743
 msgid "Fit the image to the window"
 msgstr "Resmi pencereye uydur"
 
-#: ../src/eom-window.c:3728
+#: ../src/eom-window.c:3760
 msgid "_Fullscreen"
 msgstr "_Tam Ekran"
 
-#: ../src/eom-window.c:3729
+#: ../src/eom-window.c:3761
 msgid "Show the current image in fullscreen mode"
 msgstr "Mevcut resmi tam ekran kipinde göster"
 
-#: ../src/eom-window.c:3731
+#: ../src/eom-window.c:3763
 msgid "Pause Slideshow"
 msgstr "Slayt Gösterisini Duraklat"
 
-#: ../src/eom-window.c:3732
+#: ../src/eom-window.c:3764
 msgid "Pause or resume the slideshow"
 msgstr "Slayt gösterisini duraklat ya da sürdür"
 
-#: ../src/eom-window.c:3737 ../src/eom-window.c:3752
+#: ../src/eom-window.c:3769 ../src/eom-window.c:3784
 msgid "_Previous Image"
 msgstr "Ö_nceki Resim"
 
-#: ../src/eom-window.c:3738
+#: ../src/eom-window.c:3770
 msgid "Go to the previous image of the collection"
 msgstr "Koleksiyondaki bir önceki resme git"
 
-#: ../src/eom-window.c:3740
+#: ../src/eom-window.c:3772
 msgid "_Next Image"
 msgstr "_Sonraki Resim"
 
-#: ../src/eom-window.c:3741
+#: ../src/eom-window.c:3773
 msgid "Go to the next image of the collection"
 msgstr "Koleksiyondaki bir sonraki resme git"
 
-#: ../src/eom-window.c:3743 ../src/eom-window.c:3755
+#: ../src/eom-window.c:3775 ../src/eom-window.c:3787
 msgid "_First Image"
 msgstr "_İlk Resim"
 
-#: ../src/eom-window.c:3744
+#: ../src/eom-window.c:3776
 msgid "Go to the first image of the collection"
 msgstr "Koleksiyondaki ilk resme git"
 
-#: ../src/eom-window.c:3746 ../src/eom-window.c:3758
+#: ../src/eom-window.c:3778 ../src/eom-window.c:3790
 msgid "_Last Image"
 msgstr "_Son Resim"
 
-#: ../src/eom-window.c:3747
+#: ../src/eom-window.c:3779
 msgid "Go to the last image of the collection"
 msgstr "Koleksiyondaki son resme git"
 
-#: ../src/eom-window.c:3749
+#: ../src/eom-window.c:3781
 msgid "_Random Image"
 msgstr "_Rastgele Resim"
 
-#: ../src/eom-window.c:3750
+#: ../src/eom-window.c:3782
 msgid "Go to a random image of the collection"
 msgstr "Koleksiyondan rastgele bir resme git"
 
-#: ../src/eom-window.c:3764
+#: ../src/eom-window.c:3796
 msgid "S_lideshow"
 msgstr "S_layt gösterisi"
 
-#: ../src/eom-window.c:3765
+#: ../src/eom-window.c:3797
 msgid "Start a slideshow view of the images"
 msgstr "Resimlerin slayt gösterimini başlat"
 
-#: ../src/eom-window.c:3831
+#: ../src/eom-window.c:3863
 msgid "Previous"
 msgstr "Önceki"
 
-#: ../src/eom-window.c:3835
+#: ../src/eom-window.c:3867
 msgid "Next"
 msgstr "Sonraki"
 
-#: ../src/eom-window.c:3839
+#: ../src/eom-window.c:3871
 msgid "Right"
 msgstr "Sağ"
 
-#: ../src/eom-window.c:3842
+#: ../src/eom-window.c:3874
 msgid "Left"
 msgstr "Sol"
 
-#: ../src/eom-window.c:3845
+#: ../src/eom-window.c:3877
 msgid "In"
 msgstr "Yakınlaş"
 
-#: ../src/eom-window.c:3848
+#: ../src/eom-window.c:3880
 msgid "Out"
 msgstr "Uzaklaş"
 
-#: ../src/eom-window.c:3851
+#: ../src/eom-window.c:3883
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/eom-window.c:3854
+#: ../src/eom-window.c:3886
 msgid "Fit"
 msgstr "Uydur"
 
-#: ../src/eom-window.c:3857
+#: ../src/eom-window.c:3889
 msgid "Collection"
 msgstr "Koleksiyon"
 
-#: ../src/eom-window.c:3860
+#: ../src/eom-window.c:3892
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Çöp kutusu"
 
-#: ../src/eom-window.c:4208
+#: ../src/eom-window.c:4245
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "Güncel resmi %s programını kullanarak düzenle"
 
-#: ../src/eom-window.c:4210
+#: ../src/eom-window.c:4247
 msgid "Edit Image"
 msgstr "Resmi Düzenle"
 
-#: ../src/eom-plugin-manager.c:51
-msgid "Plugin"
-msgstr "Eklenti"
-
-#: ../src/eom-plugin-manager.c:52
-msgid "Enabled"
-msgstr "Etkin"
-
-#: ../src/eom-plugin-manager.c:513
-msgid "C_onfigure"
-msgstr "_Yapılandır"
-
-#: ../src/eom-plugin-manager.c:523
-msgid "A_ctivate"
-msgstr "_Etkinleştir"
-
-#: ../src/eom-plugin-manager.c:535
-msgid "Ac_tivate All"
-msgstr "Hepsini E_tkinleştir"
-
-#: ../src/eom-plugin-manager.c:540
-msgid "_Deactivate All"
-msgstr "Hepsini Et_kinsizleştir"
-
-#: ../src/eom-plugin-manager.c:834
-msgid "Active _Plugins:"
-msgstr "Etkin _Eklentiler:"
-
-#: ../src/eom-plugin-manager.c:863
-msgid "_About Plugin"
-msgstr "Eklenti _Hakkında"
-
-#: ../src/eom-plugin-manager.c:870
-msgid "C_onfigure Plugin"
-msgstr "Eklentiyi _Yapılandır"
-
-#: ../src/main.c:76
+#: ../src/main.c:80
 msgid "Open in fullscreen mode"
 msgstr "Tam ekran kipinde aç"
 
-#: ../src/main.c:77
+#: ../src/main.c:81
 msgid "Disable image collection"
 msgstr "Resim koleksiyonunu kapat"
 
-#: ../src/main.c:78
+#: ../src/main.c:82
 msgid "Open in slideshow mode"
 msgstr "Slayt gösterisi kipinde aç"
 
-#: ../src/main.c:80
+#: ../src/main.c:84
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "Mevcut oluşumu tekrar kullanmak yerine yeni bir oluşum başlat"
 
-#: ../src/main.c:83
+#: ../src/main.c:87
 msgid "Show the application's version"
 msgstr "Uygulamanın sürümünü göster"
 
-#: ../src/main.c:84
+#: ../src/main.c:88
 msgid "[FILE…]"
 msgstr "[DOSYA…]"
 
 #. I18N: The '%s' is replaced with eom's command name.
-#: ../src/main.c:210
+#: ../src/main.c:219
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "Tüm komut satırı işlemlerini görmek için '%s --help' komutunu çalıştırın."

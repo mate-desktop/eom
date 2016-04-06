@@ -1,984 +1,1502 @@
-# translation of eom to Kinyarwanda.
-# Copyright (C) 2005 Free Software Foundation, Inc.
-# This file is distributed under the same license as the eom package.
-# Steve Murphy <murf@e-tools.com>, 2005
-# Steve performed initial rough translation from compendium built from translations provided by the following translators:
-# Philibert Ndandali  <ndandali@yahoo.fr>, 2005.
-# Viateur MUGENZI <muvia1@yahoo.fr>, 2005.
-# Noëlla Mupole <s24211045@tuks.co.za>, 2005.
-# Carole Karema <karemacarole@hotmail.com>, 2005.
-# JEAN BAPTISTE NGENDAHAYO <ngenda_denis@yahoo.co.uk>, 2005.
-# Augustin KIBERWA  <akiberwa@yahoo.co.uk>, 2005.
-# Donatien NSENGIYUMVA <ndonatienuk@yahoo.co.uk>, 2005..
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: eom 2.12\n"
+"Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2005-03-31 16:32-0700\n"
-"PO-Revision-Date: 2005-03-28 19:34-0700\n"
-"Last-Translator: Steve Murphy <murf@e-tools.com>\n"
-"Language-Team: Kinyarwanda <translation-team-rw@lists.sourceforge.net>\n"
+"POT-Creation-Date: 2015-11-30 18:12+0300\n"
+"PO-Revision-Date: 2014-11-10 14:27+0000\n"
+"Last-Translator: infirit <inactive+infirit@transifex.com>\n"
+"Language-Team: Kinyarwanda (http://www.transifex.com/mate/MATE/language/rw/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: rw\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: eom.desktop.in.in.h:1
-msgid "Image Viewer"
+#. Translaters: This string is for a toggle to display a toolbar.
+#. * The name of the toolbar is automatically computed from the widgets
+#. * on the toolbar, and is placed at the %s. Note the _ before the %s
+#. * which is used to add mnemonics. We know that this is likely to
+#. * produce duplicates, but don't worry about it. If your language
+#. * normally has a mnemonic at the start, please use the _. If not,
+#. * please remove.
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:936
+#, c-format
+msgid "Show “_%s”"
 msgstr ""
 
-#: eom.desktop.in.in.h:2
-#, fuzzy
-msgid "View many different types of images"
-msgstr "Bya Ishusho"
-
-#: eom.glade.h:1
-msgid "    "
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1399
+msgid "_Move on Toolbar"
 msgstr ""
 
-#: eom.glade.h:2
-msgid "*"
-msgstr "*"
-
-#: eom.glade.h:3
-msgid "."
-msgstr "."
-
-#: eom.glade.h:4
-#, fuzzy
-msgid "<b>File Name Preview</b>"
-msgstr "<B Idosiye B"
-
-#: eom.glade.h:5
-#, fuzzy
-msgid "<b>File Path Specifications</b>"
-msgstr "<B Idosiye B"
-
-#: eom.glade.h:6
-#, fuzzy
-msgid "<b>Image Interpolation</b>"
-msgstr "<B B"
-
-#: eom.glade.h:7
-#, fuzzy
-msgid "<b>Image Zoom</b>"
-msgstr "<B B"
-
-#: eom.glade.h:8
-#, fuzzy
-msgid "<b>Options</b>"
-msgstr "<B B"
-
-#: eom.glade.h:9
-#, fuzzy
-msgid "<b>Sequence</b>"
-msgstr "<B B"
-
-#: eom.glade.h:10
-#, fuzzy
-msgid "<b>Transparent Parts</b>"
-msgstr "<B B"
-
-#: eom.glade.h:12
-#, fuzzy, no-c-format
-msgid "Allow _zoom greater than 100% initially"
-msgstr "Ihindurangano Biruta 100"
-
-#: eom.glade.h:13
-#, fuzzy
-msgid "As _background"
-msgstr "Mbuganyuma"
-
-#: eom.glade.h:14
-#, fuzzy
-msgid "As check _pattern"
-msgstr "Kugenzura... Ishusho"
-
-#: eom.glade.h:15
-#, fuzzy
-msgid "As custom c_olor"
-msgstr "Kunoza Ibara"
-
-#: eom.glade.h:16
-#, fuzzy
-msgid "Color for Transparent Areas"
-msgstr "kugirango"
-
-#: eom.glade.h:17
-msgid "Destination Folder:"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1400
+msgid "Move the selected item on the toolbar"
 msgstr ""
 
-#: eom.glade.h:18
-#, fuzzy
-msgid "Eye of MATE Preferences"
-msgstr "Bya"
-
-#: eom.glade.h:19
-msgid "Filename Format:"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1401
+msgid "_Remove from Toolbar"
 msgstr ""
 
-#: eom.glade.h:20
-msgid "Image _View"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1402
+msgid "Remove the selected item from the toolbar"
 msgstr ""
 
-#: eom.glade.h:21
-msgid "Rename From:"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1403
+msgid "_Delete Toolbar"
 msgstr ""
 
-#: eom.glade.h:22
-#, fuzzy
-msgid "Replace spaces by underscore"
-msgstr "Imyanya ku"
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1404
+msgid "Remove the selected toolbar"
+msgstr ""
 
-# #-#-#-#-#  dbaccess.pot (Mate 2.12)  #-#-#-#-#
-# #-#-#-#-#  dbaccess.pot (Mate 2.12)  #-#-#-#-#
-#: eom.glade.h:23 shell/eom-window.c:2931
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:498
+msgid "Separator"
+msgstr ""
+
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2599
+msgid "Eye of MATE"
+msgstr ""
+
+#: ../data/eom.appdata.xml.in.h:2
+msgid "Simple image viewer"
+msgstr ""
+
+#: ../data/eom.appdata.xml.in.h:3
+msgid ""
+"<p> Eye of MATE is a simple viewer for browsing images on your computer. "
+"Once an image is loaded, you can zoom and rotate the image, and also view "
+"subsequent images in the directory the image was loaded from. </p>"
+msgstr ""
+
+#: ../data/eom.desktop.in.in.h:1 ../src/main.c:73 ../src/main.c:275
+msgid "Eye of MATE Image Viewer"
+msgstr ""
+
+#: ../data/eom.desktop.in.in.h:2
+msgid "Browse and rotate images"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:1
+msgid "Image Properties"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:2
+msgid "Name:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:3
+msgid "Width:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:4
+msgid "Height:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:5
+msgid "Type:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:6
+msgid "Bytes:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:7
+msgid "Location:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:8
+msgid "General"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:9
+msgid "Aperture Value:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:10
+msgid "Exposure Time:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:11
+msgid "Focal Length:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:12
+msgid "Flash:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:13
+msgid "ISO Speed Rating:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:14
+msgid "Metering Mode:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:15
+msgid "Camera Model:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:16
+msgid "Date/Time:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:17
+msgid "Description:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:18
+msgid "Keywords:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:19
+msgid "Author:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:20
+msgid "Copyright:"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:21
+msgid "Details"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:22
+msgid "Metadata"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:23
+msgid "_Previous"
+msgstr ""
+
+#: ../data/eom-image-properties-dialog.ui.h:24
+msgid "_Next"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:1
 msgid "Save As"
 msgstr "Kubika nka"
 
-#: eom.glade.h:24
-msgid "Saving Image"
+#: ../data/eom-multiple-save-as-dialog.ui.h:3
+#, no-c-format
+msgid "<b>%f:</b> original filename"
 msgstr ""
 
-#: eom.glade.h:25
-#, fuzzy
-msgid "Show _next image automatically after:"
-msgstr "Komeza>> Ishusho ku buryo bwikora Nyuma"
+#: ../data/eom-multiple-save-as-dialog.ui.h:5
+#, no-c-format
+msgid "<b>%n:</b> counter"
+msgstr ""
 
-#: eom.glade.h:26
-#, fuzzy
-msgid "Sli_de Show"
-msgstr "Kwerekana Igice"
+#: ../data/eom-multiple-save-as-dialog.ui.h:6
+msgid "Filename format:"
+msgstr ""
 
-#: eom.glade.h:27
-#, fuzzy
+#: ../data/eom-multiple-save-as-dialog.ui.h:7
+msgid "Choose a folder"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:8
+msgid "Destination folder:"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:9
+msgid "File Path Specifications"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:10
 msgid "Start counter at:"
-msgstr "Gutangira ku"
+msgstr ""
 
-# address labels
-# LOCALIZATION NOTE addressingWidgetOverlay.dtd The basic mail/news composition headers as they are seen in UI
-#: eom.glade.h:28
+#: ../data/eom-multiple-save-as-dialog.ui.h:11
+msgid "Replace spaces with underscores"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:12
+msgid "Options"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:13
+msgid "Rename from:"
+msgstr ""
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:14
 msgid "To:"
 msgstr "Kuri:"
 
-# setup2/source\ui\pages\pasupath.src:RESID_PAGE_PAGEASRV_USERPATH.PB_SEARCH.text
-#: eom.glade.h:29
-#, fuzzy
-msgid "_Browse"
-msgstr "Gushakisha"
-
-#: eom.glade.h:30
-#, fuzzy
-msgid "_Interpolate image on zoom"
-msgstr "Ishusho ku Ihindurangano"
-
-#: eom.glade.h:31
-msgid "_Loop sequence"
+#: ../data/eom-multiple-save-as-dialog.ui.h:15
+msgid "File Name Preview"
 msgstr ""
 
-# offmgr/source\offapp\dialog\optgdlg.src:OFA_TP_MISC.FT_HELPAGENT_TIME_UNIT.text
-#: eom.glade.h:32
+#: ../data/eom-preferences-dialog.ui.h:1
+msgid "Eye of MATE Preferences"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:2
+msgid "Image Enhancements"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:3
+msgid "Smooth images when zoomed-_out"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:4
+msgid "Smooth images when zoomed-_in"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:5
+msgid "_Automatic orientation"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:6
+msgid "Background"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:7
+msgid "As custom color:"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:8
+#: ../data/org.mate.eom.gschema.xml.in.h:3
+msgid "Background Color"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:9
+msgid "Transparent Parts"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:10
+msgid "As check _pattern"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:11
+msgid "As custom c_olor:"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:12
+msgid "Color for Transparent Areas"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:13
+msgid "As _background"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:14
+msgid "Image View"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:15
+msgid "Image Zoom"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:16
+msgid "E_xpand images to fit screen"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:17
+msgid "Sequence"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:18
+msgid "_Switch image after:"
+msgstr ""
+
+#: ../data/eom-preferences-dialog.ui.h:19
 msgid "seconds"
 msgstr "amasogonda"
 
-#: eom.schemas.in.h:1
-#, fuzzy
-msgid ""
-"A value greater than 0 determines the seconds an image stays on screen until "
-"the next one is shown automatically. Zero disables the automatic browsing."
+#: ../data/eom-preferences-dialog.ui.h:20
+msgid "_Random sequence"
 msgstr ""
-"A Agaciro Biruta 0 amasogonda Ishusho ku Mugaragaza Komeza>> ni ku buryo "
-"bwikora Byikoresha"
 
-#: eom.schemas.in.h:3
-#, fuzzy, no-c-format
-msgid "Allow zoom greater than 100% initially"
-msgstr "Ihindurangano Biruta 100"
+#: ../data/eom-preferences-dialog.ui.h:21
+msgid "_Loop sequence"
+msgstr ""
 
-#: eom.schemas.in.h:4
-#, fuzzy
-msgid "Delay in seconds until showing the next image"
-msgstr "in amasogonda Komeza>> Ishusho"
+#: ../data/eom-preferences-dialog.ui.h:22
+msgid "Slideshow"
+msgstr ""
 
-#: eom.schemas.in.h:5
-#, fuzzy
+#: ../data/eom-preferences-dialog.ui.h:23
+msgid "Plugins"
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:1
+msgid "Automatic orientation"
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:2
 msgid ""
-"Determines how transparency should be indicated. Valid values are "
-"CHECK_PATTERN, COLOR and NONE. If COLOR is choosen, then the trans_color key "
-"determines the used color value."
-msgstr "Ibonerana Uduciro Na ni Hanyuma Urufunguzo Ibara Agaciro"
+"Whether the image should be rotated automatically based on EXIF orientation."
+msgstr ""
 
-#: eom.schemas.in.h:6
-#, fuzzy
+#: ../data/org.mate.eom.gschema.xml.in.h:4
+msgid ""
+"The color that is used to fill the area behind the image. If the use-"
+"background-color key is not set, the color is determined by the active GTK+ "
+"theme instead."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:5
+msgid "Use a custom background color"
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:6
+msgid ""
+"If this is active, the color set by the background-color key will be used to"
+" fill the area behind the image. If it is not set, the current GTK+ theme "
+"will determine the fill color."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:7
+msgid "Interpolate Image"
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:8
+msgid ""
+"Whether the image should be interpolated on zoom-out. This leads to better "
+"quality but is somewhat slower than non-interpolated images."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:9
+msgid "Extrapolate Image"
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:10
+msgid ""
+"Whether the image should be extrapolated on zoom-in. This leads to blurry "
+"quality and is somewhat slower than non-extrapolated images."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:11
+msgid "Transparency indicator"
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:12
+msgid ""
+"Determines how transparency should be indicated. Valid values are checked, "
+"color and none. If color is chosen, then the trans-color key determines the "
+"color value used."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:13
+msgid "Scroll wheel zoom"
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:14
+msgid "Whether the scroll wheel should be used for zooming."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:15
+msgid "Zoom multiplier"
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:17
+#, no-c-format
+msgid ""
+"The multiplier to be applied when using the mouse scroll wheel for zooming. "
+"This value defines the zooming step used for each scroll event. For example,"
+" 0.05 results in a 5% zoom increment for each scroll event and 1.00 result "
+"in a 100% zoom increment."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:18
+msgid "Transparency color"
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:19
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
 msgstr ""
-"Ibonerana Urufunguzo Agaciro Hanyuma iyi Urufunguzo Ibara ni kugirango "
-"Ibonerana"
 
-#: eom.schemas.in.h:7
-#, fuzzy
+#: ../data/org.mate.eom.gschema.xml.in.h:20
+msgid "Randomize the image sequence"
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:21
+msgid "Whether the sequence of images should be shown in an random loop."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:22
+msgid "Loop through the image sequence"
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:23
+msgid "Whether the sequence of images should be shown in an endless loop."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:25
+#, no-c-format
+msgid "Allow zoom greater than 100% initially"
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:26
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
-msgstr "iyi ni Gushyiraho Kuri Gitoya Ishusho OYA Birambuye Kuri Mugaragaza"
-
-#: eom.schemas.in.h:8
-msgid "Interpolate Image"
 msgstr ""
 
-#: eom.schemas.in.h:9
-#, fuzzy
-msgid "Last collection window geometry"
-msgstr "Idirishya Iyigamashusho"
-
-#: eom.schemas.in.h:10
-#, fuzzy
-msgid "Last singleton window geometry"
-msgstr "Idirishya Iyigamashusho"
-
-#: eom.schemas.in.h:11
-#, fuzzy
-msgid "Loop through the image sequence"
-msgstr "Gihinguranya Ishusho"
-
-#: eom.schemas.in.h:12
-#, fuzzy
-msgid "Open images in a new window"
-msgstr "Ishusho in a Gishya Idirishya"
-
-#: eom.schemas.in.h:13
-#, fuzzy
-msgid "Show/hide image information for collection."
-msgstr "Gushisha Ishusho Ibisobanuro kugirango"
-
-#: eom.schemas.in.h:14
-#, fuzzy
-msgid "Show/hide image information for single image."
-msgstr "Gushisha Ishusho Ibisobanuro kugirango UMWE Ishusho"
-
-#: eom.schemas.in.h:15
-#, fuzzy
-msgid "Show/hide the window statusbar."
-msgstr "Gushisha Idirishya"
-
-#: eom.schemas.in.h:16
-#, fuzzy
-msgid "Show/hide the window toolbar."
-msgstr "Gushisha Idirishya Umwanyabikoresho"
-
-#: eom.schemas.in.h:17
-#, fuzzy
-msgid "Transparency color"
-msgstr "Ibara"
-
-#: eom.schemas.in.h:18
-msgid "Transparency indicator"
+#: ../data/org.mate.eom.gschema.xml.in.h:27
+msgid "Delay in seconds until showing the next image"
 msgstr ""
 
-#: eom.schemas.in.h:19
-#, fuzzy
+#: ../data/org.mate.eom.gschema.xml.in.h:28
 msgid ""
-"Whether opening an image should create a new window instead of replacing the "
-"image in the current window."
+"A value greater than 0 determines the seconds an image stays on screen until"
+" the next one is shown automatically. Zero disables the automatic browsing."
 msgstr ""
-"Gufungura%S Ishusho Kurema a Gishya Idirishya Bya Guhindura:%s Ishusho in "
-"KIGEZWEHO Idirishya"
 
-#: eom.schemas.in.h:20
-#, fuzzy
+#: ../data/org.mate.eom.gschema.xml.in.h:29
+msgid "Show/Hide the window toolbar."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:30
+msgid "Show/Hide the window statusbar."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:31
+msgid "Show/Hide the image collection pane."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:32
+msgid "Image collection pane position."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:33
+msgid "Whether the image collection pane should be resizable."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:34
+msgid "Show/Hide the window side pane."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:35
+msgid "Show/Hide the image collection pane scroll buttons."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:36
+msgid "Close main window without asking to save changes."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:37
+msgid "Trash images without asking"
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:38
 msgid ""
-"Whether or not the sequence of images should be shown in an endless loop."
-msgstr "Cyangwa OYA Bya Ishusho in Kidahera"
+"If activated, Eye of MATE won't ask for confirmation when moving images to "
+"the trash. It will still ask if any of the files cannot be moved to the "
+"trash and would be deleted instead."
+msgstr ""
 
-#: eom.schemas.in.h:21
-#, fuzzy
+#: ../data/org.mate.eom.gschema.xml.in.h:39
 msgid ""
-"Whether the image should be interpolated on zoom or not. This leads to "
-"better quality but is somewhat slower than non interpolated images."
-msgstr "Ishusho ku Ihindurangano Cyangwa OYA Kuri Ubwiza ni Ishusho"
+"Whether the metadata list in the properties dialog should have its own page."
+msgstr ""
 
-#: libeom/eom-file-selection.c:127
+#: ../data/org.mate.eom.gschema.xml.in.h:40
+msgid ""
+"If activated, the detailed metadata list in the properties dialog will be "
+"moved to its own page in the dialog. This should make the dialog more usable"
+" on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
+"be embedded on the \"Metadata\" page."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:41
+msgid "External program to use for editing images"
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:42
+msgid ""
+"The desktop file name (including the \".desktop\") of the application to use"
+" for editing images (when the \"Edit Image\" toolbar button is clicked). Set"
+" to the empty string to disable this feature."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:43
+msgid ""
+"Whether the file chooser should show the user's pictures folder if no images"
+" are loaded."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:44
+msgid ""
+"If activated and no image is loaded in the active window, the file chooser "
+"will display the user's pictures folder using the XDG special user "
+"directories. If deactivated or the pictures folder has not been set up, it "
+"will show the current working directory."
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:45
+msgid "Active plugins"
+msgstr ""
+
+#: ../data/org.mate.eom.gschema.xml.in.h:46
+msgid ""
+"List of active plugins. It doesn't contain the \"Location\" of the active "
+"plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
+"plugin."
+msgstr ""
+
+#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:1
+msgid "Fullscreen with double-click"
+msgstr ""
+
+#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:2
+msgid "Activate fullscreen mode with double-click"
+msgstr ""
+
+#: ../plugins/reload/eom-reload-plugin.c:38
+#: ../plugins/reload/reload.eom-plugin.desktop.in.h:1
+msgid "Reload Image"
+msgstr ""
+
+#: ../plugins/reload/eom-reload-plugin.c:38
+#: ../plugins/reload/reload.eom-plugin.desktop.in.h:2
+msgid "Reload current image"
+msgstr ""
+
+#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:1
+msgid "Date in statusbar"
+msgstr ""
+
+#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:2
+msgid "Shows the image date in the window statusbar"
+msgstr ""
+
+#: ../src/eom-application.c:123
+msgid "Running in fullscreen mode"
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:164
+msgid "Close _without Saving"
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:197
+msgid "Question"
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:378
+msgid "If you don't save, your changes will be lost."
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:421
+#, c-format
+msgid "Save changes to image \"%s\" before closing?"
+msgstr ""
+
+#: ../src/eom-close-confirmation-dialog.c:628
+#, c-format
+msgid "There is %d image with unsaved changes. Save changes before closing?"
+msgid_plural ""
+"There are %d images with unsaved changes. Save changes before closing?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/eom-close-confirmation-dialog.c:645
+msgid "S_elect the images you want to save:"
+msgstr ""
+
+#. Secondary label
+#: ../src/eom-close-confirmation-dialog.c:667
+msgid "If you don't save, all your changes will be lost."
+msgstr ""
+
+#: ../src/eom-file-chooser.c:132
+msgid "File format is unknown or unsupported"
+msgstr ""
+
+#: ../src/eom-file-chooser.c:137
+msgid ""
+"Eye of MATE could not determine a supported writable file format based on "
+"the filename."
+msgstr ""
+
+#: ../src/eom-file-chooser.c:138
+msgid "Please try a different file extension like .png or .jpg."
+msgstr ""
+
+#: ../src/eom-file-chooser.c:170
 msgid "All Files"
 msgstr "Amadosiye yose"
 
-#: libeom/eom-file-selection.c:132
+#: ../src/eom-file-chooser.c:175
 msgid "All Images"
 msgstr ""
 
-#. Filter name: First description then file extension, eg. "The PNG-Format (*.png)".
-#: libeom/eom-file-selection.c:150
+#. Filter name: First description then file extension, eg. "The PNG-Format
+#. (*.png)".
+#: ../src/eom-file-chooser.c:196
 #, c-format
 msgid "%s (*.%s)"
 msgstr ""
 
 #. Pixel size of image: width x height in pixel
-#: libeom/eom-file-selection.c:243
-#, fuzzy, c-format
-msgid "%s x %s pixel"
-msgstr "%sX"
+#: ../src/eom-file-chooser.c:292 ../src/eom-properties-dialog.c:137
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:588
+msgid "pixel"
+msgid_plural "pixels"
+msgstr[0] ""
+msgstr[1] ""
 
-# svtools/source\uno\unoifac2.src:RID_CONTEXTMENU.RID_OPEN_LINK_NEW.text
-#: libeom/eom-file-selection.c:405
-#, fuzzy
-msgid "Open in new window"
-msgstr "Gufungurira muri New Window"
-
-#: libeom/eom-file-selection.c:431
-msgid "Load Image"
+#: ../src/eom-file-chooser.c:443
+msgid "Open Image"
 msgstr ""
 
-#: libeom/eom-file-selection.c:439
+#: ../src/eom-file-chooser.c:451
 msgid "Save Image"
 msgstr "Bika Ishusho"
 
-#: libeom/eom-file-selection.c:447
+#: ../src/eom-file-chooser.c:459
 msgid "Open Folder"
 msgstr ""
 
-#: libeom/eom-image-jpeg.c:330 libeom/eom-image-jpeg.c:569
-#, fuzzy, c-format
-msgid "Couldn't create temporary file for saving: %s"
-msgstr "Kurema By'igihe gito IDOSIYE kugirango Mu kubika"
-
-#: libeom/eom-image-jpeg.c:349 libeom/eom-image-jpeg.c:590
-#, fuzzy
-msgid "Couldn't allocate memory for loading JPEG file"
-msgstr "Ububiko kugirango Itangira... IDOSIYE"
-
-#: libeom/eom-image.c:404
-#, fuzzy
+#: ../src/eom-image.c:598
+#, c-format
 msgid "Transformation on unloaded image."
-msgstr "ku Ishusho"
+msgstr ""
 
-#: libeom/eom-image.c:515
-#, fuzzy
+#: ../src/eom-image.c:626
+#, c-format
+msgid "Transformation failed."
+msgstr ""
+
+#: ../src/eom-image.c:1053
+#, c-format
 msgid "EXIF not supported for this file format."
-msgstr "OYA kugirango iyi IDOSIYE Imiterere"
+msgstr ""
 
-#: libeom/eom-image.c:1002 libeom/eom-image.c:1213
-#, fuzzy
-msgid "File exists"
-msgstr "Idosiye"
+#: ../src/eom-image.c:1182
+#, c-format
+msgid "Image loading failed."
+msgstr ""
 
-#: libeom/eom-image.c:1155 libeom/eom-image.c:1281
-#, fuzzy
+#: ../src/eom-image.c:1711 ../src/eom-image.c:1813
+#, c-format
 msgid "No image loaded."
-msgstr "Ishusho"
+msgstr ""
 
-#: libeom/eom-image.c:1164 libeom/eom-image.c:1290
-#, fuzzy
+#: ../src/eom-image.c:1721 ../src/eom-image.c:1825
+#, c-format
 msgid "Temporary file creation failed."
-msgstr "IDOSIYE Byanze"
+msgstr ""
 
-# svx/source\engine3d\float3d.src:RID_SVXFLOAT_3D.FL_CAMERA.text
-#: libeom/eom-info-view-exif.c:26
+#: ../src/eom-image-jpeg.c:382
+#, c-format
+msgid "Couldn't create temporary file for saving: %s"
+msgstr ""
+
+#: ../src/eom-image-jpeg.c:393
+#, c-format
+msgid "Couldn't allocate memory for loading JPEG file"
+msgstr ""
+
+#: ../src/eom-error-message-area.c:124
+msgid "_Retry"
+msgstr ""
+
+#: ../src/eom-error-message-area.c:167
+#, c-format
+msgid "Could not load image '%s'."
+msgstr ""
+
+#: ../src/eom-error-message-area.c:209
+#, c-format
+msgid "No images found in '%s'."
+msgstr ""
+
+#: ../src/eom-error-message-area.c:216
+msgid "The given locations contain no images."
+msgstr ""
+
+#: ../src/eom-exif-details.c:68
 msgid "Camera"
 msgstr "Kamera"
 
-#: libeom/eom-info-view-exif.c:27
+#: ../src/eom-exif-details.c:69
 msgid "Image Data"
 msgstr ""
 
-#: libeom/eom-info-view-exif.c:28
+#: ../src/eom-exif-details.c:70
 msgid "Image Taking Conditions"
 msgstr ""
 
-#: libeom/eom-info-view-exif.c:29
+#: ../src/eom-exif-details.c:71
 msgid "Maker Note"
 msgstr ""
 
-# framework/source\classes\fltdlg.src:STR_FILTER_OTHERS.text
-#: libeom/eom-info-view-exif.c:30
+#: ../src/eom-exif-details.c:72
 msgid "Other"
 msgstr "Ikindi"
 
-#: libeom/eom-info-view-exif.c:212
+#: ../src/eom-exif-details.c:74
+msgid "XMP Exif"
+msgstr ""
+
+#: ../src/eom-exif-details.c:75
+msgid "XMP IPTC"
+msgstr ""
+
+#: ../src/eom-exif-details.c:76
+msgid "XMP Rights Management"
+msgstr ""
+
+#: ../src/eom-exif-details.c:77
+msgid "XMP Other"
+msgstr ""
+
+#: ../src/eom-exif-details.c:251
 msgid "Tag"
 msgstr "Itagi"
 
-#: libeom/eom-info-view-exif.c:220 libeom/eom-info-view-file.c:96
+#: ../src/eom-exif-details.c:258
 msgid "Value"
 msgstr "Agaciro"
 
-#. only used for internal purpose
-#: libeom/eom-info-view-file.c:25 libeom/eom-uri-converter.h:45
-msgid "Filename"
-msgstr "Izina ry'idosiye"
-
-#: libeom/eom-info-view-file.c:26
-msgid "Width"
-msgstr "Ubugari"
-
-#: libeom/eom-info-view-file.c:27
-msgid "Height"
-msgstr "Ubuhagarike"
-
-#: libeom/eom-info-view-file.c:28
-msgid "Filesize"
+#. A strftime-formatted string, to display the date the image was taken.
+#: ../src/eom-exif-util.c:118 ../src/eom-exif-util.c:158
+msgid "%a, %d %B %Y  %X"
 msgstr ""
 
-#: libeom/eom-info-view-file.c:88
-msgid "Attribute"
-msgstr "Ikiranga"
-
-# sc/source\ui\src\scfuncs.src:RID_SC_FUNCTION_DESCRIPTIONS2.SC_OPCODE_DDE.4.text
-#: libeom/eom-info-view.c:81
-msgid "File"
-msgstr "Idosiye"
-
-#: libeom/eom-info-view.c:90
-msgid "EXIF"
+#. A strftime-formatted string, to display the date the image was taken, for
+#. the case we don't have the time.
+#: ../src/eom-exif-util.c:152
+msgid "%a, %d %B %Y"
 msgstr ""
 
-#: libeom/eom-info-view.c:97
-msgid "IPTC"
+#: ../src/eom-plugin-manager.c:51
+msgid "Plugin"
 msgstr ""
 
-#: libeom/eom-save-as-dialog-helper.c:138
-#, fuzzy
-msgid "Option not available."
-msgstr "OYA Bihari"
+#: ../src/eom-plugin-manager.c:52
+msgid "Enabled"
+msgstr ""
 
-#: libeom/eom-save-as-dialog-helper.c:139
-#, fuzzy
-msgid ""
-"To use this function you need the libexif library. Please install libexif "
-"(http://libexif.sf.net) and recompile Eye of MATE."
-msgstr "Gukoresha iyi Umumaro Isomero Kwinjiza porogaramu HTTP Cyuzuye Na Bya"
+#: ../src/eom-plugin-manager.c:505 ../src/eom-window.c:3673
+msgid "_About"
+msgstr ""
 
-#: libeom/eom-save-as-dialog-helper.c:215
-#, fuzzy
+#: ../src/eom-plugin-manager.c:513
+msgid "C_onfigure"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:523
+msgid "A_ctivate"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:535
+msgid "Ac_tivate All"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:540
+msgid "_Deactivate All"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:834
+msgid "Active _Plugins:"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:867
+msgid "_About Plugin"
+msgstr ""
+
+#: ../src/eom-plugin-manager.c:874
+msgid "C_onfigure Plugin"
+msgstr ""
+
+#: ../src/eom-print.c:219
+msgid "Image Settings"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:873
+msgid "Image"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:874
+msgid "The image whose printing properties will be set up"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:880
+msgid "Page Setup"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:881
+msgid "The information for the page where the image will be printed"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:914 ../src/eom-print-image-setup.c:928
+msgid "Position"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:918 ../src/eom-print-image-setup.c:933
+msgid "_Left:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:920 ../src/eom-print-image-setup.c:934
+msgid "_Right:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:921 ../src/eom-print-image-setup.c:935
+msgid "_Top:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:922 ../src/eom-print-image-setup.c:936
+msgid "_Bottom:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:939
+msgid "C_enter:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:948
+msgid "None"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:950
+msgid "Horizontal"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:952
+msgid "Vertical"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:954
+msgid "Both"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:980 ../src/eom-print-image-setup.c:991
+msgid "Size"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:983 ../src/eom-print-image-setup.c:996
+msgid "_Width:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:985 ../src/eom-print-image-setup.c:998
+msgid "_Height:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:1002
+msgid "_Scaling:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:1026
+msgid "_Unit:"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:1035
+msgid "Millimeters"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:1037
+msgid "Inches"
+msgstr ""
+
+#: ../src/eom-print-image-setup.c:1074
+msgid "Preview"
+msgstr ""
+
+#: ../src/eom-properties-dialog.c:154
+msgid "Unknown"
+msgstr ""
+
+#. TRANSLATORS: This is the actual focal length used when
+#. the image was taken.
+#: ../src/eom-properties-dialog.c:232
+#, c-format
+msgid "%.1f (lens)"
+msgstr ""
+
+#. Print as float to get a similar look as above.
+#. TRANSLATORS: This is the equivalent focal length assuming
+#. a 35mm film camera.
+#: ../src/eom-properties-dialog.c:243
+#, c-format
+msgid "%.1f (35mm film)"
+msgstr ""
+
+#: ../src/eom-save-as-dialog-helper.c:161
 msgid "as is"
-msgstr "Nka ni"
-
-#: libeom/eom-save-dialog-helper.c:192
-#, fuzzy, c-format
-msgid "Saving image %s."
-msgstr "Ishusho"
-
-#: libeom/eom-save-dialog-helper.c:238
-#, fuzzy
-msgid "Cancel saving ..."
-msgstr "Mu kubika"
-
-#: libeom/eom-uri-converter.c:1023
-#, fuzzy
-msgid "Filenames are not disjunct."
-msgstr "OYA"
-
-#: libeom/eom-uri-converter.h:46
-msgid "Counter"
 msgstr ""
 
-# padmin/source\padialog.src:RID_TXT_TESTPAGE_COMMENT.text
-#: libeom/eom-uri-converter.h:47
-msgid "Comment"
-msgstr "Icyo wongeraho"
+#. Translators: This string is displayed in the statusbar.
+#. * The first token is the image number, the second is total image
+#. * count.
+#. *
+#. * Translate to "%Id" if you want to use localized digits, or
+#. * translate to "%d" otherwise.
+#. *
+#. * Note that translating this doesn't guarantee that you get localized
+#. * digits. That needs support from your system and locale definition
+#. * too.
+#: ../src/eom-statusbar.c:134
+#, c-format
+msgid "%d / %d"
+msgstr ""
 
-#: libeom/eom-uri-converter.h:48
-msgid "Date"
-msgstr "Itariki"
+#: ../src/eom-thumb-view.c:616
+msgid "Taken on"
+msgstr ""
 
-#: libeom/eom-uri-converter.h:49
-msgid "Time"
-msgstr "Igihe"
+#: ../src/eom-uri-converter.c:984
+#, c-format
+msgid "At least two file names are equal."
+msgstr ""
 
-# svtools/source\control\calendar.src:STR_SVT_CALENDAR_DAY.text
-#: libeom/eom-uri-converter.h:50
-msgid "Day"
-msgstr "Umunsi"
+#: ../src/eom-util.c:68
+msgid "Could not display help for Eye of MATE"
+msgstr ""
 
-# sw/source\ui\utlui\initui.src:STR_AUTH_FIELD_MONTH.text
-#: libeom/eom-uri-converter.h:51
-msgid "Month"
-msgstr "Ukwezi"
+#: ../src/eom-util.c:116
+msgid " (invalid Unicode)"
+msgstr ""
 
-# sw/source\ui\utlui\initui.src:STR_AUTH_FIELD_YEAR.text
-#: libeom/eom-uri-converter.h:52
-msgid "Year"
-msgstr "Umwaka"
+#. Translators: This is the string displayed in the statusbar
+#. * The tokens are from left to right:
+#. * - image width
+#. * - image height
+#. * - image size in bytes
+#. * - zoom in percent
+#: ../src/eom-window.c:516
+#, c-format
+msgid "%i × %i pixel  %s    %i%%"
+msgid_plural "%i × %i pixels  %s    %i%%"
+msgstr[0] ""
+msgstr[1] ""
 
-# sc/source\core\src\compiler.src:RID_SC_FUNCTION_NAMES.SC_OPCODE_GET_HOUR.text
-#: libeom/eom-uri-converter.h:53
-#, fuzzy
-msgid "Hour"
-msgstr "ISAHA"
+#: ../src/eom-window.c:811
+msgid "_Reload"
+msgstr ""
 
-# sc/source\core\src\compiler.src:RID_SC_FUNCTION_NAMES.SC_OPCODE_GET_MIN.text
-#: libeom/eom-uri-converter.h:54
-#, fuzzy
-msgid "Minute"
-msgstr "UMUNOTA"
+#: ../src/eom-window.c:813 ../src/eom-window.c:2720
+msgctxt "MessageArea"
+msgid "Hi_de"
+msgstr ""
 
-# sc/source\core\src\compiler.src:RID_SC_FUNCTION_NAMES.SC_OPCODE_GET_SEC.text
-#: libeom/eom-uri-converter.h:55
-#, fuzzy
-msgid "Second"
-msgstr "ISEGONDA"
-
-#. Translators should localize the following string
-#. * which will give them credit in the About box.
-#. * E.g. "Fulano de Tal <fulano@detal.com>"
-#.
-#: shell/eom-window.c:491
-#, fuzzy
-msgid "translator-credits"
-msgstr "Umusemuzi"
-
-#: shell/eom-window.c:496 shell/eom-window.c:2693 shell/eom-window.c:3181
-#: shell/main.c:602
-#, fuzzy
-msgid "Eye of MATE"
-msgstr "Bya"
-
-#: shell/eom-window.c:499
-#, fuzzy
-msgid "The MATE image viewing and cataloging program."
-msgstr "Ishusho Na Porogaramu"
-
-#: shell/eom-window.c:536
-#, fuzzy, c-format
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eom-window.c:823
+#, c-format
 msgid ""
-"Could not display help for Eye of MATE.\n"
+"The image \"%s\" has been modified by an external application.\n"
+"Would you like to reload it?"
+msgstr ""
+
+#: ../src/eom-window.c:993
+#, c-format
+msgid "Use \"%s\" to open the selected image"
+msgstr ""
+
+#. Translators: This string is displayed in the statusbar
+#. * while saving images. The tokens are from left to right:
+#. * - the original filename
+#. * - the current image's position in the queue
+#. * - the total number of images queued for saving
+#: ../src/eom-window.c:1149
+#, c-format
+msgid "Saving image \"%s\" (%u/%u)"
+msgstr ""
+
+#: ../src/eom-window.c:1507
+#, c-format
+msgid "Opening image \"%s\""
+msgstr ""
+
+#: ../src/eom-window.c:2217
+#, c-format
+msgid ""
+"Error printing file:\n"
 "%s"
-msgstr "OYA Kugaragaza Ifashayobora kugirango Bya"
-
-#: shell/eom-window.c:831
-#, fuzzy, c-format
-msgid "Overwrite file %s?"
-msgstr "Gusimbuza IDOSIYE"
-
-#: shell/eom-window.c:832
-#, fuzzy
-msgid "File exists. Do you want to overwrite it?"
-msgstr "Wifuzakurisimbura."
-
-#: shell/eom-window.c:841 shell/eom-window.c:854
-msgid "Skip"
 msgstr ""
 
-# sw/source\ui\wrtsh\wrtsh.src:STR_OVR_UNDO.text
-#: shell/eom-window.c:842
-msgid "Overwrite"
-msgstr "Gusimbuza"
-
-#: shell/eom-window.c:847
-#, fuzzy, c-format
-msgid "Error on saving %s."
-msgstr "ku Mu kubika"
-
-# 5169
-#: shell/eom-window.c:855 shell/eom-window.c:1405
-msgid "Retry"
-msgstr "Ongera ugerageze"
-
-#: shell/eom-window.c:1272
-#, fuzzy
-msgid "Couldn't determine destination uri."
-msgstr "Ishyika"
-
-#: shell/eom-window.c:1394
-#, fuzzy, c-format
-msgid "Couldn't determine file format of %s"
-msgstr "IDOSIYE Imiterere Bya"
-
-#: shell/eom-window.c:1395
-#, fuzzy
-msgid "Please use an appropriate filename suffix or select a file format."
+#: ../src/eom-window.c:2479
+msgid "Toolbar Editor"
 msgstr ""
-"Gukoresha Izina ry'idosiye: Ingereka Cyangwa Guhitamo a IDOSIYE Imiterere"
 
-#: shell/eom-window.c:1528
-#, fuzzy
-msgid "Error on saving images."
-msgstr "ku Mu kubika Ishusho"
+#: ../src/eom-window.c:2482
+msgid "_Reset to Default"
+msgstr ""
 
-#: shell/eom-window.c:1781
-#, fuzzy, c-format
-msgid "Do you really want to move %i image to trash?"
-msgid_plural "Do you really want to move %i images to trash?"
-msgstr[0] "Kuri Kwimura Ishusho Kuri"
+#: ../src/eom-window.c:2575
+msgid "translator-credits"
+msgstr ""
 
-#: shell/eom-window.c:1819
+#: ../src/eom-window.c:2578
+msgid ""
+"This program is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version.\n"
+msgstr ""
+
+#: ../src/eom-window.c:2582
+msgid ""
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details.\n"
+msgstr ""
+
+#: ../src/eom-window.c:2586
+msgid ""
+"You should have received a copy of the GNU General Public License along with"
+" this program; if not, write to the Free Software Foundation, Inc., 51 "
+"Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
+msgstr ""
+
+#: ../src/eom-window.c:2604
+msgid "The MATE image viewer."
+msgstr ""
+
+#. I18N: When setting mnemonics for these strings, watch out to not
+#. clash with mnemonics from eom's menubar
+#: ../src/eom-window.c:2718
+msgid "_Open Background Preferences"
+msgstr ""
+
+#. The newline character is currently necessary due to a problem
+#. * with the automatic line break.
+#: ../src/eom-window.c:2734
+#, c-format
+msgid ""
+"The image \"%s\" has been set as Desktop Background.\n"
+"Would you like to modify its appearance?"
+msgstr ""
+
+#: ../src/eom-window.c:3133
+msgid "Saving image locally…"
+msgstr ""
+
+#: ../src/eom-window.c:3213
+#, c-format
+msgid ""
+"Are you sure you want to move\n"
+"\"%s\" to the trash?"
+msgstr ""
+
+#: ../src/eom-window.c:3216
+#, c-format
+msgid ""
+"A trash for \"%s\" couldn't be found. Do you want to remove this image "
+"permanently?"
+msgstr ""
+
+#: ../src/eom-window.c:3221
+#, c-format
+msgid ""
+"Are you sure you want to move\n"
+"the selected image to the trash?"
+msgid_plural ""
+"Are you sure you want to move\n"
+"the %d selected images to the trash?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/eom-window.c:3226
+msgid ""
+"Some of the selected images can't be moved to the trash and will be removed "
+"permanently. Are you sure you want to proceed?"
+msgstr ""
+
+#: ../src/eom-window.c:3243 ../src/eom-window.c:3727 ../src/eom-window.c:3754
+msgid "Move to _Trash"
+msgstr ""
+
+#: ../src/eom-window.c:3245
+msgid "_Do not ask again during this session"
+msgstr ""
+
+#: ../src/eom-window.c:3290 ../src/eom-window.c:3304
+#, c-format
 msgid "Couldn't access trash."
 msgstr ""
 
-#: shell/eom-window.c:1893
-#, fuzzy, c-format
-msgid "Error on deleting image %s"
-msgstr "ku Ishusho"
-
-#. [image width] x [image height] pixel  [bytes]    [zoom in percent]
-#: shell/eom-window.c:2618
-#, fuzzy, c-format
-msgid "%i x %i pixel  %s    %i%%"
-msgstr "%iX"
-
-#: shell/eom-window.c:2652
+#: ../src/eom-window.c:3312
 #, c-format
-msgid "Reason: %s"
+msgid "Couldn't delete file"
 msgstr ""
 
-#: shell/eom-window.c:2734
-#, fuzzy, c-format
-msgid "Image loading failed for %s"
-msgstr "Itangira... Byanze kugirango"
+#: ../src/eom-window.c:3409
+#, c-format
+msgid "Error on deleting image %s"
+msgstr ""
 
-# sc/source\ui\src\globstr.src:RID_GLOBSTR.STR_HFCMD_FILE.text
-#: shell/eom-window.c:2872
-#, fuzzy
-msgid "_File"
-msgstr "IDOSIYE"
+#: ../src/eom-window.c:3651
+msgid "_Image"
+msgstr ""
 
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\basidesh.src:RID_BASICMENU.MN_EDIT.text
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\basidesh.src:RID_BASICPLUGINMENU.MN_PLEDIT.text
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\macrodlg.src:RID_MACROCHOOSER.RID_PB_EDIT.text
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\moduldlg.src:RID_TP_MODULS.RID_PB_EDIT.text
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\moduldlg.src:RID_TP_LIBS.RID_PB_EDIT.text
-#: shell/eom-window.c:2873
-#, fuzzy
+#: ../src/eom-window.c:3652
 msgid "_Edit"
-msgstr "Guhindura"
-
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\basidesh.src:RID_BASICMENU.MN_VIEW.text
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\basidesh.src:RID_BASICPLUGINMENU.MN_PLVIEW.text
-#: shell/eom-window.c:2874
-#, fuzzy
-msgid "_View"
-msgstr "Kureba"
-
-#: shell/eom-window.c:2875
-#, fuzzy
-msgid "_Help"
-msgstr "Ifashayobora"
-
-# basctl/source\basicide\brkdlg.src:RID_BASICIDE_BREAKPOINTDLG.RID_PB_NEW.text
-#: shell/eom-window.c:2876
-#, fuzzy
-msgid "_New"
-msgstr "Gishya"
-
-#: shell/eom-window.c:2876
-#, fuzzy
-msgid "Open a new window"
-msgstr "a Gishya Idirishya"
-
-# sfx2/source\appl\minbox.src:RID_MAIL_INBOX.BTN_MAILINBOX_OPEN.text
-#: shell/eom-window.c:2877
-#, fuzzy
-msgid "_Open..."
-msgstr "Gufungura..."
-
-#: shell/eom-window.c:2877
-#, fuzzy
-msgid "Open a file"
-msgstr "a IDOSIYE"
-
-#: shell/eom-window.c:2878
-msgid "Open _Folder..."
 msgstr ""
 
-#: shell/eom-window.c:2878
-#, fuzzy
-msgid "Open a folder"
-msgstr "a Ububiko"
+#: ../src/eom-window.c:3653
+msgid "_View"
+msgstr ""
 
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\macrodlg.src:RID_MACROCHOOSER.RID_PB_CLOSE.text
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\macrodlg.src:RID_STR_CLOSE.text
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\moduldlg.src:RID_TP_MODULS.RID_PB_CLOSE.text
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\moduldlg.src:RID_TP_LIBS.RID_PB_CLOSE.text
-#: shell/eom-window.c:2879
-#, fuzzy
+#: ../src/eom-window.c:3654
+msgid "_Go"
+msgstr ""
+
+#: ../src/eom-window.c:3655
+msgid "_Tools"
+msgstr ""
+
+#: ../src/eom-window.c:3656
+msgid "_Help"
+msgstr ""
+
+#: ../src/eom-window.c:3658
+msgid "_Open…"
+msgstr ""
+
+#: ../src/eom-window.c:3659
+msgid "Open a file"
+msgstr ""
+
+#: ../src/eom-window.c:3661
 msgid "_Close"
-msgstr "Gufunga"
+msgstr ""
 
-# sfx2/sdi\sfxslots.src:SID_CLOSEWIN.text
-#: shell/eom-window.c:2879
-#, fuzzy
+#: ../src/eom-window.c:3662
 msgid "Close window"
-msgstr "Gufunga Idirishya"
+msgstr ""
 
-#: shell/eom-window.c:2880
-#, fuzzy
+#: ../src/eom-window.c:3664
+msgid "T_oolbar"
+msgstr ""
+
+#: ../src/eom-window.c:3665
+msgid "Edit the application toolbar"
+msgstr ""
+
+#: ../src/eom-window.c:3667
 msgid "Prefere_nces"
-msgstr "Ibyahiswemo"
+msgstr ""
 
-#: shell/eom-window.c:2880
-#, fuzzy
+#: ../src/eom-window.c:3668
 msgid "Preferences for Eye of MATE"
-msgstr "kugirango Bya"
+msgstr ""
 
-# #-#-#-#-#  sc.pot (Mate 2.12)  #-#-#-#-#
-# sc/source\ui\dbgui\validate.src:TP_VALIDATION_INPUTHELP.FL_CONTENT.text
-# #-#-#-#-#  sc.pot (Mate 2.12)  #-#-#-#-#
-# sc/source\ui\dbgui\validate.src:TP_VALIDATION_ERROR.FL_CONTENT.text
-# #-#-#-#-#  sc.pot (Mate 2.12)  #-#-#-#-#
-# sc/source\ui\navipi\navipi.src:RID_SCDLG_NAVIGATOR.TBX_CMD.IID_ZOOMOUT.text
-# #-#-#-#-#  sc.pot (Mate 2.12)  #-#-#-#-#
-# sc/source\ui\navipi\navipi.src:SCSTR_CONTENT_ROOT.text
-#: shell/eom-window.c:2881
-#, fuzzy
+#: ../src/eom-window.c:3670
 msgid "_Contents"
-msgstr "Ibigize"
+msgstr ""
 
-#: shell/eom-window.c:2881
-#, fuzzy
-msgid "Help On this application"
-msgstr "iyi Porogaramu"
+#: ../src/eom-window.c:3671
+msgid "Help on this application"
+msgstr ""
 
-#: shell/eom-window.c:2882
-#, fuzzy
-msgid "_About"
-msgstr "Bigyanye"
-
-#: shell/eom-window.c:2882
-#, fuzzy
+#: ../src/eom-window.c:3674
 msgid "About this application"
-msgstr "iyi Porogaramu"
+msgstr ""
 
-#: shell/eom-window.c:2887
-#, fuzzy
+#: ../src/eom-window.c:3679
 msgid "_Toolbar"
-msgstr "Umwanyabikoresho"
+msgstr ""
 
-#: shell/eom-window.c:2887
-#, fuzzy
+#: ../src/eom-window.c:3680
 msgid "Changes the visibility of the toolbar in the current window"
-msgstr "Ukugaragara Bya Umwanyabikoresho in KIGEZWEHO Idirishya"
+msgstr ""
 
-#: shell/eom-window.c:2888
+#: ../src/eom-window.c:3682
 msgid "_Statusbar"
 msgstr ""
 
-#: shell/eom-window.c:2888
-#, fuzzy
+#: ../src/eom-window.c:3683
 msgid "Changes the visibility of the statusbar in the current window"
-msgstr "Ukugaragara Bya in KIGEZWEHO Idirishya"
+msgstr ""
 
-# basctl/source\basicide\basidesh.src:RID_STR_SAVE.text
-#: shell/eom-window.c:2893
-#, fuzzy
+#: ../src/eom-window.c:3685
+msgid "_Image Collection"
+msgstr ""
+
+#: ../src/eom-window.c:3686
+msgid ""
+"Changes the visibility of the image collection pane in the current window"
+msgstr ""
+
+#: ../src/eom-window.c:3688
+msgid "Side _Pane"
+msgstr ""
+
+#: ../src/eom-window.c:3689
+msgid "Changes the visibility of the side pane in the current window"
+msgstr ""
+
+#: ../src/eom-window.c:3694
 msgid "_Save"
-msgstr "Kubika"
+msgstr ""
 
-# #-#-#-#-#  dbaccess.pot (Mate 2.12)  #-#-#-#-#
-# #-#-#-#-#  dbaccess.pot (Mate 2.12)  #-#-#-#-#
-#: shell/eom-window.c:2894
-#, fuzzy
-msgid "Save _As"
-msgstr "Kubika nka"
+#: ../src/eom-window.c:3695
+msgid "Save changes in currently selected images"
+msgstr ""
 
-# #-#-#-#-#  dbaccess.pot (Mate 2.12)  #-#-#-#-#
-# dbaccess/source/ui/inc/toolbox.hrc:MID_UNDO.text
-# #-#-#-#-#  dbaccess.pot (Mate 2.12)  #-#-#-#-#
-# #-#-#-#-#  dbaccess.pot (Mate 2.12)  #-#-#-#-#
-# #-#-#-#-#  dbaccess.pot (Mate 2.12)  #-#-#-#-#
-#: shell/eom-window.c:2896
-#, fuzzy
+#: ../src/eom-window.c:3697
+msgid "Open _with"
+msgstr ""
+
+#: ../src/eom-window.c:3698
+msgid "Open the selected image with a different application"
+msgstr ""
+
+#: ../src/eom-window.c:3700
+msgid "Save _As…"
+msgstr ""
+
+#: ../src/eom-window.c:3701
+msgid "Save the selected images with a different name"
+msgstr ""
+
+#: ../src/eom-window.c:3703
+msgid "_Print…"
+msgstr ""
+
+#: ../src/eom-window.c:3704
+msgid "Print the selected image"
+msgstr ""
+
+#: ../src/eom-window.c:3706
+msgid "Prope_rties"
+msgstr ""
+
+#: ../src/eom-window.c:3707
+msgid "Show the properties and metadata of the selected image"
+msgstr ""
+
+#: ../src/eom-window.c:3709
 msgid "_Undo"
-msgstr "Isubiranyuma"
+msgstr ""
 
-# sw/source\ui\utlui\attrdesc.src:STR_HORI_MIRROR.text
-#: shell/eom-window.c:2898
-#, fuzzy
+#: ../src/eom-window.c:3710
+msgid "Undo the last change in the image"
+msgstr ""
+
+#: ../src/eom-window.c:3712
 msgid "Flip _Horizontal"
-msgstr "Guhindukiza intambike"
+msgstr ""
 
-# #-#-#-#-#  svx.pot (Mate 2.12)  #-#-#-#-#
-# svx/source\svdraw\svdstr.src:STR_EditMirrorVert.text
-# #-#-#-#-#  svx.pot (Mate 2.12)  #-#-#-#-#
-# svx/source\svdraw\svdstr.src:STR_DragMethMirrorVert.text
-#: shell/eom-window.c:2899
-#, fuzzy
+#: ../src/eom-window.c:3713
+msgid "Mirror the image horizontally"
+msgstr ""
+
+#: ../src/eom-window.c:3715
 msgid "Flip _Vertical"
-msgstr "Guhindukiza ubuhagarike"
+msgstr ""
 
-#: shell/eom-window.c:2901
+#: ../src/eom-window.c:3716
+msgid "Mirror the image vertically"
+msgstr ""
+
+#: ../src/eom-window.c:3718
 msgid "_Rotate Clockwise"
 msgstr ""
 
-#: shell/eom-window.c:2902
-msgid "Rotate Counter C_lockwise"
+#: ../src/eom-window.c:3719
+msgid "Rotate the image 90 degrees to the right"
 msgstr ""
 
-#: shell/eom-window.c:2903
-msgid "Rotat_e 180°"
+#: ../src/eom-window.c:3721
+msgid "Rotate Counterc_lockwise"
 msgstr ""
 
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\basidesh.src:RID_POPUP_TABBAR.SID_BASICIDE_DELETECURRENT.text
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\brkdlg.src:RID_BASICIDE_BREAKPOINTDLG.RID_PB_DEL.text
-#: shell/eom-window.c:2905
-msgid "Delete"
-msgstr "Gusiba"
+#: ../src/eom-window.c:3722
+msgid "Rotate the image 90 degrees to the left"
+msgstr ""
 
-# svx/inc\globlmn.hrc:ITEM_VIEW_FULLSCREEN.text
-#: shell/eom-window.c:2907
-#, fuzzy
-msgid "_Full Screen"
-msgstr "Mugaragazi yuzuye"
+#: ../src/eom-window.c:3724
+msgid "Set as _Desktop Background"
+msgstr ""
 
-# sc/sdi\scslots.src:SID_PREVIEW_ZOOMIN.text
-#: shell/eom-window.c:2908
-#, fuzzy
+#: ../src/eom-window.c:3725
+msgid "Set the selected image as the desktop background"
+msgstr ""
+
+#: ../src/eom-window.c:3728
+msgid "Move the selected image to the trash folder"
+msgstr ""
+
+#: ../src/eom-window.c:3730
+msgid "_Copy"
+msgstr ""
+
+#: ../src/eom-window.c:3731
+msgid "Copy the selected image to the clipboard"
+msgstr ""
+
+#: ../src/eom-window.c:3733 ../src/eom-window.c:3745 ../src/eom-window.c:3748
 msgid "_Zoom In"
-msgstr "Ihindurangano wongera"
+msgstr ""
 
-# sc/sdi\scslots.src:SID_PREVIEW_ZOOMOUT.text
-#: shell/eom-window.c:2909
-#, fuzzy
+#: ../src/eom-window.c:3734 ../src/eom-window.c:3746
+msgid "Enlarge the image"
+msgstr ""
+
+#: ../src/eom-window.c:3736 ../src/eom-window.c:3751
 msgid "Zoom _Out"
-msgstr "Ihindurangano ugabanya"
+msgstr ""
 
-#: shell/eom-window.c:2910
+#: ../src/eom-window.c:3737 ../src/eom-window.c:3749 ../src/eom-window.c:3752
+msgid "Shrink the image"
+msgstr ""
+
+#: ../src/eom-window.c:3739
 msgid "_Normal Size"
 msgstr ""
 
-#: shell/eom-window.c:2911
-msgid "Best _Fit"
+#: ../src/eom-window.c:3740
+msgid "Show the image at its normal size"
 msgstr ""
 
-#: shell/eom-window.c:2916
-msgid "Image _Information"
+#: ../src/eom-window.c:3742
+msgid "_Best Fit"
 msgstr ""
 
-#: shell/eom-window.c:2916
-#, fuzzy
-msgid "Change the visibility of the information pane in the current window"
-msgstr "Ukugaragara Bya Ibisobanuro in KIGEZWEHO Idirishya"
+#: ../src/eom-window.c:3743
+msgid "Fit the image to the window"
+msgstr ""
 
-# basctl/source\basicide\brkdlg.src:RID_BASICIDE_BREAKPOINTDLG.RID_PB_NEW.text
-#: shell/eom-window.c:2926
-msgid "New"
-msgstr "Gishya"
+#: ../src/eom-window.c:3760
+msgid "_Fullscreen"
+msgstr ""
 
-# #-#-#-#-#  sfx2.pot (Mate 2.12)  #-#-#-#-#
-# sfx2/source\accel\accel.src:STR_OPEN.text
-# #-#-#-#-#  sfx2.pot (Mate 2.12)  #-#-#-#-#
-# sfx2/source\dialog\cfg.src:STR_OPEN.text
-# #-#-#-#-#  sfx2.pot (Mate 2.12)  #-#-#-#-#
-# sfx2/source\dialog\versdlg.src:DLG_VERSIONS.PB_OPEN.text
-#: shell/eom-window.c:2927 shell/eom-window.c:2928
-msgid "Open"
-msgstr "Gufungura"
+#: ../src/eom-window.c:3761
+msgid "Show the current image in fullscreen mode"
+msgstr ""
 
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\macrodlg.src:RID_MACROCHOOSER.RID_PB_CLOSE.text
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\macrodlg.src:RID_STR_CLOSE.text
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\moduldlg.src:RID_TP_MODULS.RID_PB_CLOSE.text
-# #-#-#-#-#  basctl.pot (Mate 2.12)  #-#-#-#-#
-# basctl/source\basicide\moduldlg.src:RID_TP_LIBS.RID_PB_CLOSE.text
-#: shell/eom-window.c:2929
-msgid "Close"
-msgstr "Gufunga"
+#: ../src/eom-window.c:3763
+msgid "Pause Slideshow"
+msgstr ""
 
-# basctl/source\basicide\basidesh.src:RID_STR_SAVE.text
-#: shell/eom-window.c:2930
-msgid "Save"
-msgstr "Kubika"
+#: ../src/eom-window.c:3764
+msgid "Pause or resume the slideshow"
+msgstr ""
 
-# #-#-#-#-#  dbaccess.pot (Mate 2.12)  #-#-#-#-#
-# dbaccess/source/ui/inc/toolbox.hrc:MID_UNDO.text
-# #-#-#-#-#  dbaccess.pot (Mate 2.12)  #-#-#-#-#
-# #-#-#-#-#  dbaccess.pot (Mate 2.12)  #-#-#-#-#
-# #-#-#-#-#  dbaccess.pot (Mate 2.12)  #-#-#-#-#
-#: shell/eom-window.c:2932
-msgid "Undo"
-msgstr "Isubiranyuma"
+#: ../src/eom-window.c:3769 ../src/eom-window.c:3784
+msgid "_Previous Image"
+msgstr ""
 
-# sc/source\ui\src\optdlg.src:RID_SCPAGE_LAYOUT.LB_ALIGN.2.text
-#: shell/eom-window.c:2935
+#: ../src/eom-window.c:3770
+msgid "Go to the previous image of the collection"
+msgstr ""
+
+#: ../src/eom-window.c:3772
+msgid "_Next Image"
+msgstr ""
+
+#: ../src/eom-window.c:3773
+msgid "Go to the next image of the collection"
+msgstr ""
+
+#: ../src/eom-window.c:3775 ../src/eom-window.c:3787
+msgid "_First Image"
+msgstr ""
+
+#: ../src/eom-window.c:3776
+msgid "Go to the first image of the collection"
+msgstr ""
+
+#: ../src/eom-window.c:3778 ../src/eom-window.c:3790
+msgid "_Last Image"
+msgstr ""
+
+#: ../src/eom-window.c:3779
+msgid "Go to the last image of the collection"
+msgstr ""
+
+#: ../src/eom-window.c:3781
+msgid "_Random Image"
+msgstr ""
+
+#: ../src/eom-window.c:3782
+msgid "Go to a random image of the collection"
+msgstr ""
+
+#: ../src/eom-window.c:3796
+msgid "S_lideshow"
+msgstr ""
+
+#: ../src/eom-window.c:3797
+msgid "Start a slideshow view of the images"
+msgstr ""
+
+#: ../src/eom-window.c:3863
+msgid "Previous"
+msgstr ""
+
+#: ../src/eom-window.c:3867
+msgid "Next"
+msgstr ""
+
+#: ../src/eom-window.c:3871
 msgid "Right"
 msgstr "Iburyo"
 
-# sc/source\ui\src\optdlg.src:RID_SCPAGE_LAYOUT.LB_ALIGN.4.text
-#: shell/eom-window.c:2936
+#: ../src/eom-window.c:3874
 msgid "Left"
 msgstr "Ibumoso"
 
-#: shell/eom-window.c:2938
+#: ../src/eom-window.c:3877
 msgid "In"
 msgstr "Imbere"
 
-#: shell/eom-window.c:2939
+#: ../src/eom-window.c:3880
 msgid "Out"
 msgstr "Inyuma"
 
-# officecfg/registry\schema\org\openoffice\Office\Common.xcs:....Save.Graphic.Format..0.text
-#: shell/eom-window.c:2940
+#: ../src/eom-window.c:3883
 msgid "Normal"
 msgstr "Bisanzwe"
 
-#: shell/eom-window.c:2941
+#: ../src/eom-window.c:3886
 msgid "Fit"
 msgstr ""
 
-#: shell/eom-window.c:3019
-#, fuzzy
-msgid "User interface description not found."
-msgstr "Isobanuramiterere OYA Byabonetse"
-
-#: shell/main.c:92
-#, fuzzy
-msgid "Unable to create Eye of MATE user interface"
-msgstr "Kuri Kurema Bya Ukoresha:"
-
-#: shell/main.c:272
-#, fuzzy, c-format
-msgid ""
-"You are about to open %i windows simultaneously. Do you want to open them in "
-"a collection instead?"
-msgstr "Ibyerekeye Kuri Gufungura Kuri Gufungura in a"
-
-#: shell/main.c:276
-#, fuzzy
-msgid "Open multiple single windows?"
-msgstr "Igikubo UMWE"
-
-#: shell/main.c:280
-msgid "Single Windows"
-msgstr ""
-
-#: shell/main.c:282
+#: ../src/eom-window.c:3889
 msgid "Collection"
 msgstr ""
 
-# sw/source\ui\utlui\navipi.src:ST_BROKEN_LINK.text
-#: shell/main.c:334
-#, fuzzy
-msgid "File not found."
-msgid_plural "Files not found."
-msgstr[0] "Idosiye ntibonetse:"
-msgstr[1] "Idosiye ntibonetse:"
+#: ../src/eom-window.c:3892
+msgctxt "action (to trash)"
+msgid "Trash"
+msgstr ""
 
-#: shell/util.c:52
-#, fuzzy, c-format
-msgid "Could not open `%s'"
-msgstr "OYA Gufungura"
+#: ../src/eom-window.c:4245
+#, c-format
+msgid "Edit the current image using %s"
+msgstr ""
 
-#: libeom/eom-util.c:40
-#, fuzzy
-msgid " (invalid Unicode)"
-msgstr "(Sibyo"
+#: ../src/eom-window.c:4247
+msgid "Edit Image"
+msgstr ""
 
-#: shell/eom-preferences.c:98
-#, fuzzy
-msgid "Could not display help for Eye of MATE"
-msgstr "OYA Kugaragaza Ifashayobora kugirango Bya"
+#: ../src/main.c:80
+msgid "Open in fullscreen mode"
+msgstr ""
+
+#: ../src/main.c:81
+msgid "Disable image collection"
+msgstr ""
+
+#: ../src/main.c:82
+msgid "Open in slideshow mode"
+msgstr ""
+
+#: ../src/main.c:84
+msgid "Start a new instance instead of reusing an existing one"
+msgstr ""
+
+#: ../src/main.c:87
+msgid "Show the application's version"
+msgstr ""
+
+#: ../src/main.c:88
+msgid "[FILE…]"
+msgstr ""
+
+#. I18N: The '%s' is replaced with eom's command name.
+#: ../src/main.c:219
+#, c-format
+msgid "Run '%s --help' to see a full list of available command line options."
+msgstr ""
