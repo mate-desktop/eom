@@ -13,10 +13,7 @@ EXTRA_DIST = 		\
 	COPYING			\
 	HACKING			\
 	NEWS			\
-	NEWS.gnome		\
-	README			\
-	THANKS			\
-	TODO
+	README
 
 DISTCLEANFILES =                \
         intltool-extract        \
