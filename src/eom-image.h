@@ -121,8 +121,6 @@ GType	          eom_image_get_type	             (void) G_GNUC_CONST;
 
 GQuark            eom_image_error_quark              (void);
 
-EomImage         *eom_image_new                      (const char *txt_uri);
-
 EomImage         *eom_image_new_file                 (GFile *file);
 
 gboolean          eom_image_load                     (EomImage   *img,
