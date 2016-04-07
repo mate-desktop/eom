@@ -368,13 +368,14 @@ eom_list_store_append_image (EomListStore *store, EomImage *image)
 
 static void
 eom_list_store_append_image_from_file (EomListStore *store,
-				       GFile *file)
+				       GFile *file,
+				       const gchar *caption)
 {
 	EomImage *image;
 
 	g_return_if_fail (EOM_IS_LIST_STORE (store));
 
-	image = eom_image_new_file (file);
+	image = eom_image_new_file (file, caption);
 
 	eom_list_store_append_image (store, image);
 }
@@ -394,7 +395,8 @@ file_monitor_changed_cb (GFileMonitor *monitor,
 	switch (event) {
 	case G_FILE_MONITOR_EVENT_CHANGES_DONE_HINT:
 		file_info = g_file_query_info (file,
-					       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
+					       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE ","
+					       G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME,
 					       0, NULL, NULL);
 		if (file_info == NULL) {
 			break;
@@ -414,7 +416,10 @@ file_monitor_changed_cb (GFileMonitor *monitor,
 			}
 		} else {
 			if (eom_image_is_supported_mime_type (mimetype)) {
-				eom_list_store_append_image_from_file (store, file);
+				const gchar *caption;
+
+				caption = g_file_info_get_display_name (file_info);
+				eom_list_store_append_image_from_file (store, file, caption);
 			}
 		}
 		g_object_unref (file_info);
@@ -433,7 +438,8 @@ file_monitor_changed_cb (GFileMonitor *monitor,
 	case G_FILE_MONITOR_EVENT_CREATED:
 		if (!is_file_in_list_store_file (store, file, NULL)) {
 			file_info = g_file_query_info (file,
-						       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
+						       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE ","
+						       G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME,
 						       0, NULL, NULL);
 			if (file_info == NULL) {
 				break;
@@ -441,7 +447,10 @@ file_monitor_changed_cb (GFileMonitor *monitor,
 			mimetype = g_file_info_get_content_type (file_info);
 
 			if (eom_image_is_supported_mime_type (mimetype)) {
-				eom_list_store_append_image_from_file (store, file);
+				const gchar *caption;
+
+				caption = g_file_info_get_display_name (file_info);
+				eom_list_store_append_image_from_file (store, file, caption);
 			}
 			g_object_unref (file_info);
 		}
@@ -489,8 +498,11 @@ directory_visit (GFile *directory,
 	}
 
 	if (load_uri) {
+		const gchar *caption;
+
 		child = g_file_get_child (directory, name);
-		eom_list_store_append_image_from_file (store, child);
+		caption = g_file_info_get_display_name (children_info);
+		eom_list_store_append_image_from_file (store, child, caption);
 	}
 }
 
@@ -519,6 +531,7 @@ eom_list_store_append_directory (EomListStore *store,
 
 	file_enumerator = g_file_enumerate_children (file,
 						     G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE ","
+						     G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME ","
 						     G_FILE_ATTRIBUTE_STANDARD_NAME,
 						     0, NULL, NULL);
 	file_info = g_file_enumerator_next_file (file_enumerator, NULL, NULL);
@@ -565,14 +578,18 @@ eom_list_store_add_files (EomListStore *store, GList *file_list)
 
 	for (it = file_list; it != NULL; it = it->next) {
 		GFile *file = (GFile *) it->data;
+		gchar *caption = NULL;
 
 		file_info = g_file_query_info (file,
 					       G_FILE_ATTRIBUTE_STANDARD_TYPE","
-					       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
+					       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE","
+					       G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME,
 					       0, NULL, NULL);
 		if (file_info == NULL) {
 			continue;
 		}
+
+		caption = g_strdup (g_file_info_get_display_name (file_info));
 		file_type = g_file_info_get_file_type (file_info);
 
 		/* Workaround for gvfs backends that don't set the GFileType. */
@@ -613,16 +630,18 @@ eom_list_store_add_files (EomListStore *store, GList *file_list)
 				if (!is_file_in_list_store_file (store,
 								 initial_file,
 								 &iter)) {
-					eom_list_store_append_image_from_file (store, initial_file);
+					eom_list_store_append_image_from_file (store, initial_file, caption);
 				}
 			} else {
-				eom_list_store_append_image_from_file (store, initial_file);
+				eom_list_store_append_image_from_file (store, initial_file, caption);
 			}
 			g_object_unref (file);
 		} else if (file_type == G_FILE_TYPE_REGULAR &&
 			   g_list_length (file_list) > 1) {
-			eom_list_store_append_image_from_file (store, file);
+			eom_list_store_append_image_from_file (store, file, caption);
 		}
+
+		g_free (caption);
 	}
 
 	gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (store),

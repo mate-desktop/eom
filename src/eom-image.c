@@ -321,13 +321,14 @@ eom_image_init (EomImage *img)
 }
 
 EomImage *
-eom_image_new_file (GFile *file)
+eom_image_new_file (GFile *file, const gchar *caption)
 {
 	EomImage *img;
 
 	img = EOM_IMAGE (g_object_new (EOM_TYPE_IMAGE, NULL));
 
 	img->priv->file = g_object_ref (file);
+	img->priv->caption = g_strdup (caption);
 
 	return img;
 }
