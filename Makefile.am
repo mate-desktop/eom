@@ -11,7 +11,6 @@ EXTRA_DIST = 		\
 	autogen.sh		\
 	ChangeLog		\
 	COPYING			\
-	HACKING			\
 	NEWS			\
 	README
 
