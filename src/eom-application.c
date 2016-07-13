@@ -41,6 +41,7 @@
 #include <glib/gi18n.h>
 #include <glib-object.h>
 #include <gtk/gtk.h>
+#include <gdk/gdkx.h>
 
 #ifdef HAVE_DBUS
 #include "eom-application-service.h"
