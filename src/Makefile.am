@@ -150,10 +150,8 @@ libeom_la_CPPFLAGS =						\
 	-I$(top_srcdir)/cut-n-paste/toolbar-editor		\
 	-I$(top_srcdir)/cut-n-paste/totem-screensaver		\
 	-DG_LOG_DOMAIN=\"EOM\"					\
-	-DEOM_PREFIX=\""${prefix}"\"				\
 	-DEOM_DATA_DIR=\""$(pkgdatadir)"\"			\
 	-DEOM_LOCALE_DIR=\""$(datadir)/locale"\"		\
-	-DEOM_PIXMAPS_DIR=\""$(datadir)/pixmaps/eom"\"		\
 	-DEOM_PLUGIN_DIR=\""$(libdir)/eom/plugins"\"
 
 libeom_la_CFLAGS =						\

@@ -38,8 +38,6 @@
 #include <gtk/gtk.h>
 #include <gio/gio.h>
 
-#include <libmate-desktop/mate-colorbutton.h>
-
 #define EOM_PREFERENCES_DIALOG_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_PREFERENCES_DIALOG, EomPreferencesDialogPrivate))
 
