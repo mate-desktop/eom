@@ -36,7 +36,6 @@ NOINST_H_FILES =			\
 	eom-module.h             	\
 	eom-plugin-manager.h            \
 	eom-plugin-engine.h             \
-	uta.h				\
 	eom-close-confirmation-dialog.h	\
 	zoom.h
 
@@ -109,7 +108,6 @@ libeom_c_files =			\
 	eom-plugin-manager.c            \
 	eom-plugin-engine.c            	\
 	eom-clipboard-handler.c		\
-	uta.c				\
 	zoom.c
 
 libeom_la_SOURCES =			\
