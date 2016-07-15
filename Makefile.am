@@ -19,7 +19,10 @@ DISTCLEANFILES =                \
         intltool-merge          \
         intltool-update         
 
-DISTCHECK_CONFIGURE_FLAGS = --disable-schemas-install --enable-gtk-doc
+DISTCHECK_CONFIGURE_FLAGS =      \
+	--disable-schemas-install    \
+	--enable-gtk-doc             \
+	--with-gtk=$(GTK_API_VERSION)
 
 distuninstallcheck_listfiles = find . -type f -print | grep -v /share/mate/help/ | grep -v \.omf
 
