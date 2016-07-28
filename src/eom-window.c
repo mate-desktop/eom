@@ -79,7 +79,6 @@
 
 #define MATE_DESKTOP_USE_UNSTABLE_API
 #include <libmate-desktop/mate-desktop-utils.h>
-#include <libmate-desktop/mate-aboutdialog.h>
 
 #define EOM_WINDOW_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_WINDOW, EomWindowPrivate))
@@ -2592,12 +2591,12 @@ eom_window_cmd_about (GtkAction *action, gpointer user_data)
 
 	window = EOM_WINDOW (user_data);
 
-	mate_show_about_dialog (GTK_WINDOW (window),
+	gtk_show_about_dialog (GTK_WINDOW (window),
 			       "program-name", _("Eye of MATE"),
 			       "version", VERSION,
 			       "copyright", "Copyright \xc2\xa9 2000-2010 Free Software Foundation, Inc.\n"
 			       "Copyright \xc2\xa9 2011 Perberos\n"
-			       "Copyright \xc2\xa9 2012-2014 MATE developers",
+			       "Copyright \xc2\xa9 2012-2016 MATE developers",
 			       "comments",_("The MATE image viewer."),
 			       "authors", authors,
 			       "documenters", documenters,
