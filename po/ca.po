@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Pere Orga <gotrunks@gmail.com>, 2013
-# Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2015-2016
+# Pere O. <gotrunks@gmail.com>, 2013
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-30 18:12+0300\n"
-"PO-Revision-Date: 2016-03-11 18:07+0000\n"
-"Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>\n"
+"POT-Creation-Date: 2016-07-13 16:02+0300\n"
+"PO-Revision-Date: 2016-06-19 11:05+0000\n"
+"Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/mate/MATE/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,46 +26,46 @@ msgstr ""
 #. * produce duplicates, but don't worry about it. If your language
 #. * normally has a mnemonic at the start, please use the _. If not,
 #. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:936
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:948
 #, c-format
 msgid "Show “_%s”"
 msgstr "Mostra «_%s»"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1399
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1416
 msgid "_Move on Toolbar"
 msgstr "_Mou dins la barra d'eines"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1400
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1417
 msgid "Move the selected item on the toolbar"
 msgstr "Mou l'element seleccionat a la barra d'eines"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1401
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1418
 msgid "_Remove from Toolbar"
 msgstr "_Suprimeix de la barra d'eines"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1402
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1419
 msgid "Remove the selected item from the toolbar"
 msgstr "Suprimeix l'element seleccionat de la barra d'eines"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1403
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
 msgid "_Delete Toolbar"
 msgstr "_Suprimeix la barra d'eines"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1404
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
 msgid "Remove the selected toolbar"
 msgstr "Suprimeix la barra d'eines seleccionada"
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:498
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:515
 msgid "Separator"
 msgstr "Separador"
 
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2599
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2596
 msgid "Eye of MATE"
 msgstr "Eye of MATE"
 
 #: ../data/eom.appdata.xml.in.h:2
 msgid "Simple image viewer"
-msgstr "Visualitzador d'imatges simple"
+msgstr "Visualitzador simple d'imatges"
 
 #: ../data/eom.appdata.xml.in.h:3
 msgid ""
@@ -230,7 +230,7 @@ msgstr "A:"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:15
 msgid "File Name Preview"
-msgstr "Previsualització del nom del fitxer"
+msgstr "La visualització preliminar del nom del fitxer"
 
 #: ../data/eom-preferences-dialog.ui.h:1
 msgid "Eye of MATE Preferences"
@@ -505,7 +505,7 @@ msgid ""
 "moved to its own page in the dialog. This should make the dialog more usable"
 " on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
 "be embedded on the \"Metadata\" page."
-msgstr "Si està activat, es mourà la llista de metadades detallades del diàleg de propietats a la seva pròpia pàgina en el diàleg. Això farà que el diàleg sigui més fàcil d'utilitzar en pantalles petites; per exemple quan s'utilitzi en ordinadors ultraportàtils. Si està inhabilitat, el giny s'incrustarà a la pàgina «Metadades»."
+msgstr "Si està activat, es mourà la llista de metadades detallades del diàleg de propietats a la seva pròpia pàgina en el diàleg. Això farà que el diàleg sigui més fàcil d'utilitzar en pantalles petites; per exemple quan s'utilitzi en ordinadors ultraportàtils. Si està inhabilitat, l'estri s'incrustarà a la pàgina «Metadades»."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:41
 msgid "External program to use for editing images"
@@ -569,7 +569,7 @@ msgstr "Data a la barra d'estat"
 msgid "Shows the image date in the window statusbar"
 msgstr "Mostra la data de la imatge a la barra d'estat"
 
-#: ../src/eom-application.c:123
+#: ../src/eom-application.c:124
 msgid "Running in fullscreen mode"
 msgstr "S'està executant en mode a pantalla completa"
 
@@ -638,7 +638,7 @@ msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
 #: ../src/eom-file-chooser.c:292 ../src/eom-properties-dialog.c:137
-#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:588
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:582
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "píxel"
@@ -656,42 +656,42 @@ msgstr "Desa la imatge"
 msgid "Open Folder"
 msgstr "Obre una carpeta"
 
-#: ../src/eom-image.c:598
+#: ../src/eom-image.c:562
 #, c-format
 msgid "Transformation on unloaded image."
 msgstr "Transformació en una imatge descarregada."
 
-#: ../src/eom-image.c:626
+#: ../src/eom-image.c:590
 #, c-format
 msgid "Transformation failed."
 msgstr "No s'ha pogut transformar la imatge."
 
-#: ../src/eom-image.c:1053
+#: ../src/eom-image.c:1000
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "Aquest format de fitxer no pot fer servir EXIF."
 
-#: ../src/eom-image.c:1182
+#: ../src/eom-image.c:1123
 #, c-format
 msgid "Image loading failed."
 msgstr "No s'ha pogut carregar la imatge."
 
-#: ../src/eom-image.c:1711 ../src/eom-image.c:1813
+#: ../src/eom-image.c:1652 ../src/eom-image.c:1754
 #, c-format
 msgid "No image loaded."
 msgstr "No hi ha cap imatge carregada."
 
-#: ../src/eom-image.c:1721 ../src/eom-image.c:1825
+#: ../src/eom-image.c:1662 ../src/eom-image.c:1766
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "Ha fallat la creació del fitxer temporal."
 
-#: ../src/eom-image-jpeg.c:382
+#: ../src/eom-image-jpeg.c:384
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr "No s'ha pogut crear el fitxer temporal per desar: %s"
 
-#: ../src/eom-image-jpeg.c:393
+#: ../src/eom-image-jpeg.c:395
 #, c-format
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "No s'ha pogut assignar memòria per carregar el fitxer JPEG"
@@ -759,53 +759,53 @@ msgid "Value"
 msgstr "Valor"
 
 #. A strftime-formatted string, to display the date the image was taken.
-#: ../src/eom-exif-util.c:118 ../src/eom-exif-util.c:158
+#: ../src/eom-exif-util.c:121 ../src/eom-exif-util.c:161
 msgid "%a, %d %B %Y  %X"
 msgstr "%a, %d de %B de %Y %X"
 
 #. A strftime-formatted string, to display the date the image was taken, for
 #. the case we don't have the time.
-#: ../src/eom-exif-util.c:152
+#: ../src/eom-exif-util.c:155
 msgid "%a, %d %B %Y"
 msgstr "%a, %l de %B de %Y"
 
-#: ../src/eom-plugin-manager.c:51
+#: ../src/eom-plugin-manager.c:55
 msgid "Plugin"
 msgstr "Connector"
 
-#: ../src/eom-plugin-manager.c:52
+#: ../src/eom-plugin-manager.c:56
 msgid "Enabled"
 msgstr "Habilitat"
 
-#: ../src/eom-plugin-manager.c:505 ../src/eom-window.c:3673
+#: ../src/eom-plugin-manager.c:509 ../src/eom-window.c:3673
 msgid "_About"
 msgstr "_Quant a"
 
-#: ../src/eom-plugin-manager.c:513
+#: ../src/eom-plugin-manager.c:517
 msgid "C_onfigure"
 msgstr "C_onfigura"
 
-#: ../src/eom-plugin-manager.c:523
+#: ../src/eom-plugin-manager.c:527
 msgid "A_ctivate"
 msgstr "A_ctiva"
 
-#: ../src/eom-plugin-manager.c:535
+#: ../src/eom-plugin-manager.c:539
 msgid "Ac_tivate All"
 msgstr "Ac_tiva'ls tots"
 
-#: ../src/eom-plugin-manager.c:540
+#: ../src/eom-plugin-manager.c:544
 msgid "_Deactivate All"
 msgstr "_Desactiva-ho tot"
 
-#: ../src/eom-plugin-manager.c:834
+#: ../src/eom-plugin-manager.c:853
 msgid "Active _Plugins:"
 msgstr "_Connectors actius:"
 
-#: ../src/eom-plugin-manager.c:867
+#: ../src/eom-plugin-manager.c:890
 msgid "_About Plugin"
 msgstr "_Quant al connector"
 
-#: ../src/eom-plugin-manager.c:874
+#: ../src/eom-plugin-manager.c:897
 msgid "C_onfigure Plugin"
 msgstr "C_onfigura el connector"
 
@@ -939,7 +939,7 @@ msgstr "com està"
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/eom-thumb-view.c:616
+#: ../src/eom-thumb-view.c:610
 msgid "Taken on"
 msgstr "Presa al"
 
@@ -969,25 +969,25 @@ msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i píxel  %s    %i%%"
 msgstr[1] "%i × %i píxels  %s    %i%%"
 
-#: ../src/eom-window.c:811
+#: ../src/eom-window.c:817
 msgid "_Reload"
 msgstr "_Torna a carregar"
 
-#: ../src/eom-window.c:813 ../src/eom-window.c:2720
+#: ../src/eom-window.c:819 ../src/eom-window.c:2717
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "_Oculta"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:823
+#: ../src/eom-window.c:829
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
 msgstr "Una aplicació externa ha modificat la imatge «%s».\nVoleu tornar a carregar-la?"
 
-#: ../src/eom-window.c:993
+#: ../src/eom-window.c:1002
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Utilitza «%s» per obrir la imatge seleccionada"
@@ -997,36 +997,36 @@ msgstr "Utilitza «%s» per obrir la imatge seleccionada"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1149
+#: ../src/eom-window.c:1158
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "S'està desant la imatge «%s» (%u/%u)"
 
-#: ../src/eom-window.c:1507
+#: ../src/eom-window.c:1516
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "S'està obrint la imatge «%s»"
 
-#: ../src/eom-window.c:2217
+#: ../src/eom-window.c:2214
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
 msgstr "S'ha produït un error en imprimir el fitxer:\n%s"
 
-#: ../src/eom-window.c:2479
+#: ../src/eom-window.c:2476
 msgid "Toolbar Editor"
 msgstr "Editor de la barra d'eines"
 
-#: ../src/eom-window.c:2482
+#: ../src/eom-window.c:2479
 msgid "_Reset to Default"
-msgstr "_Restableix al valor per defecte"
+msgstr "_Restableix al valor predeterminat"
 
-#: ../src/eom-window.c:2575
+#: ../src/eom-window.c:2572
 msgid "translator-credits"
 msgstr "Jordi Mallach <jordi@sindominio.net>\nJordi Mas i Hernàndez <jmas@softcatala.org>\nPere Orga <pere@orga.cat>\nRobert Antoni Buj Gelonch <rbuj@fedoraproject.org>"
 
-#: ../src/eom-window.c:2578
+#: ../src/eom-window.c:2575
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1034,7 +1034,7 @@ msgid ""
 "any later version.\n"
 msgstr "Aquest programa és lliure; el podeu redistribuir i/o modificar d'acord amb els termes de la Llicència pública general de GNU tal com la publica la Free Software Foundation; ja sigui la versió 2 de la Llicència com (si ho preferiu) qualsevol versió posterior.\n"
 
-#: ../src/eom-window.c:2582
+#: ../src/eom-window.c:2579
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1042,26 +1042,26 @@ msgid ""
 "more details.\n"
 msgstr "Aquest programa es distribueix amb l'esperança que serà útil, però SENSE CAP GARANTIA; ni tan sols amb la garantia de COMERCIALITZACIÓ o APTITUD PER A PROPÒSITS DETERMINATS. Vegeu la Llicència general pública de GNU per a més detalls.\n"
 
-#: ../src/eom-window.c:2586
+#: ../src/eom-window.c:2583
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr "Hauríeu d'haver rebut una còpia de la Llicència Pública General GNU juntament amb aquest programa; en cas contrari, escriviu a la  Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA."
 
-#: ../src/eom-window.c:2604
+#: ../src/eom-window.c:2601
 msgid "The MATE image viewer."
 msgstr "El visualitzador d'imatges de MATE."
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2718
+#: ../src/eom-window.c:2715
 msgid "_Open Background Preferences"
 msgstr "Obre les preferències del _fons de pantalla"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2734
+#: ../src/eom-window.c:2731
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1487,7 +1487,7 @@ msgstr "Obre en mode projecció de diapositives"
 
 #: ../src/main.c:84
 msgid "Start a new instance instead of reusing an existing one"
-msgstr "Inicia una nova instància en lloc de reutilitzar-ne una d'existent"
+msgstr "Inicia una instància nova en lloc de reutilitzar-ne una d'existent"
 
 #: ../src/main.c:87
 msgid "Show the application's version"

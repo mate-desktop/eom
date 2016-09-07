@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-30 18:12+0300\n"
+"POT-Creation-Date: 2016-07-13 16:02+0300\n"
 "PO-Revision-Date: 2015-10-06 18:13+0000\n"
 "Last-Translator: infirit <inactive+infirit@transifex.com>\n"
 "Language-Team: Chinese (Hong Kong) (http://www.transifex.com/mate/MATE/language/zh_HK/)\n"
@@ -24,40 +24,40 @@ msgstr ""
 #. * produce duplicates, but don't worry about it. If your language
 #. * normally has a mnemonic at the start, please use the _. If not,
 #. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:936
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:948
 #, c-format
 msgid "Show “_%s”"
 msgstr "顯示「%s」"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1399
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1416
 msgid "_Move on Toolbar"
 msgstr "移至工具列(_M)"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1400
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1417
 msgid "Move the selected item on the toolbar"
 msgstr "將選取的項目移至工具列"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1401
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1418
 msgid "_Remove from Toolbar"
 msgstr "從工具列移除(_R)"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1402
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1419
 msgid "Remove the selected item from the toolbar"
 msgstr "從工具列移除選取的項目"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1403
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
 msgid "_Delete Toolbar"
 msgstr "刪除工具列(_D)"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1404
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
 msgid "Remove the selected toolbar"
 msgstr "移除選取的工具列"
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:498
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:515
 msgid "Separator"
 msgstr "分隔線"
 
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2599
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2596
 msgid "Eye of MATE"
 msgstr "Eye of MATE"
 
@@ -567,7 +567,7 @@ msgstr "狀態列中的日期"
 msgid "Shows the image date in the window statusbar"
 msgstr "在視窗狀態列中顯示圖片日期"
 
-#: ../src/eom-application.c:123
+#: ../src/eom-application.c:124
 msgid "Running in fullscreen mode"
 msgstr "在全螢幕模式執行"
 
@@ -635,7 +635,7 @@ msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
 #: ../src/eom-file-chooser.c:292 ../src/eom-properties-dialog.c:137
-#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:588
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:582
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] ""
@@ -652,42 +652,42 @@ msgstr "儲存圖片"
 msgid "Open Folder"
 msgstr "開啟資料夾"
 
-#: ../src/eom-image.c:598
+#: ../src/eom-image.c:562
 #, c-format
 msgid "Transformation on unloaded image."
 msgstr "改變未載入的圖片。"
 
-#: ../src/eom-image.c:626
+#: ../src/eom-image.c:590
 #, c-format
 msgid "Transformation failed."
 msgstr "轉換失敗。"
 
-#: ../src/eom-image.c:1053
+#: ../src/eom-image.c:1000
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "本檔案格式不支 EXIF。"
 
-#: ../src/eom-image.c:1182
+#: ../src/eom-image.c:1123
 #, c-format
 msgid "Image loading failed."
 msgstr "載入圖片失敗。"
 
-#: ../src/eom-image.c:1711 ../src/eom-image.c:1813
+#: ../src/eom-image.c:1652 ../src/eom-image.c:1754
 #, c-format
 msgid "No image loaded."
 msgstr "沒有載入圖片。"
 
-#: ../src/eom-image.c:1721 ../src/eom-image.c:1825
+#: ../src/eom-image.c:1662 ../src/eom-image.c:1766
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "建立暫存檔失敗。"
 
-#: ../src/eom-image-jpeg.c:382
+#: ../src/eom-image-jpeg.c:384
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr "無法建立暫存檔來儲存： %s"
 
-#: ../src/eom-image-jpeg.c:393
+#: ../src/eom-image-jpeg.c:395
 #, c-format
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "無法分配記憶體來載入 JPEG 檔案"
@@ -755,53 +755,53 @@ msgid "Value"
 msgstr "數值"
 
 #. A strftime-formatted string, to display the date the image was taken.
-#: ../src/eom-exif-util.c:118 ../src/eom-exif-util.c:158
+#: ../src/eom-exif-util.c:121 ../src/eom-exif-util.c:161
 msgid "%a, %d %B %Y  %X"
 msgstr "%a, %d %B %Y  %X"
 
 #. A strftime-formatted string, to display the date the image was taken, for
 #. the case we don't have the time.
-#: ../src/eom-exif-util.c:152
+#: ../src/eom-exif-util.c:155
 msgid "%a, %d %B %Y"
 msgstr "%a, %d %B %Y"
 
-#: ../src/eom-plugin-manager.c:51
+#: ../src/eom-plugin-manager.c:55
 msgid "Plugin"
 msgstr "外掛程式"
 
-#: ../src/eom-plugin-manager.c:52
+#: ../src/eom-plugin-manager.c:56
 msgid "Enabled"
 msgstr "已啟用"
 
-#: ../src/eom-plugin-manager.c:505 ../src/eom-window.c:3673
+#: ../src/eom-plugin-manager.c:509 ../src/eom-window.c:3673
 msgid "_About"
 msgstr "關於(_A)"
 
-#: ../src/eom-plugin-manager.c:513
+#: ../src/eom-plugin-manager.c:517
 msgid "C_onfigure"
 msgstr "設定(_O)"
 
-#: ../src/eom-plugin-manager.c:523
+#: ../src/eom-plugin-manager.c:527
 msgid "A_ctivate"
 msgstr "使用(_C)"
 
-#: ../src/eom-plugin-manager.c:535
+#: ../src/eom-plugin-manager.c:539
 msgid "Ac_tivate All"
 msgstr "全部使用(_T)"
 
-#: ../src/eom-plugin-manager.c:540
+#: ../src/eom-plugin-manager.c:544
 msgid "_Deactivate All"
 msgstr "全部不使用(_D)"
 
-#: ../src/eom-plugin-manager.c:834
+#: ../src/eom-plugin-manager.c:853
 msgid "Active _Plugins:"
 msgstr "使用中外掛程式(_P):"
 
-#: ../src/eom-plugin-manager.c:867
+#: ../src/eom-plugin-manager.c:890
 msgid "_About Plugin"
 msgstr "關於外掛程式(_A)"
 
-#: ../src/eom-plugin-manager.c:874
+#: ../src/eom-plugin-manager.c:897
 msgid "C_onfigure Plugin"
 msgstr "設定外掛程式(_O)"
 
@@ -935,7 +935,7 @@ msgstr "原來格式"
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/eom-thumb-view.c:616
+#: ../src/eom-thumb-view.c:610
 msgid "Taken on"
 msgstr "拍攝日"
 
@@ -964,25 +964,25 @@ msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] ""
 
-#: ../src/eom-window.c:811
+#: ../src/eom-window.c:817
 msgid "_Reload"
 msgstr "重新載入(_R)"
 
-#: ../src/eom-window.c:813 ../src/eom-window.c:2720
+#: ../src/eom-window.c:819 ../src/eom-window.c:2717
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "隱藏(_D)"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:823
+#: ../src/eom-window.c:829
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
 msgstr "圖片「%s」已被外部應用程式修改。\n你是否想要重新載入它？"
 
-#: ../src/eom-window.c:993
+#: ../src/eom-window.c:1002
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "使用「%s」開啟選定的圖片"
@@ -992,36 +992,36 @@ msgstr "使用「%s」開啟選定的圖片"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1149
+#: ../src/eom-window.c:1158
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "儲存圖片「%s」(%u/%u)"
 
-#: ../src/eom-window.c:1507
+#: ../src/eom-window.c:1516
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "正在開啟圖片「%s」"
 
-#: ../src/eom-window.c:2217
+#: ../src/eom-window.c:2214
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
 msgstr "打印檔案時發生錯誤：\n%s"
 
-#: ../src/eom-window.c:2479
+#: ../src/eom-window.c:2476
 msgid "Toolbar Editor"
 msgstr "工具列編輯器"
 
-#: ../src/eom-window.c:2482
+#: ../src/eom-window.c:2479
 msgid "_Reset to Default"
 msgstr "重設為預設值(_R)"
 
-#: ../src/eom-window.c:2575
+#: ../src/eom-window.c:2572
 msgid "translator-credits"
 msgstr "如對翻譯有任何意見，請送一封電子郵件給\n以下地址，MATE 翻譯隊伍會盡快回覆你：\nzh-l10n@lists.linux.org.tw\n\nWoodman Tuen <wmtuen@gmail.com>, 2005-07\nChing-Hung Lin <2billlin@yahoo.com.tw>, 2004\nLawrence Leung <hksarhong@yahoo.com>, 2004\nAbel Cheung <abel@oaka.org>, 2001-2003\nJing-Jong Shyue <shyue@sonoma.com.tw>, 2000"
 
-#: ../src/eom-window.c:2578
+#: ../src/eom-window.c:2575
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1029,7 +1029,7 @@ msgid ""
 "any later version.\n"
 msgstr "本程式為自由軟件；你可根據據自由軟件基金會所發表的 GNU 通用公共授權條款規定，就本程式再為散布與／或修改；無論你根據據的是本授權的第二版或（你自行選擇的）任一日後發行的版本。\n"
 
-#: ../src/eom-window.c:2582
+#: ../src/eom-window.c:2579
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1037,26 +1037,26 @@ msgid ""
 "more details.\n"
 msgstr "本程式係基於使用目的而加以散布，然而不負任何擔保責任；亦無對適售性或特定目的適用性所為的默示性擔保。詳情請參照 GNU 通用公共授權。\n"
 
-#: ../src/eom-window.c:2586
+#: ../src/eom-window.c:2583
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 
-#: ../src/eom-window.c:2604
+#: ../src/eom-window.c:2601
 msgid "The MATE image viewer."
 msgstr "MATE 圖片瀏覽程式。"
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2718
+#: ../src/eom-window.c:2715
 msgid "_Open Background Preferences"
 msgstr "開啟背景偏好設定(_O)"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2734
+#: ../src/eom-window.c:2731
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"

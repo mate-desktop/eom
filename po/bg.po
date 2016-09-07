@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-30 18:12+0300\n"
+"POT-Creation-Date: 2016-07-13 16:02+0300\n"
 "PO-Revision-Date: 2016-03-23 13:11+0000\n"
 "Last-Translator: Georgi Georgiev <georgiev_1994@abv.bg>\n"
 "Language-Team: Bulgarian (http://www.transifex.com/mate/MATE/language/bg/)\n"
@@ -25,40 +25,40 @@ msgstr ""
 #. * produce duplicates, but don't worry about it. If your language
 #. * normally has a mnemonic at the start, please use the _. If not,
 #. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:936
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:948
 #, c-format
 msgid "Show “_%s”"
 msgstr "Показване на „_%s“"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1399
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1416
 msgid "_Move on Toolbar"
 msgstr "_Преместване по лентата с инструменти"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1400
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1417
 msgid "Move the selected item on the toolbar"
 msgstr "Преместване на избрания елемент в лентата с инструменти"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1401
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1418
 msgid "_Remove from Toolbar"
 msgstr "_Премахване от лентата"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1402
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1419
 msgid "Remove the selected item from the toolbar"
 msgstr "Премахване на избрания елемент от лентата с инструменти"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1403
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
 msgid "_Delete Toolbar"
 msgstr "_Изтриване на лентата с инструменти"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1404
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
 msgid "Remove the selected toolbar"
 msgstr "Премахване на избраната лента с инструменти"
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:498
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:515
 msgid "Separator"
 msgstr "Разделител"
 
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2599
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2596
 msgid "Eye of MATE"
 msgstr "Eye of MATE"
 
@@ -568,7 +568,7 @@ msgstr "Показване дата в лентата за състояние"
 msgid "Shows the image date in the window statusbar"
 msgstr "Показва датата на изображението в лентата за състояние"
 
-#: ../src/eom-application.c:123
+#: ../src/eom-application.c:124
 msgid "Running in fullscreen mode"
 msgstr "Изпълнение в режим на цял екран"
 
@@ -637,7 +637,7 @@ msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
 #: ../src/eom-file-chooser.c:292 ../src/eom-properties-dialog.c:137
-#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:588
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:582
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "пиксел"
@@ -655,42 +655,42 @@ msgstr "Запазване на изображение"
 msgid "Open Folder"
 msgstr "Отваряне на папка"
 
-#: ../src/eom-image.c:598
+#: ../src/eom-image.c:562
 #, c-format
 msgid "Transformation on unloaded image."
 msgstr "Преобразуване на незаредено изображение."
 
-#: ../src/eom-image.c:626
+#: ../src/eom-image.c:590
 #, c-format
 msgid "Transformation failed."
 msgstr "Неуспешно преобразуване."
 
-#: ../src/eom-image.c:1053
+#: ../src/eom-image.c:1000
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "За този файлов формат не се поддържа EXIF."
 
-#: ../src/eom-image.c:1182
+#: ../src/eom-image.c:1123
 #, c-format
 msgid "Image loading failed."
 msgstr "Неуспех при зареждане на изображението"
 
-#: ../src/eom-image.c:1711 ../src/eom-image.c:1813
+#: ../src/eom-image.c:1652 ../src/eom-image.c:1754
 #, c-format
 msgid "No image loaded."
 msgstr "Няма заредено изображение."
 
-#: ../src/eom-image.c:1721 ../src/eom-image.c:1825
+#: ../src/eom-image.c:1662 ../src/eom-image.c:1766
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "Създаването на временния файл е неуспешно."
 
-#: ../src/eom-image-jpeg.c:382
+#: ../src/eom-image-jpeg.c:384
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr "Временният файл за запазването на %s не може да бъде създаден"
 
-#: ../src/eom-image-jpeg.c:393
+#: ../src/eom-image-jpeg.c:395
 #, c-format
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "Недостатъчна свободна памет за зареждане на файла във формат JPEG"
@@ -758,53 +758,53 @@ msgid "Value"
 msgstr "Стойност"
 
 #. A strftime-formatted string, to display the date the image was taken.
-#: ../src/eom-exif-util.c:118 ../src/eom-exif-util.c:158
+#: ../src/eom-exif-util.c:121 ../src/eom-exif-util.c:161
 msgid "%a, %d %B %Y  %X"
 msgstr "%A, %d %B %Y %X"
 
 #. A strftime-formatted string, to display the date the image was taken, for
 #. the case we don't have the time.
-#: ../src/eom-exif-util.c:152
+#: ../src/eom-exif-util.c:155
 msgid "%a, %d %B %Y"
 msgstr "%A, %d %B %Y"
 
-#: ../src/eom-plugin-manager.c:51
+#: ../src/eom-plugin-manager.c:55
 msgid "Plugin"
 msgstr "Приставка"
 
-#: ../src/eom-plugin-manager.c:52
+#: ../src/eom-plugin-manager.c:56
 msgid "Enabled"
 msgstr "Включено"
 
-#: ../src/eom-plugin-manager.c:505 ../src/eom-window.c:3673
+#: ../src/eom-plugin-manager.c:509 ../src/eom-window.c:3673
 msgid "_About"
 msgstr "_Относно"
 
-#: ../src/eom-plugin-manager.c:513
+#: ../src/eom-plugin-manager.c:517
 msgid "C_onfigure"
 msgstr "_Настройки"
 
-#: ../src/eom-plugin-manager.c:523
+#: ../src/eom-plugin-manager.c:527
 msgid "A_ctivate"
 msgstr "_Включване"
 
-#: ../src/eom-plugin-manager.c:535
+#: ../src/eom-plugin-manager.c:539
 msgid "Ac_tivate All"
 msgstr "Включване на в_сички"
 
-#: ../src/eom-plugin-manager.c:540
+#: ../src/eom-plugin-manager.c:544
 msgid "_Deactivate All"
 msgstr "И_зключване на всички"
 
-#: ../src/eom-plugin-manager.c:834
+#: ../src/eom-plugin-manager.c:853
 msgid "Active _Plugins:"
 msgstr "_Включени приставки:"
 
-#: ../src/eom-plugin-manager.c:867
+#: ../src/eom-plugin-manager.c:890
 msgid "_About Plugin"
 msgstr "_Относно приставката"
 
-#: ../src/eom-plugin-manager.c:874
+#: ../src/eom-plugin-manager.c:897
 msgid "C_onfigure Plugin"
 msgstr "_Настройки на приставката"
 
@@ -938,7 +938,7 @@ msgstr "както е"
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/eom-thumb-view.c:616
+#: ../src/eom-thumb-view.c:610
 msgid "Taken on"
 msgstr "Заснето на"
 
@@ -968,25 +968,25 @@ msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i×%i пиксел, %s — %i%%"
 msgstr[1] "%i×%i пиксела, %s — %i%%"
 
-#: ../src/eom-window.c:811
+#: ../src/eom-window.c:817
 msgid "_Reload"
 msgstr "_Презареждане"
 
-#: ../src/eom-window.c:813 ../src/eom-window.c:2720
+#: ../src/eom-window.c:819 ../src/eom-window.c:2717
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "_Скриване"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:823
+#: ../src/eom-window.c:829
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
 msgstr "Изображението „%s“ е променено от друга програма.\nИскате ли да то да бъде заредено отново?"
 
-#: ../src/eom-window.c:993
+#: ../src/eom-window.c:1002
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Използвайте „%s“ за отваряне на избраното изображение"
@@ -996,36 +996,36 @@ msgstr "Използвайте „%s“ за отваряне на избран�
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1149
+#: ../src/eom-window.c:1158
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Запазване на изображението „%s“ (%u/%u)"
 
-#: ../src/eom-window.c:1507
+#: ../src/eom-window.c:1516
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Отваряне на изображението „%s“"
 
-#: ../src/eom-window.c:2217
+#: ../src/eom-window.c:2214
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
 msgstr "Грешка при печата на файла:\n%s"
 
-#: ../src/eom-window.c:2479
+#: ../src/eom-window.c:2476
 msgid "Toolbar Editor"
 msgstr "Редактор на лентата с инструменти"
 
-#: ../src/eom-window.c:2482
+#: ../src/eom-window.c:2479
 msgid "_Reset to Default"
 msgstr "_Обратно към стандартните настройки"
 
-#: ../src/eom-window.c:2575
+#: ../src/eom-window.c:2572
 msgid "translator-credits"
 msgstr "Ясен Праматаров <yasen@lindeas.com>\nВладимир „Kaladan“ Петков <kaladan@gmail.com>\nКрасимир „bfaf“ Чонов <mk2616@abv.bg>\nАлександър Шопов <ash@kambanaria.org>\nИвайло Вълков <ivaylo@e-valkov.org>\nГеорги Георгиев <georgiev_1994@abv.bg>\nБорислав Александров\n\nПроектът за превод на MATE има нужда от подкрепа.\nНаучете повече за нас на http://mate.cult.bg\nДокладвайте за грешки на http://mate.cult.bg/bugs"
 
-#: ../src/eom-window.c:2578
+#: ../src/eom-window.c:2575
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1033,7 +1033,7 @@ msgid ""
 "any later version.\n"
 msgstr "Тази програма (Eye of MATE) е свободен софтуер. Можете да я разпространявате и/или променяте под условията на Общия публичен лиценз на GNU (GNU GPL), както е публикуван от Фондацията за свободен софтуер — версия 2 на лиценза или (по ваше решение) по-късна версия.\n"
 
-#: ../src/eom-window.c:2582
+#: ../src/eom-window.c:2579
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1041,26 +1041,26 @@ msgid ""
 "more details.\n"
 msgstr "Тази програма се разпространява с надеждата, че ще бъде полезна, но БЕЗ НИКАКВИ ГАРАНЦИИ, дори и косвените за ПРОДАЖБА или СЪОТВЕТСТВИЕ С КАКВАТО И ДА Е УПОТРЕБА. За подробности погледнете Общия публичен лиценз на GNU.\n"
 
-#: ../src/eom-window.c:2586
+#: ../src/eom-window.c:2583
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr "Трябва да сте получили копие от Общия публичен лиценз на GNU GPL заедно с тази програма. Ако не сте, пишете до Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 
-#: ../src/eom-window.c:2604
+#: ../src/eom-window.c:2601
 msgid "The MATE image viewer."
 msgstr "Програма за преглед на изображения."
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2718
+#: ../src/eom-window.c:2715
 msgid "_Open Background Preferences"
 msgstr "_Настройки на фона"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2734
+#: ../src/eom-window.c:2731
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"

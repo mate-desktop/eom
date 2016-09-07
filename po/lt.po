@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# brennus <jonas.ska@gmail.com>, 2014
 # Džiugas Grėbliūnas <dziugas.grebliunas@gmail.com>, 2014
 # brennus <jonas.ska@gmail.com>, 2014
 # Moo, 2014-2016
@@ -10,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-30 18:12+0300\n"
-"PO-Revision-Date: 2016-03-26 21:56+0000\n"
+"POT-Creation-Date: 2016-07-13 16:02+0300\n"
+"PO-Revision-Date: 2016-09-07 13:37+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/mate/MATE/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -27,40 +28,40 @@ msgstr ""
 #. * produce duplicates, but don't worry about it. If your language
 #. * normally has a mnemonic at the start, please use the _. If not,
 #. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:936
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:948
 #, c-format
 msgid "Show “_%s”"
 msgstr "Rodyti „_%s“"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1399
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1416
 msgid "_Move on Toolbar"
-msgstr "P_erkelti į įrankinę"
+msgstr "P_erkelti į įrankių juostą"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1400
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1417
 msgid "Move the selected item on the toolbar"
-msgstr "Perkelti pasirinktą elementą į įrankinę"
+msgstr "Perkelti pasirinktą elementą į įrankių juostą"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1401
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1418
 msgid "_Remove from Toolbar"
-msgstr "_Pašalinti iš įrankinės"
+msgstr "_Pašalinti iš įrankių juostos"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1402
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1419
 msgid "Remove the selected item from the toolbar"
-msgstr "Pašalinti pasirinktą elementą iš įrankinės"
+msgstr "Pašalinti pasirinktą elementą iš įrankių juostos"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1403
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
 msgid "_Delete Toolbar"
-msgstr "_Ištrinti įrankinę"
+msgstr "_Ištrinti įrankių juostą"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1404
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
 msgid "Remove the selected toolbar"
-msgstr "Ištrinti pasirinktą įrankinę"
+msgstr "Ištrinti pasirinktą įrankių juostą"
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:498
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:515
 msgid "Separator"
 msgstr "Skirtukas"
 
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2599
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2596
 msgid "Eye of MATE"
 msgstr "Eye of MATE"
 
@@ -243,11 +244,11 @@ msgstr "Atvaizdo pagerinimai"
 
 #: ../data/eom-preferences-dialog.ui.h:3
 msgid "Smooth images when zoomed-_out"
-msgstr "_Mažinant glotninti paveikslėlį"
+msgstr "_Mažinant glotninti paveikslą"
 
 #: ../data/eom-preferences-dialog.ui.h:4
 msgid "Smooth images when zoomed-_in"
-msgstr "_Didinant glotninti paveikslėlį"
+msgstr "_Didinant glotninti paveikslą"
 
 #: ../data/eom-preferences-dialog.ui.h:5
 msgid "_Automatic orientation"
@@ -288,11 +289,11 @@ msgstr "Kaip _fonas"
 
 #: ../data/eom-preferences-dialog.ui.h:14
 msgid "Image View"
-msgstr "Paveikslėlio rodinys"
+msgstr "Paveikslo rodinys"
 
 #: ../data/eom-preferences-dialog.ui.h:15
 msgid "Image Zoom"
-msgstr "Paveikslėlio mastelis"
+msgstr "Paveikslo mastelis"
 
 #: ../data/eom-preferences-dialog.ui.h:16
 msgid "E_xpand images to fit screen"
@@ -304,7 +305,7 @@ msgstr "Seka"
 
 #: ../data/eom-preferences-dialog.ui.h:18
 msgid "_Switch image after:"
-msgstr "_Pakeisti paveikslėlį po:"
+msgstr "_Pakeisti paveikslą po:"
 
 #: ../data/eom-preferences-dialog.ui.h:19
 msgid "seconds"
@@ -333,14 +334,14 @@ msgstr "Automatinė orientacija"
 #: ../data/org.mate.eom.gschema.xml.in.h:2
 msgid ""
 "Whether the image should be rotated automatically based on EXIF orientation."
-msgstr "Ar paveikslėlis turėtų būti automatiškai paverstas atsižvelgiant į EXIF orientaciją."
+msgstr "Ar paveikslas turėtų būti automatiškai paverstas atsižvelgiant į EXIF orientaciją."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
 "theme instead."
-msgstr "Spalva, naudojama plotui už paveikslėlio užpildyti. Jei fono spalva nenurodyta, ji yra nustatoma iš naudojamos GTK+ temos."
+msgstr "Spalva, naudojama plotui už paveikslo užpildyti. Jei fono spalva nenurodyta, ji yra nustatoma iš naudojamos GTK+ temos."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:5
 msgid "Use a custom background color"
@@ -351,27 +352,27 @@ msgid ""
 "If this is active, the color set by the background-color key will be used to"
 " fill the area behind the image. If it is not set, the current GTK+ theme "
 "will determine the fill color."
-msgstr "Jei įjungta, fono spalva bus naudojama plotui už paveikslėlio užpildyti. Jei išjungta, naudojama GTK+ tema nustatys užpildymo spalvą."
+msgstr "Jei įjungta, fono spalva bus naudojama plotui už paveikslo užpildyti. Jei išjungta, naudojama GTK+ tema nustatys užpildymo spalvą."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:7
 msgid "Interpolate Image"
-msgstr "Interpoliuoti paveikslėlį"
+msgstr "Interpoliuoti paveikslą"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:8
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
-msgstr "Ar mažinant paveikslėlis turėtų būti interpoliuotas mažinant mastelį. Taip gaunama geresnė kokybė, tačiau yra šiek tiek lėčiau už neinterpoliuotus paveikslėlius."
+msgstr "Ar mažinant mastelį, paveikslas turėtų būti interpoliuotas. Taip gaunama geresnė kokybė, tačiau tai yra šiek tiek lėčiau už neinterpoliuotus paveikslus."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:9
 msgid "Extrapolate Image"
-msgstr "Ekstrapoliuoti paveikslėlį"
+msgstr "Ekstrapoliuoti paveikslą"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:10
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
-msgstr "Ar didinant paveikslėlis turėtų būti ekstrapoliuotas. Taip gaunama prastesnė kokybė ir yra šiek tiek lėčiau už neekstrapoliuotus paveikslėlius."
+msgstr "Ar didinant mastelį, paveikslas turėtų būti ekstrapoliuotas. Taip gaunama prastesnė kokybė ir tai yra šiek tiek lėčiau už neekstrapoliuotus paveikslus."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:11
 msgid "Transparency indicator"
@@ -417,7 +418,7 @@ msgstr "Jeigu skaidrumo raktas turi vertę COLOR, tada šis raktas nurodo spalv�
 
 #: ../data/org.mate.eom.gschema.xml.in.h:20
 msgid "Randomize the image sequence"
-msgstr "Paveikslėlių seką sudaryti atsitiktinai"
+msgstr "Paveikslų seką sudaryti atsitiktinai"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:21
 msgid "Whether the sequence of images should be shown in an random loop."
@@ -425,11 +426,11 @@ msgstr "Ar atvaizdų seka turi būti rodoma atsitiktinės sekos ciklu."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:22
 msgid "Loop through the image sequence"
-msgstr "Rodyti ciklišką paveikslėlių seką"
+msgstr "Rodyti ciklišką paveikslų seką"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:23
 msgid "Whether the sequence of images should be shown in an endless loop."
-msgstr "Ar paveikslėlių seka turi būti rodoma nesibaigiančiu ciklu."
+msgstr "Ar paveikslų seka turi būti rodoma nesibaigiančiu ciklu."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:25
 #, no-c-format
@@ -440,21 +441,21 @@ msgstr "Leisti pradžioje didesnį mastelį negu 100%"
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
-msgstr "Jeigu ši reikšmė nustatyta į NEIGIAMĄ, maži paveikslėliai nebus ištempti tam, kad tilptų į ekraną."
+msgstr "Jeigu ši reikšmė nustatyta į NEIGIAMĄ, maži paveikslai nebus ištempti tam, kad tilptų į ekraną."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:27
 msgid "Delay in seconds until showing the next image"
-msgstr "Delsa prieš parodant kitą paveikslėlį"
+msgstr "Delsa prieš parodant kitą paveikslą"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:28
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until"
 " the next one is shown automatically. Zero disables the automatic browsing."
-msgstr "Reikšmė didesnė už 0 nurodo kiek sekundžių paveikslėlis išlieka ekrane iki parodomas kitas. Nulis – išjungti automatinį naršymą."
+msgstr "Reikšmė didesnė už 0 nurodo kiek sekundžių paveikslas išlieka ekrane iki parodomas kitas. Nulis – išjungti automatinį naršymą."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:29
 msgid "Show/Hide the window toolbar."
-msgstr "Rodyti/slėpti lango įrankinę."
+msgstr "Rodyti/slėpti lango įrankių juostą."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:30
 msgid "Show/Hide the window statusbar."
@@ -462,7 +463,7 @@ msgstr "Rodyti/slėpti lango būsenos juostą."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:31
 msgid "Show/Hide the image collection pane."
-msgstr "Rodyti/slėpti paveikslėlių kolekcijos skydelį."
+msgstr "Rodyti/slėpti paveikslų kolekcijos polangį."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:32
 msgid "Image collection pane position."
@@ -470,7 +471,7 @@ msgstr "Paveikslų kolekcijos polangio vieta"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:33
 msgid "Whether the image collection pane should be resizable."
-msgstr "Ar paveikslėlių kolekcijos polangis turi būti keičiamo dydžio."
+msgstr "Ar paveikslų kolekcijos polangis turi būti keičiamo dydžio."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:34
 msgid "Show/Hide the window side pane."
@@ -478,7 +479,7 @@ msgstr "Rodyti/slėpti lango šoninį polangį."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:35
 msgid "Show/Hide the image collection pane scroll buttons."
-msgstr "Rodyti/slėpti paveikslėlių kolekcijos polangio slinkties mygtukus."
+msgstr "Rodyti/slėpti paveikslų kolekcijos polangio slinkties mygtukus."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:36
 msgid "Close main window without asking to save changes."
@@ -486,14 +487,14 @@ msgstr "Užverti pagrindinį langą, neklausiant ar įrašyti pakeitimus."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:37
 msgid "Trash images without asking"
-msgstr "Mesti paveikslėlius į šiukšlinę, neklausiant"
+msgstr "Mesti paveikslus į šiukšlinę, neklausiant"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:38
 msgid ""
 "If activated, Eye of MATE won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
 "trash and would be deleted instead."
-msgstr "Jei įjungta, Eye of MATE neklaus patvirtinimo prieš perkeliant paveikslėlius į šiukšlinę. Bus klausiama patvirtinimo, jei bent vienas iš failų negali būti perkeltas į šiukšlinę, todėl bus ištrintas."
+msgstr "Jei įjungta, Eye of MATE neklaus patvirtinimo prieš perkeliant paveikslus į šiukšlinę. Bus klausiama patvirtinimo, jei bent vienas iš failų negali būti perkeltas į šiukšlinę, todėl bus ištrintas."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:39
 msgid ""
@@ -517,7 +518,7 @@ msgid ""
 "The desktop file name (including the \".desktop\") of the application to use"
 " for editing images (when the \"Edit Image\" toolbar button is clicked). Set"
 " to the empty string to disable this feature."
-msgstr "Programos, kuri bus naudojama paveikslėlių redagavimui (kuomet įrankių juostoje bus nuspaudžiamas mygtukas \"Redaguoti paveikslą\") darbalaukio failo pavadinimas (įskaitant \".desktop\"). Palikite tuščią eilutę, norėdami išjungti šią funkciją."
+msgstr "Programos, kuri bus naudojama paveikslų redagavimui (kuomet įrankių juostoje bus nuspaudžiamas mygtukas \"Redaguoti paveikslą\") darbalaukio failo pavadinimas (įskaitant \".desktop\"). Palikite tuščią eilutę, norėdami išjungti šią funkciją."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:43
 msgid ""
@@ -546,11 +547,11 @@ msgstr "Įjungtų įskiepių sąrašas. Jame nėra aktyvių įskiepių „vietos
 
 #: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:1
 msgid "Fullscreen with double-click"
-msgstr "Viso ekrano veiksena dvigubu spustelėjimu"
+msgstr "Viso ekrano veiksena dvikarčiu spustelėjimu"
 
 #: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:2
 msgid "Activate fullscreen mode with double-click"
-msgstr "Aktyvuoti viso ekrano veikseną dvigubu pelės paspaudimu"
+msgstr "Aktyvuoti viso ekrano veikseną dvikarčiu pelės spustelėjimu"
 
 #: ../plugins/reload/eom-reload-plugin.c:38
 #: ../plugins/reload/reload.eom-plugin.desktop.in.h:1
@@ -570,7 +571,7 @@ msgstr "Data būsenos juostoje"
 msgid "Shows the image date in the window statusbar"
 msgstr "Parodo atvaizdo datą lango būsenos juostoje"
 
-#: ../src/eom-application.c:123
+#: ../src/eom-application.c:124
 msgid "Running in fullscreen mode"
 msgstr "Veikia viso ekrano veiksenoje"
 
@@ -589,20 +590,20 @@ msgstr "Jei neįrašysite, jūsų atlikti pakeitimai bus prarasti."
 #: ../src/eom-close-confirmation-dialog.c:421
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
-msgstr "Įrašyti paveikslėlio „%s“ pakeitimus prieš užveriant?"
+msgstr "Įrašyti paveikslo „%s“ pakeitimus prieš užveriant?"
 
 #: ../src/eom-close-confirmation-dialog.c:628
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
-msgstr[0] "Yra %d paveikslėlis, turintis neįrašytų pakeitimų. Įrašyti pakeitimus prieš užveriant?"
-msgstr[1] "Yra %d paveikslėliai, turintys neįrašytų pakeitimų. Įrašyti pakeitimus prieš užveriant?"
-msgstr[2] "Yra %d paveikslėlių, turinčių neįrašytų pakeitimų. Įrašyti pakeitimus prieš užveriant?"
+msgstr[0] "Yra %d paveikslas, turintis neįrašytų pakeitimų. Įrašyti pakeitimus prieš užveriant?"
+msgstr[1] "Yra %d paveikslai, turintys neįrašytų pakeitimų. Įrašyti pakeitimus prieš užveriant?"
+msgstr[2] "Yra %d paveikslų, turinčių neįrašytų pakeitimų. Įrašyti pakeitimus prieš užveriant?"
 
 #: ../src/eom-close-confirmation-dialog.c:645
 msgid "S_elect the images you want to save:"
-msgstr "_Pasirinkite paveikslėlius, kuriuos norite įrašyti:"
+msgstr "_Pasirinkite paveikslus, kuriuos norite įrašyti:"
 
 #. Secondary label
 #: ../src/eom-close-confirmation-dialog.c:667
@@ -629,7 +630,7 @@ msgstr "Visi failai"
 
 #: ../src/eom-file-chooser.c:175
 msgid "All Images"
-msgstr "Visi paveikslėliai"
+msgstr "Visi paveikslai"
 
 #. Filter name: First description then file extension, eg. "The PNG-Format
 #. (*.png)".
@@ -640,7 +641,7 @@ msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
 #: ../src/eom-file-chooser.c:292 ../src/eom-properties-dialog.c:137
-#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:588
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:582
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "taškas"
@@ -649,52 +650,52 @@ msgstr[2] "taškų"
 
 #: ../src/eom-file-chooser.c:443
 msgid "Open Image"
-msgstr "Atverti paveikslėlį"
+msgstr "Atverti paveikslą"
 
 #: ../src/eom-file-chooser.c:451
 msgid "Save Image"
-msgstr "Įrašyti paveikslėlį"
+msgstr "Įrašyti paveikslą"
 
 #: ../src/eom-file-chooser.c:459
 msgid "Open Folder"
 msgstr "Atverti aplanką"
 
-#: ../src/eom-image.c:598
+#: ../src/eom-image.c:562
 #, c-format
 msgid "Transformation on unloaded image."
-msgstr "Neįkelto paveikslėlio transformacija."
+msgstr "Neįkelto paveikslo transformacija."
 
-#: ../src/eom-image.c:626
+#: ../src/eom-image.c:590
 #, c-format
 msgid "Transformation failed."
 msgstr "Transformuoti nepavyko."
 
-#: ../src/eom-image.c:1053
+#: ../src/eom-image.c:1000
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "Šiam failo formatui EXIF nepalaikomas."
 
-#: ../src/eom-image.c:1182
+#: ../src/eom-image.c:1123
 #, c-format
 msgid "Image loading failed."
-msgstr "Nepavyko įkelti paveikslėlio."
+msgstr "Nepavyko įkelti paveikslo."
 
-#: ../src/eom-image.c:1711 ../src/eom-image.c:1813
+#: ../src/eom-image.c:1652 ../src/eom-image.c:1754
 #, c-format
 msgid "No image loaded."
-msgstr "Neįkeltas joks paveikslėlis."
+msgstr "Neįkeltas joks paveikslas."
 
-#: ../src/eom-image.c:1721 ../src/eom-image.c:1825
+#: ../src/eom-image.c:1662 ../src/eom-image.c:1766
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "Laikino failo sukūrimas nepavyko."
 
-#: ../src/eom-image-jpeg.c:382
+#: ../src/eom-image-jpeg.c:384
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr "Nepavyko sukurti laikino failo įrašymui: %s"
 
-#: ../src/eom-image-jpeg.c:393
+#: ../src/eom-image-jpeg.c:395
 #, c-format
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "Nepavyko išskirti atminties JPEG failo įkėlimui"
@@ -706,16 +707,16 @@ msgstr "_Kartoti"
 #: ../src/eom-error-message-area.c:167
 #, c-format
 msgid "Could not load image '%s'."
-msgstr "Nepavyko įkelti paveikslėlio „%s“."
+msgstr "Nepavyko įkelti paveikslo „%s“."
 
 #: ../src/eom-error-message-area.c:209
 #, c-format
 msgid "No images found in '%s'."
-msgstr "„%s“ paveikslėlių nerasta."
+msgstr "„%s“ paveikslų nerasta."
 
 #: ../src/eom-error-message-area.c:216
 msgid "The given locations contain no images."
-msgstr "Nurodytose vietose paveikslėlių nėra."
+msgstr "Nurodytose vietose paveikslų nėra."
 
 #: ../src/eom-exif-details.c:68
 msgid "Camera"
@@ -723,11 +724,11 @@ msgstr "Kamera"
 
 #: ../src/eom-exif-details.c:69
 msgid "Image Data"
-msgstr "Paveikslėlio duomenys"
+msgstr "Paveikslo duomenys"
 
 #: ../src/eom-exif-details.c:70
 msgid "Image Taking Conditions"
-msgstr "Paveikslėlių darymo sąlygos"
+msgstr "Paveikslų darymo sąlygos"
 
 #: ../src/eom-exif-details.c:71
 msgid "Maker Note"
@@ -762,67 +763,67 @@ msgid "Value"
 msgstr "Reikšmė"
 
 #. A strftime-formatted string, to display the date the image was taken.
-#: ../src/eom-exif-util.c:118 ../src/eom-exif-util.c:158
+#: ../src/eom-exif-util.c:121 ../src/eom-exif-util.c:161
 msgid "%a, %d %B %Y  %X"
 msgstr "%Y %B %d (%a) %X"
 
 #. A strftime-formatted string, to display the date the image was taken, for
 #. the case we don't have the time.
-#: ../src/eom-exif-util.c:152
+#: ../src/eom-exif-util.c:155
 msgid "%a, %d %B %Y"
 msgstr "%Y %B %d (%a)"
 
-#: ../src/eom-plugin-manager.c:51
+#: ../src/eom-plugin-manager.c:55
 msgid "Plugin"
 msgstr "Įskiepis"
 
-#: ../src/eom-plugin-manager.c:52
+#: ../src/eom-plugin-manager.c:56
 msgid "Enabled"
 msgstr "Įjungtas"
 
-#: ../src/eom-plugin-manager.c:505 ../src/eom-window.c:3673
+#: ../src/eom-plugin-manager.c:509 ../src/eom-window.c:3673
 msgid "_About"
 msgstr "_Apie"
 
-#: ../src/eom-plugin-manager.c:513
+#: ../src/eom-plugin-manager.c:517
 msgid "C_onfigure"
 msgstr "K_onfigūruoti"
 
-#: ../src/eom-plugin-manager.c:523
+#: ../src/eom-plugin-manager.c:527
 msgid "A_ctivate"
 msgstr "Įj_ungti"
 
-#: ../src/eom-plugin-manager.c:535
+#: ../src/eom-plugin-manager.c:539
 msgid "Ac_tivate All"
 msgstr "Į_jungti visus"
 
-#: ../src/eom-plugin-manager.c:540
+#: ../src/eom-plugin-manager.c:544
 msgid "_Deactivate All"
 msgstr "Išjun_gti visus"
 
-#: ../src/eom-plugin-manager.c:834
+#: ../src/eom-plugin-manager.c:853
 msgid "Active _Plugins:"
 msgstr "Aktyvūs įs_kiepiai:"
 
-#: ../src/eom-plugin-manager.c:867
+#: ../src/eom-plugin-manager.c:890
 msgid "_About Plugin"
 msgstr "_Apie įskiepį"
 
-#: ../src/eom-plugin-manager.c:874
+#: ../src/eom-plugin-manager.c:897
 msgid "C_onfigure Plugin"
 msgstr "K_onfigūruoti įskiepį"
 
 #: ../src/eom-print.c:219
 msgid "Image Settings"
-msgstr "Paveikslėlio nustatymai"
+msgstr "Paveikslo nustatymai"
 
 #: ../src/eom-print-image-setup.c:873
 msgid "Image"
-msgstr "Paveikslėlis"
+msgstr "Paveikslas"
 
 #: ../src/eom-print-image-setup.c:874
 msgid "The image whose printing properties will be set up"
-msgstr "Paveikslėlis, kurio spausdinimo nustatymai bus keičiami"
+msgstr "Paveikslas, kurio spausdinimo nustatymai bus keičiami"
 
 #: ../src/eom-print-image-setup.c:880
 msgid "Page Setup"
@@ -830,7 +831,7 @@ msgstr "Puslapio sąranka"
 
 #: ../src/eom-print-image-setup.c:881
 msgid "The information for the page where the image will be printed"
-msgstr "Informacija apie puslapį, kuriame bus spausdinamas paveikslėlis"
+msgstr "Informacija apie puslapį, kuriame bus spausdinamas paveikslas"
 
 #: ../src/eom-print-image-setup.c:914 ../src/eom-print-image-setup.c:928
 msgid "Position"
@@ -942,7 +943,7 @@ msgstr "kaip yra"
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/eom-thumb-view.c:616
+#: ../src/eom-thumb-view.c:610
 msgid "Taken on"
 msgstr "Fotografuota"
 
@@ -973,64 +974,64 @@ msgstr[0] "%i × %i taško  %s    %i%%"
 msgstr[1] "%i × %i taškų  %s    %i%%"
 msgstr[2] "%i × %i taškų  %s    %i%%"
 
-#: ../src/eom-window.c:811
+#: ../src/eom-window.c:817
 msgid "_Reload"
 msgstr "Į_kelti iš naujo"
 
-#: ../src/eom-window.c:813 ../src/eom-window.c:2720
+#: ../src/eom-window.c:819 ../src/eom-window.c:2717
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "_Slėpti"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:823
+#: ../src/eom-window.c:829
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
-msgstr "Paveikslėlis „%s“ pakeistas kitos programos.\nAr norite įkelti jį iš naujo?"
+msgstr "Paveikslas „%s“ pakeistas kitos programos.\nAr norite įkelti jį iš naujo?"
 
-#: ../src/eom-window.c:993
+#: ../src/eom-window.c:1002
 #, c-format
 msgid "Use \"%s\" to open the selected image"
-msgstr "Atverti pasirinktą paveikslėlį su „%s“"
+msgstr "Atverti pasirinktą paveikslą su „%s“"
 
 #. Translators: This string is displayed in the statusbar
 #. * while saving images. The tokens are from left to right:
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1149
+#: ../src/eom-window.c:1158
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
-msgstr "Įrašomas paveikslėlis „%s“ (%u/%u)"
+msgstr "Įrašomas paveikslas „%s“ (%u/%u)"
 
-#: ../src/eom-window.c:1507
+#: ../src/eom-window.c:1516
 #, c-format
 msgid "Opening image \"%s\""
-msgstr "Atveriamas paveikslėlis „%s“"
+msgstr "Atveriamas paveikslas „%s“"
 
-#: ../src/eom-window.c:2217
+#: ../src/eom-window.c:2214
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
 msgstr "Klaida spausdintant failą:\n%s"
 
-#: ../src/eom-window.c:2479
+#: ../src/eom-window.c:2476
 msgid "Toolbar Editor"
-msgstr "Įrankinės redaktorius"
+msgstr "Įrankių juostos rengyklė"
 
-#: ../src/eom-window.c:2482
+#: ../src/eom-window.c:2479
 msgid "_Reset to Default"
 msgstr "_Atkurti numatytuosius"
 
-#: ../src/eom-window.c:2575
+#: ../src/eom-window.c:2572
 msgid "translator-credits"
 msgstr "Paskutinysis vertėjas:\nŽygimantas Beručka <zygis@gnome.org>,\n\nVertėjai:\nJustina Klingaitė <justina.klingaite@gmail.com>,\nGediminas Paulauskas <menesis@chatsubo.lt>\nMoo"
 
-#: ../src/eom-window.c:2578
+#: ../src/eom-window.c:2575
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1038,7 +1039,7 @@ msgid ""
 "any later version.\n"
 msgstr "Ši programa yra laisvoji programinė įranga; galite ją platinti ir / arba modifikuoti GNU Bendrosios Viešosios Licencijos sąlygomis, paskelbtomis Laisvosios Programinės Įrangos Fondo; 2-osios arba (jūsų pasirinkimu) bet kurios vėlesnės licencijos versijos sąlygomis.\n"
 
-#: ../src/eom-window.c:2582
+#: ../src/eom-window.c:2579
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1046,35 +1047,35 @@ msgid ""
 "more details.\n"
 msgstr "Ši programa yra platinama tikintis, kad ji bus naudinga, tačiau NESUTEIKIANT JOKIŲ GARANTIJŲ; netgi numanomų PARDAVIMO arba TINKAMUMO TAM TIKRAM TIKSLUI garantijų. Išsamesnę informaciją rasite GNU Bendrojoje Viešojoje licencijoje.\n"
 
-#: ../src/eom-window.c:2586
+#: ../src/eom-window.c:2583
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr "Prie šios programos turėtų būti pridėta GNU Bendroji viešoji licencija; jeigu ne, kreipkitės į Laisvosios programinės įrangos fondą, 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, JAV."
 
-#: ../src/eom-window.c:2604
+#: ../src/eom-window.c:2601
 msgid "The MATE image viewer."
 msgstr "MATE atvaizdų peržiūros programa."
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2718
+#: ../src/eom-window.c:2715
 msgid "_Open Background Preferences"
 msgstr "_Atverti fono nuostatas"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2734
+#: ../src/eom-window.c:2731
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
-msgstr "Paveikslėlis „%s“ nustatytas kaip darbalaukio fonas.\nAr norite pakeisti jo išvaizdą?"
+msgstr "Paveikslas „%s“ nustatytas kaip darbalaukio fonas.\nAr norite pakeisti jo išvaizdą?"
 
 #: ../src/eom-window.c:3133
 msgid "Saving image locally…"
-msgstr "Paveikslėlis įrašomas vietiniame diske…"
+msgstr "Paveikslas įrašomas vietiniame diske…"
 
 #: ../src/eom-window.c:3213
 #, c-format
@@ -1088,7 +1089,7 @@ msgstr "Ar tikrai norite perkelti\n„%s“ į šiukšlinę?"
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
-msgstr "„%s“ šiukšlinė nerasta. Ar norite šį paveikslėlį ištrinti negrįžtamai?"
+msgstr "„%s“ šiukšlinė nerasta. Ar norite šį paveikslą ištrinti negrįžtamai?"
 
 #: ../src/eom-window.c:3221
 #, c-format
@@ -1098,15 +1099,15 @@ msgid ""
 msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
-msgstr[0] "Ar tikrai norite perkelti %d pasirinktą\npaveikslėlį į šiukšlinę?"
-msgstr[1] "Ar tikrai norite perkelti %d pasirinktus\npaveikslėlius į šiukšlinę?"
-msgstr[2] "Ar tikrai norite perkelti %d pasirinktų\npaveikslėlių į šiukšlinę?"
+msgstr[0] "Ar tikrai norite perkelti %d pasirinktą\npaveikslą į šiukšlinę?"
+msgstr[1] "Ar tikrai norite perkelti %d pasirinktus\npaveikslus į šiukšlinę?"
+msgstr[2] "Ar tikrai norite perkelti %d pasirinktų\npaveikslų į šiukšlinę?"
 
 #: ../src/eom-window.c:3226
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
-msgstr "Kai kurių pasirinktų paveikslėlių negalima perkelti į šiukšlinę, tad jie bus ištrinti negrįžtamai. Ar tikrai norite tęsti?"
+msgstr "Kai kurių pasirinktų paveikslų negalima perkelti į šiukšlinę, tad jie bus ištrinti negrįžtamai. Ar tikrai norite tęsti?"
 
 #: ../src/eom-window.c:3243 ../src/eom-window.c:3727 ../src/eom-window.c:3754
 msgid "Move to _Trash"
@@ -1129,11 +1130,11 @@ msgstr "Nepavyko ištrinti failo"
 #: ../src/eom-window.c:3409
 #, c-format
 msgid "Error on deleting image %s"
-msgstr "Trinant paveikslėlį %s įvyko klaida"
+msgstr "Trinant paveikslą %s įvyko klaida"
 
 #: ../src/eom-window.c:3651
 msgid "_Image"
-msgstr "_Paveikslėlis"
+msgstr "_Paveikslas"
 
 #: ../src/eom-window.c:3652
 msgid "_Edit"
@@ -1177,7 +1178,7 @@ msgstr "Į_rankinė"
 
 #: ../src/eom-window.c:3665
 msgid "Edit the application toolbar"
-msgstr "Keisti programos įrankinę"
+msgstr "Keisti programos įrankių juostą"
 
 #: ../src/eom-window.c:3667
 msgid "Prefere_nces"
@@ -1201,11 +1202,11 @@ msgstr "Apie šią programą"
 
 #: ../src/eom-window.c:3679
 msgid "_Toolbar"
-msgstr "Į_rankinė"
+msgstr "Į_rankių juosta"
 
 #: ../src/eom-window.c:3680
 msgid "Changes the visibility of the toolbar in the current window"
-msgstr "Keičia įrankinės esamame lange matomumą"
+msgstr "Keičia įrankių juostos esamame lange matomumą"
 
 #: ../src/eom-window.c:3682
 msgid "_Statusbar"
@@ -1222,7 +1223,7 @@ msgstr "_Kolekcija"
 #: ../src/eom-window.c:3686
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
-msgstr "Keičia esamo lango paveikslėlių kolekcijos skydelio matomumą"
+msgstr "Keičia esamo lango paveikslų kolekcijos polangio matomumą"
 
 #: ../src/eom-window.c:3688
 msgid "Side _Pane"
@@ -1238,7 +1239,7 @@ msgstr "Į_rašyti"
 
 #: ../src/eom-window.c:3695
 msgid "Save changes in currently selected images"
-msgstr "Įrašyti pažymėtų paveikslėlių pakeitimus"
+msgstr "Įrašyti pažymėtų paveikslų pakeitimus"
 
 #: ../src/eom-window.c:3697
 msgid "Open _with"
@@ -1246,7 +1247,7 @@ msgstr "Atverti _su"
 
 #: ../src/eom-window.c:3698
 msgid "Open the selected image with a different application"
-msgstr "Atverti pažymėtą paveikslėlį su kita programa"
+msgstr "Atverti pažymėtą paveikslą su kita programa"
 
 #: ../src/eom-window.c:3700
 msgid "Save _As…"
@@ -1254,7 +1255,7 @@ msgstr "Įrašyti k_aip…"
 
 #: ../src/eom-window.c:3701
 msgid "Save the selected images with a different name"
-msgstr "Įrašyti pažymėtus paveikslėlius kitu vardu"
+msgstr "Įrašyti pažymėtus paveikslus kitu pavadinimu"
 
 #: ../src/eom-window.c:3703
 msgid "_Print…"
@@ -1262,7 +1263,7 @@ msgstr "S_pausdinti…"
 
 #: ../src/eom-window.c:3704
 msgid "Print the selected image"
-msgstr "Spausdinti pažymėtą paveikslėlį"
+msgstr "Spausdinti pažymėtą paveikslą"
 
 #: ../src/eom-window.c:3706
 msgid "Prope_rties"
@@ -1270,7 +1271,7 @@ msgstr "Sa_vybės"
 
 #: ../src/eom-window.c:3707
 msgid "Show the properties and metadata of the selected image"
-msgstr "Rodyti pasirinkto paveikslėlio savybes ir metaduomenis"
+msgstr "Rodyti pasirinkto paveikslo savybes ir metaduomenis"
 
 #: ../src/eom-window.c:3709
 msgid "_Undo"
@@ -1278,7 +1279,7 @@ msgstr "_Atšaukti"
 
 #: ../src/eom-window.c:3710
 msgid "Undo the last change in the image"
-msgstr "Atšaukti paskutinį paveikslėlio pakeitimą"
+msgstr "Atšaukti paskutinį paveikslo pakeitimą"
 
 #: ../src/eom-window.c:3712
 msgid "Flip _Horizontal"
@@ -1286,7 +1287,7 @@ msgstr "Apversti _horizontaliai"
 
 #: ../src/eom-window.c:3713
 msgid "Mirror the image horizontally"
-msgstr "Atspindėti paveikslėlį horizontaliai"
+msgstr "Atspindėti paveikslą horizontaliai"
 
 #: ../src/eom-window.c:3715
 msgid "Flip _Vertical"
@@ -1294,7 +1295,7 @@ msgstr "Apversti _vertikaliai"
 
 #: ../src/eom-window.c:3716
 msgid "Mirror the image vertically"
-msgstr "Atspindėti paveikslėlį vertikaliai"
+msgstr "Atspindėti paveikslą vertikaliai"
 
 #: ../src/eom-window.c:3718
 msgid "_Rotate Clockwise"
@@ -1302,7 +1303,7 @@ msgstr "Pasukti pagal laik_rodžio rodyklę"
 
 #: ../src/eom-window.c:3719
 msgid "Rotate the image 90 degrees to the right"
-msgstr "Pasukti paveikslėlį 90 laipsnių į dešinę"
+msgstr "Pasukti paveikslą 90 laipsnių į dešinę"
 
 #: ../src/eom-window.c:3721
 msgid "Rotate Counterc_lockwise"
@@ -1310,7 +1311,7 @@ msgstr "Pasukti prieš _laikrodžio rodyklę"
 
 #: ../src/eom-window.c:3722
 msgid "Rotate the image 90 degrees to the left"
-msgstr "Pasukti paveikslėlį 90 laipsnių į kairę"
+msgstr "Pasukti paveikslą 90 laipsnių į kairę"
 
 #: ../src/eom-window.c:3724
 msgid "Set as _Desktop Background"
@@ -1318,11 +1319,11 @@ msgstr "Nustatyti kaip _darbalaukio foną"
 
 #: ../src/eom-window.c:3725
 msgid "Set the selected image as the desktop background"
-msgstr "Nustatyti pasirinktą paveikslėlį kaip darbalaukio foną"
+msgstr "Nustatyti pasirinktą paveikslą kaip darbalaukio foną"
 
 #: ../src/eom-window.c:3728
 msgid "Move the selected image to the trash folder"
-msgstr "Perkelti pasirinktą paveikslėlį į šiukšlinę"
+msgstr "Perkelti pasirinktą paveikslą į šiukšlinę"
 
 #: ../src/eom-window.c:3730
 msgid "_Copy"
@@ -1338,7 +1339,7 @@ msgstr "_Didinti"
 
 #: ../src/eom-window.c:3734 ../src/eom-window.c:3746
 msgid "Enlarge the image"
-msgstr "Padidinti paveikslėlį"
+msgstr "Padidinti paveikslą"
 
 #: ../src/eom-window.c:3736 ../src/eom-window.c:3751
 msgid "Zoom _Out"
@@ -1346,7 +1347,7 @@ msgstr "_Mažinti"
 
 #: ../src/eom-window.c:3737 ../src/eom-window.c:3749 ../src/eom-window.c:3752
 msgid "Shrink the image"
-msgstr "Sumažinti paveikslėlį"
+msgstr "Sumažinti paveikslą"
 
 #: ../src/eom-window.c:3739
 msgid "_Normal Size"
@@ -1354,7 +1355,7 @@ msgstr "_Normalus dydis"
 
 #: ../src/eom-window.c:3740
 msgid "Show the image at its normal size"
-msgstr "Rodyti paveikslėlį normaliu dydžiu"
+msgstr "Rodyti paveikslą normaliu dydžiu"
 
 #: ../src/eom-window.c:3742
 msgid "_Best Fit"
@@ -1362,7 +1363,7 @@ msgstr "_Geriausiai tinka"
 
 #: ../src/eom-window.c:3743
 msgid "Fit the image to the window"
-msgstr "Pritaikyti paveikslėlio dydį langui"
+msgstr "Pritaikyti paveikslo dydį langui"
 
 #: ../src/eom-window.c:3760
 msgid "_Fullscreen"
@@ -1370,7 +1371,7 @@ msgstr "_Visame ekrane"
 
 #: ../src/eom-window.c:3761
 msgid "Show the current image in fullscreen mode"
-msgstr "Rodyti pasirinktą paveikslėlį viso ekrano veiksenoje"
+msgstr "Rodyti pasirinktą paveikslą viso ekrano veiksenoje"
 
 #: ../src/eom-window.c:3763
 msgid "Pause Slideshow"
@@ -1382,43 +1383,43 @@ msgstr "Stabdyti arba pratęsti skaidrių rodymą"
 
 #: ../src/eom-window.c:3769 ../src/eom-window.c:3784
 msgid "_Previous Image"
-msgstr "_Ankstesnis paveikslėlis"
+msgstr "_Ankstesnis paveikslas"
 
 #: ../src/eom-window.c:3770
 msgid "Go to the previous image of the collection"
-msgstr "Rodyti ankstesnį rinkinio paveikslėlį"
+msgstr "Rodyti ankstesnį rinkinio paveikslą"
 
 #: ../src/eom-window.c:3772
 msgid "_Next Image"
-msgstr "_Kitas paveikslėlis"
+msgstr "_Kitas paveikslas"
 
 #: ../src/eom-window.c:3773
 msgid "Go to the next image of the collection"
-msgstr "Rodyti kitą rinkinio paveikslėlį"
+msgstr "Rodyti kitą rinkinio paveikslą"
 
 #: ../src/eom-window.c:3775 ../src/eom-window.c:3787
 msgid "_First Image"
-msgstr "_Pirmas paveikslėlis"
+msgstr "_Pirmas paveikslas"
 
 #: ../src/eom-window.c:3776
 msgid "Go to the first image of the collection"
-msgstr "Rodyti pirmąjį rinkinio paveikslėlį"
+msgstr "Rodyti pirmąjį rinkinio paveikslą"
 
 #: ../src/eom-window.c:3778 ../src/eom-window.c:3790
 msgid "_Last Image"
-msgstr "Pas_kutinis paveikslėlis"
+msgstr "Pas_kutinis paveikslas"
 
 #: ../src/eom-window.c:3779
 msgid "Go to the last image of the collection"
-msgstr "Rodyti paskutinįjį rinkinio paveikslėlį"
+msgstr "Rodyti paskutinįjį rinkinio paveikslą"
 
 #: ../src/eom-window.c:3781
 msgid "_Random Image"
-msgstr "_Atsitiktinis paveikslėlis"
+msgstr "_Atsitiktinis paveikslas"
 
 #: ../src/eom-window.c:3782
 msgid "Go to a random image of the collection"
-msgstr "Rodyti atsitiktinį rinkinio paveikslėlį"
+msgstr "Rodyti atsitiktinį rinkinio paveikslą"
 
 #: ../src/eom-window.c:3796
 msgid "S_lideshow"
@@ -1426,7 +1427,7 @@ msgstr "S_kaidrių rodymas"
 
 #: ../src/eom-window.c:3797
 msgid "Start a slideshow view of the images"
-msgstr "Rodyti paveikslėlius kaip skaidres"
+msgstr "Rodyti paveikslus kaip skaidrių rodymą"
 
 #: ../src/eom-window.c:3863
 msgid "Previous"
@@ -1484,7 +1485,7 @@ msgstr "Atverti viso ekrano veiksenoje"
 
 #: ../src/main.c:81
 msgid "Disable image collection"
-msgstr "Išjungti paveikslėlių kolekciją"
+msgstr "Išjungti paveikslų kolekciją"
 
 #: ../src/main.c:82
 msgid "Open in slideshow mode"

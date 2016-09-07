@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-30 18:12+0300\n"
+"POT-Creation-Date: 2016-07-13 16:02+0300\n"
 "PO-Revision-Date: 2015-04-22 10:39+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: Albanian (http://www.transifex.com/mate/MATE/language/sq/)\n"
@@ -26,40 +26,40 @@ msgstr ""
 #. * produce duplicates, but don't worry about it. If your language
 #. * normally has a mnemonic at the start, please use the _. If not,
 #. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:936
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:948
 #, c-format
 msgid "Show “_%s”"
 msgstr "Shfaq “_%s”"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1399
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1416
 msgid "_Move on Toolbar"
 msgstr "_Lëviz tek paneli i instrumentëve"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1400
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1417
 msgid "Move the selected item on the toolbar"
 msgstr "Lëviz elementin e zgjedhur tek paneli i instrumentëve"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1401
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1418
 msgid "_Remove from Toolbar"
 msgstr "_Hiq nga paneli i instrumentëve"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1402
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1419
 msgid "Remove the selected item from the toolbar"
 msgstr "Heq elementin e zgjedhur nga paneli i instrumentëve"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1403
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
 msgid "_Delete Toolbar"
 msgstr "_Fshi panelin e instrumentëve"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1404
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
 msgid "Remove the selected toolbar"
 msgstr "Heq panelin e zgjedhur të instrumentëve"
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:498
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:515
 msgid "Separator"
 msgstr "Ndarës"
 
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2599
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2596
 msgid "Eye of MATE"
 msgstr "Eye of MATE"
 
@@ -569,7 +569,7 @@ msgstr "Data në menunë e gjendjes"
 msgid "Shows the image date in the window statusbar"
 msgstr "Shfaq datën e figurës tek menu e gjendjes së dritares"
 
-#: ../src/eom-application.c:123
+#: ../src/eom-application.c:124
 msgid "Running in fullscreen mode"
 msgstr "Ekzekutim në modalitetin me ekran të plotë"
 
@@ -638,7 +638,7 @@ msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
 #: ../src/eom-file-chooser.c:292 ../src/eom-properties-dialog.c:137
-#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:588
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:582
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "pikë"
@@ -656,42 +656,42 @@ msgstr "Ruaj figurën"
 msgid "Open Folder"
 msgstr "Hap kartelën"
 
-#: ../src/eom-image.c:598
+#: ../src/eom-image.c:562
 #, c-format
 msgid "Transformation on unloaded image."
 msgstr "Transformimi i figurës së pangarkuar."
 
-#: ../src/eom-image.c:626
+#: ../src/eom-image.c:590
 #, c-format
 msgid "Transformation failed."
 msgstr "Transformimi dështoi."
 
-#: ../src/eom-image.c:1053
+#: ../src/eom-image.c:1000
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "EXIF nuk suportohet për këtë format file."
 
-#: ../src/eom-image.c:1182
+#: ../src/eom-image.c:1123
 #, c-format
 msgid "Image loading failed."
 msgstr "Ngarkimi i figurës dështoi."
 
-#: ../src/eom-image.c:1711 ../src/eom-image.c:1813
+#: ../src/eom-image.c:1652 ../src/eom-image.c:1754
 #, c-format
 msgid "No image loaded."
 msgstr "Asnjë figurë e ngarkuar."
 
-#: ../src/eom-image.c:1721 ../src/eom-image.c:1825
+#: ../src/eom-image.c:1662 ../src/eom-image.c:1766
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "Krijimi i file të përkohshëm dështoi."
 
-#: ../src/eom-image-jpeg.c:382
+#: ../src/eom-image-jpeg.c:384
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr "I pamundur krijimi i file të përkohshëm për të ruajtur: %s"
 
-#: ../src/eom-image-jpeg.c:393
+#: ../src/eom-image-jpeg.c:395
 #, c-format
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "E pamundur përgatitja e kujtesës për të ngarkuar file JPEG"
@@ -759,53 +759,53 @@ msgid "Value"
 msgstr "Vlera"
 
 #. A strftime-formatted string, to display the date the image was taken.
-#: ../src/eom-exif-util.c:118 ../src/eom-exif-util.c:158
+#: ../src/eom-exif-util.c:121 ../src/eom-exif-util.c:161
 msgid "%a, %d %B %Y  %X"
 msgstr "%a, %d %B %Y  %X"
 
 #. A strftime-formatted string, to display the date the image was taken, for
 #. the case we don't have the time.
-#: ../src/eom-exif-util.c:152
+#: ../src/eom-exif-util.c:155
 msgid "%a, %d %B %Y"
 msgstr "%a, %d %B %Y"
 
-#: ../src/eom-plugin-manager.c:51
+#: ../src/eom-plugin-manager.c:55
 msgid "Plugin"
 msgstr "Plugin"
 
-#: ../src/eom-plugin-manager.c:52
+#: ../src/eom-plugin-manager.c:56
 msgid "Enabled"
 msgstr "Aktiv"
 
-#: ../src/eom-plugin-manager.c:505 ../src/eom-window.c:3673
+#: ../src/eom-plugin-manager.c:509 ../src/eom-window.c:3673
 msgid "_About"
 msgstr "_Informacione"
 
-#: ../src/eom-plugin-manager.c:513
+#: ../src/eom-plugin-manager.c:517
 msgid "C_onfigure"
 msgstr "K_onfigurimi"
 
-#: ../src/eom-plugin-manager.c:523
+#: ../src/eom-plugin-manager.c:527
 msgid "A_ctivate"
 msgstr "A_ktivizo"
 
-#: ../src/eom-plugin-manager.c:535
+#: ../src/eom-plugin-manager.c:539
 msgid "Ac_tivate All"
 msgstr "Ak_tivizoi të gjithë"
 
-#: ../src/eom-plugin-manager.c:540
+#: ../src/eom-plugin-manager.c:544
 msgid "_Deactivate All"
 msgstr "Ç_aktivizoi të gjithë"
 
-#: ../src/eom-plugin-manager.c:834
+#: ../src/eom-plugin-manager.c:853
 msgid "Active _Plugins:"
 msgstr "_Plugin aktivë:"
 
-#: ../src/eom-plugin-manager.c:867
+#: ../src/eom-plugin-manager.c:890
 msgid "_About Plugin"
 msgstr "Inform_acione në lidhje me plugin"
 
-#: ../src/eom-plugin-manager.c:874
+#: ../src/eom-plugin-manager.c:897
 msgid "C_onfigure Plugin"
 msgstr "K_onfiguro plugin"
 
@@ -939,7 +939,7 @@ msgstr "si është"
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/eom-thumb-view.c:616
+#: ../src/eom-thumb-view.c:610
 msgid "Taken on"
 msgstr "Marrë në"
 
@@ -969,25 +969,25 @@ msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i x %i pixel %s %i%%"
 msgstr[1] "%i x %i pixel %s %i%%"
 
-#: ../src/eom-window.c:811
+#: ../src/eom-window.c:817
 msgid "_Reload"
 msgstr "_Ringarko"
 
-#: ../src/eom-window.c:813 ../src/eom-window.c:2720
+#: ../src/eom-window.c:819 ../src/eom-window.c:2717
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "F_sheh"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:823
+#: ../src/eom-window.c:829
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
 msgstr "Imazhi \"%s\" është ndryshuar me një aplikacion tjetër.\nDëshironi të ringarkoni atë?"
 
-#: ../src/eom-window.c:993
+#: ../src/eom-window.c:1002
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Përdor \"%s\" për të hapur figurën e zgjedhur"
@@ -997,36 +997,36 @@ msgstr "Përdor \"%s\" për të hapur figurën e zgjedhur"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1149
+#: ../src/eom-window.c:1158
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Duke ruajtur figurën \"%s\" (%u/%u)"
 
-#: ../src/eom-window.c:1507
+#: ../src/eom-window.c:1516
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Hapja e imazhit \"%s\"."
 
-#: ../src/eom-window.c:2217
+#: ../src/eom-window.c:2214
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
 msgstr "Gabim gjatë printimit të file:\n%s"
 
-#: ../src/eom-window.c:2479
+#: ../src/eom-window.c:2476
 msgid "Toolbar Editor"
 msgstr "Edituesi i panelit të instrumentëve"
 
-#: ../src/eom-window.c:2482
+#: ../src/eom-window.c:2479
 msgid "_Reset to Default"
 msgstr "_Rikthe në vlerën e paracaktuar"
 
-#: ../src/eom-window.c:2575
+#: ../src/eom-window.c:2572
 msgid "translator-credits"
 msgstr "Laurent Dhima <laurenti@alblinux.net>"
 
-#: ../src/eom-window.c:2578
+#: ../src/eom-window.c:2575
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1034,7 +1034,7 @@ msgid ""
 "any later version.\n"
 msgstr "Ky program është software i lirë; mund ta rishpërndani apo/dhe ndryshoni nën kushtet e Liçencës Publike të Përgjithshme GNU sikurse publikuar nga Fondacioni Free Software; duke zgjedhur midis versionit 2 të Liçencës, ose (sipas dëshirës suaj) çdo versioni tjetër të mëvonshëm.\n"
 
-#: ../src/eom-window.c:2582
+#: ../src/eom-window.c:2579
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1042,26 +1042,26 @@ msgid ""
 "more details.\n"
 msgstr "Ky program shpërndahet me dëshirën që të jetë i vlefshëm për ju, por PA ASNJË LLOJ GARANCIE; bile as pa garancinë e TREGTIMIT apo PËRDORIMIT PËR QËLLIME TË VEÇANTA.  Shiko Liçencën Publike të Përgjithshme GNU për hollësi të mëtejshme.\n"
 
-#: ../src/eom-window.c:2586
+#: ../src/eom-window.c:2583
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 
-#: ../src/eom-window.c:2604
+#: ../src/eom-window.c:2601
 msgid "The MATE image viewer."
 msgstr "Shfaqësi i figurave për MATE."
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2718
+#: ../src/eom-window.c:2715
 msgid "_Open Background Preferences"
 msgstr "_Hap Preferencat e Sonfit"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2734
+#: ../src/eom-window.c:2731
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
