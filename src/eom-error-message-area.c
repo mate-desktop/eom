@@ -28,6 +28,7 @@
 
 #include "eom-error-message-area.h"
 #include "eom-image.h"
+#include "eom-util.h"
 
 #include <glib.h>
 #include <glib/gi18n.h>
@@ -167,7 +168,7 @@ eom_image_load_error_message_area_new (const gchar  *caption,
 	error_message = g_strdup_printf (_("Could not load image '%s'."),
 					 pango_escaped_caption);
 
-	message_details = g_strdup (error->message);
+	message_details = eom_util_make_valid_utf8 (error->message);
 
 	message_area = create_error_message_area (error_message,
 						  message_details,
