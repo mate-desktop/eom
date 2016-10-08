@@ -180,7 +180,9 @@ BUILT_SOURCES = 			\
 	eom-resources.c			\
 	$(MARSHAL_OUTPUT)
 
-eom-resources.c: eom.gresource.xml $(shell $(GLIB_COMPILE_RESOURCES) --sourcedir=$(top_srcdir)/data --generate-dependencies eom.gresource.xml)
+eom_resources_deps = $(shell $(GLIB_COMPILE_RESOURCES) --sourcedir=$(top_srcdir)/data --generate-dependencies $(top_srcdir)/src/eom.gresource.xml)
+
+eom-resources.c: $(top_srcdir)/src/eom.gresource.xml $(eom_resources_deps)
 	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) "$<" --target=$@ \
          --sourcedir=$(top_srcdir)/data --c-name _eom --generate-source
 
