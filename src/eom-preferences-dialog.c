@@ -256,6 +256,7 @@ eom_preferences_dialog_constructor (GType type,
 	default:
 		// Log a warning and use EOM_TRANSP_BACKGROUND as fallback
 		g_warn_if_reached ();
+	case EOM_TRANSP_BACKGROUND:
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (background_radio), TRUE);
 		break;
 	}
