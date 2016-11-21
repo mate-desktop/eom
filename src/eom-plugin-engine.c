@@ -40,17 +40,12 @@
 #include <glib.h>
 #include <gio/gio.h>
 
-#ifdef ENABLE_PYTHON
-#include "eom-python-module.h"
-#endif
-
 #define USER_EOM_PLUGINS_LOCATION "plugins/"
 
 #define PLUGIN_EXT	".eom-plugin"
 
 typedef enum {
 	EOM_PLUGIN_LOADER_C,
-	EOM_PLUGIN_LOADER_PY,
 } EomPluginLoader;
 
 struct _EomPluginInfo
@@ -73,8 +68,7 @@ struct _EomPluginInfo
 	gint               active : 1;
 
 	/* A plugin is unavailable if it is not possible to activate it
-	   due to an error loading the plugin module (e.g. for Python plugins
-	   when the interpreter has not been correctly initializated) */
+	   due to an error loading the plugin module */
 	gint               available : 1;
 };
 
@@ -172,19 +166,7 @@ eom_plugin_engine_load (const gchar *file)
 				     "Loader",
 				     NULL);
 
-	if (str && strcmp(str, "python") == 0) {
-		info->loader = EOM_PLUGIN_LOADER_PY;
-
-#ifndef ENABLE_PYTHON
-		g_warning ("Cannot load Python plugin '%s' since eom was not "
-			   "compiled with Python support.", file);
-
-		goto error;
-#endif
-
-	} else {
-		info->loader = EOM_PLUGIN_LOADER_C;
-	}
+	info->loader = EOM_PLUGIN_LOADER_C;
 
 	g_free (str);
 
@@ -410,29 +392,11 @@ eom_plugin_engine_init (void)
 }
 
 void
-eom_plugin_engine_garbage_collect (void)
-{
-#ifdef ENABLE_PYTHON
-	eom_python_garbage_collect ();
-#endif
-}
-
-void
 eom_plugin_engine_shutdown (void)
 {
 	GList *pl;
 
 	eom_debug (DEBUG_PLUGINS);
-
-#ifdef ENABLE_PYTHON
-	/* Note: that this may cause finalization of objects (typically
-	 * the EomWindow) by running the garbage collector. Since some
-	 * of the plugin may have installed callbacks upon object
-	 * finalization (typically they need to free the WindowData)
-	 * it must run before we get rid of the plugins.
-	 */
-	eom_python_shutdown ();
-#endif
 
 	g_return_if_fail (eom_plugin_engine_settings != NULL);
 
@@ -493,36 +457,6 @@ load_plugin_module (EomPluginInfo *info)
 
 		break;
 
-#ifdef ENABLE_PYTHON
-	case EOM_PLUGIN_LOADER_PY:
-	{
-		gchar *dir;
-
-		if (!eom_python_init ()) {
-			/* Mark plugin as unavailable and fails */
-			info->available = FALSE;
-
-			g_warning ("Cannot load Python plugin '%s' since eom "
-			           "was not able to initialize the Python interpreter.",
-			           info->name);
-
-			return FALSE;
-		}
-
-		g_return_val_if_fail ((info->location != NULL) &&
-		                      (info->location[0] != '\0'),
-		                      FALSE);
-
-		dir = g_path_get_dirname (info->file);
-
-		info->module = G_TYPE_MODULE (
-				eom_python_module_new (dir, info->location));
-
-		g_free (dir);
-
-		break;
-	}
-#endif
 	default:
 		g_return_val_if_reached (FALSE);
 	}
@@ -533,12 +467,6 @@ load_plugin_module (EomPluginInfo *info)
 			g_warning ("Cannot load plugin '%s' since file '%s' cannot be read.",
 				   info->name,
 				   eom_module_get_path (EOM_MODULE (info->module)));
-			break;
-
-		case EOM_PLUGIN_LOADER_PY:
-			g_warning ("Cannot load Python plugin '%s' since file '%s' cannot be read.",
-				   info->name,
-				   info->location);
 			break;
 
 		default:
@@ -560,13 +488,6 @@ load_plugin_module (EomPluginInfo *info)
 		info->plugin =
 			EOM_PLUGIN (eom_module_new_object (EOM_MODULE (info->module)));
 		break;
-
-#ifdef ENABLE_PYTHON
-	case EOM_PLUGIN_LOADER_PY:
-		info->plugin =
-			EOM_PLUGIN (eom_python_module_new_object (EOM_PYTHON_MODULE (info->module)));
-		break;
-#endif
 
 	default:
 		g_return_val_if_reached (FALSE);

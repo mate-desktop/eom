@@ -4636,8 +4636,6 @@ eom_window_dispose (GObject *object)
 		g_clear_object (&priv->thumbview);
 	}
 
-	eom_plugin_engine_garbage_collect ();
-
 	if (priv->store != NULL) {
 		g_signal_handlers_disconnect_by_func (priv->store,
 					      eom_window_list_store_image_added,
@@ -4738,8 +4736,6 @@ eom_window_dispose (GObject *object)
 		g_object_unref (priv->last_save_as_folder);
 		priv->last_save_as_folder = NULL;
 	}
-
-	eom_plugin_engine_garbage_collect ();
 
 	G_OBJECT_CLASS (eom_window_parent_class)->dispose (object);
 }

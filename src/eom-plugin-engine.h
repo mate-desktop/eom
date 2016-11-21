@@ -38,9 +38,6 @@ G_GNUC_INTERNAL
 void		 eom_plugin_engine_shutdown 		(void);
 
 G_GNUC_INTERNAL
-void		 eom_plugin_engine_garbage_collect	(void);
-
-G_GNUC_INTERNAL
 const GList	*eom_plugin_engine_get_plugins_list 	(void);
 
 G_GNUC_INTERNAL

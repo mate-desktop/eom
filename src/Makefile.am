@@ -39,12 +39,6 @@ NOINST_H_FILES =			\
 	eom-close-confirmation-dialog.h	\
 	zoom.h
 
-if ENABLE_PYTHON
-NOINST_H_FILES += 			\
-	eom-python-module.h		\
-	eom-python-plugin.h
-endif
-
 INST_H_FILES =				\
 	eom-application.h		\
 	eom-debug.h			\
@@ -125,14 +119,6 @@ libeom_c_files +=			\
 	eom-exif-details.c
 endif
 
-if ENABLE_PYTHON
-libeom_la_SOURCES += 			\
-	eom-python-module.c		\
-	eom-python-module.h		\
-	eom-python-plugin.c		\
-	eom-python-plugin.h
-endif
-
 if HAVE_EXEMPI
 # We need to make sure eom-exif-details.h
 # is only listed once in INST_H_FILES
@@ -167,17 +153,6 @@ libeom_la_CFLAGS += 	\
 
 libeom_la_LIBADD += \
 	$(X11_LIBS)
-endif
-
-if ENABLE_PYTHON
-libeom_la_CFLAGS += 			\
-	$(NO_STRICT_ALIASING_CFLAGS)	\
-	$(PYGTK_CFLAGS)			\
-	$(PYTHON_CFLAGS)		\
-	$(AM_CFLAGS)
-
-libeom_la_LIBADD += \
-	$(top_builddir)/bindings/python/eom.la
 endif
 
 eom_SOURCES = main.c
