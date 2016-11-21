@@ -42,21 +42,13 @@ typedef struct _EomSidebarPrivate EomSidebarPrivate;
 #define EOM_SIDEBAR_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS((obj),  EOM_TYPE_SIDEBAR, EomSidebarClass))
 
 struct _EomSidebar {
-#if GTK_CHECK_VERSION (3, 2, 0)
 	GtkBox base_instance;
-#else
-	GtkVBox base_instance;
-#endif
 
 	EomSidebarPrivate *priv;
 };
 
 struct _EomSidebarClass {
-#if GTK_CHECK_VERSION (3, 2, 0)
 	GtkBoxClass base_class;
-#else
-	GtkVBoxClass base_class;
-#endif
 
 	void (* page_added)   (EomSidebar *eom_sidebar,
 			       GtkWidget  *main_widget);

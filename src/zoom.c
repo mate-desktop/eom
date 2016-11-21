@@ -23,8 +23,6 @@
 #include <math.h>
 #include "zoom.h"
 
-
-
 /**
  * zoom_fit_size:
  * @dest_width: Width of destination area.

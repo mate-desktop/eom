@@ -466,11 +466,7 @@ static gboolean button_release_event_cb (GtkWidget *widget, GdkEventButton *bev,
 static gboolean motion_notify_event_cb  (GtkWidget *widget, GdkEventMotion *mev, gpointer user_data);
 static gboolean key_press_event_cb      (GtkWidget *widget, GdkEventKey *event, gpointer user_data);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 static gboolean draw_cb (GtkDrawingArea *drawing_area, cairo_t *cr, gpointer user_data);
-#else
-static gboolean expose_event_cb (GtkDrawingArea *drawing_area, GdkEventExpose *eev, gpointer  user_data);
-#endif
 static void size_allocate_cb (GtkWidget *widget, GtkAllocation *allocation, gpointer user_data);
 
 /**
@@ -531,11 +527,7 @@ eom_print_preview_new (void)
 /* 	update_relative_sizes (preview); */
 
 	g_signal_connect (G_OBJECT (area),
-#if GTK_CHECK_VERSION (3, 0, 0)
 			  "draw", G_CALLBACK (draw_cb),
-#else
-			  "expose-event", G_CALLBACK (expose_event_cb),
-#endif
 			  preview);
 
 	g_signal_connect (G_OBJECT (area), "motion-notify-event",
@@ -557,21 +549,11 @@ eom_print_preview_new (void)
 }
 
 static gboolean
-#if GTK_CHECK_VERSION (3, 0, 0)
 draw_cb (GtkDrawingArea *drawing_area,
 		 cairo_t *cr,
-#else
-expose_event_cb (GtkDrawingArea *drawing_area,
-		 GdkEventExpose *eev,
-#endif
 		 gpointer  user_data)
 {
 	update_relative_sizes (EOM_PRINT_PREVIEW (user_data));
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-	GtkWidget *widget = GTK_WIDGET (drawing_area);
-	cairo_t *cr = gdk_cairo_create (gtk_widget_get_window (widget));
-#endif
 
 	eom_print_preview_draw (EOM_PRINT_PREVIEW (user_data), cr);
 
@@ -579,11 +561,6 @@ expose_event_cb (GtkDrawingArea *drawing_area,
 		fprintf (stderr, "Cairo is unhappy: %s\n",
 		    cairo_status_to_string (cairo_status (cr)));
 	}
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-	cairo_destroy (cr);
-	gdk_window_get_pointer (gtk_widget_get_window (widget), NULL, NULL, NULL);
-#endif
 
 	return TRUE;
 }
@@ -969,11 +946,7 @@ motion_notify_event_cb (GtkWidget      *widget,
 							     GDK_FLEUR);
 			gdk_window_set_cursor (gtk_widget_get_window (widget),
 					       cursor);
-#if GTK_CHECK_VERSION (3, 0, 0)
 			g_object_unref (cursor);
-#else
-			gdk_cursor_unref (cursor);
-#endif
 		} else {
 			gdk_window_set_cursor (gtk_widget_get_window (widget),
 					       NULL);
@@ -1009,11 +982,7 @@ eom_print_preview_draw (EomPrintPreview *preview, cairo_t *cr)
 	GtkWidget *area;
 	GtkAllocation allocation;
 	gint x0, y0;
-#if GTK_CHECK_VERSION (3, 4, 0)
 	GdkRGBA color;
-#else
-	GtkStyle *style;
-#endif
 	gboolean has_focus;
 
 	priv = preview->priv;
@@ -1021,29 +990,17 @@ eom_print_preview_draw (EomPrintPreview *preview, cairo_t *cr)
 
 	has_focus = gtk_widget_has_focus (area);
 
-#if !GTK_CHECK_VERSION (3, 4, 0)
-	style = gtk_widget_get_style (area);
-#endif
-
 	gtk_widget_get_allocation (area, &allocation);
 
 	/* draw the page */
-#if GTK_CHECK_VERSION (3, 4, 0)
 	gdk_rgba_parse (&color, "white");
 	gdk_cairo_set_source_rgba (cr, &color);
-#else
- 	gdk_cairo_set_source_color (cr, &style->white);
-#endif
  	cairo_rectangle (cr, 0, 0, allocation.width, allocation.height);
  	cairo_fill (cr);
 
 	/* draw the page margins */
-#if GTK_CHECK_VERSION (3, 4, 0)
 	gdk_rgba_parse (&color, "black");
 	gdk_cairo_set_source_rgba (cr, &color);
-#else
-	gdk_cairo_set_source_color (cr, &style->black);
-#endif
 	cairo_set_line_width (cr, 0.1);
 	cairo_rectangle (cr,
 			 priv->l_rmargin, priv->t_rmargin,
@@ -1085,17 +1042,11 @@ eom_print_preview_draw (EomPrintPreview *preview, cairo_t *cr)
 	}
 
 	if (has_focus) {
-#if GTK_CHECK_VERSION(3, 0, 0)
 		GtkStyleContext *ctx;
 
 		ctx = gtk_widget_get_style_context (area);
 		gtk_render_focus (ctx, cr, 0, 0,
 				  allocation.width, allocation.height);
-#else
-		gtk_paint_focus (style, gtk_widget_get_window (area),
-				 GTK_STATE_NORMAL, NULL, NULL, NULL,
-				 0, 0, allocation.width, allocation.height);
-#endif
 	}
 }
 

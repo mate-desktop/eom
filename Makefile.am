@@ -21,8 +21,7 @@ DISTCLEANFILES =                \
 
 DISTCHECK_CONFIGURE_FLAGS =      \
 	--disable-schemas-install    \
-	--enable-gtk-doc             \
-	--with-gtk=$(GTK_API_VERSION)
+	--enable-gtk-doc
 
 distuninstallcheck_listfiles = find . -type f -print | grep -v /share/mate/help/ | grep -v \.omf
 

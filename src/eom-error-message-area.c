@@ -35,11 +35,6 @@
 #include <glib-object.h>
 #include <gtk/gtk.h>
 
-#if GTK_CHECK_VERSION (3, 2, 0)
-#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
-#define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
-#endif
-
 static void
 set_message_area_text_and_icon (GtkInfoBar   *message_area,
 				const gchar  *icon_stock_id,
@@ -54,19 +49,15 @@ set_message_area_text_and_icon (GtkInfoBar   *message_area,
 	GtkWidget *primary_label;
 	GtkWidget *secondary_label;
 
-	hbox_content = gtk_hbox_new (FALSE, 8);
+	hbox_content = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 8);
 	gtk_widget_show (hbox_content);
 
 	image = gtk_image_new_from_stock (icon_stock_id, GTK_ICON_SIZE_DIALOG);
 	gtk_widget_show (image);
 	gtk_box_pack_start (GTK_BOX (hbox_content), image, FALSE, FALSE, 0);
-#if GTK_CHECK_VERSION (3, 0, 0)
 	gtk_widget_set_valign (image, GTK_ALIGN_START);
-#else
-	gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0);
-#endif
 
-	vbox = gtk_vbox_new (FALSE, 6);
+	vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
 	gtk_widget_show (vbox);
 	gtk_box_pack_start (GTK_BOX (hbox_content), vbox, TRUE, TRUE, 0);
 

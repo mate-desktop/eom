@@ -38,21 +38,13 @@ typedef struct _EomPrintImageSetupPrivate   EomPrintImageSetupPrivate;
 #define EOM_PRINT_IMAGE_SETUP_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), EOM_TYPE_PRINT_IMAGE_SETUP, EomPrintImageSetupClass))
 
 struct _EomPrintImageSetup {
-#if GTK_CHECK_VERSION (3, 4, 0)
 	GtkGrid parent_instance;
-#else
-	GtkTable parent_instance;
-#endif
 
 	EomPrintImageSetupPrivate *priv;
 };
 
 struct _EomPrintImageSetupClass {
-#if GTK_CHECK_VERSION (3, 4, 0)
 	GtkGridClass parent_class;
-#else
-	GtkTableClass parent_class;
-#endif
 };
 
 G_GNUC_INTERNAL

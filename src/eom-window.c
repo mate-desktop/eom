@@ -102,11 +102,6 @@ G_DEFINE_TYPE (EomWindow, eom_window, GTK_TYPE_WINDOW);
 
 #define is_rtl (gtk_widget_get_default_direction () == GTK_TEXT_DIR_RTL)
 
-#if GTK_CHECK_VERSION (3, 2, 0)
-#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
-#define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
-#endif
-
 typedef enum {
 	EOM_WINDOW_STATUS_UNKNOWN,
 	EOM_WINDOW_STATUS_INIT,
@@ -268,11 +263,7 @@ eom_window_set_collection_mode (EomWindow *window, EomWindowCollectionPos positi
 		if (resizable) {
 			mode = EOM_THUMB_NAV_MODE_MULTIPLE_ROWS;
 
-#if GTK_CHECK_VERSION (3, 2, 0)
 			priv->layout = gtk_paned_new (GTK_ORIENTATION_VERTICAL);
-#else
-			priv->layout = gtk_vpaned_new ();
-#endif
 
 			if (position == EOM_WINDOW_COLLECTION_POS_BOTTOM) {
 				gtk_paned_pack1 (GTK_PANED (priv->layout), hpaned, TRUE, FALSE);
@@ -284,7 +275,7 @@ eom_window_set_collection_mode (EomWindow *window, EomWindowCollectionPos positi
 		} else {
 			mode = EOM_THUMB_NAV_MODE_ONE_ROW;
 
-			priv->layout = gtk_vbox_new (FALSE, 2);
+			priv->layout = gtk_box_new (GTK_ORIENTATION_VERTICAL, 2);
 
 			if (position == EOM_WINDOW_COLLECTION_POS_BOTTOM) {
 				gtk_box_pack_start (GTK_BOX (priv->layout), hpaned, TRUE, TRUE, 0);
@@ -301,11 +292,7 @@ eom_window_set_collection_mode (EomWindow *window, EomWindowCollectionPos positi
 		if (resizable) {
 			mode = EOM_THUMB_NAV_MODE_MULTIPLE_COLUMNS;
 
-#if GTK_CHECK_VERSION (3, 2, 0)
 			priv->layout = gtk_paned_new (GTK_ORIENTATION_HORIZONTAL);
-#else
-			priv->layout = gtk_hpaned_new ();
-#endif
 
 			if (position == EOM_WINDOW_COLLECTION_POS_LEFT) {
 				gtk_paned_pack1 (GTK_PANED (priv->layout), priv->nav, FALSE, TRUE);
@@ -317,7 +304,7 @@ eom_window_set_collection_mode (EomWindow *window, EomWindowCollectionPos positi
 		} else {
 			mode = EOM_THUMB_NAV_MODE_ONE_COLUMN;
 
-			priv->layout = gtk_hbox_new (FALSE, 2);
+			priv->layout = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 2);
 
 			if (position == EOM_WINDOW_COLLECTION_POS_LEFT) {
 				gtk_box_pack_start (GTK_BOX (priv->layout), priv->nav, FALSE, FALSE, 0);
@@ -832,14 +819,10 @@ image_file_changed_cb (EomImage *img, EomWindow *window)
 	g_free (text);
 	g_free (markup);
 
-	hbox = gtk_hbox_new (FALSE, 8);
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 8);
 	gtk_box_pack_start (GTK_BOX (hbox), image, FALSE, FALSE, 0);
-#if GTK_CHECK_VERSION (3, 0, 0)
 	gtk_widget_set_halign (image, GTK_ALIGN_START);
 	gtk_widget_set_valign (image, GTK_ALIGN_END);
-#else
-	gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0.0);
-#endif
 	gtk_box_pack_start (GTK_BOX (hbox), label, TRUE, TRUE, 0);
 #if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
@@ -1890,7 +1873,7 @@ eom_window_create_fullscreen_popup (EomWindow *window)
 
 	popup = gtk_window_new (GTK_WINDOW_POPUP);
 
-	hbox = gtk_hbox_new (FALSE, 0);
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 	gtk_container_add (GTK_CONTAINER (popup), hbox);
 
 	toolbar = gtk_ui_manager_get_widget (window->priv->ui_mgr,
@@ -1990,9 +1973,8 @@ update_ui_visibility (EomWindow *window)
 static void
 eom_window_run_fullscreen (EomWindow *window, gboolean slideshow)
 {
-#if GTK_CHECK_VERSION (3, 0, 0)
 	static const GdkRGBA black = { 0., 0., 0., 1.};
-#endif
+
 	EomWindowPrivate *priv;
 	GtkWidget *menubar;
 	gboolean upscale;
@@ -2068,27 +2050,7 @@ eom_window_run_fullscreen (EomWindow *window, gboolean slideshow)
 	gtk_widget_grab_focus (priv->view);
 
 	eom_scroll_view_override_bg_color (EOM_SCROLL_VIEW (window->priv->view),
-#if GTK_CHECK_VERSION (3, 0, 0)
 	                                   &black);
-#else
-			  &(gtk_widget_get_style (GTK_WIDGET (window))->black));
-#endif
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-	{
-		GtkStyle *style;
-
-		style = gtk_style_copy (gtk_widget_get_style (gtk_widget_get_parent (priv->view)));
-
-		style->xthickness = 0;
-		style->ythickness = 0;
-
-		gtk_widget_set_style (gtk_widget_get_parent (priv->view),
-				      style);
-
-		g_object_unref (style);
-	}
-#endif
 
 	gtk_window_fullscreen (GTK_WINDOW (window));
 	eom_window_update_fullscreen_popup (window);
@@ -2150,9 +2112,6 @@ eom_window_stop_fullscreen (EomWindow *window, gboolean slideshow)
 
 	eom_scroll_view_override_bg_color (EOM_SCROLL_VIEW (window->priv->view),
 					   NULL);
-#if !GTK_CHECK_VERSION (3, 0, 0)
-	gtk_widget_set_style (gtk_widget_get_parent (window->priv->view), NULL);
-#endif
 	gtk_window_unfullscreen (GTK_WINDOW (window));
 
 	if (slideshow) {
@@ -2497,10 +2456,8 @@ eom_window_cmd_edit_toolbar (GtkAction *action, gpointer *user_data)
 
 	gtk_container_set_border_width (GTK_CONTAINER (editor), 5);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	// Use as much vertical space as available
 	gtk_widget_set_vexpand (GTK_WIDGET (editor), TRUE);
-#endif
 
 	gtk_box_set_spacing (GTK_BOX (EGG_TOOLBAR_EDITOR (editor)), 5);
 
@@ -2737,14 +2694,10 @@ eom_window_set_wallpaper (EomWindow *window, const gchar *filename, const gchar 
 	if (!visible_filename)
 		g_free (basename);
 
-	hbox = gtk_hbox_new (FALSE, 8);
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 8);
 	gtk_box_pack_start (GTK_BOX (hbox), image, FALSE, FALSE, 0);
-#if GTK_CHECK_VERSION (3, 0, 0)
 	gtk_widget_set_halign (image, GTK_ALIGN_START);
 	gtk_widget_set_valign (image, GTK_ALIGN_END);
-#else
-	gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0.0);
-#endif
 	gtk_box_pack_start (GTK_BOX (hbox), label, TRUE, TRUE, 0);
 #if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
@@ -4199,12 +4152,8 @@ eom_window_open_editor (GtkAction *action,
 	if (app_info == NULL)
 		return;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	context = gdk_display_get_app_launch_context (
 	  gtk_widget_get_display (GTK_WIDGET (window)));
-#else
-	context = gdk_app_launch_context_new ();
-#endif
 	gdk_app_launch_context_set_screen (context,
 	  gtk_widget_get_screen (GTK_WIDGET (window)));
 	gdk_app_launch_context_set_icon (context,
@@ -4273,7 +4222,7 @@ eom_window_construct_ui (EomWindow *window)
 
 	priv = window->priv;
 
-	priv->box = gtk_vbox_new (FALSE, 0);
+	priv->box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
 	gtk_container_add (GTK_CONTAINER (window), priv->box);
 	gtk_widget_show (priv->box);
 
@@ -4377,10 +4326,8 @@ eom_window_construct_ui (EomWindow *window)
 			       "model", eom_application_get_toolbars_model (EOM_APP),
 			       NULL));
 
-#if GTK_CHECK_VERSION (3, 0, 2)
 	gtk_style_context_add_class (gtk_widget_get_style_context (GTK_WIDGET (priv->toolbar)),
 				     GTK_STYLE_CLASS_PRIMARY_TOOLBAR);
-#endif
 
 	egg_editable_toolbar_show (EGG_EDITABLE_TOOLBAR (priv->toolbar),
 				   "Toolbar");
@@ -4408,7 +4355,7 @@ eom_window_construct_ui (EomWindow *window)
 
 	gtk_ui_manager_insert_action_group (priv->ui_mgr, priv->actions_recent, 0);
 
-	priv->cbox = gtk_vbox_new (FALSE, 0);
+	priv->cbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
 	gtk_box_pack_start (GTK_BOX (priv->box), priv->cbox, TRUE, TRUE, 0);
 	gtk_widget_show (priv->cbox);
 
@@ -4425,13 +4372,9 @@ eom_window_construct_ui (EomWindow *window)
 		gtk_statusbar_get_context_id (GTK_STATUSBAR (priv->statusbar),
 					      "tip_message");
 
-	priv->layout = gtk_vbox_new (FALSE, 2);
+	priv->layout = gtk_box_new (GTK_ORIENTATION_VERTICAL, 2);
 
-#if GTK_CHECK_VERSION (3, 2, 0)
 	hpaned = gtk_paned_new (GTK_ORIENTATION_HORIZONTAL);
-#else
-	hpaned = gtk_hpaned_new ();
-#endif
 
 	priv->sidebar = eom_sidebar_new ();
 	/* The sidebar shouldn't be shown automatically on show_all(),
@@ -4544,12 +4487,10 @@ eom_window_init (EomWindow *window)
 
 	eom_debug (DEBUG_WINDOW);
 
-#if GTK_CHECK_VERSION(3, 0, 0)
 	GtkStyleContext *context;
 
 	context = gtk_widget_get_style_context (GTK_WIDGET (window));
 	gtk_style_context_add_class (context, "eom-window");
-#endif
 
 	hints.min_width  = EOM_WINDOW_MIN_WIDTH;
 	hints.min_height = EOM_WINDOW_MIN_HEIGHT;

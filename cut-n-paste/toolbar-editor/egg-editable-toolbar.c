@@ -35,11 +35,6 @@ static GdkPixbuf * new_separator_pixbuf         (void);
 #define EGG_ITEM_NAME      "egg-item-name"
 #define STOCK_DRAG_MODE    "stock_drag-mode"
 
-#if GTK_CHECK_VERSION (3, 2, 0)
-#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
-#define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
-#endif
-
 static const GtkTargetEntry dest_drag_types[] = {
   {EGG_TOOLBAR_ITEM_TYPE, GTK_TARGET_SAME_APP, 0},
 };
@@ -86,11 +81,7 @@ struct _EggEditableToolbarPrivate
   GtkToolItem *dnd_toolitem;
 };
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 G_DEFINE_TYPE (EggEditableToolbar, egg_editable_toolbar, GTK_TYPE_BOX)
-#else
-G_DEFINE_TYPE (EggEditableToolbar, egg_editable_toolbar, GTK_TYPE_VBOX);
-#endif
 
 static int
 get_dock_position (EggEditableToolbar *etoolbar,
@@ -434,11 +425,7 @@ configure_item_cursor (GtkToolItem *item,
           cursor = gdk_cursor_new_for_display (gdk_screen_get_display (screen),
 					       GDK_HAND2);
           gdk_window_set_cursor (gtk_widget_get_window (widget), cursor);
-#if GTK_CHECK_VERSION (3, 0, 0)
           g_object_unref (cursor);
-#else
-          gdk_cursor_unref (cursor);
-#endif
 
           gtk_drag_source_set (widget, GDK_BUTTON1_MASK, dest_drag_types,
                                G_N_ELEMENTS (dest_drag_types), GDK_ACTION_MOVE);
@@ -467,24 +454,13 @@ configure_item_cursor (GtkToolItem *item,
                 {
                   GdkScreen *screen;
                   GtkIconTheme *icon_theme;
-#if !GTK_CHECK_VERSION (3, 0, 0)
-                  GtkSettings *settings;
-#endif
                   gint width, height;
 
                   screen = gtk_widget_get_screen (widget);
                   icon_theme = gtk_icon_theme_get_for_screen (screen);
-#if GTK_CHECK_VERSION (3, 0, 0)
 
                   if (!gtk_icon_size_lookup (GTK_ICON_SIZE_LARGE_TOOLBAR,
                                              &width, &height))
-#else
-                  settings = gtk_settings_get_for_screen (screen);
-
-                  if (!gtk_icon_size_lookup_for_settings (settings,
-                                                          GTK_ICON_SIZE_LARGE_TOOLBAR,
-                                                          &width, &height))
-#endif
                     {
                       width = height = 24;
                     }
@@ -997,7 +973,7 @@ create_dock (EggEditableToolbar *etoolbar)
 {
   GtkWidget *toolbar, *hbox;
 
-  hbox = gtk_hbox_new (0, FALSE);
+  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 
   toolbar = gtk_toolbar_new ();
   gtk_toolbar_set_show_arrow (GTK_TOOLBAR (toolbar), TRUE);
@@ -1347,10 +1323,8 @@ egg_editable_toolbar_set_model (EggEditableToolbar *etoolbar,
 static void
 egg_editable_toolbar_init (EggEditableToolbar *etoolbar)
 {
-#if GTK_CHECK_VERSION (3, 0, 0)
   gtk_orientable_set_orientation (GTK_ORIENTABLE (etoolbar),
                                   GTK_ORIENTATION_VERTICAL);
-#endif
 
   EggEditableToolbarPrivate *priv;
 
@@ -1760,16 +1734,9 @@ new_pixbuf_from_widget (GtkWidget *widget)
 
   screen = gtk_widget_get_screen (widget);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   if (!gtk_icon_size_lookup (GTK_ICON_SIZE_LARGE_TOOLBAR,
                              NULL,
                              &icon_height))
-#else
-  if (!gtk_icon_size_lookup_for_settings (gtk_settings_get_for_screen (screen),
-                                          GTK_ICON_SIZE_LARGE_TOOLBAR,
-                                          NULL,
-                                          &icon_height))
-#endif
     {
       icon_height = DEFAULT_ICON_HEIGHT;
     }
@@ -1794,11 +1761,7 @@ new_separator_pixbuf (void)
   GtkWidget *separator;
   GdkPixbuf *pixbuf;
 
-#if GTK_CHECK_VERSION(3, 0, 0)
   separator = gtk_separator_new (GTK_ORIENTATION_VERTICAL);
-#else
-  separator = gtk_vseparator_new ();
-#endif
   pixbuf = new_pixbuf_from_widget (separator);
   return pixbuf;
 }

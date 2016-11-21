@@ -38,23 +38,17 @@
 #include <stdlib.h>
 #include <string.h>
 
-#if GTK_CHECK_VERSION (3, 4, 3)
 enum {
   PROP_0,
   PROP_ORIENTATION
 };
-#endif
 
 #define EOM_THUMB_VIEW_SPACING 0
 
 #define EOM_THUMB_VIEW_GET_PRIVATE(object)				\
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_THUMB_VIEW, EomThumbViewPrivate))
 
-#if GTK_CHECK_VERSION (3, 4, 3)
 static void eom_thumb_view_init (EomThumbView *thumbview);
-#else
-G_DEFINE_TYPE (EomThumbView, eom_thumb_view, GTK_TYPE_ICON_VIEW);
-#endif
 
 static EomImage* eom_thumb_view_get_image_from_path (EomThumbView      *thumbview,
 						     GtkTreePath       *path);
@@ -62,12 +56,10 @@ static EomImage* eom_thumb_view_get_image_from_path (EomThumbView      *thumbvie
 static void      eom_thumb_view_popup_menu          (EomThumbView      *widget,
 						     GdkEventButton    *event);
 
-#if GTK_CHECK_VERSION (3, 4, 3)
 static void      eom_thumb_view_update_columns (EomThumbView *view);
 
 G_DEFINE_TYPE_WITH_CODE (EomThumbView, eom_thumb_view, GTK_TYPE_ICON_VIEW,
 						 G_IMPLEMENT_INTERFACE (GTK_TYPE_ORIENTABLE, NULL));
-#endif
 
 static gboolean
 thumbview_on_query_tooltip_cb (GtkWidget  *widget,
@@ -78,11 +70,7 @@ thumbview_on_query_tooltip_cb (GtkWidget  *widget,
 			       gpointer    user_data);
 static void
 thumbview_on_parent_set_cb (GtkWidget *widget,
-#if GTK_CHECK_VERSION (3, 0, 0)
 			    GtkWidget *old_parent,
-#else
-			    GtkObject *oldparent,
-#endif
 			    gpointer   user_data);
 
 static void
@@ -100,12 +88,10 @@ struct _EomThumbViewPrivate {
 	GtkCellRenderer *pixbuf_cell;
 	gint visible_range_changed_id;
 
-#if GTK_CHECK_VERSION (3, 4, 3)
 	GtkOrientation orientation;
 	gint n_images;
 	gulong image_add_id;
 	gulong image_removed_id;
-#endif
 };
 
 /* Drag 'n Drop */
@@ -177,16 +163,13 @@ static void
 eom_thumb_view_dispose (GObject *object)
 {
 	EomThumbViewPrivate *priv = EOM_THUMB_VIEW (object)->priv;
-#if GTK_CHECK_VERSION (3, 4, 3)
 	GtkTreeModel *model;
-#endif
 
 	if (priv->visible_range_changed_id != 0) {
 		g_source_remove (priv->visible_range_changed_id);
 		priv->visible_range_changed_id = 0;
 	}
 
-#if GTK_CHECK_VERSION (3, 4, 3)
 	model = gtk_icon_view_get_model (GTK_ICON_VIEW (object));
 
 	if (model && priv->image_add_id != 0) {
@@ -198,7 +181,6 @@ eom_thumb_view_dispose (GObject *object)
 		g_signal_handler_disconnect (model, priv->image_removed_id);
 		priv->image_removed_id = 0;
 	}
-#endif
 
 	G_OBJECT_CLASS (eom_thumb_view_parent_class)->dispose (object);
 }
@@ -212,22 +194,13 @@ eom_thumb_view_finalize (GObject *object)
 }
 
 static void
-#if GTK_CHECK_VERSION(3, 0, 0)
 eom_thumb_view_destroy (GtkWidget *object)
-#else
-eom_thumb_view_destroy (GtkObject *object)
-#endif
 {
 	g_return_if_fail (EOM_IS_THUMB_VIEW (object));
 
-#if GTK_CHECK_VERSION(3, 0, 0)
 	GTK_WIDGET_CLASS (eom_thumb_view_parent_class)->destroy (object);
-#else
-	GTK_OBJECT_CLASS (eom_thumb_view_parent_class)->destroy (object);
-#endif
 }
 
-#if GTK_CHECK_VERSION (3, 4, 3)
 static void
 eom_thumb_view_get_property (GObject    *object,
 			     guint       prop_id,
@@ -267,32 +240,21 @@ eom_thumb_view_set_property (GObject      *object,
 		break;
 	}
 }
-#endif
 
 static void
 eom_thumb_view_class_init (EomThumbViewClass *class)
 {
 	GObjectClass *gobject_class = G_OBJECT_CLASS (class);
-#if GTK_CHECK_VERSION(3, 0, 0)
 	GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (class);
-#else
-	GtkObjectClass *object_class = GTK_OBJECT_CLASS (class);
-#endif
 	gobject_class->constructed = eom_thumb_view_constructed;
 	gobject_class->dispose = eom_thumb_view_dispose;
-#if GTK_CHECK_VERSION (3, 4, 3)
 	gobject_class->get_property = eom_thumb_view_get_property;
 	gobject_class->set_property = eom_thumb_view_set_property;
 
 	g_object_class_override_property (gobject_class, PROP_ORIENTATION,
 	                                  "orientation");
-#endif
 	gobject_class->finalize = eom_thumb_view_finalize;
-#if GTK_CHECK_VERSION(3, 0, 0)
 	widget_class->destroy = eom_thumb_view_destroy;
-#else
-	object_class->destroy = eom_thumb_view_destroy;
-#endif
 
 	g_type_class_add_private (class, sizeof (EomThumbViewPrivate));
 }
@@ -422,11 +384,7 @@ thumbview_on_adjustment_changed_cb (EomThumbView *thumbview,
 
 static void
 thumbview_on_parent_set_cb (GtkWidget *widget,
-#if GTK_CHECK_VERSION(3, 0, 0)
 			    GtkWidget *old_parent,
-#else
-			    GtkObject *old_parent,
-#endif
 			    gpointer   user_data)
 {
 	EomThumbView *thumbview = EOM_THUMB_VIEW (widget);
@@ -703,10 +661,8 @@ eom_thumb_view_init (EomThumbView *thumbview)
 	thumbview->priv = EOM_THUMB_VIEW_GET_PRIVATE (thumbview);
 
 	thumbview->priv->visible_range_changed_id = 0;
-#if GTK_CHECK_VERSION (3, 4, 3)
 	thumbview->priv->image_add_id = 0;
 	thumbview->priv->image_removed_id = 0;
-#endif
 }
 
 /**
@@ -726,7 +682,6 @@ eom_thumb_view_new (void)
 	return GTK_WIDGET (thumbview);
 }
 
-#if GTK_CHECK_VERSION (3, 4, 3)
 static void
 eom_thumb_view_update_columns (EomThumbView *view)
 {
@@ -763,7 +718,6 @@ eom_thumb_view_row_deleted_cb (GtkTreeModel    *tree_model,
 	priv->n_images--;
 	eom_thumb_view_update_columns (view);
 }
-#endif
 
 /**
  * eom_thumb_view_set_model:
@@ -778,15 +732,12 @@ void
 eom_thumb_view_set_model (EomThumbView *thumbview, EomListStore *store)
 {
 	gint index;
-#if GTK_CHECK_VERSION (3, 4, 3)
 	EomThumbViewPrivate *priv;
 	GtkTreeModel *existing;
-#endif
 
 	g_return_if_fail (EOM_IS_THUMB_VIEW (thumbview));
 	g_return_if_fail (EOM_IS_LIST_STORE (store));
 
-#if GTK_CHECK_VERSION (3, 4, 3)
 	priv = thumbview->priv;
 
 	existing = gtk_icon_view_get_model (GTK_ICON_VIEW (thumbview));
@@ -812,18 +763,13 @@ eom_thumb_view_set_model (EomThumbView *thumbview, EomListStore *store)
 	                             thumbview);
 
 	thumbview->priv->n_images = eom_list_store_length (store);
-#endif
 
 	index = eom_list_store_get_initial_pos (store);
 
-#if GTK_CHECK_VERSION (3, 4, 3)
 	gtk_icon_view_set_model (GTK_ICON_VIEW (thumbview),
 	                         GTK_TREE_MODEL (store));
 
 	eom_thumb_view_update_columns (thumbview);
-#else
-	gtk_icon_view_set_model (GTK_ICON_VIEW (thumbview), GTK_TREE_MODEL (store));
-#endif
 
 	if (index >= 0) {
 		GtkTreePath *path = gtk_tree_path_new_from_indices (index, -1);

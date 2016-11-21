@@ -64,26 +64,13 @@ struct _EomSidebarPrivate {
 	GtkTreeModel *page_model;
 };
 
-#if GTK_CHECK_VERSION (3, 2, 0)
 G_DEFINE_TYPE (EomSidebar, eom_sidebar, GTK_TYPE_BOX)
-#else
-G_DEFINE_TYPE (EomSidebar, eom_sidebar, GTK_TYPE_VBOX)
-#endif
 
 #define EOM_SIDEBAR_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_SIDEBAR, EomSidebarPrivate))
 
-#if GTK_CHECK_VERSION (3, 2, 0)
-#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
-#define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
-#endif
-
 static void
-#if GTK_CHECK_VERSION(3, 0, 0)
 eom_sidebar_destroy (GtkWidget *object)
-#else
-eom_sidebar_destroy (GtkObject *object)
-#endif
 {
 	EomSidebar *eom_sidebar = EOM_SIDEBAR (object);
 
@@ -97,11 +84,7 @@ eom_sidebar_destroy (GtkObject *object)
 		eom_sidebar->priv->page_model = NULL;
 	}
 
-#if GTK_CHECK_VERSION(3, 0, 0)
 	(* GTK_WIDGET_CLASS (eom_sidebar_parent_class)->destroy) (object);
-#else
-	(* GTK_OBJECT_CLASS (eom_sidebar_parent_class)->destroy) (object);
-#endif
 }
 
 static void
@@ -197,26 +180,14 @@ static void
 eom_sidebar_class_init (EomSidebarClass *eom_sidebar_class)
 {
 	GObjectClass *g_object_class;
-#if GTK_CHECK_VERSION(3, 0, 0)
 	GtkWidgetClass *widget_class;
-#else
-	GtkObjectClass *gtk_object_klass;
-#endif
 
 	g_object_class = G_OBJECT_CLASS (eom_sidebar_class);
-#if GTK_CHECK_VERSION(3, 0, 0)
 	widget_class = GTK_WIDGET_CLASS (eom_sidebar_class);
-#else
-	gtk_object_klass = GTK_OBJECT_CLASS (eom_sidebar_class);
-#endif
 
 	g_type_class_add_private (g_object_class, sizeof (EomSidebarPrivate));
 
-#if GTK_CHECK_VERSION(3, 0, 0)
 	widget_class->destroy = eom_sidebar_destroy;
-#else
-	gtk_object_klass->destroy = eom_sidebar_destroy;
-#endif
 	g_object_class->get_property = eom_sidebar_get_property;
 	g_object_class->set_property = eom_sidebar_set_property;
 
@@ -289,11 +260,7 @@ eom_sidebar_select_button_press_cb (GtkWidget      *widget,
 		gtk_widget_get_allocation (widget, &allocation);
 
 		gtk_widget_set_size_request (eom_sidebar->priv->menu, -1, -1);
-#if GTK_CHECK_VERSION (3, 0, 0)
 		gtk_widget_get_preferred_size (eom_sidebar->priv->menu, &requisition, NULL);
-#else
-		gtk_widget_size_request (eom_sidebar->priv->menu, &requisition);
-#endif
 		gtk_widget_set_size_request (eom_sidebar->priv->menu,
 					     MAX (allocation.width,
 						  requisition.width), -1);
@@ -403,10 +370,8 @@ eom_sidebar_init (EomSidebar *eom_sidebar)
 	GtkWidget *arrow;
 	GtkWidget *image;
 
-#if GTK_CHECK_VERSION (3, 2, 0)
 	gtk_orientable_set_orientation (GTK_ORIENTABLE (eom_sidebar),
 					GTK_ORIENTATION_VERTICAL);
-#endif
 
 	eom_sidebar->priv = EOM_SIDEBAR_GET_PRIVATE (eom_sidebar);
 
@@ -419,7 +384,7 @@ eom_sidebar_init (EomSidebar *eom_sidebar)
 					    G_TYPE_INT);
 
 	/* top option menu */
-	hbox = gtk_hbox_new (FALSE, 0);
+	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 	eom_sidebar->priv->hbox = hbox;
 	gtk_box_pack_start (GTK_BOX (eom_sidebar), hbox, FALSE, FALSE, 0);
 	gtk_widget_show (hbox);
@@ -436,7 +401,7 @@ eom_sidebar_init (EomSidebar *eom_sidebar)
 			  G_CALLBACK (eom_sidebar_select_button_key_press_cb),
 			  eom_sidebar);
 
-	select_hbox = gtk_hbox_new (FALSE, 0);
+	select_hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 
 	eom_sidebar->priv->label = gtk_label_new ("");
 
@@ -446,11 +411,7 @@ eom_sidebar_init (EomSidebar *eom_sidebar)
 
 	gtk_widget_show (eom_sidebar->priv->label);
 
-#if GTK_CHECK_VERSION (3, 14, 0)
 	arrow = gtk_image_new_from_icon_name ("pan-down-symbolic", GTK_ICON_SIZE_BUTTON);
-#else
-	arrow = gtk_arrow_new (GTK_ARROW_DOWN, GTK_SHADOW_NONE);
-#endif
 	gtk_box_pack_end (GTK_BOX (select_hbox), arrow, FALSE, FALSE, 0);
 	gtk_widget_show (arrow);
 

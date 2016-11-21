@@ -36,11 +36,7 @@
 #define EOM_THUMB_NAV_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_THUMB_NAV, EomThumbNavPrivate))
 
-#if GTK_CHECK_VERSION (3, 2, 0)
 G_DEFINE_TYPE (EomThumbNav, eom_thumb_nav, GTK_TYPE_BOX);
-#else
-G_DEFINE_TYPE (EomThumbNav, eom_thumb_nav, GTK_TYPE_HBOX);
-#endif
 
 #define EOM_THUMB_NAV_SCROLL_INC      20
 #define EOM_THUMB_NAV_SCROLL_MOVE     20
@@ -88,7 +84,6 @@ eom_thumb_nav_scroll_event (GtkWidget *widget, GdkEventScroll *event, gpointer u
 	case GDK_SCROLL_RIGHT:
 		break;
 
-#if GTK_CHECK_VERSION (3, 3, 18)
 	case GDK_SCROLL_SMOOTH:
 	{
 		/* Compatibility code to catch smooth events from mousewheels */
@@ -105,7 +100,6 @@ eom_thumb_nav_scroll_event (GtkWidget *widget, GdkEventScroll *event, gpointer u
 		inc *= (gint) y_delta;
 	}
 	break;
-#endif
 
 	default:
 		g_assert_not_reached ();
@@ -350,10 +344,8 @@ eom_thumb_nav_init (EomThumbNav *nav)
 	EomThumbNavPrivate *priv;
 	GtkWidget *arrow;
 
-#if GTK_CHECK_VERSION (3, 2, 0)
 	gtk_orientable_set_orientation (GTK_ORIENTABLE (nav),
 					GTK_ORIENTATION_HORIZONTAL);
-#endif
 
 	nav->priv = EOM_THUMB_NAV_GET_PRIVATE (nav);
 
@@ -366,11 +358,7 @@ eom_thumb_nav_init (EomThumbNav *nav)
 	priv->button_left = gtk_button_new ();
 	gtk_button_set_relief (GTK_BUTTON (priv->button_left), GTK_RELIEF_NONE);
 
-#if GTK_CHECK_VERSION (3, 14, 0)
 	arrow = gtk_image_new_from_icon_name ("pan-start-symbolic", GTK_ICON_SIZE_BUTTON);
-#else
-	arrow = gtk_arrow_new (GTK_ARROW_LEFT, GTK_SHADOW_ETCHED_IN);
-#endif
 	gtk_container_add (GTK_CONTAINER (priv->button_left), arrow);
 
 	gtk_widget_set_size_request (GTK_WIDGET (priv->button_left), 25, 0);
@@ -425,11 +413,7 @@ eom_thumb_nav_init (EomThumbNav *nav)
 	priv->button_right = gtk_button_new ();
 	gtk_button_set_relief (GTK_BUTTON (priv->button_right), GTK_RELIEF_NONE);
 
-#if GTK_CHECK_VERSION (3, 14, 0)
 	arrow = gtk_image_new_from_icon_name ("pan-end-symbolic", GTK_ICON_SIZE_BUTTON);
-#else
-	arrow = gtk_arrow_new (GTK_ARROW_RIGHT, GTK_SHADOW_NONE);
-#endif
 	gtk_container_add (GTK_CONTAINER (priv->button_right), arrow);
 
 	gtk_widget_set_size_request (GTK_WIDGET (priv->button_right), 25, 0);
@@ -563,13 +547,8 @@ eom_thumb_nav_set_mode (EomThumbNav *nav, EomThumbNavMode mode)
 	switch (mode)
 	{
 	case EOM_THUMB_NAV_MODE_ONE_ROW:
-#if GTK_CHECK_VERSION (3, 4, 3)
 		gtk_orientable_set_orientation (GTK_ORIENTABLE(priv->thumbview),
 		                                GTK_ORIENTATION_HORIZONTAL);
-#else
-		gtk_icon_view_set_columns (GTK_ICON_VIEW (priv->thumbview),
-					   G_MAXINT);
-#endif
 
 		gtk_widget_set_size_request (priv->thumbview, -1, -1);
 		eom_thumb_view_set_item_height (EOM_THUMB_VIEW (priv->thumbview),
@@ -584,12 +563,8 @@ eom_thumb_nav_set_mode (EomThumbNav *nav, EomThumbNavMode mode)
 		break;
 
 	case EOM_THUMB_NAV_MODE_ONE_COLUMN:
-#if GTK_CHECK_VERSION (3, 4, 3)
 		gtk_orientable_set_orientation (GTK_ORIENTABLE(priv->thumbview),
 		                                GTK_ORIENTATION_VERTICAL);
-#else
-		gtk_icon_view_set_columns (GTK_ICON_VIEW (priv->thumbview), 1);
-#endif
 
 		gtk_widget_set_size_request (priv->thumbview, -1, -1);
 		eom_thumb_view_set_item_height (EOM_THUMB_VIEW (priv->thumbview),
@@ -605,12 +580,8 @@ eom_thumb_nav_set_mode (EomThumbNav *nav, EomThumbNavMode mode)
 		break;
 
 	case EOM_THUMB_NAV_MODE_MULTIPLE_ROWS:
-#if GTK_CHECK_VERSION (3, 4, 3)
 		gtk_orientable_set_orientation (GTK_ORIENTABLE(priv->thumbview),
 		                                GTK_ORIENTATION_VERTICAL);
-#else
-		gtk_icon_view_set_columns (GTK_ICON_VIEW (priv->thumbview), -1);
-#endif
 
 		gtk_widget_set_size_request (priv->thumbview, -1, 220);
 		eom_thumb_view_set_item_height (EOM_THUMB_VIEW (priv->thumbview),
@@ -626,12 +597,8 @@ eom_thumb_nav_set_mode (EomThumbNav *nav, EomThumbNavMode mode)
 		break;
 
 	case EOM_THUMB_NAV_MODE_MULTIPLE_COLUMNS:
-#if GTK_CHECK_VERSION (3, 4, 3)
 		gtk_orientable_set_orientation (GTK_ORIENTABLE(priv->thumbview),
 		                                GTK_ORIENTATION_VERTICAL);
-#else
-		gtk_icon_view_set_columns (GTK_ICON_VIEW (priv->thumbview), -1);
-#endif
 
 		gtk_widget_set_size_request (priv->thumbview, 230, -1);
 		eom_thumb_view_set_item_height (EOM_THUMB_VIEW (priv->thumbview),

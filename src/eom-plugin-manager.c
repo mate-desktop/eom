@@ -46,11 +46,7 @@ enum {
 #define EOM_PLUGIN_MANAGER_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_PLUGIN_MANAGER, EomPluginManagerPrivate))
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 G_DEFINE_TYPE (EomPluginManager, eom_plugin_manager, GTK_TYPE_BOX)
-#else
-G_DEFINE_TYPE (EomPluginManager, eom_plugin_manager, GTK_TYPE_VBOX)
-#endif
 
 #define PLUGIN_MANAGER_NAME_TITLE   _("Plugin")
 #define PLUGIN_MANAGER_ACTIVE_TITLE _("Enabled")
@@ -570,11 +566,7 @@ menu_position_under_widget (GtkMenu  *menu,
 	GtkAllocation allocation;
 
 	gdk_window_get_origin (gtk_widget_get_window (w), x, y);
-#if GTK_CHECK_VERSION(3, 0, 0)
 	gtk_widget_get_preferred_size (GTK_WIDGET (menu), &requisition, NULL);
-#else
-	gtk_widget_size_request (GTK_WIDGET (menu), &requisition);
-#endif
 	gtk_widget_get_allocation (w, &allocation);
 
 	if (gtk_widget_get_direction (w) == GTK_TEXT_DIR_RTL) {
@@ -629,11 +621,7 @@ menu_position_under_tree_view (GtkMenu  *menu,
 		if (gtk_widget_get_direction (GTK_WIDGET (tree)) == GTK_TEXT_DIR_RTL) {
 			GtkRequisition requisition;
 
-#if GTK_CHECK_VERSION(3, 0, 0)
 			gtk_widget_get_preferred_size (GTK_WIDGET (menu), &requisition, NULL);
-#else
-			gtk_widget_size_request (GTK_WIDGET (menu), &requisition);
-#endif
 
 			*x += rect.width - requisition.width;
 		}
@@ -750,9 +738,6 @@ plugin_manager_construct_tree (EomPluginManager *pm)
 
 	g_object_unref (model);
 
-#if !GTK_CHECK_VERSION (3, 14, 0)
-	gtk_tree_view_set_rules_hint (GTK_TREE_VIEW (pm->priv->tree), TRUE);
-#endif
 	gtk_tree_view_set_headers_visible (GTK_TREE_VIEW (pm->priv->tree), FALSE);
 
 	/* First column */
@@ -841,10 +826,8 @@ eom_plugin_manager_init (EomPluginManager *pm)
 
 	eom_debug (DEBUG_PLUGINS);
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	gtk_orientable_set_orientation (GTK_ORIENTABLE (pm),
 									GTK_ORIENTATION_VERTICAL);
-#endif
 
 	pm->priv = EOM_PLUGIN_MANAGER_GET_PRIVATE (pm);
 
@@ -876,11 +859,7 @@ eom_plugin_manager_init (EomPluginManager *pm)
 
 	gtk_label_set_mnemonic_widget (GTK_LABEL (label), pm->priv->tree);
 
-#if GTK_CHECK_VERSION(3, 0, 0)
 	hbuttonbox = gtk_button_box_new (GTK_ORIENTATION_HORIZONTAL);
-#else
-	hbuttonbox = gtk_hbutton_box_new ();
-#endif
 
 	gtk_box_pack_start (GTK_BOX (pm), hbuttonbox, FALSE, FALSE, 0);
 

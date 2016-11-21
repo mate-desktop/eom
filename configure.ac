@@ -2,7 +2,7 @@ AC_PREREQ(2.59)
 AC_CONFIG_MACRO_DIR([m4])
 
 m4_define(eom_major_version, 1)
-m4_define(eom_minor_version, 16)
+m4_define(eom_minor_version, 17)
 m4_define(eom_micro_version, 0)
 m4_define(eom_version, eom_major_version.eom_minor_version.eom_micro_version)
 
@@ -90,37 +90,16 @@ YELP_HELP_INIT
 # MATE Libs
 # **********
 
-AC_MSG_CHECKING([which gtk+ version to compile against])
-AC_ARG_WITH([gtk],
-  [AS_HELP_STRING([--with-gtk=2.0|3.0],[which gtk+ version to compile against (default: 2.0)])],
-  [case "$with_gtk" in
-     2.0|3.0) ;;
-     *) AC_MSG_ERROR([invalid gtk version specified]) ;;
-   esac],
-  [with_gtk=2.0])
-AC_MSG_RESULT([$with_gtk])
-
-case "$with_gtk" in
-  2.0) GTK_API_VERSION=2.0
-       GTK_REQUIRED=2.18.0
-       GTK_PRINT_REQUIRED=2.10.0
-       ;;
-  3.0) GTK_API_VERSION=3.0
-       GTK_REQUIRED=3.0.0
-       GTK_PRINT_REQUIRED=3.0.0
-       ;;
-esac
-AC_SUBST(GTK_API_VERSION)
-
 GLIB_REQUIRED=2.36.0
 GIO_REQUIRED=2.36.0
-MATE_DESKTOP_REQUIRED=1.9.1
+GTK_REQUIRED=3.14.0
+MATE_DESKTOP_REQUIRED=1.17.0
 GDKPIXBUF_REQUIRED=2.30.0
 SHARED_MIME_INFO_REQUIRED=0.20
 EXEMPI_REQUIRED=1.99.5
 
 PKG_CHECK_MODULES(GMODULE, gmodule-2.0, [GMODULE_ADD="gmodule-2.0"],[GMODULE_ADD=""])
-EOM_MODULES="gtk+-$GTK_API_VERSION >= $GTK_REQUIRED \
+EOM_MODULES="gtk+-3.0 >= $GTK_REQUIRED \
              glib-2.0 >= $GLIB_REQUIRED \
              $GMODULE_ADD \
              gio-2.0 >= $GLIB_REQUIRED \
@@ -129,7 +108,7 @@ EOM_MODULES="gtk+-$GTK_API_VERSION >= $GTK_REQUIRED \
              mate-desktop-2.0 >= $MATE_DESKTOP_REQUIRED \
              gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED \
              gio-2.0 >= $GIO_REQUIRED \
-             gtk+-unix-print-$GTK_API_VERSION >= $GTK_PRINT_REQUIRED \
+             gtk+-unix-print-3.0 >= $GTK_REQUIRED \
              shared-mime-info >= $SHARED_MIME_INFO_REQUIRED"
 
 # Introspection
@@ -345,11 +324,7 @@ AC_SUBST(EOM_LIBS)
 # *******************************************************
 
 # Check GDK rendering target
-if test "${GTK_API_VERSION}" = "2.0" ; then
-	gdk_target_has_x11=`$PKG_CONFIG --variable=target gdk-${GTK_API_VERSION} | grep x11`
-else
-	gdk_target_has_x11=`$PKG_CONFIG --variable=targets gdk-${GTK_API_VERSION} | grep x11`
-fi
+gdk_target_has_x11=`$PKG_CONFIG --variable=targets gdk-3.0 | grep x11`
 
 if test "x$have_lcms" = "xyes" || test "$gdk_target_has_x11" != ""; then
 	PKG_CHECK_MODULES(X11, [x11], have_x11=yes, have_x11=no)
@@ -413,7 +388,6 @@ Configure summary:
 	Compiler ...................:  ${CC}
 	Extra Compiler Warnings ....:  ${WARN_CFLAGS}
 
-	GTK version ................:  ${GTK_API_VERSION}
 	EXIF support ...............:  ${have_exif}
 	XMP support ................:  ${have_exempi}
 	JPEG support ...............:  ${have_jpeg}

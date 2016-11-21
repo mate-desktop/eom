@@ -49,21 +49,13 @@ typedef enum {
 } EomThumbNavMode;
 
 struct _EomThumbNav {
-#if GTK_CHECK_VERSION (3, 2, 0)
 	GtkBox base_instance;
-#else
-	GtkHBox base_instance;
-#endif
 
 	EomThumbNavPrivate *priv;
 };
 
 struct _EomThumbNavClass {
-#if GTK_CHECK_VERSION (3, 2, 0)
 	GtkBoxClass parent_class;
-#else
-	GtkHBoxClass parent_class;
-#endif
 };
 
 GType	         eom_thumb_nav_get_type          (void) G_GNUC_CONST;

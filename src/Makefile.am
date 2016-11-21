@@ -215,7 +215,7 @@ INTROSPECTION_GIRS = Eom-1.0.gir
 INTROSPECTION_SCANNER_ARGS = -I$(top_srcdir) --warn-all $(libeom_la_CPPFLAGS)
 
 Eom-1.0.gir: eom
-Eom_1_0_gir_INCLUDES = Gtk-${GTK_API_VERSION}
+Eom_1_0_gir_INCLUDES = Gtk-3.0
 Eom_1_0_gir_FILES = $(INST_H_FILES) $(libeom_c_files) $(BUILT_SOURCES)
 Eom_1_0_gir_VERSION = 1.0
 Eom_1_0_gir_PROGRAM = $(builddir)/eom

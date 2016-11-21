@@ -28,11 +28,6 @@
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 
-#if GTK_CHECK_VERSION (3, 2, 0)
-#define gtk_hbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_HORIZONTAL,Y)
-#define gtk_vbox_new(X,Y) gtk_box_new(GTK_ORIENTATION_VERTICAL,Y)
-#endif
-
 static const GtkTargetEntry dest_drag_types[] = {
   {EGG_TOOLBAR_ITEM_TYPE, GTK_TARGET_SAME_APP, 0},
 };
@@ -67,11 +62,7 @@ struct EggToolbarEditorPrivate
   GtkUIManager *manager;
   EggToolbarsModel *model;
 
-#if GTK_CHECK_VERSION (3, 4, 0)
   GtkWidget *grid;
-#else
-  GtkWidget *table;
-#endif
   GtkWidget *scrolled_window;
   GList     *actions_list;
   GList     *factory_list;
@@ -80,11 +71,7 @@ struct EggToolbarEditorPrivate
   gulong     sig_handlers[SIGNAL_HANDLER_LIST_SIZE];
 };
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 G_DEFINE_TYPE (EggToolbarEditor, egg_toolbar_editor, GTK_TYPE_BOX)
-#else
-G_DEFINE_TYPE (EggToolbarEditor, egg_toolbar_editor, GTK_TYPE_VBOX);
-#endif
 
 static gint
 compare_items (gconstpointer a,
@@ -381,11 +368,7 @@ set_drag_cursor (GtkWidget *widget)
   cursor = gdk_cursor_new_for_display (gdk_screen_get_display (screen),
 				       GDK_HAND2);
   gdk_window_set_cursor (gtk_widget_get_window (widget), cursor);
-#if GTK_CHECK_VERSION (3, 0, 0)
   g_object_unref (cursor);
-#else
-  gdk_cursor_unref (cursor);
-#endif
 }
 
 static void
@@ -412,26 +395,15 @@ event_box_realize_cb (GtkWidget *widget, GtkImage *icon)
       const gchar *icon_name;
       GdkScreen *screen;
       GtkIconTheme *icon_theme;
-#if !GTK_CHECK_VERSION (3, 0, 0)
-      GtkSettings *settings;
-#endif
       gint width, height;
       GdkPixbuf *pixbuf;
 
       gtk_image_get_icon_name (icon, &icon_name, NULL);
       screen = gtk_widget_get_screen (widget);
       icon_theme = gtk_icon_theme_get_for_screen (screen);
-#if GTK_CHECK_VERSION (3, 0, 0)
 
       if (!gtk_icon_size_lookup (GTK_ICON_SIZE_LARGE_TOOLBAR,
                                  &width, &height))
-#else
-      settings = gtk_settings_get_for_screen (screen);
-
-      if (!gtk_icon_size_lookup_for_settings (settings,
-                                              GTK_ICON_SIZE_LARGE_TOOLBAR,
-                                              &width, &height))
-#endif
         {
 	  width = height = 24;
 	}
@@ -482,7 +454,7 @@ editor_create_item (EggToolbarEditor *editor,
 		        G_CALLBACK (drag_end_cb), NULL);
     }
 
-  vbox = gtk_vbox_new (0, FALSE);
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
   gtk_widget_show (vbox);
   gtk_container_add (GTK_CONTAINER (event_box), vbox);
 
@@ -560,7 +532,6 @@ editor_create_item_from_name (EggToolbarEditor *editor,
 }
 
 static gint
-#if GTK_CHECK_VERSION (3, 4, 0)
 append_grid (GtkGrid *grid, GList *items, gint y, gint width)
 {
   if (items != NULL)
@@ -571,11 +542,7 @@ append_grid (GtkGrid *grid, GList *items, gint y, gint width)
 
       if (y > 0)
         {
-#if GTK_CHECK_VERSION(3, 0, 0)
           item = gtk_separator_new (GTK_ORIENTATION_HORIZONTAL);
-#else
-          item = gtk_hseparator_new ();
-#endif
           alignment = gtk_alignment_new (0.5, 0.5, 1.0, 0.0);
           g_object_set (G_OBJECT (alignment), "expand", TRUE, NULL);
           gtk_container_add (GTK_CONTAINER (alignment), item);
@@ -608,51 +575,6 @@ append_grid (GtkGrid *grid, GList *items, gint y, gint width)
     }
   return y;
 }
-#else
-append_table (GtkTable *table, GList *items, gint y, gint width)
-{
-  if (items != NULL)
-    {
-      gint x = 0, height;
-      GtkWidget *alignment;
-      GtkWidget *item;
-
-      height = g_list_length (items) / width + 1;
-      gtk_table_resize (table, height, width);
-
-      if (y > 0)
-        {
-          item = gtk_hseparator_new ();
-          alignment = gtk_alignment_new (0.5, 0.5, 1.0, 0.0);
-          gtk_container_add (GTK_CONTAINER (alignment), item);
-          gtk_widget_show (alignment);
-          gtk_widget_show (item);
-
-          gtk_table_attach_defaults (table, alignment, 0, width, y-1, y+1);
-        }
-
-      for (; items != NULL; items = items->next)
-        {
-          item = items->data;
-          alignment = gtk_alignment_new (0.5, 0.5, 0.0, 0.0);
-          gtk_container_add (GTK_CONTAINER (alignment), item);
-          gtk_widget_show (alignment);
-          gtk_widget_show (item);
-
-          if (x >= width)
-            {
-              x = 0;
-              y++;
-            }
-          gtk_table_attach_defaults (table, alignment, x, x+1, y, y+1);
-          x++;
-        }
-
-      y++;
-    }
-  return y;
-}
-#endif
 
 static void
 update_editor_sheet (EggToolbarEditor *editor)
@@ -660,7 +582,6 @@ update_editor_sheet (EggToolbarEditor *editor)
   gint y;
   GPtrArray *items;
   GList *to_move = NULL, *to_copy = NULL;
-#if GTK_CHECK_VERSION (3, 4, 0)
   GtkWidget *grid;
   GtkWidget *viewport;
 
@@ -673,20 +594,6 @@ update_editor_sheet (EggToolbarEditor *editor)
   gtk_grid_set_row_spacing (GTK_GRID (grid), 24);
   gtk_widget_show (grid);
   gtk_drag_dest_set (grid, GTK_DEST_DEFAULT_ALL,
-#else
-  GtkWidget *table;
-  GtkWidget *viewport;
-
-  g_return_if_fail (EGG_IS_TOOLBAR_EDITOR (editor));
-
-  /* Create new table. */
-  table = gtk_table_new (0, 0, TRUE);
-  editor->priv->table = table;
-  gtk_container_set_border_width (GTK_CONTAINER (table), 12);
-  gtk_table_set_row_spacings (GTK_TABLE (table), 24);
-  gtk_widget_show (table);
-  gtk_drag_dest_set (table, GTK_DEST_DEFAULT_ALL,
-#endif
 		     dest_drag_types, G_N_ELEMENTS (dest_drag_types),
                      GDK_ACTION_MOVE | GDK_ACTION_COPY);
 
@@ -718,13 +625,8 @@ update_editor_sheet (EggToolbarEditor *editor)
 
   /* Add them to the sheet. */
   y = 0;
-#if GTK_CHECK_VERSION (3, 4, 0)
   y = append_grid (GTK_GRID (grid), to_move, y, 4);
   y = append_grid (GTK_GRID (grid), to_copy, y, 4);
-#else
-  y = append_table (GTK_TABLE (table), to_move, y, 4);
-  y = append_table (GTK_TABLE (table), to_copy, y, 4);
-#endif
 
   g_list_free (to_move);
   g_list_free (to_copy);
@@ -738,16 +640,9 @@ update_editor_sheet (EggToolbarEditor *editor)
                             gtk_bin_get_child (GTK_BIN (viewport)));
     }
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   /* Add grid to window. */
   gtk_container_add
     (GTK_CONTAINER (editor->priv->scrolled_window), grid);
-#else
-  /* Add table to window. */
-  gtk_scrolled_window_add_with_viewport
-    (GTK_SCROLLED_WINDOW (editor->priv->scrolled_window), table);
-#endif
-
 }
 
 static void
@@ -755,10 +650,8 @@ setup_editor (EggToolbarEditor *editor)
 {
   GtkWidget *scrolled_window;
 
-#if GTK_CHECK_VERSION (3, 0, 0)
   gtk_orientable_set_orientation (GTK_ORIENTABLE (editor),
                                   GTK_ORIENTATION_VERTICAL);
-#endif
 
   gtk_container_set_border_width (GTK_CONTAINER (editor), 12);
   scrolled_window = gtk_scrolled_window_new (NULL, NULL);

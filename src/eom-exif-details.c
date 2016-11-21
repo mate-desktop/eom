@@ -260,10 +260,6 @@ eom_exif_details_init (EomExifDetails *exif_details)
 							    NULL);
 	gtk_tree_view_append_column (GTK_TREE_VIEW (exif_details), column);
 
-#if !GTK_CHECK_VERSION (3, 14, 0)
-	gtk_tree_view_set_rules_hint (GTK_TREE_VIEW (exif_details), TRUE);
-#endif
-
 	eom_exif_details_reset (exif_details);
 
 	gtk_tree_view_set_model (GTK_TREE_VIEW (exif_details),

@@ -50,9 +50,7 @@
 #include <exempi/xmp.h>
 #endif
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 #define EOM_CSS_FILE_PATH EOM_DATA_DIR G_DIR_SEPARATOR_S "eom.css"
-#endif
 
 static EomStartupFlags flags;
 
@@ -191,17 +189,11 @@ main (int argc, char **argv)
 {
 	GError *error = NULL;
 	GOptionContext *ctx;
-#if GTK_CHECK_VERSION (3, 0, 0)
 	GtkCssProvider *provider;
-#endif
 
 	bindtextdomain (GETTEXT_PACKAGE, EOM_LOCALE_DIR);
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-	gtk_rc_parse (EOM_DATA_DIR G_DIR_SEPARATOR_S "gtkrc");
-#endif
 
 	ctx = g_option_context_new (NULL);
 	g_option_context_add_main_entries (ctx, goption_options, PACKAGE);
@@ -247,7 +239,6 @@ main (int argc, char **argv)
 	eom_job_queue_init ();
 	eom_thumbnail_init ();
 
-#if GTK_CHECK_VERSION (3, 0, 0)
 	/* Load special style properties for EomThumbView's scrollbar */
 	provider = gtk_css_provider_new ();
 	if (G_UNLIKELY (!gtk_css_provider_load_from_path(provider,
@@ -263,7 +254,6 @@ main (int argc, char **argv)
 				GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
 	}
 	g_object_unref (provider);
-#endif
 
 	eom_plugin_engine_init ();
 
@@ -276,15 +266,7 @@ main (int argc, char **argv)
 
 	load_files ();
 
-#if !GTK_CHECK_VERSION (3, 0, 0)
-	gdk_threads_enter ();
-#endif
-
 	gtk_main ();
-
-#if !GTK_CHECK_VERSION (3, 0, 0)
-	gdk_threads_leave ();
-#endif
 
   	if (startup_files)
 		g_strfreev (startup_files);
