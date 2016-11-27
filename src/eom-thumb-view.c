@@ -186,22 +186,6 @@ eom_thumb_view_dispose (GObject *object)
 }
 
 static void
-eom_thumb_view_finalize (GObject *object)
-{
-	g_return_if_fail (EOM_IS_THUMB_VIEW (object));
-
-	G_OBJECT_CLASS (eom_thumb_view_parent_class)->finalize (object);
-}
-
-static void
-eom_thumb_view_destroy (GtkWidget *object)
-{
-	g_return_if_fail (EOM_IS_THUMB_VIEW (object));
-
-	GTK_WIDGET_CLASS (eom_thumb_view_parent_class)->destroy (object);
-}
-
-static void
 eom_thumb_view_get_property (GObject    *object,
 			     guint       prop_id,
 			     GValue     *value,
@@ -245,7 +229,7 @@ static void
 eom_thumb_view_class_init (EomThumbViewClass *class)
 {
 	GObjectClass *gobject_class = G_OBJECT_CLASS (class);
-	GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (class);
+
 	gobject_class->constructed = eom_thumb_view_constructed;
 	gobject_class->dispose = eom_thumb_view_dispose;
 	gobject_class->get_property = eom_thumb_view_get_property;
@@ -253,8 +237,6 @@ eom_thumb_view_class_init (EomThumbViewClass *class)
 
 	g_object_class_override_property (gobject_class, PROP_ORIENTATION,
 	                                  "orientation");
-	gobject_class->finalize = eom_thumb_view_finalize;
-	widget_class->destroy = eom_thumb_view_destroy;
 
 	g_type_class_add_private (class, sizeof (EomThumbViewPrivate));
 }
