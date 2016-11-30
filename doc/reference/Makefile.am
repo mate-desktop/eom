@@ -52,8 +52,7 @@ IGNORE_HFILES= \
 	eom-image-jpeg.h \
 	eom-marshal.h \
 	eom-application-service.h \
-	eom-enum-types.h \
-	eom-module.h
+	eom-enum-types.h
 
 if !HAVE_EXIF
 if !HAVE_EXEMPI

@@ -375,30 +375,6 @@ EOM_THUMB_VIEW_GET_CLASS
 </SECTION>
 
 <SECTION>
-<FILE>eom-plugin</FILE>
-EOM_PLUGIN_CONST
-<TITLE>EomPlugin</TITLE>
-EomPlugin
-eom_plugin_activate
-eom_plugin_deactivate
-eom_plugin_update_ui
-eom_plugin_is_configurable
-eom_plugin_create_configure_dialog
-EOM_PLUGIN_REGISTER_TYPE_WITH_CODE
-EOM_PLUGIN_REGISTER_TYPE
-EOM_PLUGIN_DEFINE_TYPE_WITH_CODE
-EOM_PLUGIN_DEFINE_TYPE
-<SUBSECTION Standard>
-EOM_PLUGIN
-EOM_IS_PLUGIN
-EOM_TYPE_PLUGIN
-eom_plugin_get_type
-EOM_PLUGIN_CLASS
-EOM_IS_PLUGIN_CLASS
-EOM_PLUGIN_GET_CLASS
-</SECTION>
-
-<SECTION>
 <FILE>eom-application</FILE>
 EOM_APP
 <TITLE>EomApplication</TITLE>
@@ -424,21 +400,6 @@ eom_application_get_type
 EOM_APPLICATION_CLASS
 EOM_IS_APPLICATION_CLASS
 EOM_APPLICATION_GET_CLASS
-</SECTION>
-
-<SECTION>
-<FILE>eom-plugin-manager</FILE>
-<TITLE>EomPluginManager</TITLE>
-EomPluginManager
-eom_plugin_manager_new
-<SUBSECTION Standard>
-EOM_PLUGIN_MANAGER
-EOM_IS_PLUGIN_MANAGER
-EOM_TYPE_PLUGIN_MANAGER
-eom_plugin_manager_get_type
-EOM_PLUGIN_MANAGER_CLASS
-EOM_IS_PLUGIN_MANAGER_CLASS
-EOM_PLUGIN_MANAGER_GET_CLASS
 </SECTION>
 
 <SECTION>
