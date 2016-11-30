@@ -26,6 +26,7 @@
 #define __EOM_APPLICATION_H__
 
 #include "eom-window.h"
+#include "eom-plugin-engine.h"
 #include "egg-toolbars-model.h"
 
 #ifdef HAVE_DBUS
@@ -55,6 +56,9 @@ struct _EomApplication {
 
 	EggToolbarsModel *toolbars_model;
 	gchar            *toolbars_file;
+
+	EomPluginEngine  *plugin_engine;
+
 #ifdef HAVE_DBUS
 	TotemScrsaver    *scr_saver;
 #endif

@@ -97,6 +97,7 @@ MATE_DESKTOP_REQUIRED=1.17.0
 GDKPIXBUF_REQUIRED=2.30.0
 SHARED_MIME_INFO_REQUIRED=0.20
 EXEMPI_REQUIRED=1.99.5
+LIBPEAS_REQUIRED=1.2.0
 
 PKG_CHECK_MODULES(GMODULE, gmodule-2.0, [GMODULE_ADD="gmodule-2.0"],[GMODULE_ADD=""])
 EOM_MODULES="gtk+-3.0 >= $GTK_REQUIRED \
@@ -109,7 +110,9 @@ EOM_MODULES="gtk+-3.0 >= $GTK_REQUIRED \
              gdk-pixbuf-2.0 >= $GDKPIXBUF_REQUIRED \
              gio-2.0 >= $GIO_REQUIRED \
              gtk+-unix-print-3.0 >= $GTK_REQUIRED \
-             shared-mime-info >= $SHARED_MIME_INFO_REQUIRED"
+             shared-mime-info >= $SHARED_MIME_INFO_REQUIRED \
+             libpeas-1.0 >= $LIBPEAS_REQUIRED \
+             libpeas-gtk-1.0 >= $LIBPEAS_REQUIRED"
 
 # Introspection
 GOBJECT_INTROSPECTION_CHECK([0.9.3])

@@ -25,62 +25,35 @@
 #ifndef __EOM_PLUGIN_ENGINE_H__
 #define __EOM_PLUGIN_ENGINE_H__
 
-#include "eom-window.h"
-
 #include <glib.h>
+#include <libpeas/peas-engine.h>
 
-typedef struct _EomPluginInfo EomPluginInfo;
+G_BEGIN_DECLS
 
-G_GNUC_INTERNAL
-gboolean	 eom_plugin_engine_init 		(void);
+typedef struct _EomPluginEngine EomPluginEngine;
+typedef struct _EomPluginEngineClass EomPluginEngineClass;
+typedef struct _EomPluginEnginePrivate EomPluginEnginePrivate;
 
-G_GNUC_INTERNAL
-void		 eom_plugin_engine_shutdown 		(void);
+#define EOM_TYPE_PLUGIN_ENGINE            eom_plugin_engine_get_type()
+#define EOM_PLUGIN_ENGINE(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), EOM_TYPE_PLUGIN_ENGINE, EomPluginEngine))
+#define EOM_PLUGIN_ENGINE_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), EOM_TYPE_PLUGIN_ENGINE, EomPluginEngineClass))
+#define EOM_IS_PLUGIN_ENGINE(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EOM_TYPE_PLUGIN_ENGINE))
+#define EOM_IS_PLUGIN_ENGINE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EOM_TYPE_PLUGIN_ENGINE))
+#define EOM_PLUGIN_ENGINE_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), EOM_TYPE_PLUGIN_ENGINE, EomPluginEngineClass))
 
-G_GNUC_INTERNAL
-const GList	*eom_plugin_engine_get_plugins_list 	(void);
+struct _EomPluginEngine {
+	PeasEngine parent;
+	EomPluginEnginePrivate *priv;
+};
 
-G_GNUC_INTERNAL
-gboolean 	 eom_plugin_engine_activate_plugin 	(EomPluginInfo *info);
+struct _EomPluginEngineClass {
+	PeasEngineClass parent_class;
+};
 
-G_GNUC_INTERNAL
-gboolean 	 eom_plugin_engine_deactivate_plugin	(EomPluginInfo *info);
+GType eom_plugin_engine_get_type (void) G_GNUC_CONST;
 
-G_GNUC_INTERNAL
-gboolean 	 eom_plugin_engine_plugin_is_active 	(EomPluginInfo *info);
+EomPluginEngine* eom_plugin_engine_new (void);
 
-G_GNUC_INTERNAL
-gboolean 	 eom_plugin_engine_plugin_is_available	(EomPluginInfo *info);
-
-G_GNUC_INTERNAL
-gboolean	 eom_plugin_engine_plugin_is_configurable
-			       				(EomPluginInfo *info);
-
-G_GNUC_INTERNAL
-void	 	 eom_plugin_engine_configure_plugin	(EomPluginInfo *info,
-			       			 	 GtkWindow     *parent);
-
-G_GNUC_INTERNAL
-void		 eom_plugin_engine_update_plugins_ui	(EomWindow     *window,
-			       			 	 gboolean       new_window);
-
-G_GNUC_INTERNAL
-const gchar	*eom_plugin_engine_get_plugin_name	(EomPluginInfo *info);
-
-G_GNUC_INTERNAL
-const gchar	*eom_plugin_engine_get_plugin_description
-			       				(EomPluginInfo *info);
-
-G_GNUC_INTERNAL
-const gchar	*eom_plugin_engine_get_plugin_icon_name (EomPluginInfo *info);
-
-G_GNUC_INTERNAL
-const gchar    **eom_plugin_engine_get_plugin_authors   (EomPluginInfo *info);
-
-G_GNUC_INTERNAL
-const gchar	*eom_plugin_engine_get_plugin_website   (EomPluginInfo *info);
-
-G_GNUC_INTERNAL
-const gchar	*eom_plugin_engine_get_plugin_copyright (EomPluginInfo *info);
+G_END_DECLS
 
 #endif  /* __EOM_PLUGIN_ENGINE_H__ */

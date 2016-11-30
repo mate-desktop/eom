@@ -39,7 +39,6 @@
 #include "eom-thumbnail.h"
 #include "eom-job-queue.h"
 #include "eom-application.h"
-#include "eom-plugin-engine.h"
 #include "eom-util.h"
 
 #include <string.h>
@@ -255,8 +254,6 @@ main (int argc, char **argv)
 	}
 	g_object_unref (provider);
 
-	eom_plugin_engine_init ();
-
 	/* Add application specific icons to search path */
 	gtk_icon_theme_append_search_path (gtk_icon_theme_get_default (),
                                            EOM_DATA_DIR G_DIR_SEPARATOR_S "icons");
@@ -270,8 +267,6 @@ main (int argc, char **argv)
 
   	if (startup_files)
 		g_strfreev (startup_files);
-
-	eom_plugin_engine_shutdown ();
 
 #ifdef HAVE_EXEMPI
 	xmp_terminate();

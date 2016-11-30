@@ -27,7 +27,6 @@
 #endif
 
 #include "eom-preferences-dialog.h"
-#include "eom-plugin-manager.h"
 #include "eom-scroll-view.h"
 #include "eom-util.h"
 #include "eom-config-keys.h"
@@ -37,6 +36,7 @@
 #include <glib-object.h>
 #include <gtk/gtk.h>
 #include <gio/gio.h>
+#include <libpeas-gtk/peas-gtk-plugin-manager.h>
 
 #define EOM_PREFERENCES_DIALOG_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_PREFERENCES_DIALOG, EomPreferencesDialogPrivate))
@@ -297,7 +297,7 @@ eom_preferences_dialog_constructor (GType type,
 					 "value",
 					 G_SETTINGS_BIND_DEFAULT);
 
-	plugin_manager = eom_plugin_manager_new ();
+	plugin_manager = peas_gtk_plugin_manager_new (NULL);
 
 	g_assert (plugin_manager != NULL);
 

@@ -50,7 +50,6 @@
 #include "eom-jobs.h"
 #include "eom-util.h"
 #include "eom-save-as-dialog-helper.h"
-#include "eom-plugin-engine.h"
 #include "eom-close-confirmation-dialog.h"
 #include "eom-clipboard-handler.h"
 
@@ -67,6 +66,9 @@
 #include <gdk/gdkkeysyms.h>
 #include <gio/gdesktopappinfo.h>
 #include <gtk/gtk.h>
+
+#include <libpeas/peas-extension-set.h>
+#include <libpeas/peas-activatable.h>
 
 #if HAVE_LCMS
 #include <X11/Xlib.h>
@@ -184,6 +186,8 @@ struct _EomWindowPrivate {
 	gboolean             needs_reload_confirmation;
 
 	GtkPageSetup        *page_setup;
+
+	PeasExtensionSet    *extensions;
 
 #ifdef HAVE_LCMS
 	cmsHPROFILE         *display_profile;
@@ -4562,6 +4566,14 @@ eom_window_dispose (GObject *object)
 	window = EOM_WINDOW (object);
 	priv = window->priv;
 
+	peas_engine_garbage_collect (PEAS_ENGINE (EOM_APP->plugin_engine));
+
+	if (priv->extensions != NULL) {
+		g_object_unref (priv->extensions);
+		priv->extensions = NULL;
+		peas_engine_garbage_collect (PEAS_ENGINE (EOM_APP->plugin_engine));
+	}
+
 	if (priv->page_setup != NULL) {
 		g_object_unref (priv->page_setup);
 		priv->page_setup = NULL;
@@ -4677,6 +4689,8 @@ eom_window_dispose (GObject *object)
 		g_object_unref (priv->last_save_as_folder);
 		priv->last_save_as_folder = NULL;
 	}
+
+	peas_engine_garbage_collect (PEAS_ENGINE (EOM_APP->plugin_engine));
 
 	G_OBJECT_CLASS (eom_window_parent_class)->dispose (object);
 }
@@ -4999,19 +5013,49 @@ eom_window_get_property (GObject    *object,
 	}
 }
 
+static void
+on_extension_added (PeasExtensionSet *set,
+		    PeasPluginInfo   *info,
+		    PeasExtension    *exten,
+		    GtkWindow        *window)
+{
+	peas_extension_call (exten, "activate", window);
+}
+
+static void
+on_extension_removed (PeasExtensionSet *set,
+		      PeasPluginInfo   *info,
+		      PeasExtension    *exten,
+		      GtkWindow        *window)
+{
+	peas_extension_call (exten, "deactivate", window);
+}
+
 static GObject *
 eom_window_constructor (GType type,
 			guint n_construct_properties,
 			GObjectConstructParam *construct_params)
 {
 	GObject *object;
+	EomWindowPrivate *priv;
 
 	object = G_OBJECT_CLASS (eom_window_parent_class)->constructor
 			(type, n_construct_properties, construct_params);
 
+	priv = EOM_WINDOW (object)->priv;
+
 	eom_window_construct_ui (EOM_WINDOW (object));
 
-	eom_plugin_engine_update_plugins_ui (EOM_WINDOW (object), TRUE);
+	priv->extensions = peas_extension_set_new (PEAS_ENGINE (EOM_APP->plugin_engine),
+						   PEAS_TYPE_ACTIVATABLE,
+						   "object", object, NULL);
+
+	peas_extension_set_call (priv->extensions, "activate");
+
+	g_signal_connect (priv->extensions, "extension-added",
+			  G_CALLBACK (on_extension_added), object);
+	g_signal_connect (priv->extensions, "extension-removed",
+			  G_CALLBACK (on_extension_removed), object);
 
 	return object;
 }

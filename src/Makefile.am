@@ -33,8 +33,6 @@ NOINST_H_FILES =			\
 	eom-print-image-setup.h         \
 	eom-print-preview.h             \
 	eom-print.h			\
-	eom-module.h             	\
-	eom-plugin-manager.h            \
 	eom-plugin-engine.h             \
 	eom-close-confirmation-dialog.h	\
 	zoom.h
@@ -60,8 +58,7 @@ INST_H_FILES =				\
 	eom-thumbnail.h			\
 	eom-job-queue.h			\
 	eom-clipboard-handler.h		\
-	eom-jobs.h			\
-	eom-plugin.h
+	eom-jobs.h
 
 libeom_c_files =			\
 	eom-application.c		\
@@ -96,10 +93,7 @@ libeom_c_files =			\
 	eom-print-image-setup.c         \
 	eom-print-preview.c           	\
 	eom-print.c			\
-	eom-module.c            	\
 	eom-close-confirmation-dialog.c \
-	eom-plugin.c            	\
-	eom-plugin-manager.c            \
 	eom-plugin-engine.c            	\
 	eom-clipboard-handler.c		\
 	zoom.c
@@ -138,7 +132,8 @@ libeom_la_CPPFLAGS =						\
 	-DG_LOG_DOMAIN=\"EOM\"					\
 	-DEOM_DATA_DIR=\""$(pkgdatadir)"\"			\
 	-DEOM_LOCALE_DIR=\""$(datadir)/locale"\"		\
-	-DEOM_PLUGIN_DIR=\""$(libdir)/eom/plugins"\"
+	-DEOM_PLUGIN_DIR=\""$(libdir)/eom/plugins"\"		\
+	-DLIBDIR=\""$(libdir)"\"
 
 libeom_la_CFLAGS =						\
 	$(EOM_CFLAGS)						\

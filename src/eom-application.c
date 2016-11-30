@@ -140,6 +140,8 @@ eom_application_init (EomApplication *eom_application)
 
 	eom_session_init (eom_application);
 
+	eom_application->plugin_engine = eom_plugin_engine_new ();
+
 	eom_application->toolbars_model = egg_toolbars_model_new ();
 
 	egg_toolbars_model_load_names (eom_application->toolbars_model,
@@ -432,6 +434,11 @@ eom_application_shutdown (EomApplication *application)
 
 		g_free (application->toolbars_file);
 		application->toolbars_file = NULL;
+	}
+
+	if (application->plugin_engine) {
+		g_object_unref (application->plugin_engine);
+		application->plugin_engine = NULL;
 	}
 
 	eom_application_save_accelerators ();
