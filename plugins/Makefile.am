@@ -15,8 +15,8 @@ plugins_LTLIBRARIES = \
 	reload/libreload.la
 
 plugins_in_files = \
-	fullscreen/fullscreen.eom-plugin.desktop.in  \
-	reload/reload.eom-plugin.desktop.in
+	fullscreen/fullscreen.plugin.desktop.in  \
+	reload/reload.plugin.desktop.in
 
 # Fullscreen plugin
 fullscreen_libfullscreen_la_SOURCES = \
@@ -41,14 +41,14 @@ statusbar_date_libstatusbar_date_la_SOURCES = \
 	statusbar-date/eom-statusbar-date-plugin.c
 
 statusbar_date_libstatusbar_date_la_LIBADD = $(EOM_LIBS)
-plugins_in_files += statusbar-date/statusbar-date.eom-plugin.desktop.in
+plugins_in_files += statusbar-date/statusbar-date.plugin.desktop.in
 endif
 
 # Generate plugin info files
 
-%.eom-plugin: %.eom-plugin.desktop.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*po) ; $(AM_V_GEN)$(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
+%.plugin: %.plugin.desktop.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*po) ; $(AM_V_GEN)$(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
 
-plugins_DATA = $(plugins_in_files:.eom-plugin.desktop.in=.eom-plugin)
+plugins_DATA = $(plugins_in_files:.plugin.desktop.in=.plugin)
 
 DISTCLEANFILES = $(plugins_DATA)
 CLEANFILES = $(plugins_DATA)
