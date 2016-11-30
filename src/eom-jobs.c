@@ -489,7 +489,7 @@ eom_job_transform_class_init (EomJobTransformClass *class)
 /**
  * eom_job_transform_new:
  * @images: (element-type EomImage) (transfer full): a #EomImage list
- * @trans: a #EogTransform
+ * @trans: a #EomTransform
  *
  * Create a new #EomJob for image transformation.
  *
