@@ -6,17 +6,24 @@
 
 #include <gmodule.h>
 #include <glib/gi18n-lib.h>
+#include <libpeas/peas-activatable.h>
 
 #include <eom-debug.h>
 #include <eom-window.h>
 
-#define WINDOW_DATA_KEY "EomFullscreenWindowData"
+static void peas_activatable_iface_init (PeasActivatableInterface *iface);
 
-EOM_PLUGIN_REGISTER_TYPE (EomFullscreenPlugin, eom_fullscreen_plugin)
+G_DEFINE_DYNAMIC_TYPE_EXTENDED (EomFullscreenPlugin,
+                                eom_fullscreen_plugin,
+                                PEAS_TYPE_EXTENSION_BASE,
+                                0,
+                                G_IMPLEMENT_INTERFACE_DYNAMIC (PEAS_TYPE_ACTIVATABLE,
+                                                               peas_activatable_iface_init))
 
-typedef struct {
-	gulong signal_id;
-} WindowData;
+enum {
+	PROP_0,
+	PROP_OBJECT
+};
 
 static gboolean
 on_button_press (GtkWidget      *button,
@@ -43,13 +50,43 @@ on_button_press (GtkWidget      *button,
 }
 
 static void
-free_window_data (WindowData *data)
+eom_fullscreen_plugin_set_property (GObject      *object,
+                                    guint         prop_id,
+                                    const GValue *value,
+                                    GParamSpec   *pspec)
 {
-	g_return_if_fail (data != NULL);
+	EomFullscreenPlugin *plugin = EOM_FULLSCREEN_PLUGIN (object);
 
-	eom_debug (DEBUG_PLUGINS);
+	switch (prop_id)
+	{
+	case PROP_OBJECT:
+		plugin->window = GTK_WIDGET (g_value_dup_object (value));
+		break;
 
-	g_free (data);
+	default:
+		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+		break;
+	}
+}
+
+static void
+eom_fullscreen_plugin_get_property (GObject    *object,
+                                    guint       prop_id,
+                                    GValue     *value,
+                                    GParamSpec *pspec)
+{
+	EomFullscreenPlugin *plugin = EOM_FULLSCREEN_PLUGIN (object);
+
+	switch (prop_id)
+	{
+	case PROP_OBJECT:
+		g_value_set_object (value, plugin->window);
+		break;
+
+	default:
+		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+		break;
+	}
 }
 
 static void
@@ -59,57 +96,73 @@ eom_fullscreen_plugin_init (EomFullscreenPlugin *plugin)
 }
 
 static void
-eom_fullscreen_plugin_finalize (GObject *object)
+eom_fullscreen_plugin_dispose (GObject *object)
 {
-	eom_debug_message (DEBUG_PLUGINS, "EomFullscreenPlugin finalizing");
+	EomFullscreenPlugin *plugin = EOM_FULLSCREEN_PLUGIN (object);
 
-	G_OBJECT_CLASS (eom_fullscreen_plugin_parent_class)->finalize (object);
+	eom_debug_message (DEBUG_PLUGINS, "EomFullscreenPlugin disposing");
+
+	if (plugin->window != NULL) {
+		g_object_unref (plugin->window);
+		plugin->window = NULL;
+	}
+
+	G_OBJECT_CLASS (eom_fullscreen_plugin_parent_class)->dispose (object);
 }
 
 static void
-impl_activate (EomPlugin *plugin,
-               EomWindow *window)
+eom_fullscreen_plugin_activate (PeasActivatable *activatable)
 {
-	GtkWidget *view = eom_window_get_view (window);
-	WindowData *data;
+	EomFullscreenPlugin *plugin = EOM_FULLSCREEN_PLUGIN (activatable);
+	GtkWidget *view = eom_window_get_view (EOM_WINDOW (plugin->window));
 
 	eom_debug (DEBUG_PLUGINS);
 
-	data = g_new (WindowData, 1);
-
-	data->signal_id = g_signal_connect (G_OBJECT (view), "button-press-event",
-	                                    G_CALLBACK (on_button_press), window);
-
-	g_object_set_data_full (G_OBJECT(window), WINDOW_DATA_KEY, data, (GDestroyNotify) free_window_data);
+	plugin->signal_id = g_signal_connect (G_OBJECT (view),
+	                                      "button-press-event",
+	                                      G_CALLBACK (on_button_press),
+	                                      plugin->window);
 }
 
 static void
-impl_deactivate (EomPlugin *plugin, EomWindow *window)
+eom_fullscreen_plugin_deactivate (PeasActivatable *activatable)
 {
-	GtkWidget *view = eom_window_get_view (window);
-	WindowData *data = (WindowData *) g_object_get_data (G_OBJECT (window), WINDOW_DATA_KEY);
+	EomFullscreenPlugin *plugin = EOM_FULLSCREEN_PLUGIN (activatable);
+	GtkWidget *view = eom_window_get_view (EOM_WINDOW (plugin->window));
 
-	g_signal_handler_disconnect (view, data->signal_id);
-
-	g_object_set_data (G_OBJECT (window), WINDOW_DATA_KEY, NULL);
-}
-
-static void
-impl_update_ui (EomPlugin *plugin,
-                EomWindow *window)
-{
-	/* Nothing */
+	g_signal_handler_disconnect (view, plugin->signal_id);
 }
 
 static void
 eom_fullscreen_plugin_class_init (EomFullscreenPluginClass *klass)
 {
 	GObjectClass *object_class = G_OBJECT_CLASS (klass);
-	EomPluginClass *plugin_class = EOM_PLUGIN_CLASS (klass);
 
-	object_class->finalize = eom_fullscreen_plugin_finalize;
+	object_class->dispose = eom_fullscreen_plugin_dispose;
+	object_class->set_property = eom_fullscreen_plugin_set_property;
+	object_class->get_property = eom_fullscreen_plugin_get_property;
 
-	plugin_class->activate = impl_activate;
-	plugin_class->deactivate = impl_deactivate;
-	plugin_class->update_ui = impl_update_ui;
+	g_object_class_override_property (object_class, PROP_OBJECT, "object");
+}
+
+static void
+eom_fullscreen_plugin_class_finalize (EomFullscreenPluginClass *klass)
+{
+	/* dummy function - used by G_DEFINE_DYNAMIC_TYPE_EXTENDED */
+}
+
+static void
+peas_activatable_iface_init (PeasActivatableInterface *iface)
+{
+	iface->activate = eom_fullscreen_plugin_activate;
+	iface->deactivate = eom_fullscreen_plugin_deactivate;
+}
+
+G_MODULE_EXPORT void
+peas_register_types (PeasObjectModule *module)
+{
+	eom_fullscreen_plugin_register_type (G_TYPE_MODULE (module));
+	peas_object_module_register_extension_type (module,
+	                                            PEAS_TYPE_ACTIVATABLE,
+	                                            EOM_TYPE_FULLSCREEN_PLUGIN);
 }
