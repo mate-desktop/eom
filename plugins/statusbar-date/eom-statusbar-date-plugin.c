@@ -29,9 +29,9 @@
 #include <glib/gi18n-lib.h>
 
 #include <eom-debug.h>
-#include <eom-scroll-view.h>
 #include <eom-image.h>
 #include <eom-thumb-view.h>
+#include <eom-window.h>
 #include <eom-exif-util.h>
 
 

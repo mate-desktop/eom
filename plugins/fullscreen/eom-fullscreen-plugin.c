@@ -8,7 +8,7 @@
 #include <glib/gi18n-lib.h>
 
 #include <eom-debug.h>
-#include <eom-scroll-view.h>
+#include <eom-window.h>
 
 #define WINDOW_DATA_KEY "EomFullscreenWindowData"
 

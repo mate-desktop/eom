@@ -8,9 +8,7 @@
 #include <glib/gi18n-lib.h>
 
 #include <eom-debug.h>
-#include <eom-scroll-view.h>
-#include <eom-thumb-view.h>
-#include <eom-image.h>
+#include <eom-window.h>
 
 #define WINDOW_DATA_KEY "EomReloadWindowData"
 
