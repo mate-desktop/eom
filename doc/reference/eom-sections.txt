@@ -637,23 +637,16 @@ zoom_fit_scale
 
 <SECTION>
 <FILE>eom-plugin-engine</FILE>
-EomPluginInfo
-eom_plugin_engine_init
-eom_plugin_engine_shutdown
-eom_plugin_engine_get_plugins_list
-eom_plugin_engine_activate_plugin
-eom_plugin_engine_deactivate_plugin
-eom_plugin_engine_plugin_is_active
-eom_plugin_engine_plugin_is_available
-eom_plugin_engine_plugin_is_configurable
-eom_plugin_engine_configure_plugin
-eom_plugin_engine_update_plugins_ui
-eom_plugin_engine_get_plugin_name
-eom_plugin_engine_get_plugin_description
-eom_plugin_engine_get_plugin_icon_name
-eom_plugin_engine_get_plugin_authors
-eom_plugin_engine_get_plugin_website
-eom_plugin_engine_get_plugin_copyright
+EomPluginEngine
+eom_plugin_engine_new
+<SUBSECTION Standard>
+EOM_PLUGIN_ENGINE
+EOM_IS_PLUGIN_ENGINE
+EOM_TYPE_PLUGIN_ENGINE
+eom_plugin_engine_get_type
+EOM_IS_PLUGIN_ENGINE_CLASS
+EOM_PLUGIN_ENGINE_CLASS
+EOM_PLUGIN_ENGINE_GET_CLASS
 </SECTION>
 
 <SECTION>
