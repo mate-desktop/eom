@@ -47,10 +47,10 @@ struct _EomFullscreenPluginClass {
 /*
  * Public methods
  */
-GType eom_fullscreen_plugin_get_type(void) G_GNUC_CONST;
+GType eom_fullscreen_plugin_get_type (void) G_GNUC_CONST;
 
 /* All the plugins must implement this function */
-G_MODULE_EXPORT GType register_eom_plugin(GTypeModule* module);
+G_MODULE_EXPORT GType register_eom_plugin (GTypeModule* module);
 
 G_END_DECLS
 

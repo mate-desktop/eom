@@ -2396,7 +2396,7 @@ eom_window_cmd_edit_toolbar_cb (GtkDialog *dialog, gint response, gpointer data)
 
 		g_return_if_fail (editor != NULL);
 
-        	egg_editable_toolbar_set_edit_mode
+		egg_editable_toolbar_set_edit_mode
 			(EGG_EDITABLE_TOOLBAR (window->priv->toolbar), FALSE);
 
 		eom_application_reset_toolbars_model (EOM_APP);
@@ -2411,12 +2411,12 @@ eom_window_cmd_edit_toolbar_cb (GtkDialog *dialog, gint response, gpointer data)
 	} else if (response == GTK_RESPONSE_HELP) {
 		eom_util_show_help ("eom-toolbareditor", NULL);
 	} else {
-        	egg_editable_toolbar_set_edit_mode
+		egg_editable_toolbar_set_edit_mode
 			(EGG_EDITABLE_TOOLBAR (window->priv->toolbar), FALSE);
 
 		eom_application_save_toolbars_model (EOM_APP);
 
-        	gtk_widget_destroy (GTK_WIDGET (dialog));
+		gtk_widget_destroy (GTK_WIDGET (dialog));
 	}
 }
 

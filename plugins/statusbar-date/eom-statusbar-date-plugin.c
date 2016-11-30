@@ -37,43 +37,46 @@
 
 #define WINDOW_DATA_KEY "EomStatusbarDateWindowData"
 
-EOM_PLUGIN_REGISTER_TYPE(EomStatusbarDatePlugin, eom_statusbar_date_plugin)
+EOM_PLUGIN_REGISTER_TYPE (EomStatusbarDatePlugin, eom_statusbar_date_plugin)
 
 typedef struct {
 	GtkWidget* statusbar_date;
 	gulong signal_id;
 } WindowData;
 
-static void free_window_data(WindowData* data)
+static void
+free_window_data (WindowData *data)
 {
-	g_return_if_fail(data != NULL);
+	g_return_if_fail (data != NULL);
 
-	eom_debug(DEBUG_PLUGINS);
+	eom_debug (DEBUG_PLUGINS);
 
-	g_free(data);
+	g_free (data);
 }
 
-static void statusbar_set_date(GtkStatusbar* statusbar, EomThumbView* view)
+static void
+statusbar_set_date (GtkStatusbar *statusbar,
+                    EomThumbView *view)
 {
-	EomImage* image;
-	gchar* date = NULL;
+	EomImage *image;
+	gchar *date = NULL;
 	gchar time_buffer[32];
-	ExifData* exif_data;
+	ExifData *exif_data;
 
-	if (eom_thumb_view_get_n_selected(view) == 0)
+	if (eom_thumb_view_get_n_selected (view) == 0)
 	{
 		return;
 	}
 
-	image = eom_thumb_view_get_first_selected_image(view);
+	image = eom_thumb_view_get_first_selected_image (view);
 
-	gtk_statusbar_pop(statusbar, 0);
+	gtk_statusbar_pop (statusbar, 0);
 
-	if (!eom_image_has_data(image, EOM_IMAGE_DATA_EXIF))
+	if (!eom_image_has_data (image, EOM_IMAGE_DATA_EXIF))
 	{
-		if (!eom_image_load(image, EOM_IMAGE_DATA_EXIF, NULL, NULL))
+		if (!eom_image_load (image, EOM_IMAGE_DATA_EXIF, NULL, NULL))
 		{
-			gtk_widget_hide(GTK_WIDGET(statusbar));
+			gtk_widget_hide (GTK_WIDGET (statusbar));
 		}
 	}
 
@@ -81,85 +84,97 @@ static void statusbar_set_date(GtkStatusbar* statusbar, EomThumbView* view)
 
 	if (exif_data)
 	{
-		date = eom_exif_util_format_date(eom_exif_data_get_value(exif_data, EXIF_TAG_DATE_TIME_ORIGINAL, time_buffer, 32));
+		date = eom_exif_util_format_date (eom_exif_data_get_value (exif_data, EXIF_TAG_DATE_TIME_ORIGINAL, time_buffer, 32));
 		eom_exif_data_free (exif_data);
 	}
 
 	if (date)
 	{
-		gtk_statusbar_push(statusbar, 0, date);
-		gtk_widget_show(GTK_WIDGET(statusbar));
-		g_free(date);
+		gtk_statusbar_push (statusbar, 0, date);
+		gtk_widget_show (GTK_WIDGET (statusbar));
+		g_free (date);
 	}
 	else
 	{
-		gtk_widget_hide(GTK_WIDGET(statusbar));
+		gtk_widget_hide (GTK_WIDGET (statusbar));
 	}
 }
 
-static void selection_changed_cb(EomThumbView* view, WindowData* data)
+static void
+selection_changed_cb (EomThumbView *view,
+                      WindowData *data)
 {
-	statusbar_set_date(GTK_STATUSBAR(data->statusbar_date), view);
+	statusbar_set_date (GTK_STATUSBAR (data->statusbar_date), view);
 }
 
-static void eom_statusbar_date_plugin_init(EomStatusbarDatePlugin* plugin)
+static void
+eom_statusbar_date_plugin_init (EomStatusbarDatePlugin *plugin)
 {
-	eom_debug_message(DEBUG_PLUGINS, "EomStatusbarDatePlugin initializing");
+	eom_debug_message (DEBUG_PLUGINS, "EomStatusbarDatePlugin initializing");
 }
 
-static void eom_statusbar_date_plugin_finalize(GObject* object)
+static void
+eom_statusbar_date_plugin_finalize (GObject *object)
 {
-	eom_debug_message(DEBUG_PLUGINS, "EomStatusbarDatePlugin finalizing");
+	eom_debug_message (DEBUG_PLUGINS, "EomStatusbarDatePlugin finalizing");
 
-	G_OBJECT_CLASS(eom_statusbar_date_plugin_parent_class)->finalize(object);
+	G_OBJECT_CLASS (eom_statusbar_date_plugin_parent_class)->finalize (object);
 }
 
-static void impl_activate(EomPlugin* plugin, EomWindow* window)
+static void
+impl_activate (EomPlugin *plugin,
+               EomWindow *window)
 {
-	GtkWidget* statusbar = eom_window_get_statusbar(window);
-	GtkWidget* thumbview = eom_window_get_thumb_view(window);
-	WindowData* data;
+	GtkWidget *statusbar = eom_window_get_statusbar (window);
+	GtkWidget *thumbview = eom_window_get_thumb_view (window);
+	WindowData *data;
 
-	eom_debug(DEBUG_PLUGINS);
+	eom_debug (DEBUG_PLUGINS);
 
-	data = g_new(WindowData, 1);
-	data->statusbar_date = gtk_statusbar_new();
-	gtk_widget_set_size_request(data->statusbar_date, 200, 10);
+	data = g_new (WindowData, 1);
+	data->statusbar_date = gtk_statusbar_new ();
+	gtk_widget_set_size_request (data->statusbar_date, 200, 10);
 	gtk_widget_set_margin_top (GTK_WIDGET (data->statusbar_date), 0);
 	gtk_widget_set_margin_bottom (GTK_WIDGET (data->statusbar_date), 0);
-	gtk_box_pack_end(GTK_BOX(statusbar), data->statusbar_date, FALSE, FALSE, 0);
+	gtk_box_pack_end (GTK_BOX (statusbar), data->statusbar_date, FALSE, FALSE, 0);
 
-	data->signal_id = g_signal_connect_after(G_OBJECT(thumbview), "selection_changed", G_CALLBACK(selection_changed_cb), data);
+	data->signal_id = g_signal_connect_after (G_OBJECT (thumbview), "selection_changed",
+	                                          G_CALLBACK (selection_changed_cb), data);
 
-	statusbar_set_date(GTK_STATUSBAR(data->statusbar_date), EOM_THUMB_VIEW(eom_window_get_thumb_view(window)));
+	statusbar_set_date (GTK_STATUSBAR (data->statusbar_date), EOM_THUMB_VIEW (eom_window_get_thumb_view (window)));
 
-	g_object_set_data_full(G_OBJECT(window), WINDOW_DATA_KEY, data, (GDestroyNotify) free_window_data);
+	g_object_set_data_full (G_OBJECT (window), WINDOW_DATA_KEY, data, (GDestroyNotify) free_window_data);
 }
 
-static void impl_deactivate(EomPlugin* plugin, EomWindow* window)
+static void
+impl_deactivate (EomPlugin *plugin,
+                 EomWindow *window)
 {
-	GtkWidget* statusbar = eom_window_get_statusbar(window);
-	GtkWidget* view = eom_window_get_thumb_view(window);
-	WindowData* data;
+	GtkWidget *statusbar = eom_window_get_statusbar (window);
+	GtkWidget *view = eom_window_get_thumb_view (window);
+	WindowData *data;
 
-	data = (WindowData*) g_object_get_data(G_OBJECT (window), WINDOW_DATA_KEY);
+	data = (WindowData *) g_object_get_data (G_OBJECT (window), WINDOW_DATA_KEY);
 
-	g_signal_handler_disconnect(view, data->signal_id);
+	g_signal_handler_disconnect (view, data->signal_id);
 
-	gtk_container_remove(GTK_CONTAINER(statusbar), data->statusbar_date);
+	gtk_container_remove (GTK_CONTAINER (statusbar), data->statusbar_date);
 
-	g_object_set_data(G_OBJECT(window), WINDOW_DATA_KEY, NULL);
+	g_object_set_data (G_OBJECT(window), WINDOW_DATA_KEY, NULL);
 }
 
-static void impl_update_ui(EomPlugin* plugin, EomWindow* window)
+static void
+impl_update_ui (EomPlugin *plugin,
+                EomWindow *window)
 {
 	/* nothing */
 }
 
-static void eom_statusbar_date_plugin_class_init (EomStatusbarDatePluginClass* klass)
+static void
+eom_statusbar_date_plugin_class_init (EomStatusbarDatePluginClass *klass)
 {
-	GObjectClass* object_class = G_OBJECT_CLASS(klass);
-	EomPluginClass* plugin_class = EOM_PLUGIN_CLASS(klass);
+	GObjectClass *object_class = G_OBJECT_CLASS (klass);
+	EomPluginClass *plugin_class = EOM_PLUGIN_CLASS (klass);
 
 	object_class->finalize = eom_statusbar_date_plugin_finalize;
 

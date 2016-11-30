@@ -297,17 +297,17 @@ eom_preferences_dialog_constructor (GType type,
 					 "value",
 					 G_SETTINGS_BIND_DEFAULT);
 
-        plugin_manager = eom_plugin_manager_new ();
+	plugin_manager = eom_plugin_manager_new ();
 
-        g_assert (plugin_manager != NULL);
+	g_assert (plugin_manager != NULL);
 
-        gtk_box_pack_start (GTK_BOX (plugin_manager_container),
-                            plugin_manager,
-                            TRUE,
-                            TRUE,
-                            0);
+	gtk_box_pack_start (GTK_BOX (plugin_manager_container),
+	                    plugin_manager,
+	                    TRUE,
+	                    TRUE,
+	                    0);
 
-        gtk_widget_show_all (plugin_manager);
+	gtk_widget_show_all (plugin_manager);
 
 	return object;
 }
