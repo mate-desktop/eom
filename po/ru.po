@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-13 16:02+0300\n"
-"PO-Revision-Date: 2015-10-22 17:18+0000\n"
-"Last-Translator: Alexei Sorokin <sor.alexei@meowr.ru>\n"
+"POT-Creation-Date: 2016-12-08 13:07+0300\n"
+"PO-Revision-Date: 2016-12-08 10:09+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/mate/MATE/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,40 +28,40 @@ msgstr ""
 #. * produce duplicates, but don't worry about it. If your language
 #. * normally has a mnemonic at the start, please use the _. If not,
 #. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:948
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:924
 #, c-format
 msgid "Show “_%s”"
 msgstr "Показать «_%s»"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1416
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1390
 msgid "_Move on Toolbar"
 msgstr "_Переместить на панель инструментов"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1417
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1391
 msgid "Move the selected item on the toolbar"
 msgstr "Переместить выбранный элемент на панель инструментов"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1418
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1392
 msgid "_Remove from Toolbar"
 msgstr "_Удалить с панели инструментов"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1419
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1393
 msgid "Remove the selected item from the toolbar"
 msgstr "Удалить выбранный элемент с панели инструментов"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1394
 msgid "_Delete Toolbar"
 msgstr "Удалить па_нель инструментов"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1395
 msgid "Remove the selected toolbar"
 msgstr "Удалить выбранную панель инструментов"
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:515
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:487
 msgid "Separator"
 msgstr "Разделитель"
 
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2596
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2556
 msgid "Eye of MATE"
 msgstr "Глаз MATE"
 
@@ -76,7 +76,7 @@ msgid ""
 "subsequent images in the directory the image was loaded from. </p>"
 msgstr "<p> Глаз MATE – это простой просмотрщик изображений на вашем компьютере. После загрузки изображения его можно увеличить или уменьшить, а также просматривать следующие изображения в каталоге, с которого изображение было загружено. </p>"
 
-#: ../data/eom.desktop.in.in.h:1 ../src/main.c:73 ../src/main.c:275
+#: ../data/eom.desktop.in.in.h:1 ../src/main.c:70 ../src/main.c:262
 msgid "Eye of MATE Image Viewer"
 msgstr "Программа просмотра изображений «Глаз MATE»"
 
@@ -545,29 +545,29 @@ msgid ""
 "plugin."
 msgstr "Список активных модулей. Не указывает расположения активных модулей. О расположении можно узнать из файла .eom-plugin."
 
-#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:1
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
 msgid "Fullscreen with double-click"
 msgstr "Полноэкранный режим по двойному щелчку"
 
-#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:2
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
 msgid "Activate fullscreen mode with double-click"
 msgstr "Войти в полноэкранный режим по двойному щелчку мыши"
 
-#: ../plugins/reload/eom-reload-plugin.c:38
-#: ../plugins/reload/reload.eom-plugin.desktop.in.h:1
+#: ../plugins/reload/eom-reload-plugin.c:44
+#: ../plugins/reload/reload.plugin.desktop.in.h:1
 msgid "Reload Image"
 msgstr "Перезагрузить изображение"
 
-#: ../plugins/reload/eom-reload-plugin.c:38
-#: ../plugins/reload/reload.eom-plugin.desktop.in.h:2
+#: ../plugins/reload/eom-reload-plugin.c:44
+#: ../plugins/reload/reload.plugin.desktop.in.h:2
 msgid "Reload current image"
 msgstr "Перезагрузить текущее изображение"
 
-#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:1
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
 msgid "Date in statusbar"
 msgstr "Дата в строке состояния"
 
-#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:2
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
 msgid "Shows the image date in the window statusbar"
 msgstr "Показывать дату изображения в строке состояния"
 
@@ -575,24 +575,24 @@ msgstr "Показывать дату изображения в строке с�
 msgid "Running in fullscreen mode"
 msgstr "В полноэкранном режиме"
 
-#: ../src/eom-close-confirmation-dialog.c:164
+#: ../src/eom-close-confirmation-dialog.c:159
 msgid "Close _without Saving"
 msgstr "Закрыть _без сохранения"
 
-#: ../src/eom-close-confirmation-dialog.c:197
+#: ../src/eom-close-confirmation-dialog.c:192
 msgid "Question"
 msgstr "Вопрос"
 
-#: ../src/eom-close-confirmation-dialog.c:378
+#: ../src/eom-close-confirmation-dialog.c:373
 msgid "If you don't save, your changes will be lost."
 msgstr "Если вы не сохраните, изменения будут безвозвратно утеряны."
 
-#: ../src/eom-close-confirmation-dialog.c:421
+#: ../src/eom-close-confirmation-dialog.c:412
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "Сохранить изменения изображения «%s» перед закрытием?"
 
-#: ../src/eom-close-confirmation-dialog.c:628
+#: ../src/eom-close-confirmation-dialog.c:615
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
@@ -602,47 +602,47 @@ msgstr[1] "Есть %d изображения с несохранёнными и
 msgstr[2] "Есть %d изображений с несохранёнными изменениями. Сохранить изменения перед закрытием?"
 msgstr[3] "Есть %d изображений с несохранёнными изменениями. Сохранить изменения перед закрытием?"
 
-#: ../src/eom-close-confirmation-dialog.c:645
+#: ../src/eom-close-confirmation-dialog.c:632
 msgid "S_elect the images you want to save:"
 msgstr "Выберите изображения для сохранения:"
 
 #. Secondary label
-#: ../src/eom-close-confirmation-dialog.c:667
+#: ../src/eom-close-confirmation-dialog.c:654
 msgid "If you don't save, all your changes will be lost."
 msgstr "Если вы не сохраните, все изменения будут безвозвратно утеряны."
 
-#: ../src/eom-file-chooser.c:132
+#: ../src/eom-file-chooser.c:127
 msgid "File format is unknown or unsupported"
 msgstr "Формат файла неизвестен или не поддерживается"
 
-#: ../src/eom-file-chooser.c:137
+#: ../src/eom-file-chooser.c:132
 msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
 msgstr "Программе «Глаз MATE» не удалось определить записываемый формат файла, основываясь на имени файла."
 
-#: ../src/eom-file-chooser.c:138
+#: ../src/eom-file-chooser.c:133
 msgid "Please try a different file extension like .png or .jpg."
 msgstr "Попробуйте использовать другое расширение, вроде .png или .jpg."
 
-#: ../src/eom-file-chooser.c:170
+#: ../src/eom-file-chooser.c:165
 msgid "All Files"
 msgstr "Все файлы"
 
-#: ../src/eom-file-chooser.c:175
+#: ../src/eom-file-chooser.c:170
 msgid "All Images"
 msgstr "Все изображения"
 
 #. Filter name: First description then file extension, eg. "The PNG-Format
 #. (*.png)".
-#: ../src/eom-file-chooser.c:196
+#: ../src/eom-file-chooser.c:191
 #, c-format
 msgid "%s (*.%s)"
 msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
-#: ../src/eom-file-chooser.c:292 ../src/eom-properties-dialog.c:137
-#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:582
+#: ../src/eom-file-chooser.c:287 ../src/eom-properties-dialog.c:137
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:522
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "пиксел"
@@ -650,15 +650,15 @@ msgstr[1] "пиксела"
 msgstr[2] "пикселов"
 msgstr[3] "пикселов"
 
-#: ../src/eom-file-chooser.c:443
+#: ../src/eom-file-chooser.c:438
 msgid "Open Image"
 msgstr "Открыть изображение"
 
-#: ../src/eom-file-chooser.c:451
+#: ../src/eom-file-chooser.c:446
 msgid "Save Image"
 msgstr "Сохранить изображение"
 
-#: ../src/eom-file-chooser.c:459
+#: ../src/eom-file-chooser.c:454
 msgid "Open Folder"
 msgstr "Открыть папку"
 
@@ -702,21 +702,21 @@ msgstr "Не удалось создать временный файл для с
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "Не удалось выделить память для загрузки файла JPEG"
 
-#: ../src/eom-error-message-area.c:124
+#: ../src/eom-error-message-area.c:116
 msgid "_Retry"
 msgstr "_Повторить"
 
-#: ../src/eom-error-message-area.c:167
+#: ../src/eom-error-message-area.c:159
 #, c-format
 msgid "Could not load image '%s'."
 msgstr "Не удалось загрузить изображение «%s»."
 
-#: ../src/eom-error-message-area.c:209
+#: ../src/eom-error-message-area.c:201
 #, c-format
 msgid "No images found in '%s'."
 msgstr "В «%s» не найдены изображения."
 
-#: ../src/eom-error-message-area.c:216
+#: ../src/eom-error-message-area.c:208
 msgid "The given locations contain no images."
 msgstr "Указанные места не содержат изображений."
 
@@ -775,135 +775,95 @@ msgstr "%a, %d %B %Y  %X"
 msgid "%a, %d %B %Y"
 msgstr "%a, %d %B %Y"
 
-#: ../src/eom-plugin-manager.c:55
-msgid "Plugin"
-msgstr "Модуль"
-
-#: ../src/eom-plugin-manager.c:56
-msgid "Enabled"
-msgstr "Включено"
-
-#: ../src/eom-plugin-manager.c:509 ../src/eom-window.c:3673
-msgid "_About"
-msgstr "_О программе"
-
-#: ../src/eom-plugin-manager.c:517
-msgid "C_onfigure"
-msgstr "_Параметры"
-
-#: ../src/eom-plugin-manager.c:527
-msgid "A_ctivate"
-msgstr "_Активировать"
-
-#: ../src/eom-plugin-manager.c:539
-msgid "Ac_tivate All"
-msgstr "А_ктивировать все"
-
-#: ../src/eom-plugin-manager.c:544
-msgid "_Deactivate All"
-msgstr "_Деактивировать все"
-
-#: ../src/eom-plugin-manager.c:853
-msgid "Active _Plugins:"
-msgstr "Акт_ивные модули:"
-
-#: ../src/eom-plugin-manager.c:890
-msgid "_About Plugin"
-msgstr "_О модуле"
-
-#: ../src/eom-plugin-manager.c:897
-msgid "C_onfigure Plugin"
-msgstr "На_строить модуль"
-
 #: ../src/eom-print.c:219
 msgid "Image Settings"
 msgstr "Параметры изображения"
 
-#: ../src/eom-print-image-setup.c:873
+#: ../src/eom-print-image-setup.c:832
 msgid "Image"
 msgstr "Изображение"
 
-#: ../src/eom-print-image-setup.c:874
+#: ../src/eom-print-image-setup.c:833
 msgid "The image whose printing properties will be set up"
 msgstr "Изображение, для которого будут настроены свойства печати"
 
-#: ../src/eom-print-image-setup.c:880
+#: ../src/eom-print-image-setup.c:839
 msgid "Page Setup"
 msgstr "Параметры страницы"
 
-#: ../src/eom-print-image-setup.c:881
+#: ../src/eom-print-image-setup.c:840
 msgid "The information for the page where the image will be printed"
 msgstr "Информация о странице, на которой будет напечатано изображение"
 
-#: ../src/eom-print-image-setup.c:914 ../src/eom-print-image-setup.c:928
+#: ../src/eom-print-image-setup.c:868
 msgid "Position"
 msgstr "Положение"
 
-#: ../src/eom-print-image-setup.c:918 ../src/eom-print-image-setup.c:933
+#: ../src/eom-print-image-setup.c:872
 msgid "_Left:"
 msgstr "С_лева:"
 
-#: ../src/eom-print-image-setup.c:920 ../src/eom-print-image-setup.c:934
+#: ../src/eom-print-image-setup.c:874
 msgid "_Right:"
 msgstr "С_права:"
 
-#: ../src/eom-print-image-setup.c:921 ../src/eom-print-image-setup.c:935
+#: ../src/eom-print-image-setup.c:875
 msgid "_Top:"
 msgstr "С_верху:"
 
-#: ../src/eom-print-image-setup.c:922 ../src/eom-print-image-setup.c:936
+#: ../src/eom-print-image-setup.c:876
 msgid "_Bottom:"
 msgstr "С_низу:"
 
-#: ../src/eom-print-image-setup.c:939
+#: ../src/eom-print-image-setup.c:879
 msgid "C_enter:"
 msgstr "_Центрировать:"
 
-#: ../src/eom-print-image-setup.c:948
+#: ../src/eom-print-image-setup.c:888
 msgid "None"
 msgstr "Нет"
 
-#: ../src/eom-print-image-setup.c:950
+#: ../src/eom-print-image-setup.c:890
 msgid "Horizontal"
 msgstr "Горизонтально"
 
-#: ../src/eom-print-image-setup.c:952
+#: ../src/eom-print-image-setup.c:892
 msgid "Vertical"
 msgstr "Вертикально"
 
-#: ../src/eom-print-image-setup.c:954
+#: ../src/eom-print-image-setup.c:894
 msgid "Both"
 msgstr "Горизонтально и вертикально"
 
-#: ../src/eom-print-image-setup.c:980 ../src/eom-print-image-setup.c:991
+#: ../src/eom-print-image-setup.c:910
 msgid "Size"
 msgstr "Размер"
 
-#: ../src/eom-print-image-setup.c:983 ../src/eom-print-image-setup.c:996
+#: ../src/eom-print-image-setup.c:913
 msgid "_Width:"
 msgstr "_Ширина:"
 
-#: ../src/eom-print-image-setup.c:985 ../src/eom-print-image-setup.c:998
+#: ../src/eom-print-image-setup.c:915
 msgid "_Height:"
 msgstr "_Высота:"
 
-#: ../src/eom-print-image-setup.c:1002
+#: ../src/eom-print-image-setup.c:918
 msgid "_Scaling:"
 msgstr "_Масштаб:"
 
-#: ../src/eom-print-image-setup.c:1026
+#: ../src/eom-print-image-setup.c:929
 msgid "_Unit:"
 msgstr "_Единица:"
 
-#: ../src/eom-print-image-setup.c:1035
+#: ../src/eom-print-image-setup.c:938
 msgid "Millimeters"
 msgstr "Миллиметры"
 
-#: ../src/eom-print-image-setup.c:1037
+#: ../src/eom-print-image-setup.c:940
 msgid "Inches"
 msgstr "Дюймы"
 
-#: ../src/eom-print-image-setup.c:1074
+#: ../src/eom-print-image-setup.c:968
 msgid "Preview"
 msgstr "Просмотр печати"
 
@@ -940,12 +900,12 @@ msgstr "как есть"
 #. * Note that translating this doesn't guarantee that you get localized
 #. * digits. That needs support from your system and locale definition
 #. * too.
-#: ../src/eom-statusbar.c:134
+#: ../src/eom-statusbar.c:127
 #, c-format
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/eom-thumb-view.c:610
+#: ../src/eom-thumb-view.c:550
 msgid "Taken on"
 msgstr "Снято"
 
@@ -968,7 +928,7 @@ msgstr " (некорректные символы Юникод)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/eom-window.c:516
+#: ../src/eom-window.c:506
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
@@ -977,25 +937,25 @@ msgstr[1] "%i × %i пиксела  %s    %i%%"
 msgstr[2] "%i × %i пикселов  %s    %i%%"
 msgstr[3] "%i × %i пикселов  %s    %i%%"
 
-#: ../src/eom-window.c:817
+#: ../src/eom-window.c:807
 msgid "_Reload"
 msgstr "_Перезагрузить"
 
-#: ../src/eom-window.c:819 ../src/eom-window.c:2717
+#: ../src/eom-window.c:809 ../src/eom-window.c:2677
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "С_крыть"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:829
+#: ../src/eom-window.c:819
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
 msgstr "Изображение «%s» было изменено внешним приложением.\nХотите перезагрузить его?"
 
-#: ../src/eom-window.c:1002
+#: ../src/eom-window.c:988
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Используйте «%s» для открытия выбранного изображения"
@@ -1005,36 +965,36 @@ msgstr "Используйте «%s» для открытия выбранног
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1158
+#: ../src/eom-window.c:1144
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Сохранение изображения «%s» (%u/%u)"
 
-#: ../src/eom-window.c:1516
+#: ../src/eom-window.c:1502
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Загрузка изображения «%s»"
 
-#: ../src/eom-window.c:2214
+#: ../src/eom-window.c:2176
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
 msgstr "Ошибка при печати файла:\n%s"
 
-#: ../src/eom-window.c:2476
+#: ../src/eom-window.c:2438
 msgid "Toolbar Editor"
 msgstr "Редактор панели инструментов"
 
-#: ../src/eom-window.c:2479
+#: ../src/eom-window.c:2441
 msgid "_Reset to Default"
 msgstr "_Сбросить до исходных"
 
-#: ../src/eom-window.c:2572
+#: ../src/eom-window.c:2532
 msgid "translator-credits"
 msgstr "Evgeny Bulgakov <bgav@netvision.net.il>\nValek Filippov <frob@df.ru>\nDmitry G. Mastrukov <dmitry@taurussoft.org>\nAndrew W. Nosenko <awn@bcs.zp.ua>\nLeonid Kanter <leon@asplinux.ru>\nАлександр Сигачёв <alexander.sigachov@gmail.com>\nВасилий Фаронов <qvvx@yandex.ru>\nДмитрий Коданёв <dkodanev@gmail.com>\nВиктор Анисимов <vicanis@gmail.com>"
 
-#: ../src/eom-window.c:2575
+#: ../src/eom-window.c:2535
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1042,7 +1002,7 @@ msgid ""
 "any later version.\n"
 msgstr "Эта программа — свободное программное обеспечение; вы можете распространять его и/или модифицировать на условиях Универсальной общественной лицензии GNU версии 2 либо любой более поздней версии.\n"
 
-#: ../src/eom-window.c:2579
+#: ../src/eom-window.c:2539
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1050,51 +1010,51 @@ msgid ""
 "more details.\n"
 msgstr "Эта программа распространяется в надежде, что она может быть полезна, но БЕЗ КАКОГО-ЛИБО ВИДА ГАРАНТИЙ, ВЫРАЖЕННЫХ ЯВНО ИЛИ ПОДРАЗУМЕВАЕМЫХ, ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ ПОДРАЗУМЕВАЕМЫМИ ГАРАНТИЯМИ КОММЕРЧЕСКОЙ ЦЕННОСТИ И ПРИГОДНОСТИ ДЛЯ КОНКРЕТНОЙ ЦЕЛИ. Для получения дополнительных сведений обратитесь к Универсальной Общественной Лицензии GNU.\n"
 
-#: ../src/eom-window.c:2583
+#: ../src/eom-window.c:2543
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr "Вы должны получить копию GNU General Public License вместе с программой просмотра журналов. Если этого не произошло, напишите в Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 
-#: ../src/eom-window.c:2601
+#: ../src/eom-window.c:2561
 msgid "The MATE image viewer."
 msgstr "Программа для просмотра изображений в MATE"
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2715
+#: ../src/eom-window.c:2675
 msgid "_Open Background Preferences"
 msgstr "О_ткрыть параметры фона"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2731
+#: ../src/eom-window.c:2691
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
 msgstr "Изображение «%s» установлено в качестве фона рабочего стола.\nИзменить его внешний вид?"
 
-#: ../src/eom-window.c:3133
+#: ../src/eom-window.c:3089
 msgid "Saving image locally…"
 msgstr "Сохранение изображения на диск…"
 
-#: ../src/eom-window.c:3213
+#: ../src/eom-window.c:3169
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
 msgstr "Действительно хотите переместить\n«%s» в корзину?"
 
-#: ../src/eom-window.c:3216
+#: ../src/eom-window.c:3172
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr "Не удалось найти корзину для «%s». Удалить изображение навсегда?"
 
-#: ../src/eom-window.c:3221
+#: ../src/eom-window.c:3177
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1107,408 +1067,412 @@ msgstr[1] "Действительно хотите переместить\n%d в
 msgstr[2] "Действительно хотите переместить\n%d выбранных изображений в корзину?"
 msgstr[3] "Действительно хотите переместить\n%d выбранных изображений в корзину?"
 
-#: ../src/eom-window.c:3226
+#: ../src/eom-window.c:3182
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
 msgstr "Не удалось переместить некоторые выделенные изображения в корзину, они будут удалены навсегда. Продолжить?"
 
-#: ../src/eom-window.c:3243 ../src/eom-window.c:3727 ../src/eom-window.c:3754
+#: ../src/eom-window.c:3199 ../src/eom-window.c:3683 ../src/eom-window.c:3710
 msgid "Move to _Trash"
 msgstr "Переместить в _корзину"
 
-#: ../src/eom-window.c:3245
+#: ../src/eom-window.c:3201
 msgid "_Do not ask again during this session"
 msgstr "_Не спрашивать в течение этого сеанса"
 
-#: ../src/eom-window.c:3290 ../src/eom-window.c:3304
+#: ../src/eom-window.c:3246 ../src/eom-window.c:3260
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Нет доступа к корзине."
 
-#: ../src/eom-window.c:3312
+#: ../src/eom-window.c:3268
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Не удалось удалить файл"
 
-#: ../src/eom-window.c:3409
+#: ../src/eom-window.c:3365
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Ошибка при удалении изображения %s"
 
-#: ../src/eom-window.c:3651
+#: ../src/eom-window.c:3607
 msgid "_Image"
 msgstr "_Изображение"
 
-#: ../src/eom-window.c:3652
+#: ../src/eom-window.c:3608
 msgid "_Edit"
 msgstr "_Правка"
 
-#: ../src/eom-window.c:3653
+#: ../src/eom-window.c:3609
 msgid "_View"
 msgstr "_Вид"
 
-#: ../src/eom-window.c:3654
+#: ../src/eom-window.c:3610
 msgid "_Go"
 msgstr "П_ереход"
 
-#: ../src/eom-window.c:3655
+#: ../src/eom-window.c:3611
 msgid "_Tools"
 msgstr "С_ервис"
 
-#: ../src/eom-window.c:3656
+#: ../src/eom-window.c:3612
 msgid "_Help"
 msgstr "_Справка"
 
-#: ../src/eom-window.c:3658
+#: ../src/eom-window.c:3614
 msgid "_Open…"
 msgstr "_Открыть…"
 
-#: ../src/eom-window.c:3659
+#: ../src/eom-window.c:3615
 msgid "Open a file"
 msgstr "Открыть файл"
 
-#: ../src/eom-window.c:3661
+#: ../src/eom-window.c:3617
 msgid "_Close"
 msgstr "_Закрыть"
 
-#: ../src/eom-window.c:3662
+#: ../src/eom-window.c:3618
 msgid "Close window"
 msgstr "Закрыть окно"
 
-#: ../src/eom-window.c:3664
+#: ../src/eom-window.c:3620
 msgid "T_oolbar"
 msgstr "_Панель инструментов"
 
-#: ../src/eom-window.c:3665
+#: ../src/eom-window.c:3621
 msgid "Edit the application toolbar"
 msgstr "Редактировать панель инструментов приложения"
 
-#: ../src/eom-window.c:3667
+#: ../src/eom-window.c:3623
 msgid "Prefere_nces"
 msgstr "П_араметры"
 
-#: ../src/eom-window.c:3668
+#: ../src/eom-window.c:3624
 msgid "Preferences for Eye of MATE"
 msgstr "Параметры программы «Глаз MATE»"
 
-#: ../src/eom-window.c:3670
+#: ../src/eom-window.c:3626
 msgid "_Contents"
 msgstr "_Содержание"
 
-#: ../src/eom-window.c:3671
+#: ../src/eom-window.c:3627
 msgid "Help on this application"
 msgstr "Справка по этому приложению"
 
-#: ../src/eom-window.c:3674
+#: ../src/eom-window.c:3629
+msgid "_About"
+msgstr "_О программе"
+
+#: ../src/eom-window.c:3630
 msgid "About this application"
 msgstr "Об этой программе"
 
-#: ../src/eom-window.c:3679
+#: ../src/eom-window.c:3635
 msgid "_Toolbar"
 msgstr "_Панель инструментов"
 
-#: ../src/eom-window.c:3680
+#: ../src/eom-window.c:3636
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Переключает видимость панели инструментов в текущем окне"
 
-#: ../src/eom-window.c:3682
+#: ../src/eom-window.c:3638
 msgid "_Statusbar"
 msgstr "_Строка состояния"
 
-#: ../src/eom-window.c:3683
+#: ../src/eom-window.c:3639
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Переключает видимость строки состояния в текущем окне"
 
-#: ../src/eom-window.c:3685
+#: ../src/eom-window.c:3641
 msgid "_Image Collection"
 msgstr "_Коллекция изображений"
 
-#: ../src/eom-window.c:3686
+#: ../src/eom-window.c:3642
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "Переключает видимость панели коллекции изображений в текущем окне"
 
-#: ../src/eom-window.c:3688
+#: ../src/eom-window.c:3644
 msgid "Side _Pane"
 msgstr "_Боковая панель"
 
-#: ../src/eom-window.c:3689
+#: ../src/eom-window.c:3645
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Переключает видимость боковой панели в текущем окне"
 
-#: ../src/eom-window.c:3694
+#: ../src/eom-window.c:3650
 msgid "_Save"
 msgstr "Со_хранить"
 
-#: ../src/eom-window.c:3695
+#: ../src/eom-window.c:3651
 msgid "Save changes in currently selected images"
 msgstr "Сохранить изменения во всех выделенных сейчас изображениях"
 
-#: ../src/eom-window.c:3697
+#: ../src/eom-window.c:3653
 msgid "Open _with"
 msgstr "Открыть _с помощью"
 
-#: ../src/eom-window.c:3698
+#: ../src/eom-window.c:3654
 msgid "Open the selected image with a different application"
 msgstr "Открыть выделенное изображение в другом приложении"
 
-#: ../src/eom-window.c:3700
+#: ../src/eom-window.c:3656
 msgid "Save _As…"
 msgstr "Сохранить _как…"
 
-#: ../src/eom-window.c:3701
+#: ../src/eom-window.c:3657
 msgid "Save the selected images with a different name"
 msgstr "Сохранить выделенные изображения под другими именами"
 
-#: ../src/eom-window.c:3703
+#: ../src/eom-window.c:3659
 msgid "_Print…"
 msgstr "_Печать…"
 
-#: ../src/eom-window.c:3704
+#: ../src/eom-window.c:3660
 msgid "Print the selected image"
 msgstr "Напечатать выделенное изображение"
 
-#: ../src/eom-window.c:3706
+#: ../src/eom-window.c:3662
 msgid "Prope_rties"
 msgstr "С_войства"
 
-#: ../src/eom-window.c:3707
+#: ../src/eom-window.c:3663
 msgid "Show the properties and metadata of the selected image"
 msgstr "Показать свойства и метаданные выделенного изображения"
 
-#: ../src/eom-window.c:3709
+#: ../src/eom-window.c:3665
 msgid "_Undo"
 msgstr "_Отменить"
 
-#: ../src/eom-window.c:3710
+#: ../src/eom-window.c:3666
 msgid "Undo the last change in the image"
 msgstr "Отменить последнее изменение в изображении"
 
-#: ../src/eom-window.c:3712
+#: ../src/eom-window.c:3668
 msgid "Flip _Horizontal"
 msgstr "Отразить по _горизотали"
 
-#: ../src/eom-window.c:3713
+#: ../src/eom-window.c:3669
 msgid "Mirror the image horizontally"
 msgstr "Отразить изображение по горизонтали"
 
-#: ../src/eom-window.c:3715
+#: ../src/eom-window.c:3671
 msgid "Flip _Vertical"
 msgstr "Отразить по _вертикали"
 
-#: ../src/eom-window.c:3716
+#: ../src/eom-window.c:3672
 msgid "Mirror the image vertically"
 msgstr "Отразить изображение по вертикали"
 
-#: ../src/eom-window.c:3718
+#: ../src/eom-window.c:3674
 msgid "_Rotate Clockwise"
 msgstr "Повернуть по _часовой стрелке"
 
-#: ../src/eom-window.c:3719
+#: ../src/eom-window.c:3675
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Повернуть изображение на 90° по часовой стрелке"
 
-#: ../src/eom-window.c:3721
+#: ../src/eom-window.c:3677
 msgid "Rotate Counterc_lockwise"
 msgstr "Повернуть против часовой _стрелки"
 
-#: ../src/eom-window.c:3722
+#: ../src/eom-window.c:3678
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Повернуть изображение на 90° против часовой стрелки"
 
-#: ../src/eom-window.c:3724
+#: ../src/eom-window.c:3680
 msgid "Set as _Desktop Background"
 msgstr "Установить как фон рабочего _стола"
 
-#: ../src/eom-window.c:3725
+#: ../src/eom-window.c:3681
 msgid "Set the selected image as the desktop background"
 msgstr "Сделать выделенное изображение фоном рабочего стола"
 
-#: ../src/eom-window.c:3728
+#: ../src/eom-window.c:3684
 msgid "Move the selected image to the trash folder"
 msgstr "Переместить выделенное изображение в корзину"
 
-#: ../src/eom-window.c:3730
+#: ../src/eom-window.c:3686
 msgid "_Copy"
 msgstr "_Копировать"
 
-#: ../src/eom-window.c:3731
+#: ../src/eom-window.c:3687
 msgid "Copy the selected image to the clipboard"
 msgstr "Копировать выбранное изображение в буфер обмена"
 
-#: ../src/eom-window.c:3733 ../src/eom-window.c:3745 ../src/eom-window.c:3748
+#: ../src/eom-window.c:3689 ../src/eom-window.c:3701 ../src/eom-window.c:3704
 msgid "_Zoom In"
 msgstr "У_величить"
 
-#: ../src/eom-window.c:3734 ../src/eom-window.c:3746
+#: ../src/eom-window.c:3690 ../src/eom-window.c:3702
 msgid "Enlarge the image"
 msgstr "Увеличить изображение"
 
-#: ../src/eom-window.c:3736 ../src/eom-window.c:3751
+#: ../src/eom-window.c:3692 ../src/eom-window.c:3707
 msgid "Zoom _Out"
 msgstr "У_меньшить"
 
-#: ../src/eom-window.c:3737 ../src/eom-window.c:3749 ../src/eom-window.c:3752
+#: ../src/eom-window.c:3693 ../src/eom-window.c:3705 ../src/eom-window.c:3708
 msgid "Shrink the image"
 msgstr "Уменьшить изображение"
 
-#: ../src/eom-window.c:3739
+#: ../src/eom-window.c:3695
 msgid "_Normal Size"
 msgstr "_Нормальный размер"
 
-#: ../src/eom-window.c:3740
+#: ../src/eom-window.c:3696
 msgid "Show the image at its normal size"
 msgstr "Показать изображение в его обычном размере"
 
-#: ../src/eom-window.c:3742
+#: ../src/eom-window.c:3698
 msgid "_Best Fit"
 msgstr "_Уместить в окне"
 
-#: ../src/eom-window.c:3743
+#: ../src/eom-window.c:3699
 msgid "Fit the image to the window"
 msgstr "Уместить изображение в окне"
 
-#: ../src/eom-window.c:3760
+#: ../src/eom-window.c:3716
 msgid "_Fullscreen"
 msgstr "Развернуть на полный _экран"
 
-#: ../src/eom-window.c:3761
+#: ../src/eom-window.c:3717
 msgid "Show the current image in fullscreen mode"
 msgstr "Показать текущее изображение в полноэкранном режиме"
 
-#: ../src/eom-window.c:3763
+#: ../src/eom-window.c:3719
 msgid "Pause Slideshow"
 msgstr "Приостановить слайд-шоу"
 
-#: ../src/eom-window.c:3764
+#: ../src/eom-window.c:3720
 msgid "Pause or resume the slideshow"
 msgstr "Приостановить или возобновить слайд-шоу"
 
-#: ../src/eom-window.c:3769 ../src/eom-window.c:3784
+#: ../src/eom-window.c:3725 ../src/eom-window.c:3740
 msgid "_Previous Image"
 msgstr "_Предыдущее изображение"
 
-#: ../src/eom-window.c:3770
+#: ../src/eom-window.c:3726
 msgid "Go to the previous image of the collection"
 msgstr "Перейти к предыдущему изображению в коллекции"
 
-#: ../src/eom-window.c:3772
+#: ../src/eom-window.c:3728
 msgid "_Next Image"
 msgstr "_Следующее изображение"
 
-#: ../src/eom-window.c:3773
+#: ../src/eom-window.c:3729
 msgid "Go to the next image of the collection"
 msgstr "Перейти к следующему изображению в коллекции"
 
-#: ../src/eom-window.c:3775 ../src/eom-window.c:3787
+#: ../src/eom-window.c:3731 ../src/eom-window.c:3743
 msgid "_First Image"
 msgstr "П_ервое изображение"
 
-#: ../src/eom-window.c:3776
+#: ../src/eom-window.c:3732
 msgid "Go to the first image of the collection"
 msgstr "Перейти к первому изображению в коллекции"
 
-#: ../src/eom-window.c:3778 ../src/eom-window.c:3790
+#: ../src/eom-window.c:3734 ../src/eom-window.c:3746
 msgid "_Last Image"
 msgstr "П_оследнее изображение"
 
-#: ../src/eom-window.c:3779
+#: ../src/eom-window.c:3735
 msgid "Go to the last image of the collection"
 msgstr "Перейти к последнему изображению в коллекции"
 
-#: ../src/eom-window.c:3781
+#: ../src/eom-window.c:3737
 msgid "_Random Image"
 msgstr "Слу_чайное изображение"
 
-#: ../src/eom-window.c:3782
+#: ../src/eom-window.c:3738
 msgid "Go to a random image of the collection"
 msgstr "Перейти к случайному изображению в коллекции"
 
-#: ../src/eom-window.c:3796
+#: ../src/eom-window.c:3752
 msgid "S_lideshow"
 msgstr "С_лайдшоу"
 
-#: ../src/eom-window.c:3797
+#: ../src/eom-window.c:3753
 msgid "Start a slideshow view of the images"
 msgstr "Запустить слайд-шоу изображений в коллекции"
 
-#: ../src/eom-window.c:3863
+#: ../src/eom-window.c:3819
 msgid "Previous"
 msgstr "Предыдущее"
 
-#: ../src/eom-window.c:3867
+#: ../src/eom-window.c:3823
 msgid "Next"
 msgstr "Следующее"
 
-#: ../src/eom-window.c:3871
+#: ../src/eom-window.c:3827
 msgid "Right"
 msgstr "Вправо"
 
-#: ../src/eom-window.c:3874
+#: ../src/eom-window.c:3830
 msgid "Left"
 msgstr "Влево"
 
-#: ../src/eom-window.c:3877
+#: ../src/eom-window.c:3833
 msgid "In"
 msgstr "Увеличить"
 
-#: ../src/eom-window.c:3880
+#: ../src/eom-window.c:3836
 msgid "Out"
 msgstr "Уменьшить"
 
-#: ../src/eom-window.c:3883
+#: ../src/eom-window.c:3839
 msgid "Normal"
 msgstr "Исходный"
 
-#: ../src/eom-window.c:3886
+#: ../src/eom-window.c:3842
 msgid "Fit"
 msgstr "Подогнать"
 
-#: ../src/eom-window.c:3889
+#: ../src/eom-window.c:3845
 msgid "Collection"
 msgstr "Коллекция изображений"
 
-#: ../src/eom-window.c:3892
+#: ../src/eom-window.c:3848
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "В корзину"
 
-#: ../src/eom-window.c:4245
+#: ../src/eom-window.c:4197
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "Редактировать текущее изображение с помощью %s"
 
-#: ../src/eom-window.c:4247
+#: ../src/eom-window.c:4199
 msgid "Edit Image"
 msgstr "Редактировать изображение"
 
-#: ../src/main.c:80
+#: ../src/main.c:77
 msgid "Open in fullscreen mode"
 msgstr "Открыть в полноэкранном режиме"
 
-#: ../src/main.c:81
+#: ../src/main.c:78
 msgid "Disable image collection"
 msgstr "Отключить коллекцию изображений"
 
-#: ../src/main.c:82
+#: ../src/main.c:79
 msgid "Open in slideshow mode"
 msgstr "Открыть в режиме слайд-шоу"
 
-#: ../src/main.c:84
+#: ../src/main.c:81
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "Запустить новую копию программы вместо использования текущей"
 
-#: ../src/main.c:87
+#: ../src/main.c:84
 msgid "Show the application's version"
 msgstr "Показать номер версии приложения"
 
-#: ../src/main.c:88
+#: ../src/main.c:85
 msgid "[FILE…]"
 msgstr "[ФАЙЛ…]"
 
 #. I18N: The '%s' is replaced with eom's command name.
-#: ../src/main.c:219
+#: ../src/main.c:210
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "Запустите «%s --help» для показа всех доступных ключей командной строки."

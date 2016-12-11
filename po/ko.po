@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-13 16:02+0300\n"
-"PO-Revision-Date: 2016-04-07 11:49+0000\n"
-"Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>\n"
+"POT-Creation-Date: 2016-12-08 13:07+0300\n"
+"PO-Revision-Date: 2016-12-08 10:09+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Korean (http://www.transifex.com/mate/MATE/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,40 +28,40 @@ msgstr ""
 #. * produce duplicates, but don't worry about it. If your language
 #. * normally has a mnemonic at the start, please use the _. If not,
 #. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:948
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:924
 #, c-format
 msgid "Show “_%s”"
 msgstr "“_%s” 보이기"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1416
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1390
 msgid "_Move on Toolbar"
 msgstr "도구 모음에서 옮기기(_M)"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1417
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1391
 msgid "Move the selected item on the toolbar"
 msgstr "도구 모음에서 선택한 항목을 옮깁니다"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1418
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1392
 msgid "_Remove from Toolbar"
 msgstr "도구 모음에서 제거(_R)"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1419
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1393
 msgid "Remove the selected item from the toolbar"
 msgstr "도구 모음에서 선택한 항목을 제거합니다"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1394
 msgid "_Delete Toolbar"
 msgstr "도구 모음 삭제(_D)"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1395
 msgid "Remove the selected toolbar"
 msgstr "선택한 도구 모음을 제거합니다"
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:515
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:487
 msgid "Separator"
 msgstr "구분선"
 
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2596
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2556
 msgid "Eye of MATE"
 msgstr "마테의 눈"
 
@@ -76,7 +76,7 @@ msgid ""
 "subsequent images in the directory the image was loaded from. </p>"
 msgstr "<p> 마테의 눈은 컴퓨터의 그림을 찾다보는 간단한 그림 보기 프로그램입니다. 그림을 불러오면 그림을 확대, 축소, 회전할 수 있으며, 그림을 불러온 디렉터리의 각각의 여러가지 그림도 살펴볼 수 있습니다. </p>"
 
-#: ../data/eom.desktop.in.in.h:1 ../src/main.c:73 ../src/main.c:275
+#: ../data/eom.desktop.in.in.h:1 ../src/main.c:70 ../src/main.c:262
 msgid "Eye of MATE Image Viewer"
 msgstr "마테의 눈 그림 뷰어"
 
@@ -545,29 +545,29 @@ msgid ""
 "plugin."
 msgstr "사용중인 플러그인 목록. 사용중인 플러그인의 \"위치\"는 포함하지 않습니다. 주어진 플러그인의 \"위치\"는 .eom-plugin 파일을 참고하십시오."
 
-#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:1
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
 msgid "Fullscreen with double-click"
 msgstr "두 번 누르면 전체 화면"
 
-#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:2
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
 msgid "Activate fullscreen mode with double-click"
 msgstr "두 번 누르면 전체 화면으로 합니다"
 
-#: ../plugins/reload/eom-reload-plugin.c:38
-#: ../plugins/reload/reload.eom-plugin.desktop.in.h:1
+#: ../plugins/reload/eom-reload-plugin.c:44
+#: ../plugins/reload/reload.plugin.desktop.in.h:1
 msgid "Reload Image"
 msgstr "그림 다시 읽기"
 
-#: ../plugins/reload/eom-reload-plugin.c:38
-#: ../plugins/reload/reload.eom-plugin.desktop.in.h:2
+#: ../plugins/reload/eom-reload-plugin.c:44
+#: ../plugins/reload/reload.plugin.desktop.in.h:2
 msgid "Reload current image"
 msgstr "현재 그림을 다시 읽습니다"
 
-#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:1
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
 msgid "Date in statusbar"
 msgstr "상태 표시줄에 시각"
 
-#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:2
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
 msgid "Shows the image date in the window statusbar"
 msgstr "창의 상태 표시줄에 그림의 시각을 표시합니다"
 
@@ -575,84 +575,84 @@ msgstr "창의 상태 표시줄에 그림의 시각을 표시합니다"
 msgid "Running in fullscreen mode"
 msgstr "전체화면 모드에서 실행"
 
-#: ../src/eom-close-confirmation-dialog.c:164
+#: ../src/eom-close-confirmation-dialog.c:159
 msgid "Close _without Saving"
 msgstr "저장하지 않고 닫기(_W)"
 
-#: ../src/eom-close-confirmation-dialog.c:197
+#: ../src/eom-close-confirmation-dialog.c:192
 msgid "Question"
 msgstr "물음"
 
-#: ../src/eom-close-confirmation-dialog.c:378
+#: ../src/eom-close-confirmation-dialog.c:373
 msgid "If you don't save, your changes will be lost."
 msgstr "저장하지 않으면 바뀐 사항을 잃어버립니다."
 
-#: ../src/eom-close-confirmation-dialog.c:421
+#: ../src/eom-close-confirmation-dialog.c:412
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "바뀐 사항을 \"%s\" 그림에 닫기 전에 저장하시겠습니까?"
 
-#: ../src/eom-close-confirmation-dialog.c:628
+#: ../src/eom-close-confirmation-dialog.c:615
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] "바뀐 사항을 저장하지 않은 그림이 %d개 있습니다. 닫기 전에 저장하시겠습니까?"
 
-#: ../src/eom-close-confirmation-dialog.c:645
+#: ../src/eom-close-confirmation-dialog.c:632
 msgid "S_elect the images you want to save:"
 msgstr "저장하려는 그림 선택(_E):"
 
 #. Secondary label
-#: ../src/eom-close-confirmation-dialog.c:667
+#: ../src/eom-close-confirmation-dialog.c:654
 msgid "If you don't save, all your changes will be lost."
 msgstr "저장하지 않으면 바뀐 사항을 잃어버립니다."
 
-#: ../src/eom-file-chooser.c:132
+#: ../src/eom-file-chooser.c:127
 msgid "File format is unknown or unsupported"
 msgstr "파일 형식이 알 수 없거나 지원하지 않습니다"
 
-#: ../src/eom-file-chooser.c:137
+#: ../src/eom-file-chooser.c:132
 msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
 msgstr "마테의 눈이 파일 이름으로 저장할 수 있는 파일 형식을 알아낼 수 없습니다."
 
-#: ../src/eom-file-chooser.c:138
+#: ../src/eom-file-chooser.c:133
 msgid "Please try a different file extension like .png or .jpg."
 msgstr ".png나 .jpg같은 파일 확장자로 다시 시도하십시오."
 
-#: ../src/eom-file-chooser.c:170
+#: ../src/eom-file-chooser.c:165
 msgid "All Files"
 msgstr "모든 파일"
 
-#: ../src/eom-file-chooser.c:175
+#: ../src/eom-file-chooser.c:170
 msgid "All Images"
 msgstr "모든 그림"
 
 #. Filter name: First description then file extension, eg. "The PNG-Format
 #. (*.png)".
-#: ../src/eom-file-chooser.c:196
+#: ../src/eom-file-chooser.c:191
 #, c-format
 msgid "%s (*.%s)"
 msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
-#: ../src/eom-file-chooser.c:292 ../src/eom-properties-dialog.c:137
-#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:582
+#: ../src/eom-file-chooser.c:287 ../src/eom-properties-dialog.c:137
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:522
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "픽셀"
 
-#: ../src/eom-file-chooser.c:443
+#: ../src/eom-file-chooser.c:438
 msgid "Open Image"
 msgstr "그림 열기"
 
-#: ../src/eom-file-chooser.c:451
+#: ../src/eom-file-chooser.c:446
 msgid "Save Image"
 msgstr "그림 저장"
 
-#: ../src/eom-file-chooser.c:459
+#: ../src/eom-file-chooser.c:454
 msgid "Open Folder"
 msgstr "폴더 열기"
 
@@ -696,21 +696,21 @@ msgstr "저장할 때 쓸 임시 파일을 만들지 못했습니다: %s"
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "JPEG 파일을 읽어들일 때 필요한 메모리를 할당하지 못했습니다"
 
-#: ../src/eom-error-message-area.c:124
+#: ../src/eom-error-message-area.c:116
 msgid "_Retry"
 msgstr "다시 시도(_R)"
 
-#: ../src/eom-error-message-area.c:167
+#: ../src/eom-error-message-area.c:159
 #, c-format
 msgid "Could not load image '%s'."
 msgstr "`%s' 그림을 읽어들일 수 없습니다."
 
-#: ../src/eom-error-message-area.c:209
+#: ../src/eom-error-message-area.c:201
 #, c-format
 msgid "No images found in '%s'."
 msgstr "'%s'에서 그림을 찾을 수 없습니다."
 
-#: ../src/eom-error-message-area.c:216
+#: ../src/eom-error-message-area.c:208
 msgid "The given locations contain no images."
 msgstr "주어진 위치에 아무 그림이 없습니다."
 
@@ -769,135 +769,95 @@ msgstr "%Y년 %B %d일 %a  %X"
 msgid "%a, %d %B %Y"
 msgstr "%Y년 %B %d일 %a"
 
-#: ../src/eom-plugin-manager.c:55
-msgid "Plugin"
-msgstr "플러그인"
-
-#: ../src/eom-plugin-manager.c:56
-msgid "Enabled"
-msgstr "사용중"
-
-#: ../src/eom-plugin-manager.c:509 ../src/eom-window.c:3673
-msgid "_About"
-msgstr "정보(_A)"
-
-#: ../src/eom-plugin-manager.c:517
-msgid "C_onfigure"
-msgstr "설정(_O)"
-
-#: ../src/eom-plugin-manager.c:527
-msgid "A_ctivate"
-msgstr "사용하기(_C)"
-
-#: ../src/eom-plugin-manager.c:539
-msgid "Ac_tivate All"
-msgstr "모두 사용(_T)"
-
-#: ../src/eom-plugin-manager.c:544
-msgid "_Deactivate All"
-msgstr "모두 사용하지 않기(_D)"
-
-#: ../src/eom-plugin-manager.c:853
-msgid "Active _Plugins:"
-msgstr "사용중인 플러그인(_P):"
-
-#: ../src/eom-plugin-manager.c:890
-msgid "_About Plugin"
-msgstr "플러그인 정보(_A)"
-
-#: ../src/eom-plugin-manager.c:897
-msgid "C_onfigure Plugin"
-msgstr "플러그인 설정(_O)"
-
 #: ../src/eom-print.c:219
 msgid "Image Settings"
 msgstr "그림 설정"
 
-#: ../src/eom-print-image-setup.c:873
+#: ../src/eom-print-image-setup.c:832
 msgid "Image"
 msgstr "그림"
 
-#: ../src/eom-print-image-setup.c:874
+#: ../src/eom-print-image-setup.c:833
 msgid "The image whose printing properties will be set up"
 msgstr "인쇄 속성을 설정할 그림"
 
-#: ../src/eom-print-image-setup.c:880
+#: ../src/eom-print-image-setup.c:839
 msgid "Page Setup"
 msgstr "페이지 설정"
 
-#: ../src/eom-print-image-setup.c:881
+#: ../src/eom-print-image-setup.c:840
 msgid "The information for the page where the image will be printed"
 msgstr "그림을 인쇄할 페이지의 정보"
 
-#: ../src/eom-print-image-setup.c:914 ../src/eom-print-image-setup.c:928
+#: ../src/eom-print-image-setup.c:868
 msgid "Position"
 msgstr "위치"
 
-#: ../src/eom-print-image-setup.c:918 ../src/eom-print-image-setup.c:933
+#: ../src/eom-print-image-setup.c:872
 msgid "_Left:"
 msgstr "왼쪽(_L):"
 
-#: ../src/eom-print-image-setup.c:920 ../src/eom-print-image-setup.c:934
+#: ../src/eom-print-image-setup.c:874
 msgid "_Right:"
 msgstr "오른쪽(_R):"
 
-#: ../src/eom-print-image-setup.c:921 ../src/eom-print-image-setup.c:935
+#: ../src/eom-print-image-setup.c:875
 msgid "_Top:"
 msgstr "위(_T):"
 
-#: ../src/eom-print-image-setup.c:922 ../src/eom-print-image-setup.c:936
+#: ../src/eom-print-image-setup.c:876
 msgid "_Bottom:"
 msgstr "아래(_B):"
 
-#: ../src/eom-print-image-setup.c:939
+#: ../src/eom-print-image-setup.c:879
 msgid "C_enter:"
 msgstr "가운데(_E):"
 
-#: ../src/eom-print-image-setup.c:948
+#: ../src/eom-print-image-setup.c:888
 msgid "None"
 msgstr "없음"
 
-#: ../src/eom-print-image-setup.c:950
+#: ../src/eom-print-image-setup.c:890
 msgid "Horizontal"
 msgstr "가로 방향"
 
-#: ../src/eom-print-image-setup.c:952
+#: ../src/eom-print-image-setup.c:892
 msgid "Vertical"
 msgstr "세로 방향"
 
-#: ../src/eom-print-image-setup.c:954
+#: ../src/eom-print-image-setup.c:894
 msgid "Both"
 msgstr "양쪽"
 
-#: ../src/eom-print-image-setup.c:980 ../src/eom-print-image-setup.c:991
+#: ../src/eom-print-image-setup.c:910
 msgid "Size"
 msgstr "크기"
 
-#: ../src/eom-print-image-setup.c:983 ../src/eom-print-image-setup.c:996
+#: ../src/eom-print-image-setup.c:913
 msgid "_Width:"
 msgstr "너비(_W):"
 
-#: ../src/eom-print-image-setup.c:985 ../src/eom-print-image-setup.c:998
+#: ../src/eom-print-image-setup.c:915
 msgid "_Height:"
 msgstr "높이(_H):"
 
-#: ../src/eom-print-image-setup.c:1002
+#: ../src/eom-print-image-setup.c:918
 msgid "_Scaling:"
 msgstr "크기 조정(_S):"
 
-#: ../src/eom-print-image-setup.c:1026
+#: ../src/eom-print-image-setup.c:929
 msgid "_Unit:"
 msgstr "단위(_U):"
 
-#: ../src/eom-print-image-setup.c:1035
+#: ../src/eom-print-image-setup.c:938
 msgid "Millimeters"
 msgstr "밀리미터"
 
-#: ../src/eom-print-image-setup.c:1037
+#: ../src/eom-print-image-setup.c:940
 msgid "Inches"
 msgstr "인치"
 
-#: ../src/eom-print-image-setup.c:1074
+#: ../src/eom-print-image-setup.c:968
 msgid "Preview"
 msgstr "미리 보기"
 
@@ -934,12 +894,12 @@ msgstr "그대로"
 #. * Note that translating this doesn't guarantee that you get localized
 #. * digits. That needs support from your system and locale definition
 #. * too.
-#: ../src/eom-statusbar.c:134
+#: ../src/eom-statusbar.c:127
 #, c-format
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/eom-thumb-view.c:610
+#: ../src/eom-thumb-view.c:550
 msgid "Taken on"
 msgstr "가져오기"
 
@@ -962,31 +922,31 @@ msgstr " (잘못된 유니코드)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/eom-window.c:516
+#: ../src/eom-window.c:506
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i 픽셀  %s    %i%%"
 
-#: ../src/eom-window.c:817
+#: ../src/eom-window.c:807
 msgid "_Reload"
 msgstr "다시 읽기(_R)"
 
-#: ../src/eom-window.c:819 ../src/eom-window.c:2717
+#: ../src/eom-window.c:809 ../src/eom-window.c:2677
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "숨기기(_D)"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:829
+#: ../src/eom-window.c:819
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
 msgstr "\"%s\" 그림을 외부 프로그램에서 수정했습니다.\n다시 읽으시겠습니까?"
 
-#: ../src/eom-window.c:1002
+#: ../src/eom-window.c:988
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "선택한 그림을 열기위해 \"%s\"(을)를 사용합니다"
@@ -996,36 +956,36 @@ msgstr "선택한 그림을 열기위해 \"%s\"(을)를 사용합니다"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1158
+#: ../src/eom-window.c:1144
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "\"%s\" 그림을 저장하는 중 (%u/%u)"
 
-#: ../src/eom-window.c:1516
+#: ../src/eom-window.c:1502
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "\"%s\" 그림 여는중"
 
-#: ../src/eom-window.c:2214
+#: ../src/eom-window.c:2176
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
 msgstr "파일을 인쇄하는 데 오류가 발생했습니다:\n%s"
 
-#: ../src/eom-window.c:2476
+#: ../src/eom-window.c:2438
 msgid "Toolbar Editor"
 msgstr "도구 모음 편집기"
 
-#: ../src/eom-window.c:2479
+#: ../src/eom-window.c:2441
 msgid "_Reset to Default"
 msgstr "기본값으로 돌아가기(_R)"
 
-#: ../src/eom-window.c:2572
+#: ../src/eom-window.c:2532
 msgid "translator-credits"
 msgstr "남성현 <namsh@kldp.org>\n차영호 <ganadist@chollian.net>\n류창우 <cwryu@debian.org>\nMATE Desktop Environment Team <https://www.transifex.com/mate/teams/13566/ko/>"
 
-#: ../src/eom-window.c:2575
+#: ../src/eom-window.c:2535
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1033,7 +993,7 @@ msgid ""
 "any later version.\n"
 msgstr "이 프로그램은 자유 소프트웨어 입니다. 자유 소프트웨어 재단이 발표한 GNU 일반 공중 사용 허가서 버전 2 또는 (선택에 따라) 그 이상의 버전의 조항에 의거하여 재배포하거나 수정할 수 있습니다. \n"
 
-#: ../src/eom-window.c:2579
+#: ../src/eom-window.c:2539
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1041,51 +1001,51 @@ msgid ""
 "more details.\n"
 msgstr "마테 터미널은 유용하게 사용될 수 있으리라는 희망에서 배포되고 있지만, 특정한 목적에 맞는 적합성 여부나 판매용으로 사용할 수 있으리라는 묵시적인 보증을 포함한 어떠한 형태의 보증도 제공하지 않습니다. 보다 자세한 사항에 대해서는 GNU 일반 공중 사용 허가서를 참고하시기 바랍니다.\n"
 
-#: ../src/eom-window.c:2583
+#: ../src/eom-window.c:2543
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr "GNU 일반 공중 사용 허가서 사본을 이 프로그램과 받아야 합니다. 못받으셨다면 Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA에 요청하십시오."
 
-#: ../src/eom-window.c:2601
+#: ../src/eom-window.c:2561
 msgid "The MATE image viewer."
 msgstr "마테 그림 뷰어."
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2715
+#: ../src/eom-window.c:2675
 msgid "_Open Background Preferences"
 msgstr "배경 기본 설정 열기(_O)"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2731
+#: ../src/eom-window.c:2691
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
 msgstr "\"%s\" 그림을 데스크톱 배경으로 지정했습니다.\n모양을 수정하시겠습니까?"
 
-#: ../src/eom-window.c:3133
+#: ../src/eom-window.c:3089
 msgid "Saving image locally…"
 msgstr "그림을 로컬에 저장하는 중입니다…"
 
-#: ../src/eom-window.c:3213
+#: ../src/eom-window.c:3169
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
 msgstr "정말로 \"%s\"(을)를 \n휴지통에 옮기시겠습니까?"
 
-#: ../src/eom-window.c:3216
+#: ../src/eom-window.c:3172
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr "\"%s\"에 대한 휴지통이 없습니다. 이 그림을 완전히 제거하시겠습니까?"
 
-#: ../src/eom-window.c:3221
+#: ../src/eom-window.c:3177
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1095,408 +1055,412 @@ msgid_plural ""
 "the %d selected images to the trash?"
 msgstr[0] "정말로 선택한 그림 %d개를\n휴지통에 옮기시겠습니까?"
 
-#: ../src/eom-window.c:3226
+#: ../src/eom-window.c:3182
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
 msgstr "선택한 그림 중에 휴지통으로 옮기지 못해서 완전히 제거할 파일이 있습니다. 계속 하시겠습니까?"
 
-#: ../src/eom-window.c:3243 ../src/eom-window.c:3727 ../src/eom-window.c:3754
+#: ../src/eom-window.c:3199 ../src/eom-window.c:3683 ../src/eom-window.c:3710
 msgid "Move to _Trash"
 msgstr "휴지통으로 옮기기(_T)"
 
-#: ../src/eom-window.c:3245
+#: ../src/eom-window.c:3201
 msgid "_Do not ask again during this session"
 msgstr "이 세션에서 다시 묻지 않기(_D)"
 
-#: ../src/eom-window.c:3290 ../src/eom-window.c:3304
+#: ../src/eom-window.c:3246 ../src/eom-window.c:3260
 #, c-format
 msgid "Couldn't access trash."
 msgstr "휴지통에 접근할 수 없습니다."
 
-#: ../src/eom-window.c:3312
+#: ../src/eom-window.c:3268
 #, c-format
 msgid "Couldn't delete file"
 msgstr "파일을 삭제할 수 없습니다"
 
-#: ../src/eom-window.c:3409
+#: ../src/eom-window.c:3365
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "%s 그림을 삭제하는 데 오류가 발생했습니다"
 
-#: ../src/eom-window.c:3651
+#: ../src/eom-window.c:3607
 msgid "_Image"
 msgstr "그림(_I)"
 
-#: ../src/eom-window.c:3652
+#: ../src/eom-window.c:3608
 msgid "_Edit"
 msgstr "편집(_E)"
 
-#: ../src/eom-window.c:3653
+#: ../src/eom-window.c:3609
 msgid "_View"
 msgstr "보기(_V)"
 
-#: ../src/eom-window.c:3654
+#: ../src/eom-window.c:3610
 msgid "_Go"
 msgstr "이동(_G)"
 
-#: ../src/eom-window.c:3655
+#: ../src/eom-window.c:3611
 msgid "_Tools"
 msgstr "도구(_T)"
 
-#: ../src/eom-window.c:3656
+#: ../src/eom-window.c:3612
 msgid "_Help"
 msgstr "도움말(_H)"
 
-#: ../src/eom-window.c:3658
+#: ../src/eom-window.c:3614
 msgid "_Open…"
 msgstr "열기(_O)…"
 
-#: ../src/eom-window.c:3659
+#: ../src/eom-window.c:3615
 msgid "Open a file"
 msgstr "파일을 엽니다"
 
-#: ../src/eom-window.c:3661
+#: ../src/eom-window.c:3617
 msgid "_Close"
 msgstr "닫기(_C)"
 
-#: ../src/eom-window.c:3662
+#: ../src/eom-window.c:3618
 msgid "Close window"
 msgstr "창 닫기"
 
-#: ../src/eom-window.c:3664
+#: ../src/eom-window.c:3620
 msgid "T_oolbar"
 msgstr "도구 모음(_O)"
 
-#: ../src/eom-window.c:3665
+#: ../src/eom-window.c:3621
 msgid "Edit the application toolbar"
 msgstr "도구 모음을 고칩니다"
 
-#: ../src/eom-window.c:3667
+#: ../src/eom-window.c:3623
 msgid "Prefere_nces"
 msgstr "기본 설정(_N)"
 
-#: ../src/eom-window.c:3668
+#: ../src/eom-window.c:3624
 msgid "Preferences for Eye of MATE"
 msgstr "마테의 눈 기본 설정"
 
-#: ../src/eom-window.c:3670
+#: ../src/eom-window.c:3626
 msgid "_Contents"
 msgstr "차례(_C)"
 
-#: ../src/eom-window.c:3671
+#: ../src/eom-window.c:3627
 msgid "Help on this application"
 msgstr "이 프로그램에 대한 정보"
 
-#: ../src/eom-window.c:3674
+#: ../src/eom-window.c:3629
+msgid "_About"
+msgstr "정보(_A)"
+
+#: ../src/eom-window.c:3630
 msgid "About this application"
 msgstr "이 프로그램 정보"
 
-#: ../src/eom-window.c:3679
+#: ../src/eom-window.c:3635
 msgid "_Toolbar"
 msgstr "도구 모음(_T)"
 
-#: ../src/eom-window.c:3680
+#: ../src/eom-window.c:3636
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "현재 창의 도구 모음 표시 여부를 바꿉니다"
 
-#: ../src/eom-window.c:3682
+#: ../src/eom-window.c:3638
 msgid "_Statusbar"
 msgstr "상태 표시줄(_S)"
 
-#: ../src/eom-window.c:3683
+#: ../src/eom-window.c:3639
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "현재 창의 상태 표시줄 표시 여부를 바꿉니다"
 
-#: ../src/eom-window.c:3685
+#: ../src/eom-window.c:3641
 msgid "_Image Collection"
 msgstr "그림 모음(_I)"
 
-#: ../src/eom-window.c:3686
+#: ../src/eom-window.c:3642
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "현재 창의 그림 모음 창 보기 여부를 바꿉니다"
 
-#: ../src/eom-window.c:3688
+#: ../src/eom-window.c:3644
 msgid "Side _Pane"
 msgstr "가장자리 창(_P)"
 
-#: ../src/eom-window.c:3689
+#: ../src/eom-window.c:3645
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "현재 창에서 가장자리 창을 보기 여부를 바꿉니다"
 
-#: ../src/eom-window.c:3694
+#: ../src/eom-window.c:3650
 msgid "_Save"
 msgstr "저장(_S)"
 
-#: ../src/eom-window.c:3695
+#: ../src/eom-window.c:3651
 msgid "Save changes in currently selected images"
 msgstr "현재 선택한 그림의 바뀐 사항을 저장합니다"
 
-#: ../src/eom-window.c:3697
+#: ../src/eom-window.c:3653
 msgid "Open _with"
 msgstr "다른 프로그램으로 열기(_W)"
 
-#: ../src/eom-window.c:3698
+#: ../src/eom-window.c:3654
 msgid "Open the selected image with a different application"
 msgstr "선택한 그림을 다른 프로그램에서 엽니다"
 
-#: ../src/eom-window.c:3700
+#: ../src/eom-window.c:3656
 msgid "Save _As…"
 msgstr "다른 이름으로 저장(_A)…"
 
-#: ../src/eom-window.c:3701
+#: ../src/eom-window.c:3657
 msgid "Save the selected images with a different name"
 msgstr "선택한 그림을 다른 이름으로 저장합니다"
 
-#: ../src/eom-window.c:3703
+#: ../src/eom-window.c:3659
 msgid "_Print…"
 msgstr "인쇄(_P)…"
 
-#: ../src/eom-window.c:3704
+#: ../src/eom-window.c:3660
 msgid "Print the selected image"
 msgstr "선택한 그림을 인쇄합니다"
 
-#: ../src/eom-window.c:3706
+#: ../src/eom-window.c:3662
 msgid "Prope_rties"
 msgstr "속성(_R)"
 
-#: ../src/eom-window.c:3707
+#: ../src/eom-window.c:3663
 msgid "Show the properties and metadata of the selected image"
 msgstr "선택한 그림의 속성과 메타데이터를 봅니다"
 
-#: ../src/eom-window.c:3709
+#: ../src/eom-window.c:3665
 msgid "_Undo"
 msgstr "실행 취소(_U)"
 
-#: ../src/eom-window.c:3710
+#: ../src/eom-window.c:3666
 msgid "Undo the last change in the image"
 msgstr "그림에서 마지막에 바꾼 사항을 실행 취소합니다"
 
-#: ../src/eom-window.c:3712
+#: ../src/eom-window.c:3668
 msgid "Flip _Horizontal"
 msgstr "가로 방향으로 뒤집기(_H)"
 
-#: ../src/eom-window.c:3713
+#: ../src/eom-window.c:3669
 msgid "Mirror the image horizontally"
 msgstr "그림을 가로 방향으로 뒤바꿉니다"
 
-#: ../src/eom-window.c:3715
+#: ../src/eom-window.c:3671
 msgid "Flip _Vertical"
 msgstr "세로 방향으로 뒤집기(_V)"
 
-#: ../src/eom-window.c:3716
+#: ../src/eom-window.c:3672
 msgid "Mirror the image vertically"
 msgstr "그림을 세로 방향으로 뒤바꿉니다"
 
-#: ../src/eom-window.c:3718
+#: ../src/eom-window.c:3674
 msgid "_Rotate Clockwise"
 msgstr "시계 방향 회전(_R)"
 
-#: ../src/eom-window.c:3719
+#: ../src/eom-window.c:3675
 msgid "Rotate the image 90 degrees to the right"
 msgstr "그림을 오른쪽 90도만큼 회전합니다"
 
-#: ../src/eom-window.c:3721
+#: ../src/eom-window.c:3677
 msgid "Rotate Counterc_lockwise"
 msgstr "시계 반대 방향 회전(_L)"
 
-#: ../src/eom-window.c:3722
+#: ../src/eom-window.c:3678
 msgid "Rotate the image 90 degrees to the left"
 msgstr "그림을 왼쪽 90도만큼 회전합니다"
 
-#: ../src/eom-window.c:3724
+#: ../src/eom-window.c:3680
 msgid "Set as _Desktop Background"
 msgstr "바탕 화면 배경으로 설정(_D)"
 
-#: ../src/eom-window.c:3725
+#: ../src/eom-window.c:3681
 msgid "Set the selected image as the desktop background"
 msgstr "선택한 그림을 바탕 화면 배경으로 설정합니다"
 
-#: ../src/eom-window.c:3728
+#: ../src/eom-window.c:3684
 msgid "Move the selected image to the trash folder"
 msgstr "선택한 그림을 휴지통 폴더로 옮깁니다"
 
-#: ../src/eom-window.c:3730
+#: ../src/eom-window.c:3686
 msgid "_Copy"
 msgstr "복사(_C)"
 
-#: ../src/eom-window.c:3731
+#: ../src/eom-window.c:3687
 msgid "Copy the selected image to the clipboard"
 msgstr "선택한 그림을 클립보드에 복사"
 
-#: ../src/eom-window.c:3733 ../src/eom-window.c:3745 ../src/eom-window.c:3748
+#: ../src/eom-window.c:3689 ../src/eom-window.c:3701 ../src/eom-window.c:3704
 msgid "_Zoom In"
 msgstr "확대(_Z)"
 
-#: ../src/eom-window.c:3734 ../src/eom-window.c:3746
+#: ../src/eom-window.c:3690 ../src/eom-window.c:3702
 msgid "Enlarge the image"
 msgstr "그림을 크게 확대해서 봅니다"
 
-#: ../src/eom-window.c:3736 ../src/eom-window.c:3751
+#: ../src/eom-window.c:3692 ../src/eom-window.c:3707
 msgid "Zoom _Out"
 msgstr "축소(_O)"
 
-#: ../src/eom-window.c:3737 ../src/eom-window.c:3749 ../src/eom-window.c:3752
+#: ../src/eom-window.c:3693 ../src/eom-window.c:3705 ../src/eom-window.c:3708
 msgid "Shrink the image"
 msgstr "그림을 작게 축소해서 봅니다"
 
-#: ../src/eom-window.c:3739
+#: ../src/eom-window.c:3695
 msgid "_Normal Size"
 msgstr "보통 크기(_N)"
 
-#: ../src/eom-window.c:3740
+#: ../src/eom-window.c:3696
 msgid "Show the image at its normal size"
 msgstr "그림을 원래 크기로 봅니다"
 
-#: ../src/eom-window.c:3742
+#: ../src/eom-window.c:3698
 msgid "_Best Fit"
 msgstr "알맞게 맞추기(_B)"
 
-#: ../src/eom-window.c:3743
+#: ../src/eom-window.c:3699
 msgid "Fit the image to the window"
 msgstr "그림을 창 크기에 맞춥니다"
 
-#: ../src/eom-window.c:3760
+#: ../src/eom-window.c:3716
 msgid "_Fullscreen"
 msgstr "전체 화면(_F)"
 
-#: ../src/eom-window.c:3761
+#: ../src/eom-window.c:3717
 msgid "Show the current image in fullscreen mode"
 msgstr "현재 그림을 전체화면 모드에서 봅니다"
 
-#: ../src/eom-window.c:3763
+#: ../src/eom-window.c:3719
 msgid "Pause Slideshow"
 msgstr "슬라이드 쇼 일시 정지"
 
-#: ../src/eom-window.c:3764
+#: ../src/eom-window.c:3720
 msgid "Pause or resume the slideshow"
 msgstr "슬라이드 쇼를 잠시 멈추거나 재개합니다"
 
-#: ../src/eom-window.c:3769 ../src/eom-window.c:3784
+#: ../src/eom-window.c:3725 ../src/eom-window.c:3740
 msgid "_Previous Image"
 msgstr "이전 그림(_P)"
 
-#: ../src/eom-window.c:3770
+#: ../src/eom-window.c:3726
 msgid "Go to the previous image of the collection"
 msgstr "그림 모음의 이전 그림으로 이동합니다"
 
-#: ../src/eom-window.c:3772
+#: ../src/eom-window.c:3728
 msgid "_Next Image"
 msgstr "다음 그림(_N)"
 
-#: ../src/eom-window.c:3773
+#: ../src/eom-window.c:3729
 msgid "Go to the next image of the collection"
 msgstr "그림 모음의 다음 그림으로 이동합니다"
 
-#: ../src/eom-window.c:3775 ../src/eom-window.c:3787
+#: ../src/eom-window.c:3731 ../src/eom-window.c:3743
 msgid "_First Image"
 msgstr "처음 그림(_F)"
 
-#: ../src/eom-window.c:3776
+#: ../src/eom-window.c:3732
 msgid "Go to the first image of the collection"
 msgstr "그림 모음의 처음 그림으로 이동합니다"
 
-#: ../src/eom-window.c:3778 ../src/eom-window.c:3790
+#: ../src/eom-window.c:3734 ../src/eom-window.c:3746
 msgid "_Last Image"
 msgstr "마지막 그림(_L)"
 
-#: ../src/eom-window.c:3779
+#: ../src/eom-window.c:3735
 msgid "Go to the last image of the collection"
 msgstr "그림 모음의 마지막 그림으로 이동합니다"
 
-#: ../src/eom-window.c:3781
+#: ../src/eom-window.c:3737
 msgid "_Random Image"
 msgstr "임의의 그림(_R)"
 
-#: ../src/eom-window.c:3782
+#: ../src/eom-window.c:3738
 msgid "Go to a random image of the collection"
 msgstr "그림 모음에서 임의의 그림으로 이동합니다"
 
-#: ../src/eom-window.c:3796
+#: ../src/eom-window.c:3752
 msgid "S_lideshow"
 msgstr "슬라이드 쇼(_L)"
 
-#: ../src/eom-window.c:3797
+#: ../src/eom-window.c:3753
 msgid "Start a slideshow view of the images"
 msgstr "그림으로 슬라이드 쇼를 시작합니다."
 
-#: ../src/eom-window.c:3863
+#: ../src/eom-window.c:3819
 msgid "Previous"
 msgstr "이전"
 
-#: ../src/eom-window.c:3867
+#: ../src/eom-window.c:3823
 msgid "Next"
 msgstr "다음"
 
-#: ../src/eom-window.c:3871
+#: ../src/eom-window.c:3827
 msgid "Right"
 msgstr "오른쪽"
 
-#: ../src/eom-window.c:3874
+#: ../src/eom-window.c:3830
 msgid "Left"
 msgstr "왼쪽"
 
-#: ../src/eom-window.c:3877
+#: ../src/eom-window.c:3833
 msgid "In"
 msgstr "확대"
 
-#: ../src/eom-window.c:3880
+#: ../src/eom-window.c:3836
 msgid "Out"
 msgstr "축소"
 
-#: ../src/eom-window.c:3883
+#: ../src/eom-window.c:3839
 msgid "Normal"
 msgstr "보통"
 
-#: ../src/eom-window.c:3886
+#: ../src/eom-window.c:3842
 msgid "Fit"
 msgstr "맞추기"
 
-#: ../src/eom-window.c:3889
+#: ../src/eom-window.c:3845
 msgid "Collection"
 msgstr "그림 모음"
 
-#: ../src/eom-window.c:3892
+#: ../src/eom-window.c:3848
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "휴지통"
 
-#: ../src/eom-window.c:4245
+#: ../src/eom-window.c:4197
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "%s 프로그램으로 현재 그림 편집"
 
-#: ../src/eom-window.c:4247
+#: ../src/eom-window.c:4199
 msgid "Edit Image"
 msgstr "그림 편집"
 
-#: ../src/main.c:80
+#: ../src/main.c:77
 msgid "Open in fullscreen mode"
 msgstr "전체화면 모드로 열기"
 
-#: ../src/main.c:81
+#: ../src/main.c:78
 msgid "Disable image collection"
 msgstr "그림 모음 사용하지 않음"
 
-#: ../src/main.c:82
+#: ../src/main.c:79
 msgid "Open in slideshow mode"
 msgstr "슬라이드쇼 모드로 열기"
 
-#: ../src/main.c:84
+#: ../src/main.c:81
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "현재 실행 중인 창을 사용하지 않고 새로 시작합니다"
 
-#: ../src/main.c:87
+#: ../src/main.c:84
 msgid "Show the application's version"
 msgstr "프로그램 버전 표시"
 
-#: ../src/main.c:88
+#: ../src/main.c:85
 msgid "[FILE…]"
 msgstr "[파일…]"
 
 #. I18N: The '%s' is replaced with eom's command name.
-#: ../src/main.c:219
+#: ../src/main.c:210
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "전체 명령어 옵션 목록을 보려면 '%s --help' 명령을 실행하십시오."

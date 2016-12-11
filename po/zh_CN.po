@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-13 16:02+0300\n"
-"PO-Revision-Date: 2015-11-13 01:32+0000\n"
-"Last-Translator: Mingcong Bai <jeffbai@aosc.xyz>\n"
+"POT-Creation-Date: 2016-12-08 13:07+0300\n"
+"PO-Revision-Date: 2016-12-08 10:09+0000\n"
+"Last-Translator: monsta <monsta@inbox.ru>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/mate/MATE/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,40 +27,40 @@ msgstr ""
 #. * produce duplicates, but don't worry about it. If your language
 #. * normally has a mnemonic at the start, please use the _. If not,
 #. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:948
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:924
 #, c-format
 msgid "Show “_%s”"
 msgstr "显示“%s”"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1416
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1390
 msgid "_Move on Toolbar"
 msgstr "在工具栏上移动(_M)"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1417
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1391
 msgid "Move the selected item on the toolbar"
 msgstr "将选中项在工具栏上移动"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1418
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1392
 msgid "_Remove from Toolbar"
 msgstr "从工具栏删除(_R)"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1419
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1393
 msgid "Remove the selected item from the toolbar"
 msgstr "从工具栏中删除选中项目"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1394
 msgid "_Delete Toolbar"
 msgstr "删除工具栏(_D)"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1395
 msgid "Remove the selected toolbar"
 msgstr "删除选中的工具栏"
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:515
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:487
 msgid "Separator"
 msgstr "分隔符"
 
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2596
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2556
 msgid "Eye of MATE"
 msgstr "MATE 之眼"
 
@@ -75,7 +75,7 @@ msgid ""
 "subsequent images in the directory the image was loaded from. </p>"
 msgstr "<p> MATE 之眼是一个简易的图像浏览器。图像完全载入后，你可以缩放和旋转图像，也可以显示存放于某个目录中的图像序列。</p>"
 
-#: ../data/eom.desktop.in.in.h:1 ../src/main.c:73 ../src/main.c:275
+#: ../data/eom.desktop.in.in.h:1 ../src/main.c:70 ../src/main.c:262
 msgid "Eye of MATE Image Viewer"
 msgstr "MATE 之眼图像查看器"
 
@@ -544,29 +544,29 @@ msgid ""
 "plugin."
 msgstr "已激活插件列表。它并不包含激活插件的位置。参见 .eom-plugin 文件以获得相应插件的位置。"
 
-#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:1
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
 msgid "Fullscreen with double-click"
 msgstr "双击切换全屏"
 
-#: ../plugins/fullscreen/fullscreen.eom-plugin.desktop.in.h:2
+#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
 msgid "Activate fullscreen mode with double-click"
 msgstr "双击启用全屏模式"
 
-#: ../plugins/reload/eom-reload-plugin.c:38
-#: ../plugins/reload/reload.eom-plugin.desktop.in.h:1
+#: ../plugins/reload/eom-reload-plugin.c:44
+#: ../plugins/reload/reload.plugin.desktop.in.h:1
 msgid "Reload Image"
 msgstr "重新装入图像"
 
-#: ../plugins/reload/eom-reload-plugin.c:38
-#: ../plugins/reload/reload.eom-plugin.desktop.in.h:2
+#: ../plugins/reload/eom-reload-plugin.c:44
+#: ../plugins/reload/reload.plugin.desktop.in.h:2
 msgid "Reload current image"
 msgstr "重新装入当前图像"
 
-#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:1
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
 msgid "Date in statusbar"
 msgstr "在状态栏中显示日期"
 
-#: ../plugins/statusbar-date/statusbar-date.eom-plugin.desktop.in.h:2
+#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
 msgid "Shows the image date in the window statusbar"
 msgstr "在窗口状态栏中显示图像日期"
 
@@ -574,84 +574,84 @@ msgstr "在窗口状态栏中显示图像日期"
 msgid "Running in fullscreen mode"
 msgstr "在全屏模式中运行"
 
-#: ../src/eom-close-confirmation-dialog.c:164
+#: ../src/eom-close-confirmation-dialog.c:159
 msgid "Close _without Saving"
 msgstr "关闭而不保存(_W)"
 
-#: ../src/eom-close-confirmation-dialog.c:197
+#: ../src/eom-close-confirmation-dialog.c:192
 msgid "Question"
 msgstr "问题"
 
-#: ../src/eom-close-confirmation-dialog.c:378
+#: ../src/eom-close-confirmation-dialog.c:373
 msgid "If you don't save, your changes will be lost."
 msgstr "如果不保存，您的更改将会丢失。"
 
-#: ../src/eom-close-confirmation-dialog.c:421
+#: ../src/eom-close-confirmation-dialog.c:412
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "在关闭之前保存更改到图像“%s”？"
 
-#: ../src/eom-close-confirmation-dialog.c:628
+#: ../src/eom-close-confirmation-dialog.c:615
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] "还有 %d 幅图像有没有保存的更改。在关闭之前保存更改？"
 
-#: ../src/eom-close-confirmation-dialog.c:645
+#: ../src/eom-close-confirmation-dialog.c:632
 msgid "S_elect the images you want to save:"
 msgstr "选择您想保存的图像(_E)："
 
 #. Secondary label
-#: ../src/eom-close-confirmation-dialog.c:667
+#: ../src/eom-close-confirmation-dialog.c:654
 msgid "If you don't save, all your changes will be lost."
 msgstr "如果不保存，您的所有更改都会丢失。"
 
-#: ../src/eom-file-chooser.c:132
+#: ../src/eom-file-chooser.c:127
 msgid "File format is unknown or unsupported"
 msgstr "文件格式未知或不支持"
 
-#: ../src/eom-file-chooser.c:137
+#: ../src/eom-file-chooser.c:132
 msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
 msgstr "MATE 之眼无法从文件名推测出被支持的可写入的文件格式。"
 
-#: ../src/eom-file-chooser.c:138
+#: ../src/eom-file-chooser.c:133
 msgid "Please try a different file extension like .png or .jpg."
 msgstr "请尝试一个不同的扩展名如 .png 或 .jpg。"
 
-#: ../src/eom-file-chooser.c:170
+#: ../src/eom-file-chooser.c:165
 msgid "All Files"
 msgstr "全部文件"
 
-#: ../src/eom-file-chooser.c:175
+#: ../src/eom-file-chooser.c:170
 msgid "All Images"
 msgstr "全部图像"
 
 #. Filter name: First description then file extension, eg. "The PNG-Format
 #. (*.png)".
-#: ../src/eom-file-chooser.c:196
+#: ../src/eom-file-chooser.c:191
 #, c-format
 msgid "%s (*.%s)"
 msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
-#: ../src/eom-file-chooser.c:292 ../src/eom-properties-dialog.c:137
-#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:582
+#: ../src/eom-file-chooser.c:287 ../src/eom-properties-dialog.c:137
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:522
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "像素"
 
-#: ../src/eom-file-chooser.c:443
+#: ../src/eom-file-chooser.c:438
 msgid "Open Image"
 msgstr "打开图像"
 
-#: ../src/eom-file-chooser.c:451
+#: ../src/eom-file-chooser.c:446
 msgid "Save Image"
 msgstr "保存图像"
 
-#: ../src/eom-file-chooser.c:459
+#: ../src/eom-file-chooser.c:454
 msgid "Open Folder"
 msgstr "打开文件夹"
 
@@ -695,21 +695,21 @@ msgstr "无法创建临时文件来保存 %s"
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "无法分配内存装入 JPEG 文件"
 
-#: ../src/eom-error-message-area.c:124
+#: ../src/eom-error-message-area.c:116
 msgid "_Retry"
 msgstr "重试(_R)"
 
-#: ../src/eom-error-message-area.c:167
+#: ../src/eom-error-message-area.c:159
 #, c-format
 msgid "Could not load image '%s'."
 msgstr "无法装入图像“%s”。"
 
-#: ../src/eom-error-message-area.c:209
+#: ../src/eom-error-message-area.c:201
 #, c-format
 msgid "No images found in '%s'."
 msgstr "“%s”中无图像。"
 
-#: ../src/eom-error-message-area.c:216
+#: ../src/eom-error-message-area.c:208
 msgid "The given locations contain no images."
 msgstr "给定的位置不包含图像。"
 
@@ -768,135 +768,95 @@ msgstr "%Y年%m月%d日 %X"
 msgid "%a, %d %B %Y"
 msgstr "%Y年%m月%d日%A"
 
-#: ../src/eom-plugin-manager.c:55
-msgid "Plugin"
-msgstr "插件"
-
-#: ../src/eom-plugin-manager.c:56
-msgid "Enabled"
-msgstr "已启用"
-
-#: ../src/eom-plugin-manager.c:509 ../src/eom-window.c:3673
-msgid "_About"
-msgstr "关于(_A)"
-
-#: ../src/eom-plugin-manager.c:517
-msgid "C_onfigure"
-msgstr "配置(_O)"
-
-#: ../src/eom-plugin-manager.c:527
-msgid "A_ctivate"
-msgstr "激活(_C)"
-
-#: ../src/eom-plugin-manager.c:539
-msgid "Ac_tivate All"
-msgstr "全部激活(_T)"
-
-#: ../src/eom-plugin-manager.c:544
-msgid "_Deactivate All"
-msgstr "全部禁用(_D)"
-
-#: ../src/eom-plugin-manager.c:853
-msgid "Active _Plugins:"
-msgstr "活动插件(_P)："
-
-#: ../src/eom-plugin-manager.c:890
-msgid "_About Plugin"
-msgstr "关于插件(_A)"
-
-#: ../src/eom-plugin-manager.c:897
-msgid "C_onfigure Plugin"
-msgstr "配置插件(_O)"
-
 #: ../src/eom-print.c:219
 msgid "Image Settings"
 msgstr "图像设置"
 
-#: ../src/eom-print-image-setup.c:873
+#: ../src/eom-print-image-setup.c:832
 msgid "Image"
 msgstr "图像"
 
-#: ../src/eom-print-image-setup.c:874
+#: ../src/eom-print-image-setup.c:833
 msgid "The image whose printing properties will be set up"
 msgstr "要设置打印属性的图像"
 
-#: ../src/eom-print-image-setup.c:880
+#: ../src/eom-print-image-setup.c:839
 msgid "Page Setup"
 msgstr "页面设置"
 
-#: ../src/eom-print-image-setup.c:881
+#: ../src/eom-print-image-setup.c:840
 msgid "The information for the page where the image will be printed"
 msgstr "即将用来打印图像的页面的信息"
 
-#: ../src/eom-print-image-setup.c:914 ../src/eom-print-image-setup.c:928
+#: ../src/eom-print-image-setup.c:868
 msgid "Position"
 msgstr "位置"
 
-#: ../src/eom-print-image-setup.c:918 ../src/eom-print-image-setup.c:933
+#: ../src/eom-print-image-setup.c:872
 msgid "_Left:"
 msgstr "左(_L)："
 
-#: ../src/eom-print-image-setup.c:920 ../src/eom-print-image-setup.c:934
+#: ../src/eom-print-image-setup.c:874
 msgid "_Right:"
 msgstr "右(_R)："
 
-#: ../src/eom-print-image-setup.c:921 ../src/eom-print-image-setup.c:935
+#: ../src/eom-print-image-setup.c:875
 msgid "_Top:"
 msgstr "上(_T)："
 
-#: ../src/eom-print-image-setup.c:922 ../src/eom-print-image-setup.c:936
+#: ../src/eom-print-image-setup.c:876
 msgid "_Bottom:"
 msgstr "下(_B)："
 
-#: ../src/eom-print-image-setup.c:939
+#: ../src/eom-print-image-setup.c:879
 msgid "C_enter:"
 msgstr "中(_E)："
 
-#: ../src/eom-print-image-setup.c:948
+#: ../src/eom-print-image-setup.c:888
 msgid "None"
 msgstr "无"
 
-#: ../src/eom-print-image-setup.c:950
+#: ../src/eom-print-image-setup.c:890
 msgid "Horizontal"
 msgstr "水平"
 
-#: ../src/eom-print-image-setup.c:952
+#: ../src/eom-print-image-setup.c:892
 msgid "Vertical"
 msgstr "垂直"
 
-#: ../src/eom-print-image-setup.c:954
+#: ../src/eom-print-image-setup.c:894
 msgid "Both"
 msgstr "双向"
 
-#: ../src/eom-print-image-setup.c:980 ../src/eom-print-image-setup.c:991
+#: ../src/eom-print-image-setup.c:910
 msgid "Size"
 msgstr "大小"
 
-#: ../src/eom-print-image-setup.c:983 ../src/eom-print-image-setup.c:996
+#: ../src/eom-print-image-setup.c:913
 msgid "_Width:"
 msgstr "宽度(_W)："
 
-#: ../src/eom-print-image-setup.c:985 ../src/eom-print-image-setup.c:998
+#: ../src/eom-print-image-setup.c:915
 msgid "_Height:"
 msgstr "高度(_H)："
 
-#: ../src/eom-print-image-setup.c:1002
+#: ../src/eom-print-image-setup.c:918
 msgid "_Scaling:"
 msgstr "缩放(_S)："
 
-#: ../src/eom-print-image-setup.c:1026
+#: ../src/eom-print-image-setup.c:929
 msgid "_Unit:"
 msgstr "单位(_U)："
 
-#: ../src/eom-print-image-setup.c:1035
+#: ../src/eom-print-image-setup.c:938
 msgid "Millimeters"
 msgstr "毫米"
 
-#: ../src/eom-print-image-setup.c:1037
+#: ../src/eom-print-image-setup.c:940
 msgid "Inches"
 msgstr "英寸"
 
-#: ../src/eom-print-image-setup.c:1074
+#: ../src/eom-print-image-setup.c:968
 msgid "Preview"
 msgstr "预览"
 
@@ -933,12 +893,12 @@ msgstr "原样"
 #. * Note that translating this doesn't guarantee that you get localized
 #. * digits. That needs support from your system and locale definition
 #. * too.
-#: ../src/eom-statusbar.c:134
+#: ../src/eom-statusbar.c:127
 #, c-format
 msgid "%d / %d"
 msgstr "第 %d 张，共 %d 张"
 
-#: ../src/eom-thumb-view.c:610
+#: ../src/eom-thumb-view.c:550
 msgid "Taken on"
 msgstr "摄于"
 
@@ -961,31 +921,31 @@ msgstr " (无效的 Unicode)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/eom-window.c:516
+#: ../src/eom-window.c:506
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i 像素  %s    %i%%"
 
-#: ../src/eom-window.c:817
+#: ../src/eom-window.c:807
 msgid "_Reload"
 msgstr "重新载入(_R)"
 
-#: ../src/eom-window.c:819 ../src/eom-window.c:2717
+#: ../src/eom-window.c:809 ../src/eom-window.c:2677
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "隐藏(_D)"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:829
+#: ../src/eom-window.c:819
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
 msgstr "图片 “%s” 已被外部程序修改。\n您想重新载入吗？"
 
-#: ../src/eom-window.c:1002
+#: ../src/eom-window.c:988
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "使用“%s”打开选中图像"
@@ -995,36 +955,36 @@ msgstr "使用“%s”打开选中图像"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1158
+#: ../src/eom-window.c:1144
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "保存图像“%s”(第%u个，共%u个)"
 
-#: ../src/eom-window.c:1516
+#: ../src/eom-window.c:1502
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "正在打开图像“%s”"
 
-#: ../src/eom-window.c:2214
+#: ../src/eom-window.c:2176
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
 msgstr "打印文件出错：\n%s"
 
-#: ../src/eom-window.c:2476
+#: ../src/eom-window.c:2438
 msgid "Toolbar Editor"
 msgstr "工具栏编辑器"
 
-#: ../src/eom-window.c:2479
+#: ../src/eom-window.c:2441
 msgid "_Reset to Default"
 msgstr "重设为默认值(_R)"
 
-#: ../src/eom-window.c:2572
+#: ../src/eom-window.c:2532
 msgid "translator-credits"
 msgstr "开源软件国际化之简体中文组\nYangZhang <zyangmath@gmail.com>, 2008\nXiyue Deng <manphiz@gmail.com>, 2009\nYunQiang Su <wzssyqa@gmail.com> 2010"
 
-#: ../src/eom-window.c:2575
+#: ../src/eom-window.c:2535
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1032,7 +992,7 @@ msgid ""
 "any later version.\n"
 msgstr "此程序是自由软件；您可以按照自由软件基金会所发表的 GNU GPL 协议自由发放和/或修改它；GPL 协议应该采用第二版或您所喜欢的第二版之后的任何版本。\n"
 
-#: ../src/eom-window.c:2579
+#: ../src/eom-window.c:2539
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1040,51 +1000,51 @@ msgid ""
 "more details.\n"
 msgstr "此程序发表的目的是希望它能够对您有用，但我们没有任何保证；对于以任何用途使用它所造成的任何直接或间接后果都不承担任何责任。请参看 GNU GPL 协议中的细节。\n"
 
-#: ../src/eom-window.c:2583
+#: ../src/eom-window.c:2543
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr "你应该已经随本程序一起收到一份 GNU 通用公共许可证副本；如果没有，你可以写信给 \"\"the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, \"\"MA 02110-1301, USA \""
 
-#: ../src/eom-window.c:2601
+#: ../src/eom-window.c:2561
 msgid "The MATE image viewer."
 msgstr "MATE 之眼图像查看器。"
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2715
+#: ../src/eom-window.c:2675
 msgid "_Open Background Preferences"
 msgstr "打开背景首选项(_O)"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2731
+#: ../src/eom-window.c:2691
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
 msgstr "“%s” 这张图已设为桌面背景。\n您想修改它的外观吗？"
 
-#: ../src/eom-window.c:3133
+#: ../src/eom-window.c:3089
 msgid "Saving image locally…"
 msgstr "本地保存图像..."
 
-#: ../src/eom-window.c:3213
+#: ../src/eom-window.c:3169
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
 msgstr "您真的想要将“%s”\n移至回收站吗？"
 
-#: ../src/eom-window.c:3216
+#: ../src/eom-window.c:3172
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr "无法找到可用于“%s”的回收站。您想要将此图片永久移除吗？"
 
-#: ../src/eom-window.c:3221
+#: ../src/eom-window.c:3177
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1094,408 +1054,412 @@ msgid_plural ""
 "the %d selected images to the trash?"
 msgstr[0] "您真的想要将 %d 个\n选中的图像移至回收站吗？"
 
-#: ../src/eom-window.c:3226
+#: ../src/eom-window.c:3182
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
 msgstr "有些所选择的图片无法移动到回收站并将永久移除。您确定要这样进行吗？"
 
-#: ../src/eom-window.c:3243 ../src/eom-window.c:3727 ../src/eom-window.c:3754
+#: ../src/eom-window.c:3199 ../src/eom-window.c:3683 ../src/eom-window.c:3710
 msgid "Move to _Trash"
 msgstr "移至回收站(_T)"
 
-#: ../src/eom-window.c:3245
+#: ../src/eom-window.c:3201
 msgid "_Do not ask again during this session"
 msgstr "在这个会话期间不再询问(_D)"
 
-#: ../src/eom-window.c:3290 ../src/eom-window.c:3304
+#: ../src/eom-window.c:3246 ../src/eom-window.c:3260
 #, c-format
 msgid "Couldn't access trash."
 msgstr "无法访问回收站。"
 
-#: ../src/eom-window.c:3312
+#: ../src/eom-window.c:3268
 #, c-format
 msgid "Couldn't delete file"
 msgstr "无法删除文件"
 
-#: ../src/eom-window.c:3409
+#: ../src/eom-window.c:3365
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "删除图像 %s 出错"
 
-#: ../src/eom-window.c:3651
+#: ../src/eom-window.c:3607
 msgid "_Image"
 msgstr "图像(_I)"
 
-#: ../src/eom-window.c:3652
+#: ../src/eom-window.c:3608
 msgid "_Edit"
 msgstr "编辑(_E)"
 
-#: ../src/eom-window.c:3653
+#: ../src/eom-window.c:3609
 msgid "_View"
 msgstr "查看(_V)"
 
-#: ../src/eom-window.c:3654
+#: ../src/eom-window.c:3610
 msgid "_Go"
 msgstr "转到(_G)"
 
-#: ../src/eom-window.c:3655
+#: ../src/eom-window.c:3611
 msgid "_Tools"
 msgstr "工具(_T)"
 
-#: ../src/eom-window.c:3656
+#: ../src/eom-window.c:3612
 msgid "_Help"
 msgstr "帮助(_H)"
 
-#: ../src/eom-window.c:3658
+#: ../src/eom-window.c:3614
 msgid "_Open…"
 msgstr "打开(_O)..."
 
-#: ../src/eom-window.c:3659
+#: ../src/eom-window.c:3615
 msgid "Open a file"
 msgstr "打开一个文件"
 
-#: ../src/eom-window.c:3661
+#: ../src/eom-window.c:3617
 msgid "_Close"
 msgstr "关闭(_C)"
 
-#: ../src/eom-window.c:3662
+#: ../src/eom-window.c:3618
 msgid "Close window"
 msgstr "关闭窗口"
 
-#: ../src/eom-window.c:3664
+#: ../src/eom-window.c:3620
 msgid "T_oolbar"
 msgstr "工具栏(_O)"
 
-#: ../src/eom-window.c:3665
+#: ../src/eom-window.c:3621
 msgid "Edit the application toolbar"
 msgstr "编辑应用程序工具栏"
 
-#: ../src/eom-window.c:3667
+#: ../src/eom-window.c:3623
 msgid "Prefere_nces"
 msgstr "首选项(_N)"
 
-#: ../src/eom-window.c:3668
+#: ../src/eom-window.c:3624
 msgid "Preferences for Eye of MATE"
 msgstr "MATE 之眼的首选项"
 
-#: ../src/eom-window.c:3670
+#: ../src/eom-window.c:3626
 msgid "_Contents"
 msgstr "内容(_C)"
 
-#: ../src/eom-window.c:3671
+#: ../src/eom-window.c:3627
 msgid "Help on this application"
 msgstr "关于此应用程序的帮助"
 
-#: ../src/eom-window.c:3674
+#: ../src/eom-window.c:3629
+msgid "_About"
+msgstr "关于(_A)"
+
+#: ../src/eom-window.c:3630
 msgid "About this application"
 msgstr "关于此应用程序"
 
-#: ../src/eom-window.c:3679
+#: ../src/eom-window.c:3635
 msgid "_Toolbar"
 msgstr "工具栏(_T)"
 
-#: ../src/eom-window.c:3680
+#: ../src/eom-window.c:3636
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "更改当前窗口工具栏的可见性"
 
-#: ../src/eom-window.c:3682
+#: ../src/eom-window.c:3638
 msgid "_Statusbar"
 msgstr "状态栏(_S)"
 
-#: ../src/eom-window.c:3683
+#: ../src/eom-window.c:3639
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "更改当前窗口状态栏的可见性"
 
-#: ../src/eom-window.c:3685
+#: ../src/eom-window.c:3641
 msgid "_Image Collection"
 msgstr "图集 (_I)"
 
-#: ../src/eom-window.c:3686
+#: ../src/eom-window.c:3642
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "更改当前窗口中图集面板的可见性"
 
-#: ../src/eom-window.c:3688
+#: ../src/eom-window.c:3644
 msgid "Side _Pane"
 msgstr "侧边栏(_P)"
 
-#: ../src/eom-window.c:3689
+#: ../src/eom-window.c:3645
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "更改当前窗口侧边栏的可见性"
 
-#: ../src/eom-window.c:3694
+#: ../src/eom-window.c:3650
 msgid "_Save"
 msgstr "保存(_S)"
 
-#: ../src/eom-window.c:3695
+#: ../src/eom-window.c:3651
 msgid "Save changes in currently selected images"
 msgstr "保存更改到当前选中图像"
 
-#: ../src/eom-window.c:3697
+#: ../src/eom-window.c:3653
 msgid "Open _with"
 msgstr "打开方式(_W)"
 
-#: ../src/eom-window.c:3698
+#: ../src/eom-window.c:3654
 msgid "Open the selected image with a different application"
 msgstr "用一个不同的应用程序打开选中图片"
 
-#: ../src/eom-window.c:3700
+#: ../src/eom-window.c:3656
 msgid "Save _As…"
 msgstr "另存为"
 
-#: ../src/eom-window.c:3701
+#: ../src/eom-window.c:3657
 msgid "Save the selected images with a different name"
 msgstr "以一个不同的名字保存选中图片"
 
-#: ../src/eom-window.c:3703
+#: ../src/eom-window.c:3659
 msgid "_Print…"
 msgstr "打印(_P)..."
 
-#: ../src/eom-window.c:3704
+#: ../src/eom-window.c:3660
 msgid "Print the selected image"
 msgstr "打印选中图像"
 
-#: ../src/eom-window.c:3706
+#: ../src/eom-window.c:3662
 msgid "Prope_rties"
 msgstr "属性(_R)"
 
-#: ../src/eom-window.c:3707
+#: ../src/eom-window.c:3663
 msgid "Show the properties and metadata of the selected image"
 msgstr "显示选中图片的属性和元数据"
 
-#: ../src/eom-window.c:3709
+#: ../src/eom-window.c:3665
 msgid "_Undo"
 msgstr "撤销(_U)"
 
-#: ../src/eom-window.c:3710
+#: ../src/eom-window.c:3666
 msgid "Undo the last change in the image"
 msgstr "撤销上一次对图片的修改"
 
-#: ../src/eom-window.c:3712
+#: ../src/eom-window.c:3668
 msgid "Flip _Horizontal"
 msgstr "水平翻转(_H)"
 
-#: ../src/eom-window.c:3713
+#: ../src/eom-window.c:3669
 msgid "Mirror the image horizontally"
 msgstr "水平翻转图片"
 
-#: ../src/eom-window.c:3715
+#: ../src/eom-window.c:3671
 msgid "Flip _Vertical"
 msgstr "垂直翻转(_V)"
 
-#: ../src/eom-window.c:3716
+#: ../src/eom-window.c:3672
 msgid "Mirror the image vertically"
 msgstr "垂直翻转图片"
 
-#: ../src/eom-window.c:3718
+#: ../src/eom-window.c:3674
 msgid "_Rotate Clockwise"
 msgstr "顺时针旋转(_R)"
 
-#: ../src/eom-window.c:3719
+#: ../src/eom-window.c:3675
 msgid "Rotate the image 90 degrees to the right"
 msgstr "将图片顺时针旋转90度"
 
-#: ../src/eom-window.c:3721
+#: ../src/eom-window.c:3677
 msgid "Rotate Counterc_lockwise"
 msgstr "逆时针旋转(_L)"
 
-#: ../src/eom-window.c:3722
+#: ../src/eom-window.c:3678
 msgid "Rotate the image 90 degrees to the left"
 msgstr "将图片逆时针旋转90度"
 
-#: ../src/eom-window.c:3724
+#: ../src/eom-window.c:3680
 msgid "Set as _Desktop Background"
 msgstr "设为桌面背景(_D)"
 
-#: ../src/eom-window.c:3725
+#: ../src/eom-window.c:3681
 msgid "Set the selected image as the desktop background"
 msgstr "将选中图像设为桌面背景"
 
-#: ../src/eom-window.c:3728
+#: ../src/eom-window.c:3684
 msgid "Move the selected image to the trash folder"
 msgstr "将选中图像移至回收站文件夹"
 
-#: ../src/eom-window.c:3730
+#: ../src/eom-window.c:3686
 msgid "_Copy"
 msgstr "复制(_C)"
 
-#: ../src/eom-window.c:3731
+#: ../src/eom-window.c:3687
 msgid "Copy the selected image to the clipboard"
 msgstr "把选中的图像复制到剪贴板"
 
-#: ../src/eom-window.c:3733 ../src/eom-window.c:3745 ../src/eom-window.c:3748
+#: ../src/eom-window.c:3689 ../src/eom-window.c:3701 ../src/eom-window.c:3704
 msgid "_Zoom In"
 msgstr "放大(_Z)"
 
-#: ../src/eom-window.c:3734 ../src/eom-window.c:3746
+#: ../src/eom-window.c:3690 ../src/eom-window.c:3702
 msgid "Enlarge the image"
 msgstr "放大图片"
 
-#: ../src/eom-window.c:3736 ../src/eom-window.c:3751
+#: ../src/eom-window.c:3692 ../src/eom-window.c:3707
 msgid "Zoom _Out"
 msgstr "缩小(_O)"
 
-#: ../src/eom-window.c:3737 ../src/eom-window.c:3749 ../src/eom-window.c:3752
+#: ../src/eom-window.c:3693 ../src/eom-window.c:3705 ../src/eom-window.c:3708
 msgid "Shrink the image"
 msgstr "缩小图片"
 
-#: ../src/eom-window.c:3739
+#: ../src/eom-window.c:3695
 msgid "_Normal Size"
 msgstr "正常大小(_N)"
 
-#: ../src/eom-window.c:3740
+#: ../src/eom-window.c:3696
 msgid "Show the image at its normal size"
 msgstr "以正常大小显示图片"
 
-#: ../src/eom-window.c:3742
+#: ../src/eom-window.c:3698
 msgid "_Best Fit"
 msgstr "最佳长度 (_B)"
 
-#: ../src/eom-window.c:3743
+#: ../src/eom-window.c:3699
 msgid "Fit the image to the window"
 msgstr "使图像适合窗口"
 
-#: ../src/eom-window.c:3760
+#: ../src/eom-window.c:3716
 msgid "_Fullscreen"
 msgstr "全屏(_F)"
 
-#: ../src/eom-window.c:3761
+#: ../src/eom-window.c:3717
 msgid "Show the current image in fullscreen mode"
 msgstr "在全屏模式中显示当前图像"
 
-#: ../src/eom-window.c:3763
+#: ../src/eom-window.c:3719
 msgid "Pause Slideshow"
 msgstr "暂停放映"
 
-#: ../src/eom-window.c:3764
+#: ../src/eom-window.c:3720
 msgid "Pause or resume the slideshow"
 msgstr "暂停或继续幻灯片放映"
 
-#: ../src/eom-window.c:3769 ../src/eom-window.c:3784
+#: ../src/eom-window.c:3725 ../src/eom-window.c:3740
 msgid "_Previous Image"
 msgstr "上一个图像(_P)"
 
-#: ../src/eom-window.c:3770
+#: ../src/eom-window.c:3726
 msgid "Go to the previous image of the collection"
 msgstr "转到图集中上一个图像"
 
-#: ../src/eom-window.c:3772
+#: ../src/eom-window.c:3728
 msgid "_Next Image"
 msgstr "下一个图像(_N)"
 
-#: ../src/eom-window.c:3773
+#: ../src/eom-window.c:3729
 msgid "Go to the next image of the collection"
 msgstr "转到图集中下一个图像"
 
-#: ../src/eom-window.c:3775 ../src/eom-window.c:3787
+#: ../src/eom-window.c:3731 ../src/eom-window.c:3743
 msgid "_First Image"
 msgstr "第一个图像(_F)"
 
-#: ../src/eom-window.c:3776
+#: ../src/eom-window.c:3732
 msgid "Go to the first image of the collection"
 msgstr "转到图集中第一个图像"
 
-#: ../src/eom-window.c:3778 ../src/eom-window.c:3790
+#: ../src/eom-window.c:3734 ../src/eom-window.c:3746
 msgid "_Last Image"
 msgstr "最后一个图像(_L)"
 
-#: ../src/eom-window.c:3779
+#: ../src/eom-window.c:3735
 msgid "Go to the last image of the collection"
 msgstr "转到图集中最后一个图像"
 
-#: ../src/eom-window.c:3781
+#: ../src/eom-window.c:3737
 msgid "_Random Image"
 msgstr "随机图像(_R)"
 
-#: ../src/eom-window.c:3782
+#: ../src/eom-window.c:3738
 msgid "Go to a random image of the collection"
 msgstr "转到图集中下一个图像"
 
-#: ../src/eom-window.c:3796
+#: ../src/eom-window.c:3752
 msgid "S_lideshow"
 msgstr "幻灯片 (_L)"
 
-#: ../src/eom-window.c:3797
+#: ../src/eom-window.c:3753
 msgid "Start a slideshow view of the images"
 msgstr "以幻灯片方式查看图片"
 
-#: ../src/eom-window.c:3863
+#: ../src/eom-window.c:3819
 msgid "Previous"
 msgstr "上一张"
 
-#: ../src/eom-window.c:3867
+#: ../src/eom-window.c:3823
 msgid "Next"
 msgstr "下一张"
 
-#: ../src/eom-window.c:3871
+#: ../src/eom-window.c:3827
 msgid "Right"
 msgstr "顺时针"
 
-#: ../src/eom-window.c:3874
+#: ../src/eom-window.c:3830
 msgid "Left"
 msgstr "逆时针"
 
-#: ../src/eom-window.c:3877
+#: ../src/eom-window.c:3833
 msgid "In"
 msgstr "放大"
 
-#: ../src/eom-window.c:3880
+#: ../src/eom-window.c:3836
 msgid "Out"
 msgstr "缩小"
 
-#: ../src/eom-window.c:3883
+#: ../src/eom-window.c:3839
 msgid "Normal"
 msgstr "正常"
 
-#: ../src/eom-window.c:3886
+#: ../src/eom-window.c:3842
 msgid "Fit"
 msgstr "适合"
 
-#: ../src/eom-window.c:3889
+#: ../src/eom-window.c:3845
 msgid "Collection"
 msgstr "收藏"
 
-#: ../src/eom-window.c:3892
+#: ../src/eom-window.c:3848
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "移入回收站"
 
-#: ../src/eom-window.c:4245
+#: ../src/eom-window.c:4197
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "使用 %s 编辑当前图片"
 
-#: ../src/eom-window.c:4247
+#: ../src/eom-window.c:4199
 msgid "Edit Image"
 msgstr "编辑图片"
 
-#: ../src/main.c:80
+#: ../src/main.c:77
 msgid "Open in fullscreen mode"
 msgstr "在全屏模式中打开"
 
-#: ../src/main.c:81
+#: ../src/main.c:78
 msgid "Disable image collection"
 msgstr "禁用图集"
 
-#: ../src/main.c:82
+#: ../src/main.c:79
 msgid "Open in slideshow mode"
 msgstr "在幻灯片放映模式中打开"
 
-#: ../src/main.c:84
+#: ../src/main.c:81
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "启动新例程，而不是重用现有例程"
 
-#: ../src/main.c:87
+#: ../src/main.c:84
 msgid "Show the application's version"
 msgstr "显示应用程序版本"
 
-#: ../src/main.c:88
+#: ../src/main.c:85
 msgid "[FILE…]"
 msgstr "[文件...]"
 
 #. I18N: The '%s' is replaced with eom's command name.
-#: ../src/main.c:219
+#: ../src/main.c:210
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "运行“%s --help”来查看可用命令行选项的完整列表。"
