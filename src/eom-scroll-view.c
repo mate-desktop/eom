@@ -913,15 +913,24 @@ display_key_press_event (GtkWidget *widget, GdkEventKey *event, gpointer data)
 	}
 
 	if (do_zoom) {
+#if GTK_CHECK_VERSION (3, 20, 0)
+		GdkSeat *seat;
+#else
 		GdkDeviceManager *device_manager;
+#endif
 		GdkDevice *device;
 		gint x, y;
 
-		device_manager = gdk_display_get_device_manager (gtk_widget_get_display(widget));
+#if GTK_CHECK_VERSION (3, 20, 0)
+		seat = gdk_display_get_default_seat (gtk_widget_get_display (widget));
+		device = gdk_seat_get_pointer (seat);
+#else
+		device_manager = gdk_display_get_device_manager (gtk_widget_get_display (widget));
 		device = gdk_device_manager_get_client_pointer (device_manager);
+#endif
 
 		gdk_window_get_device_position (gtk_widget_get_window (widget), device,
-					&x, &y, NULL);
+		                                &x, &y, NULL);
 		set_zoom (view, zoom, TRUE, x, y);
 	}
 
