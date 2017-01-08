@@ -203,6 +203,10 @@ main (int argc, char **argv)
 	gtk_rc_parse (EOM_DATA_DIR G_DIR_SEPARATOR_S "gtkrc");
 #endif
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+	gdk_set_allowed_backends ("x11");
+#endif
+
 	ctx = g_option_context_new (NULL);
 	g_option_context_add_main_entries (ctx, goption_options, PACKAGE);
 	/* Option groups are free'd together with the context 
