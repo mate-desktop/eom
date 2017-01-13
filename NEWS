@@ -1,133 +1,113 @@
-eom 1.17.2
-==========
+### eom 1.17.2
 
- * Translations update
- * plugins engine: enable python plugin loader from libpeas
+  * Translations update
+  * plugins engine: enable python plugin loader from libpeas
 
+### eom 1.17.1
 
-eom 1.17.1
-==========
+  * Port plugin system and plugins to libpeas
+  * Some code and docs cleanups
+  * Translations update
 
- * Port plugin system and plugins to libpeas
- * Some code and docs cleanups
- * Translations update
+### eom 1.17.0
 
-eom 1.17.0
-==========
+  * Translations update
+  * move to GTK+3 (>= 3.14), drop GTK+2 code and --with-gtk build option
+  * drop Python plugins support and --enable-python build option
+  * prefs dialog: fix runtime warning
 
- * Translations update
- * move to GTK+3 (>= 3.14), drop GTK+2 code and --with-gtk build option
- * drop Python plugins support and --enable-python build option
- * prefs dialog: fix runtime warning
+### eom 1.16.0
 
-eom 1.16.0
-==========
+  * Use GtkAboutDialog instead of MateAboutDialog
+  * Fix possible out-of-bounds write in error message area
+  * Some cleanups
+  * Translations update
 
- * Use GtkAboutDialog instead of MateAboutDialog
- * Fix possible out-of-bounds write in error message area
- * Some cleanups
- * Translations update
+### eom 1.14.2
 
-eom 1.14.2
-==========
+  * Fix zoom and scroll performance on large images
+  * Translations update
+  * Make distcheck use currently selected GTK+ version
 
- * Fix zoom and scroll performance on large images
- * Translations update
- * Make distcheck use currently selected GTK+ version
+### eom 1.14.1
 
-eom 1.14.1
-==========
+  * Translations update
+  * Fix new windows not getting focus
 
- * Translations update
- * Fix new windows not getting focus
+### eom 1.14.0
 
-eom 1.14.0
-==========
+  * Drop MateConf migration script
+  * Use org.gnome.SessionManager DBus name to inhibit screensaver
+  * Auto-reload unmodified images when their file is changed
+  * GTK+3: add eom-window style class at top level
+  * GTK+3: add css name EggToolbarEditor for 3.20
+  * GTK+3: fix SVG rendering
+  * GTK+3: fix several deprecations
+  * Some more fixes and cleanups
+  * Translations update
+  * Fix Changelog generation
 
- * Drop MateConf migration script
- * Use org.gnome.SessionManager DBus name to inhibit screensaver
- * Auto-reload unmodified images when their file is changed
- * GTK+3: add eom-window style class at top level
- * GTK+3: add css name EggToolbarEditor for 3.20
- * GTK+3: fix SVG rendering
- * GTK+3: fix several deprecations
- * Some more fixes and cleanups
- * Translations update
- * Fix Changelog generation
+### eom 1.12.2
 
-eom 1.12.2
-==========
-
- * Print preview: avoid integer overflow when allocating a large
+  * Print preview: avoid integer overflow when allocating a large
    block of memory
- * Fix build with introspection enabled
- * Fix GTK+3 build when --without-cms is set
- * Some more fixes
+  * Fix build with introspection enabled
+  * Fix GTK+3 build when --without-cms is set
+  * Some more fixes
 
-eom 1.12.1
-==========
+### eom 1.12.1
 
- * Fix shortcuts for several menu items in en_US locale
- * Some more fixes and cleanups
+  * Fix shortcuts for several menu items in en_US locale
+  * Some more fixes and cleanups
 
-eom 1.12.0
-==========
+### eom 1.12.0
 
- * New release incorporating all fixes from 1.10.x bugfix releases
+  * New release incorporating all fixes from 1.10.x bugfix releases
 
-eom 1.10.5
-==========
+### eom 1.10.5
 
- * fix gtk3 build
+  * fix gtk3 build
 
-eom 1.10.4
-==========
+### eom 1.10.4
 
- * EomScrollView: clip all types of images to the visible image area
- * EomScrollView: enable double buffering
- * Bump GLib/GIO required version to 2.36
- * Drop useless dependency on mate-icon-theme
- * Fix build with libexif when prefix is not /usr
- * Some annotation fixes
- * Some GTK+3 fixes and improvements
+  * EomScrollView: clip all types of images to the visible image area
+  * EomScrollView: enable double buffering
+  * Bump GLib/GIO required version to 2.36
+  * Drop useless dependency on mate-icon-theme
+  * Fix build with libexif when prefix is not /usr
+  * Some annotation fixes
+  * Some GTK+3 fixes and improvements
 
-eom 1.10.3
-==========
+### eom 1.10.3
 
- * Fix scroll issues during zoom
- * Multiple help fixes
+  * Fix scroll issues during zoom
+  * Multiple help fixes
 
-eom 1.10.2
-==========
+### eom 1.10.2
 
- * Fix gschema translations.
- * GTK3 fixes and improvements.
+  * Fix gschema translations.
+  * GTK3 fixes and improvements.
 
-eom 1.10.1
-==========
+### eom 1.10.1
 
- * Bugfixes
- * Translations update
+  * Bugfixes
+  * Translations update
 
-eom 1.10.0
-==========
+### eom 1.10.0
 
- * Bugfixes
- * Improvements taken from eog
+  * Bugfixes
+  * Improvements taken from eog
 
-eom 1.8.0
-=========
+### eom 1.8.0
 
- * Updates for the man page
- * Add random mode in slideshow mode
+  * Updates for the man page
+  * Add random mode in slideshow mode
 
-eom 1.7.0
-=========
+### eom 1.7.0
 
- * Migration to yelp-tools
- * Migration to lcms2
+  * Migration to yelp-tools
+  * Migration to lcms2
 
-eom 1.5.0
-=========
+### eom 1.5.0
 
- * Migration to gsettings.
+  * Migration to gsettings.
