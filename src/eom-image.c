@@ -1050,7 +1050,10 @@ eom_image_real_load (EomImage *img,
 	        }
 #ifdef HAVE_RSVG
 		if (eom_image_is_svg (img))
-			rsvg_handle_close (priv->svg, error);
+			/* Ignore the error if loading failed earlier
+			 * as the error will already be set in that case */
+			rsvg_handle_close (priv->svg,
+			                   (failed ? NULL : error));
 #endif
         }
 
