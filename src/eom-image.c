@@ -294,7 +294,7 @@ eom_image_init (EomImage *img)
 	img->priv->file_is_changed = FALSE;
 	g_mutex_init (&img->priv->status_mutex);
 	img->priv->status = EOM_IMAGE_STATUS_UNKNOWN;
-        img->priv->metadata_status = EOM_IMAGE_METADATA_NOT_READ;
+	img->priv->metadata_status = EOM_IMAGE_METADATA_NOT_READ;
 	img->priv->is_monitored = FALSE;
 	img->priv->undo_stack = NULL;
 	img->priv->trans = NULL;
@@ -944,7 +944,7 @@ eom_image_real_load (EomImage *img,
 					 G_CALLBACK (eom_image_size_prepared),
 					 img,
 					 0);
-        }
+	}
 	g_free (mime_type);
 
 	while (!priv->cancel_loading) {
@@ -1024,7 +1024,7 @@ eom_image_real_load (EomImage *img,
 					eom_image_set_xmp_data (img, md_reader);
 #endif
 					set_metadata = FALSE;
-                                        priv->metadata_status = EOM_IMAGE_METADATA_READY;
+					priv->metadata_status = EOM_IMAGE_METADATA_READY;
 				}
 
 				if (data2read == EOM_IMAGE_DATA_EXIF)
@@ -1047,7 +1047,7 @@ eom_image_real_load (EomImage *img,
 				 * images as well. */
 				g_clear_error (error);
 			}
-	        }
+		}
 #ifdef HAVE_RSVG
 		if (eom_image_is_svg (img))
 			/* Ignore the error if loading failed earlier
@@ -1055,7 +1055,7 @@ eom_image_real_load (EomImage *img,
 			rsvg_handle_close (priv->svg,
 			                   (failed ? NULL : error));
 #endif
-        }
+	}
 
 	g_free (buffer);
 
@@ -2086,9 +2086,9 @@ eom_image_get_status (EomImage *img)
 EomImageMetadataStatus
 eom_image_get_metadata_status (EomImage *img)
 {
-        g_return_val_if_fail (EOM_IS_IMAGE (img), EOM_IMAGE_METADATA_NOT_AVAILABLE);
+	g_return_val_if_fail (EOM_IS_IMAGE (img), EOM_IMAGE_METADATA_NOT_AVAILABLE);
 
-        return img->priv->metadata_status;
+	return img->priv->metadata_status;
 }
 
 void
@@ -2203,8 +2203,7 @@ eom_image_iter_advance (EomImage *img)
 
 	priv = img->priv;
 
-	if ((new_frame = gdk_pixbuf_animation_iter_advance (img->priv->anim_iter, NULL)) == TRUE)
-	  {      
+	if ((new_frame = gdk_pixbuf_animation_iter_advance (img->priv->anim_iter, NULL)) == TRUE) {      
 		g_mutex_lock (&priv->status_mutex);
 		g_object_unref (priv->image);
 		priv->image = gdk_pixbuf_animation_iter_get_pixbuf (priv->anim_iter);
@@ -2216,12 +2215,12 @@ eom_image_iter_advance (EomImage *img)
 			priv->image = transformed;
 			priv->width = gdk_pixbuf_get_width (transformed);
 			priv->height = gdk_pixbuf_get_height (transformed);
-		}      
+		}
 		g_mutex_unlock (&priv->status_mutex);
 		/* Emit next frame signal so we can update the display */
 		g_signal_emit (img, signals[SIGNAL_NEXT_FRAME], 0,
 			       gdk_pixbuf_animation_iter_get_delay_time (priv->anim_iter));
-	  }
+	}
 
 	return new_frame;
 }
