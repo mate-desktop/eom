@@ -392,7 +392,7 @@ file_monitor_changed_cb (GFileMonitor *monitor,
 	EomImage *image;
 
 	switch (event) {
-	case G_FILE_MONITOR_EVENT_CHANGED:
+	case G_FILE_MONITOR_EVENT_CHANGES_DONE_HINT:
 		file_info = g_file_query_info (file,
 					       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
 					       0, NULL, NULL);
