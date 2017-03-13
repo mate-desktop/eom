@@ -1,20 +1,21 @@
-### eom 1.17.2
+### eom 1.18.0
 
-  * Translations update
-  * plugins engine: enable python plugin loader from libpeas
-
-### eom 1.17.1
-
+  * NEWS: use consistent, project wide, markdown-like formatting
+    to make generating release announcements easier
+  * Build: require libmate-desktop >= 1.17
+  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and
+    --with-gtk build option
+  * Drop Python bindings and --enable-python build option
   * Port plugin system and plugins to libpeas
   * Some code and docs cleanups
   * Translations update
 
-### eom 1.17.0
+### eom 1.16.1
 
-  * Translations update
-  * move to GTK+3 (>= 3.14), drop GTK+2 code and --with-gtk build option
-  * drop Python plugins support and --enable-python build option
-  * prefs dialog: fix runtime warning
+  * Prefs dialog: fix runtime warning
+  * Fix auto-reload of externally modified image
+  * Fix memleak when loading SVG fails
+  * GTK+3: force X11 backend
 
 ### eom 1.16.0
 
