@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pl\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -597,6 +597,7 @@ msgid_plural ""
 msgstr[0] "Jeden zmieniony obraz nie został zapisany. Zapisać zmiany przed zamknięciem?"
 msgstr[1] "%d zmienione obrazy nie zostały zapisane. Zapisać zmiany przed zamknięciem?"
 msgstr[2] "%d zmienionych obrazów nie zostało zapisanych. Zapisać zmiany przed zamknięciem?"
+msgstr[3] "%d zmienionych obrazów nie zostało zapisanych. Zapisać zmiany przed zamknięciem?"
 
 #: ../src/eom-close-confirmation-dialog.c:632
 msgid "S_elect the images you want to save:"
@@ -644,6 +645,7 @@ msgid_plural "pixels"
 msgstr[0] "piksel"
 msgstr[1] "piksele"
 msgstr[2] "pikseli"
+msgstr[3] "pikseli"
 
 #: ../src/eom-file-chooser.c:438
 msgid "Open Image"
@@ -930,6 +932,7 @@ msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i piksel  %s    %i%%"
 msgstr[1] "%i × %i piksele  %s    %i%%"
 msgstr[2] "%i × %i pikseli  %s    %i%%"
+msgstr[3] "%i × %i pikseli  %s    %i%%"
 
 #: ../src/eom-window.c:807
 msgid "_Reload"
@@ -1059,6 +1062,7 @@ msgid_plural ""
 msgstr[0] "Na pewno przenieść\nzaznaczony obraz do kosza?"
 msgstr[1] "Na pewno przenieść\n%d zaznaczone obrazy do kosza?"
 msgstr[2] "Na pewno przenieść\n%d zaznaczonych obrazów do kosza?"
+msgstr[3] "Na pewno przenieść\n%d zaznaczonych obrazów do kosza?"
 
 #: ../src/eom-window.c:3182
 msgid ""
