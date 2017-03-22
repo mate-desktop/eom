@@ -943,6 +943,13 @@ eom_uri_converter_requires_exif (EomURIConverter *converter)
 	return converter->priv->requires_exif;
 }
 
+/**
+ * eog_uri_converter_check:
+ * @converter: a #EogURIConverter
+ * @img_list: (element-type GFile): a #Gfile list
+ * @error: a #GError location to store the error occurring, or NULL to ignore
+ */
+
 gboolean
 eom_uri_converter_check (EomURIConverter *converter, GList *img_list, GError **error)
 {
@@ -983,6 +990,8 @@ eom_uri_converter_check (EomURIConverter *converter, GList *img_list, GError **e
 			     EOM_UC_ERROR_EQUAL_FILENAMES,
 			     _("At least two file names are equal."));
 	}
+
+        g_list_free (file_list);
 
 	return all_different;
 }
