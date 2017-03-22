@@ -65,6 +65,10 @@
 #endif
 #endif
 
+#ifdef HAVE_RSVG
+#include <librsvg/rsvg.h>
+#endif
+
 #define EOM_IMAGE_GET_PRIVATE(object) \
 	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_IMAGE, EomImagePrivate))
 
@@ -859,6 +863,7 @@ eom_image_real_load (EomImage *img,
 	gboolean failed = FALSE;
 	gboolean first_run = TRUE;
 	gboolean set_metadata = TRUE;
+        gboolean use_rsvg = FALSE;
 	gboolean read_image_data = (data2read & EOM_IMAGE_DATA_IMAGE);
 	gboolean read_only_dimension = (data2read & EOM_IMAGE_DATA_DIMENSION) &&
 				  ((data2read ^ EOM_IMAGE_DATA_DIMENSION) == 0);
@@ -921,29 +926,37 @@ eom_image_real_load (EomImage *img,
 			priv->svg = NULL;
 		}
 
-		if (!strcmp (mime_type, "image/svg+xml")) {
+		if (!strcmp (mime_type, "image/svg+xml")
+#if LIBRSVG_CHECK_FEATURE(SVGZ)
+                    || !strcmp (mime_type, "image/svg+xml-compressed")
+#endif
+                ) {
 			gchar *file_path;
 			/* Keep the object for rendering */
 			priv->svg = rsvg_handle_new ();
+                        use_rsvg = (priv->svg != NULL);
 			file_path = g_file_get_path (priv->file);
 			rsvg_handle_set_base_uri (priv->svg, file_path);
 			g_free (file_path);
 		}
 #endif
-		loader = gdk_pixbuf_loader_new_with_mime_type (mime_type, error);
 
-		if (error && *error) {
-			g_error_free (*error);
-			*error = NULL;
+                if (!use_rsvg) {
+		        loader = gdk_pixbuf_loader_new_with_mime_type (mime_type, error);
 
-			loader = gdk_pixbuf_loader_new ();
-		}
+		        if (error && *error) {
+			        g_error_free (*error);
+			        *error = NULL;
 
-		g_signal_connect_object (G_OBJECT (loader),
-					 "size-prepared",
-					 G_CALLBACK (eom_image_size_prepared),
-					 img,
-					 0);
+			        loader = gdk_pixbuf_loader_new ();
+		        }
+
+		        g_signal_connect_object (G_OBJECT (loader),
+					         "size-prepared",
+					         G_CALLBACK (eom_image_size_prepared),
+					         img,
+					         0);
+                 }
 	}
 	g_free (mime_type);
 
@@ -969,17 +982,23 @@ eom_image_real_load (EomImage *img,
 		}
 
 		if ((read_image_data || read_only_dimension)) {
+#ifdef HAVE_RSVG
+			if (use_rsvg) {
+                            gboolean res;
+
+			    res = rsvg_handle_write (priv->svg, buffer,
+                                                     bytes_read, error);
+
+                            if (G_UNLIKELY (!res)) {
+				failed = TRUE;
+				break;
+                            }
+			} else
+#endif
 			if (!gdk_pixbuf_loader_write (loader, buffer, bytes_read, error)) {
 				failed = TRUE;
 				break;
 			}
-#ifdef HAVE_RSVG
-			if (eom_image_is_svg (img) &&
-			    !rsvg_handle_write (priv->svg, buffer, bytes_read, error)) {
-				failed = TRUE;
-				break;
-			}
-#endif
 		}
 
 		bytes_read_total += bytes_read;
@@ -1039,6 +1058,14 @@ eom_image_real_load (EomImage *img,
 	}
 
 	if (read_image_data || read_only_dimension) {
+#ifdef HAVE_RSVG
+		if (use_rsvg) {
+			/* Ignore the error if loading failed earlier
+			 * as the error will already be set in that case */
+			rsvg_handle_close (priv->svg,
+			                   (failed ? NULL : error));
+                } else
+#endif
 		if (failed) {
 			gdk_pixbuf_loader_close (loader, NULL);
 		} else if (!gdk_pixbuf_loader_close (loader, error)) {
@@ -1048,13 +1075,6 @@ eom_image_real_load (EomImage *img,
 				g_clear_error (error);
 			}
 		}
-#ifdef HAVE_RSVG
-		if (eom_image_is_svg (img))
-			/* Ignore the error if loading failed earlier
-			 * as the error will already be set in that case */
-			rsvg_handle_close (priv->svg,
-			                   (failed ? NULL : error));
-#endif
 	}
 
 	g_free (buffer);
@@ -1078,6 +1098,14 @@ eom_image_real_load (EomImage *img,
 			g_object_unref (priv->image);
 		}
 
+#ifdef HAVE_RSVG
+                if (use_rsvg) {
+                    priv->image = rsvg_handle_get_pixbuf (priv->svg);
+                } else
+#endif
+                
+                {
+
 		priv->anim = gdk_pixbuf_loader_get_animation (loader);
 
 		if (gdk_pixbuf_animation_is_static_image (priv->anim)) {
@@ -1088,13 +1116,21 @@ eom_image_real_load (EomImage *img,
 			priv->image = gdk_pixbuf_animation_iter_get_pixbuf (priv->anim_iter);
 		}
 
+                }
+
 		if (G_LIKELY (priv->image != NULL)) {
-			g_object_ref (priv->image);
+                        if (!use_rsvg)
+			        g_object_ref (priv->image);
 
 			priv->width = gdk_pixbuf_get_width (priv->image);
 			priv->height = gdk_pixbuf_get_height (priv->image);
 
-			format = gdk_pixbuf_loader_get_format (loader);
+                        if (use_rsvg) {
+                                format = NULL;
+                                priv->file_type = g_strdup ("svg");
+                        } else {
+			        format = gdk_pixbuf_loader_get_format (loader);
+                        }
 
 			if (format != NULL) {
 				priv->file_type = gdk_pixbuf_format_get_name (format);
@@ -2304,6 +2340,8 @@ eom_image_get_svg (EomImage *img)
 	return img->priv->svg;
 }
 
+#endif
+
 EomTransform *
 eom_image_get_transform (EomImage *img)
 {
@@ -2311,8 +2349,6 @@ eom_image_get_transform (EomImage *img)
 
 	return img->priv->trans;
 }
-
-#endif
 
 /**
  * eom_image_file_changed:
