@@ -95,6 +95,12 @@ _calculate_wday_yday (struct tm *tm)
 	tm->tm_yday = tmp_tm.tm_yday;
 }
 
+/* Older GCCs don't support pragma diagnostic inside functions.
+ * Put these here to avoid problems with the strftime format strings
+ * without breaking the build for these older GCCs */
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wformat-nonliteral"
+
 #ifdef HAVE_STRPTIME
 static gchar *
 eom_exif_util_format_date_with_strptime (const gchar *date, const gchar* format)
@@ -163,6 +169,8 @@ eom_exif_util_format_date_by_hand (const gchar *date, const gchar* format)
 	return new_date;
 }
 #endif /* HAVE_STRPTIME */
+
+#pragma GCC diagnostic pop
 
 /**
  * eom_exif_util_format_date:
