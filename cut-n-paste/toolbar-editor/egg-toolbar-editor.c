@@ -641,8 +641,8 @@ update_editor_sheet (EggToolbarEditor *editor)
     }
 
   /* Add grid to window. */
-  gtk_container_add
-    (GTK_CONTAINER (editor->priv->scrolled_window), grid);
+  gtk_scrolled_window_add_with_viewport
+    (GTK_SCROLLED_WINDOW (editor->priv->scrolled_window), grid);
 }
 
 static void
