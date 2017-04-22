@@ -520,7 +520,6 @@ create_treeview (EomCloseConfirmationDialogPrivate *priv)
 	GtkTreeViewColumn *column;
 
 	treeview = gtk_tree_view_new ();
-	gtk_widget_set_size_request (treeview, 260, 120);
 	gtk_tree_view_set_headers_visible (GTK_TREE_VIEW (treeview), FALSE);
 	gtk_tree_view_set_enable_search (GTK_TREE_VIEW (treeview), FALSE);
 
@@ -649,6 +648,7 @@ build_multiple_imgs_dialog (EomCloseConfirmationDialog *dlg)
 
 	treeview = create_treeview (priv);
 	gtk_container_add (GTK_CONTAINER (scrolledwindow), treeview);
+	gtk_widget_set_size_request (scrolledwindow, 260, 120);
 
 	/* Secondary label */
 	secondary_label = gtk_label_new (_("If you don't save, "
