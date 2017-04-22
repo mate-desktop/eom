@@ -810,7 +810,7 @@ image_file_changed_cb (EomImage *img, EomWindow *window)
 						  GTK_RESPONSE_NO, NULL);
 	gtk_info_bar_set_message_type (GTK_INFO_BAR (info_bar),
 				       GTK_MESSAGE_QUESTION);
-	image = gtk_image_new_from_stock (GTK_STOCK_DIALOG_QUESTION,
+	image = gtk_image_new_from_icon_name ("dialog-question",
 					  GTK_ICON_SIZE_DIALOG);
 	label = gtk_label_new (NULL);
 
@@ -2679,7 +2679,7 @@ eom_window_set_wallpaper (EomWindow *window, const gchar *filename, const gchar 
 	gtk_info_bar_set_message_type (GTK_INFO_BAR (info_bar),
 				       GTK_MESSAGE_QUESTION);
 
-	image = gtk_image_new_from_stock (GTK_STOCK_DIALOG_QUESTION,
+	image = gtk_image_new_from_icon_name ("dialog-question",
 					  GTK_ICON_SIZE_DIALOG);
 	label = gtk_label_new (NULL);
 

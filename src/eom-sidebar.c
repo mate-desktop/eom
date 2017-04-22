@@ -429,7 +429,7 @@ eom_sidebar_init (EomSidebar *eom_sidebar)
 			  G_CALLBACK (eom_sidebar_close_clicked_cb),
 			  eom_sidebar);
 
-	image = gtk_image_new_from_stock (GTK_STOCK_CLOSE,
+	image = gtk_image_new_from_icon_name ("window-close",
 					  GTK_ICON_SIZE_MENU);
 	gtk_container_add (GTK_CONTAINER (close_button), image);
 	gtk_widget_show (image);

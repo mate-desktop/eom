@@ -41,7 +41,7 @@ static const gchar* const ui_definition = "<ui><menubar name=\"MainMenu\">"
 	"</popup></ui>";
 
 static const GtkActionEntry action_entries[] = {
-	{ "EomPluginRunReload", GTK_STOCK_REFRESH, N_("Reload Image"), "R", N_("Reload current image"), G_CALLBACK (reload_cb) }
+	{ "EomPluginRunReload", "view-refresh", N_("Reload Image"), "R", N_("Reload current image"), G_CALLBACK (reload_cb) }
 };
 
 static void
