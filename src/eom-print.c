@@ -45,6 +45,29 @@ typedef struct {
 	GtkUnit unit;
 } EomPrintData;
 
+/* art_affine_flip modified to work with cairo_matrix_t */
+static void
+_eom_cairo_matrix_flip (cairo_matrix_t *dst, const cairo_matrix_t *src, gboolean horiz, gboolean vert)
+{
+	dst->xx = horiz ? -src->xx : src->xx;
+	dst->yx = horiz ? -src->yx : src->yx;
+	dst->xy = vert ? -src->xy : src->xy;
+	dst->yy = vert ? -src->yy : src->yy;
+	dst->x0 = horiz ? -src->x0 : src->x0;
+	dst->y0 = vert ? -src->y0 : src->y0;
+}
+
+static gboolean
+_cairo_ctx_supports_jpg_metadata (cairo_t *cr)
+{
+	cairo_surface_t *surface = cairo_get_target (cr);
+	cairo_surface_type_t type = cairo_surface_get_type (surface);
+
+	/* Based on cairo-1.10 */
+	return (type == CAIRO_SURFACE_TYPE_PDF || type == CAIRO_SURFACE_TYPE_PS ||
+		type == CAIRO_SURFACE_TYPE_SVG || type == CAIRO_SURFACE_TYPE_WIN32_PRINTING);
+}
+
 static void
 eom_print_draw_page (GtkPrintOperation *operation,
 		     GtkPrintContext   *context,
@@ -105,8 +128,123 @@ eom_print_draw_page (GtkPrintOperation *operation,
 		RsvgHandle *svg = eom_image_get_svg (data->image);
 
 		rsvg_handle_render_cairo (svg, cr);
+		return;
 	} else
 #endif
+	/* JPEGs can be attached to the cairo surface which simply embeds the JPEG file into the
+	 * destination PDF skipping (PNG-)recompression. This should reduce PDF sizes enormously. */
+	if (eom_image_is_jpeg (data->image) && _cairo_ctx_supports_jpg_metadata (cr))
+	{
+		GFile *file;
+		char *img_data;
+		gsize data_len;
+		cairo_surface_t *surface = NULL;
+
+		eom_debug_message (DEBUG_PRINTING, "Attaching image to cairo surface");
+
+		file = eom_image_get_file (data->image);
+		if (g_file_load_contents (file, NULL, &img_data, &data_len, NULL, NULL))
+		{
+			EomTransform *tf = eom_image_get_transform (data->image);
+			EomTransform *auto_tf = eom_image_get_autorotate_transform (data->image);
+			cairo_matrix_t mx, mx2;
+
+			if (!tf && auto_tf) {
+				/* If only autorotation data present,
+				 * make it the normal rotation. */
+				tf = auto_tf;
+				auto_tf = NULL;
+			}
+
+			/* Care must be taken with height and width values. They are not the original
+			 * values but were affected by the transformation. As the surface needs to be
+			 * generated using the original dimensions they might need to be flipped. */
+			if (tf) {
+				if (auto_tf) {
+					/* If we have an autorotation apply
+					 * it before the others */
+					tf = eom_transform_compose (auto_tf, tf);
+				}
+
+				switch (eom_transform_get_transform_type (tf)) {
+					case EOM_TRANSFORM_ROT_90:
+						surface = cairo_image_surface_create (
+								CAIRO_FORMAT_RGB24, height, width);
+						cairo_rotate (cr, 90.0 * (G_PI/180.0));
+						cairo_translate (cr, 0.0, -width);
+						break;
+					case EOM_TRANSFORM_ROT_180:
+						surface = cairo_image_surface_create (
+								CAIRO_FORMAT_RGB24, width, height);
+						cairo_rotate (cr, 180.0 * (G_PI/180.0));
+						cairo_translate (cr, -width, -height);
+						break;
+					case EOM_TRANSFORM_ROT_270:
+						surface = cairo_image_surface_create (
+								CAIRO_FORMAT_RGB24, height, width);
+						cairo_rotate (cr, 270.0 * (G_PI/180.0));
+						cairo_translate (cr, -height, 0.0);
+						break;
+					case EOM_TRANSFORM_FLIP_HORIZONTAL:
+						surface = cairo_image_surface_create (
+								CAIRO_FORMAT_RGB24, width, height);
+						cairo_matrix_init_identity (&mx);
+						_eom_cairo_matrix_flip (&mx2, &mx, TRUE, FALSE);
+						cairo_transform (cr, &mx2);
+						cairo_translate (cr, -width, 0.0);
+						break;
+					case EOM_TRANSFORM_FLIP_VERTICAL:
+						surface = cairo_image_surface_create (
+								CAIRO_FORMAT_RGB24, width, height);
+						cairo_matrix_init_identity (&mx);
+						_eom_cairo_matrix_flip (&mx2, &mx, FALSE, TRUE);
+						cairo_transform (cr, &mx2);
+						cairo_translate (cr, 0.0, -height);
+						break;
+					case EOM_TRANSFORM_TRANSPOSE:
+						surface = cairo_image_surface_create (
+								CAIRO_FORMAT_RGB24, height, width);
+						cairo_matrix_init_rotate (&mx, 90.0 * (G_PI/180.0));
+						cairo_matrix_init_identity (&mx2);
+						_eom_cairo_matrix_flip (&mx2, &mx2, TRUE, FALSE);
+						cairo_matrix_multiply (&mx2, &mx, &mx2);
+						cairo_transform (cr, &mx2);
+						break;
+					case EOM_TRANSFORM_TRANSVERSE:
+						surface = cairo_image_surface_create (
+								CAIRO_FORMAT_RGB24, height, width);
+						cairo_matrix_init_rotate (&mx, 90.0 * (G_PI/180.0));
+						cairo_matrix_init_identity (&mx2);
+						_eom_cairo_matrix_flip (&mx2, &mx2, FALSE, TRUE);
+						cairo_matrix_multiply (&mx2, &mx, &mx2);
+						cairo_transform (cr, &mx2);
+						cairo_translate (cr, -height , -width);
+						break;
+					case EOM_TRANSFORM_NONE:
+					default:
+						surface = cairo_image_surface_create (
+								CAIRO_FORMAT_RGB24, width, height);
+						break;
+				}
+			}
+
+			if (!surface)
+				surface = cairo_image_surface_create (CAIRO_FORMAT_RGB24,
+								      width, height);
+			cairo_surface_set_mime_data (surface,
+			                             CAIRO_MIME_TYPE_JPEG,
+			                             (unsigned char*)img_data, data_len,
+						     g_free, img_data);
+			cairo_set_source_surface (cr, surface, 0, 0);
+			cairo_paint (cr);
+			cairo_surface_destroy (surface);
+			g_object_unref (file);
+			return;
+		}
+		g_object_unref (file);
+
+	}
+
 	{
 		GdkPixbuf *pixbuf;
 

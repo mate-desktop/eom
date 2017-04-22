@@ -211,8 +211,12 @@ gboolean          eom_image_start_animation          (EomImage *img);
 #ifdef HAVE_RSVG
 gboolean          eom_image_is_svg                   (EomImage *img);
 RsvgHandle       *eom_image_get_svg                  (EomImage *img);
-EomTransform     *eom_image_get_transform            (EomImage *img);
 #endif
+
+EomTransform     *eom_image_get_transform            (EomImage *img);
+EomTransform     *eom_image_get_autorotate_transform (EomImage *img);
+
+gboolean          eom_image_is_jpeg                  (EomImage *img);
 
 void              eom_image_file_changed             (EomImage *img);
 gboolean          eom_image_is_file_changed         (EomImage *img);

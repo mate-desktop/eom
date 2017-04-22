@@ -2350,6 +2350,14 @@ eom_image_get_transform (EomImage *img)
 	return img->priv->trans;
 }
 
+EomTransform*
+eom_image_get_autorotate_transform (EomImage *img)
+{
+	g_return_val_if_fail (EOM_IS_IMAGE (img), NULL);
+
+	return img->priv->trans_autorotate;
+}
+
 /**
  * eom_image_file_changed:
  * @img: a #EomImage
@@ -2373,3 +2381,12 @@ eom_image_is_file_changed (EomImage *img)
 
 	return img->priv->file_is_changed;
 }
+
+gboolean
+eom_image_is_jpeg (EomImage *img)
+{
+	g_return_val_if_fail (EOM_IS_IMAGE (img), FALSE);
+
+	return ((img->priv->file_type != NULL) && (g_ascii_strcasecmp (img->priv->file_type, EOM_FILE_FORMAT_JPEG) == 0));
+}
+
