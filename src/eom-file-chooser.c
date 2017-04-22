@@ -338,7 +338,8 @@ update_preview_cb (GtkFileChooser *file_chooser, gpointer data)
 	file_info = g_file_query_info (file,
 				       G_FILE_ATTRIBUTE_TIME_MODIFIED ","
 				       G_FILE_ATTRIBUTE_STANDARD_TYPE ","
-				       G_FILE_ATTRIBUTE_STANDARD_SIZE,
+				       G_FILE_ATTRIBUTE_STANDARD_SIZE ","
+				       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
 				       0, NULL, NULL);
 	g_object_unref (file);
 
@@ -349,19 +350,37 @@ update_preview_cb (GtkFileChooser *file_chooser, gpointer data)
 		mtime = g_file_info_get_attribute_uint64 (file_info,
 							  G_FILE_ATTRIBUTE_TIME_MODIFIED);
 		thumb_path = mate_desktop_thumbnail_factory_lookup (priv->thumb_factory, uri, mtime);
-		if (thumb_path == NULL) {
-			/* read files smaller than 100kb directly */
-			if (g_file_info_get_size (file_info) <= 100000) {
-				/* FIXME: we should then output also the image dimensions */
-				thumb_path = gtk_file_chooser_get_preview_filename (file_chooser);
-			}
-		}
 
 		if (thumb_path != NULL && g_file_test (thumb_path, G_FILE_TEST_EXISTS)) {
 			/* try to load and display preview thumbnail */
 			pixbuf = gdk_pixbuf_new_from_file (thumb_path, NULL);
+		} else if (g_file_info_get_size (file_info) <= 100000) {
+			/* read files smaller than 100kb directly */
 
-			have_preview = (pixbuf != NULL);
+			gchar *mime_type = g_content_type_get_mime_type (
+						g_file_info_get_content_type (file_info));
+
+
+			if (G_LIKELY (mime_type)) {
+				gboolean can_thumbnail, has_failed;
+
+				can_thumbnail = mate_desktop_thumbnail_factory_can_thumbnail (
+							priv->thumb_factory,
+							uri, mime_type, mtime);
+				has_failed = mate_desktop_thumbnail_factory_has_valid_failed_thumbnail (
+							priv->thumb_factory,
+							uri, mtime);
+
+				if (G_LIKELY (can_thumbnail && !has_failed))
+					pixbuf = mate_desktop_thumbnail_factory_generate_thumbnail (
+							priv->thumb_factory, uri, mime_type);
+
+				g_free (mime_type);
+			}
+		}
+
+		if (pixbuf != NULL) {
+			have_preview = TRUE;
 
 			set_preview_pixbuf (EOM_FILE_CHOOSER (file_chooser), pixbuf,
 					    g_file_info_get_size (file_info));
