@@ -982,7 +982,6 @@ eom_print_preview_draw (EomPrintPreview *preview, cairo_t *cr)
 	GtkWidget *area;
 	GtkAllocation allocation;
 	gint x0, y0;
-	GdkRGBA color;
 	gboolean has_focus;
 
 	priv = preview->priv;
@@ -993,14 +992,12 @@ eom_print_preview_draw (EomPrintPreview *preview, cairo_t *cr)
 	gtk_widget_get_allocation (area, &allocation);
 
 	/* draw the page */
-	gdk_rgba_parse (&color, "white");
-	gdk_cairo_set_source_rgba (cr, &color);
+	cairo_set_source_rgb (cr, 1., 1., 1.);
  	cairo_rectangle (cr, 0, 0, allocation.width, allocation.height);
  	cairo_fill (cr);
 
 	/* draw the page margins */
-	gdk_rgba_parse (&color, "black");
-	gdk_cairo_set_source_rgba (cr, &color);
+	cairo_set_source_rgb (cr, 0., 0., 0.);
 	cairo_set_line_width (cr, 0.1);
 	cairo_rectangle (cr,
 			 priv->l_rmargin, priv->t_rmargin,
