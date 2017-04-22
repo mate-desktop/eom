@@ -400,6 +400,7 @@ build_single_img_dialog (EomCloseConfirmationDialog *dlg)
 	primary_label = gtk_label_new (NULL);
 	gtk_label_set_line_wrap (GTK_LABEL (primary_label), TRUE);
 	gtk_label_set_use_markup (GTK_LABEL (primary_label), TRUE);
+	gtk_label_set_max_width_chars (GTK_LABEL (primary_label), 88);
 #if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (primary_label), 0.0);
 #else
@@ -603,6 +604,7 @@ build_multiple_imgs_dialog (EomCloseConfirmationDialog *dlg)
 	primary_label = gtk_label_new (NULL);
 	gtk_label_set_line_wrap (GTK_LABEL (primary_label), TRUE);
 	gtk_label_set_use_markup (GTK_LABEL (primary_label), TRUE);
+	gtk_label_set_max_width_chars (GTK_LABEL (primary_label), 88);
 #if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (primary_label), 0.0);
 #else
