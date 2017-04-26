@@ -2209,6 +2209,7 @@ eom_window_cmd_file_open (GtkAction *action, gpointer user_data)
         priv = window->priv;
 
 	dlg = eom_file_chooser_new (GTK_FILE_CHOOSER_ACTION_OPEN);
+	gtk_window_set_transient_for (GTK_WINDOW (dlg), GTK_WINDOW (window));
 
 	current = eom_thumb_view_get_first_selected_image (EOM_THUMB_VIEW (priv->thumbview));
 
