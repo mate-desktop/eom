@@ -2133,34 +2133,23 @@ eom_scroll_view_new (void)
 	return widget;
 }
 
-static void
-eom_scroll_view_popup_menu (EomScrollView *view, GdkEventButton *event)
-{
-	GtkWidget *popup;
-	int button, event_time;
-
-	popup = view->priv->menu;
-
-	if (event) {
-		button = event->button;
-		event_time = event->time;
-	} else {
-		button = 0;
-		event_time = gtk_get_current_event_time ();
-	}
-
-	gtk_menu_popup (GTK_MENU (popup), NULL, NULL, NULL, NULL,
-			button, event_time);
-}
-
 static gboolean
-view_on_button_press_event_cb (GtkWidget *view, GdkEventButton *event,
+view_on_button_press_event_cb (GtkWidget *widget, GdkEventButton *event,
 			       gpointer user_data)
 {
+    EomScrollView *view = EOM_SCROLL_VIEW (widget);
+
     /* Ignore double-clicks and triple-clicks */
     if (event->button == 3 && event->type == GDK_BUTTON_PRESS)
     {
-	    eom_scroll_view_popup_menu (EOM_SCROLL_VIEW (view), event);
+#if GTK_CHECK_VERSION (3, 22, 0)
+	    gtk_menu_popup_at_pointer (GTK_MENU (view->priv->menu),
+	                               (const GdkEvent*) event);
+#else
+	    gtk_menu_popup (GTK_MENU (view->priv->menu),
+	                    NULL, NULL, NULL, NULL,
+	                    event->button, event->time);
+#endif
 
 	    return TRUE;
     }
