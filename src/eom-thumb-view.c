@@ -1064,19 +1064,14 @@ eom_thumb_view_set_thumbnail_popup (EomThumbView *thumbview,
 static void
 eom_thumb_view_popup_menu (EomThumbView *thumbview, GdkEventButton *event)
 {
-	GtkWidget *popup;
-	int button, event_time;
+	g_return_if_fail (event != NULL);
 
-	popup = thumbview->priv->menu;
-
-	if (event) {
-		button = event->button;
-		event_time = event->time;
-	} else {
-		button = 0;
-		event_time = gtk_get_current_event_time ();
-	}
-
-	gtk_menu_popup (GTK_MENU (popup), NULL, NULL, NULL, NULL,
-			button, event_time);
+#if GTK_CHECK_VERSION (3, 22, 0)
+	gtk_menu_popup_at_pointer (GTK_MENU (thumbview->priv->menu),
+	                           (const GdkEvent*) event);
+#else
+	gtk_menu_popup (GTK_MENU (thumbview->priv->menu),
+	                NULL, NULL, NULL, NULL,
+	                event->button, event->time);
+#endif
 }
