@@ -34,7 +34,8 @@ pkgconfig_DATA = eom.pc
 themedir = $(pkgdatadir)
 theme_DATA = \
         gtkrc \
-        eom.css
+        eom.css \
+        eom-3.18.css
 
 EXTRA_DIST = \
         $(theme_DATA) \
