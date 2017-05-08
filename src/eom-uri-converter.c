@@ -945,7 +945,7 @@ eom_uri_converter_requires_exif (EomURIConverter *converter)
 
 /**
  * eom_uri_converter_check:
- * @converter: a #EogURIConverter
+ * @converter: a #EomURIConverter
  * @img_list: (element-type GFile): a #Gfile list
  * @error: a #GError location to store the error occurring, or NULL to ignore
  */
