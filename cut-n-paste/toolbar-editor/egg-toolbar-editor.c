@@ -738,10 +738,10 @@ update_editor_sheet (EggToolbarEditor *editor)
                             gtk_bin_get_child (GTK_BIN (viewport)));
     }
 
-#if GTK_CHECK_VERSION (3, 0, 0)
+#if GTK_CHECK_VERSION (3, 4, 0)
   /* Add grid to window. */
-  gtk_container_add
-    (GTK_CONTAINER (editor->priv->scrolled_window), grid);
+  gtk_scrolled_window_add_with_viewport
+    (GTK_SCROLLED_WINDOW (editor->priv->scrolled_window), grid);
 #else
   /* Add table to window. */
   gtk_scrolled_window_add_with_viewport
