@@ -984,5 +984,7 @@ eom_uri_converter_check (EomURIConverter *converter, GList *img_list, GError **e
 			     _("At least two file names are equal."));
 	}
 
+	g_list_free (file_list);
+
 	return all_different;
 }
