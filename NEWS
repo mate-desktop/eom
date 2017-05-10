@@ -1,5 +1,36 @@
 ### eom 1.19.0
 
+  * EomThumbView: Replace deprecated gtk_menu_popup function
+  * multiple-save-as-dialog.ui: avoid deprecated widgets
+  * error-message: replace usage of GtkStock
+  * A bunch of instrospection warning fixes
+  * EomScrollView: fix override_background deprecated call
+  * EomPropertiesDialog: Fix deprecation warnings
+  * EomThumbNav: Fix deprecated function warning
+  * EomScrollView: Replace deprecated gtk_menu_popup function
+  * EomScrollView: Switch from GtkDeviceManager to GdkSeat
+  * fix typo in function annotation
+  * use different css files for < gtk+=3.20
+  * Translations update
+  * EomWindow: Set file open dialog transient for its parent window
+  * update copyright year to 2017
+  * settings: use rgb color definition as defaults
+  * UI: avoid using deprecaded widgets
+  * EomCloseConfirmationDialog: set max width chars for primary label
+  * EomCloseConfirmationDialog: Fix size request for the image list
+  * Printing paper orientation should default based on image dimensions
+  * Avoid recompressing JPEGs as PNG when printing
+  * EomFileChooser: Use MateThumbnailFactory to create preview image
+  * EomPropertiesDialog: Allow RGBA for transparent background color
+  * preferences-ui: drop usage of MateColorButton
+  * EomScrollView: Switch to GdkRGBA for background and transparent colors
+  * EomPrintPreview: Avoid unnecessary color parsing
+  * Fix a few GtkStock deprecations
+  * EomCloseConfirmationDialog: replace deprecated GTK_STOCK_DIALOG_WARNING
+  * toolbar-editor: avoid deprecated GtkAlignment
+  * Bring eom-image.c's SVG handling up to date, properly recognize svgz filetypes
+  * eom_uri_converter: GList leak fix
+
 ### eom 1.18.0
 
   * NEWS: use consistent, project wide, markdown-like formatting
