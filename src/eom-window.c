@@ -2312,7 +2312,7 @@ eom_window_unsaved_images_confirm (EomWindow *window)
 	disabled = g_settings_get_boolean(priv->ui_settings,
 					EOM_CONF_UI_DISABLE_CLOSE_CONFIRMATION);
 	disabled |= window->priv->save_disabled;
-	if (disabled) {
+	if (disabled || !priv->store) {
 		return FALSE;
 	}
 
