@@ -1776,7 +1776,8 @@ eom_scroll_view_init (EomScrollView *view)
 	priv->display = g_object_new (GTK_TYPE_DRAWING_AREA,
 				      "can-focus", TRUE,
 				      NULL);
-
+	/* disable double-buffering, it causes .svg images to render out of position */
+	gtk_widget_set_double_buffered (GTK_WIDGET (priv->display), FALSE);
 	gtk_widget_add_events (GTK_WIDGET (priv->display),
 			       GDK_EXPOSURE_MASK
 			       | GDK_BUTTON_PRESS_MASK
