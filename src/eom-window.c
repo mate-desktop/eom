@@ -387,8 +387,8 @@ eom_window_get_display_profile (GdkScreen *screen)
 
 	dpy = GDK_DISPLAY_XDISPLAY (gdk_screen_get_display (screen));
 
-	if (gdk_screen_get_number (screen) > 0)
-		atom_name = g_strdup_printf ("_ICC_PROFILE_%d", gdk_screen_get_number (screen));
+	if (gdk_x11_screen_get_screen_number (screen) > 0)
+		atom_name = g_strdup_printf ("_ICC_PROFILE_%d", gdk_x11_screen_get_screen_number (screen));
 	else
 		atom_name = g_strdup ("_ICC_PROFILE");
 
