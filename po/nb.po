@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-26 11:32+0300\n"
-"PO-Revision-Date: 2017-02-01 19:09+0000\n"
+"PO-Revision-Date: 2017-10-07 13:43+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål (http://www.transifex.com/mate/MATE/language/nb/)\n"
 "MIME-Version: 1.0\n"
@@ -168,7 +168,7 @@ msgstr "Forfatter:"
 
 #: ../data/eom-image-properties-dialog.ui.h:22
 msgid "Copyright:"
-msgstr "Kopirett:"
+msgstr "Opphavsrett:"
 
 #: ../data/eom-image-properties-dialog.ui.h:23
 msgid "Details"
@@ -242,11 +242,11 @@ msgstr "Bildeforbedringer"
 
 #: ../data/eom-preferences-dialog.ui.h:3
 msgid "Smooth images when zoomed-_out"
-msgstr "Jevn ut bilder som zoomes _ut"
+msgstr "Jevn ut bilder som for_minskes"
 
 #: ../data/eom-preferences-dialog.ui.h:4
 msgid "Smooth images when zoomed-_in"
-msgstr "Jevn ut bilder som _zoomes inn"
+msgstr "Jevn ut bilder som _forstørres"
 
 #: ../data/eom-preferences-dialog.ui.h:5
 msgid "_Automatic orientation"
@@ -291,7 +291,7 @@ msgstr "Bildevisning"
 
 #: ../data/eom-preferences-dialog.ui.h:15
 msgid "Image Zoom"
-msgstr "Zoom i bilde"
+msgstr "Bildeforstørrelse"
 
 #: ../data/eom-preferences-dialog.ui.h:16
 msgid "E_xpand images to fit screen"
@@ -360,7 +360,7 @@ msgstr "Interpoler bilde"
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
-msgstr "Om bildet skal interpoleres ved zoom ut. Dette gir bedre kvalitet, men er noe tregere enn ikke-interpolerte bilder."
+msgstr "Om bildet skal interpoleres ved forminskning. Dette gir bedre kvalitet, men er noe tregere enn ikke-interpolerte bilder."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:9
 msgid "Extrapolate Image"
@@ -370,7 +370,7 @@ msgstr "Ekstrapoler bilde"
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
-msgstr "Om bildet skal ekstrapoleres ved zoom inn. Dette gir en uskarp effekt og er noe tregere enn ikke-ekstrapolerte bilder."
+msgstr "Om bildet skal ekstrapoleres ved forstørrelse. Dette gir en uskarp effekt og er noe tregere enn ikke-ekstrapolerte bilder."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:11
 msgid "Transparency indicator"
@@ -385,15 +385,15 @@ msgstr "Bestemmer hvordan gjennomsiktighet vises. Gyldige verdier er 'checked', 
 
 #: ../data/org.mate.eom.gschema.xml.in.h:13
 msgid "Scroll wheel zoom"
-msgstr "Zoom med mushjul"
+msgstr "Forstørr med musehjul"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:14
 msgid "Whether the scroll wheel should be used for zooming."
-msgstr "Om mueshjulet skal brukes til å zoome eller ikke."
+msgstr "Om musehjulet skal brukes til å forstørre eller ikke."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:15
 msgid "Zoom multiplier"
-msgstr "Zoom-faktor"
+msgstr "Forstørrelsesfaktor"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:17
 #, no-c-format
@@ -402,7 +402,7 @@ msgid ""
 "This value defines the zooming step used for each scroll event. For example,"
 " 0.05 results in a 5% zoom increment for each scroll event and 1.00 result "
 "in a 100% zoom increment."
-msgstr "Faktor som skal brukes ved bruk av mushjulet for zooming. Denne verdien definerer zoom-steg som brukes for hver rullehendelse. 0.05 gir f.eks 5% zoom for hver zoom-hendelse og 1.00 gir 100% per steg."
+msgstr "Faktor som skal brukes ved bruk av mushjulet for forstørrelse. Denne verdien definerer forstørrelsessteg til bruk for hver rullehendelse. 0.05 gir f.eks 5% forstørrelse for hver forstørrelseshendelse og 1.00 gir 100% per steg."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:18
 msgid "Transparency color"
@@ -433,7 +433,7 @@ msgstr "Om bildesekvensen skal vises i en uendelig løkke."
 #: ../data/org.mate.eom.gschema.xml.in.h:25
 #, no-c-format
 msgid "Allow zoom greater than 100% initially"
-msgstr "Tillat zoom større enn 100% ved start"
+msgstr "Tillat forstørring større enn 100% ved start"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:26
 msgid ""
@@ -1293,7 +1293,7 @@ msgstr "Kopier valgt bilde til utklippstavlen"
 
 #: ../src/eom-window.c:3689 ../src/eom-window.c:3701 ../src/eom-window.c:3704
 msgid "_Zoom In"
-msgstr "_Zoom inn"
+msgstr "_Forstørr"
 
 #: ../src/eom-window.c:3690 ../src/eom-window.c:3702
 msgid "Enlarge the image"
@@ -1301,7 +1301,7 @@ msgstr "Forstørr bildet"
 
 #: ../src/eom-window.c:3692 ../src/eom-window.c:3707
 msgid "Zoom _Out"
-msgstr "Zoom _ut"
+msgstr "For_minsk"
 
 #: ../src/eom-window.c:3693 ../src/eom-window.c:3705 ../src/eom-window.c:3708
 msgid "Shrink the image"
