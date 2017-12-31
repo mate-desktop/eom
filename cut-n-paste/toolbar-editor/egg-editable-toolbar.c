@@ -1730,9 +1730,6 @@ new_pixbuf_from_widget (GtkWidget *widget)
   GtkWidget *window;
   GdkPixbuf *pixbuf;
   gint icon_height;
-  GdkScreen *screen;
-
-  screen = gtk_widget_get_screen (widget);
 
   if (!gtk_icon_size_lookup (GTK_ICON_SIZE_LARGE_TOOLBAR,
                              NULL,
