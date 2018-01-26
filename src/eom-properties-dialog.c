@@ -406,16 +406,16 @@ static void
 pd_folder_button_clicked_cb (GtkButton *button, gpointer data)
 {
 	EomPropertiesDialogPrivate *priv = EOM_PROPERTIES_DIALOG (data)->priv;
-	GdkScreen *screen;
+	GtkWindow *window;
 	guint32 timestamp;
 
 	if (!priv->folder_button_uri)
 		return;
 	
-	screen = gtk_widget_get_screen (GTK_WIDGET (button));
 	timestamp = gtk_get_current_event_time ();
 
-	gtk_show_uri (screen, priv->folder_button_uri, timestamp, NULL);
+	window = GTK_WINDOW (data);
+	gtk_show_uri_on_window (window, priv->folder_button_uri, timestamp, NULL);
 }
 
 static gboolean
