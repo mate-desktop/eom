@@ -429,16 +429,22 @@ _folder_button_clicked_cb (GtkButton *button, gpointer user_data)
 {
 	EomMetadataSidebarPrivate *priv = EOM_METADATA_SIDEBAR(user_data)->priv;
 	EomImage *img;
-	GdkScreen *screen;
+	GtkWidget *toplevel;
+	GtkWindow *window;
 	GFile *file;
 
 	g_return_if_fail (priv->parent_window != NULL);
 
 	img = eom_window_get_image (priv->parent_window);
-	screen = gtk_widget_get_screen (GTK_WIDGET (priv->parent_window));
 	file = eom_image_get_file (img);
 
-	eom_util_show_file_in_filemanager (file, screen);
+	toplevel = gtk_widget_get_toplevel (GTK_WIDGET (button));
+	if (GTK_IS_WINDOW (toplevel))
+		window = GTK_WINDOW (toplevel);
+	else
+		window = NULL;
+
+	eom_util_show_file_in_filemanager (file, window);
 
 	g_object_unref (file);
 }

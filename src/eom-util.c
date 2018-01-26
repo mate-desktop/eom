@@ -343,7 +343,7 @@ eom_util_file_is_persistent (GFile *file)
 }
 
 static void
-_eom_util_show_file_in_filemanager_fallback (GFile *file, GdkScreen *screen)
+_eom_util_show_file_in_filemanager_fallback (GFile *file, GtkWindow *toplevel)
 {
 	gchar *uri = NULL;
 	GError *error = NULL;
@@ -362,7 +362,7 @@ _eom_util_show_file_in_filemanager_fallback (GFile *file, GdkScreen *screen)
 		g_object_unref (parent_file);
 	}
 
-	if (uri && !gtk_show_uri (screen, uri, timestamp, &error)) {
+	if (uri && !gtk_show_uri_on_window (toplevel, uri, timestamp, &error)) {
 		g_warning ("Couldn't show containing folder \"%s\": %s", uri,
 			   error->message);
 		g_error_free (error);
@@ -372,7 +372,7 @@ _eom_util_show_file_in_filemanager_fallback (GFile *file, GdkScreen *screen)
 }
 
 void
-eom_util_show_file_in_filemanager (GFile *file, GdkScreen *screen)
+eom_util_show_file_in_filemanager (GFile *file, GtkWindow *toplevel)
 {
 	GDBusProxy *proxy;
 	gboolean done = FALSE;
@@ -425,5 +425,5 @@ eom_util_show_file_in_filemanager (GFile *file, GdkScreen *screen)
 
 	/* Fallback to gtk_show_uri() if launch over DBus is not possible */
 	if (!done)
-		_eom_util_show_file_in_filemanager_fallback (file, screen);
+		_eom_util_show_file_in_filemanager_fallback (file, toplevel);
 }
