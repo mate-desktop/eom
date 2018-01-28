@@ -401,11 +401,7 @@ build_single_img_dialog (EomCloseConfirmationDialog *dlg)
 	gtk_label_set_line_wrap (GTK_LABEL (primary_label), TRUE);
 	gtk_label_set_use_markup (GTK_LABEL (primary_label), TRUE);
 	gtk_label_set_max_width_chars (GTK_LABEL (primary_label), 88);
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (primary_label), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (primary_label), 0.0, 0.5);
-#endif
 	gtk_label_set_selectable (GTK_LABEL (primary_label), TRUE);
 
 	image_name = eom_image_get_caption (img);
@@ -424,11 +420,7 @@ build_single_img_dialog (EomCloseConfirmationDialog *dlg)
 	secondary_label = gtk_label_new (str);
 	g_free (str);
 	gtk_label_set_line_wrap (GTK_LABEL (secondary_label), TRUE);
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (secondary_label), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (secondary_label), 0.0, 0.5);
-#endif
 	gtk_label_set_selectable (GTK_LABEL (secondary_label), TRUE);
 
 	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
@@ -605,11 +597,7 @@ build_multiple_imgs_dialog (EomCloseConfirmationDialog *dlg)
 	gtk_label_set_line_wrap (GTK_LABEL (primary_label), TRUE);
 	gtk_label_set_use_markup (GTK_LABEL (primary_label), TRUE);
 	gtk_label_set_max_width_chars (GTK_LABEL (primary_label), 88);
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (primary_label), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (primary_label), 0.0, 0.5);
-#endif
 	gtk_label_set_selectable (GTK_LABEL (primary_label), TRUE);
 
 	str = g_strdup_printf (
@@ -634,11 +622,7 @@ build_multiple_imgs_dialog (EomCloseConfirmationDialog *dlg)
 
 	gtk_box_pack_start (GTK_BOX (vbox2), select_label, FALSE, FALSE, 0);
 	gtk_label_set_line_wrap (GTK_LABEL (select_label), TRUE);
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (select_label), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (select_label), 0.0, 0.5);
-#endif
 
 	scrolledwindow = gtk_scrolled_window_new (NULL, NULL);
 	gtk_box_pack_start (GTK_BOX (vbox2), scrolledwindow, TRUE, TRUE, 0);
@@ -658,11 +642,7 @@ build_multiple_imgs_dialog (EomCloseConfirmationDialog *dlg)
 
 	gtk_box_pack_start (GTK_BOX (vbox2), secondary_label, FALSE, FALSE, 0);
 	gtk_label_set_line_wrap (GTK_LABEL (secondary_label), TRUE);
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (secondary_label), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (secondary_label), 0, 0.5);
-#endif
 	gtk_label_set_selectable (GTK_LABEL (secondary_label), TRUE);
 
 	gtk_label_set_mnemonic_widget (GTK_LABEL (select_label), treeview);
