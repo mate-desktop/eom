@@ -913,21 +913,12 @@ display_key_press_event (GtkWidget *widget, GdkEventKey *event, gpointer data)
 	}
 
 	if (do_zoom) {
-#if GTK_CHECK_VERSION (3, 20, 0)
 		GdkSeat *seat;
-#else
-		GdkDeviceManager *device_manager;
-#endif
 		GdkDevice *device;
 		gint x, y;
 
-#if GTK_CHECK_VERSION (3, 20, 0)
 		seat = gdk_display_get_default_seat (gtk_widget_get_display (widget));
 		device = gdk_seat_get_pointer (seat);
-#else
-		device_manager = gdk_display_get_device_manager (gtk_widget_get_display (widget));
-		device = gdk_device_manager_get_client_pointer (device_manager);
-#endif
 
 		gdk_window_get_device_position (gtk_widget_get_window (widget), device,
 		                                &x, &y, NULL);
@@ -2155,14 +2146,8 @@ view_on_button_press_event_cb (GtkWidget *widget, GdkEventButton *event,
     /* Ignore double-clicks and triple-clicks */
     if (event->button == 3 && event->type == GDK_BUTTON_PRESS)
     {
-#if GTK_CHECK_VERSION (3, 22, 0)
 	    gtk_menu_popup_at_pointer (GTK_MENU (view->priv->menu),
 	                               (const GdkEvent*) event);
-#else
-	    gtk_menu_popup (GTK_MENU (view->priv->menu),
-	                    NULL, NULL, NULL, NULL,
-	                    event->button, event->time);
-#endif
 
 	    return TRUE;
     }

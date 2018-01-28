@@ -44,12 +44,6 @@ GTK_DOC_CHECK(1.9)
 
 AC_CHECK_FUNCS(strptime)
 
-# GLib min/max required versions
-AC_DEFINE([GLIB_VERSION_MAX_ALLOWED], [GLIB_VERSION_2_36],
-	[Warn on use of APIs added after GLib 2.36])
-AC_DEFINE([GLIB_VERSION_MIN_REQUIRED], [GLIB_VERSION_2_36],
-	[Warn on use of APIs deprecated before GLib 2.36])
-
 # ****************************************************************
 # Support for nl_langinfo (_NL_MEASUREMENT_MEASUREMENT) (optional)
 # ****************************************************************
@@ -90,9 +84,9 @@ YELP_HELP_INIT
 # MATE Libs
 # **********
 
-GLIB_REQUIRED=2.36.0
-GIO_REQUIRED=2.36.0
-GTK_REQUIRED=3.14.0
+GLIB_REQUIRED=2.50.0
+GIO_REQUIRED=2.50.0
+GTK_REQUIRED=3.22.0
 MATE_DESKTOP_REQUIRED=1.17.0
 GDKPIXBUF_REQUIRED=2.30.0
 SHARED_MIME_INFO_REQUIRED=0.20

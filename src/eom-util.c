@@ -53,11 +53,7 @@ eom_util_show_help (const gchar *section, GtkWindow *parent)
 	if (section)
 		uri = g_strdup_printf ("help:eom/%s", section);
 
-#if GTK_CHECK_VERSION (3, 22, 0)
 	gtk_show_uri_on_window (parent, ((uri != NULL) ? uri : "help:eom"),
-#else
-	gtk_show_uri (NULL, ((uri != NULL) ? uri : "help:eom"),
-#endif
 		      gtk_get_current_event_time (), &error);
 
 	g_free (uri);

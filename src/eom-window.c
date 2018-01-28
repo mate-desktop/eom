@@ -828,11 +828,7 @@ image_file_changed_cb (EomImage *img, EomWindow *window)
 	gtk_widget_set_halign (image, GTK_ALIGN_START);
 	gtk_widget_set_valign (image, GTK_ALIGN_END);
 	gtk_box_pack_start (GTK_BOX (hbox), label, TRUE, TRUE, 0);
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
-#endif
 	gtk_box_pack_start (GTK_BOX (gtk_info_bar_get_content_area (GTK_INFO_BAR (info_bar))), hbox, TRUE, TRUE, 0);
 	gtk_widget_show_all (hbox);
 	gtk_widget_show (info_bar);
@@ -1168,9 +1164,7 @@ eom_window_obtain_desired_size (EomImage  *image,
 				EomWindow *window)
 {
 	GdkScreen *screen;
-#if GTK_CHECK_VERSION (3, 22, 0)
 	GdkDisplay *display;
-#endif
 	GdkRectangle monitor;
 	GtkAllocation allocation;
 	gint final_width, final_height;
@@ -1202,19 +1196,11 @@ eom_window_obtain_desired_size (EomImage  *image,
 	window_height = allocation.height;
 
 	screen = gtk_window_get_screen (GTK_WINDOW (window));
-#if GTK_CHECK_VERSION (3, 22, 0)
 	display = gdk_screen_get_display (screen);
 
 	gdk_monitor_get_geometry (gdk_display_get_monitor_at_window (display,
 								     gtk_widget_get_window (GTK_WIDGET (window))),
 				  &monitor);
-#else
-
-	gdk_screen_get_monitor_geometry (screen,
-			gdk_screen_get_monitor_at_window (screen,
-				gtk_widget_get_window (GTK_WIDGET (window))),
-			&monitor);
-#endif
 
 	screen_width  = monitor.width;
 	screen_height = monitor.height;
@@ -1654,28 +1640,18 @@ eom_window_update_fullscreen_popup (EomWindow *window)
 	GtkWidget *popup = window->priv->fullscreen_popup;
 	GdkRectangle screen_rect;
 	GdkScreen *screen;
-#if GTK_CHECK_VERSION (3, 22, 0)
 	GdkDisplay *display;
-#endif
 
 	g_return_if_fail (popup != NULL);
 
 	if (gtk_widget_get_window (GTK_WIDGET (window)) == NULL) return;
 
 	screen = gtk_widget_get_screen (GTK_WIDGET (window));
-#if GTK_CHECK_VERSION (3, 22, 0)
 	display = gdk_screen_get_display (screen);
 
 	gdk_monitor_get_geometry (gdk_display_get_monitor_at_window (display,
 								     gtk_widget_get_window (GTK_WIDGET (window))),
 				  &screen_rect);
-#else
-	gdk_screen_get_monitor_geometry (screen,
-			gdk_screen_get_monitor_at_window
-                        (screen,
-                         gtk_widget_get_window (GTK_WIDGET (window))),
-                         &screen_rect);
-#endif
 
 	gtk_widget_set_size_request (popup,
 				     screen_rect.width,
@@ -2725,11 +2701,7 @@ eom_window_set_wallpaper (EomWindow *window, const gchar *filename, const gchar 
 	gtk_widget_set_halign (image, GTK_ALIGN_START);
 	gtk_widget_set_valign (image, GTK_ALIGN_END);
 	gtk_box_pack_start (GTK_BOX (hbox), label, TRUE, TRUE, 0);
-#if GTK_CHECK_VERSION (3, 16, 0)
 	gtk_label_set_xalign (GTK_LABEL (label), 0.0);
-#else
-	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
-#endif
 	gtk_box_pack_start (GTK_BOX (gtk_info_bar_get_content_area (GTK_INFO_BAR (info_bar))), hbox, TRUE, TRUE, 0);
 	gtk_widget_show_all (hbox);
 	gtk_widget_show (info_bar);

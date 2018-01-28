@@ -49,11 +49,7 @@
 #include <exempi/xmp.h>
 #endif
 
-#if GTK_CHECK_VERSION (3, 20, 0)
 #define EOM_CSS_FILE_PATH EOM_DATA_DIR G_DIR_SEPARATOR_S "eom.css"
-#else
-#define EOM_CSS_FILE_PATH EOM_DATA_DIR G_DIR_SEPARATOR_S "eom-3.18.css"
-#endif
 
 static EomStartupFlags flags;
 
