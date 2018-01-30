@@ -5,16 +5,16 @@
 # Translators:
 # jakubtalich, 2014
 # Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2015
-# Martin Kříž <liberte.czech@gmail.com>, 2015
+# LiberteCzech <liberte.czech@gmail.com>, 2015
 # Roman Horník <roman.hornik@debian-linux.cz>, 2016
 # Stanislav Kučera <inactive+kacernator@transifex.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-26 11:32+0300\n"
+"POT-Creation-Date: 2017-11-28 09:48+0100\n"
 "PO-Revision-Date: 2017-09-19 11:03+0000\n"
-"Last-Translator: monsta <monsta@inbox.ru>\n"
+"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
 "Language-Team: Czech (http://www.transifex.com/mate/MATE/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -62,7 +62,7 @@ msgstr "Odstranit vybranou lištu nástrojů"
 msgid "Separator"
 msgstr "Oddělovač"
 
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2556
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2578
 msgid "Eye of MATE"
 msgstr "Eye of MATE"
 
@@ -77,7 +77,7 @@ msgid ""
 "subsequent images in the directory the image was loaded from. </p>"
 msgstr "Oko pro MATE je jednoduchý prohlížeč obrázku pro desktopové prostředí MATE. Umožňuje jednoduché úpravy obrázků - přibližování, otáčení. Umí procházet i další obrázky v adresáři."
 
-#: ../data/eom.desktop.in.in.h:1 ../src/main.c:70 ../src/main.c:264
+#: ../data/eom.desktop.in.in.h:1 ../src/main.c:74 ../src/main.c:268
 msgid "Eye of MATE Image Viewer"
 msgstr "Prohlížeč obrázků Eye of MATE"
 
@@ -196,16 +196,16 @@ msgid "<b>%n:</b> counter"
 msgstr "<b>%n:</b> čítač"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:6
-msgid "Filename format:"
-msgstr "Formát názvu souboru:"
-
-#: ../data/eom-multiple-save-as-dialog.ui.h:7
 msgid "Choose a folder"
 msgstr "Zvolte složku"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:8
+#: ../data/eom-multiple-save-as-dialog.ui.h:7
 msgid "Destination folder:"
 msgstr "Cílová složka:"
+
+#: ../data/eom-multiple-save-as-dialog.ui.h:8
+msgid "Filename format:"
+msgstr "Formát názvu souboru:"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:9
 msgid "File Path Specifications"
@@ -913,11 +913,11 @@ msgstr "Vyfotografováno"
 msgid "At least two file names are equal."
 msgstr "Názvy alespoň dvou souborů jsou stejné."
 
-#: ../src/eom-util.c:68
+#: ../src/eom-util.c:72
 msgid "Could not display help for Eye of MATE"
 msgstr "Nelze zobrazit nápovědu pro Eye of MATE"
 
-#: ../src/eom-util.c:116
+#: ../src/eom-util.c:120
 msgid " (invalid Unicode)"
 msgstr " (neplatný Unicode)"
 
@@ -939,7 +939,7 @@ msgstr[2] "%i × %i bodů  %s    %i%%"
 msgid "_Reload"
 msgstr "_Znovu načíst"
 
-#: ../src/eom-window.c:809 ../src/eom-window.c:2677
+#: ../src/eom-window.c:809 ../src/eom-window.c:2699
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "_Skrýt"
@@ -968,31 +968,31 @@ msgstr "Otevřít vybraný obrázek pomocí „%s“"
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Ukládání obrázku „%s“ (%u/%u)"
 
-#: ../src/eom-window.c:1502
+#: ../src/eom-window.c:1513
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Otevírá se obrázek „%s“"
 
-#: ../src/eom-window.c:2176
+#: ../src/eom-window.c:2197
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
 msgstr "Chyba během tisku souboru:\n%s"
 
-#: ../src/eom-window.c:2438
+#: ../src/eom-window.c:2460
 msgid "Toolbar Editor"
 msgstr "Editor lišty nástrojů"
 
-#: ../src/eom-window.c:2441
+#: ../src/eom-window.c:2463
 msgid "_Reset to Default"
 msgstr "O_bnovit na výchozí"
 
-#: ../src/eom-window.c:2532
+#: ../src/eom-window.c:2554
 msgid "translator-credits"
 msgstr "George Lebl <jirka@5z.com>\nMichal Bukovjan <bukm@centrum.cz>\nMiloslav Trmač <mitr@volny.cz>\nPetr Tomeš <ptomes@gmail.com>\nLukáš Novotný <lukasnov@cvs.gnome.org>\nJakub Friedl <jfriedl@suse.cz>\nKamil Páral <ripper42@gmail.com>\nPetr Kovář <pknbe@volny.cz>\nAdrian Guniš <andygun696@gmail.com>"
 
-#: ../src/eom-window.c:2535
+#: ../src/eom-window.c:2557
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1000,7 +1000,7 @@ msgid ""
 "any later version.\n"
 msgstr "Tento program je svobodný software; můžete jej šířit anebo modifikovat podle ustanovení GNU General Public License, vydávané Free Software Foundation; a to buď verze 2 této licence anebo (podle vlastního uvážení) kterékoliv pozdější verze.\n"
 
-#: ../src/eom-window.c:2539
+#: ../src/eom-window.c:2561
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1008,51 +1008,51 @@ msgid ""
 "more details.\n"
 msgstr "Tento program je rozšiřován v naději, že bude užitečný, avšak BEZ JAKÉKOLIV ZÁRUKY; neposkytují se ani odvozené záruky PRODEJNOSTI anebo VHODNOSTI PRO URČITÝ ÚČEL. Další podrobnosti hledejte v GNU General Public License.\n"
 
-#: ../src/eom-window.c:2543
+#: ../src/eom-window.c:2565
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr "Kopii GNU General Public License byste měli obdržet spolu s tímto programem; pokud se tak nestalo, napište si o ni Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA"
 
-#: ../src/eom-window.c:2561
+#: ../src/eom-window.c:2583
 msgid "The MATE image viewer."
 msgstr "Prohlížeč obrázků pro MATE."
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2675
+#: ../src/eom-window.c:2697
 msgid "_Open Background Preferences"
 msgstr "_Otevřít předvolby pozadí"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2691
+#: ../src/eom-window.c:2713
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
 msgstr "Obrázek „%s“ byl nastaven jako pozadí plochy.\nPřejete si upravit její vzhled?"
 
-#: ../src/eom-window.c:3089
+#: ../src/eom-window.c:3111
 msgid "Saving image locally…"
 msgstr "Obrázek se ukládá místně…"
 
-#: ../src/eom-window.c:3169
+#: ../src/eom-window.c:3191
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
 msgstr "Opravdu chcete přesunout\n„%s“ do koše?"
 
-#: ../src/eom-window.c:3172
+#: ../src/eom-window.c:3194
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr "Koš pro „%s“ není dostupný. Přejete si odstranit tento obrázek natrvalo?"
 
-#: ../src/eom-window.c:3177
+#: ../src/eom-window.c:3199
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1064,412 +1064,412 @@ msgstr[0] "Opravdu chcete přesunout\nvybraný obrázek do koše?"
 msgstr[1] "Opravdu chcete přesunout\n%d vybrané obrázky do koše?"
 msgstr[2] "Opravdu chcete přesunout\n%d vybraných obrázků do koše?"
 
-#: ../src/eom-window.c:3182
+#: ../src/eom-window.c:3204
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
 msgstr "Některé z vybraných obrázků nelze přesunout do koše a budou odstraněny natrvalo. Jste si jisti, že chcete pokračovat?"
 
-#: ../src/eom-window.c:3199 ../src/eom-window.c:3683 ../src/eom-window.c:3710
+#: ../src/eom-window.c:3221 ../src/eom-window.c:3705 ../src/eom-window.c:3732
 msgid "Move to _Trash"
 msgstr "Přesunout do _koše"
 
-#: ../src/eom-window.c:3201
+#: ../src/eom-window.c:3223
 msgid "_Do not ask again during this session"
 msgstr "_Neptát se znovu během tohoto sezení"
 
-#: ../src/eom-window.c:3246 ../src/eom-window.c:3260
+#: ../src/eom-window.c:3268 ../src/eom-window.c:3282
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Nelze přistoupit ke koši."
 
-#: ../src/eom-window.c:3268
+#: ../src/eom-window.c:3290
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Soubor nelze smazat"
 
-#: ../src/eom-window.c:3365
+#: ../src/eom-window.c:3387
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Chyba při odstraňování obrázku %s"
 
-#: ../src/eom-window.c:3607
+#: ../src/eom-window.c:3629
 msgid "_Image"
 msgstr "_Obrázek"
 
-#: ../src/eom-window.c:3608
+#: ../src/eom-window.c:3630
 msgid "_Edit"
 msgstr "_Upravit"
 
-#: ../src/eom-window.c:3609
+#: ../src/eom-window.c:3631
 msgid "_View"
 msgstr "_Zobrazit"
 
-#: ../src/eom-window.c:3610
+#: ../src/eom-window.c:3632
 msgid "_Go"
 msgstr "Pře_jít"
 
-#: ../src/eom-window.c:3611
+#: ../src/eom-window.c:3633
 msgid "_Tools"
 msgstr "_Nástroje"
 
-#: ../src/eom-window.c:3612
+#: ../src/eom-window.c:3634
 msgid "_Help"
 msgstr "Nápo_věda"
 
-#: ../src/eom-window.c:3614
+#: ../src/eom-window.c:3636
 msgid "_Open…"
 msgstr "_Otevřít…"
 
-#: ../src/eom-window.c:3615
+#: ../src/eom-window.c:3637
 msgid "Open a file"
 msgstr "Otevřít soubor"
 
-#: ../src/eom-window.c:3617
+#: ../src/eom-window.c:3639
 msgid "_Close"
 msgstr "_Zavřít"
 
-#: ../src/eom-window.c:3618
+#: ../src/eom-window.c:3640
 msgid "Close window"
 msgstr "Zavřít okno"
 
-#: ../src/eom-window.c:3620
+#: ../src/eom-window.c:3642
 msgid "T_oolbar"
 msgstr "_Lišta nástrojů"
 
-#: ../src/eom-window.c:3621
+#: ../src/eom-window.c:3643
 msgid "Edit the application toolbar"
 msgstr "Upravit lištu nástrojů"
 
-#: ../src/eom-window.c:3623
+#: ../src/eom-window.c:3645
 msgid "Prefere_nces"
 msgstr "_Předvolby"
 
-#: ../src/eom-window.c:3624
+#: ../src/eom-window.c:3646
 msgid "Preferences for Eye of MATE"
 msgstr "Předvolby Eye of MATE"
 
-#: ../src/eom-window.c:3626
+#: ../src/eom-window.c:3648
 msgid "_Contents"
 msgstr "_Obsah"
 
-#: ../src/eom-window.c:3627
+#: ../src/eom-window.c:3649
 msgid "Help on this application"
 msgstr "Nápověda pro tuto aplikaci"
 
-#: ../src/eom-window.c:3629
+#: ../src/eom-window.c:3651
 msgid "_About"
 msgstr "O _aplikaci"
 
-#: ../src/eom-window.c:3630
+#: ../src/eom-window.c:3652
 msgid "About this application"
 msgstr "O této aplikaci"
 
-#: ../src/eom-window.c:3635
+#: ../src/eom-window.c:3657
 msgid "_Toolbar"
 msgstr "_Lišta nástrojů"
 
-#: ../src/eom-window.c:3636
+#: ../src/eom-window.c:3658
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Změní viditelnost lišty nástrojů v aktuálním okně"
 
-#: ../src/eom-window.c:3638
+#: ../src/eom-window.c:3660
 msgid "_Statusbar"
 msgstr "_Stavová lišta"
 
-#: ../src/eom-window.c:3639
+#: ../src/eom-window.c:3661
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Změní viditelnost stavové lišty v aktuálním okně"
 
-#: ../src/eom-window.c:3641
+#: ../src/eom-window.c:3663
 msgid "_Image Collection"
 msgstr "S_bírka obrázků"
 
-#: ../src/eom-window.c:3642
+#: ../src/eom-window.c:3664
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "Změní viditelnost panelu se sbírkou obrázků v aktuálním okně"
 
-#: ../src/eom-window.c:3644
+#: ../src/eom-window.c:3666
 msgid "Side _Pane"
 msgstr "Postranní _panel"
 
-#: ../src/eom-window.c:3645
+#: ../src/eom-window.c:3667
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Změní viditelnost postranního panelu v aktuálním okně"
 
-#: ../src/eom-window.c:3650
+#: ../src/eom-window.c:3672
 msgid "_Save"
 msgstr "_Uložit"
 
-#: ../src/eom-window.c:3651
+#: ../src/eom-window.c:3673
 msgid "Save changes in currently selected images"
 msgstr "Uložit změny v aktuálně vybraných obrázcích"
 
-#: ../src/eom-window.c:3653
+#: ../src/eom-window.c:3675
 msgid "Open _with"
 msgstr "Otevřít _pomocí"
 
-#: ../src/eom-window.c:3654
+#: ../src/eom-window.c:3676
 msgid "Open the selected image with a different application"
 msgstr "Otevřít vybraný obrázek jinou aplikací"
 
-#: ../src/eom-window.c:3656
+#: ../src/eom-window.c:3678
 msgid "Save _As…"
 msgstr "Uložit _jako…"
 
-#: ../src/eom-window.c:3657
+#: ../src/eom-window.c:3679
 msgid "Save the selected images with a different name"
 msgstr "Uložit vybrané obrázky pod odlišným názvem"
 
-#: ../src/eom-window.c:3659
+#: ../src/eom-window.c:3681
 msgid "_Print…"
 msgstr "_Tisk…"
 
-#: ../src/eom-window.c:3660
+#: ../src/eom-window.c:3682
 msgid "Print the selected image"
 msgstr "Vytisknout vybraný obrázek"
 
-#: ../src/eom-window.c:3662
+#: ../src/eom-window.c:3684
 msgid "Prope_rties"
 msgstr "Vlast_nosti"
 
-#: ../src/eom-window.c:3663
+#: ../src/eom-window.c:3685
 msgid "Show the properties and metadata of the selected image"
 msgstr "Zobrazit vlastnosti a metadata vybraného obrázku"
 
-#: ../src/eom-window.c:3665
+#: ../src/eom-window.c:3687
 msgid "_Undo"
 msgstr "_Zpět"
 
-#: ../src/eom-window.c:3666
+#: ../src/eom-window.c:3688
 msgid "Undo the last change in the image"
 msgstr "Vrátit poslední změnu v obrázku"
 
-#: ../src/eom-window.c:3668
+#: ../src/eom-window.c:3690
 msgid "Flip _Horizontal"
 msgstr "Převrátit _vodorovně"
 
-#: ../src/eom-window.c:3669
+#: ../src/eom-window.c:3691
 msgid "Mirror the image horizontally"
 msgstr "Zrcadlit obrázek vodorovně"
 
-#: ../src/eom-window.c:3671
+#: ../src/eom-window.c:3693
 msgid "Flip _Vertical"
 msgstr "Převrátit _svisle"
 
-#: ../src/eom-window.c:3672
+#: ../src/eom-window.c:3694
 msgid "Mirror the image vertically"
 msgstr "Zrcadlit obrázek svisle"
 
-#: ../src/eom-window.c:3674
+#: ../src/eom-window.c:3696
 msgid "_Rotate Clockwise"
 msgstr "Otočit v_e směru hodinových ručiček"
 
-#: ../src/eom-window.c:3675
+#: ../src/eom-window.c:3697
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Otočit obrázek o 90 stupňů doprava"
 
-#: ../src/eom-window.c:3677
+#: ../src/eom-window.c:3699
 msgid "Rotate Counterc_lockwise"
 msgstr "Otočit p_roti směru hodinových ručiček"
 
-#: ../src/eom-window.c:3678
+#: ../src/eom-window.c:3700
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Otočit obrázek o 90 stupňů doleva"
 
-#: ../src/eom-window.c:3680
+#: ../src/eom-window.c:3702
 msgid "Set as _Desktop Background"
 msgstr "Nastavit jako _pozadí plochy"
 
-#: ../src/eom-window.c:3681
+#: ../src/eom-window.c:3703
 msgid "Set the selected image as the desktop background"
 msgstr "Nastavit vybraný obrázek jako pozadí plochy"
 
-#: ../src/eom-window.c:3684
+#: ../src/eom-window.c:3706
 msgid "Move the selected image to the trash folder"
 msgstr "Přesunout vybraný obrázek do koše"
 
-#: ../src/eom-window.c:3686
+#: ../src/eom-window.c:3708
 msgid "_Copy"
 msgstr "_Kopírovat"
 
-#: ../src/eom-window.c:3687
+#: ../src/eom-window.c:3709
 msgid "Copy the selected image to the clipboard"
 msgstr "Zkopíruje vybraný obrázek do schránky"
 
-#: ../src/eom-window.c:3689 ../src/eom-window.c:3701 ../src/eom-window.c:3704
+#: ../src/eom-window.c:3711 ../src/eom-window.c:3723 ../src/eom-window.c:3726
 msgid "_Zoom In"
 msgstr "Přiblíži_t"
 
-#: ../src/eom-window.c:3690 ../src/eom-window.c:3702
+#: ../src/eom-window.c:3712 ../src/eom-window.c:3724
 msgid "Enlarge the image"
 msgstr "Zvětšit obrázek"
 
-#: ../src/eom-window.c:3692 ../src/eom-window.c:3707
+#: ../src/eom-window.c:3714 ../src/eom-window.c:3729
 msgid "Zoom _Out"
 msgstr "_Oddálit"
 
-#: ../src/eom-window.c:3693 ../src/eom-window.c:3705 ../src/eom-window.c:3708
+#: ../src/eom-window.c:3715 ../src/eom-window.c:3727 ../src/eom-window.c:3730
 msgid "Shrink the image"
 msgstr "Zmenšit obrázek"
 
-#: ../src/eom-window.c:3695
+#: ../src/eom-window.c:3717
 msgid "_Normal Size"
 msgstr "_Normální velikost"
 
-#: ../src/eom-window.c:3696
+#: ../src/eom-window.c:3718
 msgid "Show the image at its normal size"
 msgstr "Zobrazit obrázek v původní velikosti"
 
-#: ../src/eom-window.c:3698
+#: ../src/eom-window.c:3720
 msgid "_Best Fit"
 msgstr "Přizpůsobit velikost"
 
-#: ../src/eom-window.c:3699
+#: ../src/eom-window.c:3721
 msgid "Fit the image to the window"
 msgstr "Přizpůsobit obrázek oknu"
 
-#: ../src/eom-window.c:3716
+#: ../src/eom-window.c:3738
 msgid "_Fullscreen"
 msgstr "_Celá obrazovka"
 
-#: ../src/eom-window.c:3717
+#: ../src/eom-window.c:3739
 msgid "Show the current image in fullscreen mode"
 msgstr "Zobrazit aktuální obrázek v režimu celé obrazovky"
 
-#: ../src/eom-window.c:3719
+#: ../src/eom-window.c:3741
 msgid "Pause Slideshow"
 msgstr "Pozastavit promítání snímků"
 
-#: ../src/eom-window.c:3720
+#: ../src/eom-window.c:3742
 msgid "Pause or resume the slideshow"
 msgstr "Pozastavit nebo pokračovat v promítání snímků"
 
-#: ../src/eom-window.c:3725 ../src/eom-window.c:3740
+#: ../src/eom-window.c:3747 ../src/eom-window.c:3762
 msgid "_Previous Image"
 msgstr "_Předchozí obrázek"
 
-#: ../src/eom-window.c:3726
+#: ../src/eom-window.c:3748
 msgid "Go to the previous image of the collection"
 msgstr "Přejít na předchozí obrázek ze sbírky"
 
-#: ../src/eom-window.c:3728
+#: ../src/eom-window.c:3750
 msgid "_Next Image"
 msgstr "_Následující obrázek"
 
-#: ../src/eom-window.c:3729
+#: ../src/eom-window.c:3751
 msgid "Go to the next image of the collection"
 msgstr "Přejít na následující obrázek ze sbírky"
 
-#: ../src/eom-window.c:3731 ../src/eom-window.c:3743
+#: ../src/eom-window.c:3753 ../src/eom-window.c:3765
 msgid "_First Image"
 msgstr "P_rvní obrázek"
 
-#: ../src/eom-window.c:3732
+#: ../src/eom-window.c:3754
 msgid "Go to the first image of the collection"
 msgstr "Přejít na první obrázek ze sbírky"
 
-#: ../src/eom-window.c:3734 ../src/eom-window.c:3746
+#: ../src/eom-window.c:3756 ../src/eom-window.c:3768
 msgid "_Last Image"
 msgstr "Po_slední obrázek"
 
-#: ../src/eom-window.c:3735
+#: ../src/eom-window.c:3757
 msgid "Go to the last image of the collection"
 msgstr "Přejít na poslední obrázek ze sbírky"
 
-#: ../src/eom-window.c:3737
+#: ../src/eom-window.c:3759
 msgid "_Random Image"
 msgstr "Ná_hodný obrázek"
 
-#: ../src/eom-window.c:3738
+#: ../src/eom-window.c:3760
 msgid "Go to a random image of the collection"
 msgstr "Přejít na náhodný obrázek ze sbírky"
 
-#: ../src/eom-window.c:3752
+#: ../src/eom-window.c:3774
 msgid "S_lideshow"
 msgstr "_Přehlídka snímků"
 
-#: ../src/eom-window.c:3753
+#: ../src/eom-window.c:3775
 msgid "Start a slideshow view of the images"
 msgstr "Spustit promítání snímků"
 
-#: ../src/eom-window.c:3819
+#: ../src/eom-window.c:3841
 msgid "Previous"
 msgstr "Předchozí"
 
-#: ../src/eom-window.c:3823
+#: ../src/eom-window.c:3845
 msgid "Next"
 msgstr "Následující"
 
-#: ../src/eom-window.c:3827
+#: ../src/eom-window.c:3849
 msgid "Right"
 msgstr "Doprava"
 
-#: ../src/eom-window.c:3830
+#: ../src/eom-window.c:3852
 msgid "Left"
 msgstr "Doleva"
 
-#: ../src/eom-window.c:3833
+#: ../src/eom-window.c:3855
 msgid "In"
 msgstr "Zvětšit"
 
-#: ../src/eom-window.c:3836
+#: ../src/eom-window.c:3858
 msgid "Out"
 msgstr "Zmenšit"
 
-#: ../src/eom-window.c:3839
+#: ../src/eom-window.c:3861
 msgid "Normal"
 msgstr "Normální"
 
-#: ../src/eom-window.c:3842
+#: ../src/eom-window.c:3864
 msgid "Fit"
 msgstr "Přizpůsobit"
 
-#: ../src/eom-window.c:3845
+#: ../src/eom-window.c:3867
 msgid "Collection"
 msgstr "Sbírka"
 
-#: ../src/eom-window.c:3848
+#: ../src/eom-window.c:3870
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Koš"
 
-#: ../src/eom-window.c:4197
+#: ../src/eom-window.c:4219
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "Edituje současný obrázek pomocí %s"
 
-#: ../src/eom-window.c:4199
+#: ../src/eom-window.c:4221
 msgid "Edit Image"
 msgstr "Upravit obrázek"
 
-#: ../src/main.c:77
+#: ../src/main.c:81
 msgid "Open in fullscreen mode"
 msgstr "Otevřít v režimu celé obrazovky"
 
-#: ../src/main.c:78
+#: ../src/main.c:82
 msgid "Disable image collection"
 msgstr "Zakázat sbírku obrázků"
 
-#: ../src/main.c:79
+#: ../src/main.c:83
 msgid "Open in slideshow mode"
 msgstr "Otevřít v režimu promítání snímků"
 
-#: ../src/main.c:81
+#: ../src/main.c:85
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "Spustit novou instanci namísto znovupoužití existující"
 
-#: ../src/main.c:84
+#: ../src/main.c:88
 msgid "Show the application's version"
 msgstr "Zobrazit verzi aplikace"
 
-#: ../src/main.c:85
+#: ../src/main.c:89
 msgid "[FILE…]"
 msgstr "[SOUBOR…]"
 
 #. I18N: The '%s' is replaced with eom's command name.
-#: ../src/main.c:212
+#: ../src/main.c:216
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "Spustit příkaz „%s --help“ k zobrazení úplného seznamu dostupných přepínačů příkazové řádky."
