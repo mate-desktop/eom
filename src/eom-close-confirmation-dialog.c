@@ -160,10 +160,10 @@ add_buttons (EomCloseConfirmationDialog *dlg)
 			       GTK_RESPONSE_NO);
 
 	gtk_dialog_add_button (GTK_DIALOG (dlg),
-			       GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL);
+			       "gtk-cancel", GTK_RESPONSE_CANCEL);
 	
 	gtk_dialog_add_button (GTK_DIALOG (dlg),
-			       GTK_STOCK_SAVE,
+			       "gtk-save",
 			       GTK_RESPONSE_YES);
 
 	gtk_dialog_set_default_response	(GTK_DIALOG (dlg), 
