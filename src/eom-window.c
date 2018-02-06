@@ -1852,7 +1852,11 @@ eom_window_get_exit_fullscreen_button (EomWindow *window)
 {
 	GtkWidget *button;
 
-	button = gtk_button_new_from_stock (GTK_STOCK_LEAVE_FULLSCREEN);
+	button = GTK_WIDGET (g_object_new (GTK_TYPE_BUTTON,
+					   "label", "gtk-leave-fullscreen",
+					   "use-stock", TRUE,
+					   "use-underline", TRUE,
+					   NULL));
 
 	g_signal_connect (button, "clicked",
 			  G_CALLBACK (exit_fullscreen_button_clicked_cb),
@@ -2438,9 +2442,9 @@ eom_window_cmd_edit_toolbar (GtkAction *action, gpointer *user_data)
 				              GTK_DIALOG_DESTROY_WITH_PARENT,
 					      _("_Reset to Default"),
 					      EOM_TB_EDITOR_DLG_RESET_RESPONSE,
- 					      GTK_STOCK_CLOSE,
+ 					      "gtk-close",
 					      GTK_RESPONSE_CLOSE,
-					      GTK_STOCK_HELP,
+					      "gtk-help",
 					      GTK_RESPONSE_HELP,
 					      NULL);
 
@@ -3187,7 +3191,7 @@ show_move_to_trash_confirm_dialog (EomWindow *window, GList *images, gboolean ca
 						  prompt);
 	g_free (prompt);
 
-	gtk_dialog_add_button (GTK_DIALOG (dlg), GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL);
+	gtk_dialog_add_button (GTK_DIALOG (dlg), "gtk-cancel", GTK_RESPONSE_CANCEL);
 
 	if (can_trash) {
 		gtk_dialog_add_button (GTK_DIALOG (dlg), _("Move to _Trash"), GTK_RESPONSE_OK);
@@ -3198,9 +3202,9 @@ show_move_to_trash_confirm_dialog (EomWindow *window, GList *images, gboolean ca
 		gtk_box_pack_end (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dlg))), dontask_cbutton, TRUE, TRUE, 0);
 	} else {
 		if (n_images == 1) {
-			gtk_dialog_add_button (GTK_DIALOG (dlg), GTK_STOCK_DELETE, GTK_RESPONSE_OK);
+			gtk_dialog_add_button (GTK_DIALOG (dlg), "gtk-delete", GTK_RESPONSE_OK);
 		} else {
-			gtk_dialog_add_button (GTK_DIALOG (dlg), GTK_STOCK_YES, GTK_RESPONSE_OK);
+			gtk_dialog_add_button (GTK_DIALOG (dlg), "gtk-yes", GTK_RESPONSE_OK);
 		}
 	}
 
@@ -3605,22 +3609,22 @@ static const GtkActionEntry action_entries_window[] = {
 	{ "Tools", NULL, N_("_Tools") },
 	{ "Help",  NULL, N_("_Help") },
 
-	{ "ImageOpen", GTK_STOCK_OPEN,  N_("_Open…"), "<control>O",
+	{ "ImageOpen", "document-open",  N_("_Open…"), "<control>O",
 	  N_("Open a file"),
 	  G_CALLBACK (eom_window_cmd_file_open) },
-	{ "ImageClose", GTK_STOCK_CLOSE, N_("_Close"), "<control>W",
+	{ "ImageClose", "window-close", N_("_Close"), "<control>W",
 	  N_("Close window"),
 	  G_CALLBACK (eom_window_cmd_close_window) },
 	{ "EditToolbar", NULL, N_("T_oolbar"), NULL,
 	  N_("Edit the application toolbar"),
 	  G_CALLBACK (eom_window_cmd_edit_toolbar) },
-	{ "EditPreferences", GTK_STOCK_PREFERENCES, N_("Prefere_nces"), NULL,
+	{ "EditPreferences", "preferences-desktop", N_("Prefere_nces"), NULL,
 	  N_("Preferences for Eye of MATE"),
 	  G_CALLBACK (eom_window_cmd_preferences) },
-	{ "HelpManual", GTK_STOCK_HELP, N_("_Contents"), "F1",
+	{ "HelpManual", "help-browser", N_("_Contents"), "F1",
 	  N_("Help on this application"),
 	  G_CALLBACK (eom_window_cmd_help) },
-	{ "HelpAbout", GTK_STOCK_ABOUT, N_("_About"), NULL,
+	{ "HelpAbout", "help-about", N_("_About"), NULL,
 	  N_("About this application"),
 	  G_CALLBACK (eom_window_cmd_about) }
 };
@@ -3641,22 +3645,22 @@ static const GtkToggleActionEntry toggle_entries_window[] = {
 };
 
 static const GtkActionEntry action_entries_image[] = {
-	{ "ImageSave", GTK_STOCK_SAVE, N_("_Save"), "<control>s",
+	{ "ImageSave", "document-save", N_("_Save"), "<control>s",
 	  N_("Save changes in currently selected images"),
 	  G_CALLBACK (eom_window_cmd_save) },
 	{ "ImageOpenWith", NULL, N_("Open _with"), NULL,
 	  N_("Open the selected image with a different application"),
 	  NULL},
-	{ "ImageSaveAs", GTK_STOCK_SAVE_AS, N_("Save _As…"), "<control><shift>s",
+	{ "ImageSaveAs", "document-save-as", N_("Save _As…"), "<control><shift>s",
 	  N_("Save the selected images with a different name"),
 	  G_CALLBACK (eom_window_cmd_save_as) },
-	{ "ImagePrint", GTK_STOCK_PRINT, N_("_Print…"), "<control>p",
+	{ "ImagePrint", "document-print", N_("_Print…"), "<control>p",
 	  N_("Print the selected image"),
 	  G_CALLBACK (eom_window_cmd_print) },
-	{ "ImageProperties", GTK_STOCK_PROPERTIES, N_("Prope_rties"), "<alt>Return",
+	{ "ImageProperties", "document-properties", N_("Prope_rties"), "<alt>Return",
 	  N_("Show the properties and metadata of the selected image"),
 	  G_CALLBACK (eom_window_cmd_properties) },
-	{ "EditUndo", GTK_STOCK_UNDO, N_("_Undo"), "<control>z",
+	{ "EditUndo", "edit-undo", N_("_Undo"), "<control>z",
 	  N_("Undo the last change in the image"),
 	  G_CALLBACK (eom_window_cmd_undo) },
 	{ "EditFlipHorizontal", "object-flip-horizontal", N_("Flip _Horizontal"), NULL,
@@ -3680,25 +3684,25 @@ static const GtkActionEntry action_entries_image[] = {
 	{ "EditCopyImage", "edit-copy", N_("_Copy"), "<control>C",
 	  N_("Copy the selected image to the clipboard"),
 	  G_CALLBACK (eom_window_cmd_copy_image) },
-	{ "ViewZoomIn", GTK_STOCK_ZOOM_IN, N_("_Zoom In"), "<control>plus",
+	{ "ViewZoomIn", "zoom-in", N_("_Zoom In"), "<control>plus",
 	  N_("Enlarge the image"),
 	  G_CALLBACK (eom_window_cmd_zoom_in) },
-	{ "ViewZoomOut", GTK_STOCK_ZOOM_OUT, N_("Zoom _Out"), "<control>minus",
+	{ "ViewZoomOut", "zoom-out", N_("Zoom _Out"), "<control>minus",
 	  N_("Shrink the image"),
 	  G_CALLBACK (eom_window_cmd_zoom_out) },
-	{ "ViewZoomNormal", GTK_STOCK_ZOOM_100, N_("_Normal Size"), "<control>0",
+	{ "ViewZoomNormal", "zoom-original", N_("_Normal Size"), "<control>0",
 	  N_("Show the image at its normal size"),
 	  G_CALLBACK (eom_window_cmd_zoom_normal) },
-	{ "ViewZoomFit", GTK_STOCK_ZOOM_FIT, N_("_Best Fit"), "F",
+	{ "ViewZoomFit", "zoom-fit-best", N_("_Best Fit"), "F",
 	  N_("Fit the image to the window"),
 	  G_CALLBACK (eom_window_cmd_zoom_fit) },
-	{ "ControlEqual", GTK_STOCK_ZOOM_IN, N_("_Zoom In"), "<control>equal",
+	{ "ControlEqual", "zoom-in", N_("_Zoom In"), "<control>equal",
 	  N_("Enlarge the image"),
 	  G_CALLBACK (eom_window_cmd_zoom_in) },
-	{ "ControlKpAdd", GTK_STOCK_ZOOM_IN, N_("_Zoom In"), "<control>KP_Add",
+	{ "ControlKpAdd", "zoom-in", N_("_Zoom In"), "<control>KP_Add",
 	  N_("Shrink the image"),
 	  G_CALLBACK (eom_window_cmd_zoom_in) },
-	{ "ControlKpSub", GTK_STOCK_ZOOM_OUT, N_("Zoom _Out"), "<control>KP_Subtract",
+	{ "ControlKpSub", "zoom-out", N_("Zoom _Out"), "<control>KP_Subtract",
 	  N_("Shrink the image"),
 	  G_CALLBACK (eom_window_cmd_zoom_out) },
 	{ "Delete", NULL, N_("Move to _Trash"), "Delete",
@@ -3707,7 +3711,7 @@ static const GtkActionEntry action_entries_image[] = {
 };
 
 static const GtkToggleActionEntry toggle_entries_image[] = {
-	{ "ViewFullscreen", GTK_STOCK_FULLSCREEN, N_("_Fullscreen"), "F11",
+	{ "ViewFullscreen", "view-fullscreen", N_("_Fullscreen"), "F11",
 	  N_("Show the current image in fullscreen mode"),
 	  G_CALLBACK (eom_window_cmd_fullscreen), FALSE },
 	{ "PauseSlideshow", "media-playback-pause", N_("Pause Slideshow"),
@@ -3716,16 +3720,16 @@ static const GtkToggleActionEntry toggle_entries_image[] = {
 };
 
 static const GtkActionEntry action_entries_collection[] = {
-	{ "GoPrevious", GTK_STOCK_GO_BACK, N_("_Previous Image"), "<Alt>Left",
+	{ "GoPrevious", "go-previous", N_("_Previous Image"), "<Alt>Left",
 	  N_("Go to the previous image of the collection"),
 	  G_CALLBACK (eom_window_cmd_go_prev) },
-	{ "GoNext", GTK_STOCK_GO_FORWARD, N_("_Next Image"), "<Alt>Right",
+	{ "GoNext", "go-next", N_("_Next Image"), "<Alt>Right",
 	  N_("Go to the next image of the collection"),
 	  G_CALLBACK (eom_window_cmd_go_next) },
-	{ "GoFirst", GTK_STOCK_GOTO_FIRST, N_("_First Image"), "<Alt>Home",
+	{ "GoFirst", "go-first", N_("_First Image"), "<Alt>Home",
 	  N_("Go to the first image of the collection"),
 	  G_CALLBACK (eom_window_cmd_go_first) },
-	{ "GoLast", GTK_STOCK_GOTO_LAST, N_("_Last Image"), "<Alt>End",
+	{ "GoLast", "go-last", N_("_Last Image"), "<Alt>End",
 	  N_("Go to the last image of the collection"),
 	  G_CALLBACK (eom_window_cmd_go_last) },
 	{ "GoRandom", NULL, N_("_Random Image"), "<control>M",
