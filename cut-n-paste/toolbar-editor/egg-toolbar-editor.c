@@ -508,8 +508,10 @@ editor_create_item_from_name (EggToolbarEditor *editor,
         icon = gtk_image_new_from_icon_name (icon_name,
 	                                     GTK_ICON_SIZE_LARGE_TOOLBAR);
       else
-        icon = gtk_image_new_from_icon_name (stock_id ? stock_id : "gtk-dnd",
-                                             GTK_ICON_SIZE_LARGE_TOOLBAR);
+        icon = GTK_WIDGET (g_object_new (GTK_TYPE_IMAGE,
+                                         "stock", stock_id ? stock_id : "gtk-dnd",
+                                         "icon-size", (int *) GTK_ICON_SIZE_LARGE_TOOLBAR,
+                                         NULL));
 
       item_name = g_strdup (name);
       collate_key = g_utf8_collate_key (short_label, -1);
