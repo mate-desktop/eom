@@ -1852,11 +1852,8 @@ eom_window_get_exit_fullscreen_button (EomWindow *window)
 {
 	GtkWidget *button;
 
-	button = GTK_WIDGET (g_object_new (GTK_TYPE_BUTTON,
-					   "label", "gtk-leave-fullscreen",
-					   "use-stock", TRUE,
-					   "use-underline", TRUE,
-					   NULL));
+	button = gtk_button_new_with_mnemonic (_("Leave Fullscreen"));
+	gtk_button_set_image (GTK_BUTTON (button), gtk_image_new_from_icon_name ("view-restore", GTK_ICON_SIZE_BUTTON));
 
 	g_signal_connect (button, "clicked",
 			  G_CALLBACK (exit_fullscreen_button_clicked_cb),
