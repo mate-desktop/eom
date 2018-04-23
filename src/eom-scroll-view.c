@@ -97,6 +97,9 @@ struct _EomScrollViewPrivate {
 	GdkPixbuf *pixbuf;
 	cairo_surface_t *surface;
 
+	/* scale factor */
+	gint scale;
+
 	/* zoom mode, either ZOOM_MODE_FIT or ZOOM_MODE_FREE */
 	ZoomMode zoom_mode;
 
@@ -173,16 +176,10 @@ static cairo_surface_t *
 create_surface_from_pixbuf (EomScrollView *view, GdkPixbuf *pixbuf)
 {
 	cairo_surface_t *surface;
-	cairo_t *cr;
 
-	surface = gdk_window_create_similar_surface (gtk_widget_get_window (view->priv->display),
-							CAIRO_CONTENT_COLOR | CAIRO_CONTENT_ALPHA,
-							gdk_pixbuf_get_width (pixbuf),
-							gdk_pixbuf_get_height (pixbuf));
-	cr = cairo_create (surface);
-	gdk_cairo_set_source_pixbuf (cr, pixbuf, 0, 0);
-	cairo_paint (cr);
-	cairo_destroy (cr);
+	surface = gdk_cairo_surface_create_from_pixbuf (pixbuf,
+			                                view->priv->scale,
+			                                gtk_widget_get_window (view->priv->display));
 
 	return surface;
 }
@@ -230,8 +227,8 @@ compute_scaled_size (EomScrollView *view, double zoom, int *width, int *height)
 	priv = view->priv;
 
 	if (priv->pixbuf) {
-		*width = floor (gdk_pixbuf_get_width (priv->pixbuf) * zoom + 0.5);
-		*height = floor (gdk_pixbuf_get_height (priv->pixbuf) * zoom + 0.5);
+		*width = floor (gdk_pixbuf_get_width (priv->pixbuf) / priv->scale * zoom + 0.5);
+		*height = floor (gdk_pixbuf_get_height (priv->pixbuf) / priv->scale * zoom + 0.5);
 	} else
 		*width = *height = 0;
 }
@@ -689,8 +686,8 @@ set_minimum_zoom_factor (EomScrollView *view)
 {
 	g_return_if_fail (EOM_IS_SCROLL_VIEW (view));
 
-	view->priv->min_zoom = MAX (1.0 / gdk_pixbuf_get_width (view->priv->pixbuf),
-				    MAX(1.0 / gdk_pixbuf_get_height (view->priv->pixbuf),
+	view->priv->min_zoom = MAX (1.0 / gdk_pixbuf_get_width (view->priv->pixbuf) / view->priv->scale,
+				    MAX(1.0 / gdk_pixbuf_get_height (view->priv->pixbuf) / view->priv->scale,
 					MIN_ZOOM_FACTOR) );
 	return;
 }
@@ -794,8 +791,8 @@ set_zoom_fit (EomScrollView *view)
 	gtk_widget_get_allocation (GTK_WIDGET(priv->display), &allocation);
 
 	new_zoom = zoom_fit_scale (allocation.width, allocation.height,
-				   gdk_pixbuf_get_width (priv->pixbuf),
-				   gdk_pixbuf_get_height (priv->pixbuf),
+				   gdk_pixbuf_get_width (priv->pixbuf) / priv->scale,
+				   gdk_pixbuf_get_height (priv->pixbuf) / priv->scale,
 				   priv->upscale);
 
 	if (new_zoom > MAX_ZOOM_FACTOR)
@@ -1276,17 +1273,17 @@ display_draw (GtkWidget *widget, cairo_t *cr, gpointer data)
 			switch (eom_transform_get_transform_type (transform)) {
 			case EOM_TRANSFORM_ROT_90:
 			case EOM_TRANSFORM_FLIP_HORIZONTAL:
-				image_offset_x = (double) gdk_pixbuf_get_width (priv->pixbuf);
+				image_offset_x = (double) gdk_pixbuf_get_width (priv->pixbuf) / priv->scale;
 				break;
 			case EOM_TRANSFORM_ROT_270:
 			case EOM_TRANSFORM_FLIP_VERTICAL:
-				image_offset_y = (double) gdk_pixbuf_get_height (priv->pixbuf);
+				image_offset_y = (double) gdk_pixbuf_get_height (priv->pixbuf) / priv->scale;
 				break;
 			case EOM_TRANSFORM_ROT_180:
 			case EOM_TRANSFORM_TRANSPOSE:
 			case EOM_TRANSFORM_TRANSVERSE:
-				image_offset_x = (double) gdk_pixbuf_get_width (priv->pixbuf);
-				image_offset_y = (double) gdk_pixbuf_get_height (priv->pixbuf);
+				image_offset_x = (double) gdk_pixbuf_get_width (priv->pixbuf) / priv->scale;
+				image_offset_y = (double) gdk_pixbuf_get_height (priv->pixbuf) / priv->scale;
 				break;
 			case EOM_TRANSFORM_NONE:
 				default:
@@ -1767,6 +1764,7 @@ eom_scroll_view_init (EomScrollView *view)
 	priv->display = g_object_new (GTK_TYPE_DRAWING_AREA,
 				      "can-focus", TRUE,
 				      NULL);
+	priv->scale = gtk_widget_get_scale_factor (GTK_WIDGET (priv->display));
 
 	gtk_widget_add_events (GTK_WIDGET (priv->display),
 			       GDK_EXPOSURE_MASK
@@ -2088,8 +2086,8 @@ view_on_drag_begin_cb (GtkWidget        *widget,
 	thumbnail = eom_image_get_thumbnail (image);
 
 	if  (thumbnail) {
-		width = gdk_pixbuf_get_width (thumbnail);
-		height = gdk_pixbuf_get_height (thumbnail);
+		width = gdk_pixbuf_get_width (thumbnail) / view->priv->scale;
+		height = gdk_pixbuf_get_height (thumbnail) / view->priv->scale;
 		gtk_drag_set_icon_pixbuf (context, thumbnail, width/2, height/2);
 		g_object_unref (thumbnail);
 	}
