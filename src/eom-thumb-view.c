@@ -1046,7 +1046,7 @@ eom_thumb_view_set_thumbnail_popup (EomThumbView *thumbview,
 	g_return_if_fail (EOM_IS_THUMB_VIEW (thumbview));
 	g_return_if_fail (thumbview->priv->menu == NULL);
 
-	thumbview->priv->menu = g_object_ref (menu);
+	thumbview->priv->menu = g_object_ref (GTK_WIDGET (menu));
 
 	gtk_menu_attach_to_widget (GTK_MENU (thumbview->priv->menu),
 				   GTK_WIDGET (thumbview),
