@@ -2160,7 +2160,7 @@ eom_scroll_view_set_popup (EomScrollView *view,
 	g_return_if_fail (EOM_IS_SCROLL_VIEW (view));
 	g_return_if_fail (view->priv->menu == NULL);
 
-	view->priv->menu = g_object_ref (menu);
+	view->priv->menu = g_object_ref (GTK_WIDGET (menu));
 
 	gtk_menu_attach_to_widget (GTK_MENU (view->priv->menu),
 				   GTK_WIDGET (view),
