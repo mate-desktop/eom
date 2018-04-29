@@ -380,7 +380,7 @@ eom_scroll_view_set_cursor (EomScrollView *view, EomScrollViewCursor new_cursor)
 	if (cursor) {
 		gdk_window_set_cursor (gtk_widget_get_window (widget), cursor);
 		g_object_unref (cursor);
-		gdk_flush();
+		gdk_display_flush (display);
 	}
 }
 
