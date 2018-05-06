@@ -21,8 +21,8 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef __EOM_METADATA_SIDEBAR_H__
-#define __EOM_METADATA_SIDEBAR_H_
+#ifndef EOM_METADATA_SIDEBAR_H
+#define EOM_METADATA_SIDEBAR_H
 
 #include <glib-object.h>
 #include <gtk/gtk.h>
@@ -58,4 +58,4 @@ GtkWidget* eom_metadata_sidebar_new (EomWindow *window);
 
 G_END_DECLS
 
-#endif /* __EOM_METADATA_SIDEBAR_H__ */
+#endif /* EOM_METADATA_SIDEBAR_H */
