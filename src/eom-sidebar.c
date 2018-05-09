@@ -222,30 +222,6 @@ eom_sidebar_class_init (EomSidebarClass *eom_sidebar_class)
 			      GTK_TYPE_WIDGET);
 }
 
-static void
-eom_sidebar_menu_position_under (GtkMenu  *menu,
-				 gint     *x,
-				 gint     *y,
-				 gboolean *push_in,
-				 gpointer  user_data)
-{
-	GtkWidget *widget;
-	GtkAllocation allocation;
-
-	g_return_if_fail (GTK_IS_BUTTON (user_data));
-	g_return_if_fail (!gtk_widget_get_has_window (user_data));
-
-	widget = GTK_WIDGET (user_data);
-	gtk_widget_get_allocation (widget, &allocation);
-
-	gdk_window_get_origin (gtk_widget_get_window (widget), x, y);
-
-	*x += allocation.x;
-	*y += allocation.y + allocation.height;
-
-	*push_in = FALSE;
-}
-
 static gboolean
 eom_sidebar_select_button_press_cb (GtkWidget      *widget,
 				    GdkEventButton *event,
@@ -269,9 +245,11 @@ eom_sidebar_select_button_press_cb (GtkWidget      *widget,
 
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget), TRUE);
 
-		gtk_menu_popup (GTK_MENU (eom_sidebar->priv->menu),
-				NULL, NULL, eom_sidebar_menu_position_under, widget,
-				event->button, event->time);
+		gtk_menu_popup_at_widget (GTK_MENU (eom_sidebar->priv->menu),
+		                          widget,
+		                          GDK_GRAVITY_SOUTH_WEST,
+		                          GDK_GRAVITY_NORTH_WEST,
+		                          (const GdkEvent*) event);
 
 		return TRUE;
 	}
@@ -292,9 +270,11 @@ eom_sidebar_select_button_key_press_cb (GtkWidget   *widget,
 	    event->keyval == GDK_KEY_KP_Enter) {
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget), TRUE);
 
-		gtk_menu_popup (GTK_MENU (eom_sidebar->priv->menu),
-			        NULL, NULL, eom_sidebar_menu_position_under, widget,
-				1, event->time);
+		gtk_menu_popup_at_widget (GTK_MENU (eom_sidebar->priv->menu),
+		                          widget,
+		                          GDK_GRAVITY_SOUTH_WEST,
+		                          GDK_GRAVITY_NORTH_WEST,
+		                          (const GdkEvent*) event);
 
 		return TRUE;
 	}
