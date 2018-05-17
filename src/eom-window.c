@@ -4322,6 +4322,7 @@ eom_window_construct_ui (EomWindow *window)
 	priv->toolbar = GTK_WIDGET
 		(g_object_new (EGG_TYPE_EDITABLE_TOOLBAR,
 			       "ui-manager", priv->ui_mgr,
+			       "popup-path", "/ToolbarPopup",
 			       "model", eom_application_get_toolbars_model (EOM_APP),
 			       NULL));
 
