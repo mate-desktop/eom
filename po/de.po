@@ -1,19 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# bambuhle <politik@philippoi.de>, 2014
-# Tobias Bannert <tobannert@gmail.com>, 2014-2016
-# Xpistian <xpistianbecker2@web.de>, 2014
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 09:48+0100\n"
-"PO-Revision-Date: 2017-09-19 11:03+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: German (http://www.transifex.com/mate/MATE/language/de/)\n"
+"POT-Creation-Date: 2018-03-14 09:30+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: nautilusx, 2018\n"
+"Language-Team: German (https://www.transifex.com/mate/teams/13566/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -46,21 +44,21 @@ msgstr "Aus Werkzeugleiste _entfernen"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1393
 msgid "Remove the selected item from the toolbar"
-msgstr "Das gewählte Objekt aus der Werkzeugleiste entfernen"
+msgstr "Das gewählte Objekt aus der Werkzeugleise entfernen"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1394
 msgid "_Delete Toolbar"
-msgstr "Werkzeugleiste ent_fernen"
+msgstr "Werkzeugleiste _entfernen"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1395
 msgid "Remove the selected toolbar"
 msgstr "Die gewählte Werkzeugleiste entfernen"
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:487
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:485
 msgid "Separator"
 msgstr "Trennlinie"
 
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2578
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2554
 msgid "Eye of MATE"
 msgstr "Eye of MATE"
 
@@ -73,9 +71,13 @@ msgid ""
 "<p> Eye of MATE is a simple viewer for browsing images on your computer. "
 "Once an image is loaded, you can zoom and rotate the image, and also view "
 "subsequent images in the directory the image was loaded from. </p>"
-msgstr "<p>Eye of MATE ist ein einfaches Betrachtungsprogramm, mit dem Bilder auf dem Rechner durchsucht werden können. Sobald ein Bild geladen ist, kann es vergrößert und gedreht werden. Außerdem können die nachfolgenden Bilder des Verzeichnisses, aus dem es geladen wurde, betrachtet werden</p>"
+msgstr ""
+"<p>Eye of MATE ist ein einfaches Betrachtungsprogramm, mit dem Bilder auf "
+"dem Rechner durchsucht werden können. Sobald ein Bild geladen ist, kann es "
+"vergrößert und gedreht werden. Außerdem können die nachfolgenden Bilder des "
+"Verzeichnisses, aus dem es geladen wurde, betrachtet werden</p>"
 
-#: ../data/eom.desktop.in.in.h:1 ../src/main.c:74 ../src/main.c:268
+#: ../data/eom.desktop.in.in.h:1 ../src/main.c:70 ../src/main.c:264
 msgid "Eye of MATE Image Viewer"
 msgstr "EOM-Bildbetrachter"
 
@@ -89,11 +91,11 @@ msgstr "Bildeigenschaften"
 
 #: ../data/eom-image-properties-dialog.ui.h:2
 msgid "_Previous"
-msgstr "_Vorheriges"
+msgstr "_Rückwärts suchen"
 
 #: ../data/eom-image-properties-dialog.ui.h:3
 msgid "_Next"
-msgstr "_Nächstes"
+msgstr "_Weitersuchen"
 
 #: ../data/eom-image-properties-dialog.ui.h:4
 msgid "Name:"
@@ -165,7 +167,7 @@ msgstr "Schlüsselwörter:"
 
 #: ../data/eom-image-properties-dialog.ui.h:21
 msgid "Author:"
-msgstr "Autor:"
+msgstr "Verfasser:"
 
 #: ../data/eom-image-properties-dialog.ui.h:22
 msgid "Copyright:"
@@ -324,7 +326,7 @@ msgstr "Diaschau"
 
 #: ../data/eom-preferences-dialog.ui.h:23
 msgid "Plugins"
-msgstr "Erweiterungen"
+msgstr "Module"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:1
 msgid "Automatic orientation"
@@ -333,14 +335,19 @@ msgstr "Automatische Drehung des Bildes"
 #: ../data/org.mate.eom.gschema.xml.in.h:2
 msgid ""
 "Whether the image should be rotated automatically based on EXIF orientation."
-msgstr "Legt fest, ob das Bild automatisch auf Grund der EXIF-Information gedreht wird."
+msgstr ""
+"Legt fest, ob das Bild automatisch auf Grund der EXIF-Information gedreht "
+"wird."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
 "theme instead."
-msgstr "Die Farbe, die zum Füllen der Hintergrundfläche hinter dem Bild verwendet wird. Falls der Schlüssel »background-color« nicht eingestellt ist, so wird die Farbe durch das aktuelle GTK+-Thema bestimmt."
+msgstr ""
+"Die Farbe, die zum Füllen der Hintergrundfläche hinter dem Bild verwendet "
+"wird. Falls der Schlüssel »background-color« nicht eingestellt ist, so wird "
+"die Farbe durch das aktuelle GTK+-Thema bestimmt."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:5
 msgid "Use a custom background color"
@@ -351,7 +358,11 @@ msgid ""
 "If this is active, the color set by the background-color key will be used to"
 " fill the area behind the image. If it is not set, the current GTK+ theme "
 "will determine the fill color."
-msgstr "Wenn dieser Wert festgelegt ist, so wird die im Schlüssel »background-color« festgelegte Farbe verwendet, um die Bereiche hinter dem Bild zu füllen. Falls der Wert nicht eingestellt ist, dann wird das aktuelle GTK+-Thema die Füllfarbe bestimmen."
+msgstr ""
+"Wenn dieser Wert festgelegt ist, so wird die im Schlüssel »background-color«"
+" festgelegte Farbe verwendet, um die Bereiche hinter dem Bild zu füllen. "
+"Falls der Wert nicht eingestellt ist, dann wird das aktuelle GTK+-Thema die "
+"Füllfarbe bestimmen."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:7
 msgid "Interpolate Image"
@@ -361,7 +372,10 @@ msgstr "Bild interpolieren"
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
-msgstr "Legt fest, ob das Bild beim Verkleinern interpoliert wird. Das führt zu einer besseren Bildqualität, ist jedoch etwas langsamer als eine nicht interpolierte Darstellung."
+msgstr ""
+"Legt fest, ob das Bild beim Verkleinern interpoliert wird. Das führt zu "
+"einer besseren Bildqualität, ist jedoch etwas langsamer als eine nicht "
+"interpolierte Darstellung."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:9
 msgid "Extrapolate Image"
@@ -371,7 +385,10 @@ msgstr "Bild extrapolieren"
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
-msgstr "Legt fest, ob das Bild beim Vergrößern extrapoliert wird. Das führt zu einer leicht verschwommenen Bildqualität und ist etwas langsamer als eine nicht extrapolierte Darstellung."
+msgstr ""
+"Legt fest, ob das Bild beim Vergrößern extrapoliert wird. Das führt zu einer"
+" leicht verschwommenen Bildqualität und ist etwas langsamer als eine nicht "
+"extrapolierte Darstellung."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:11
 msgid "Transparency indicator"
@@ -382,7 +399,10 @@ msgid ""
 "Determines how transparency should be indicated. Valid values are checked, "
 "color and none. If color is chosen, then the trans-color key determines the "
 "color value used."
-msgstr "Legt fest, wie Transparenz dargestellt werden soll. Zulässige Werte sind: »CHECK_PATTERN«, »COLOR« sowie »NONE«. Falls Sie »COLOR« wählen, legt der »trans_color«-Schlüssel fest, welcher Farbwert verwendet werden soll."
+msgstr ""
+"Legt fest, wie Transparenz dargestellt werden soll. Zulässige Werte sind: "
+"»CHECK_PATTERN«, »COLOR« sowie »NONE«. Falls Sie »COLOR« wählen, legt der "
+"»trans_color«-Schlüssel fest, welcher Farbwert verwendet werden soll."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:13
 msgid "Scroll wheel zoom"
@@ -403,7 +423,11 @@ msgid ""
 "This value defines the zooming step used for each scroll event. For example,"
 " 0.05 results in a 5% zoom increment for each scroll event and 1.00 result "
 "in a 100% zoom increment."
-msgstr "Der anzuwendende Faktor, wenn mit dem Mausrad vergrößert werden soll. Dieser Wert definiert den Vergrößerungsschritt, der bei jedem Weiterschalten des Rades verwendet wird. 0.05 vergrößert die Ansicht des Bildes um 5%, 1.00 um 100%."
+msgstr ""
+"Der anzuwendende Faktor, wenn mit dem Mausrad vergrößert werden soll. Dieser"
+" Wert definiert den Vergrößerungsschritt, der bei jedem Weiterschalten des "
+"Rades verwendet wird. 0.05 vergrößert die Ansicht des Bildes um 5%, 1.00 um "
+"100%."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:18
 msgid "Transparency color"
@@ -413,7 +437,9 @@ msgstr "Transparenzfarbe"
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
-msgstr "Falls der Transparenzschlüssel den Wert »COLOR« hat, legt dieser Schlüssel fest, welche Farbe zum Anzeigen der Transparenz verwendet werden soll."
+msgstr ""
+"Falls der Transparenzschlüssel den Wert »COLOR« hat, legt dieser Schlüssel "
+"fest, welche Farbe zum Anzeigen der Transparenz verwendet werden soll."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:20
 msgid "Randomize the image sequence"
@@ -421,7 +447,8 @@ msgstr "Zufällige Bildabfolge"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:21
 msgid "Whether the sequence of images should be shown in an random loop."
-msgstr "Ob die Bildabfolge in einer zufälligen Endlosschleife gezeigt werden soll"
+msgstr ""
+"Ob die Bildabfolge in einer zufälligen Endlosschleife gezeigt werden soll"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:22
 msgid "Loop through the image sequence"
@@ -440,7 +467,9 @@ msgstr "Anfangsvergrößerung größer als 100% erlauben"
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
-msgstr "Wenn dieser Wert auf FALSCH eingestellt ist, werden kleine Bilder anfangs nicht vergrößert, um auf den Bildschirm zu passen."
+msgstr ""
+"Wenn dieser Wert auf FALSCH eingestellt ist, werden kleine Bilder anfangs "
+"nicht vergrößert, um auf den Bildschirm zu passen."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:27
 msgid "Delay in seconds until showing the next image"
@@ -450,7 +479,10 @@ msgstr "Verzögerung in Sekunden, bis das nächste Bild angezeigt wird"
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until"
 " the next one is shown automatically. Zero disables the automatic browsing."
-msgstr "Ein Wert größer 0 legt die Sekunden fest, die ein Bild angezeigt wird, bevor automatisch auf das nächste weitergeschaltet wird. Null schaltet die automatische Weiterschaltung ab."
+msgstr ""
+"Ein Wert größer 0 legt die Sekunden fest, die ein Bild angezeigt wird, bevor"
+" automatisch auf das nächste weitergeschaltet wird. Null schaltet die "
+"automatische Weiterschaltung ab."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:29
 msgid "Show/Hide the window toolbar."
@@ -470,7 +502,8 @@ msgstr "Position der Bildersammlungsleiste."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:33
 msgid "Whether the image collection pane should be resizable."
-msgstr "Legt fest, ob die Größe der Bildersammlungsleiste angepasst werden kann."
+msgstr ""
+"Legt fest, ob die Größe der Bildersammlungsleiste angepasst werden kann."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:34
 msgid "Show/Hide the window side pane."
@@ -482,7 +515,9 @@ msgstr "Bildlaufknöpfe der Bildersammlungsleiste zeigen/verbergen"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:36
 msgid "Close main window without asking to save changes."
-msgstr "Hauptfenster schließen ohne nachzufragen, ob Änderungen gespeichert werden sollen."
+msgstr ""
+"Hauptfenster schließen ohne nachzufragen, ob Änderungen gespeichert werden "
+"sollen."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:37
 msgid "Trash images without asking"
@@ -493,12 +528,18 @@ msgid ""
 "If activated, Eye of MATE won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
 "trash and would be deleted instead."
-msgstr "Legt fest, ob Eye of MATE nicht nach Bestätigung fragt, wenn Bilder in den Papierkorb verschoben werden. Es wird aber in jedem Fall nachgefragt, wenn das Bild nicht in den Papierkorb verschoben werden kann und stattdessen gelöscht wird."
+msgstr ""
+"Legt fest, ob Eye of MATE nicht nach Bestätigung fragt, wenn Bilder in den "
+"Papierkorb verschoben werden. Es wird aber in jedem Fall nachgefragt, wenn "
+"das Bild nicht in den Papierkorb verschoben werden kann und stattdessen "
+"gelöscht wird."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:39
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
-msgstr "Legt fest, ob die Liste der Metadaten im Eigenschaftendialog auf einer eigenen Seite angezeigt wird."
+msgstr ""
+"Legt fest, ob die Liste der Metadaten im Eigenschaftendialog auf einer "
+"eigenen Seite angezeigt wird."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:40
 msgid ""
@@ -506,7 +547,13 @@ msgid ""
 "moved to its own page in the dialog. This should make the dialog more usable"
 " on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
 "be embedded on the \"Metadata\" page."
-msgstr "Wenn dieser Schlüssel auf »Wahr« gestellt ist, wird die detaillierte Liste der Metadaten innerhalb des Eigenschaftendialogs als eigene Seite innerhalb des Dialogs angezeigt. Dies soll die Bedienbarkeit des Dialogs auf kleineren Bildschirmen verbessern, wie z.B. auf Netbooks. Wenn der Schlüssel auf »Falsch« gestellt ist, wird das Dialogelement auf der Seite »Metadaten« eingebettet."
+msgstr ""
+"Wenn dieser Schlüssel auf »Wahr« gestellt ist, wird die detaillierte Liste "
+"der Metadaten innerhalb des Eigenschaftendialogs als eigene Seite innerhalb "
+"des Dialogs angezeigt. Dies soll die Bedienbarkeit des Dialogs auf kleineren"
+" Bildschirmen verbessern, wie z.B. auf Netbooks. Wenn der Schlüssel auf "
+"»Falsch« gestellt ist, wird das Dialogelement auf der Seite »Metadaten« "
+"eingebettet."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:41
 msgid "External program to use for editing images"
@@ -517,13 +564,19 @@ msgid ""
 "The desktop file name (including the \".desktop\") of the application to use"
 " for editing images (when the \"Edit Image\" toolbar button is clicked). Set"
 " to the empty string to disable this feature."
-msgstr "Name der .desktop-Datei (inklusive ».desktop«) der Anwendung, die verwendet werden soll, um Bilder zu bearbeiten (wenn der »Bild bearbeiten«-Knopf in der Werkzeugleiste gedrückt wird). Leere Zeichenkette einfügen, um diese Funktion zu deaktivieren."
+msgstr ""
+"Name der .desktop-Datei (inklusive ».desktop«) der Anwendung, die verwendet "
+"werden soll, um Bilder zu bearbeiten (wenn der »Bild bearbeiten«-Knopf in "
+"der Werkzeugleiste gedrückt wird). Leere Zeichenkette einfügen, um diese "
+"Funktion zu deaktivieren."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:43
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images"
 " are loaded."
-msgstr "Legt fest, ob die Dateiauswahl den Bilderordner des Benutzers anzeigen soll, wenn keine Bilder geladen sind."
+msgstr ""
+"Legt fest, ob die Dateiauswahl den Bilderordner des Benutzers anzeigen soll,"
+" wenn keine Bilder geladen sind."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:44
 msgid ""
@@ -531,18 +584,26 @@ msgid ""
 "will display the user's pictures folder using the XDG special user "
 "directories. If deactivated or the pictures folder has not been set up, it "
 "will show the current working directory."
-msgstr "Wenn dieser Schlüssel auf »Wahr« gestellt ist und kein Bild im aktiven Fenster geladen ist, zeigt die Dateiauswahl den Bilderordner des Benutzers unter Verwendung der speziellen XDG-Benutzerordner. Wenn dieser Schlüssel auf »Falsch« gestellt ist oder der Bilderordner nicht eingerichtet ist, wird der aktuelle Arbeitsordner angezeigt."
+msgstr ""
+"Wenn dieser Schlüssel auf »Wahr« gestellt ist und kein Bild im aktiven "
+"Fenster geladen ist, zeigt die Dateiauswahl den Bilderordner des Benutzers "
+"unter Verwendung der speziellen XDG-Benutzerordner. Wenn dieser Schlüssel "
+"auf »Falsch« gestellt ist oder der Bilderordner nicht eingerichtet ist, wird"
+" der aktuelle Arbeitsordner angezeigt."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:45
 msgid "Active plugins"
-msgstr "Aktivierte Erweiterungen"
+msgstr "Aktive Erweiterungen"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:46
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
 "plugin."
-msgstr "Liste aktivierter Erweiterungen. Sie enthält nicht den »Ort« aktiver Erweiterungen. Bitte in der ».eom-plugin«-Datei einer Erweiterung nachsehen, um den »Ort« (»Location«) zu erfahren."
+msgstr ""
+"Liste aktivierter Erweiterungen. Sie enthält nicht den »Ort« aktiver "
+"Erweiterungen. Bitte in der ».eom-plugin«-Datei einer Erweiterung nachsehen,"
+" um den »Ort« (»Location«) zu erfahren."
 
 #: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
 msgid "Fullscreen with double-click"
@@ -576,7 +637,7 @@ msgstr "Vollbildmodus aktiviert"
 
 #: ../src/eom-close-confirmation-dialog.c:159
 msgid "Close _without Saving"
-msgstr "_Ohne Speichern schließen"
+msgstr "Schließen _ohne zu speichern"
 
 #: ../src/eom-close-confirmation-dialog.c:192
 msgid "Question"
@@ -586,25 +647,30 @@ msgstr "Frage"
 msgid "If you don't save, your changes will be lost."
 msgstr "Alle Änderungen werden verloren gehen, wenn Sie nicht speichern."
 
-#: ../src/eom-close-confirmation-dialog.c:413
+#: ../src/eom-close-confirmation-dialog.c:409
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
-msgstr "Sollen die Änderungen am Bild »%s« vor dem Schließen gespeichert werden?"
+msgstr ""
+"Sollen die Änderungen am Bild »%s« vor dem Schließen gespeichert werden?"
 
-#: ../src/eom-close-confirmation-dialog.c:616
+#: ../src/eom-close-confirmation-dialog.c:604
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
-msgstr[0] "Es gibt %d Bild mit nicht gesicherten Änderungen. Sollen die Änderungen vor dem Schließen gespeichert werden?"
-msgstr[1] "Es gibt %d Bilder mit nicht gesicherten Änderungen. Sollen die Änderungen vor dem Schließen gespeichert werden?"
+msgstr[0] ""
+"Es gibt %d Bild mit nicht gesicherten Änderungen. Sollen die Änderungen vor "
+"dem Schließen gespeichert werden?"
+msgstr[1] ""
+"Es gibt %d Bilder mit nicht gesicherten Änderungen. Sollen die Änderungen "
+"vor dem Schließen gespeichert werden?"
 
-#: ../src/eom-close-confirmation-dialog.c:633
+#: ../src/eom-close-confirmation-dialog.c:621
 msgid "S_elect the images you want to save:"
 msgstr "Die Bilder aus_wählen, die Sie speichern möchten:"
 
 #. Secondary label
-#: ../src/eom-close-confirmation-dialog.c:656
+#: ../src/eom-close-confirmation-dialog.c:640
 msgid "If you don't save, all your changes will be lost."
 msgstr "Alle Änderungen werden verloren gehen, wenn Sie nicht speichern."
 
@@ -616,7 +682,9 @@ msgstr "Dateiformat ist unbekannt oder wird nicht unterstützt"
 msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
-msgstr "Eye of MATE konnte anhand des Dateinamens kein unterstütztes Dateiformat bestimmen."
+msgstr ""
+"Eye of MATE konnte anhand des Dateinamens kein unterstütztes Dateiformat "
+"bestimmen."
 
 #: ../src/eom-file-chooser.c:133
 msgid "Please try a different file extension like .png or .jpg."
@@ -639,7 +707,7 @@ msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
 #: ../src/eom-file-chooser.c:287 ../src/eom-properties-dialog.c:137
-#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:522
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:519
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "Pixel"
@@ -697,21 +765,21 @@ msgstr "Temporäre Datei zum Speichern konnte nicht angelegt werden: %s"
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "Speicher zum Laden der JPEG-Datei konnte nicht reserviert werden"
 
-#: ../src/eom-error-message-area.c:116
+#: ../src/eom-error-message-area.c:108
 msgid "_Retry"
 msgstr "_Wiederholen"
 
-#: ../src/eom-error-message-area.c:159
+#: ../src/eom-error-message-area.c:151
 #, c-format
 msgid "Could not load image '%s'."
 msgstr "Bild »%s« konnte nicht geöffnet werden."
 
-#: ../src/eom-error-message-area.c:201
+#: ../src/eom-error-message-area.c:193
 #, c-format
 msgid "No images found in '%s'."
 msgstr "In »%s« konnten keine Bilder gefunden werden."
 
-#: ../src/eom-error-message-area.c:208
+#: ../src/eom-error-message-area.c:200
 msgid "The given locations contain no images."
 msgstr "Der angegebene Ort enthält keine Bilder."
 
@@ -733,7 +801,7 @@ msgstr "Herstellernotizen"
 
 #: ../src/eom-exif-details.c:72
 msgid "Other"
-msgstr "Andere"
+msgstr "Sonstige"
 
 #: ../src/eom-exif-details.c:74
 msgid "XMP Exif"
@@ -774,91 +842,91 @@ msgstr "%a, %d. %B %Y"
 msgid "Image Settings"
 msgstr "Bildeinstellungen"
 
-#: ../src/eom-print-image-setup.c:832
+#: ../src/eom-print-image-setup.c:828
 msgid "Image"
 msgstr "Bild"
 
-#: ../src/eom-print-image-setup.c:833
+#: ../src/eom-print-image-setup.c:829
 msgid "The image whose printing properties will be set up"
 msgstr "Das Bild, dessen Druckoptionen eingestellt werden"
 
-#: ../src/eom-print-image-setup.c:839
+#: ../src/eom-print-image-setup.c:835
 msgid "Page Setup"
 msgstr "Seite einrichten"
 
-#: ../src/eom-print-image-setup.c:840
+#: ../src/eom-print-image-setup.c:836
 msgid "The information for the page where the image will be printed"
 msgstr "Wo soll das Bild auf der Seite gedruckt werden?"
 
-#: ../src/eom-print-image-setup.c:868
+#: ../src/eom-print-image-setup.c:864
 msgid "Position"
 msgstr "Position"
 
-#: ../src/eom-print-image-setup.c:872
+#: ../src/eom-print-image-setup.c:868
 msgid "_Left:"
 msgstr "_Links:"
 
-#: ../src/eom-print-image-setup.c:874
+#: ../src/eom-print-image-setup.c:870
 msgid "_Right:"
 msgstr "_Rechts:"
 
-#: ../src/eom-print-image-setup.c:875
+#: ../src/eom-print-image-setup.c:871
 msgid "_Top:"
 msgstr "_Oben:"
 
-#: ../src/eom-print-image-setup.c:876
+#: ../src/eom-print-image-setup.c:872
 msgid "_Bottom:"
 msgstr "_Unten:"
 
-#: ../src/eom-print-image-setup.c:879
+#: ../src/eom-print-image-setup.c:875
 msgid "C_enter:"
 msgstr "_Zentriert:"
 
-#: ../src/eom-print-image-setup.c:888
+#: ../src/eom-print-image-setup.c:880
 msgid "None"
-msgstr "Keine"
+msgstr "Kein"
 
-#: ../src/eom-print-image-setup.c:890
+#: ../src/eom-print-image-setup.c:882
 msgid "Horizontal"
 msgstr "Horizontal"
 
-#: ../src/eom-print-image-setup.c:892
+#: ../src/eom-print-image-setup.c:884
 msgid "Vertical"
 msgstr "Senkrecht"
 
-#: ../src/eom-print-image-setup.c:894
+#: ../src/eom-print-image-setup.c:886
 msgid "Both"
 msgstr "Beide"
 
-#: ../src/eom-print-image-setup.c:910
+#: ../src/eom-print-image-setup.c:902
 msgid "Size"
 msgstr "Größe"
 
-#: ../src/eom-print-image-setup.c:913
+#: ../src/eom-print-image-setup.c:905
 msgid "_Width:"
 msgstr "_Breite:"
 
-#: ../src/eom-print-image-setup.c:915
+#: ../src/eom-print-image-setup.c:907
 msgid "_Height:"
 msgstr "_Höhe:"
 
-#: ../src/eom-print-image-setup.c:918
+#: ../src/eom-print-image-setup.c:910
 msgid "_Scaling:"
 msgstr "_Skalierung:"
 
-#: ../src/eom-print-image-setup.c:929
+#: ../src/eom-print-image-setup.c:921
 msgid "_Unit:"
 msgstr "_Einheit:"
 
-#: ../src/eom-print-image-setup.c:938
+#: ../src/eom-print-image-setup.c:926
 msgid "Millimeters"
 msgstr "Millimeter"
 
-#: ../src/eom-print-image-setup.c:940
+#: ../src/eom-print-image-setup.c:928
 msgid "Inches"
 msgstr "Zoll"
 
-#: ../src/eom-print-image-setup.c:968
+#: ../src/eom-print-image-setup.c:956
 msgid "Preview"
 msgstr "Vorschau"
 
@@ -900,7 +968,7 @@ msgstr "wie bisher"
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/eom-thumb-view.c:550
+#: ../src/eom-thumb-view.c:547
 msgid "Taken on"
 msgstr "Aufgenommen am"
 
@@ -909,11 +977,11 @@ msgstr "Aufgenommen am"
 msgid "At least two file names are equal."
 msgstr "Mindestens zwei Dateinamen sind gleich."
 
-#: ../src/eom-util.c:72
+#: ../src/eom-util.c:68
 msgid "Could not display help for Eye of MATE"
 msgstr "Die Hilfe für Eye of MATE konnte nicht angezeigt werden."
 
-#: ../src/eom-util.c:120
+#: ../src/eom-util.c:116
 msgid " (invalid Unicode)"
 msgstr " (ungültiger Unicode)"
 
@@ -932,9 +1000,9 @@ msgstr[1] "%i x %i Pixel  %s    %i%%"
 
 #: ../src/eom-window.c:807
 msgid "_Reload"
-msgstr "_Neu laden"
+msgstr "Ak_tualisieren"
 
-#: ../src/eom-window.c:809 ../src/eom-window.c:2699
+#: ../src/eom-window.c:809 ../src/eom-window.c:2675
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "_Verbergen"
@@ -946,9 +1014,11 @@ msgstr "_Verbergen"
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
-msgstr "Das Bild »%s« wurde durch eine andere Anwendung verändert.\nMöchten Sie es neu laden?"
+msgstr ""
+"Das Bild »%s« wurde durch eine andere Anwendung verändert.\n"
+"Möchten Sie es neu laden?"
 
-#: ../src/eom-window.c:988
+#: ../src/eom-window.c:984
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "»%s« benutzen, um das ausgewählte Bild zu öffnen"
@@ -958,96 +1028,123 @@ msgstr "»%s« benutzen, um das ausgewählte Bild zu öffnen"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1144
+#: ../src/eom-window.c:1140
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Bild »%s« (%u/%u) wird gespeichert"
 
-#: ../src/eom-window.c:1513
+#: ../src/eom-window.c:1499
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Bild »%s« wird geöffnet"
 
-#: ../src/eom-window.c:2197
+#: ../src/eom-window.c:2173
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
-msgstr "Fehler beim Drucken der Datei:\n%s"
+msgstr ""
+"Fehler beim Drucken der Datei:\n"
+"%s"
 
-#: ../src/eom-window.c:2460
+#: ../src/eom-window.c:2436
 msgid "Toolbar Editor"
 msgstr "Werkzeugleistenbearbeitung"
 
-#: ../src/eom-window.c:2463
+#: ../src/eom-window.c:2439
 msgid "_Reset to Default"
 msgstr "_Zurückstellen auf Vorgaben"
 
-#: ../src/eom-window.c:2554
+#: ../src/eom-window.c:2530
 msgid "translator-credits"
-msgstr "Jens Finke\nChristian Meyer\nChristian Neumair\nMatthias Warkus\nBenedikt Wicklein\nPhilipp Kerling\nHendrik Richter\nNathan-J. Hirschauer\nChristian Kirbach\nFelix Riemann\nTobias Bannert"
+msgstr ""
+"Christian Meyer\n"
+"Benedikt Roth\n"
+"Matthias Warkus\n"
+"Hendrik Richter\n"
+"Christian Kirbach\n"
+"Wolfgang Stoeggl\n"
+"Tobias Bannert"
 
-#: ../src/eom-window.c:2557
+#: ../src/eom-window.c:2533
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version.\n"
-msgstr "Dieses Programm ist eine freie Anwendung. Sie können es unter den Bedingungen der GNU General Public License, wie von der Free Software Foundation veröffentlicht, weitergeben und/oder verändern, entweder gemäß Version 2 der Lizenz oder (nach Ihrer Option) jeder späteren Version.\n"
+msgstr ""
+"Dieses Programm ist eine freie Anwendung. Sie können es unter den "
+"Bedingungen der GNU General Public License, wie von der Free Software "
+"Foundation veröffentlicht, weitergeben und/oder verändern, entweder gemäß "
+"Version 2 der Lizenz oder (nach Ihrer Option) jeder späteren Version.\n"
 
-#: ../src/eom-window.c:2561
+#: ../src/eom-window.c:2537
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details.\n"
-msgstr "Die Veröffentlichung dieses Programms erfolgt in der Hoffnung, dass es Ihnen von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die stillschweigende Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN BESTIMMTEN ZWECK. Details finden Sie in der GNU General Public License.\n"
+msgstr ""
+"Die Veröffentlichung dieses Programms erfolgt in der Hoffnung, dass es Ihnen"
+" von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne die "
+"stillschweigende Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR EINEN "
+"BESTIMMTEN ZWECK. Details finden Sie in der GNU General Public License.\n"
 
-#: ../src/eom-window.c:2565
+#: ../src/eom-window.c:2541
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
-msgstr "Sie sollten ein Exemplar der »GNU Lesser General Public License« zusammen mit diesem Programm erhalten haben. Falls nicht, schreiben Sie bitte an die Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
+msgstr ""
+"Sie sollten ein Exemplar der »GNU Lesser General Public License« zusammen "
+"mit diesem Programm erhalten haben. Falls nicht, schreiben Sie bitte an die "
+"Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA "
+"02110-1301, USA."
 
-#: ../src/eom-window.c:2583
+#: ../src/eom-window.c:2559
 msgid "The MATE image viewer."
 msgstr "Der MATE-Bildbetrachter."
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2697
+#: ../src/eom-window.c:2673
 msgid "_Open Background Preferences"
 msgstr "Hintergrundeinstellungen ö_ffnen"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2713
+#: ../src/eom-window.c:2689
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
-msgstr "Das Bild »%s« wurde als Hintergrundbild festgelegt.\nMöchten Sie sein Erscheinungsbild verändern?"
+msgstr ""
+"Das Bild »%s« wurde als Hintergrundbild festgelegt.\n"
+"Möchten Sie sein Erscheinungsbild verändern?"
 
-#: ../src/eom-window.c:3111
+#: ../src/eom-window.c:3083
 msgid "Saving image locally…"
 msgstr "Bild wird lokal gespeichert …"
 
-#: ../src/eom-window.c:3191
+#: ../src/eom-window.c:3163
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
-msgstr "Soll »%s« wirklich\nin den Papierkorb verschoben werden?"
+msgstr ""
+"Soll »%s« wirklich\n"
+"in den Papierkorb verschoben werden?"
 
-#: ../src/eom-window.c:3194
+#: ../src/eom-window.c:3166
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
-msgstr "Es konnte kein Papierkorb für »%s« gefunden werden. Wollen Sie das Bild unwiderruflich löschen?"
+msgstr ""
+"Es konnte kein Papierkorb für »%s« gefunden werden. Wollen Sie das Bild "
+"unwiderruflich löschen?"
 
-#: ../src/eom-window.c:3199
+#: ../src/eom-window.c:3171
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1055,415 +1152,424 @@ msgid ""
 msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
-msgstr[0] "Soll das ausgewählte Bild wirklich\nin den Papierkorb verschoben werden?"
-msgstr[1] "Sollen die %d ausgewählten Bilder\nwirklich in den Papierkorb verschoben werden?"
+msgstr[0] ""
+"Sind Sie sicher, dass das ausgewählte Bild\n"
+"wirklich in den Papierkorb verschoben werden soll?"
+msgstr[1] ""
+"Sind Sie sicher, dass die %d ausgewählten Bilder\n"
+"wirklich in den Papierkorb verschoben werden sollen?"
 
-#: ../src/eom-window.c:3204
+#: ../src/eom-window.c:3176
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
-msgstr "Einige der zu löschenden Bilder können nicht in den Papierkorb verschoben werden und werden daher unwiderruflich gelöscht. Sind Sie sicher, dass Sie fortfahren wollen?"
+msgstr ""
+"Einige der zu löschenden Bilder können nicht in den Papierkorb verschoben "
+"werden und werden daher unwiderruflich gelöscht. Sind Sie sicher, dass Sie "
+"fortfahren wollen?"
 
-#: ../src/eom-window.c:3221 ../src/eom-window.c:3705 ../src/eom-window.c:3732
+#: ../src/eom-window.c:3193 ../src/eom-window.c:3677 ../src/eom-window.c:3704
 msgid "Move to _Trash"
 msgstr "In den _Papierkorb verschieben"
 
-#: ../src/eom-window.c:3223
+#: ../src/eom-window.c:3195
 msgid "_Do not ask again during this session"
 msgstr "Während _der laufenden Sitzung nicht erneut fragen"
 
-#: ../src/eom-window.c:3268 ../src/eom-window.c:3282
+#: ../src/eom-window.c:3240 ../src/eom-window.c:3254
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Auf den Papierkorb konnte nicht zugegriffen werden."
 
-#: ../src/eom-window.c:3290
+#: ../src/eom-window.c:3262
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Datei konnte nicht gelöscht werden"
 
-#: ../src/eom-window.c:3387
+#: ../src/eom-window.c:3359
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Fehler beim Löschen von Bild %s"
 
-#: ../src/eom-window.c:3629
+#: ../src/eom-window.c:3601
 msgid "_Image"
 msgstr "Bi_ld"
 
-#: ../src/eom-window.c:3630
+#: ../src/eom-window.c:3602
 msgid "_Edit"
 msgstr "_Bearbeiten"
 
-#: ../src/eom-window.c:3631
+#: ../src/eom-window.c:3603
 msgid "_View"
-msgstr "_Ansicht"
+msgstr "_Darstellung"
 
-#: ../src/eom-window.c:3632
+#: ../src/eom-window.c:3604
 msgid "_Go"
 msgstr "_Gehen zu"
 
-#: ../src/eom-window.c:3633
+#: ../src/eom-window.c:3605
 msgid "_Tools"
 msgstr "_Werkzeuge"
 
-#: ../src/eom-window.c:3634
+#: ../src/eom-window.c:3606
 msgid "_Help"
 msgstr "_Hilfe"
 
-#: ../src/eom-window.c:3636
+#: ../src/eom-window.c:3608
 msgid "_Open…"
 msgstr "Ö_ffnen …"
 
-#: ../src/eom-window.c:3637
+#: ../src/eom-window.c:3609
 msgid "Open a file"
 msgstr "Eine Datei öffnen"
 
-#: ../src/eom-window.c:3639
+#: ../src/eom-window.c:3611
 msgid "_Close"
 msgstr "S_chließen"
 
-#: ../src/eom-window.c:3640
+#: ../src/eom-window.c:3612
 msgid "Close window"
 msgstr "Fenster schließen"
 
-#: ../src/eom-window.c:3642
+#: ../src/eom-window.c:3614
 msgid "T_oolbar"
 msgstr "_Werkzeugleiste"
 
-#: ../src/eom-window.c:3643
+#: ../src/eom-window.c:3615
 msgid "Edit the application toolbar"
 msgstr "Werkzeugleiste anpassen"
 
-#: ../src/eom-window.c:3645
+#: ../src/eom-window.c:3617
 msgid "Prefere_nces"
 msgstr "_Einstellungen"
 
-#: ../src/eom-window.c:3646
+#: ../src/eom-window.c:3618
 msgid "Preferences for Eye of MATE"
 msgstr "Einstellungen für Eye of MATE"
 
-#: ../src/eom-window.c:3648
+#: ../src/eom-window.c:3620
 msgid "_Contents"
-msgstr "I_nhalt"
+msgstr "_Inhalt"
 
-#: ../src/eom-window.c:3649
+#: ../src/eom-window.c:3621
 msgid "Help on this application"
 msgstr "Hilfe zu dieser Anwendung"
 
-#: ../src/eom-window.c:3651
+#: ../src/eom-window.c:3623
 msgid "_About"
 msgstr "_Über"
 
-#: ../src/eom-window.c:3652
+#: ../src/eom-window.c:3624
 msgid "About this application"
 msgstr "Über diese Anwendung"
 
-#: ../src/eom-window.c:3657
+#: ../src/eom-window.c:3629
 msgid "_Toolbar"
 msgstr "_Werkzeugleiste"
 
-#: ../src/eom-window.c:3658
+#: ../src/eom-window.c:3630
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Ändert die Sichtbarkeit der Werkzeugleiste des aktuellen Fensters"
 
-#: ../src/eom-window.c:3660
+#: ../src/eom-window.c:3632
 msgid "_Statusbar"
 msgstr "_Statusleiste"
 
-#: ../src/eom-window.c:3661
+#: ../src/eom-window.c:3633
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Ändert die Sichtbarkeit der Statusleiste des aktuellen Fensters"
 
-#: ../src/eom-window.c:3663
+#: ../src/eom-window.c:3635
 msgid "_Image Collection"
 msgstr "Bildersa_mmlung"
 
-#: ../src/eom-window.c:3664
+#: ../src/eom-window.c:3636
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
-msgstr "Ändert die Sichtbarkeit der Bildersammlungsleiste des aktuellen Fensters"
+msgstr ""
+"Ändert die Sichtbarkeit der Bildersammlungsleiste des aktuellen Fensters"
 
-#: ../src/eom-window.c:3666
+#: ../src/eom-window.c:3638
 msgid "Side _Pane"
 msgstr "S_eitenleiste"
 
-#: ../src/eom-window.c:3667
+#: ../src/eom-window.c:3639
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Ändert die Sichtbarkeit der Seitenleiste des aktuellen Fensters"
 
-#: ../src/eom-window.c:3672
+#: ../src/eom-window.c:3644
 msgid "_Save"
 msgstr "_Speichern"
 
-#: ../src/eom-window.c:3673
+#: ../src/eom-window.c:3645
 msgid "Save changes in currently selected images"
 msgstr "Änderungen in den momentan gewählten Bildern speichern"
 
-#: ../src/eom-window.c:3675
+#: ../src/eom-window.c:3647
 msgid "Open _with"
 msgstr "Öffnen _mit"
 
-#: ../src/eom-window.c:3676
+#: ../src/eom-window.c:3648
 msgid "Open the selected image with a different application"
 msgstr "Das gewählte Bild mit einer anderen Anwendung öffnen"
 
-#: ../src/eom-window.c:3678
+#: ../src/eom-window.c:3650
 msgid "Save _As…"
 msgstr "Speichern _unter …"
 
-#: ../src/eom-window.c:3679
+#: ../src/eom-window.c:3651
 msgid "Save the selected images with a different name"
 msgstr "Die gewählten Bilder unter anderen Namen speichern"
 
-#: ../src/eom-window.c:3681
+#: ../src/eom-window.c:3653
 msgid "_Print…"
 msgstr "_Drucken …"
 
-#: ../src/eom-window.c:3682
+#: ../src/eom-window.c:3654
 msgid "Print the selected image"
 msgstr "Das gewählte Bild drucken"
 
-#: ../src/eom-window.c:3684
+#: ../src/eom-window.c:3656
 msgid "Prope_rties"
 msgstr "Ei_genschaften"
 
-#: ../src/eom-window.c:3685
+#: ../src/eom-window.c:3657
 msgid "Show the properties and metadata of the selected image"
 msgstr "Die Eigenschaften und Metadaten des gewählten Bildes anzeigen"
 
-#: ../src/eom-window.c:3687
+#: ../src/eom-window.c:3659
 msgid "_Undo"
 msgstr "_Rückgängig"
 
-#: ../src/eom-window.c:3688
+#: ../src/eom-window.c:3660
 msgid "Undo the last change in the image"
 msgstr "Die letzte Änderung am Bild rückgängig machen"
 
-#: ../src/eom-window.c:3690
+#: ../src/eom-window.c:3662
 msgid "Flip _Horizontal"
 msgstr "_Horizontal spiegeln"
 
-#: ../src/eom-window.c:3691
+#: ../src/eom-window.c:3663
 msgid "Mirror the image horizontally"
 msgstr "Das Bild horizontal spiegeln"
 
-#: ../src/eom-window.c:3693
+#: ../src/eom-window.c:3665
 msgid "Flip _Vertical"
 msgstr "_Senkrecht spiegeln"
 
-#: ../src/eom-window.c:3694
+#: ../src/eom-window.c:3666
 msgid "Mirror the image vertically"
 msgstr "Das Bild senkrecht spiegeln"
 
-#: ../src/eom-window.c:3696
+#: ../src/eom-window.c:3668
 msgid "_Rotate Clockwise"
 msgstr "_Im Uhrzeigersinn drehen"
 
-#: ../src/eom-window.c:3697
+#: ../src/eom-window.c:3669
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Das Bild um 90 Grad nach rechts drehen"
 
-#: ../src/eom-window.c:3699
+#: ../src/eom-window.c:3671
 msgid "Rotate Counterc_lockwise"
 msgstr "_Gegen den Uhrzeigersinn drehen"
 
-#: ../src/eom-window.c:3700
+#: ../src/eom-window.c:3672
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Das Bild um 90 Grad nach links drehen"
 
-#: ../src/eom-window.c:3702
+#: ../src/eom-window.c:3674
 msgid "Set as _Desktop Background"
 msgstr "Als _Hintergrundbild"
 
-#: ../src/eom-window.c:3703
+#: ../src/eom-window.c:3675
 msgid "Set the selected image as the desktop background"
 msgstr "Legt das ausgewählte Bild als Hintergrund des Schreibtisches fest"
 
-#: ../src/eom-window.c:3706
+#: ../src/eom-window.c:3678
 msgid "Move the selected image to the trash folder"
 msgstr "Das gewählte Bild in den Papierkorb verschieben"
 
-#: ../src/eom-window.c:3708
+#: ../src/eom-window.c:3680
 msgid "_Copy"
 msgstr "_Kopieren"
 
-#: ../src/eom-window.c:3709
+#: ../src/eom-window.c:3681
 msgid "Copy the selected image to the clipboard"
 msgstr "Ausgewähltes Bild in die Zwischenablage kopieren"
 
-#: ../src/eom-window.c:3711 ../src/eom-window.c:3723 ../src/eom-window.c:3726
+#: ../src/eom-window.c:3683 ../src/eom-window.c:3695 ../src/eom-window.c:3698
 msgid "_Zoom In"
 msgstr "Ver_größern"
 
-#: ../src/eom-window.c:3712 ../src/eom-window.c:3724
+#: ../src/eom-window.c:3684 ../src/eom-window.c:3696
 msgid "Enlarge the image"
 msgstr "Das Bild vergrößern"
 
-#: ../src/eom-window.c:3714 ../src/eom-window.c:3729
+#: ../src/eom-window.c:3686 ../src/eom-window.c:3701
 msgid "Zoom _Out"
 msgstr "Ver_kleinern"
 
-#: ../src/eom-window.c:3715 ../src/eom-window.c:3727 ../src/eom-window.c:3730
+#: ../src/eom-window.c:3687 ../src/eom-window.c:3699 ../src/eom-window.c:3702
 msgid "Shrink the image"
 msgstr "Das Bild verkleinern"
 
-#: ../src/eom-window.c:3717
+#: ../src/eom-window.c:3689
 msgid "_Normal Size"
 msgstr "_Normale Größe"
 
-#: ../src/eom-window.c:3718
+#: ../src/eom-window.c:3690
 msgid "Show the image at its normal size"
 msgstr "Das Bild in seiner normalen Größe anzeigen"
 
-#: ../src/eom-window.c:3720
+#: ../src/eom-window.c:3692
 msgid "_Best Fit"
 msgstr "_Einpassen"
 
-#: ../src/eom-window.c:3721
+#: ../src/eom-window.c:3693
 msgid "Fit the image to the window"
 msgstr "Das Bild auf die Fenstergröße anpassen"
 
-#: ../src/eom-window.c:3738
+#: ../src/eom-window.c:3710
 msgid "_Fullscreen"
 msgstr "_Vollbild"
 
-#: ../src/eom-window.c:3739
+#: ../src/eom-window.c:3711
 msgid "Show the current image in fullscreen mode"
 msgstr "Das momentane Bild im Vollbildmodus anzeigen"
 
-#: ../src/eom-window.c:3741
+#: ../src/eom-window.c:3713
 msgid "Pause Slideshow"
 msgstr "Diaschau anhalten"
 
-#: ../src/eom-window.c:3742
+#: ../src/eom-window.c:3714
 msgid "Pause or resume the slideshow"
 msgstr "Die Diaschau anhalten oder fortsetzen"
 
-#: ../src/eom-window.c:3747 ../src/eom-window.c:3762
+#: ../src/eom-window.c:3719 ../src/eom-window.c:3734
 msgid "_Previous Image"
 msgstr "_Vorheriges Bild"
 
-#: ../src/eom-window.c:3748
+#: ../src/eom-window.c:3720
 msgid "Go to the previous image of the collection"
 msgstr "Zum vorherigen Bild in der Sammlung gehen"
 
-#: ../src/eom-window.c:3750
+#: ../src/eom-window.c:3722
 msgid "_Next Image"
 msgstr "_Nächstes Bild"
 
-#: ../src/eom-window.c:3751
+#: ../src/eom-window.c:3723
 msgid "Go to the next image of the collection"
 msgstr "Zum nächsten Bild in der Sammlung gehen"
 
-#: ../src/eom-window.c:3753 ../src/eom-window.c:3765
+#: ../src/eom-window.c:3725 ../src/eom-window.c:3737
 msgid "_First Image"
 msgstr "_Erstes Bild"
 
-#: ../src/eom-window.c:3754
+#: ../src/eom-window.c:3726
 msgid "Go to the first image of the collection"
 msgstr "Zum ersten Bild in der Sammlung gehen"
 
-#: ../src/eom-window.c:3756 ../src/eom-window.c:3768
+#: ../src/eom-window.c:3728 ../src/eom-window.c:3740
 msgid "_Last Image"
 msgstr "_Letztes Bild"
 
-#: ../src/eom-window.c:3757
+#: ../src/eom-window.c:3729
 msgid "Go to the last image of the collection"
 msgstr "Zum letzten Bild in der Sammlung gehen"
 
-#: ../src/eom-window.c:3759
+#: ../src/eom-window.c:3731
 msgid "_Random Image"
 msgstr "_Zufälliges Bild"
 
-#: ../src/eom-window.c:3760
+#: ../src/eom-window.c:3732
 msgid "Go to a random image of the collection"
 msgstr "Zu einem zufälligen Bild in der Sammlung gehen"
 
-#: ../src/eom-window.c:3774
+#: ../src/eom-window.c:3746
 msgid "S_lideshow"
 msgstr "_Diaschau"
 
-#: ../src/eom-window.c:3775
+#: ../src/eom-window.c:3747
 msgid "Start a slideshow view of the images"
 msgstr "Die Diaschau der Bilder starten"
 
-#: ../src/eom-window.c:3841
+#: ../src/eom-window.c:3813
 msgid "Previous"
-msgstr "Vorheriges"
+msgstr "Vorherige"
 
-#: ../src/eom-window.c:3845
+#: ../src/eom-window.c:3817
 msgid "Next"
-msgstr "Nächstes"
+msgstr "Nächste"
 
-#: ../src/eom-window.c:3849
+#: ../src/eom-window.c:3821
 msgid "Right"
 msgstr "Rechts"
 
-#: ../src/eom-window.c:3852
+#: ../src/eom-window.c:3824
 msgid "Left"
 msgstr "Links"
 
-#: ../src/eom-window.c:3855
+#: ../src/eom-window.c:3827
 msgid "In"
 msgstr "Größer"
 
-#: ../src/eom-window.c:3858
+#: ../src/eom-window.c:3830
 msgid "Out"
 msgstr "Kleiner"
 
-#: ../src/eom-window.c:3861
+#: ../src/eom-window.c:3833
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/eom-window.c:3864
+#: ../src/eom-window.c:3836
 msgid "Fit"
 msgstr "Anpassen"
 
-#: ../src/eom-window.c:3867
+#: ../src/eom-window.c:3839
 msgid "Collection"
 msgstr "Sammlung"
 
-#: ../src/eom-window.c:3870
+#: ../src/eom-window.c:3842
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Papierkorb"
 
-#: ../src/eom-window.c:4219
+#: ../src/eom-window.c:4191
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "Ausgewähltes Bild mit %s bearbeiten"
 
-#: ../src/eom-window.c:4221
+#: ../src/eom-window.c:4193
 msgid "Edit Image"
 msgstr "Bild bearbeiten"
 
-#: ../src/main.c:81
+#: ../src/main.c:77
 msgid "Open in fullscreen mode"
 msgstr "Im Vollbildmodus anzeigen"
 
-#: ../src/main.c:82
+#: ../src/main.c:78
 msgid "Disable image collection"
 msgstr "Bildersammlung deaktivieren"
 
-#: ../src/main.c:83
+#: ../src/main.c:79
 msgid "Open in slideshow mode"
 msgstr "Als Diashow anzeigen"
 
-#: ../src/main.c:85
+#: ../src/main.c:81
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "Eine neue Instanz starten, anstatt eine vorhandene zu verwenden"
 
-#: ../src/main.c:88
+#: ../src/main.c:84
 msgid "Show the application's version"
 msgstr "Die Version der Anwendung anzeigen"
 
-#: ../src/main.c:89
+#: ../src/main.c:85
 msgid "[FILE…]"
 msgstr "[DATEI …]"
 
 #. I18N: The '%s' is replaced with eom's command name.
-#: ../src/main.c:216
+#: ../src/main.c:212
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
-msgstr "»%s --help« für eine vollständige Liste der verfügbaren Optionen starten."
+msgstr ""
+"»%s --help« für eine vollständige Liste der verfügbaren Optionen starten."

@@ -1,16 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 09:48+0100\n"
-"PO-Revision-Date: 2017-09-19 11:03+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: Panjabi (Punjabi) (http://www.transifex.com/mate/MATE/language/pa/)\n"
+"POT-Creation-Date: 2018-03-14 09:30+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Martin Wimpress <code@flexion.org>, 2018\n"
+"Language-Team: Panjabi (Punjabi) (https://www.transifex.com/mate/teams/13566/pa/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,11 +32,11 @@ msgstr "“_%s” ਵੇਖੋ"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1390
 msgid "_Move on Toolbar"
-msgstr "ਟੂਲਬਾਰ ਉੱਤੇ ਭੇਜੋ(_M)"
+msgstr "ਟੂਲਬਾਰ ਉੱਤੇ ਹਿਲਾਓ(_M)"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1391
 msgid "Move the selected item on the toolbar"
-msgstr "ਟੂਲਬਾਰ ਉੱਤੇ ਚੁਣੀ ਆਈਟਮ ਹਿਲਾਓ"
+msgstr "ਟੂਲਾਰ ਉੱਤੇ ਚੁਣੀ ਆਈਟਮ ਏਧਰ-ਓਧਰ ਕਰੋ"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1392
 msgid "_Remove from Toolbar"
@@ -53,11 +54,11 @@ msgstr "ਟੂਲਬਾਰ ਹਟਾਓ(_D)"
 msgid "Remove the selected toolbar"
 msgstr "ਚੁਣੀ ਟੂਲਬਾਰ ਹਟਾਓ"
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:487
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:485
 msgid "Separator"
 msgstr "ਵੱਖਰੇਵਾਂ"
 
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2578
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2554
 msgid "Eye of MATE"
 msgstr "ਗਨੋਮ ਦੀ ਅੱਖ"
 
@@ -72,7 +73,7 @@ msgid ""
 "subsequent images in the directory the image was loaded from. </p>"
 msgstr ""
 
-#: ../data/eom.desktop.in.in.h:1 ../src/main.c:74 ../src/main.c:268
+#: ../data/eom.desktop.in.in.h:1 ../src/main.c:70 ../src/main.c:264
 msgid "Eye of MATE Image Viewer"
 msgstr "ਗਨੋਮ ਅੱਖ ਚਿੱਤਰ ਦਰਸ਼ਕ"
 
@@ -154,7 +155,7 @@ msgstr "ਮਿਤੀ/ਸਮਾਂ:"
 
 #: ../data/eom-image-properties-dialog.ui.h:19
 msgid "Description:"
-msgstr "ਜਾਣਕਾਰੀ:"
+msgstr "ਵੇਰਵਾ:"
 
 #: ../data/eom-image-properties-dialog.ui.h:20
 msgid "Keywords:"
@@ -166,7 +167,7 @@ msgstr "ਲੇਖਕ:"
 
 #: ../data/eom-image-properties-dialog.ui.h:22
 msgid "Copyright:"
-msgstr "ਕਾਪੀਰਾਈਟ:"
+msgstr "ਹੱਕ ਰਾਖਵੇਂ ਹਨ:"
 
 #: ../data/eom-image-properties-dialog.ui.h:23
 msgid "Details"
@@ -216,7 +217,7 @@ msgstr "ਖਾਲੀ ਥਾਂ ਹੇਠਾਂ ਹੇਠ ਰੇਖਾ ਨਾਲ 
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:12
 msgid "Options"
-msgstr "ਚੋਣ"
+msgstr "ਚੋਣਾਂ"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:13
 msgid "Rename from:"
@@ -224,7 +225,7 @@ msgstr "ਇਸ ਤੋਂ ਨਾਂ ਬਦਲੋ:"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:14
 msgid "To:"
-msgstr "ਤੋਂ:"
+msgstr "ਵੱਲ"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:15
 msgid "File Name Preview"
@@ -337,7 +338,10 @@ msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
 "theme instead."
-msgstr "ਚਿੱਤਰ ਦੇ ਪਿੱਛੇ ਖੇਤਰ ਨੂੰ ਭਰਨ ਲਈ ਵਰਤਿਆ ਜਾਣ ਵਾਲਾ ਰੰਗ ਹੈ। ਜਦੋਂ use-background-color ਕੁੰਜੀ ਸੈੱਟ ਨਹੀਂ ਹੁੰਦੀ ਹੈ ਤਾਂ ਰੰਗ ਨੂੰ ਐਕਟਿਵ GTK+ ਥੀਮ ਤੋਂ ਲੈ ਕੇ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।"
+msgstr ""
+"ਚਿੱਤਰ ਦੇ ਪਿੱਛੇ ਖੇਤਰ ਨੂੰ ਭਰਨ ਲਈ ਵਰਤਿਆ ਜਾਣ ਵਾਲਾ ਰੰਗ ਹੈ। ਜਦੋਂ use-background-"
+"color ਕੁੰਜੀ ਸੈੱਟ ਨਹੀਂ ਹੁੰਦੀ ਹੈ ਤਾਂ ਰੰਗ ਨੂੰ ਐਕਟਿਵ GTK+ ਥੀਮ ਤੋਂ ਲੈ ਕੇ ਵਰਤਿਆ "
+"ਜਾਂਦਾ ਹੈ।"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:5
 msgid "Use a custom background color"
@@ -348,7 +352,10 @@ msgid ""
 "If this is active, the color set by the background-color key will be used to"
 " fill the area behind the image. If it is not set, the current GTK+ theme "
 "will determine the fill color."
-msgstr "ਜੇ ਇਹ ਸਰਗਰਮ ਰੰਗ ਬੈਕਗਰਾਊਂਡ ਵਲੋਂ ਸੈੱਟ ਕੀਤਾ ਗਿਆ ਤਾਂ- ਰੰਗ ਕੁੰਜੀ ਨੂੰ ਚਿੱਤਰ ਦੇ ਪਿੱਛੇ ਖੇਤਰ ਭਰਨ ਲਈ ਵਰਤਿਆ ਜਾਵੇਗਾ। ਜੇ ਇਹ ਸੈੱਟ ਨਾ ਕੀਤਾ ਗਿਆ ਤਾਂ ਮੌਜੂਦਾ GTK+ ਥੀਮ ਰੰਗ ਭਰਨ ਲਈ ਵਰਤਿਆ ਜਾਵੇਗਾ।"
+msgstr ""
+"ਜੇ ਇਹ ਸਰਗਰਮ ਰੰਗ ਬੈਕਗਰਾਊਂਡ ਵਲੋਂ ਸੈੱਟ ਕੀਤਾ ਗਿਆ ਤਾਂ- ਰੰਗ ਕੁੰਜੀ ਨੂੰ ਚਿੱਤਰ ਦੇ "
+"ਪਿੱਛੇ ਖੇਤਰ ਭਰਨ ਲਈ ਵਰਤਿਆ ਜਾਵੇਗਾ। ਜੇ ਇਹ ਸੈੱਟ ਨਾ ਕੀਤਾ ਗਿਆ ਤਾਂ ਮੌਜੂਦਾ GTK+ ਥੀਮ "
+"ਰੰਗ ਭਰਨ ਲਈ ਵਰਤਿਆ ਜਾਵੇਗਾ।"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:7
 msgid "Interpolate Image"
@@ -358,7 +365,10 @@ msgstr "ਚਿੱਤਰ ਇੰਟਰਪੋਲਟ"
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
-msgstr "ਕੀ ਚਿੱਤਰ ਨੂੰ ਜ਼ੂਮ ਆਉਟ ਕਰਨ ਸਮੇਂ ਇੰਟਰਪੋਲੇਟ ਕੀਤਾ ਜਾਵੇ ਜਾਂ ਨਾ। ਇਸ ਨਾਲ ਚਿੱਤਰ ਦਾ ਸਰੂਪ ਤਾਂ ਹੋਰ ਨਿਖਰ ਜਾਵੇਗਾ, ਪਰ ਨਾ-ਇੰਟਰਪੋਲੇਟਡ ਚਿੱਤਰ ਦੇ ਮੁਕਾਬਲੇ ਥੋੜਾ ਜਿਹਾ ਹੌਲੀ ਹੋ ਜਾਵੇਗਾ।"
+msgstr ""
+"ਕੀ ਚਿੱਤਰ ਨੂੰ ਜ਼ੂਮ ਆਉਟ ਕਰਨ ਸਮੇਂ ਇੰਟਰਪੋਲੇਟ ਕੀਤਾ ਜਾਵੇ ਜਾਂ ਨਾ। ਇਸ ਨਾਲ ਚਿੱਤਰ ਦਾ "
+"ਸਰੂਪ ਤਾਂ ਹੋਰ ਨਿਖਰ ਜਾਵੇਗਾ, ਪਰ ਨਾ-ਇੰਟਰਪੋਲੇਟਡ ਚਿੱਤਰ ਦੇ ਮੁਕਾਬਲੇ ਥੋੜਾ ਜਿਹਾ ਹੌਲੀ "
+"ਹੋ ਜਾਵੇਗਾ।"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:9
 msgid "Extrapolate Image"
@@ -368,7 +378,10 @@ msgstr "ਚਿੱਤਰ ਇੰਟਰਪੋਲੇਟ"
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
-msgstr "ਕੀ ਚਿੱਤਰ ਨੂੰ ਜ਼ੂਮ ਇਨ ਕਰਨ ਸਮੇਂ ਐਕਸਟਰਾਪੋਲੇਟਡ ਕਰਨਾ ਹੈ ਜਾਂ ਨਹੀਂ। ਇਸ ਨਾਲ ਚਿੱਤਰ ਦਾ ਸਰੂਪ ਤਾਂ ਹੋਰ ਨਿਖਰ ਜਾਵੇਗਾ, ਪਰ ਨਾ-ਐਕਸਟਰਾਪੋਲੇਟਡ ਚਿੱਤਰਾਂ ਦੇ ਮੁਕਾਬਲੇ ਥੋੜਾ ਜਿਹਾ ਹੌਲੀ ਹੋ ਜਾਵੇਗਾ।"
+msgstr ""
+"ਕੀ ਚਿੱਤਰ ਨੂੰ ਜ਼ੂਮ ਇਨ ਕਰਨ ਸਮੇਂ ਐਕਸਟਰਾਪੋਲੇਟਡ ਕਰਨਾ ਹੈ ਜਾਂ ਨਹੀਂ। ਇਸ ਨਾਲ ਚਿੱਤਰ ਦਾ"
+" ਸਰੂਪ ਤਾਂ ਹੋਰ ਨਿਖਰ ਜਾਵੇਗਾ, ਪਰ ਨਾ-ਐਕਸਟਰਾਪੋਲੇਟਡ ਚਿੱਤਰਾਂ ਦੇ ਮੁਕਾਬਲੇ ਥੋੜਾ ਜਿਹਾ "
+"ਹੌਲੀ ਹੋ ਜਾਵੇਗਾ।"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:11
 msgid "Transparency indicator"
@@ -400,7 +413,10 @@ msgid ""
 "This value defines the zooming step used for each scroll event. For example,"
 " 0.05 results in a 5% zoom increment for each scroll event and 1.00 result "
 "in a 100% zoom increment."
-msgstr "ਮਲਟੀਪਲਾਈਰ ਨੂੰ ਮਾਊਸ ਸਕਰੋਲ ਵੀਲ ਨਾਲ ਜ਼ੂਮ ਕਰਨ ਦੌਰਾਨ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ। ਇਹ ਮੁੱਲ ਨੂੰ ਹਰੇਕ ਸਕਰੋਲ ਈਵੈਂਟ ਲਈ ਜ਼ੂਮਿੰਗ ਦੇਣ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ। ਉਦਾਹਰਨ ਵਾਸਤੇ, 0.05 ਹਰੇਕ ਸਕਰੋਲ ਈਵੈਂਟ ਲਈ 5% ਜ਼ੂਮ ਵਧਾ ਕਰੇਗਾ ਅਤੇ 1.00 ਦੇ ਨਤੀਜੇ ਵਜੋਂ 100% ਜ਼ੂਮ ਵਾਧਾ।"
+msgstr ""
+"ਮਲਟੀਪਲਾਈਰ ਨੂੰ ਮਾਊਸ ਸਕਰੋਲ ਵੀਲ ਨਾਲ ਜ਼ੂਮ ਕਰਨ ਦੌਰਾਨ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ। ਇਹ ਮੁੱਲ "
+"ਨੂੰ ਹਰੇਕ ਸਕਰੋਲ ਈਵੈਂਟ ਲਈ ਜ਼ੂਮਿੰਗ ਦੇਣ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ। ਉਦਾਹਰਨ ਵਾਸਤੇ, 0.05 "
+"ਹਰੇਕ ਸਕਰੋਲ ਈਵੈਂਟ ਲਈ 5% ਜ਼ੂਮ ਵਧਾ ਕਰੇਗਾ ਅਤੇ 1.00 ਦੇ ਨਤੀਜੇ ਵਜੋਂ 100% ਜ਼ੂਮ ਵਾਧਾ।"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:18
 msgid "Transparency color"
@@ -410,7 +426,9 @@ msgstr "ਪਾਰਦਰਸ਼ੀ ਰੰਗ"
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
-msgstr "ਜੇਕਰ ਪਾਰਦਰਸ਼ੀ ਕੁੰਜੀ ਦਾ ਮੁੱਲ ਰੰਗ (COLOR) ਹੈ ਤਾਂ ਇਹ ਕੁੰਜੀ ਜਾਣੇਗੀ ਕਿ ਕਿਹੜਾ ਰੰਗ ਪਾਰਦਰਸ਼ਤਾ ਵੇਖਾਉਣ ਲਈ ਵਰਤਣ ਹੈ।"
+msgstr ""
+"ਜੇਕਰ ਪਾਰਦਰਸ਼ੀ ਕੁੰਜੀ ਦਾ ਮੁੱਲ ਰੰਗ (COLOR) ਹੈ ਤਾਂ ਇਹ ਕੁੰਜੀ ਜਾਣੇਗੀ ਕਿ ਕਿਹੜਾ ਰੰਗ "
+"ਪਾਰਦਰਸ਼ਤਾ ਵੇਖਾਉਣ ਲਈ ਵਰਤਣ ਹੈ।"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:20
 msgid "Randomize the image sequence"
@@ -437,7 +455,9 @@ msgstr "ਮੁੱਢਲਾ ਜ਼ੂਮ ੧੦੦% ਜਿਆਦਾ ਕਰਨਾ 
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
-msgstr "ਜੇਕਰ ਇਸ ਨੂੰ ਗਲਤ ਸੈੱਟ ਕਰ ਦਿੱਤਾ ਗਿਆ ਤਾਂ ਛੋਟੇ ਚਿੱਤਰਾਂ ਨੂੰ ਸਕਰੀਨ ਦੇ ਅਨੁਕੂਲ ਕਰਨ ਲਈ ਖਿੱਚਿਆ ਨਹੀਂ ਜਾਵੇਗਾ।"
+msgstr ""
+"ਜੇਕਰ ਇਸ ਨੂੰ ਗਲਤ ਸੈੱਟ ਕਰ ਦਿੱਤਾ ਗਿਆ ਤਾਂ ਛੋਟੇ ਚਿੱਤਰਾਂ ਨੂੰ ਸਕਰੀਨ ਦੇ ਅਨੁਕੂਲ ਕਰਨ "
+"ਲਈ ਖਿੱਚਿਆ ਨਹੀਂ ਜਾਵੇਗਾ।"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:27
 msgid "Delay in seconds until showing the next image"
@@ -447,7 +467,9 @@ msgstr "ਅੰਤਰਾਲ, ਅਗਲਾ ਚਿੱਤਰ ਵੇਖਾਉਣ ਤ�
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until"
 " the next one is shown automatically. Zero disables the automatic browsing."
-msgstr "ਇੱਕ ਮੁੱਲ 0 ਤੋਂ ਵੱਧ ਇਹ ਦੱਸਦਾ ਹੈ ਕਿ ਚਿੱਤਰ ਸਕਰੀਨ ਤੇ ਕਿੰਨਾ ਸਮਾਂ ਰਹੇ, ਅਗਲਾ ਚਿੱਤਰ ਆਟੋਮੈਟਿਕ ਹੀ ਲੋਡ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ ਸਿਫ਼ਰ ਆਟੋਮੈਟਿਕ ਝਲਕ ਨੂੰ ਬੰਦ ਦੇਵੇਗੀ।"
+msgstr ""
+"ਇੱਕ ਮੁੱਲ 0 ਤੋਂ ਵੱਧ ਇਹ ਦੱਸਦਾ ਹੈ ਕਿ ਚਿੱਤਰ ਸਕਰੀਨ ਤੇ ਕਿੰਨਾ ਸਮਾਂ ਰਹੇ, ਅਗਲਾ ਚਿੱਤਰ "
+"ਆਟੋਮੈਟਿਕ ਹੀ ਲੋਡ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ ਸਿਫ਼ਰ ਆਟੋਮੈਟਿਕ ਝਲਕ ਨੂੰ ਬੰਦ ਦੇਵੇਗੀ।"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:29
 msgid "Show/Hide the window toolbar."
@@ -490,7 +512,10 @@ msgid ""
 "If activated, Eye of MATE won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
 "trash and would be deleted instead."
-msgstr "ਜਦੋਂ ਐਕਟੀਵੇਟ ਕੀਤਾ ਗਿਆ ਤਾਂ ਗਨੋਮ ਦੀ ਅੱਖ ਚਿੱਤਰਾਂ ਨੂੰ ਰੱਦੀ ਵਿੱਚ ਭੇਜਣ ਸਮੇਂ ਪੁਸ਼ਟੀ ਨਹੀਂ ਕਰਵਾਏਗੀ। ਤਾਂ ਵੀ ਇਹ ਪੁੱਛੇਗੀ, ਜੇ ਫਾਇਲ ਨੂੰ ਰੱਦੀ ਵਿੱਚ ਨਾ ਭੇਜਿਆ ਜਾ ਸਕਦਾ ਹੋਵੇ ਅਤੇ ਸਿੱਧਾ ਹਟਾਉਣਾ ਹੋਵੇ।"
+msgstr ""
+"ਜਦੋਂ ਐਕਟੀਵੇਟ ਕੀਤਾ ਗਿਆ ਤਾਂ ਗਨੋਮ ਦੀ ਅੱਖ ਚਿੱਤਰਾਂ ਨੂੰ ਰੱਦੀ ਵਿੱਚ ਭੇਜਣ ਸਮੇਂ ਪੁਸ਼ਟੀ"
+" ਨਹੀਂ ਕਰਵਾਏਗੀ। ਤਾਂ ਵੀ ਇਹ ਪੁੱਛੇਗੀ, ਜੇ ਫਾਇਲ ਨੂੰ ਰੱਦੀ ਵਿੱਚ ਨਾ ਭੇਜਿਆ ਜਾ ਸਕਦਾ "
+"ਹੋਵੇ ਅਤੇ ਸਿੱਧਾ ਹਟਾਉਣਾ ਹੋਵੇ।"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:39
 msgid ""
@@ -503,7 +528,11 @@ msgid ""
 "moved to its own page in the dialog. This should make the dialog more usable"
 " on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
 "be embedded on the \"Metadata\" page."
-msgstr "ਜੇ ਐਕਟੀਵੇਟ ਕੀਤਾ ਤਾਂ ਵਿਸ਼ੇਸ਼ਤਾ ਡਾਈਲਾਗ ਦਾ ਮੇਟਾਡਾਟਾ ਵੇਰਵਾ ਡਾਈਲਾਗ ਦੇ ਆਪਣੇ ਪੇਜ਼ ਵਿੱਚ ਭੇਜਿਆ ਜਾਵੇਗਾ। ਇਹ ਡਾਈਲਾਗ ਨੂੰ ਛੋਟੀਆਂ ਸਕਰੀਨਾਂ ਲਈ ਵਰਤੋਂਯੋਗ ਬਣਾਉਦਾ ਹੈ, ਜਿਵੇਂ ਕਿ ਨੈੱਟਬੁੱਕ। ਜੇ ਆਯੋਗ ਹੋਇਆ ਤਾਂ ਵਿਦਜੈੱਟ ਨੂੰ ਮੇਟਾਡਾਟਾ ਪੇਜ਼ ਉੱਤੇ ਸ਼ਾਮਲ ਕੀਤਾ ਜਾਵੇਗਾ।"
+msgstr ""
+"ਜੇ ਐਕਟੀਵੇਟ ਕੀਤਾ ਤਾਂ ਵਿਸ਼ੇਸ਼ਤਾ ਡਾਈਲਾਗ ਦਾ ਮੇਟਾਡਾਟਾ ਵੇਰਵਾ ਡਾਈਲਾਗ ਦੇ ਆਪਣੇ ਪੇਜ਼ "
+"ਵਿੱਚ ਭੇਜਿਆ ਜਾਵੇਗਾ। ਇਹ ਡਾਈਲਾਗ ਨੂੰ ਛੋਟੀਆਂ ਸਕਰੀਨਾਂ ਲਈ ਵਰਤੋਂਯੋਗ ਬਣਾਉਦਾ ਹੈ, ਜਿਵੇਂ"
+" ਕਿ ਨੈੱਟਬੁੱਕ। ਜੇ ਆਯੋਗ ਹੋਇਆ ਤਾਂ ਵਿਦਜੈੱਟ ਨੂੰ ਮੇਟਾਡਾਟਾ ਪੇਜ਼ ਉੱਤੇ ਸ਼ਾਮਲ ਕੀਤਾ "
+"ਜਾਵੇਗਾ।"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:41
 msgid "External program to use for editing images"
@@ -520,7 +549,9 @@ msgstr ""
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images"
 " are loaded."
-msgstr "ਕੀ ਫਾਇਲ ਚੋਣਕਾਰ ਵਿੱਚ ਯੂਜ਼ਰ ਦਾ ਤਸਵੀਰ ਫੋਲਡਰ ਵੇਖਾਉਣਾ ਹੈ, ਜੇ ਕੋਈ ਵੀ ਚਿੱਤਰ ਲੋਡ ਨਾ ਹੋਵੇ।"
+msgstr ""
+"ਕੀ ਫਾਇਲ ਚੋਣਕਾਰ ਵਿੱਚ ਯੂਜ਼ਰ ਦਾ ਤਸਵੀਰ ਫੋਲਡਰ ਵੇਖਾਉਣਾ ਹੈ, ਜੇ ਕੋਈ ਵੀ ਚਿੱਤਰ ਲੋਡ ਨਾ "
+"ਹੋਵੇ।"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:44
 msgid ""
@@ -528,18 +559,24 @@ msgid ""
 "will display the user's pictures folder using the XDG special user "
 "directories. If deactivated or the pictures folder has not been set up, it "
 "will show the current working directory."
-msgstr "ਜੇ ਐਕਟੀਵੇਟ ਕੀਤਾ ਅਤੇ ਐਕਟਿਵ ਵਿੰਡੋ ਵਿੱਚ ਕੋਈ ਚਿੱਤਰ ਲੋਡ ਨਾ ਕੀਤਾ ਤਾਂ ਫਾਇਲ ਚੋਣਕਾਰ XDG ਖਾਸ ਯੂਜ਼ਰ ਡਾਇਰੈਕਟਰੀਆਂ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਯੂਜ਼ਰ ਦਾ ਤਸਵੀਰ ਫੋਲਡਰ ਵੇਖਾਏਗਾ। ਜੇ ਡੀ-ਐਕਟੀਵੇਟ ਕੀਤਾ ਜਾਂ ਤਸਵੀਰ ਫੋਲਡਰ ਸੈੱਟਅੱਪ ਨਾ ਕੀਤਾ ਤਾਂ ਇਹ ਮੌਜੂਦਾ ਵਰਕਿੰਗ ਡਾਇਰੈਕਟਰੀ ਵੇਖਾਏਗਾ।"
+msgstr ""
+"ਜੇ ਐਕਟੀਵੇਟ ਕੀਤਾ ਅਤੇ ਐਕਟਿਵ ਵਿੰਡੋ ਵਿੱਚ ਕੋਈ ਚਿੱਤਰ ਲੋਡ ਨਾ ਕੀਤਾ ਤਾਂ ਫਾਇਲ ਚੋਣਕਾਰ "
+"XDG ਖਾਸ ਯੂਜ਼ਰ ਡਾਇਰੈਕਟਰੀਆਂ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਯੂਜ਼ਰ ਦਾ ਤਸਵੀਰ ਫੋਲਡਰ ਵੇਖਾਏਗਾ। ਜੇ "
+"ਡੀ-ਐਕਟੀਵੇਟ ਕੀਤਾ ਜਾਂ ਤਸਵੀਰ ਫੋਲਡਰ ਸੈੱਟਅੱਪ ਨਾ ਕੀਤਾ ਤਾਂ ਇਹ ਮੌਜੂਦਾ ਵਰਕਿੰਗ "
+"ਡਾਇਰੈਕਟਰੀ ਵੇਖਾਏਗਾ।"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:45
 msgid "Active plugins"
-msgstr "ਐਕਟਿਵ ਪਲੱਗਇਨ"
+msgstr "ਸਰਗਰਮ ਪਲੱਗਇਨ"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:46
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
 "plugin."
-msgstr "ਐਕਟਿਵ ਪਲੱਗਇਨਾਂ ਦੀ ਲਿਸਟ ਹੈ। ਇਸ ਵਿੱਚ ਐਕਟਿਵ ਪਲੱਗਇਨਾਂ ਦਾ \"ਟਿਕਾਣਾ\" ਨਹੀਂ ਹੈ। ਦਿੱਤੀ ਪਲੱਗਇਨ ਦਾ \"ਟਿਕਾਣਾ\" ਵੇਖਣ ਲਈ .eom-plugin ਵੇਖੋ।"
+msgstr ""
+"ਐਕਟਿਵ ਪਲੱਗਇਨਾਂ ਦੀ ਲਿਸਟ ਹੈ। ਇਸ ਵਿੱਚ ਐਕਟਿਵ ਪਲੱਗਇਨਾਂ ਦਾ \"ਟਿਕਾਣਾ\" ਨਹੀਂ ਹੈ। "
+"ਦਿੱਤੀ ਪਲੱਗਇਨ ਦਾ \"ਟਿਕਾਣਾ\" ਵੇਖਣ ਲਈ .eom-plugin ਵੇਖੋ।"
 
 #: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
 msgid "Fullscreen with double-click"
@@ -583,25 +620,25 @@ msgstr "ਸਵਾਲ"
 msgid "If you don't save, your changes will be lost."
 msgstr "ਜੇ ਤੁਸੀਂ ਨਾ ਸੰਭਾਲੀਆਂ ਤਾਂ ਤੁਹਾਡੀਆਂ ਤਬਦੀਲੀਆਂ ਖਤਮ ਹੋ ਜਾਣਗੀਆਂ।"
 
-#: ../src/eom-close-confirmation-dialog.c:413
+#: ../src/eom-close-confirmation-dialog.c:409
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "ਕੀ \"%s\" ਚਿੱਤਰ ਵਿੱਚ ਕੀਤੀਆਂ ਤਬਦੀਲੀਆਂ ਸੰਭਾਲਣੀਆਂ ਹਨ?"
 
-#: ../src/eom-close-confirmation-dialog.c:616
+#: ../src/eom-close-confirmation-dialog.c:604
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
-msgstr[0] "%d ਚਿੱਤਰ ਵਿੱਚ ਨਾ-ਸੰਭਾਲੇ ਬਦਲਾਅ ਹਨ। ਕੀ ਬੰਦ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਸੰਭਾਲਣੇ ਹਨ?"
-msgstr[1] "%d ਚਿੱਤਰਾਂ ਵਿੱਚ ਨਾ-ਸੰਭਾਲੇ ਬਦਲਾਅ ਹਨ। ਕੀ ਬੰਦ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਸੰਭਾਲਣੇ ਹਨ?"
+msgstr[0] ""
+msgstr[1] ""
 
-#: ../src/eom-close-confirmation-dialog.c:633
+#: ../src/eom-close-confirmation-dialog.c:621
 msgid "S_elect the images you want to save:"
 msgstr "ਚਿੱਤਰ ਚੁਣੋ, ਜੋ ਤੁਸੀਂ ਸੰਭਾਲਣਾ ਚਾਹੁੰਦੇ ਹੋ(_e):"
 
 #. Secondary label
-#: ../src/eom-close-confirmation-dialog.c:656
+#: ../src/eom-close-confirmation-dialog.c:640
 msgid "If you don't save, all your changes will be lost."
 msgstr "ਜੇ ਤੁਸੀਂ ਨਹੀਂ ਸੰਭਾਲਦੇ, ਤੁਹਾਡੇ ਸਭ ਬਦਲਾਅ ਖਤਮ ਹੋ ਜਾਣਗੇ।"
 
@@ -613,7 +650,9 @@ msgstr "ਫਾਇਲ ਫਾਰਮੈਟ ਅਣਜਾਣ ਹੈ ਜਾਂ ਗ਼�
 msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
-msgstr "ਗਨੋਮ ਦੀ ਅੱਖ ਫਾਇਲ ਨਾਂ ਦੇ ਅਧਾਰ ਉੱਤੇ ਇੱਕ ਸਹਾਇਕ ਲਿਖਣਯੋਗ ਫਾਇਲ ਫਾਰਮੈਟ ਜਾਣ ਨਹੀਂ ਸਕਿਆ।"
+msgstr ""
+"ਗਨੋਮ ਦੀ ਅੱਖ ਫਾਇਲ ਨਾਂ ਦੇ ਅਧਾਰ ਉੱਤੇ ਇੱਕ ਸਹਾਇਕ ਲਿਖਣਯੋਗ ਫਾਇਲ ਫਾਰਮੈਟ ਜਾਣ ਨਹੀਂ "
+"ਸਕਿਆ।"
 
 #: ../src/eom-file-chooser.c:133
 msgid "Please try a different file extension like .png or .jpg."
@@ -636,11 +675,11 @@ msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
 #: ../src/eom-file-chooser.c:287 ../src/eom-properties-dialog.c:137
-#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:522
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:519
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] "ਪਿਕਸਲ"
-msgstr[1] "ਪਿਕਸਲ"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/eom-file-chooser.c:457
 msgid "Open Image"
@@ -694,21 +733,21 @@ msgstr "ਸੰਭਾਲਣ ਲਈ ਆਰਜ਼ੀ ਫਾਇਲ ਨਹੀਂ ਬ�
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "JPEG ਫਾਇਲ ਨੂੰ ਲੋਡ ਕਰਨ ਲਈ ਮੈਮੋਰੀ ਜਾਰੀ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ"
 
-#: ../src/eom-error-message-area.c:116
+#: ../src/eom-error-message-area.c:108
 msgid "_Retry"
-msgstr "ਮੁੜ-ਟਰਾਈ(_R)"
+msgstr "ਮੁੜ-ਕੋਸ਼ਿਸ਼(_R)"
 
-#: ../src/eom-error-message-area.c:159
+#: ../src/eom-error-message-area.c:151
 #, c-format
 msgid "Could not load image '%s'."
 msgstr "'%s' ਚਿੱਤਰ ਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।"
 
-#: ../src/eom-error-message-area.c:201
+#: ../src/eom-error-message-area.c:193
 #, c-format
 msgid "No images found in '%s'."
 msgstr "'%s' ਵਿੱਚ ਕੋਈ ਚਿੱਤਰ ਨਹੀਂ ਲੱਭਿਆ।"
 
-#: ../src/eom-error-message-area.c:208
+#: ../src/eom-error-message-area.c:200
 msgid "The given locations contain no images."
 msgstr "ਦਿੱਤੇ ਟਿਕਾਣੇ ਉੱਤੇ ਕੋਈ ਚਿੱਤਰ ਨਹੀਂ ਹੈ।"
 
@@ -771,91 +810,91 @@ msgstr "%a, %d %B %Y"
 msgid "Image Settings"
 msgstr "ਚਿੱਤਰ ਸੈਟਿੰਗ"
 
-#: ../src/eom-print-image-setup.c:832
+#: ../src/eom-print-image-setup.c:828
 msgid "Image"
 msgstr "ਚਿੱਤਰ"
 
-#: ../src/eom-print-image-setup.c:833
+#: ../src/eom-print-image-setup.c:829
 msgid "The image whose printing properties will be set up"
 msgstr "ਚਿੱਤਰ, ਜਿਸ ਦੀਆਂ ਪਰਿੰਟਿੰਗ ਵਿਸ਼ੇਸ਼ਤਾ ਨੂੰ ਸੈੱਟਅੱਪ ਕੀਤਾ ਜਾਵੇਗਾ"
 
-#: ../src/eom-print-image-setup.c:839
+#: ../src/eom-print-image-setup.c:835
 msgid "Page Setup"
 msgstr "ਸਫ਼ਾ ਸੈੱਟਅੱਪ"
 
-#: ../src/eom-print-image-setup.c:840
+#: ../src/eom-print-image-setup.c:836
 msgid "The information for the page where the image will be printed"
 msgstr "ਸਫ਼ੇ ਬਾਰੇ ਜਾਣਕਾਰੀ, ਜਿੱਥੇ ਕਿ ਚਿੱਤਰ ਪਰਿੰਟ ਕੀਤਾ ਜਾਵੇਗਾ।"
 
-#: ../src/eom-print-image-setup.c:868
+#: ../src/eom-print-image-setup.c:864
 msgid "Position"
 msgstr "ਸਥਿਤੀ"
 
-#: ../src/eom-print-image-setup.c:872
+#: ../src/eom-print-image-setup.c:868
 msgid "_Left:"
 msgstr "ਖੱਬੇ(_L):"
 
-#: ../src/eom-print-image-setup.c:874
+#: ../src/eom-print-image-setup.c:870
 msgid "_Right:"
 msgstr "ਸੱਜੇ(_R):"
 
-#: ../src/eom-print-image-setup.c:875
+#: ../src/eom-print-image-setup.c:871
 msgid "_Top:"
 msgstr "ਉੱਤੇ(_T):"
 
-#: ../src/eom-print-image-setup.c:876
+#: ../src/eom-print-image-setup.c:872
 msgid "_Bottom:"
 msgstr "ਹੇਠਾਂ(_B):"
 
-#: ../src/eom-print-image-setup.c:879
+#: ../src/eom-print-image-setup.c:875
 msgid "C_enter:"
 msgstr "ਸੈਂਟਰ(_e):"
 
-#: ../src/eom-print-image-setup.c:888
+#: ../src/eom-print-image-setup.c:880
 msgid "None"
 msgstr "ਕੋਈ ਨਹੀਂ"
 
-#: ../src/eom-print-image-setup.c:890
+#: ../src/eom-print-image-setup.c:882
 msgid "Horizontal"
 msgstr "ਹਰੀਜੱਟਲ"
 
-#: ../src/eom-print-image-setup.c:892
+#: ../src/eom-print-image-setup.c:884
 msgid "Vertical"
 msgstr "ਵਰਟੀਕਲ"
 
-#: ../src/eom-print-image-setup.c:894
+#: ../src/eom-print-image-setup.c:886
 msgid "Both"
 msgstr "ਦੋਵੇਂ"
 
-#: ../src/eom-print-image-setup.c:910
+#: ../src/eom-print-image-setup.c:902
 msgid "Size"
-msgstr "ਸਾਈਜ਼"
+msgstr "ਅਕਾਰ"
 
-#: ../src/eom-print-image-setup.c:913
+#: ../src/eom-print-image-setup.c:905
 msgid "_Width:"
 msgstr "ਚੌੜਾਈ(_W):"
 
-#: ../src/eom-print-image-setup.c:915
+#: ../src/eom-print-image-setup.c:907
 msgid "_Height:"
 msgstr "ਉਚਾਈ(_H):"
 
-#: ../src/eom-print-image-setup.c:918
+#: ../src/eom-print-image-setup.c:910
 msgid "_Scaling:"
 msgstr "ਸਕੇਲਿੰਗ(_S):"
 
-#: ../src/eom-print-image-setup.c:929
+#: ../src/eom-print-image-setup.c:921
 msgid "_Unit:"
 msgstr "ਯੂਨਿਟ(_U):"
 
-#: ../src/eom-print-image-setup.c:938
+#: ../src/eom-print-image-setup.c:926
 msgid "Millimeters"
 msgstr "ਮਿਲੀਮੀਟਰ"
 
-#: ../src/eom-print-image-setup.c:940
+#: ../src/eom-print-image-setup.c:928
 msgid "Inches"
 msgstr "ਇੰਚ"
 
-#: ../src/eom-print-image-setup.c:968
+#: ../src/eom-print-image-setup.c:956
 msgid "Preview"
 msgstr "ਝਲਕ"
 
@@ -897,7 +936,7 @@ msgstr "ਇੰਝ"
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/eom-thumb-view.c:550
+#: ../src/eom-thumb-view.c:547
 msgid "Taken on"
 msgstr "ਲਿਆ"
 
@@ -906,11 +945,11 @@ msgstr "ਲਿਆ"
 msgid "At least two file names are equal."
 msgstr "ਘੱਟੋ-ਘੱਟ ਦੋ ਫਾਇਲਾਂ ਦੇ ਨਾਂ ਇੱਕੋ ਹੀ ਹਨ।"
 
-#: ../src/eom-util.c:72
+#: ../src/eom-util.c:68
 msgid "Could not display help for Eye of MATE"
 msgstr "ਗਨੋਮ ਦੀ ਅੱਖ ਲਈ ਮੱਦਦ ਨਹੀ ਵੇਖਾਈ ਜਾ ਸਕਦੀ"
 
-#: ../src/eom-util.c:120
+#: ../src/eom-util.c:116
 msgid " (invalid Unicode)"
 msgstr " (ਗਲਤ ਯੂਨੀਕੋਡ)"
 
@@ -924,14 +963,14 @@ msgstr " (ਗਲਤ ਯੂਨੀਕੋਡ)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] "%i x %i ਪਿਕਸਲ  %s    %i%%"
-msgstr[1] "%i x %i ਪਿਕਸਲ  %s    %i%%"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/eom-window.c:807
 msgid "_Reload"
 msgstr "ਮੁੜ-ਲੋਡ(_R)"
 
-#: ../src/eom-window.c:809 ../src/eom-window.c:2699
+#: ../src/eom-window.c:809 ../src/eom-window.c:2675
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "ਓਹਲੇ(_d)"
@@ -943,9 +982,11 @@ msgstr "ਓਹਲੇ(_d)"
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
-msgstr "ਚਿੱਤਰ \"%s\" ਨੂੰ ਬਾਹਰੀ ਐਪਲੀਕੇਸ਼ਨ ਵਲੋਂ ਸੋਧਿਆ ਗਿਆ ਹੈ।\nਕੀ ਤੁਸੀਂ ਇਸ ਨੂੰ ਮੁੜ-ਲੋਡ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?"
+msgstr ""
+"ਚਿੱਤਰ \"%s\" ਨੂੰ ਬਾਹਰੀ ਐਪਲੀਕੇਸ਼ਨ ਵਲੋਂ ਸੋਧਿਆ ਗਿਆ ਹੈ।\n"
+"ਕੀ ਤੁਸੀਂ ਇਸ ਨੂੰ ਮੁੜ-ਲੋਡ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: ../src/eom-window.c:988
+#: ../src/eom-window.c:984
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "ਚੁਣੇ ਚਿੱਤਰ ਖੋਲ੍ਹਣ ਲਈ \"%s\" ਵਰਤੋਂ"
@@ -955,96 +996,114 @@ msgstr "ਚੁਣੇ ਚਿੱਤਰ ਖੋਲ੍ਹਣ ਲਈ \"%s\" ਵਰਤ�
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1144
+#: ../src/eom-window.c:1140
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "\"%s\" (%u/%u) ਚਿੱਤਰ ਸੰਭਾਲਿਆ ਜਾ ਰਿਹਾ ਹੈ।"
 
-#: ../src/eom-window.c:1513
+#: ../src/eom-window.c:1499
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "\"%s\" ਚਿੱਤਰ ਖੋਲ੍ਹਿਆ ਜਾ ਰਿਹਾ ਹੈ"
 
-#: ../src/eom-window.c:2197
+#: ../src/eom-window.c:2173
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
-msgstr "ਫਾਇਲ ਪਰਿੰਟਿੰਗ ਗਲਤੀ:\n%s"
+msgstr ""
+"ਫਾਇਲ ਪਰਿੰਟਿੰਗ ਗਲਤੀ:\n"
+"%s"
 
-#: ../src/eom-window.c:2460
+#: ../src/eom-window.c:2436
 msgid "Toolbar Editor"
 msgstr "ਟੂਲਬਾਰ ਐਡੀਟਰ"
 
-#: ../src/eom-window.c:2463
+#: ../src/eom-window.c:2439
 msgid "_Reset to Default"
 msgstr "ਡਿਫਾਲਟ ਲਈ ਰੀ-ਸੈੱਟ(_R)"
 
-#: ../src/eom-window.c:2554
+#: ../src/eom-window.c:2530
 msgid "translator-credits"
-msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਬਰਾੜ ਆਲਮਵਾਲਾ, ੨੦੦੪-੨੦੦੯\nਜਸਵਿੰਦਰ ਸਿੰਘ ਫੂਲੇਵਾਲਾ, ੨੦੦੪\nhttp://www.satluj.com/"
+msgstr ""
+"ਜਸਵਿੰਦਰ ਸਿੰਘ ਫੂਲੇਵਾਲਾ ੨੦੦੪\n"
+"ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮਵਾਲਾ ੨੦੦੪-੨੦੧੦\n"
+"ਪੰਜਾਬੀ ਓਪਨ ਸੋਰਸ ਟੀਮ (POST)\n"
+"http://www.satluj.com"
 
-#: ../src/eom-window.c:2557
+#: ../src/eom-window.c:2533
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version.\n"
-msgstr "ਇਹ ਪਰੋਗਰਾਮ ਮੁਫ਼ਤ ਸਾਫਟਵੇਅਰ ਹੈ, ਜੋ ਕਿ ਗਨੂ (ਜਰਨਲ ਪਬਲਿਕ ਲਾਈਸੈਂਸ, ਜੋ ਕਿ ਫਰੀ ਸਾਫਟਵੇਅਰ ਫਾਊਨਡੇਸ਼ਨ ਵਲੋਂ ਪਰਕਾਸ਼ਿਤ ਕੀਤਾ ਗਿਆ ਹੈ) ਦੇ ਵਰਜਨ ੨ ਜਾਂ ਕੋਈ ਵੀ ਨਵੇਂ (ਤੁਹਾਡੀ ਸਹੂਲਤ ਮੁਤਾਬਕ) ਰਾਹੀਂ ਵੰਡਿਆ ਜਾ ਸਕਦਾ ਹੈ।\n"
+msgstr ""
+"ਇਹ ਪਰੋਗਰਾਮ ਮੁਫ਼ਤ ਸਾਫਟਵੇਅਰ ਹੈ, ਜੋ ਕਿ ਗਨੂ (ਜਰਨਲ ਪਬਲਿਕ ਲਾਈਸੈਂਸ, ਜੋ ਕਿ ਫਰੀ "
+"ਸਾਫਟਵੇਅਰ ਫਾਊਨਡੇਸ਼ਨ ਵਲੋਂ ਪਰਕਾਸ਼ਿਤ ਕੀਤਾ ਗਿਆ ਹੈ) ਦੇ ਵਰਜਨ ੨ ਜਾਂ ਕੋਈ ਵੀ ਨਵੇਂ "
+"(ਤੁਹਾਡੀ ਸਹੂਲਤ ਮੁਤਾਬਕ) ਰਾਹੀਂ ਵੰਡਿਆ ਜਾ ਸਕਦਾ ਹੈ।\n"
 
-#: ../src/eom-window.c:2561
+#: ../src/eom-window.c:2537
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details.\n"
-msgstr "ਇਹ ਪ੍ਰੋਗਰਾਮ ਇਹ ਸੋਚ ਕਿ ਵੰਡਿਆ ਜਾ ਰਿਹਾ ਹੈ ਕਿ ਇਹ ਲਾਭਦਾਇਕ ਹੋਵੇਗਾ, ਪਰ ਕੋਈ ਵਾਰੰਟੀ ਨਹੀਂ ਦਿੱਤੀ ਜਾ ਰਹੀ ਹੈ, ਕਿਸੇ ਵੀ ਖਾਸ ਮਕਸਦ ਲਈ ਅਨੁਕੂਲ ਹੋਣ ਦੀ ਵੀ ਵਾਰੰਦੀ ਲਾਗੂ ਨਹੀਂ ਹੁੰਦੀ ਹੈ। ਹੋਰ ਵੇਰਵੇਲਈ ਗਨੂ (GNU) ਜਰਨਲ ਪਬਲਿਕ ਲਾਈਸੈਂਸ ਵੇਖ ਲਵੋ।\n"
+msgstr ""
+"ਇਹ ਪ੍ਰੋਗਰਾਮ ਇਹ ਸੋਚ ਕਿ ਵੰਡਿਆ ਜਾ ਰਿਹਾ ਹੈ ਕਿ ਇਹ ਲਾਭਦਾਇਕ ਹੋਵੇਗਾ, ਪਰ ਕੋਈ ਵਾਰੰਟੀ "
+"ਨਹੀਂ ਦਿੱਤੀ ਜਾ ਰਹੀ ਹੈ, ਕਿਸੇ ਵੀ ਖਾਸ ਮਕਸਦ ਲਈ ਅਨੁਕੂਲ ਹੋਣ ਦੀ ਵੀ ਵਾਰੰਦੀ ਲਾਗੂ ਨਹੀਂ "
+"ਹੁੰਦੀ ਹੈ। ਹੋਰ ਵੇਰਵੇਲਈ ਗਨੂ (GNU) ਜਰਨਲ ਪਬਲਿਕ ਲਾਈਸੈਂਸ ਵੇਖ ਲਵੋ।\n"
 
-#: ../src/eom-window.c:2565
+#: ../src/eom-window.c:2541
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 
-#: ../src/eom-window.c:2583
+#: ../src/eom-window.c:2559
 msgid "The MATE image viewer."
 msgstr "ਗਨੋਮ ਚਿੱਤਰ ਦਰਸ਼ਕ ਹੈ।"
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2697
+#: ../src/eom-window.c:2673
 msgid "_Open Background Preferences"
 msgstr "ਬੈਕਗਰਾਊਂਡ ਪਸੰਦ ਖੋਲ੍ਹੋ(_O)"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2713
+#: ../src/eom-window.c:2689
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
-msgstr "ਚਿੱਤਰ \"%s\" ਨੂੰ ਡੈਸਕਟਾਪ ਬੈਕਗਰਾਊਂਡ ਵਜੋਂ ਸੈੱਟ ਕੀਤਾ ਗਿਆ ਹੈ।\nਕੀ ਤੁਸੀਂ ਇਸ ਦੀ ਦਿੱਖ ਬਦਲਣੀ ਚਾਹੁੰਦੇ ਹੋ?"
+msgstr ""
+"ਚਿੱਤਰ \"%s\" ਨੂੰ ਡੈਸਕਟਾਪ ਬੈਕਗਰਾਊਂਡ ਵਜੋਂ ਸੈੱਟ ਕੀਤਾ ਗਿਆ ਹੈ।\n"
+"ਕੀ ਤੁਸੀਂ ਇਸ ਦੀ ਦਿੱਖ ਬਦਲਣੀ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: ../src/eom-window.c:3111
+#: ../src/eom-window.c:3083
 msgid "Saving image locally…"
 msgstr "ਚਿੱਤਰ ਲੋਕਲ ਸੰਭਾਲਿਆ ਜਾ ਰਿਹਾ ਹੈ…"
 
-#: ../src/eom-window.c:3191
+#: ../src/eom-window.c:3163
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
-msgstr "ਕੀ ਤੁਸੀਂ \"%s\" ਨੂੰ\nਰੱਦੀ 'ਚ ਭੇਜਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+msgstr ""
+"ਕੀ ਤੁਸੀਂ \"%s\" ਨੂੰ\n"
+"ਰੱਦੀ 'ਚ ਭੇਜਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: ../src/eom-window.c:3194
+#: ../src/eom-window.c:3166
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
-msgstr "\"%s\" ਲਈ ਰੱਦੀ ਨਹੀਂ ਲੱਭੀ ਹੈ। ਕੀ ਤੁਸੀਂ ਇਹ ਚਿੱਤਰ ਨੂੰ ਪੱਕੇ ਤੌਰ ਉੱਤੇ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+msgstr ""
+"\"%s\" ਲਈ ਰੱਦੀ ਨਹੀਂ ਲੱਭੀ ਹੈ। ਕੀ ਤੁਸੀਂ ਇਹ ਚਿੱਤਰ ਨੂੰ ਪੱਕੇ ਤੌਰ ਉੱਤੇ ਹਟਾਉਣਾ "
+"ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: ../src/eom-window.c:3199
+#: ../src/eom-window.c:3171
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1052,415 +1111,417 @@ msgid ""
 msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
-msgstr[0] "ਕੀ ਤੁਸੀਂ ਚੁਣੇ ਚਿੱਤਰ ਨੂੰ ਰੱਦੀ ਵਿੱਚ\nਭੇਜਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
-msgstr[1] "ਕੀ ਤੁਸੀਂ %d ਚੁਣੇ ਚਿੱਤਰਾਂ\nਨੂੰ ਰੱਦੀ ਵਿੱਚ ਭੇਜਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+msgstr[0] ""
+msgstr[1] ""
 
-#: ../src/eom-window.c:3204
+#: ../src/eom-window.c:3176
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
-msgstr "ਚੁਣੇ ਚਿੱਤਰਾਂ ਵਿੱਚੋਂ ਕੁਝ ਨੂੰ ਰੱਦੀ ਵਿੱਚ ਭੇਜਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ ਅਤੇ ਪੱਕੇ ਤੌਰ ਉੱਤੇ ਹਟਾਇਆ ਜਾਵੇਗਾ। ਕੀ ਤੁਸੀਂ ਜਾਰੀ ਰੱਖਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+msgstr ""
+"ਚੁਣੇ ਚਿੱਤਰਾਂ ਵਿੱਚੋਂ ਕੁਝ ਨੂੰ ਰੱਦੀ ਵਿੱਚ ਭੇਜਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ ਅਤੇ ਪੱਕੇ ਤੌਰ ਉੱਤੇ "
+"ਹਟਾਇਆ ਜਾਵੇਗਾ। ਕੀ ਤੁਸੀਂ ਜਾਰੀ ਰੱਖਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: ../src/eom-window.c:3221 ../src/eom-window.c:3705 ../src/eom-window.c:3732
+#: ../src/eom-window.c:3193 ../src/eom-window.c:3677 ../src/eom-window.c:3704
 msgid "Move to _Trash"
 msgstr "ਰੱਦੀ 'ਚ ਭੇਜੋ(_T)"
 
-#: ../src/eom-window.c:3223
+#: ../src/eom-window.c:3195
 msgid "_Do not ask again during this session"
 msgstr "ਇਸ ਸ਼ੈਸ਼ਨ ਦੌਰਾਨ ਮੁੜ ਨਾ ਪੁੱਛੋ(_D)"
 
-#: ../src/eom-window.c:3268 ../src/eom-window.c:3282
+#: ../src/eom-window.c:3240 ../src/eom-window.c:3254
 #, c-format
 msgid "Couldn't access trash."
 msgstr "ਰੱਦੀ ਨੂੰ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ।"
 
-#: ../src/eom-window.c:3290
+#: ../src/eom-window.c:3262
 #, c-format
 msgid "Couldn't delete file"
 msgstr "ਫਾਇਲ ਹਟਾਈ ਨਹੀਂ ਜਾ ਸਕੀ"
 
-#: ../src/eom-window.c:3387
+#: ../src/eom-window.c:3359
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "ਚਿੱਤਰ %s ਨੂੰ ਹਟਾਉਣ ਵਿੱਚ ਗਲਤੀ"
 
-#: ../src/eom-window.c:3629
+#: ../src/eom-window.c:3601
 msgid "_Image"
 msgstr "ਚਿੱਤਰ(_I)"
 
-#: ../src/eom-window.c:3630
+#: ../src/eom-window.c:3602
 msgid "_Edit"
 msgstr "ਸੋਧ(_E)"
 
-#: ../src/eom-window.c:3631
+#: ../src/eom-window.c:3603
 msgid "_View"
 msgstr "ਵੇਖੋ(_V)"
 
-#: ../src/eom-window.c:3632
+#: ../src/eom-window.c:3604
 msgid "_Go"
 msgstr "ਜਾਓ(_G)"
 
-#: ../src/eom-window.c:3633
+#: ../src/eom-window.c:3605
 msgid "_Tools"
 msgstr "ਟੂਲ(_T)"
 
-#: ../src/eom-window.c:3634
+#: ../src/eom-window.c:3606
 msgid "_Help"
 msgstr "ਮੱਦਦ(_H)"
 
-#: ../src/eom-window.c:3636
+#: ../src/eom-window.c:3608
 msgid "_Open…"
 msgstr "ਖੋਲ੍ਹੋ(_O)…"
 
-#: ../src/eom-window.c:3637
+#: ../src/eom-window.c:3609
 msgid "Open a file"
 msgstr "ਇੱਕ ਫਾਇਲ ਖੋਲ੍ਹੋ"
 
-#: ../src/eom-window.c:3639
+#: ../src/eom-window.c:3611
 msgid "_Close"
 msgstr "ਬੰਦ ਕਰੋ(_C)"
 
-#: ../src/eom-window.c:3640
+#: ../src/eom-window.c:3612
 msgid "Close window"
 msgstr "ਵਿੰਡੋ ਬੰਦ ਕਰੋ"
 
-#: ../src/eom-window.c:3642
+#: ../src/eom-window.c:3614
 msgid "T_oolbar"
 msgstr "ਟੂਲਬਾਰ(_o)"
 
-#: ../src/eom-window.c:3643
+#: ../src/eom-window.c:3615
 msgid "Edit the application toolbar"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਟੂਲਬਾਰ ਸੋਧ"
 
-#: ../src/eom-window.c:3645
+#: ../src/eom-window.c:3617
 msgid "Prefere_nces"
 msgstr "ਮੇਰੀ ਪਸੰਦ(_n)"
 
-#: ../src/eom-window.c:3646
+#: ../src/eom-window.c:3618
 msgid "Preferences for Eye of MATE"
 msgstr "ਗਨੋਮ ਅੱਖ ਲਈ ਮੇਰੀ ਪਸੰਦ"
 
-#: ../src/eom-window.c:3648
+#: ../src/eom-window.c:3620
 msgid "_Contents"
 msgstr "ਸਮੱਗਰੀ(_C)"
 
-#: ../src/eom-window.c:3649
+#: ../src/eom-window.c:3621
 msgid "Help on this application"
 msgstr "ਇਸ ਐਪਲੀਕੇਸ਼ਨ ਬਾਰੇ ਮੱਦਦ"
 
-#: ../src/eom-window.c:3651
+#: ../src/eom-window.c:3623
 msgid "_About"
 msgstr "ਇਸ ਬਾਰੇ(_A)"
 
-#: ../src/eom-window.c:3652
+#: ../src/eom-window.c:3624
 msgid "About this application"
 msgstr "ਇਸ ਐਪਲੀਕੇਸ਼ਨ ਬਾਰੇ"
 
-#: ../src/eom-window.c:3657
+#: ../src/eom-window.c:3629
 msgid "_Toolbar"
 msgstr "ਟੂਲਬਾਰ(_T)"
 
-#: ../src/eom-window.c:3658
+#: ../src/eom-window.c:3630
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "ਮੌਜੂਦਾ ਵਿੰਡੋ ਵਿੱਚ ਟੂਲਬਾਰ ਦੀ ਦਿੱਖ ਬਦਲੋ"
 
-#: ../src/eom-window.c:3660
+#: ../src/eom-window.c:3632
 msgid "_Statusbar"
 msgstr "ਹਾਲਤ-ਪੱਟੀ(_S)"
 
-#: ../src/eom-window.c:3661
+#: ../src/eom-window.c:3633
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "ਮੌਜੂਦਾ ਵਿੰਡੋ ਵਿੱਚ ਹਾਲਤ-ਪੱਟੀ ਦੀ ਦਿੱਖ ਬਦਲੋ"
 
-#: ../src/eom-window.c:3663
+#: ../src/eom-window.c:3635
 msgid "_Image Collection"
 msgstr "ਚਿੱਤਰ ਭੰਡਾਰ(_I)"
 
-#: ../src/eom-window.c:3664
+#: ../src/eom-window.c:3636
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "ਮੌਜੂਦਾ ਵਿੰਡੋ ਵਿੱਚ ਚਿੱਤਰ ਭੰਡਾਰ ਬਾਹੀ ਦੀ ਦਿੱਖ ਬਦਲੋ"
 
-#: ../src/eom-window.c:3666
+#: ../src/eom-window.c:3638
 msgid "Side _Pane"
-msgstr "ਸਾਈਡ ਪੈਨ(_P)"
+msgstr "ਬਾਹੀ(_P)"
 
-#: ../src/eom-window.c:3667
+#: ../src/eom-window.c:3639
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "ਮੌਜੂਦਾ ਵਿੰਡੋ ਵਿੱਚ ਸਾਈਡ-ਪੈਨ ਦੀ ਦਿੱਖ ਬਦਲੋ"
 
-#: ../src/eom-window.c:3672
+#: ../src/eom-window.c:3644
 msgid "_Save"
 msgstr "ਸੰਭਾਲੋ(_S)"
 
-#: ../src/eom-window.c:3673
+#: ../src/eom-window.c:3645
 msgid "Save changes in currently selected images"
 msgstr "ਮੌਜੂਦਾ ਚੁਣੇ ਚਿੱਤਰਾਂ ਵਿੱਚ ਬਦਲਾਅ ਸੰਭਾਲੋ"
 
-#: ../src/eom-window.c:3675
+#: ../src/eom-window.c:3647
 msgid "Open _with"
 msgstr "ਇਸ ਨਾਲ ਖੋਲ੍ਹੋ(_w)"
 
-#: ../src/eom-window.c:3676
+#: ../src/eom-window.c:3648
 msgid "Open the selected image with a different application"
 msgstr "ਚੁਣੇ ਚਿੱਤਰ ਨੂੰ ਵੱਖਰੀ ਐਪਲੀਕੇਸ਼ਨ ਨਾਲ ਖੋਲ੍ਹੋ"
 
-#: ../src/eom-window.c:3678
+#: ../src/eom-window.c:3650
 msgid "Save _As…"
 msgstr "ਇੰਝ ਸੰਭਾਲੋ(_A)…"
 
-#: ../src/eom-window.c:3679
+#: ../src/eom-window.c:3651
 msgid "Save the selected images with a different name"
 msgstr "ਚੁਣੇ ਚਿੱਤਰਾਂ ਨੂੰ ਵੱਖਰੇ ਨਾਂ ਨਾਲ ਸੰਭਾਲੋ"
 
-#: ../src/eom-window.c:3681
+#: ../src/eom-window.c:3653
 msgid "_Print…"
 msgstr "ਪਰਿੰਟ ਕਰੋ(_P)…"
 
-#: ../src/eom-window.c:3682
+#: ../src/eom-window.c:3654
 msgid "Print the selected image"
 msgstr "ਚੁਣਿਆ ਚਿੱਤਰ ਪਰਿੰਟ ਕਰੋ"
 
-#: ../src/eom-window.c:3684
+#: ../src/eom-window.c:3656
 msgid "Prope_rties"
 msgstr "ਵਿਸ਼ੇਸ਼ਤਾ(_r)"
 
-#: ../src/eom-window.c:3685
+#: ../src/eom-window.c:3657
 msgid "Show the properties and metadata of the selected image"
 msgstr "ਚੁਣੇ ਚਿੱਤਰ ਲਈ ਵਿਸ਼ੇਸ਼ਤਾ ਅਤੇ ਮੇਟਾਡਾਟਾ ਵੇਖੋ"
 
-#: ../src/eom-window.c:3687
+#: ../src/eom-window.c:3659
 msgid "_Undo"
-msgstr "ਵਾਪਸ(_U)"
+msgstr "ਵਾਪਿਸ(_U)"
 
-#: ../src/eom-window.c:3688
+#: ../src/eom-window.c:3660
 msgid "Undo the last change in the image"
 msgstr "ਚਿੱਤਰ ਆਖਰੀ ਬਦਲਾਅ ਵਾਪਸ ਲਵੋ"
 
-#: ../src/eom-window.c:3690
+#: ../src/eom-window.c:3662
 msgid "Flip _Horizontal"
 msgstr "ਖਿਤਿਜੀ ਝਟਕੋ(_H)"
 
-#: ../src/eom-window.c:3691
+#: ../src/eom-window.c:3663
 msgid "Mirror the image horizontally"
 msgstr "ਚਿੱਤਰ ਹਰੀਜ਼ਟਲ ਮਿੱਰਰ ਕਰੋ"
 
-#: ../src/eom-window.c:3693
+#: ../src/eom-window.c:3665
 msgid "Flip _Vertical"
 msgstr "ਲੰਬਕਾਰੀ ਝਟਕੋ(_V)"
 
-#: ../src/eom-window.c:3694
+#: ../src/eom-window.c:3666
 msgid "Mirror the image vertically"
 msgstr "ਚਿੱਤਰ ਵਰਟੀਕਲ ਮਿੱਰਰ ਕਰੋ"
 
-#: ../src/eom-window.c:3696
+#: ../src/eom-window.c:3668
 msgid "_Rotate Clockwise"
 msgstr "ਸੱਜੇ ਦਾਅ ਘੁੰਮਾਓ(_R)"
 
-#: ../src/eom-window.c:3697
+#: ../src/eom-window.c:3669
 msgid "Rotate the image 90 degrees to the right"
 msgstr "ਚਿੱਤਰ ੯੦ ਡਿਗਰੀ ਸੱਜੇ ਪਾਸੇ ਘੁੰਮਾਓ"
 
-#: ../src/eom-window.c:3699
+#: ../src/eom-window.c:3671
 msgid "Rotate Counterc_lockwise"
 msgstr "ਖੱਬੇ ਦਾਅ ਘੁੰਮਾਓ(_l)"
 
-#: ../src/eom-window.c:3700
+#: ../src/eom-window.c:3672
 msgid "Rotate the image 90 degrees to the left"
 msgstr "ਚਿੱਤਰ ੯੦ ਡਿਗਰੀ ਖੱਬੇ ਘੁੰਮਾਓ"
 
-#: ../src/eom-window.c:3702
+#: ../src/eom-window.c:3674
 msgid "Set as _Desktop Background"
 msgstr "ਡੈਸਕਟਾਪ ਬੈਕਗਰਾਊਂਡ ਬਣਾਓ(_D)"
 
-#: ../src/eom-window.c:3703
+#: ../src/eom-window.c:3675
 msgid "Set the selected image as the desktop background"
 msgstr "ਚੁਣਿਆ ਚਿੱਤਰ ਡੈਸਕਟਾਪ ਬੈਕਗਰਾਊਂਡ ਵਾਂਗ ਸੈੱਟ ਕਰੋ"
 
-#: ../src/eom-window.c:3706
+#: ../src/eom-window.c:3678
 msgid "Move the selected image to the trash folder"
 msgstr "ਚੁਣਿਆ ਚਿੱਤਰ ਰੱਦੀ ਫੋਲਡਰ ਵਿੱਚ ਭੇਜੋ"
 
-#: ../src/eom-window.c:3708
+#: ../src/eom-window.c:3680
 msgid "_Copy"
-msgstr ""
+msgstr "ਕਾਪੀ ਕਰੋ(_C)"
 
-#: ../src/eom-window.c:3709
+#: ../src/eom-window.c:3681
 msgid "Copy the selected image to the clipboard"
 msgstr ""
 
-#: ../src/eom-window.c:3711 ../src/eom-window.c:3723 ../src/eom-window.c:3726
+#: ../src/eom-window.c:3683 ../src/eom-window.c:3695 ../src/eom-window.c:3698
 msgid "_Zoom In"
 msgstr "ਜ਼ੂਮ ਇਨ(_Z)"
 
-#: ../src/eom-window.c:3712 ../src/eom-window.c:3724
+#: ../src/eom-window.c:3684 ../src/eom-window.c:3696
 msgid "Enlarge the image"
 msgstr "ਚਿੱਤਰ ਵੱਡਾ ਕਰੋ"
 
-#: ../src/eom-window.c:3714 ../src/eom-window.c:3729
+#: ../src/eom-window.c:3686 ../src/eom-window.c:3701
 msgid "Zoom _Out"
 msgstr "ਜ਼ੂਮ ਆਉਟ(_O)"
 
-#: ../src/eom-window.c:3715 ../src/eom-window.c:3727 ../src/eom-window.c:3730
+#: ../src/eom-window.c:3687 ../src/eom-window.c:3699 ../src/eom-window.c:3702
 msgid "Shrink the image"
 msgstr "ਚਿੱਤਰ ਸੁੰਘੜੋ"
 
-#: ../src/eom-window.c:3717
+#: ../src/eom-window.c:3689
 msgid "_Normal Size"
 msgstr "ਸਧਾਰਨ ਅਕਾਰ(_N)"
 
-#: ../src/eom-window.c:3718
+#: ../src/eom-window.c:3690
 msgid "Show the image at its normal size"
 msgstr "ਚਿੱਤਰ ਇਸ ਦੇ ਨਾਰਮਲ ਸਾਈਜ਼ ਉੱਤੇ ਵੇਖੋ"
 
-#: ../src/eom-window.c:3720
+#: ../src/eom-window.c:3692
 msgid "_Best Fit"
-msgstr ""
+msgstr "ਵਧੀਆ ਫਿੱਟ(_B)"
 
-#: ../src/eom-window.c:3721
+#: ../src/eom-window.c:3693
 msgid "Fit the image to the window"
 msgstr "ਚਿੱਤਰ ਵਿੰਡੋ ਵਿੱਚ ਫਿੱਟ ਕਰੋ"
 
-#: ../src/eom-window.c:3738
+#: ../src/eom-window.c:3710
 msgid "_Fullscreen"
 msgstr "ਪੂਰੀ ਸਕਰੀਨ(_F)"
 
-#: ../src/eom-window.c:3739
+#: ../src/eom-window.c:3711
 msgid "Show the current image in fullscreen mode"
 msgstr "ਮੌਜੂਦਾ ਚਿੱਤਰ ਪੂਰੀ ਸਕਰੀਨ ਮੋਡ ਵਿੱਚ ਵੇਖੋ"
 
-#: ../src/eom-window.c:3741
+#: ../src/eom-window.c:3713
 msgid "Pause Slideshow"
 msgstr "ਸਲਾਇਡ ਸ਼ੋ ਰੋਕੋ"
 
-#: ../src/eom-window.c:3742
+#: ../src/eom-window.c:3714
 msgid "Pause or resume the slideshow"
 msgstr "ਸਲਾਈਡ-ਸ਼ੋ ਚਲਾਓ ਜਾਂ ਰੋਕੋ"
 
-#: ../src/eom-window.c:3747 ../src/eom-window.c:3762
+#: ../src/eom-window.c:3719 ../src/eom-window.c:3734
 msgid "_Previous Image"
 msgstr "ਚਿੱਤਰ ਪਿੱਛੇ(_P)"
 
-#: ../src/eom-window.c:3748
+#: ../src/eom-window.c:3720
 msgid "Go to the previous image of the collection"
 msgstr " ਭੰਡਾਰ ਵਿੱਚ ਪਿਛਲੇ ਚਿੱਤਰ ਉੱਤੇ ਜਾਓ"
 
-#: ../src/eom-window.c:3750
+#: ../src/eom-window.c:3722
 msgid "_Next Image"
 msgstr "ਚਿੱਤਰ ਅੱਗੇ(_N)"
 
-#: ../src/eom-window.c:3751
+#: ../src/eom-window.c:3723
 msgid "Go to the next image of the collection"
 msgstr "ਭੰਡਾਰ ਵਿੱਚ ਅਗਲੇ ਚਿੱਤਰ ਉੱਤੇ ਜਾਓ"
 
-#: ../src/eom-window.c:3753 ../src/eom-window.c:3765
+#: ../src/eom-window.c:3725 ../src/eom-window.c:3737
 msgid "_First Image"
 msgstr "ਪਹਿਲਾਂ ਚਿੱਤਰ(_F)"
 
-#: ../src/eom-window.c:3754
+#: ../src/eom-window.c:3726
 msgid "Go to the first image of the collection"
 msgstr "ਭੰਡਾਰ ਵਿੱਚ ਪਹਿਲੇ ਚਿੱਤਰ ਉੱਤੇ ਜਾਓ"
 
-#: ../src/eom-window.c:3756 ../src/eom-window.c:3768
+#: ../src/eom-window.c:3728 ../src/eom-window.c:3740
 msgid "_Last Image"
 msgstr "ਆਖਰੀ ਚਿੱਤਰ(_L)"
 
-#: ../src/eom-window.c:3757
+#: ../src/eom-window.c:3729
 msgid "Go to the last image of the collection"
 msgstr "ਭੰਡਾਰ ਵਿੱਚ ਆਖਰੀ ਚਿੱਤਰ ਉੱਤੇ ਜਾਓ"
 
-#: ../src/eom-window.c:3759
+#: ../src/eom-window.c:3731
 msgid "_Random Image"
 msgstr "ਰਲਵਾਂ ਚਿੱਤਰ(_R)"
 
-#: ../src/eom-window.c:3760
+#: ../src/eom-window.c:3732
 msgid "Go to a random image of the collection"
 msgstr "ਭੰਡਾਰ ਵਿੱਚ ਰਲਵੇਂ ਚਿੱਤਰ ਉੱਤੇ ਜਾਓ"
 
-#: ../src/eom-window.c:3774
+#: ../src/eom-window.c:3746
 msgid "S_lideshow"
 msgstr ""
 
-#: ../src/eom-window.c:3775
+#: ../src/eom-window.c:3747
 msgid "Start a slideshow view of the images"
 msgstr "ਚਿੱਤਰਾਂ ਲਈ ਇੱਕ ਸਲਾਇਡ-ਸ਼ੋ ਸਟਾਰਟ ਕਰੋ"
 
-#: ../src/eom-window.c:3841
+#: ../src/eom-window.c:3813
 msgid "Previous"
 msgstr "ਪਿੱਛੇ"
 
-#: ../src/eom-window.c:3845
+#: ../src/eom-window.c:3817
 msgid "Next"
 msgstr "ਅੱਗੇ"
 
-#: ../src/eom-window.c:3849
+#: ../src/eom-window.c:3821
 msgid "Right"
-msgstr "ਸੱਜੇ"
+msgstr "ਸੱਜਾ"
 
-#: ../src/eom-window.c:3852
+#: ../src/eom-window.c:3824
 msgid "Left"
-msgstr "ਖੱਬੇ"
+msgstr "ਖੱਬਾ"
 
-#: ../src/eom-window.c:3855
+#: ../src/eom-window.c:3827
 msgid "In"
 msgstr "ਅੰਦਰ"
 
-#: ../src/eom-window.c:3858
+#: ../src/eom-window.c:3830
 msgid "Out"
 msgstr "ਬਾਹਰ"
 
-#: ../src/eom-window.c:3861
+#: ../src/eom-window.c:3833
 msgid "Normal"
-msgstr "ਸਧਾਰਨ"
+msgstr "ਆਮ"
 
-#: ../src/eom-window.c:3864
+#: ../src/eom-window.c:3836
 msgid "Fit"
 msgstr "ਫਿੱਟ"
 
-#: ../src/eom-window.c:3867
+#: ../src/eom-window.c:3839
 msgid "Collection"
 msgstr "ਭੰਡਾਰ"
 
-#: ../src/eom-window.c:3870
+#: ../src/eom-window.c:3842
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "ਰੱਦੀ"
 
-#: ../src/eom-window.c:4219
+#: ../src/eom-window.c:4191
 #, c-format
 msgid "Edit the current image using %s"
 msgstr ""
 
-#: ../src/eom-window.c:4221
+#: ../src/eom-window.c:4193
 msgid "Edit Image"
 msgstr ""
 
-#: ../src/main.c:81
+#: ../src/main.c:77
 msgid "Open in fullscreen mode"
 msgstr "ਪੂਰੀ-ਸਕਰੀਨ ਮੋਡ 'ਚ ਖੋਲ੍ਹੋ"
 
-#: ../src/main.c:82
+#: ../src/main.c:78
 msgid "Disable image collection"
 msgstr "ਚਿੱਤਰ ਭੰਡਾਰ ਆਯੋਗ ਕਰੋ"
 
-#: ../src/main.c:83
+#: ../src/main.c:79
 msgid "Open in slideshow mode"
 msgstr "ਸਲਾਇਡ ਸ਼ੋ ਮੋਡ 'ਚ ਖੋਲ੍ਹੋ"
 
-#: ../src/main.c:85
+#: ../src/main.c:81
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "ਮੌਜੂਦਾ ਦੀ ਵਰਤੋਂ ਕਰਨ ਦੀ ਬਜਾਏ ਨਵਾਂ ਸ਼ੁਰੂ ਕਰੋ"
 
-#: ../src/main.c:88
+#: ../src/main.c:84
 msgid "Show the application's version"
-msgstr "ਐਪਲੀਕੇਸ਼ਨ ਦਾ ਵਰਜਨ ਵੇਖੋ"
+msgstr "ਕਾਰਜ ਦਾ ਵਰਜਨ ਵੇਖੋ"
 
-#: ../src/main.c:89
+#: ../src/main.c:85
 msgid "[FILE…]"
-msgstr "[FILE…]"
+msgstr "[ਫਾਇਲ…]"
 
 #. I18N: The '%s' is replaced with eom's command name.
-#: ../src/main.c:216
+#: ../src/main.c:212
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "ਪੂਰੀਆਂ ਉਪਲੱਬਧ ਕਮਾਂਡ ਲਾਈਨ ਚੋਣਾਂ ਵੇਖਣ ਵਾਸਤੇ '%s --help' ਚਲਾਓ।"
