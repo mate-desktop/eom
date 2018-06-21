@@ -1,18 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Lasse Liehu <larso@gmx.com>, 2015
-# nomen omen <vapoursoft@gmail.com>, 2017
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 09:48+0100\n"
-"PO-Revision-Date: 2017-09-19 11:03+0000\n"
-"Last-Translator: nomen omen <vapoursoft@gmail.com>\n"
-"Language-Team: Finnish (http://www.transifex.com/mate/MATE/language/fi/)\n"
+"POT-Creation-Date: 2018-03-14 08:51+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Ammuu5, 2018\n"
+"Language-Team: Finnish (https://www.transifex.com/mate/teams/13566/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -49,17 +48,17 @@ msgstr "Poista valittu kohta työkalupalkista"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1394
 msgid "_Delete Toolbar"
-msgstr "P_oista työkalupalkki"
+msgstr "_Poista työkalupalkki"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1395
 msgid "Remove the selected toolbar"
 msgstr "Poista valittu työkalupalkki"
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:487
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:485
 msgid "Separator"
 msgstr "Erotin"
 
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2578
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2555
 msgid "Eye of MATE"
 msgstr "MATEn silmä"
 
@@ -72,9 +71,12 @@ msgid ""
 "<p> Eye of MATE is a simple viewer for browsing images on your computer. "
 "Once an image is loaded, you can zoom and rotate the image, and also view "
 "subsequent images in the directory the image was loaded from. </p>"
-msgstr "MATEn silmä on yksinkertainen kuvakatselin tietokoneesi kuvien selaukseen. Kun kuva on ladattu, voit lähentää ja kiertää kuvaa ja voit myös katsella seuraavia kuvia ladatun kuvan hakemistossa."
+msgstr ""
+"MATEn silmä on yksinkertainen kuvakatselin tietokoneesi kuvien selaukseen. "
+"Kun kuva on ladattu, voit lähentää ja kiertää kuvaa ja voit myös katsella "
+"seuraavia kuvia ladatun kuvan hakemistossa."
 
-#: ../data/eom.desktop.in.in.h:1 ../src/main.c:74 ../src/main.c:268
+#: ../data/eom.desktop.in.in.h:1 ../src/main.c:70 ../src/main.c:264
 msgid "Eye of MATE Image Viewer"
 msgstr "MATEn silmä -kuvakatselin"
 
@@ -92,7 +94,7 @@ msgstr "_Edellinen"
 
 #: ../data/eom-image-properties-dialog.ui.h:3
 msgid "_Next"
-msgstr "_Seuraava"
+msgstr "Seu_raava"
 
 #: ../data/eom-image-properties-dialog.ui.h:4
 msgid "Name:"
@@ -120,7 +122,7 @@ msgstr "Sijainti:"
 
 #: ../data/eom-image-properties-dialog.ui.h:10
 msgid "General"
-msgstr "Yleinen"
+msgstr "Yleiset"
 
 #: ../data/eom-image-properties-dialog.ui.h:11
 msgid "Aperture Value:"
@@ -168,11 +170,11 @@ msgstr "Tekijä:"
 
 #: ../data/eom-image-properties-dialog.ui.h:22
 msgid "Copyright:"
-msgstr "Tekijänoikeudet:"
+msgstr "Tekijänoikeus:"
 
 #: ../data/eom-image-properties-dialog.ui.h:23
 msgid "Details"
-msgstr "Yksityiskohdat"
+msgstr "Lisätiedot"
 
 #: ../data/eom-image-properties-dialog.ui.h:24
 msgid "Metadata"
@@ -218,7 +220,7 @@ msgstr "Vaihda välilyönnit alaviivoiksi"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:12
 msgid "Options"
-msgstr "Asetukset"
+msgstr "Valinnat"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:13
 msgid "Rename from:"
@@ -226,7 +228,7 @@ msgstr "Vanha nimi:"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:14
 msgid "To:"
-msgstr "Uusi nimi:"
+msgstr "Mihin:"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:15
 msgid "File Name Preview"
@@ -370,7 +372,10 @@ msgstr "Ekstrapoloi kuvaa"
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
-msgstr "Määrittää, ekstrapoloidaanko kuvaa lähennettäessä vai ei. Tämä johtaa parempaan kuvanlaatuun, mutta on jonkinverran hitaampi kuin ei-ekstrapoloidut kuvat."
+msgstr ""
+"Määrittää, ekstrapoloidaanko kuvaa lähennettäessä vai ei. Tämä johtaa "
+"parempaan kuvanlaatuun, mutta on jonkinverran hitaampi kuin ei-"
+"ekstrapoloidut kuvat."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:11
 msgid "Transparency indicator"
@@ -402,7 +407,12 @@ msgid ""
 "This value defines the zooming step used for each scroll event. For example,"
 " 0.05 results in a 5% zoom increment for each scroll event and 1.00 result "
 "in a 100% zoom increment."
-msgstr "Käytettävä kerroin käytettäessä hiiren rullaa lähentämiseen ja loitontamiseen. Tämä arvo määrittää käytettävän suurennusaskelen koon kullekin rullalta tulevalle tapahtumalle. Esimerkiksi arvo 0.05 aiheuttaa 5% suurennoksen jokaiselle rullan tapahtumalle ja arvo 1.00 100% suurennuksen muutoksen."
+msgstr ""
+"Käytettävä kerroin käytettäessä hiiren rullaa lähentämiseen ja "
+"loitontamiseen. Tämä arvo määrittää käytettävän suurennusaskelen koon "
+"kullekin rullalta tulevalle tapahtumalle. Esimerkiksi arvo 0.05 aiheuttaa 5%"
+" suurennoksen jokaiselle rullan tapahtumalle ja arvo 1.00 100% suurennuksen "
+"muutoksen."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:18
 msgid "Transparency color"
@@ -412,7 +422,9 @@ msgstr "Läpinäkyvä väri"
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
-msgstr "Jos läpinäkyvyysavaimen arvo on COLOR, tämä avain määrittää läpinäkyvyyden ilmaisemiseen käytetyn värin."
+msgstr ""
+"Jos läpinäkyvyysavaimen arvo on COLOR, tämä avain määrittää läpinäkyvyyden "
+"ilmaisemiseen käytetyn värin."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:20
 msgid "Randomize the image sequence"
@@ -439,7 +451,9 @@ msgstr "Salli yli 100 % lähennys aluksi"
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
-msgstr "Jos arvo asetetaan epätodeksi, pieniä kuvia ei soviteta aluksi ruudun kokoon."
+msgstr ""
+"Jos arvo asetetaan epätodeksi, pieniä kuvia ei soviteta aluksi ruudun "
+"kokoon."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:27
 msgid "Delay in seconds until showing the next image"
@@ -449,7 +463,10 @@ msgstr "Viive sekunneissa ennen kuin seuraava kuva näytetään"
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until"
 " the next one is shown automatically. Zero disables the automatic browsing."
-msgstr "Nollaa suurempi arvo määrittää ajan jonka kuva säilyy ruudulla ennen kuin seuraava näytetään automaattisesti. Nolla poistaa automaattisen etenemisen käytöstä."
+msgstr ""
+"Nollaa suurempi arvo määrittää ajan jonka kuva säilyy ruudulla ennen kuin "
+"seuraava näytetään automaattisesti. Nolla poistaa automaattisen etenemisen "
+"käytöstä."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:29
 msgid "Show/Hide the window toolbar."
@@ -522,7 +539,9 @@ msgstr ""
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images"
 " are loaded."
-msgstr "Määrittää, näyttääkö tiedostovalitsin käyttäjän kuvakansion kun kuvia ei ole ladattuna."
+msgstr ""
+"Määrittää, näyttääkö tiedostovalitsin käyttäjän kuvakansion kun kuvia ei ole"
+" ladattuna."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:44
 msgid ""
@@ -541,7 +560,9 @@ msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
 "plugin."
-msgstr "Luettelo käytössä olevista liitännäisistä. Tämä ei sisällä liitännäisten ”sijaintia”. Voit katsoa liitännäisten polun tiedostosta .eom-plugin."
+msgstr ""
+"Luettelo käytössä olevista liitännäisistä. Tämä ei sisällä liitännäisten "
+"”sijaintia”. Voit katsoa liitännäisten polun tiedostosta .eom-plugin."
 
 #: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
 msgid "Fullscreen with double-click"
@@ -575,7 +596,7 @@ msgstr "Suoritetaan kokoruututilassa"
 
 #: ../src/eom-close-confirmation-dialog.c:159
 msgid "Close _without Saving"
-msgstr "Sulje _ilman tallentamista"
+msgstr "Sulje _ilman tallennusta"
 
 #: ../src/eom-close-confirmation-dialog.c:192
 msgid "Question"
@@ -585,25 +606,25 @@ msgstr "Kysymys"
 msgid "If you don't save, your changes will be lost."
 msgstr "Ellet tallenna, muutoksesi häviävät."
 
-#: ../src/eom-close-confirmation-dialog.c:413
+#: ../src/eom-close-confirmation-dialog.c:409
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "Tallenna muutokset kuvaa ”%s” ennen sulkemista?"
 
-#: ../src/eom-close-confirmation-dialog.c:616
+#: ../src/eom-close-confirmation-dialog.c:604
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
-msgstr[0] "Tallentamattomia muutoksia on %d kuvassa. Tallennetaanko muutokset ennen sulkemista?"
-msgstr[1] "Tallentamattomia muutoksia on %d kuvassa. Tallennetaanko muutokset ennen sulkemista?"
+msgstr[0] ""
+msgstr[1] ""
 
-#: ../src/eom-close-confirmation-dialog.c:633
+#: ../src/eom-close-confirmation-dialog.c:621
 msgid "S_elect the images you want to save:"
 msgstr "_Valitse kuvat, jotka haluat tallentaa:"
 
 #. Secondary label
-#: ../src/eom-close-confirmation-dialog.c:656
+#: ../src/eom-close-confirmation-dialog.c:640
 msgid "If you don't save, all your changes will be lost."
 msgstr "Ellet tallenna, kaikki muutoksesi häviävät."
 
@@ -615,7 +636,9 @@ msgstr "Tiedostomuoto on tuntematon tai ei ole tuettu"
 msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
-msgstr "MATEn silmä ei voinut määrittää tiedostonimen perusteella tuettua ja kirjoitettavissa olevaa tiedostomuotoa."
+msgstr ""
+"MATEn silmä ei voinut määrittää tiedostonimen perusteella tuettua ja "
+"kirjoitettavissa olevaa tiedostomuotoa."
 
 #: ../src/eom-file-chooser.c:133
 msgid "Please try a different file extension like .png or .jpg."
@@ -638,15 +661,15 @@ msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
 #: ../src/eom-file-chooser.c:287 ../src/eom-properties-dialog.c:137
-#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:522
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:519
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] "pikseli"
-msgstr[1] "pikseliä"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/eom-file-chooser.c:457
 msgid "Open Image"
-msgstr ""
+msgstr "Avaa kuva"
 
 #: ../src/eom-file-chooser.c:465
 msgid "Save Image"
@@ -696,21 +719,21 @@ msgstr "Väliaikaistiedoston luominen tallentamista varten epäonnistui: %s"
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "JPEG:in lataamiseksi ei saatu jaettua riittävästi muistia"
 
-#: ../src/eom-error-message-area.c:116
+#: ../src/eom-error-message-area.c:108
 msgid "_Retry"
-msgstr "_Yritä uudestaan"
+msgstr "_Yritä uudelleen"
 
-#: ../src/eom-error-message-area.c:159
+#: ../src/eom-error-message-area.c:151
 #, c-format
 msgid "Could not load image '%s'."
 msgstr "Kuvaa ”%s” ei voitu ladata."
 
-#: ../src/eom-error-message-area.c:201
+#: ../src/eom-error-message-area.c:193
 #, c-format
 msgid "No images found in '%s'."
 msgstr "Lähteestä ”%s” ei löytynyt kuvia."
 
-#: ../src/eom-error-message-area.c:208
+#: ../src/eom-error-message-area.c:200
 msgid "The given locations contain no images."
 msgstr "Annetuissa paikoissa ei ole kuvia."
 
@@ -773,91 +796,91 @@ msgstr "%a %d. %Bta %Y"
 msgid "Image Settings"
 msgstr "Kuvan asetukset"
 
-#: ../src/eom-print-image-setup.c:832
+#: ../src/eom-print-image-setup.c:828
 msgid "Image"
 msgstr "Kuva"
 
-#: ../src/eom-print-image-setup.c:833
+#: ../src/eom-print-image-setup.c:829
 msgid "The image whose printing properties will be set up"
 msgstr "Kuva, jonka tulostusominaisuudet asetetaan"
 
-#: ../src/eom-print-image-setup.c:839
+#: ../src/eom-print-image-setup.c:835
 msgid "Page Setup"
 msgstr "Sivun asetukset"
 
-#: ../src/eom-print-image-setup.c:840
+#: ../src/eom-print-image-setup.c:836
 msgid "The information for the page where the image will be printed"
 msgstr "Tulostussivun asetukset"
 
-#: ../src/eom-print-image-setup.c:868
+#: ../src/eom-print-image-setup.c:864
 msgid "Position"
 msgstr "Sijainti"
 
-#: ../src/eom-print-image-setup.c:872
+#: ../src/eom-print-image-setup.c:868
 msgid "_Left:"
 msgstr "_Vasen:"
 
-#: ../src/eom-print-image-setup.c:874
+#: ../src/eom-print-image-setup.c:870
 msgid "_Right:"
 msgstr "_Oikea:"
 
-#: ../src/eom-print-image-setup.c:875
+#: ../src/eom-print-image-setup.c:871
 msgid "_Top:"
 msgstr "_Ylhäällä:"
 
-#: ../src/eom-print-image-setup.c:876
+#: ../src/eom-print-image-setup.c:872
 msgid "_Bottom:"
 msgstr "_Alhaalla:"
 
-#: ../src/eom-print-image-setup.c:879
+#: ../src/eom-print-image-setup.c:875
 msgid "C_enter:"
 msgstr "_Keskellä:"
 
-#: ../src/eom-print-image-setup.c:888
+#: ../src/eom-print-image-setup.c:880
 msgid "None"
 msgstr "Ei mitään"
 
-#: ../src/eom-print-image-setup.c:890
+#: ../src/eom-print-image-setup.c:882
 msgid "Horizontal"
 msgstr "Pystysuunnassa"
 
-#: ../src/eom-print-image-setup.c:892
+#: ../src/eom-print-image-setup.c:884
 msgid "Vertical"
 msgstr "Vaakasuunnassa"
 
-#: ../src/eom-print-image-setup.c:894
+#: ../src/eom-print-image-setup.c:886
 msgid "Both"
 msgstr "Molemmat"
 
-#: ../src/eom-print-image-setup.c:910
+#: ../src/eom-print-image-setup.c:902
 msgid "Size"
 msgstr "Koko"
 
-#: ../src/eom-print-image-setup.c:913
+#: ../src/eom-print-image-setup.c:905
 msgid "_Width:"
 msgstr "_Leveys:"
 
-#: ../src/eom-print-image-setup.c:915
+#: ../src/eom-print-image-setup.c:907
 msgid "_Height:"
 msgstr "_Korkeus:"
 
-#: ../src/eom-print-image-setup.c:918
+#: ../src/eom-print-image-setup.c:910
 msgid "_Scaling:"
 msgstr "_Skaalaus:"
 
-#: ../src/eom-print-image-setup.c:929
+#: ../src/eom-print-image-setup.c:921
 msgid "_Unit:"
 msgstr "_Yksikkö:"
 
-#: ../src/eom-print-image-setup.c:938
+#: ../src/eom-print-image-setup.c:926
 msgid "Millimeters"
 msgstr "millimetri"
 
-#: ../src/eom-print-image-setup.c:940
+#: ../src/eom-print-image-setup.c:928
 msgid "Inches"
 msgstr "tuuma"
 
-#: ../src/eom-print-image-setup.c:968
+#: ../src/eom-print-image-setup.c:956
 msgid "Preview"
 msgstr "Esikatselu"
 
@@ -899,7 +922,7 @@ msgstr "samassa muodossa"
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/eom-thumb-view.c:550
+#: ../src/eom-thumb-view.c:547
 msgid "Taken on"
 msgstr "Kuva otettu"
 
@@ -908,13 +931,13 @@ msgstr "Kuva otettu"
 msgid "At least two file names are equal."
 msgstr "Vähintään kaksi tiedostonimeä ovat samat."
 
-#: ../src/eom-util.c:72
+#: ../src/eom-util.c:68
 msgid "Could not display help for Eye of MATE"
 msgstr "MATEn silmän ohjetta ei voitu näyttää."
 
-#: ../src/eom-util.c:120
+#: ../src/eom-util.c:116
 msgid " (invalid Unicode)"
-msgstr " (virheelistä Unicodea)"
+msgstr " (virheellistä Unicodea)"
 
 #. Translators: This is the string displayed in the statusbar
 #. * The tokens are from left to right:
@@ -926,14 +949,14 @@ msgstr " (virheelistä Unicodea)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] "%i x %i pikseli  %s    %i %%"
-msgstr[1] "%i x %i pikseliä  %s    %i %%"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/eom-window.c:807
 msgid "_Reload"
-msgstr ""
+msgstr "_Lataa uudestaan"
 
-#: ../src/eom-window.c:809 ../src/eom-window.c:2699
+#: ../src/eom-window.c:809 ../src/eom-window.c:2676
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr ""
@@ -947,7 +970,7 @@ msgid ""
 "Would you like to reload it?"
 msgstr ""
 
-#: ../src/eom-window.c:988
+#: ../src/eom-window.c:984
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Avaa valittu kuva komennolla ”%s”"
@@ -957,96 +980,121 @@ msgstr "Avaa valittu kuva komennolla ”%s”"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1144
+#: ../src/eom-window.c:1140
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Tallennetaan kuvaa ”%s” (%u/%u)"
 
-#: ../src/eom-window.c:1513
+#: ../src/eom-window.c:1499
 #, c-format
 msgid "Opening image \"%s\""
-msgstr ""
+msgstr "Avataan kuva \"%s\""
 
-#: ../src/eom-window.c:2197
+#: ../src/eom-window.c:1855
+msgid "Leave Fullscreen"
+msgstr "Lopeta kokoruutu"
+
+#: ../src/eom-window.c:2174
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
-msgstr "Virhe tulostettaessa tiedostoa:\n%s"
+msgstr ""
+"Virhe tulostettaessa tiedostoa:\n"
+"%s"
 
-#: ../src/eom-window.c:2460
+#: ../src/eom-window.c:2437
 msgid "Toolbar Editor"
 msgstr "Työkalupalkin muokkain"
 
-#: ../src/eom-window.c:2463
+#: ../src/eom-window.c:2440
 msgid "_Reset to Default"
 msgstr "_Palauta oletus"
 
-#: ../src/eom-window.c:2554
+#: ../src/eom-window.c:2531
 msgid "translator-credits"
-msgstr "Ilkka Tuohela <hile@iki.fi>, 2004-2009\nJarkko Ranta <jjranta@cc.joensuu.fi>, 2003"
+msgstr ""
+"Tommi Vainikainen, 2005\n"
+"Ilkka Tuohela, 2005\n"
+"Sami Pesonen, 2004\n"
+"Jarkko Ranta, 2003-2004\n"
+"Johanna Makkonen, 2003"
 
-#: ../src/eom-window.c:2557
+#: ../src/eom-window.c:2534
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version.\n"
-msgstr "Tämä on vapaa ohjelma; voit levittää sitä edelleen ja/tai muokata sitä GNU:n GPL-lisenssin sallimilla tavoilla siten kuin Free Software Foundation on sen määritellyt; voit halutessasi käyttää lisenssin versiota 2 taikka mitä tahansa tämän jälkeen ilmestynyttä versiota.\n"
+msgstr ""
+"Tämä on vapaa ohjelma; voit levittää sitä edelleen ja/tai muokata sitä GNU:n"
+" GPL-lisenssin sallimilla tavoilla siten kuin Free Software Foundation on "
+"sen määritellyt; voit halutessasi käyttää lisenssin versiota 2 taikka mitä "
+"tahansa tämän jälkeen ilmestynyttä versiota.\n"
 
-#: ../src/eom-window.c:2561
+#: ../src/eom-window.c:2538
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details.\n"
-msgstr "Tätä ohjelmaa levitetään siinä toivossa, että siitä on hyötyä, mutta ILMAN MITÄÄN TAKUUTA; jopa ilman konkludenttista takuuta MYYNTIKELPOISUUDESTA TAI SOVELTUMISESTA TIETTYYN ERITYISEEN TARKOITUKSEEN. Yksityiskohtien osalta katso GNU:n GPL-lisenssiä.\n"
+msgstr ""
+"Tätä ohjelmaa levitetään siinä toivossa, että siitä on hyötyä, mutta ILMAN "
+"MITÄÄN TAKUUTA; jopa ilman konkludenttista takuuta MYYNTIKELPOISUUDESTA TAI "
+"SOVELTUMISESTA TIETTYYN ERITYISEEN TARKOITUKSEEN. Yksityiskohtien osalta "
+"katso GNU:n GPL-lisenssiä.\n"
 
-#: ../src/eom-window.c:2565
+#: ../src/eom-window.c:2542
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 
-#: ../src/eom-window.c:2583
+#: ../src/eom-window.c:2560
 msgid "The MATE image viewer."
 msgstr "MATEn kuvakatselin."
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2697
+#: ../src/eom-window.c:2674
 msgid "_Open Background Preferences"
 msgstr ""
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2713
+#: ../src/eom-window.c:2690
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
-msgstr "Kuva ”%s” on asetettu työpöydän taustakuvaksi.\nHaluatko muokata sitä?"
+msgstr ""
+"Kuva ”%s” on asetettu työpöydän taustakuvaksi.\n"
+"Haluatko muokata sitä?"
 
-#: ../src/eom-window.c:3111
+#: ../src/eom-window.c:3084
 msgid "Saving image locally…"
 msgstr "Tallennetaan kuvaa paikallisesti…"
 
-#: ../src/eom-window.c:3191
+#: ../src/eom-window.c:3164
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
-msgstr "Haluatko varmasti siirtää kuvan\n”%s” roskakoriin?"
+msgstr ""
+"Haluatko varmasti siirtää kuvan\n"
+"”%s” roskakoriin?"
 
-#: ../src/eom-window.c:3194
+#: ../src/eom-window.c:3167
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
-msgstr "Roskakoria kohteelle ”%s” ei löytynyt. Haluatko poistaa tämän kuvan pysyvästi?"
+msgstr ""
+"Roskakoria kohteelle ”%s” ei löytynyt. Haluatko poistaa tämän kuvan "
+"pysyvästi?"
 
-#: ../src/eom-window.c:3199
+#: ../src/eom-window.c:3172
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1054,415 +1102,418 @@ msgid ""
 msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
-msgstr[0] "Haluatko varmasti siirtää\nvalitun kuvan roskakoriin?"
-msgstr[1] "Haluatko varmasti siirtää\n%d valittua kuvaa roskakoriin?"
+msgstr[0] ""
+msgstr[1] ""
 
-#: ../src/eom-window.c:3204
+#: ../src/eom-window.c:3177
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
-msgstr "Joitain kuvista ei voi siirtää roskakoriin ja siksi ne poistetaan pysyvästi. Haluatko varmasti jatkaa?"
+msgstr ""
+"Joitain kuvista ei voi siirtää roskakoriin ja siksi ne poistetaan pysyvästi."
+" Haluatko varmasti jatkaa?"
 
-#: ../src/eom-window.c:3221 ../src/eom-window.c:3705 ../src/eom-window.c:3732
+#: ../src/eom-window.c:3194 ../src/eom-window.c:3678 ../src/eom-window.c:3705
 msgid "Move to _Trash"
 msgstr "Siirrä _roskakoriin"
 
-#: ../src/eom-window.c:3223
+#: ../src/eom-window.c:3196
 msgid "_Do not ask again during this session"
 msgstr "Älä kysy _uudestaan tässä istunnossa"
 
-#: ../src/eom-window.c:3268 ../src/eom-window.c:3282
+#: ../src/eom-window.c:3241 ../src/eom-window.c:3255
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Roskakoria ei voitu avata."
 
-#: ../src/eom-window.c:3290
+#: ../src/eom-window.c:3263
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Tiedostoa ei voitu poistaa"
 
-#: ../src/eom-window.c:3387
+#: ../src/eom-window.c:3360
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Virhe poistettaessa kuvaa %s"
 
-#: ../src/eom-window.c:3629
+#: ../src/eom-window.c:3602
 msgid "_Image"
 msgstr "_Kuva"
 
-#: ../src/eom-window.c:3630
+#: ../src/eom-window.c:3603
 msgid "_Edit"
 msgstr "_Muokkaa"
 
-#: ../src/eom-window.c:3631
+#: ../src/eom-window.c:3604
 msgid "_View"
-msgstr "_Katsele"
+msgstr "_Näytä"
 
-#: ../src/eom-window.c:3632
+#: ../src/eom-window.c:3605
 msgid "_Go"
 msgstr "_Siirry"
 
-#: ../src/eom-window.c:3633
+#: ../src/eom-window.c:3606
 msgid "_Tools"
-msgstr "_Työkalut"
+msgstr "Työ_kalut"
 
-#: ../src/eom-window.c:3634
+#: ../src/eom-window.c:3607
 msgid "_Help"
 msgstr "_Ohje"
 
-#: ../src/eom-window.c:3636
+#: ../src/eom-window.c:3609
 msgid "_Open…"
 msgstr "_Avaa…"
 
-#: ../src/eom-window.c:3637
+#: ../src/eom-window.c:3610
 msgid "Open a file"
 msgstr "Avaa tiedosto"
 
-#: ../src/eom-window.c:3639
+#: ../src/eom-window.c:3612
 msgid "_Close"
 msgstr "_Sulje"
 
-#: ../src/eom-window.c:3640
+#: ../src/eom-window.c:3613
 msgid "Close window"
 msgstr "Sulje ikkuna"
 
-#: ../src/eom-window.c:3642
+#: ../src/eom-window.c:3615
 msgid "T_oolbar"
 msgstr "_Työkalupalkki"
 
-#: ../src/eom-window.c:3643
+#: ../src/eom-window.c:3616
 msgid "Edit the application toolbar"
 msgstr "Muokkaa ohjelman työkalupalkkia"
 
-#: ../src/eom-window.c:3645
+#: ../src/eom-window.c:3618
 msgid "Prefere_nces"
 msgstr "_Asetukset"
 
-#: ../src/eom-window.c:3646
+#: ../src/eom-window.c:3619
 msgid "Preferences for Eye of MATE"
 msgstr "MATEn silmän asetukset"
 
-#: ../src/eom-window.c:3648
+#: ../src/eom-window.c:3621
 msgid "_Contents"
-msgstr "S_isältö"
+msgstr "_Sisältö"
 
-#: ../src/eom-window.c:3649
+#: ../src/eom-window.c:3622
 msgid "Help on this application"
 msgstr "Ohjeita tämän ohjelman käyttöön"
 
-#: ../src/eom-window.c:3651
+#: ../src/eom-window.c:3624
 msgid "_About"
 msgstr "_Tietoja"
 
-#: ../src/eom-window.c:3652
+#: ../src/eom-window.c:3625
 msgid "About this application"
-msgstr "Tietoja sovelluksesta"
+msgstr "Tietoja tästä ohjelmasta"
 
-#: ../src/eom-window.c:3657
+#: ../src/eom-window.c:3630
 msgid "_Toolbar"
-msgstr "_Työkalupalkki"
+msgstr "Ty_ökalupalkki"
 
-#: ../src/eom-window.c:3658
+#: ../src/eom-window.c:3631
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Määrittää, näytetäänkö työkalupalkki nykyisessä ikkunassa"
 
-#: ../src/eom-window.c:3660
+#: ../src/eom-window.c:3633
 msgid "_Statusbar"
-msgstr "T_ilarivi"
+msgstr "_Tilarivi"
 
-#: ../src/eom-window.c:3661
+#: ../src/eom-window.c:3634
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Määrittää, näytetäänkö tilarivi nykyisessä ikkunassa"
 
-#: ../src/eom-window.c:3663
+#: ../src/eom-window.c:3636
 msgid "_Image Collection"
 msgstr "_Kuvakokoelmana"
 
-#: ../src/eom-window.c:3664
+#: ../src/eom-window.c:3637
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "Muuttaa kuvakokoelmapaneelin näkyvyyttä nykyisessä ikkunassa"
 
-#: ../src/eom-window.c:3666
+#: ../src/eom-window.c:3639
 msgid "Side _Pane"
-msgstr "Sivu_paneeli"
+msgstr "_Sivupaneeli"
 
-#: ../src/eom-window.c:3667
+#: ../src/eom-window.c:3640
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Määrittää, näytetäänkö nykyisessä ikkunassa sivupaneeli"
 
-#: ../src/eom-window.c:3672
+#: ../src/eom-window.c:3645
 msgid "_Save"
 msgstr "_Tallenna"
 
-#: ../src/eom-window.c:3673
+#: ../src/eom-window.c:3646
 msgid "Save changes in currently selected images"
 msgstr "Tallenna muutokset valittuihin kuviin"
 
-#: ../src/eom-window.c:3675
+#: ../src/eom-window.c:3648
 msgid "Open _with"
 msgstr "Avaa _ohjelmalla"
 
-#: ../src/eom-window.c:3676
+#: ../src/eom-window.c:3649
 msgid "Open the selected image with a different application"
 msgstr "Avaa valittu kuva toisella ohjelmalla"
 
-#: ../src/eom-window.c:3678
+#: ../src/eom-window.c:3651
 msgid "Save _As…"
 msgstr "Tallenn_a nimellä…"
 
-#: ../src/eom-window.c:3679
+#: ../src/eom-window.c:3652
 msgid "Save the selected images with a different name"
 msgstr "Tallenna valittu kuva toisella nimellä"
 
-#: ../src/eom-window.c:3681
+#: ../src/eom-window.c:3654
 msgid "_Print…"
 msgstr "_Tulosta…"
 
-#: ../src/eom-window.c:3682
+#: ../src/eom-window.c:3655
 msgid "Print the selected image"
 msgstr "Tulosta valittu kuva"
 
-#: ../src/eom-window.c:3684
+#: ../src/eom-window.c:3657
 msgid "Prope_rties"
 msgstr "_Ominaisuudet"
 
-#: ../src/eom-window.c:3685
+#: ../src/eom-window.c:3658
 msgid "Show the properties and metadata of the selected image"
 msgstr "Näytä valitun kuvan ominaisuudet ja metatiedot"
 
-#: ../src/eom-window.c:3687
+#: ../src/eom-window.c:3660
 msgid "_Undo"
-msgstr "K_umoa"
+msgstr "_Kumoa"
 
-#: ../src/eom-window.c:3688
+#: ../src/eom-window.c:3661
 msgid "Undo the last change in the image"
 msgstr "Peru viimeinen muutos kuvaan"
 
-#: ../src/eom-window.c:3690
+#: ../src/eom-window.c:3663
 msgid "Flip _Horizontal"
 msgstr "Peilaa _vaakasuunnassa"
 
-#: ../src/eom-window.c:3691
+#: ../src/eom-window.c:3664
 msgid "Mirror the image horizontally"
 msgstr "Peilaa kuva vaakasuunnassa"
 
-#: ../src/eom-window.c:3693
+#: ../src/eom-window.c:3666
 msgid "Flip _Vertical"
 msgstr "Peilaa _pystysuunnassa"
 
-#: ../src/eom-window.c:3694
+#: ../src/eom-window.c:3667
 msgid "Mirror the image vertically"
 msgstr "Peilaa kuva pystysuunnassa"
 
-#: ../src/eom-window.c:3696
+#: ../src/eom-window.c:3669
 msgid "_Rotate Clockwise"
 msgstr "Kierrä _myötäpäivään"
 
-#: ../src/eom-window.c:3697
+#: ../src/eom-window.c:3670
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Kierrä kuvaa 90 astetta myötäpäivään"
 
-#: ../src/eom-window.c:3699
+#: ../src/eom-window.c:3672
 msgid "Rotate Counterc_lockwise"
 msgstr "Kierrä va_stapäivään"
 
-#: ../src/eom-window.c:3700
+#: ../src/eom-window.c:3673
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Kierrä kuvaa 90 astetta vastapäivään"
 
-#: ../src/eom-window.c:3702
+#: ../src/eom-window.c:3675
 msgid "Set as _Desktop Background"
 msgstr "Aseta _taustakuvaksi"
 
-#: ../src/eom-window.c:3703
+#: ../src/eom-window.c:3676
 msgid "Set the selected image as the desktop background"
 msgstr "Aseta valittu kuva työpöydän taustakuvaksi"
 
-#: ../src/eom-window.c:3706
+#: ../src/eom-window.c:3679
 msgid "Move the selected image to the trash folder"
 msgstr "Siirrä valittu kuva roskakoriin"
 
-#: ../src/eom-window.c:3708
+#: ../src/eom-window.c:3681
 msgid "_Copy"
-msgstr ""
+msgstr "_Kopioi"
 
-#: ../src/eom-window.c:3709
+#: ../src/eom-window.c:3682
 msgid "Copy the selected image to the clipboard"
 msgstr ""
 
-#: ../src/eom-window.c:3711 ../src/eom-window.c:3723 ../src/eom-window.c:3726
+#: ../src/eom-window.c:3684 ../src/eom-window.c:3696 ../src/eom-window.c:3699
 msgid "_Zoom In"
 msgstr "_Lähennä"
 
-#: ../src/eom-window.c:3712 ../src/eom-window.c:3724
+#: ../src/eom-window.c:3685 ../src/eom-window.c:3697
 msgid "Enlarge the image"
 msgstr "Suurenna kuvaa"
 
-#: ../src/eom-window.c:3714 ../src/eom-window.c:3729
+#: ../src/eom-window.c:3687 ../src/eom-window.c:3702
 msgid "Zoom _Out"
 msgstr "L_oitonna"
 
-#: ../src/eom-window.c:3715 ../src/eom-window.c:3727 ../src/eom-window.c:3730
+#: ../src/eom-window.c:3688 ../src/eom-window.c:3700 ../src/eom-window.c:3703
 msgid "Shrink the image"
 msgstr "Pienennä kuvaa"
 
-#: ../src/eom-window.c:3717
+#: ../src/eom-window.c:3690
 msgid "_Normal Size"
 msgstr "_Normaalikoko"
 
-#: ../src/eom-window.c:3718
+#: ../src/eom-window.c:3691
 msgid "Show the image at its normal size"
 msgstr "Näytä kuva normaalikoossa"
 
-#: ../src/eom-window.c:3720
+#: ../src/eom-window.c:3693
 msgid "_Best Fit"
-msgstr ""
+msgstr "_Paras sovitus"
 
-#: ../src/eom-window.c:3721
+#: ../src/eom-window.c:3694
 msgid "Fit the image to the window"
 msgstr "Sovita kuva ikkunaan"
 
-#: ../src/eom-window.c:3738
+#: ../src/eom-window.c:3711
 msgid "_Fullscreen"
-msgstr "Koko_ruutu"
+msgstr "_Kokoruutu"
 
-#: ../src/eom-window.c:3739
+#: ../src/eom-window.c:3712
 msgid "Show the current image in fullscreen mode"
 msgstr "Näytä valittu kuva kokoruututilassa"
 
-#: ../src/eom-window.c:3741
+#: ../src/eom-window.c:3714
 msgid "Pause Slideshow"
 msgstr ""
 
-#: ../src/eom-window.c:3742
+#: ../src/eom-window.c:3715
 msgid "Pause or resume the slideshow"
 msgstr ""
 
-#: ../src/eom-window.c:3747 ../src/eom-window.c:3762
+#: ../src/eom-window.c:3720 ../src/eom-window.c:3735
 msgid "_Previous Image"
 msgstr "_Edellinen kuva"
 
-#: ../src/eom-window.c:3748
+#: ../src/eom-window.c:3721
 msgid "Go to the previous image of the collection"
 msgstr "Siirry kokoelman edelliseen kuvaan"
 
-#: ../src/eom-window.c:3750
+#: ../src/eom-window.c:3723
 msgid "_Next Image"
 msgstr "_Seuraava kuva"
 
-#: ../src/eom-window.c:3751
+#: ../src/eom-window.c:3724
 msgid "Go to the next image of the collection"
 msgstr "Siirry kokoelman seuraavaan kuvaan"
 
-#: ../src/eom-window.c:3753 ../src/eom-window.c:3765
+#: ../src/eom-window.c:3726 ../src/eom-window.c:3738
 msgid "_First Image"
 msgstr "Ensi_mmäinen kuva"
 
-#: ../src/eom-window.c:3754
+#: ../src/eom-window.c:3727
 msgid "Go to the first image of the collection"
 msgstr "Siirry kokoelman ensimmäiseen kuvaan"
 
-#: ../src/eom-window.c:3756 ../src/eom-window.c:3768
+#: ../src/eom-window.c:3729 ../src/eom-window.c:3741
 msgid "_Last Image"
 msgstr "_Viimeinen kuva"
 
-#: ../src/eom-window.c:3757
+#: ../src/eom-window.c:3730
 msgid "Go to the last image of the collection"
 msgstr "Siirry kokoelman viimeiseen kuvaan"
 
-#: ../src/eom-window.c:3759
+#: ../src/eom-window.c:3732
 msgid "_Random Image"
 msgstr "_Satunnainen kuva"
 
-#: ../src/eom-window.c:3760
+#: ../src/eom-window.c:3733
 msgid "Go to a random image of the collection"
 msgstr "Siirry satunnaiseen kuvaan kokoelmassa"
 
-#: ../src/eom-window.c:3774
+#: ../src/eom-window.c:3747
 msgid "S_lideshow"
 msgstr ""
 
-#: ../src/eom-window.c:3775
+#: ../src/eom-window.c:3748
 msgid "Start a slideshow view of the images"
 msgstr "Aloita diaesitys kuvista"
 
-#: ../src/eom-window.c:3841
+#: ../src/eom-window.c:3814
 msgid "Previous"
 msgstr "Edellinen"
 
-#: ../src/eom-window.c:3845
+#: ../src/eom-window.c:3818
 msgid "Next"
 msgstr "Seuraava"
 
-#: ../src/eom-window.c:3849
+#: ../src/eom-window.c:3822
 msgid "Right"
-msgstr "Oikea"
+msgstr "oikea"
 
-#: ../src/eom-window.c:3852
+#: ../src/eom-window.c:3825
 msgid "Left"
-msgstr "Vasen"
+msgstr "vasen"
 
-#: ../src/eom-window.c:3855
+#: ../src/eom-window.c:3828
 msgid "In"
 msgstr "Lähennä"
 
-#: ../src/eom-window.c:3858
+#: ../src/eom-window.c:3831
 msgid "Out"
 msgstr "Loitonna"
 
-#: ../src/eom-window.c:3861
+#: ../src/eom-window.c:3834
 msgid "Normal"
-msgstr "Normaali"
+msgstr "Tavallinen"
 
-#: ../src/eom-window.c:3864
+#: ../src/eom-window.c:3837
 msgid "Fit"
 msgstr "Sovita"
 
-#: ../src/eom-window.c:3867
+#: ../src/eom-window.c:3840
 msgid "Collection"
 msgstr "Kokoelma"
 
-#: ../src/eom-window.c:3870
+#: ../src/eom-window.c:3843
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Roskakori"
 
-#: ../src/eom-window.c:4219
+#: ../src/eom-window.c:4192
 #, c-format
 msgid "Edit the current image using %s"
 msgstr ""
 
-#: ../src/eom-window.c:4221
+#: ../src/eom-window.c:4194
 msgid "Edit Image"
 msgstr ""
 
-#: ../src/main.c:81
+#: ../src/main.c:77
 msgid "Open in fullscreen mode"
 msgstr "Avaa kokoruututilassa"
 
-#: ../src/main.c:82
+#: ../src/main.c:78
 msgid "Disable image collection"
 msgstr "Poista kuvakokoelma käytöstä"
 
-#: ../src/main.c:83
+#: ../src/main.c:79
 msgid "Open in slideshow mode"
 msgstr "Avaa diaesitystilassa"
 
-#: ../src/main.c:85
+#: ../src/main.c:81
 msgid "Start a new instance instead of reusing an existing one"
-msgstr "Käynnistä uusi instanssi ohjelmasta olemassaolevan käyttämisen sijasta"
-
-#: ../src/main.c:88
-msgid "Show the application's version"
 msgstr ""
+"Käynnistä uusi instanssi ohjelmasta olemassaolevan käyttämisen sijasta"
 
-#: ../src/main.c:89
+#: ../src/main.c:84
+msgid "Show the application's version"
+msgstr "Näytä sovelluksen versio"
+
+#: ../src/main.c:85
 msgid "[FILE…]"
 msgstr "[TIEDOSTO…]"
 
 #. I18N: The '%s' is replaced with eom's command name.
-#: ../src/main.c:216
+#: ../src/main.c:212
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "Näet kaikki komentorivivalitsimet komennolla ”%s --help”"

@@ -1,22 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Alan Monfort <alan.monfort@free.fr>, 2015
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 09:48+0100\n"
-"PO-Revision-Date: 2017-09-19 11:03+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: Breton (http://www.transifex.com/mate/MATE/language/br/)\n"
+"POT-Creation-Date: 2018-03-14 08:51+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Alan Monfort <alan.monfort@free.fr>, 2018\n"
+"Language-Team: Breton (https://www.transifex.com/mate/teams/13566/br/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: br\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=5; plural=((n%10 == 1) && (n%100 != 11) && (n%100 !=71) && (n%100 !=91) ? 0 :(n%10 == 2) && (n%100 != 12) && (n%100 !=72) && (n%100 !=92) ? 1 :(n%10 ==3 || n%10==4 || n%10==9) && (n%100 < 10 || n% 100 > 19) && (n%100 < 70 || n%100 > 79) && (n%100 < 90 || n%100 > 99) ? 2 :(n != 0 && n % 1000000 == 0) ? 3 : 4);\n"
 
 #. Translaters: This string is for a toggle to display a toolbar.
 #. * The name of the toolbar is automatically computed from the widgets
@@ -32,33 +32,33 @@ msgstr "Diskouez “_%s”"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1390
 msgid "_Move on Toolbar"
-msgstr "_Dilec'hiañ war ar varrenn-ostilhoù"
+msgstr "_Dilec'hiañ war ar varrenn ostilhoù"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1391
 msgid "Move the selected item on the toolbar"
-msgstr "Dilec'hiañ an elfenn dibabet war ar varrenn-ostilhoù"
+msgstr "Dilec'hiañ an elfenn diuzet war ar varrenn ostilhoù"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1392
 msgid "_Remove from Toolbar"
-msgstr "_Lemel diwar ar varrenn-ostilhoù"
+msgstr "_Lemel diouzh ar varrenn ostilhoù"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1393
 msgid "Remove the selected item from the toolbar"
-msgstr "Lemel an elfenn dibabet diwar ar varrenn-ostilhoù"
+msgstr "Lemel an elfenn diuzet diouzh ar varrenn ostilhoù"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1394
 msgid "_Delete Toolbar"
-msgstr "Lemel ur varrenn-ostilhoù"
+msgstr "_Dilemel ar varrenn ostilhoù"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1395
 msgid "Remove the selected toolbar"
-msgstr "Lemel ar varrenn ostilhoù dibabet"
+msgstr "Lemel ar varrenn ostilhoù diuzet"
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:487
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:485
 msgid "Separator"
-msgstr "Kefarz"
+msgstr "Disranner"
 
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2578
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2555
 msgid "Eye of MATE"
 msgstr "Eye of MATE"
 
@@ -71,9 +71,13 @@ msgid ""
 "<p> Eye of MATE is a simple viewer for browsing images on your computer. "
 "Once an image is loaded, you can zoom and rotate the image, and also view "
 "subsequent images in the directory the image was loaded from. </p>"
-msgstr "<p> Eye of MATE a dalv d'ur welerez da vereiñ e-touez ar skeudennoù war hoc'h urzhiataer. Ur wech ma'z eo bet karget ar skeudenn e c'hallit zoumañ pe c'hwelañ ar skeudenn ha gwelet e vez ivez ar skeudennoù all war-he-lec'h en teuliad ma 'z eo bet karget ar skeudenn dioutañ. </p>"
+msgstr ""
+"<p> Eye of MATE a dalv d'ur welerez da vereiñ e-touez ar skeudennoù war "
+"hoc'h urzhiataer. Ur wech ma'z eo bet karget ar skeudenn e c'hallit zoumañ "
+"pe c'hwelañ ar skeudenn ha gwelet e vez ivez ar skeudennoù all war-he-lec'h "
+"en teuliad ma 'z eo bet karget ar skeudenn dioutañ. </p>"
 
-#: ../data/eom.desktop.in.in.h:1 ../src/main.c:74 ../src/main.c:268
+#: ../data/eom.desktop.in.in.h:1 ../src/main.c:70 ../src/main.c:264
 msgid "Eye of MATE Image Viewer"
 msgstr "Eye of MATE gwelerez skeudennoù"
 
@@ -87,11 +91,11 @@ msgstr "Perzhioù ar skeudenn"
 
 #: ../data/eom-image-properties-dialog.ui.h:2
 msgid "_Previous"
-msgstr "_An hini kent"
+msgstr "_Kent"
 
 #: ../data/eom-image-properties-dialog.ui.h:3
 msgid "_Next"
-msgstr "_A-heul"
+msgstr "_Da heul"
 
 #: ../data/eom-image-properties-dialog.ui.h:4
 msgid "Name:"
@@ -179,7 +183,7 @@ msgstr "Metaroadennoù"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:1
 msgid "Save As"
-msgstr "Enrollañ dindan"
+msgstr "Gwarediñ dindan"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:3
 #, no-c-format
@@ -225,7 +229,7 @@ msgstr "Adenvel diouzh :"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:14
 msgid "To:"
-msgstr "Da :"
+msgstr "Ouzh:"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:15
 msgid "File Name Preview"
@@ -331,14 +335,19 @@ msgstr "Reteradur emgefreek"
 #: ../data/org.mate.eom.gschema.xml.in.h:2
 msgid ""
 "Whether the image should be rotated automatically based on EXIF orientation."
-msgstr "Hag-eñ e tlefe ar skeudenn bezañ c'hwelet ent emgefreek diazezet war ur reteradur mod EXIF."
+msgstr ""
+"Hag-eñ e tlefe ar skeudenn bezañ c'hwelet ent emgefreek diazezet war ur "
+"reteradur mod EXIF."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:4
 msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
 "theme instead."
-msgstr "Al liv arveret evit leuniañ ar maez a-dreñv ar skeudenn. Ma n'eo ket bet erspizet an alc'hwez use-background-color e vo despizet al liv gant an neuz oberiant mod GTK+ en e lec'h."
+msgstr ""
+"Al liv arveret evit leuniañ ar maez a-dreñv ar skeudenn. Ma n'eo ket bet "
+"erspizet an alc'hwez use-background-color e vo despizet al liv gant an neuz "
+"oberiant mod GTK+ en e lec'h."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:5
 msgid "Use a custom background color"
@@ -349,7 +358,10 @@ msgid ""
 "If this is active, the color set by the background-color key will be used to"
 " fill the area behind the image. If it is not set, the current GTK+ theme "
 "will determine the fill color."
-msgstr "Mar gweredekaet e vo arveret al liv despizet gant an alc'hwez background-color da leuniañ ar maez a-dreñv ar skeudenn. Ma n'eo ket bet gweredekaet e vo despizet al liv leuniañ gant an neuz mod GTK+."
+msgstr ""
+"Mar gweredekaet e vo arveret al liv despizet gant an alc'hwez background-"
+"color da leuniañ ar maez a-dreñv ar skeudenn. Ma n'eo ket bet gweredekaet e "
+"vo despizet al liv leuniañ gant an neuz mod GTK+."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:7
 msgid "Interpolate Image"
@@ -359,7 +371,10 @@ msgstr "Etrelotodiñ ar skeudenn"
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
-msgstr "Hag-eñ e vo etrelotodet ar skeudenn dre ar zoum bihanaat. Ur berzhded well a vo tizhet ganti met gorrekoc'h e vo eget skeudennoù nad int ket bet etrelotodet."
+msgstr ""
+"Hag-eñ e vo etrelotodet ar skeudenn dre ar zoum bihanaat. Ur berzhded well a"
+" vo tizhet ganti met gorrekoc'h e vo eget skeudennoù nad int ket bet "
+"etrelotodet."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:9
 msgid "Extrapolate Image"
@@ -369,7 +384,10 @@ msgstr "Traletodiñ ar skeudenn"
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
-msgstr "Hag-eñ e vo tralotodet ar skeudenn dre ar zoum brasaat. Ur berzhded gant ruzed a vo tizhet ganti ha gorrekoc'h e vo eget skeudennoù nad int ket bet tralotodet."
+msgstr ""
+"Hag-eñ e vo tralotodet ar skeudenn dre ar zoum brasaat. Ur berzhded gant "
+"ruzed a vo tizhet ganti ha gorrekoc'h e vo eget skeudennoù nad int ket bet "
+"tralotodet."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:11
 msgid "Transparency indicator"
@@ -380,7 +398,10 @@ msgid ""
 "Determines how transparency should be indicated. Valid values are checked, "
 "color and none. If color is chosen, then the trans-color key determines the "
 "color value used."
-msgstr "Despizañ a ra penaos e vo meneget ar boullder. Ar gwerzhioù talvoudek a dalv da gwiriet, liv ha tra ebet. Mar bez dibabet liv e vo despizet gwerzh al liv arveret gant an alc'hwez trans-color."
+msgstr ""
+"Despizañ a ra penaos e vo meneget ar boullder. Ar gwerzhioù talvoudek a dalv"
+" da gwiriet, liv ha tra ebet. Mar bez dibabet liv e vo despizet gwerzh al "
+"liv arveret gant an alc'hwez trans-color."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:13
 msgid "Scroll wheel zoom"
@@ -401,7 +422,11 @@ msgid ""
 "This value defines the zooming step used for each scroll event. For example,"
 " 0.05 results in a 5% zoom increment for each scroll event and 1.00 result "
 "in a 100% zoom increment."
-msgstr "Al lieskementer da vezañ sevenet pa vez graet gant ar rod dibuniñ evit ar zoumañ. Ar werzh-mañ a zespiz ar pazioù zoumañ arveret evit pep dargouezh dibuniñ. Da skouer, 0.05 a dalv d'un azvuiadañ dre 5% evit pep dargouezh dibuniñ ha 1.00 a dalv d'un azvuiadañ dre 100%."
+msgstr ""
+"Al lieskementer da vezañ sevenet pa vez graet gant ar rod dibuniñ evit ar "
+"zoumañ. Ar werzh-mañ a zespiz ar pazioù zoumañ arveret evit pep dargouezh "
+"dibuniñ. Da skouer, 0.05 a dalv d'un azvuiadañ dre 5% evit pep dargouezh "
+"dibuniñ ha 1.00 a dalv d'un azvuiadañ dre 100%."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:18
 msgid "Transparency color"
@@ -411,7 +436,9 @@ msgstr "Liv ar boullder"
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
-msgstr "Mar bez ar werzh COLOR gant alc'hwez ar boullder e vo despizet al liv a vo arveret evit menegiñ ar boullder gant an alc'hwez-mañ."
+msgstr ""
+"Mar bez ar werzh COLOR gant alc'hwez ar boullder e vo despizet al liv a vo "
+"arveret evit menegiñ ar boullder gant an alc'hwez-mañ."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:20
 msgid "Randomize the image sequence"
@@ -427,7 +454,8 @@ msgstr "Dol a-hed ar gemalenn skeudennoù"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:23
 msgid "Whether the sequence of images should be shown in an endless loop."
-msgstr "Hag-eñ e tlefe ar gemalenn skeudennoù bezañ diskouezet dre un dol dizibenn."
+msgstr ""
+"Hag-eñ e tlefe ar gemalenn skeudennoù bezañ diskouezet dre un dol dizibenn."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:25
 #, no-c-format
@@ -438,7 +466,9 @@ msgstr "Aotreañ ur zoom brasoc'h eget ar 100% a-orin"
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
-msgstr "Ma lakaot FALSE amañ, ne vo ket azasaet ar skeudennoù bihan da vent ar skramm."
+msgstr ""
+"Ma lakaot FALSE amañ, ne vo ket azasaet ar skeudennoù bihan da vent ar "
+"skramm."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:27
 msgid "Delay in seconds until showing the next image"
@@ -448,7 +478,10 @@ msgstr "Koulzad e eilennoù a-raok diskouez ar skeudenn da heul"
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until"
 " the next one is shown automatically. Zero disables the automatic browsing."
-msgstr "Ur werzh vrasoc'h eget 0 a lâr an niver a eilennoù a chomo ur skeudenn hewel a-raok ma vo diskouezet war-eeun an hini da heul. Mann a lazh ar merdeiñ emgefreek."
+msgstr ""
+"Ur werzh vrasoc'h eget 0 a lâr an niver a eilennoù a chomo ur skeudenn hewel"
+" a-raok ma vo diskouezet war-eeun an hini da heul. Mann a lazh ar merdeiñ "
+"emgefreek."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:29
 msgid "Show/Hide the window toolbar."
@@ -491,12 +524,17 @@ msgid ""
 "If activated, Eye of MATE won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
 "trash and would be deleted instead."
-msgstr "Mar gweredekaet, ne c'houlenno ket Eye of MATE ur gadarnadenn pa vo kaset ar skeudennoù d'al lastez. Goulenn a ray c'hoazh ma n'eus ket tro da zilec'hiañ ar restroù d'al lastez ha mar befent dilamet kentoc'h."
+msgstr ""
+"Mar gweredekaet, ne c'houlenno ket Eye of MATE ur gadarnadenn pa vo kaset ar"
+" skeudennoù d'al lastez. Goulenn a ray c'hoazh ma n'eus ket tro da "
+"zilec'hiañ ar restroù d'al lastez ha mar befent dilamet kentoc'h."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:39
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
-msgstr "Hag-eñ e rankfe roll ar metaroadennoù war boestad emziviz ar perzhioù kaout o fajenn dezho."
+msgstr ""
+"Hag-eñ e rankfe roll ar metaroadennoù war boestad emziviz ar perzhioù kaout "
+"o fajenn dezho."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:40
 msgid ""
@@ -504,7 +542,12 @@ msgid ""
 "moved to its own page in the dialog. This should make the dialog more usable"
 " on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
 "be embedded on the \"Metadata\" page."
-msgstr "Mar gweredekaet e vo dilec'hiet roll ar metaroadennoù munutaet a zo war boestad emziviz ar perzhioù betek o fajenn dezho war ar voestad. Da aesoc'h da vezañ graet ganto e tlefe mont evit ar skrammoù bihanoc'h d.sk. skrammoù an urzhiataerioù hezoug. Mar diweredekaet e vo enkorfet ar widjed war ar bajennad \"Metaroadennoù\"."
+msgstr ""
+"Mar gweredekaet e vo dilec'hiet roll ar metaroadennoù munutaet a zo war "
+"boestad emziviz ar perzhioù betek o fajenn dezho war ar voestad. Da aesoc'h "
+"da vezañ graet ganto e tlefe mont evit ar skrammoù bihanoc'h d.sk. skrammoù "
+"an urzhiataerioù hezoug. Mar diweredekaet e vo enkorfet ar widjed war ar "
+"bajennad \"Metaroadennoù\"."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:41
 msgid "External program to use for editing images"
@@ -515,13 +558,19 @@ msgid ""
 "The desktop file name (including the \".desktop\") of the application to use"
 " for editing images (when the \"Edit Image\" toolbar button is clicked). Set"
 " to the empty string to disable this feature."
-msgstr "Anv restr evit ar burev eus an arload (\".desktop\" en o zouez) da arverañ evit daskemmañ ar skeudennoù (pa vez kliket war afell ar varrennad ostilhoù \"Daskemmañ skeudennoù\"). Lakaat an hedad da c'houllo a-benn diweredekaat ar c'heweriuster-mañ."
+msgstr ""
+"Anv restr evit ar burev eus an arload (\".desktop\" en o zouez) da arverañ "
+"evit daskemmañ ar skeudennoù (pa vez kliket war afell ar varrennad ostilhoù "
+"\"Daskemmañ skeudennoù\"). Lakaat an hedad da c'houllo a-benn diweredekaat "
+"ar c'heweriuster-mañ."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:43
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images"
 " are loaded."
-msgstr "Hag-eñ e tlefe an dibaberez restroù diskouez teuliad skeudennoù an arveriad ma n'eus tamm skeudenn ebet bet karget."
+msgstr ""
+"Hag-eñ e tlefe an dibaberez restroù diskouez teuliad skeudennoù an arveriad "
+"ma n'eus tamm skeudenn ebet bet karget."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:44
 msgid ""
@@ -529,7 +578,12 @@ msgid ""
 "will display the user's pictures folder using the XDG special user "
 "directories. If deactivated or the pictures folder has not been set up, it "
 "will show the current working directory."
-msgstr "Mar gweredekaet ha ma n'eus tamm skeudenn ebet bet karget er prenestr oberiant e vo skrammet teuliad skeudennoù an arveriad en ur ober gant kavlec'hiadoù an arveriad arbennik mod XDG gant an dibaberez skeudennoù. Mar diweredekaet pe ma n'eo ket bet despizet teuliad ar skeudennoù e vo diskouezet ar c'havlec'hiad bremanel war arver."
+msgstr ""
+"Mar gweredekaet ha ma n'eus tamm skeudenn ebet bet karget er prenestr "
+"oberiant e vo skrammet teuliad skeudennoù an arveriad en ur ober gant "
+"kavlec'hiadoù an arveriad arbennik mod XDG gant an dibaberez skeudennoù. Mar"
+" diweredekaet pe ma n'eo ket bet despizet teuliad ar skeudennoù e vo "
+"diskouezet ar c'havlec'hiad bremanel war arver."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:45
 msgid "Active plugins"
@@ -540,7 +594,10 @@ msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
 "plugin."
-msgstr "Roll an enlugelladoù oberiant. N'emañ ket \"Lec'hiadur\" an enlugelladoù ennañ. Lennit ar restr .eom-plugin da gaout \"Lec'hiadur\" un enlugellad lavaret."
+msgstr ""
+"Roll an enlugelladoù oberiant. N'emañ ket \"Lec'hiadur\" an enlugelladoù "
+"ennañ. Lennit ar restr .eom-plugin da gaout \"Lec'hiadur\" un enlugellad "
+"lavaret."
 
 #: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
 msgid "Fullscreen with double-click"
@@ -584,25 +641,28 @@ msgstr "Goulenn"
 msgid "If you don't save, your changes will be lost."
 msgstr "Ma n'enrollot ket e vo kollet ho kemmoù."
 
-#: ../src/eom-close-confirmation-dialog.c:413
+#: ../src/eom-close-confirmation-dialog.c:409
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "Enrollañ ar c'hemmoù bet graet d'ar skeudenn \"%s\" kent serriñ ?"
 
-#: ../src/eom-close-confirmation-dialog.c:616
+#: ../src/eom-close-confirmation-dialog.c:604
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
-msgstr[0] "%d skeudenn ez eus gant kemmoù nad int ket bet enrollet. Enrollañ kent serriñ ?"
-msgstr[1] "%d skeudenn ez eus gant kemmoù nad int ket bet enrollet. Enrollañ kent serriñ ?"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
-#: ../src/eom-close-confirmation-dialog.c:633
+#: ../src/eom-close-confirmation-dialog.c:621
 msgid "S_elect the images you want to save:"
 msgstr "Diuzit ar sk_eudennoù a fell deoc'h enrollañ :"
 
 #. Secondary label
-#: ../src/eom-close-confirmation-dialog.c:656
+#: ../src/eom-close-confirmation-dialog.c:640
 msgid "If you don't save, all your changes will be lost."
 msgstr "Ma n'enrollot ket e vo kollet ho kemmoù holl."
 
@@ -614,7 +674,9 @@ msgstr "Dianav pe anskor eo ar mentrezh restr"
 msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
-msgstr "N'eo ket bet gouest Eye of MATE da zespizañ ur mentrezh restr skoret a c'hallfe bezañ skrivet warni, diazezet war an anv restr."
+msgstr ""
+"N'eo ket bet gouest Eye of MATE da zespizañ ur mentrezh restr skoret a "
+"c'hallfe bezañ skrivet warni, diazezet war an anv restr."
 
 #: ../src/eom-file-chooser.c:133
 msgid "Please try a different file extension like .png or .jpg."
@@ -637,11 +699,14 @@ msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
 #: ../src/eom-file-chooser.c:287 ../src/eom-properties-dialog.c:137
-#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:522
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:519
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] "piksel"
-msgstr[1] "a bikseloù"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
 #: ../src/eom-file-chooser.c:457
 msgid "Open Image"
@@ -695,21 +760,21 @@ msgstr "Ne oa ket tu da grouiñ ar restr padennek evit an enrollañ : %s"
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "Ne oa ket tu da reiñ memor evit kargañ ar restr mod JPEG"
 
-#: ../src/eom-error-message-area.c:116
+#: ../src/eom-error-message-area.c:108
 msgid "_Retry"
 msgstr "_Adklask"
 
-#: ../src/eom-error-message-area.c:159
+#: ../src/eom-error-message-area.c:151
 #, c-format
 msgid "Could not load image '%s'."
 msgstr "N'hall ket kargañ ar skeudenn '%s'."
 
-#: ../src/eom-error-message-area.c:201
+#: ../src/eom-error-message-area.c:193
 #, c-format
 msgid "No images found in '%s'."
 msgstr "Skeudenn ebet bet kavet e '%s'."
 
-#: ../src/eom-error-message-area.c:208
+#: ../src/eom-error-message-area.c:200
 msgid "The given locations contain no images."
 msgstr "N'eus skeudenn ebet el lec'hiadurioù roet."
 
@@ -731,7 +796,7 @@ msgstr "Evezhiadenn an aozer"
 
 #: ../src/eom-exif-details.c:72
 msgid "Other"
-msgstr "Traoù all"
+msgstr "Arloadoù all"
 
 #: ../src/eom-exif-details.c:74
 msgid "XMP Exif"
@@ -772,91 +837,91 @@ msgstr "%a, %d %B %Y"
 msgid "Image Settings"
 msgstr "Arventennoù ar skeudenn"
 
-#: ../src/eom-print-image-setup.c:832
+#: ../src/eom-print-image-setup.c:828
 msgid "Image"
 msgstr "Skeudenn"
 
-#: ../src/eom-print-image-setup.c:833
+#: ../src/eom-print-image-setup.c:829
 msgid "The image whose printing properties will be set up"
 msgstr "Ar skeudenn ma vo kefluniet ar perzhioù moullañ dezhi"
 
-#: ../src/eom-print-image-setup.c:839
+#: ../src/eom-print-image-setup.c:835
 msgid "Page Setup"
 msgstr "Arventennoù ar bajenn"
 
-#: ../src/eom-print-image-setup.c:840
+#: ../src/eom-print-image-setup.c:836
 msgid "The information for the page where the image will be printed"
 msgstr "An titouroù evit ar bajennad ma vo moullet ar skeudenn"
 
-#: ../src/eom-print-image-setup.c:868
+#: ../src/eom-print-image-setup.c:864
 msgid "Position"
 msgstr "Lec'hiadur"
 
-#: ../src/eom-print-image-setup.c:872
+#: ../src/eom-print-image-setup.c:868
 msgid "_Left:"
 msgstr "K_leiz :"
 
-#: ../src/eom-print-image-setup.c:874
+#: ../src/eom-print-image-setup.c:870
 msgid "_Right:"
 msgstr "D_ehou :"
 
-#: ../src/eom-print-image-setup.c:875
+#: ../src/eom-print-image-setup.c:871
 msgid "_Top:"
 msgstr "_Lein :"
 
-#: ../src/eom-print-image-setup.c:876
+#: ../src/eom-print-image-setup.c:872
 msgid "_Bottom:"
 msgstr "_Traoñ :"
 
-#: ../src/eom-print-image-setup.c:879
+#: ../src/eom-print-image-setup.c:875
 msgid "C_enter:"
 msgstr "Kr_eizañ :"
 
-#: ../src/eom-print-image-setup.c:888
+#: ../src/eom-print-image-setup.c:880
 msgid "None"
-msgstr "Hini ebet"
+msgstr "Tra ebet"
 
-#: ../src/eom-print-image-setup.c:890
+#: ../src/eom-print-image-setup.c:882
 msgid "Horizontal"
 msgstr "A-blaen"
 
-#: ../src/eom-print-image-setup.c:892
+#: ../src/eom-print-image-setup.c:884
 msgid "Vertical"
 msgstr "A-serzh"
 
-#: ../src/eom-print-image-setup.c:894
+#: ../src/eom-print-image-setup.c:886
 msgid "Both"
 msgstr "An eil hag egile"
 
-#: ../src/eom-print-image-setup.c:910
+#: ../src/eom-print-image-setup.c:902
 msgid "Size"
 msgstr "Ment"
 
-#: ../src/eom-print-image-setup.c:913
+#: ../src/eom-print-image-setup.c:905
 msgid "_Width:"
 msgstr "_Led :"
 
-#: ../src/eom-print-image-setup.c:915
+#: ../src/eom-print-image-setup.c:907
 msgid "_Height:"
 msgstr "_Sav :"
 
-#: ../src/eom-print-image-setup.c:918
+#: ../src/eom-print-image-setup.c:910
 msgid "_Scaling:"
 msgstr "O skeulaat :"
 
-#: ../src/eom-print-image-setup.c:929
+#: ../src/eom-print-image-setup.c:921
 msgid "_Unit:"
 msgstr "_Unanenn :"
 
-#: ../src/eom-print-image-setup.c:938
+#: ../src/eom-print-image-setup.c:926
 msgid "Millimeters"
 msgstr "Milimetroù"
 
-#: ../src/eom-print-image-setup.c:940
+#: ../src/eom-print-image-setup.c:928
 msgid "Inches"
 msgstr "Meutadoù"
 
-#: ../src/eom-print-image-setup.c:968
+#: ../src/eom-print-image-setup.c:956
 msgid "Preview"
 msgstr "Alberz"
 
@@ -898,7 +963,7 @@ msgstr ""
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/eom-thumb-view.c:550
+#: ../src/eom-thumb-view.c:547
 msgid "Taken on"
 msgstr "Kemeret d'an/ar"
 
@@ -907,13 +972,13 @@ msgstr "Kemeret d'an/ar"
 msgid "At least two file names are equal."
 msgstr "Bez ez eus daou restr kevatal da vihanañ"
 
-#: ../src/eom-util.c:72
+#: ../src/eom-util.c:68
 msgid "Could not display help for Eye of MATE"
 msgstr "Ne oa ket tu da ziskouez ar skoazell evit Eye of MATE"
 
-#: ../src/eom-util.c:120
+#: ../src/eom-util.c:116
 msgid " (invalid Unicode)"
-msgstr "(Unicode didalvoudek)"
+msgstr " (Unicode didalvoudek)"
 
 #. Translators: This is the string displayed in the statusbar
 #. * The tokens are from left to right:
@@ -925,14 +990,17 @@ msgstr "(Unicode didalvoudek)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] "%i × %i piksel  %s    %i%%"
-msgstr[1] "%i × %i a bikselioù  %s    %i%%"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
 #: ../src/eom-window.c:807
 msgid "_Reload"
 msgstr "_Adkargañ"
 
-#: ../src/eom-window.c:809 ../src/eom-window.c:2699
+#: ../src/eom-window.c:809 ../src/eom-window.c:2676
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "Ku_zhat"
@@ -944,9 +1012,11 @@ msgstr "Ku_zhat"
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
-msgstr "Daskemmet eo bet ar skeudenn \"%s\" gant un arload diavaez.\nHa c'hoant hoc'h eus d'hec'h adkargañ ?"
+msgstr ""
+"Daskemmet eo bet ar skeudenn \"%s\" gant un arload diavaez.\n"
+"Ha c'hoant hoc'h eus d'hec'h adkargañ ?"
 
-#: ../src/eom-window.c:988
+#: ../src/eom-window.c:984
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Ober gant \"%s\" da zigeriñ ar skeudenn bet diuzet"
@@ -956,96 +1026,119 @@ msgstr "Ober gant \"%s\" da zigeriñ ar skeudenn bet diuzet"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1144
+#: ../src/eom-window.c:1140
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Enrolladur ar skeudenn \"%s\" (%u/%u)"
 
-#: ../src/eom-window.c:1513
+#: ../src/eom-window.c:1499
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Digoradur ar skeudenn \"%s\""
 
-#: ../src/eom-window.c:2197
+#: ../src/eom-window.c:1855
+msgid "Leave Fullscreen"
+msgstr ""
+
+#: ../src/eom-window.c:2174
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
-msgstr "Fazi e-pad ma oa o voullañ ar restr :\n%s"
+msgstr ""
+"Fazi e-pad ma oa o voullañ ar restr :\n"
+"%s"
 
-#: ../src/eom-window.c:2460
+#: ../src/eom-window.c:2437
 msgid "Toolbar Editor"
 msgstr "Embanner ar varrennad-ostilhoù"
 
-#: ../src/eom-window.c:2463
+#: ../src/eom-window.c:2440
 msgid "_Reset to Default"
 msgstr "_Adderaouekaat d'ar gwerzhioù dre ziouer"
 
-#: ../src/eom-window.c:2554
+#: ../src/eom-window.c:2531
 msgid "translator-credits"
-msgstr "Giulia Fraboulet <djoulia_at_gmail.com>\n\nLaunchpad Contributions:\n  Denis https://launchpad.net/~bibar\n  Oublieuse https://launchpad.net/~oublieuse"
+msgstr "Troet eo bet gant"
 
-#: ../src/eom-window.c:2557
+#: ../src/eom-window.c:2534
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version.\n"
-msgstr "Ur meziant digor eo ar goulev-mañ ; dasparzhet pe/ha daskemmet e vez dindan termenoù al Lañvaz Foran Hollek GNU evel ma'z eo bet embannet gant Diazezadenn ar Meziantoù Digor ; da lâret eo handelv 2 eus al lañvaz pe (evel ma plij deoc'h) ne vern pe handelv nevesoc'h.\n"
+msgstr ""
+"Ur meziant digor eo ar goulev-mañ ; dasparzhet pe/ha daskemmet e vez dindan "
+"termenoù al Lañvaz Foran Hollek GNU evel ma'z eo bet embannet gant "
+"Diazezadenn ar Meziantoù Digor ; da lâret eo handelv 2 eus al lañvaz pe "
+"(evel ma plij deoc'h) ne vern pe handelv nevesoc'h.\n"
 
-#: ../src/eom-window.c:2561
+#: ../src/eom-window.c:2538
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details.\n"
-msgstr "Dasparzhet eo ar meziant-mañ gant ar spi e vo talvoudus met GANT GWARANT EBET ; hep ar gwarant enpleg a-fet TALVOUDEGEZH KENWERZHEL pe VARREGEZH EVIT UR PAL PERSONEL. Taolit ur sell war Lañvaz Foran Hollek GNU evit gouzout hiroc'h.\n"
+msgstr ""
+"Dasparzhet eo ar meziant-mañ gant ar spi e vo talvoudus met GANT GWARANT "
+"EBET ; hep ar gwarant enpleg a-fet TALVOUDEGEZH KENWERZHEL pe VARREGEZH EVIT"
+" UR PAL PERSONEL. Taolit ur sell war Lañvaz Foran Hollek GNU evit gouzout "
+"hiroc'h.\n"
 
-#: ../src/eom-window.c:2565
+#: ../src/eom-window.c:2542
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
-msgstr "Moarvat hoc'h eus bet un eilad eus al Lañvaz Foran Hollek GNU gant File-Roller ; ma n'hoc'h eus ket bet, skrivit da : Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA"
+msgstr ""
+"Moarvat hoc'h eus bet un eilad eus al Lañvaz Foran Hollek GNU gant File-"
+"Roller ; ma n'hoc'h eus ket bet, skrivit da : Free Software Foundation, "
+"Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA"
 
-#: ../src/eom-window.c:2583
+#: ../src/eom-window.c:2560
 msgid "The MATE image viewer."
 msgstr "Gwelerez skeudennoù MATE."
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2697
+#: ../src/eom-window.c:2674
 msgid "_Open Background Preferences"
 msgstr "_Digeriñ gwellvezioù an drekleur"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2713
+#: ../src/eom-window.c:2690
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
-msgstr "Despizet eo bet ar skeudenn \"%s\" evel drekleur ar burev.\nHa c'hoant hoc'h eus da zaskemmañ he neuz ?"
+msgstr ""
+"Despizet eo bet ar skeudenn \"%s\" evel drekleur ar burev.\n"
+"Ha c'hoant hoc'h eus da zaskemmañ he neuz ?"
 
-#: ../src/eom-window.c:3111
+#: ../src/eom-window.c:3084
 msgid "Saving image locally…"
 msgstr "Oc'h enrollañ ar skeudenn ent lec'hel..."
 
-#: ../src/eom-window.c:3191
+#: ../src/eom-window.c:3164
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
-msgstr "Ha sur oc'h e fell deoc'h kas\n\"%s\" d'al lastez?"
+msgstr ""
+"Ha sur oc'h e fell deoc'h kas\n"
+"\"%s\" d'al lastez?"
 
-#: ../src/eom-window.c:3194
+#: ../src/eom-window.c:3167
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
-msgstr "N'eo ket bet kavet lastez evit \"%s\". Ha c'hoant hoc'h eus da zilemel ar skeudenn-mañ da vat ?"
+msgstr ""
+"N'eo ket bet kavet lastez evit \"%s\". Ha c'hoant hoc'h eus da zilemel ar "
+"skeudenn-mañ da vat ?"
 
-#: ../src/eom-window.c:3199
+#: ../src/eom-window.c:3172
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1053,415 +1146,422 @@ msgid ""
 msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
-msgstr[0] "Ha sur oc'h e fell deoc'h kas\nd'al lastez ar skeudenn bet diuzet"
-msgstr[1] "Ha sur oc'h e fell deoc'h kas\nd'al lastez %d skeudenn bet diuzet"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
-#: ../src/eom-window.c:3204
+#: ../src/eom-window.c:3177
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
-msgstr "Ul lod eus ar skeudennoù diuzet n'hallont ket bezañ kaset d'al lastez ha dilamet e vint da vat. Ha sur oc'h e fell deoc'h ober an dra-se ?"
+msgstr ""
+"Ul lod eus ar skeudennoù diuzet n'hallont ket bezañ kaset d'al lastez ha "
+"dilamet e vint da vat. Ha sur oc'h e fell deoc'h ober an dra-se ?"
 
-#: ../src/eom-window.c:3221 ../src/eom-window.c:3705 ../src/eom-window.c:3732
+#: ../src/eom-window.c:3194 ../src/eom-window.c:3678 ../src/eom-window.c:3705
 msgid "Move to _Trash"
-msgstr "Kas d'al _lastez"
+msgstr "Kas d'al lastez"
 
-#: ../src/eom-window.c:3223
+#: ../src/eom-window.c:3196
 msgid "_Do not ask again during this session"
 msgstr "_Arabat goulenn en-dro e-korf an estez-mañ"
 
-#: ../src/eom-window.c:3268 ../src/eom-window.c:3282
+#: ../src/eom-window.c:3241 ../src/eom-window.c:3255
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Ne oa ket tu da dizhout al lastez."
 
-#: ../src/eom-window.c:3290
+#: ../src/eom-window.c:3263
 #, c-format
 msgid "Couldn't delete file"
 msgstr "N'hall ket dilemel ar restr"
 
-#: ../src/eom-window.c:3387
+#: ../src/eom-window.c:3360
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Fazi en ur zilemel ar skeudenn %s"
 
-#: ../src/eom-window.c:3629
+#: ../src/eom-window.c:3602
 msgid "_Image"
 msgstr "S_keudenn"
 
-#: ../src/eom-window.c:3630
+#: ../src/eom-window.c:3603
 msgid "_Edit"
 msgstr "Dask_emmañ"
 
-#: ../src/eom-window.c:3631
+#: ../src/eom-window.c:3604
 msgid "_View"
-msgstr "G_welout"
+msgstr "_Gwelout"
 
-#: ../src/eom-window.c:3632
+#: ../src/eom-window.c:3605
 msgid "_Go"
 msgstr "_Mont"
 
-#: ../src/eom-window.c:3633
+#: ../src/eom-window.c:3606
 msgid "_Tools"
 msgstr "_Ostilhoù"
 
-#: ../src/eom-window.c:3634
+#: ../src/eom-window.c:3607
 msgid "_Help"
 msgstr "_Skoazell"
 
-#: ../src/eom-window.c:3636
+#: ../src/eom-window.c:3609
 msgid "_Open…"
 msgstr "_Digeriñ..."
 
-#: ../src/eom-window.c:3637
+#: ../src/eom-window.c:3610
 msgid "Open a file"
 msgstr "Digeriñ ur restr"
 
-#: ../src/eom-window.c:3639
+#: ../src/eom-window.c:3612
 msgid "_Close"
 msgstr "_Serriñ"
 
-#: ../src/eom-window.c:3640
+#: ../src/eom-window.c:3613
 msgid "Close window"
 msgstr "Serriñ ar prenestr"
 
-#: ../src/eom-window.c:3642
+#: ../src/eom-window.c:3615
 msgid "T_oolbar"
 msgstr "Barrennad _ostilhoù"
 
-#: ../src/eom-window.c:3643
+#: ../src/eom-window.c:3616
 msgid "Edit the application toolbar"
 msgstr "Embann barrennad ostilhoù an arload"
 
-#: ../src/eom-window.c:3645
+#: ../src/eom-window.c:3618
 msgid "Prefere_nces"
-msgstr "G_wellvezioù"
+msgstr "_Gwellvezioù"
 
-#: ../src/eom-window.c:3646
+#: ../src/eom-window.c:3619
 msgid "Preferences for Eye of MATE"
 msgstr "Gwellvezioù evit Eye of MATE"
 
-#: ../src/eom-window.c:3648
+#: ../src/eom-window.c:3621
 msgid "_Contents"
-msgstr "_Endalc'hadoù"
+msgstr "Endal_c'hadoù"
 
-#: ../src/eom-window.c:3649
+#: ../src/eom-window.c:3622
 msgid "Help on this application"
 msgstr "Kaout skoazell evit an arload-mañ"
 
-#: ../src/eom-window.c:3651
+#: ../src/eom-window.c:3624
 msgid "_About"
 msgstr "_Diwar-benn"
 
-#: ../src/eom-window.c:3652
+#: ../src/eom-window.c:3625
 msgid "About this application"
 msgstr "Diwar-benn an arload-mañ"
 
-#: ../src/eom-window.c:3657
+#: ../src/eom-window.c:3630
 msgid "_Toolbar"
-msgstr "_Barrennad-ostilhoù"
+msgstr "Barrennad-_Ostilhoù"
 
-#: ../src/eom-window.c:3658
+#: ../src/eom-window.c:3631
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Kemmañ a ra hewelded ar varrennad-ostilhoù er prenestr bremanel"
 
-#: ../src/eom-window.c:3660
+#: ../src/eom-window.c:3633
 msgid "_Statusbar"
-msgstr "_Barrenn-stad"
+msgstr "Barrenn ar _stad"
 
-#: ../src/eom-window.c:3661
+#: ../src/eom-window.c:3634
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Kemmañ a ra hewelded ar varrenn-stad er prenestr bremanel"
 
-#: ../src/eom-window.c:3663
+#: ../src/eom-window.c:3636
 msgid "_Image Collection"
 msgstr "_Skeudennaoueg"
 
-#: ../src/eom-window.c:3664
+#: ../src/eom-window.c:3637
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "Kemmañ a ra hewelder panell ar skeudennaoueg er prenestr bremanel"
 
-#: ../src/eom-window.c:3666
+#: ../src/eom-window.c:3639
 msgid "Side _Pane"
-msgstr "_Panell gostez"
+msgstr "Barrenn _gostez"
 
-#: ../src/eom-window.c:3667
+#: ../src/eom-window.c:3640
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Kemmañ a ra hewelder ar banell gostez er prenestr bremanel"
 
-#: ../src/eom-window.c:3672
+#: ../src/eom-window.c:3645
 msgid "_Save"
 msgstr "_Enrollañ"
 
-#: ../src/eom-window.c:3673
+#: ../src/eom-window.c:3646
 msgid "Save changes in currently selected images"
 msgstr "Enrollañ ar c'hemmoù er skeudennoù diuzet bremañ"
 
-#: ../src/eom-window.c:3675
+#: ../src/eom-window.c:3648
 msgid "Open _with"
 msgstr "Digeriñ _gant"
 
-#: ../src/eom-window.c:3676
+#: ../src/eom-window.c:3649
 msgid "Open the selected image with a different application"
 msgstr "Digeriñ ar skeudenn diuzet gant un arload disheñvel"
 
-#: ../src/eom-window.c:3678
+#: ../src/eom-window.c:3651
 msgid "Save _As…"
 msgstr "Enrollañ e_vel..."
 
-#: ../src/eom-window.c:3679
+#: ../src/eom-window.c:3652
 msgid "Save the selected images with a different name"
 msgstr "Enrollañ ar skeudennoù diuzet gant un anv disheñvel"
 
-#: ../src/eom-window.c:3681
+#: ../src/eom-window.c:3654
 msgid "_Print…"
 msgstr "_Moullañ..."
 
-#: ../src/eom-window.c:3682
+#: ../src/eom-window.c:3655
 msgid "Print the selected image"
 msgstr "Moullan ar skeudenn diuzet"
 
-#: ../src/eom-window.c:3684
+#: ../src/eom-window.c:3657
 msgid "Prope_rties"
 msgstr "Pe_rzhioù"
 
-#: ../src/eom-window.c:3685
+#: ../src/eom-window.c:3658
 msgid "Show the properties and metadata of the selected image"
 msgstr "Diskouez perzhioù ha metaroadennoù ar skeudenn diuzet"
 
-#: ../src/eom-window.c:3687
+#: ../src/eom-window.c:3660
 msgid "_Undo"
-msgstr "_Nullañ"
+msgstr "_Dizober"
 
-#: ../src/eom-window.c:3688
+#: ../src/eom-window.c:3661
 msgid "Undo the last change in the image"
 msgstr "Dizober ar c'hemm diwezhañ graet d'ar skeudenn"
 
-#: ../src/eom-window.c:3690
+#: ../src/eom-window.c:3663
 msgid "Flip _Horizontal"
 msgstr "Gwintañ a-_blaen"
 
-#: ../src/eom-window.c:3691
+#: ../src/eom-window.c:3664
 msgid "Mirror the image horizontally"
 msgstr "Tuginañ evel ur melezout a-blaen"
 
-#: ../src/eom-window.c:3693
+#: ../src/eom-window.c:3666
 msgid "Flip _Vertical"
 msgstr "Gwintañ a-_serzh"
 
-#: ../src/eom-window.c:3694
+#: ../src/eom-window.c:3667
 msgid "Mirror the image vertically"
 msgstr "Tuginañ evel ur melezout a-serzh"
 
-#: ../src/eom-window.c:3696
+#: ../src/eom-window.c:3669
 msgid "_Rotate Clockwise"
 msgstr "_C'hwelañ gant roud ar bizied"
 
-#: ../src/eom-window.c:3697
+#: ../src/eom-window.c:3670
 msgid "Rotate the image 90 degrees to the right"
 msgstr "C'hwelañ ar skeudenn dre 90 derez war an tu dehou"
 
-#: ../src/eom-window.c:3699
+#: ../src/eom-window.c:3672
 msgid "Rotate Counterc_lockwise"
 msgstr "C'hwe_lañ gant roud gin ar bizied"
 
-#: ../src/eom-window.c:3700
+#: ../src/eom-window.c:3673
 msgid "Rotate the image 90 degrees to the left"
 msgstr "C'hwelañ ar skeudenn dre 90 derez war an tu kleiz"
 
-#: ../src/eom-window.c:3702
+#: ../src/eom-window.c:3675
 msgid "Set as _Desktop Background"
 msgstr "Despizañ evel _drekleur ar burev"
 
-#: ../src/eom-window.c:3703
+#: ../src/eom-window.c:3676
 msgid "Set the selected image as the desktop background"
 msgstr "Despizañ ar skeudenn diuzet evel drekleur ar burev"
 
-#: ../src/eom-window.c:3706
+#: ../src/eom-window.c:3679
 msgid "Move the selected image to the trash folder"
 msgstr "Dilec'hiañ ar skeudenn diuzet betek teuliad al lastez"
 
-#: ../src/eom-window.c:3708
+#: ../src/eom-window.c:3681
 msgid "_Copy"
 msgstr "_Eilañ"
 
-#: ../src/eom-window.c:3709
+#: ../src/eom-window.c:3682
 msgid "Copy the selected image to the clipboard"
 msgstr "Eilañ ar skeudenn diuzet er golber"
 
-#: ../src/eom-window.c:3711 ../src/eom-window.c:3723 ../src/eom-window.c:3726
+#: ../src/eom-window.c:3684 ../src/eom-window.c:3696 ../src/eom-window.c:3699
 msgid "_Zoom In"
 msgstr "_Zoom brasaat"
 
-#: ../src/eom-window.c:3712 ../src/eom-window.c:3724
+#: ../src/eom-window.c:3685 ../src/eom-window.c:3697
 msgid "Enlarge the image"
 msgstr "Brasaat ar skeudenn"
 
-#: ../src/eom-window.c:3714 ../src/eom-window.c:3729
+#: ../src/eom-window.c:3687 ../src/eom-window.c:3702
 msgid "Zoom _Out"
 msgstr "Zoom _bihanaat"
 
-#: ../src/eom-window.c:3715 ../src/eom-window.c:3727 ../src/eom-window.c:3730
+#: ../src/eom-window.c:3688 ../src/eom-window.c:3700 ../src/eom-window.c:3703
 msgid "Shrink the image"
 msgstr "Bihanaat ar skeudenn"
 
-#: ../src/eom-window.c:3717
+#: ../src/eom-window.c:3690
 msgid "_Normal Size"
 msgstr "Ment _reizh"
 
-#: ../src/eom-window.c:3718
+#: ../src/eom-window.c:3691
 msgid "Show the image at its normal size"
 msgstr "Diskouez ar skeudenn gent he ment reizh"
 
-#: ../src/eom-window.c:3720
+#: ../src/eom-window.c:3693
 msgid "_Best Fit"
 msgstr "_Kenglotadenn wellañ"
 
-#: ../src/eom-window.c:3721
+#: ../src/eom-window.c:3694
 msgid "Fit the image to the window"
 msgstr "Lakaat ar skeudenn da genglotañ gant ar prenestr"
 
-#: ../src/eom-window.c:3738
+#: ../src/eom-window.c:3711
 msgid "_Fullscreen"
 msgstr "_Skrammad a-bezh"
 
-#: ../src/eom-window.c:3739
+#: ../src/eom-window.c:3712
 msgid "Show the current image in fullscreen mode"
 msgstr "Diskouez ar skeudenn vremanel dre ar mod skrammad a-bezh"
 
-#: ../src/eom-window.c:3741
+#: ../src/eom-window.c:3714
 msgid "Pause Slideshow"
 msgstr "Ehanañ ar dreyonennaoueg"
 
-#: ../src/eom-window.c:3742
+#: ../src/eom-window.c:3715
 msgid "Pause or resume the slideshow"
 msgstr "Ehanañ pe adloc'hañ an dreyonennaoueg"
 
-#: ../src/eom-window.c:3747 ../src/eom-window.c:3762
+#: ../src/eom-window.c:3720 ../src/eom-window.c:3735
 msgid "_Previous Image"
 msgstr "Skeudenn _gent"
 
-#: ../src/eom-window.c:3748
+#: ../src/eom-window.c:3721
 msgid "Go to the previous image of the collection"
 msgstr "Mont d'ar skeudenn gent eus ar skeudennaoueg"
 
-#: ../src/eom-window.c:3750
+#: ../src/eom-window.c:3723
 msgid "_Next Image"
 msgstr "Skeudenn da _heul"
 
-#: ../src/eom-window.c:3751
+#: ../src/eom-window.c:3724
 msgid "Go to the next image of the collection"
 msgstr "Mont d'ar skeudenn war-lerc'h eus ar skeudennaoueg"
 
-#: ../src/eom-window.c:3753 ../src/eom-window.c:3765
+#: ../src/eom-window.c:3726 ../src/eom-window.c:3738
 msgid "_First Image"
 msgstr "Skeudenn g_entañ"
 
-#: ../src/eom-window.c:3754
+#: ../src/eom-window.c:3727
 msgid "Go to the first image of the collection"
 msgstr "Mont d'ar skeudenn gentañ eus ar skeudennaoueg"
 
-#: ../src/eom-window.c:3756 ../src/eom-window.c:3768
+#: ../src/eom-window.c:3729 ../src/eom-window.c:3741
 msgid "_Last Image"
 msgstr "_Skeudenn d_iwezhañ"
 
-#: ../src/eom-window.c:3757
+#: ../src/eom-window.c:3730
 msgid "Go to the last image of the collection"
 msgstr "Mont d'ar skeudenn diwezhañ eus ar skeudennaoueg"
 
-#: ../src/eom-window.c:3759
+#: ../src/eom-window.c:3732
 msgid "_Random Image"
 msgstr "Skeudenn _dargouezhek"
 
-#: ../src/eom-window.c:3760
+#: ../src/eom-window.c:3733
 msgid "Go to a random image of the collection"
 msgstr "Mont d'ur skeudenn dargouezhek eus ar skeudennaoueg"
 
-#: ../src/eom-window.c:3774
+#: ../src/eom-window.c:3747
 msgid "S_lideshow"
 msgstr "Treyonennaoue_g"
 
-#: ../src/eom-window.c:3775
+#: ../src/eom-window.c:3748
 msgid "Start a slideshow view of the images"
 msgstr "Loc'hañ gwel un dreyonennaoueg"
 
-#: ../src/eom-window.c:3841
+#: ../src/eom-window.c:3814
 msgid "Previous"
-msgstr "Kent"
+msgstr "A-raok"
 
-#: ../src/eom-window.c:3845
+#: ../src/eom-window.c:3818
 msgid "Next"
-msgstr "Da heul"
+msgstr "War lerc'h"
 
-#: ../src/eom-window.c:3849
+#: ../src/eom-window.c:3822
 msgid "Right"
 msgstr "Dehou"
 
-#: ../src/eom-window.c:3852
+#: ../src/eom-window.c:3825
 msgid "Left"
 msgstr "Kleiz"
 
-#: ../src/eom-window.c:3855
+#: ../src/eom-window.c:3828
 msgid "In"
 msgstr "E-barzh"
 
-#: ../src/eom-window.c:3858
+#: ../src/eom-window.c:3831
 msgid "Out"
 msgstr "Er-maez"
 
-#: ../src/eom-window.c:3861
+#: ../src/eom-window.c:3834
 msgid "Normal"
 msgstr "Reizh"
 
-#: ../src/eom-window.c:3864
+#: ../src/eom-window.c:3837
 msgid "Fit"
 msgstr "Kenglotañ"
 
-#: ../src/eom-window.c:3867
+#: ../src/eom-window.c:3840
 msgid "Collection"
 msgstr "Dastumad"
 
-#: ../src/eom-window.c:3870
+#: ../src/eom-window.c:3843
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Lastez"
 
-#: ../src/eom-window.c:4219
+#: ../src/eom-window.c:4192
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "Embann ar skeudenn vremanel en ur ober gant %s"
 
-#: ../src/eom-window.c:4221
+#: ../src/eom-window.c:4194
 msgid "Edit Image"
 msgstr "Embann ar skeudenn"
 
-#: ../src/main.c:81
+#: ../src/main.c:77
 msgid "Open in fullscreen mode"
 msgstr "Digeriñ e mod ar skrammad a-bezh"
 
-#: ../src/main.c:82
+#: ../src/main.c:78
 msgid "Disable image collection"
 msgstr "Diweredekaat an dastumad skeudennoù"
 
-#: ../src/main.c:83
+#: ../src/main.c:79
 msgid "Open in slideshow mode"
 msgstr "Digeriñ dre vod un dreyonennaoueg"
 
-#: ../src/main.c:85
+#: ../src/main.c:81
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "Loc'hañ un eriol nevez e-lec'h ober gant unan a zo anezhi endeo"
 
-#: ../src/main.c:88
+#: ../src/main.c:84
 msgid "Show the application's version"
 msgstr "Diskouez handelv an arload"
 
-#: ../src/main.c:89
+#: ../src/main.c:85
 msgid "[FILE…]"
 msgstr "[RESTR...]"
 
 #. I18N: The '%s' is replaced with eom's command name.
-#: ../src/main.c:216
+#: ../src/main.c:212
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
-msgstr "Erounit '%s --help' da welout ur roll klok eus dibarzhioù evit an arc'hadoù hegerz."
+msgstr ""
+"Erounit '%s --help' da welout ur roll klok eus dibarzhioù evit an arc'hadoù "
+"hegerz."

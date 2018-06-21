@@ -1,16 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 09:48+0100\n"
-"PO-Revision-Date: 2017-09-19 11:03+0000\n"
-"Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
-"Language-Team: Serbian (Latin) (http://www.transifex.com/mate/MATE/language/sr%40latin/)\n"
+"POT-Creation-Date: 2018-03-14 08:51+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Ivan Pejić <ipejic@gmail.com>, 2018\n"
+"Language-Team: Serbian (Latin) (https://www.transifex.com/mate/teams/13566/sr%40latin/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,33 +32,33 @@ msgstr "Prikaži „_%s“"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1390
 msgid "_Move on Toolbar"
-msgstr "_Postavi među alatke"
+msgstr "_Premesti na paletu alatki"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1391
 msgid "Move the selected item on the toolbar"
-msgstr "Postavi označenu stavku na liniju sa alatkama"
+msgstr "Premesti izabrani predmet na paletu alatki"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1392
 msgid "_Remove from Toolbar"
-msgstr "_Skloni iz alatki"
+msgstr "_Ukloni sa palete alatki"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1393
 msgid "Remove the selected item from the toolbar"
-msgstr "Skloni označenu stavku sa linije sa alatkama"
+msgstr "Ukloni izabrani element sa palete alatki"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1394
 msgid "_Delete Toolbar"
-msgstr "_Obriši liniju sa alatkama"
+msgstr "_Obriši paletu alatki"
 
 #: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1395
 msgid "Remove the selected toolbar"
-msgstr "Ukloni označenu liniju sa alatkama"
+msgstr "Uklanja izabranu paletu alatki"
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:487
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:485
 msgid "Separator"
 msgstr "Razdvajač"
 
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2578
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2555
 msgid "Eye of MATE"
 msgstr "Oči Gnoma"
 
@@ -72,7 +73,7 @@ msgid ""
 "subsequent images in the directory the image was loaded from. </p>"
 msgstr ""
 
-#: ../data/eom.desktop.in.in.h:1 ../src/main.c:74 ../src/main.c:268
+#: ../data/eom.desktop.in.in.h:1 ../src/main.c:70 ../src/main.c:264
 msgid "Eye of MATE Image Viewer"
 msgstr "Oko Gnoma — preglednik slika"
 
@@ -86,11 +87,11 @@ msgstr "Osobine slike"
 
 #: ../data/eom-image-properties-dialog.ui.h:2
 msgid "_Previous"
-msgstr "_Prethodna"
+msgstr "_Prethodni"
 
 #: ../data/eom-image-properties-dialog.ui.h:3
 msgid "_Next"
-msgstr "_Naredna"
+msgstr "_Sledeći"
 
 #: ../data/eom-image-properties-dialog.ui.h:4
 msgid "Name:"
@@ -216,7 +217,7 @@ msgstr "Zameni razmake podvlakom"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:12
 msgid "Options"
-msgstr "Opcije"
+msgstr "Mogućnosti"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:13
 msgid "Rename from:"
@@ -224,7 +225,7 @@ msgstr "Preimenuj od:"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:14
 msgid "To:"
-msgstr "U:"
+msgstr "Na:"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:15
 msgid "File Name Preview"
@@ -305,7 +306,7 @@ msgstr "_Promeni sliku posle:"
 
 #: ../data/eom-preferences-dialog.ui.h:19
 msgid "seconds"
-msgstr "sekundi"
+msgstr "sekunde"
 
 #: ../data/eom-preferences-dialog.ui.h:20
 msgid "_Random sequence"
@@ -337,7 +338,10 @@ msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
 "theme instead."
-msgstr "Boja koja se koristi za ispunjavanje oblasti iza slike. Ukoliko nije postavljen ključ use-background-color (koristi boju pozadine) iza slike će biti prikazana podrazumevana boja iz trenutne Gtk+ teme."
+msgstr ""
+"Boja koja se koristi za ispunjavanje oblasti iza slike. Ukoliko nije "
+"postavljen ključ use-background-color (koristi boju pozadine) iza slike će "
+"biti prikazana podrazumevana boja iz trenutne Gtk+ teme."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:5
 msgid "Use a custom background color"
@@ -348,7 +352,10 @@ msgid ""
 "If this is active, the color set by the background-color key will be used to"
 " fill the area behind the image. If it is not set, the current GTK+ theme "
 "will determine the fill color."
-msgstr "Ukoliko uključite ovu opciju, boja postavljena unutar ključa background-color će biti postavljena iza slike. Ukoliko ovaj ključ nije postavljen biće iskorišćena boja iz trenutne Gtk teme."
+msgstr ""
+"Ukoliko uključite ovu opciju, boja postavljena unutar ključa background-"
+"color će biti postavljena iza slike. Ukoliko ovaj ključ nije postavljen biće"
+" iskorišćena boja iz trenutne Gtk teme."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:7
 msgid "Interpolate Image"
@@ -358,7 +365,9 @@ msgstr "Interpoliraj sliku"
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
-msgstr "Da li da intrapolira sliku prilikom uvećanja. Takva slika izgleda bolje, ali se učitava sporije nego prikaz bez interpolacije."
+msgstr ""
+"Da li da intrapolira sliku prilikom uvećanja. Takva slika izgleda bolje, ali"
+" se učitava sporije nego prikaz bez interpolacije."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:9
 msgid "Extrapolate Image"
@@ -368,7 +377,9 @@ msgstr "Ekstrapoliraj sliku"
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
-msgstr "Da li da ekstrapolira sliku prilikom uvećanja. Takva slika izgleda mutnije i učitava se sporije nego prikaz bez ekstrapolacije."
+msgstr ""
+"Da li da ekstrapolira sliku prilikom uvećanja. Takva slika izgleda mutnije i"
+" učitava se sporije nego prikaz bez ekstrapolacije."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:11
 msgid "Transparency indicator"
@@ -400,7 +411,11 @@ msgid ""
 "This value defines the zooming step used for each scroll event. For example,"
 " 0.05 results in a 5% zoom increment for each scroll event and 1.00 result "
 "in a 100% zoom increment."
-msgstr "Faktor množenja koji će se primeniti kada se točkić na mišu koristi za uvećanje. Vrednost definiše korak uvećanja ili umanjenja na svaki pomeraj točkića. Na primer, 0.05 znači 5% uvećanja na svaki pomeraj točkića, a 1.00 znači 100% uvećanja."
+msgstr ""
+"Faktor množenja koji će se primeniti kada se točkić na mišu koristi za "
+"uvećanje. Vrednost definiše korak uvećanja ili umanjenja na svaki pomeraj "
+"točkića. Na primer, 0.05 znači 5% uvećanja na svaki pomeraj točkića, a 1.00 "
+"znači 100% uvećanja."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:18
 msgid "Transparency color"
@@ -410,7 +425,9 @@ msgstr "Boja providnosti"
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
-msgstr "Ako podešavanje providnosti ima vrednost COLOR, onda ovaj ključ utvrđuje boju koja će biti korišćena za obeležavanje providnosti."
+msgstr ""
+"Ako podešavanje providnosti ima vrednost COLOR, onda ovaj ključ utvrđuje "
+"boju koja će biti korišćena za obeležavanje providnosti."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:20
 msgid "Randomize the image sequence"
@@ -437,7 +454,9 @@ msgstr "Dozvoli početno uvećanje veće od 100%"
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
-msgstr "Ako je ovo postavljeno na FALSE, male slike se neće razvući u početku da stanu na ekran."
+msgstr ""
+"Ako je ovo postavljeno na FALSE, male slike se neće razvući u početku da "
+"stanu na ekran."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:27
 msgid "Delay in seconds until showing the next image"
@@ -447,7 +466,9 @@ msgstr "Odloži koliko sekundi pre prikaza naredne slike"
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until"
 " the next one is shown automatically. Zero disables the automatic browsing."
-msgstr "Vrednost veća od 0 određuje koliko sekundi slika ostaje na ekranu pre automatskog prikaza sledeće. Nula isključuje automatsko razgledanje."
+msgstr ""
+"Vrednost veća od 0 određuje koliko sekundi slika ostaje na ekranu pre "
+"automatskog prikaza sledeće. Nula isključuje automatsko razgledanje."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:29
 msgid "Show/Hide the window toolbar."
@@ -490,7 +511,10 @@ msgid ""
 "If activated, Eye of MATE won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
 "trash and would be deleted instead."
-msgstr "Ukoliko je uključeno, Oko Gnoma neće pitati za potvrdu prilikom premeštanja slika u smeće. Međutim, još uvek će vas pitati ukoliko ne može da premesti neku od datoteka u smeće, a može ih obrisati."
+msgstr ""
+"Ukoliko je uključeno, Oko Gnoma neće pitati za potvrdu prilikom premeštanja "
+"slika u smeće. Međutim, još uvek će vas pitati ukoliko ne može da premesti "
+"neku od datoteka u smeće, a može ih obrisati."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:39
 msgid ""
@@ -503,7 +527,12 @@ msgid ""
 "moved to its own page in the dialog. This should make the dialog more usable"
 " on smaller screens, e.g. as used by netbooks. If disabled, the widget will "
 "be embedded on the \"Metadata\" page."
-msgstr "Ukoliko je uključeno, detaljan spisak metapodataka iz prozorčeta za osobinama će biti premešten u zaseban list prozorčića. Na taj način će prozorče biti upotrebljivije na malim ekranima, kao što su oni na prenosnim računarima. Ukoliko je isključeno, detaljni metapodaci će biti dodati na postojeći list sa metapodacima."
+msgstr ""
+"Ukoliko je uključeno, detaljan spisak metapodataka iz prozorčeta za "
+"osobinama će biti premešten u zaseban list prozorčića. Na taj način će "
+"prozorče biti upotrebljivije na malim ekranima, kao što su oni na prenosnim "
+"računarima. Ukoliko je isključeno, detaljni metapodaci će biti dodati na "
+"postojeći list sa metapodacima."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:41
 msgid "External program to use for editing images"
@@ -520,7 +549,8 @@ msgstr ""
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images"
 " are loaded."
-msgstr "Da li da prikazuje fasciklu sa slikama korisnika ukoliko nisu učitane slike."
+msgstr ""
+"Da li da prikazuje fasciklu sa slikama korisnika ukoliko nisu učitane slike."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:44
 msgid ""
@@ -528,18 +558,24 @@ msgid ""
 "will display the user's pictures folder using the XDG special user "
 "directories. If deactivated or the pictures folder has not been set up, it "
 "will show the current working directory."
-msgstr "Ukoliko je uključeno, slika neće biti učitana u trenutnom prozoru, a prikazaće se korisnikove slike iz specijalnih XDG direktorijuma. Ukoliko je isključeno ili nije postavljena fascikla sa slikama, prikazaće trenutni direktorijum."
+msgstr ""
+"Ukoliko je uključeno, slika neće biti učitana u trenutnom prozoru, a "
+"prikazaće se korisnikove slike iz specijalnih XDG direktorijuma. Ukoliko je "
+"isključeno ili nije postavljena fascikla sa slikama, prikazaće trenutni "
+"direktorijum."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:45
 msgid "Active plugins"
-msgstr "Aktivirani dodaci"
+msgstr "Pokrenuti dodaci"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:46
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
 "plugin."
-msgstr "Lista aktiviranih dodataka. Ne sadrži lokacije dodataka. Pogledaj datoteku .eom-plugin da saznaš lokaciju odabranog dodatka."
+msgstr ""
+"Lista aktiviranih dodataka. Ne sadrži lokacije dodataka. Pogledaj datoteku "
+".eom-plugin da saznaš lokaciju odabranog dodatka."
 
 #: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
 msgid "Fullscreen with double-click"
@@ -583,12 +619,12 @@ msgstr "Pitanje"
 msgid "If you don't save, your changes will be lost."
 msgstr "Ukoliko ne sačuvate, izmene će biti izgubljene."
 
-#: ../src/eom-close-confirmation-dialog.c:413
+#: ../src/eom-close-confirmation-dialog.c:409
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "Da sačuvam izmene na slici „%s“ pre zatvaranja?"
 
-#: ../src/eom-close-confirmation-dialog.c:616
+#: ../src/eom-close-confirmation-dialog.c:604
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
@@ -597,12 +633,12 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: ../src/eom-close-confirmation-dialog.c:633
+#: ../src/eom-close-confirmation-dialog.c:621
 msgid "S_elect the images you want to save:"
 msgstr "_Izaberite slike koje želite da sačuvate:"
 
 #. Secondary label
-#: ../src/eom-close-confirmation-dialog.c:656
+#: ../src/eom-close-confirmation-dialog.c:640
 msgid "If you don't save, all your changes will be lost."
 msgstr "Ukoliko ne sačuvate, sve izmene će biti izgubljene."
 
@@ -614,7 +650,9 @@ msgstr "Format datoteke je nepoznat ili nepodržan"
 msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
-msgstr "Oko Gnoma ne može da odredi podržani format za upis datoteke na osnovu njenog imena."
+msgstr ""
+"Oko Gnoma ne može da odredi podržani format za upis datoteke na osnovu "
+"njenog imena."
 
 #: ../src/eom-file-chooser.c:133
 msgid "Please try a different file extension like .png or .jpg."
@@ -637,7 +675,7 @@ msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
 #: ../src/eom-file-chooser.c:287 ../src/eom-properties-dialog.c:137
-#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:522
+#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:519
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] ""
@@ -696,27 +734,27 @@ msgstr "Ne mogu da napravim privremenu datoteku za čuvanje: %s"
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "Ne može da obezbedi memoriju za učitavanje JPEG slike"
 
-#: ../src/eom-error-message-area.c:116
+#: ../src/eom-error-message-area.c:108
 msgid "_Retry"
-msgstr "_Ponovi"
+msgstr "_Probaj ponovo"
 
-#: ../src/eom-error-message-area.c:159
+#: ../src/eom-error-message-area.c:151
 #, c-format
 msgid "Could not load image '%s'."
 msgstr "Ne mogu da učitam sliku „%s“."
 
-#: ../src/eom-error-message-area.c:201
+#: ../src/eom-error-message-area.c:193
 #, c-format
 msgid "No images found in '%s'."
 msgstr "Nisu pronađene slike u „%s“."
 
-#: ../src/eom-error-message-area.c:208
+#: ../src/eom-error-message-area.c:200
 msgid "The given locations contain no images."
 msgstr "Navedena lokacija ne sadrži slike."
 
 #: ../src/eom-exif-details.c:68
 msgid "Camera"
-msgstr "Kamera"
+msgstr "Fotoaparat"
 
 #: ../src/eom-exif-details.c:69
 msgid "Image Data"
@@ -773,97 +811,97 @@ msgstr "%a, %d %B %Y"
 msgid "Image Settings"
 msgstr "Podešavanja slike"
 
-#: ../src/eom-print-image-setup.c:832
+#: ../src/eom-print-image-setup.c:828
 msgid "Image"
-msgstr "Slika"
+msgstr "Slike"
 
-#: ../src/eom-print-image-setup.c:833
+#: ../src/eom-print-image-setup.c:829
 msgid "The image whose printing properties will be set up"
 msgstr "Slika čije će postavke štampe biti podešene"
 
-#: ../src/eom-print-image-setup.c:839
+#: ../src/eom-print-image-setup.c:835
 msgid "Page Setup"
 msgstr "Podešavanje stranice"
 
-#: ../src/eom-print-image-setup.c:840
+#: ../src/eom-print-image-setup.c:836
 msgid "The information for the page where the image will be printed"
 msgstr "Podaci o stranici na kojoj će slika biti štampana"
 
-#: ../src/eom-print-image-setup.c:868
+#: ../src/eom-print-image-setup.c:864
 msgid "Position"
 msgstr "Pozicija"
 
-#: ../src/eom-print-image-setup.c:872
+#: ../src/eom-print-image-setup.c:868
 msgid "_Left:"
 msgstr "_Levo:"
 
-#: ../src/eom-print-image-setup.c:874
+#: ../src/eom-print-image-setup.c:870
 msgid "_Right:"
 msgstr "_Desno:"
 
-#: ../src/eom-print-image-setup.c:875
+#: ../src/eom-print-image-setup.c:871
 msgid "_Top:"
 msgstr "_Gore:"
 
-#: ../src/eom-print-image-setup.c:876
+#: ../src/eom-print-image-setup.c:872
 msgid "_Bottom:"
 msgstr "D_ole:"
 
-#: ../src/eom-print-image-setup.c:879
+#: ../src/eom-print-image-setup.c:875
 msgid "C_enter:"
 msgstr "C_entar:"
 
-#: ../src/eom-print-image-setup.c:888
+#: ../src/eom-print-image-setup.c:880
 msgid "None"
 msgstr "Ništa"
 
-#: ../src/eom-print-image-setup.c:890
+#: ../src/eom-print-image-setup.c:882
 msgid "Horizontal"
 msgstr "Vodoravno"
 
-#: ../src/eom-print-image-setup.c:892
+#: ../src/eom-print-image-setup.c:884
 msgid "Vertical"
 msgstr "Uspravno"
 
-#: ../src/eom-print-image-setup.c:894
+#: ../src/eom-print-image-setup.c:886
 msgid "Both"
 msgstr "Obostrano"
 
-#: ../src/eom-print-image-setup.c:910
+#: ../src/eom-print-image-setup.c:902
 msgid "Size"
 msgstr "Veličina"
 
-#: ../src/eom-print-image-setup.c:913
+#: ../src/eom-print-image-setup.c:905
 msgid "_Width:"
 msgstr "_Širina:"
 
-#: ../src/eom-print-image-setup.c:915
+#: ../src/eom-print-image-setup.c:907
 msgid "_Height:"
 msgstr "_Visina:"
 
-#: ../src/eom-print-image-setup.c:918
+#: ../src/eom-print-image-setup.c:910
 msgid "_Scaling:"
 msgstr "_Razmera:"
 
-#: ../src/eom-print-image-setup.c:929
+#: ../src/eom-print-image-setup.c:921
 msgid "_Unit:"
 msgstr "_Jedinica:"
 
-#: ../src/eom-print-image-setup.c:938
+#: ../src/eom-print-image-setup.c:926
 msgid "Millimeters"
 msgstr "Milimetri"
 
-#: ../src/eom-print-image-setup.c:940
+#: ../src/eom-print-image-setup.c:928
 msgid "Inches"
 msgstr "Inči"
 
-#: ../src/eom-print-image-setup.c:968
+#: ../src/eom-print-image-setup.c:956
 msgid "Preview"
 msgstr "Pregled"
 
 #: ../src/eom-properties-dialog.c:154
 msgid "Unknown"
-msgstr "Nepoznato"
+msgstr "Nepoznat"
 
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
@@ -899,7 +937,7 @@ msgstr "u trenutnom stanju"
 msgid "%d / %d"
 msgstr "%d. od %d"
 
-#: ../src/eom-thumb-view.c:550
+#: ../src/eom-thumb-view.c:547
 msgid "Taken on"
 msgstr "Slikano"
 
@@ -908,11 +946,11 @@ msgstr "Slikano"
 msgid "At least two file names are equal."
 msgstr "Najmanje dva imena datoteka su ista."
 
-#: ../src/eom-util.c:72
+#: ../src/eom-util.c:68
 msgid "Could not display help for Eye of MATE"
 msgstr "Ne mogu da prikažem pomoć za Oči Gnoma"
 
-#: ../src/eom-util.c:120
+#: ../src/eom-util.c:116
 msgid " (invalid Unicode)"
 msgstr " (neispravan Unikod)"
 
@@ -932,9 +970,9 @@ msgstr[2] ""
 
 #: ../src/eom-window.c:807
 msgid "_Reload"
-msgstr ""
+msgstr "_Osveži"
 
-#: ../src/eom-window.c:809 ../src/eom-window.c:2699
+#: ../src/eom-window.c:809 ../src/eom-window.c:2676
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "Sakri_j"
@@ -948,7 +986,7 @@ msgid ""
 "Would you like to reload it?"
 msgstr ""
 
-#: ../src/eom-window.c:988
+#: ../src/eom-window.c:984
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Koristi „%s“ da otvoriš odabranu sliku"
@@ -958,96 +996,117 @@ msgstr "Koristi „%s“ da otvoriš odabranu sliku"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1144
+#: ../src/eom-window.c:1140
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Čuvam sliku „%s“ (%u/%u)"
 
-#: ../src/eom-window.c:1513
+#: ../src/eom-window.c:1499
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Otvaram sliku „%s“"
 
-#: ../src/eom-window.c:2197
+#: ../src/eom-window.c:1855
+msgid "Leave Fullscreen"
+msgstr "Ne preko celog ekrana"
+
+#: ../src/eom-window.c:2174
 #, c-format
 msgid ""
 "Error printing file:\n"
 "%s"
-msgstr "Greška pri štampanju datoteke:\n%s"
+msgstr ""
+"Greška pri štampanju datoteke:\n"
+"%s"
 
-#: ../src/eom-window.c:2460
+#: ../src/eom-window.c:2437
 msgid "Toolbar Editor"
-msgstr "Uređivač alatki"
+msgstr "Uređivanje palete alatki"
 
-#: ../src/eom-window.c:2463
+#: ../src/eom-window.c:2440
 msgid "_Reset to Default"
 msgstr "_Vrati na podrazumevano"
 
-#: ../src/eom-window.c:2554
+#: ../src/eom-window.c:2531
 msgid "translator-credits"
-msgstr "Goran Rakić <grakic@devbase.net>\nDanilo Šegan <danilo@gnome.org>\nSlobodan D. Sredojević <slobo@akrep.be>\n\nhttp://prevod.org — prevod na srpski jezik."
+msgstr ""
+"Slobodan D. Sredojević <slobo@akrep.be>\n"
+"Danilo Šegan <danilo@prevod.org>\n"
+"Ivan Pejić <ipejic@gmail.com>"
 
-#: ../src/eom-window.c:2557
+#: ../src/eom-window.c:2534
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 2 of the License, or (at your option) "
 "any later version.\n"
-msgstr "Ovaj program je slobodan softver; možete ga raspodeljivati i/ili ga menjati pod uslovima GNU Opšte Javne Licence (GNU GPL) kako je objavljuje Zadužbina za Slobodni Softver (FSF); bilo verzije 2 te Licence, bilo (po vašem nahođenju) bilo koje novije verzije.\n"
+msgstr ""
+"Ovaj program je slobodan softver; možete ga raspodeljivati i/ili ga menjati "
+"pod uslovima GNU Opšte Javne Licence (GNU GPL) kako je objavljuje Zadužbina "
+"za Slobodni Softver (FSF); bilo verzije 2 te Licence, bilo (po vašem "
+"nahođenju) bilo koje novije verzije.\n"
 
-#: ../src/eom-window.c:2561
+#: ../src/eom-window.c:2538
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
 "FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
 "more details.\n"
-msgstr "Ovaj program se raspodeljuje u nadi da će biti od koristi, ali BEZ IKAKVIH GARANCIJA; čak i bez podrazumevane garancije KORISNOSTI ili PRILAGOĐENOSTI ODREĐENOJ NAMENI.  Vidite GNU Opštu Javnu Licencu za više detalja.\n"
+msgstr ""
+"Ovaj program se raspodeljuje u nadi da će biti od koristi, ali BEZ IKAKVIH "
+"GARANCIJA; čak i bez podrazumevane garancije KORISNOSTI ili PRILAGOĐENOSTI "
+"ODREĐENOJ NAMENI.  Vidite GNU Opštu Javnu Licencu za više detalja.\n"
 
-#: ../src/eom-window.c:2565
+#: ../src/eom-window.c:2542
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 
-#: ../src/eom-window.c:2583
+#: ../src/eom-window.c:2560
 msgid "The MATE image viewer."
 msgstr "Pregledač slika za Gnom."
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2697
+#: ../src/eom-window.c:2674
 msgid "_Open Background Preferences"
 msgstr "O_tvori podešavanja pozadine"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2713
+#: ../src/eom-window.c:2690
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
-msgstr "Slika „%s“ je postavljena kao pozadina radne površine.\nDa li želite da izmenite njen izgled?"
+msgstr ""
+"Slika „%s“ je postavljena kao pozadina radne površine.\n"
+"Da li želite da izmenite njen izgled?"
 
-#: ../src/eom-window.c:3111
+#: ../src/eom-window.c:3084
 msgid "Saving image locally…"
 msgstr "Čuvam sliku lokalno..."
 
-#: ../src/eom-window.c:3191
+#: ../src/eom-window.c:3164
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
-msgstr "Da li zaista želite da premestite \nsliku „%s“ u smeće?"
+msgstr ""
+"Da li zaista želite da premestite \n"
+"sliku „%s“ u smeće?"
 
-#: ../src/eom-window.c:3194
+#: ../src/eom-window.c:3167
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
-msgstr "Ne mogu da nađem „%s“ u smeću. Da li želite da trajno uklonite ovu sliku?"
+msgstr ""
+"Ne mogu da nađem „%s“ u smeću. Da li želite da trajno uklonite ovu sliku?"
 
-#: ../src/eom-window.c:3199
+#: ../src/eom-window.c:3172
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1059,412 +1118,416 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: ../src/eom-window.c:3204
+#: ../src/eom-window.c:3177
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
-msgstr "Ne mogu da premestim u smeće neke od izabranih slika, pa će biti trajno uklonjene. Da li želite da nastavite?"
+msgstr ""
+"Ne mogu da premestim u smeće neke od izabranih slika, pa će biti trajno "
+"uklonjene. Da li želite da nastavite?"
 
-#: ../src/eom-window.c:3221 ../src/eom-window.c:3705 ../src/eom-window.c:3732
+#: ../src/eom-window.c:3194 ../src/eom-window.c:3678 ../src/eom-window.c:3705
 msgid "Move to _Trash"
 msgstr "Premesti u s_meće"
 
-#: ../src/eom-window.c:3223
+#: ../src/eom-window.c:3196
 msgid "_Do not ask again during this session"
 msgstr "_Ne pitaj ponovo tokom ove sesije"
 
-#: ../src/eom-window.c:3268 ../src/eom-window.c:3282
+#: ../src/eom-window.c:3241 ../src/eom-window.c:3255
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Ne mogu da pristupim smeću."
 
-#: ../src/eom-window.c:3290
+#: ../src/eom-window.c:3263
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Ne mogu da obrišem datoteku"
 
-#: ../src/eom-window.c:3387
+#: ../src/eom-window.c:3360
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Greška pri brisanju slike %s"
 
-#: ../src/eom-window.c:3629
+#: ../src/eom-window.c:3602
 msgid "_Image"
 msgstr "_Slika"
 
-#: ../src/eom-window.c:3630
+#: ../src/eom-window.c:3603
 msgid "_Edit"
 msgstr "_Uređivanje"
 
-#: ../src/eom-window.c:3631
+#: ../src/eom-window.c:3604
 msgid "_View"
 msgstr "P_regled"
 
-#: ../src/eom-window.c:3632
+#: ../src/eom-window.c:3605
 msgid "_Go"
-msgstr "P_relaz"
+msgstr "_Idi"
 
-#: ../src/eom-window.c:3633
+#: ../src/eom-window.c:3606
 msgid "_Tools"
 msgstr "Ala_ti"
 
-#: ../src/eom-window.c:3634
+#: ../src/eom-window.c:3607
 msgid "_Help"
 msgstr "_Pomoć"
 
-#: ../src/eom-window.c:3636
+#: ../src/eom-window.c:3609
 msgid "_Open…"
 msgstr "_Otvori..."
 
-#: ../src/eom-window.c:3637
+#: ../src/eom-window.c:3610
 msgid "Open a file"
 msgstr "Otvori datoteku"
 
-#: ../src/eom-window.c:3639
+#: ../src/eom-window.c:3612
 msgid "_Close"
 msgstr "_Zatvori"
 
-#: ../src/eom-window.c:3640
+#: ../src/eom-window.c:3613
 msgid "Close window"
 msgstr "Zatvori prozor"
 
-#: ../src/eom-window.c:3642
+#: ../src/eom-window.c:3615
 msgid "T_oolbar"
-msgstr "Ala_tke"
+msgstr "_Alatke"
 
-#: ../src/eom-window.c:3643
+#: ../src/eom-window.c:3616
 msgid "Edit the application toolbar"
 msgstr "Izmeni liniju sa alatkama"
 
-#: ../src/eom-window.c:3645
+#: ../src/eom-window.c:3618
 msgid "Prefere_nces"
-msgstr "_Postavke"
+msgstr "Pos_tavke"
 
-#: ../src/eom-window.c:3646
+#: ../src/eom-window.c:3619
 msgid "Preferences for Eye of MATE"
 msgstr "Postavke Oka Gnoma"
 
-#: ../src/eom-window.c:3648
+#: ../src/eom-window.c:3621
 msgid "_Contents"
-msgstr "_Sadržaj"
+msgstr "Sad_ržaj"
 
-#: ../src/eom-window.c:3649
+#: ../src/eom-window.c:3622
 msgid "Help on this application"
 msgstr "Uputstvo za korišćenje programa"
 
-#: ../src/eom-window.c:3651
+#: ../src/eom-window.c:3624
 msgid "_About"
 msgstr "_O programu"
 
-#: ../src/eom-window.c:3652
+#: ../src/eom-window.c:3625
 msgid "About this application"
 msgstr "O ovom programu"
 
-#: ../src/eom-window.c:3657
+#: ../src/eom-window.c:3630
 msgid "_Toolbar"
-msgstr "Ala_tke"
+msgstr "_Linija sa ikonicama"
 
-#: ../src/eom-window.c:3658
+#: ../src/eom-window.c:3631
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Izmeni vidljivost palete alatki u tekućem prozoru"
 
-#: ../src/eom-window.c:3660
+#: ../src/eom-window.c:3633
 msgid "_Statusbar"
-msgstr "_Linija sa stanjem"
+msgstr "Linija sa _stanjem"
 
-#: ../src/eom-window.c:3661
+#: ../src/eom-window.c:3634
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Izmeni vidljivost linije sa stanjem u tekućem prozoru"
 
-#: ../src/eom-window.c:3663
+#: ../src/eom-window.c:3636
 msgid "_Image Collection"
 msgstr "Celokupna z_birka"
 
-#: ../src/eom-window.c:3664
+#: ../src/eom-window.c:3637
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
-msgstr "Izmeni vidljivost površi koja sadrži umanjeni prikaz celokupne zbirke slika u tekućem prozoru"
+msgstr ""
+"Izmeni vidljivost površi koja sadrži umanjeni prikaz celokupne zbirke slika "
+"u tekućem prozoru"
 
-#: ../src/eom-window.c:3666
+#: ../src/eom-window.c:3639
 msgid "Side _Pane"
 msgstr "Bočna _površ"
 
-#: ../src/eom-window.c:3667
+#: ../src/eom-window.c:3640
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Izmeni vidljivost bočne površi u tekućem prozoru"
 
-#: ../src/eom-window.c:3672
+#: ../src/eom-window.c:3645
 msgid "_Save"
 msgstr "_Sačuvaj"
 
-#: ../src/eom-window.c:3673
+#: ../src/eom-window.c:3646
 msgid "Save changes in currently selected images"
 msgstr "Čuva promene nad tekućom slikom"
 
-#: ../src/eom-window.c:3675
+#: ../src/eom-window.c:3648
 msgid "Open _with"
 msgstr "Otvori _sa"
 
-#: ../src/eom-window.c:3676
+#: ../src/eom-window.c:3649
 msgid "Open the selected image with a different application"
 msgstr "Otvara izabranu sliku drugim programom"
 
-#: ../src/eom-window.c:3678
+#: ../src/eom-window.c:3651
 msgid "Save _As…"
 msgstr "Sačuvaj _kao..."
 
-#: ../src/eom-window.c:3679
+#: ../src/eom-window.c:3652
 msgid "Save the selected images with a different name"
 msgstr "Čuva izabranu sliku pod drugim nazivom"
 
-#: ../src/eom-window.c:3681
+#: ../src/eom-window.c:3654
 msgid "_Print…"
 msgstr "_Štampaj..."
 
-#: ../src/eom-window.c:3682
+#: ../src/eom-window.c:3655
 msgid "Print the selected image"
 msgstr "Štampa tekuću sliku"
 
-#: ../src/eom-window.c:3684
+#: ../src/eom-window.c:3657
 msgid "Prope_rties"
 msgstr "_Osobine"
 
-#: ../src/eom-window.c:3685
+#: ../src/eom-window.c:3658
 msgid "Show the properties and metadata of the selected image"
 msgstr "Prikazuje osobine i meta podatke o izabranoj slici"
 
-#: ../src/eom-window.c:3687
+#: ../src/eom-window.c:3660
 msgid "_Undo"
-msgstr "_Opozovi"
+msgstr "Opo_zovi"
 
-#: ../src/eom-window.c:3688
+#: ../src/eom-window.c:3661
 msgid "Undo the last change in the image"
 msgstr "Opoziva poslednju izmenu nad slikom"
 
-#: ../src/eom-window.c:3690
+#: ../src/eom-window.c:3663
 msgid "Flip _Horizontal"
 msgstr "Obrni _vodoravno"
 
-#: ../src/eom-window.c:3691
+#: ../src/eom-window.c:3664
 msgid "Mirror the image horizontally"
 msgstr "Izvrće sliku po horizontali"
 
-#: ../src/eom-window.c:3693
+#: ../src/eom-window.c:3666
 msgid "Flip _Vertical"
 msgstr "Obrni _uspravno"
 
-#: ../src/eom-window.c:3694
+#: ../src/eom-window.c:3667
 msgid "Mirror the image vertically"
 msgstr "izvrće sliku po vertikali"
 
-#: ../src/eom-window.c:3696
+#: ../src/eom-window.c:3669
 msgid "_Rotate Clockwise"
 msgstr "Rotiraj u s_meru kazaljke na satu"
 
-#: ../src/eom-window.c:3697
+#: ../src/eom-window.c:3670
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Rotira sliku za 90 stepeni udesno"
 
-#: ../src/eom-window.c:3699
+#: ../src/eom-window.c:3672
 msgid "Rotate Counterc_lockwise"
 msgstr "Rotiraj suprotno od smera _kazaljke na satu"
 
-#: ../src/eom-window.c:3700
+#: ../src/eom-window.c:3673
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Rotira sliku za 90 stepeni ulevo"
 
-#: ../src/eom-window.c:3702
+#: ../src/eom-window.c:3675
 msgid "Set as _Desktop Background"
 msgstr "Postavi kao _pozadinu"
 
-#: ../src/eom-window.c:3703
+#: ../src/eom-window.c:3676
 msgid "Set the selected image as the desktop background"
 msgstr "Postavlja izabranu sliku u pozadinu radne površine"
 
-#: ../src/eom-window.c:3706
+#: ../src/eom-window.c:3679
 msgid "Move the selected image to the trash folder"
 msgstr "Premešta izabranu sliku u kantu za smeće"
 
-#: ../src/eom-window.c:3708
+#: ../src/eom-window.c:3681
 msgid "_Copy"
-msgstr ""
+msgstr "_Umnoži"
 
-#: ../src/eom-window.c:3709
+#: ../src/eom-window.c:3682
 msgid "Copy the selected image to the clipboard"
 msgstr ""
 
-#: ../src/eom-window.c:3711 ../src/eom-window.c:3723 ../src/eom-window.c:3726
+#: ../src/eom-window.c:3684 ../src/eom-window.c:3696 ../src/eom-window.c:3699
 msgid "_Zoom In"
 msgstr "U_većaj"
 
-#: ../src/eom-window.c:3712 ../src/eom-window.c:3724
+#: ../src/eom-window.c:3685 ../src/eom-window.c:3697
 msgid "Enlarge the image"
 msgstr "Uvećava pregled slike"
 
-#: ../src/eom-window.c:3714 ../src/eom-window.c:3729
+#: ../src/eom-window.c:3687 ../src/eom-window.c:3702
 msgid "Zoom _Out"
 msgstr "U_manji"
 
-#: ../src/eom-window.c:3715 ../src/eom-window.c:3727 ../src/eom-window.c:3730
+#: ../src/eom-window.c:3688 ../src/eom-window.c:3700 ../src/eom-window.c:3703
 msgid "Shrink the image"
 msgstr "Umanjuje pregled slike"
 
-#: ../src/eom-window.c:3717
+#: ../src/eom-window.c:3690
 msgid "_Normal Size"
 msgstr "_Normalna veličina"
 
-#: ../src/eom-window.c:3718
+#: ../src/eom-window.c:3691
 msgid "Show the image at its normal size"
 msgstr "Prikazuje sliku u njenoj punoj veličini"
 
-#: ../src/eom-window.c:3720
+#: ../src/eom-window.c:3693
 msgid "_Best Fit"
-msgstr ""
+msgstr "Naj_bolje uklapanje"
 
-#: ../src/eom-window.c:3721
+#: ../src/eom-window.c:3694
 msgid "Fit the image to the window"
 msgstr "Uklapa veličinu slike kako bi stala u prozor"
 
-#: ../src/eom-window.c:3738
+#: ../src/eom-window.c:3711
 msgid "_Fullscreen"
 msgstr "_Ceo ekran"
 
-#: ../src/eom-window.c:3739
+#: ../src/eom-window.c:3712
 msgid "Show the current image in fullscreen mode"
 msgstr "Prikazuje tekuću sliku preko celog ekrana"
 
-#: ../src/eom-window.c:3741
+#: ../src/eom-window.c:3714
 msgid "Pause Slideshow"
 msgstr "Pauziraj prikaz"
 
-#: ../src/eom-window.c:3742
+#: ../src/eom-window.c:3715
 msgid "Pause or resume the slideshow"
 msgstr "Pauzira i nastavlja pokretni prikaz slika"
 
-#: ../src/eom-window.c:3747 ../src/eom-window.c:3762
+#: ../src/eom-window.c:3720 ../src/eom-window.c:3735
 msgid "_Previous Image"
 msgstr "_Prethodna slika"
 
-#: ../src/eom-window.c:3748
+#: ../src/eom-window.c:3721
 msgid "Go to the previous image of the collection"
 msgstr "Vodi na prethodnu sliku iz zbirke"
 
-#: ../src/eom-window.c:3750
+#: ../src/eom-window.c:3723
 msgid "_Next Image"
 msgstr "_Sledeća slika"
 
-#: ../src/eom-window.c:3751
+#: ../src/eom-window.c:3724
 msgid "Go to the next image of the collection"
 msgstr "Vodi na narednu sliku iz zbirke"
 
-#: ../src/eom-window.c:3753 ../src/eom-window.c:3765
+#: ../src/eom-window.c:3726 ../src/eom-window.c:3738
 msgid "_First Image"
 msgstr "Prv_a slika"
 
-#: ../src/eom-window.c:3754
+#: ../src/eom-window.c:3727
 msgid "Go to the first image of the collection"
 msgstr "Vodi na prvu sliku iz zbirke"
 
-#: ../src/eom-window.c:3756 ../src/eom-window.c:3768
+#: ../src/eom-window.c:3729 ../src/eom-window.c:3741
 msgid "_Last Image"
 msgstr "Z_adnja slika"
 
-#: ../src/eom-window.c:3757
+#: ../src/eom-window.c:3730
 msgid "Go to the last image of the collection"
 msgstr "Vodi na poslednju sliku iz zbirke"
 
-#: ../src/eom-window.c:3759
+#: ../src/eom-window.c:3732
 msgid "_Random Image"
 msgstr "_Nasumična slika"
 
-#: ../src/eom-window.c:3760
+#: ../src/eom-window.c:3733
 msgid "Go to a random image of the collection"
 msgstr "Vodi na slučajno izabranu sliku iz zbirke"
 
-#: ../src/eom-window.c:3774
+#: ../src/eom-window.c:3747
 msgid "S_lideshow"
 msgstr ""
 
-#: ../src/eom-window.c:3775
+#: ../src/eom-window.c:3748
 msgid "Start a slideshow view of the images"
 msgstr "Započinje pokretni prikaz slika"
 
-#: ../src/eom-window.c:3841
+#: ../src/eom-window.c:3814
 msgid "Previous"
 msgstr "Prethodna"
 
-#: ../src/eom-window.c:3845
+#: ../src/eom-window.c:3818
 msgid "Next"
 msgstr "Sledeća"
 
-#: ../src/eom-window.c:3849
+#: ../src/eom-window.c:3822
 msgid "Right"
-msgstr "Desno"
+msgstr "Desni"
 
-#: ../src/eom-window.c:3852
+#: ../src/eom-window.c:3825
 msgid "Left"
-msgstr "Levo"
+msgstr "Levi"
 
-#: ../src/eom-window.c:3855
+#: ../src/eom-window.c:3828
 msgid "In"
 msgstr "Uvećaj"
 
-#: ../src/eom-window.c:3858
+#: ../src/eom-window.c:3831
 msgid "Out"
 msgstr "Umanji"
 
-#: ../src/eom-window.c:3861
+#: ../src/eom-window.c:3834
 msgid "Normal"
-msgstr "Normalno"
+msgstr "Obično"
 
-#: ../src/eom-window.c:3864
+#: ../src/eom-window.c:3837
 msgid "Fit"
 msgstr "Uklopi veličinu"
 
-#: ../src/eom-window.c:3867
+#: ../src/eom-window.c:3840
 msgid "Collection"
 msgstr "Kolekcija"
 
-#: ../src/eom-window.c:3870
+#: ../src/eom-window.c:3843
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Smeće"
 
-#: ../src/eom-window.c:4219
+#: ../src/eom-window.c:4192
 #, c-format
 msgid "Edit the current image using %s"
 msgstr ""
 
-#: ../src/eom-window.c:4221
+#: ../src/eom-window.c:4194
 msgid "Edit Image"
 msgstr ""
 
-#: ../src/main.c:81
+#: ../src/main.c:77
 msgid "Open in fullscreen mode"
 msgstr "Otvori preko celog ekrana"
 
-#: ../src/main.c:82
+#: ../src/main.c:78
 msgid "Disable image collection"
 msgstr "Isključi prikaz zbirke slika"
 
-#: ../src/main.c:83
+#: ../src/main.c:79
 msgid "Open in slideshow mode"
 msgstr "Otvori u automatskom pokretnom prikazu"
 
-#: ../src/main.c:85
+#: ../src/main.c:81
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "Otvori novi program umesto korišćenja tekućeg"
 
-#: ../src/main.c:88
+#: ../src/main.c:84
 msgid "Show the application's version"
-msgstr "Ispisuje podatke o izdanju programa"
+msgstr "Prikaži verziju programa"
 
-#: ../src/main.c:89
+#: ../src/main.c:85
 msgid "[FILE…]"
 msgstr "[DATOTEKA...]"
 
 #. I18N: The '%s' is replaced with eom's command name.
-#: ../src/main.c:216
+#: ../src/main.c:212
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "Pokrenite „%s --help“ za spisak svih opcija iz komandne linije."
