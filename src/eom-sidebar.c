@@ -466,7 +466,7 @@ eom_sidebar_add_page (EomSidebar   *eom_sidebar,
 	index = gtk_notebook_append_page (GTK_NOTEBOOK (eom_sidebar->priv->notebook),
 					  main_widget, NULL);
 
-	menu_item = gtk_image_menu_item_new_with_label (title);
+	menu_item = gtk_menu_item_new_with_label (title);
 
 	g_signal_connect (menu_item, "activate",
 			  G_CALLBACK (eom_sidebar_menu_item_activate_cb),
