@@ -141,6 +141,8 @@ eom_reload_plugin_deactivate (PeasActivatable *activatable)
 	gtk_ui_manager_remove_ui (manager, plugin->ui_id);
 
 	gtk_ui_manager_remove_action_group (manager, plugin->ui_action_group);
+
+	gtk_ui_manager_ensure_update (manager);
 }
 
 static void
