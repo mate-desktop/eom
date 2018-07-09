@@ -136,14 +136,16 @@ _gtk_grid_append_prop_line (GtkGrid *grid, GtkWidget *sibling,
 	gtk_label_set_markup (GTK_LABEL(label), markup);
 	g_free (markup);
 
-	gtk_misc_set_alignment (GTK_MISC (label), 0.0, 1.0);
+	gtk_label_set_xalign (GTK_LABEL (label), 0);
+	gtk_label_set_yalign (GTK_LABEL (label), 1);
 	gtk_box_pack_start (GTK_BOX (box), label, FALSE, FALSE, 0);
 
 	if (G_LIKELY (data_label != NULL)) {
 		*data_label = gtk_label_new (NULL);
 		gtk_label_set_selectable (GTK_LABEL (*data_label), TRUE);
 		gtk_label_set_line_wrap (GTK_LABEL(*data_label), TRUE);
-		gtk_misc_set_alignment (GTK_MISC (*data_label), 0.0, 0.0);
+		gtk_label_set_xalign (GTK_LABEL (*data_label), 0);
+		gtk_label_set_yalign (GTK_LABEL (*data_label), 0);
 		// Add a small margin to make it a sublabel to the first label
 		gtk_widget_set_margin_start (*data_label, 12);
 		gtk_box_pack_end (GTK_BOX(box), *data_label, FALSE, FALSE, 0);
