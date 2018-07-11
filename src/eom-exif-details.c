@@ -257,9 +257,12 @@ eom_exif_details_init (EomExifDetails *exif_details)
 
 	/* Value column */
 	cell = gtk_cell_renderer_text_new ();
-        column = gtk_tree_view_column_new_with_attributes (_("Value"), cell,
-                                                           "text", MODEL_COLUMN_VALUE,
-							    NULL);
+	g_object_set (cell,
+	              "editable", TRUE,
+	              NULL);
+	column = gtk_tree_view_column_new_with_attributes (_("Value"), cell,
+	                                                   "text", MODEL_COLUMN_VALUE,
+	                                                   NULL);
 	gtk_tree_view_append_column (GTK_TREE_VIEW (exif_details), column);
 
 	eom_exif_details_reset (exif_details);
