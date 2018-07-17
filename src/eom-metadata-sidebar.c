@@ -271,6 +271,11 @@ eom_metadata_sidebar_update_general_section (EomMetadataSidebar *sidebar)
 	str = g_file_get_basename (parent_file);
 	gtk_button_set_label (GTK_BUTTON (priv->folder_button), str);
 	g_free (str);
+
+	str = g_file_get_path (parent_file);
+	gtk_widget_set_tooltip_text (GTK_WIDGET (priv->folder_button), str);
+	g_free (str);
+
 	g_object_unref (parent_file);
 }
 
@@ -520,8 +525,6 @@ eom_metadata_sidebar_init (EomMetadataSidebar *sidebar)
 	gtk_widget_set_margin_start (priv->folder_button, 12);
 	gtk_widget_set_margin_end (priv->folder_button, 12);
 	gtk_widget_set_margin_top (priv->folder_button, 3);
-	gtk_widget_set_tooltip_text (priv->folder_button, _("Show the folder "
-	                             "which contains this file in the file manager"));
 	gtk_box_pack_end (GTK_BOX (label), priv->folder_button, FALSE, FALSE, 0);
 }
 
