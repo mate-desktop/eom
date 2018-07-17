@@ -3036,6 +3036,15 @@ eom_window_cmd_print (GtkAction *action, gpointer user_data)
 	eom_window_print (window);
 }
 
+/**
+ * eom_window_get_properties_dialog:
+ * @window: a #EomWindow
+ *
+ * Gets the @window property dialog. The widget will be built on the first call to this function.
+ *
+ * Returns: (transfer none): a #GtkDialog.
+ */
+
 EomDialog*
 eom_window_get_properties_dialog (EomWindow *window)
 {
