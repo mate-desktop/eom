@@ -116,7 +116,7 @@ static void
 pd_update_general_tab (EomPropertiesDialog *prop_dlg,
 		       EomImage            *image)
 {
-	gchar *bytes_str, *dir_str;
+	gchar *bytes_str, *dir_str, *dir_str_long;
 	gchar *width_str, *height_str;
 	GFile *file, *parent_file;
 	GFileInfo *file_info;
@@ -174,6 +174,11 @@ pd_update_general_tab (EomPropertiesDialog *prop_dlg,
 	dir_str = g_file_get_basename (parent_file);
 	gtk_button_set_label (GTK_BUTTON (prop_dlg->priv->folder_button),
 			      dir_str);
+
+	dir_str_long = g_file_get_path (parent_file);
+	gtk_widget_set_tooltip_text (GTK_WIDGET (prop_dlg->priv->folder_button),
+	                             dir_str_long);
+
 	g_free (prop_dlg->priv->folder_button_uri);
 	prop_dlg->priv->folder_button_uri = g_file_get_uri (parent_file);
 	g_object_unref (parent_file);
@@ -181,6 +186,7 @@ pd_update_general_tab (EomPropertiesDialog *prop_dlg,
 	g_free (type_str);
 	g_free (bytes_str);
 	g_free (dir_str);
+	g_free (dir_str_long);
 }
 
 #if HAVE_EXEMPI
@@ -676,10 +682,6 @@ eom_properties_dialog_init (EomPropertiesDialog *prop_dlg)
 			  "clicked",
 			  G_CALLBACK (pd_folder_button_clicked_cb),
 			  prop_dlg);
-	gtk_widget_set_tooltip_text (GTK_WIDGET (priv->folder_button),
-				     _("Show the folder which contains this "
-				       "file in the file manager"));
-	priv->folder_button_uri = NULL;
 
 	gtk_widget_set_size_request (priv->thumbnail_image, 100, 100);
 
