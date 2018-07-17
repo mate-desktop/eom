@@ -1,3 +1,51 @@
+### eom 1.21.1
+
+    EomWindow: silence a introspection warning
+    Convert to G_DEFINE_TYPE_WITH_PRIVATE
+    EomApplication: Make most members private
+    Add new plugin hook for per-application plugins
+    Make EomWindow a GtkApplicationWindow
+    sidebar: show complete directory in button tooltip
+    properties-dialog: show complete directory in button tooltip
+    Make the URI-label in the properties dialog a button showing the folder
+    exif-details: make value column selectable
+    EomExifDetails: Take Exif IFD into account when creating hash keys
+    Place GPS Exif tags into their own subcategory
+    Reformat Exif tags for GPS position to be better understandable
+    Make sure GPS Exif tags are named and ordered correctly
+    Use GdkPixbuf's "orientation" feature as fallback for autorotation
+    EogScrollView: Implement simple two-pass filtering
+    EomScrollView: Use better downscaling filter
+    Remove unneeded finalize() from EomListStore
+    Update plugins to use EomWindowActivatable interface
+    Add our own activatable interface to EomWindow
+    Replace gdk_spawn_command_line_on_screen()
+    sidebar: replace deprecated gtk_misc_set_alignment
+    EomWindow: Simplify metadata sidebar title
+    EomSidebar: Set orientation property via g_object_new
+    Replace remaining uses of margin-left and margin-right properties
+    EomMetadataSidebar: Allow filename to be wrapped at char boundaries
+    sidebar: fix a deprecation
+    EomMetadataSidebar: Fix deprecation warning with newer GTK+
+    MetadataSidebar: Add a tooltip to the folder button
+    MetadataSidebar: Change layout of the data values
+    Make metadata values in MetadataSidebar selectable
+    Fix build when not building with libexif and/or exempi
+    Don't force-enable the sidebar on startup once a page is added
+    Make Exif/XMP summaries available as sidebar
+    Drop now unneeded TotemScrSaver
+    Use GtkApplication to inhibit the screensaver during slideshows
+    Ensure UI action sensitivity is set at least once
+    Remove leftover DBus service description file
+    Remove spurious g_object_unref
+    reload: ensure that pending updates to UI are complete
+    Port EomApplication to GtkApplication
+    Make the displayed EomImage a property of EomScrollView
+    EomPropertiesDialog: Make details view expand vertically
+    Enable more Drag&Drop actions when eom is drag source
+    Use new DBus API to show the current image in the file browser
+    Add an "Open containing folder" command
+
 ### eom 1.21.0
 
     sync with transifex
