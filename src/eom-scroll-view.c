@@ -609,10 +609,7 @@ scroll_to (EomScrollView *view, int x, int y, gboolean change_adjustments)
 
 	window = gtk_widget_get_window (GTK_WIDGET (priv->display));
 
-	/* Scroll the window area and process exposure synchronously. */
-
 	gdk_window_scroll (window, -xofs, -yofs);
-	gdk_window_process_updates (window, TRUE);
 
  out:
 	if (!change_adjustments)
