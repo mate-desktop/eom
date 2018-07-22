@@ -2300,7 +2300,6 @@ close_confirmation_dialog_response_handler (EomCloseConfirmationDialog *dlg,
 		case GTK_RESPONSE_YES:
 			/* save selected images */
 			selected_images = eom_close_confirmation_dialog_get_selected_images (dlg);
-			eom_close_confirmation_dialog_set_sensitive (dlg, FALSE);
 			if (eom_window_save_images (window, selected_images)) {
 				g_signal_connect (priv->save_job,
 							  "finished",
