@@ -72,8 +72,5 @@ const GList	*eom_close_confirmation_dialog_get_unsaved_images	(EomCloseConfirmat
 G_GNUC_INTERNAL
 GList		*eom_close_confirmation_dialog_get_selected_images	(EomCloseConfirmationDialog *dlg);
 
-G_GNUC_INTERNAL
-void		 eom_close_confirmation_dialog_set_sensitive		(EomCloseConfirmationDialog *dlg, gboolean value);
-
 #endif /* __EOM_CLOSE_CONFIRMATION_DIALOG_H__ */
 

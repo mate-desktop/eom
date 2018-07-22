@@ -676,17 +676,3 @@ eom_close_confirmation_dialog_get_unsaved_images (EomCloseConfirmationDialog *dl
 	return dlg->priv->unsaved_images;
 }
 
-void
-eom_close_confirmation_dialog_set_sensitive (EomCloseConfirmationDialog *dlg,
-					     gboolean value)
-{
-	GtkWidget *action_area;
-
-	g_return_if_fail (EOM_IS_CLOSE_CONFIRMATION_DIALOG (dlg));
-
-	action_area = gtk_dialog_get_action_area (GTK_DIALOG (dlg));
-	gtk_widget_set_sensitive (action_area, value);
-
-	if (dlg->priv->toggle_renderer)
-		gtk_cell_renderer_toggle_set_activatable (GTK_CELL_RENDERER_TOGGLE (dlg->priv->toggle_renderer), value);
-}
