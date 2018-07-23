@@ -96,6 +96,7 @@ main (int argc, char **argv)
 {
 	GError *error = NULL;
 	GOptionContext *ctx;
+	GFile *css_file;
 	GtkCssProvider *provider;
 
 	bindtextdomain (GETTEXT_PACKAGE, EOM_LOCALE_DIR);
@@ -140,10 +141,11 @@ main (int argc, char **argv)
 	eom_thumbnail_init ();
 
 	/* Load special style properties for EomThumbView's scrollbar */
+	css_file = g_file_new_for_uri ("resource:///org/mate/eom/ui/eom.css");
 	provider = gtk_css_provider_new ();
-	if (G_UNLIKELY (!gtk_css_provider_load_from_path(provider,
-							 EOM_CSS_FILE_PATH,
-							 &error)))
+	if (G_UNLIKELY (!gtk_css_provider_load_from_file(provider,
+	                                                 css_file,
+	                                                 &error)))
 	{
 		g_critical ("Could not load CSS data: %s", error->message);
 		g_clear_error (&error);
