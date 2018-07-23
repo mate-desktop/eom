@@ -25,21 +25,17 @@ ui_DATA = \
 	eom-image-properties-dialog.ui \
 	eom-multiple-save-as-dialog.ui \
 	eom-preferences-dialog.ui \
-	eom-ui.xml \
 	eom-toolbar.xml
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = eom.pc
 
-themedir = $(pkgdatadir)
-theme_DATA = \
-        eom.css
-
 EXTRA_DIST = \
-        $(theme_DATA) \
-        $(ui_DATA) \
-        $(DESKTOP_IN_FILES) \
-        $(appdata_in_files)
+	$(ui_DATA) \
+	eom.css			\
+	eom-ui.xml		\
+	$(DESKTOP_IN_FILES) \
+	$(appdata_in_files)
 
 CLEANFILES = \
         $(appdata_DATA)

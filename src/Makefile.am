@@ -157,7 +157,9 @@ libeom_la_LIBADD += \
 	$(X11_LIBS)
 endif
 
-eom_SOURCES = main.c
+eom_SOURCES = \
+	main.c \
+	eom-resources.c
 
 eom_CFLAGS = 							\
 	-I$(top_srcdir)/cut-n-paste/toolbar-editor		\
@@ -177,7 +179,12 @@ eom_LDADD = 				\
 BUILT_SOURCES = 			\
 	eom-enum-types.c		\
 	eom-enum-types.h		\
+	eom-resources.c			\
 	$(MARSHAL_OUTPUT)
+
+eom-resources.c: eom.gresource.xml $(shell $(GLIB_COMPILE_RESOURCES) --sourcedir=$(top_srcdir)/data --generate-dependencies eom.gresource.xml)
+	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) "$<" --target=$@ \
+         --sourcedir=$(top_srcdir)/data --c-name _eom --generate-source
 
 eom-enum-types.h: eom-enum-types.h.template $(INST_H_FILES) $(GLIB_MKENUMS)
 	$(AM_V_GEN)(cd $(srcdir) && $(GLIB_MKENUMS) --template eom-enum-types.h.template $(INST_H_FILES)) > $@
@@ -192,6 +199,7 @@ eom-marshal.c: eom-marshal.list $(GLIB_GENMARSHAL)
 	$(AM_V_GEN)$(GLIB_GENMARSHAL) $< --body --header --prefix=eom_marshal > $@
 
 EXTRA_DIST = 				\
+	eom.gresource.xml		\
 	eom-enum-types.h.template	\
 	eom-enum-types.c.template	\
 	eom-marshal.list

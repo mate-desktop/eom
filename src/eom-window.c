@@ -4380,9 +4380,9 @@ eom_window_construct_ui (EomWindow *window)
 
 	gtk_ui_manager_insert_action_group (priv->ui_mgr, priv->actions_collection, 0);
 
-	if (!gtk_ui_manager_add_ui_from_file (priv->ui_mgr,
-					      EOM_DATA_DIR"/eom-ui.xml",
-					      &error)) {
+	if (!gtk_ui_manager_add_ui_from_resource (priv->ui_mgr,
+	                                          "/org/mate/eom/ui/eom-ui.xml",
+	                                          &error)) {
 		g_warning ("building menus failed: %s", error->message);
 		g_error_free (error);
 	}
