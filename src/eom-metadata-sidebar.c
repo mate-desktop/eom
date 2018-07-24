@@ -83,6 +83,10 @@ struct _EomMetadataSidebarPrivate {
 	GtkWidget *date_label;
 	GtkWidget *time_label;
 #endif
+
+#if HAVE_METADATA
+	GtkWidget *details_button;
+#endif
 };
 
 G_DEFINE_TYPE_WITH_PRIVATE(EomMetadataSidebar, eom_metadata_sidebar, GTK_TYPE_SCROLLED_WINDOW)
@@ -289,6 +293,24 @@ _folder_label_clicked_cb (GtkLabel *label, const gchar *uri, gpointer user_data)
 	g_object_unref (file);
 }
 
+#ifdef HAVE_METADATA
+static void
+_details_button_clicked_cb (GtkButton *button, gpointer user_data)
+{
+	EomMetadataSidebarPrivate *priv = EOM_METADATA_SIDEBAR(user_data)->priv;
+	EomDialog *dlg;
+
+	g_return_if_fail (priv->parent_window != NULL);
+
+	dlg = eom_window_get_properties_dialog (
+					EOM_WINDOW (priv->parent_window));
+	g_return_if_fail (dlg != NULL);
+	eom_properties_dialog_set_page (EOM_PROPERTIES_DIALOG (dlg),
+					EOM_PROPERTIES_DIALOG_PAGE_DETAILS);
+	eom_dialog_show (dlg);
+}
+#endif /* HAVE_METADATA */
+
 static void
 eom_metadata_sidebar_set_parent_window (EomMetadataSidebar *sidebar,
 					EomWindow *window)
@@ -322,6 +344,11 @@ eom_metadata_sidebar_init (EomMetadataSidebar *sidebar)
 
 	g_signal_connect (priv->folder_label, "activate-link",
 	                  G_CALLBACK (_folder_label_clicked_cb), sidebar);
+
+#if HAVE_METADATA
+	g_signal_connect (priv->details_button, "clicked",
+			  G_CALLBACK (_details_button_clicked_cb), sidebar);
+#endif /* HAVE_METADATA */
 }
 
 static void
@@ -437,6 +464,11 @@ eom_metadata_sidebar_class_init (EomMetadataSidebarClass *klass)
 	gtk_widget_class_bind_template_child_private (widget_class,
 						      EomMetadataSidebar,
 						      time_label);
+#if HAVE_METADATA
+	gtk_widget_class_bind_template_child_private (widget_class,
+						      EomMetadataSidebar,
+						      details_button);
+#endif /* HAVE_METADATA */
 }
 
 
