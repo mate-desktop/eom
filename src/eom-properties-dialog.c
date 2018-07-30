@@ -569,13 +569,11 @@ eom_properties_dialog_class_init (EomPropertiesDialogClass *klass)
 							      G_PARAM_READWRITE |
 							      G_PARAM_STATIC_STRINGS));
 
-	gchar* data;
-	gsize data_size;
-	g_file_get_contents(g_build_filename (EOM_DATA_DIR, "eom-image-properties-dialog.ui", NULL), &data, &data_size, NULL);
-	GBytes *bytes = g_bytes_new_static(data, data_size);
-	gtk_widget_class_set_template((GtkWidgetClass *) klass, bytes);
-
 	GtkWidgetClass *wklass = (GtkWidgetClass*) klass;
+
+	gtk_widget_class_set_template_from_resource (wklass,
+	                                             "/org/mate/eom/ui/eom-image-properties-dialog.ui");
+
 	gtk_widget_class_bind_template_child_private(wklass,
 						     EomPropertiesDialog,
 						     notebook);
