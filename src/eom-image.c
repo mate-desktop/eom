@@ -2040,14 +2040,14 @@ eom_image_get_exif_info (EomImage *img)
 gpointer
 eom_image_get_xmp_info (EomImage *img)
 {
-	EomImagePrivate *priv;
  	gpointer data = NULL;
 
  	g_return_val_if_fail (EOM_IS_IMAGE (img), NULL);
 
+#ifdef HAVE_EXEMPI
+	EomImagePrivate *priv;
  	priv = img->priv;
 
-#ifdef HAVE_EXEMPI
 	g_mutex_lock (&priv->status_mutex);
  	data = (gpointer) xmp_copy (priv->xmp);
 	g_mutex_unlock (&priv->status_mutex);
