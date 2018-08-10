@@ -3729,10 +3729,10 @@ static const GtkToggleActionEntry toggle_entries_window[] = {
 	{ "ViewStatusbar", NULL, N_("_Statusbar"), NULL,
 	  N_("Changes the visibility of the statusbar in the current window"),
 	  G_CALLBACK (eom_window_cmd_show_hide_bar), TRUE },
-	{ "ViewImageCollection", "eom-image-collection", N_("_Image Collection"), "F9",
+	{ "ViewImageCollection", "eom-image-collection", N_("_Image Collection"), "<control>F9",
 	  N_("Changes the visibility of the image collection pane in the current window"),
 	  G_CALLBACK (eom_window_cmd_show_hide_bar), TRUE },
-	{ "ViewSidebar", NULL, N_("Side _Pane"), "<control>F9",
+	{ "ViewSidebar", NULL, N_("Side _Pane"), "F9",
 	  N_("Changes the visibility of the side pane in the current window"),
 	  G_CALLBACK (eom_window_cmd_show_hide_bar), TRUE },
 };
