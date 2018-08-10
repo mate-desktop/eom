@@ -534,6 +534,8 @@ eom_thumbnail_init (void)
 	}
 
 	if (frame == NULL) {
-		frame = gdk_pixbuf_new_from_file (EOM_DATA_DIR "/pixmaps/thumbnail-frame.png", NULL);
+		frame = gdk_pixbuf_new_from_resource (
+	                    "/org/mate/eom/ui/pixmaps/thumbnail-frame.png",
+	                    NULL);
 	}
 }
