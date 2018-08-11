@@ -3747,7 +3747,7 @@ static const GtkActionEntry action_entries_image[] = {
 	{ "ImageSaveAs", "document-save-as", N_("Save _As…"), "<control><shift>s",
 	  N_("Save the selected images with a different name"),
 	  G_CALLBACK (eom_window_cmd_save_as) },
-	{ "ImageOpenContainingFolder", GTK_STOCK_DIRECTORY, N_("Open Containing _Folder"), NULL,
+	{ "ImageOpenContainingFolder", "folder", N_("Open Containing _Folder"), NULL,
 	  N_("Show the folder which contains this file in the file manager"),
 	  G_CALLBACK (eom_window_cmd_open_containing_folder) },
 	{ "ImagePrint", "document-print", N_("_Print…"), "<control>p",
