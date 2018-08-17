@@ -1,66 +1,116 @@
+### eom 1.21.2
+
+  * docs: remove eom-dialog.xml reference to fix distcheck
+  * Translations update
+  * tx: update source file
+  * EomMetadataSidebar: Make header include guard actually work
+  * EomWindow: Switch keyboard shortcuts for sidebar and gallery
+  * Tweak sidebar ui
+  * EomPropertiesDialog: Use standard::display-name when showing the parent
+  * EomMetadataSidebar: Use standard::display-name when showing the parent
+  * Fix GResource dependency calculation for out-of-tree builds
+  * Make sure the libpeas-gtk dependency isn't optimized away
+  * Remove EomDialog helper class
+  * EomPreferencesDialog: Convert to GtkBuilder template
+  * EomThumbnail: Load thumbnail frame from a GResource
+  * Load EomMultipleSaveAsDialog from GResource
+  * eom-window: fix deprecated GtkStock usage
+  * Fix build without XMP support
+  * Load eom-image-properties-dialog.ui with a gresource
+  * properties-dialog: Port to gtk_show_uri_on_window
+  * EomPropertiesDialog: Convert to GtkBuilder template
+  * EomPropertiesDialog: Remove unused private members
+  * Fix metadata sidebar with libexif disabled
+  * Fix API docs build without libexif
+  * EomMetadataSidebar: fix --without-libexif build
+  * EomMetadataSidebar: Clear folder label if no image is set
+  * EomSidebar: Increase margin at the sides of the sidebar
+  * EomSidebar: Center and reformat page selector
+  * EomMetadataSidebar: Fix leaked strings
+  * metadata-sidebar: add the details button again
+  * EogMetadataSidebar: Try to unclutter and improve the sidebar's look
+  * GResource: free css_file
+  * Initial GResource migration
+  * Starting with eom.css and eom-ui.xml
+  * EomExifUtil: Fix build with newer GCC
+  * EomExifUtil: Fix build with older GCCs
+  * EomExifUtil: Allow freeform formatting of date strings
+  * EomMetadataDetails: Improve fractional GPS coordinates support
+  * EomPropertiesDialog: Separate Exif/XMP-specific widgets from generic ones
+  * EomMetadataDetails: Don't install header file
+  * EomExifDetails: Rename to EomMetadataDetails
+  * Drop eom_close_confirmation_dialog_set_sensitive
+  * scroll-view: Remove a gdk_window_process_updates call
+  * util: Port to gtk_show_uri_on_window
+  * EomImage: Make sure to emit size-prepared after applying orientation
+  * EomImage: Fix too early size-prepared emission
+  * EomImage: Slight optimization of private data structure
+  * drop forgotten gtkrc file
+  * css: drop obsolete old css language
+
 ### eom 1.21.1
 
-    EomWindow: silence a introspection warning
-    Convert to G_DEFINE_TYPE_WITH_PRIVATE
-    EomApplication: Make most members private
-    Add new plugin hook for per-application plugins
-    Make EomWindow a GtkApplicationWindow
-    sidebar: show complete directory in button tooltip
-    properties-dialog: show complete directory in button tooltip
-    Make the URI-label in the properties dialog a button showing the folder
-    exif-details: make value column selectable
-    EomExifDetails: Take Exif IFD into account when creating hash keys
-    Place GPS Exif tags into their own subcategory
-    Reformat Exif tags for GPS position to be better understandable
-    Make sure GPS Exif tags are named and ordered correctly
-    Use GdkPixbuf's "orientation" feature as fallback for autorotation
-    EogScrollView: Implement simple two-pass filtering
-    EomScrollView: Use better downscaling filter
-    Remove unneeded finalize() from EomListStore
-    Update plugins to use EomWindowActivatable interface
-    Add our own activatable interface to EomWindow
-    Replace gdk_spawn_command_line_on_screen()
-    sidebar: replace deprecated gtk_misc_set_alignment
-    EomWindow: Simplify metadata sidebar title
-    EomSidebar: Set orientation property via g_object_new
-    Replace remaining uses of margin-left and margin-right properties
-    EomMetadataSidebar: Allow filename to be wrapped at char boundaries
-    sidebar: fix a deprecation
-    EomMetadataSidebar: Fix deprecation warning with newer GTK+
-    MetadataSidebar: Add a tooltip to the folder button
-    MetadataSidebar: Change layout of the data values
-    Make metadata values in MetadataSidebar selectable
-    Fix build when not building with libexif and/or exempi
-    Don't force-enable the sidebar on startup once a page is added
-    Make Exif/XMP summaries available as sidebar
-    Drop now unneeded TotemScrSaver
-    Use GtkApplication to inhibit the screensaver during slideshows
-    Ensure UI action sensitivity is set at least once
-    Remove leftover DBus service description file
-    Remove spurious g_object_unref
-    reload: ensure that pending updates to UI are complete
-    Port EomApplication to GtkApplication
-    Make the displayed EomImage a property of EomScrollView
-    EomPropertiesDialog: Make details view expand vertically
-    Enable more Drag&Drop actions when eom is drag source
-    Use new DBus API to show the current image in the file browser
-    Add an "Open containing folder" command
+  * EomWindow: silence a introspection warning
+  * Convert to G_DEFINE_TYPE_WITH_PRIVATE
+  * EomApplication: Make most members private
+  * Add new plugin hook for per-application plugins
+  * Make EomWindow a GtkApplicationWindow
+  * sidebar: show complete directory in button tooltip
+  * properties-dialog: show complete directory in button tooltip
+  * Make the URI-label in the properties dialog a button showing the folder
+  * exif-details: make value column selectable
+  * EomExifDetails: Take Exif IFD into account when creating hash keys
+  * Place GPS Exif tags into their own subcategory
+  * Reformat Exif tags for GPS position to be better understandable
+  * Make sure GPS Exif tags are named and ordered correctly
+  * Use GdkPixbuf's "orientation" feature as fallback for autorotation
+  * EogScrollView: Implement simple two-pass filtering
+  * EomScrollView: Use better downscaling filter
+  * Remove unneeded finalize() from EomListStore
+  * Update plugins to use EomWindowActivatable interface
+  * Add our own activatable interface to EomWindow
+  * Replace gdk_spawn_command_line_on_screen()
+  * sidebar: replace deprecated gtk_misc_set_alignment
+  * EomWindow: Simplify metadata sidebar title
+  * EomSidebar: Set orientation property via g_object_new
+  * Replace remaining uses of margin-left and margin-right properties
+  * EomMetadataSidebar: Allow filename to be wrapped at char boundaries
+  * sidebar: fix a deprecation
+  * EomMetadataSidebar: Fix deprecation warning with newer GTK+
+  * MetadataSidebar: Add a tooltip to the folder button
+  * MetadataSidebar: Change layout of the data values
+  * Make metadata values in MetadataSidebar selectable
+  * Fix build when not building with libexif and/or exempi
+  * Don't force-enable the sidebar on startup once a page is added
+  * Make Exif/XMP summaries available as sidebar
+  * Drop now unneeded TotemScrSaver
+  * Use GtkApplication to inhibit the screensaver during slideshows
+  * Ensure UI action sensitivity is set at least once
+  * Remove leftover DBus service description file
+  * Remove spurious g_object_unref
+  * reload: ensure that pending updates to UI are complete
+  * Port EomApplication to GtkApplication
+  * Make the displayed EomImage a property of EomScrollView
+  * EomPropertiesDialog: Make details view expand vertically
+  * Enable more Drag&Drop actions when eom is drag source
+  * Use new DBus API to show the current image in the file browser
+  * Add an "Open containing folder" command
 
 ### eom 1.21.0
 
-    sync with transifex
-    toolbar: add missing popup menu for launching toolbar editor
-    sidebar: replace deprecated gtk_menu_popup
-    editable-toolbar: replace deprecated gtk_menu_popup
-    editable-toolbar: replace deprecated gtk_drag_begin
-    svg: Fix offset coordinates when transforming SVG images on HiDPI displays
-    require libpeas 1.8.0
-    plugins: Use Python 3.x for Python plugins
-    replace deprecated gdk_flush
-    fix some -Wincompatible-pointer-types warnings
-    Scale HiDPI images correctly
-    eom-window.c: avoid deprecated GtkButton:use-stock
-    avoid deprecated GtkStock
+  * Translations update
+  * toolbar: add missing popup menu for launching toolbar editor
+  * sidebar: replace deprecated gtk_menu_popup
+  * editable-toolbar: replace deprecated gtk_menu_popup
+  * editable-toolbar: replace deprecated gtk_drag_begin
+  * svg: Fix offset coordinates when transforming SVG images on HiDPI displays
+  * require libpeas 1.8.0
+  * plugins: Use Python 3.x for Python plugins
+  * replace deprecated gdk_flush
+  * fix some -Wincompatible-pointer-types warnings
+  * Scale HiDPI images correctly
+  * eom-window.c: avoid deprecated GtkButton:use-stock
+  * avoid deprecated GtkStock
 
 ### eom 1.20.0
 
