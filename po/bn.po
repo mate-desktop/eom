@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-14 08:51+0100\n"
+"POT-Creation-Date: 2018-07-17 22:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Martin Wimpress <code@flexion.org>, 2018\n"
 "Language-Team: Bengali (https://www.transifex.com/mate/teams/13566/bn/)\n"
@@ -25,32 +25,32 @@ msgstr ""
 #. * produce duplicates, but don't worry about it. If your language
 #. * normally has a mnemonic at the start, please use the _. If not,
 #. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:924
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:930
 #, c-format
 msgid "Show “_%s”"
 msgstr "“_%s” প্রদর্শন করুন"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1390
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1396
 msgid "_Move on Toolbar"
 msgstr "টুল-বারের মধ্যে স্থান পরিবর্তন করুন (_M)"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1391
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1397
 msgid "Move the selected item on the toolbar"
 msgstr "টুল-বারের মধ্যে নির্বাচিত বস্তুর স্থান পরিবর্তন করুন"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1392
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1398
 msgid "_Remove from Toolbar"
 msgstr "টুলবার থেকে মুছে ফেলুন (_R)"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1393
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1399
 msgid "Remove the selected item from the toolbar"
 msgstr "টুল-বার থেকে নির্বাচিত বস্তু মুছে ফেলুন"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1394
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1400
 msgid "_Delete Toolbar"
 msgstr "টুলবার মুছে ফেলুন (_D)"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1395
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1401
 msgid "Remove the selected toolbar"
 msgstr "নির্বাচিত টুলবার মুছে ফেলুন"
 
@@ -58,7 +58,7 @@ msgstr "নির্বাচিত টুলবার মুছে ফেলু
 msgid "Separator"
 msgstr "বিভাজক"
 
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2555
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2584
 msgid "Eye of MATE"
 msgstr "জিনোমের চোখ"
 
@@ -73,7 +73,7 @@ msgid ""
 "subsequent images in the directory the image was loaded from. </p>"
 msgstr ""
 
-#: ../data/eom.desktop.in.in.h:1 ../src/main.c:70 ../src/main.c:264
+#: ../data/eom.desktop.in.in.h:1 ../src/main.c:65 ../src/main.c:163
 msgid "Eye of MATE Image Viewer"
 msgstr "জিনোম চোখের ছবি প্রদর্শক"
 
@@ -94,18 +94,22 @@ msgid "_Next"
 msgstr "পরবর্তী (_N)"
 
 #: ../data/eom-image-properties-dialog.ui.h:4
+#: ../src/eom-metadata-sidebar.c:502
 msgid "Name:"
 msgstr "নাম:"
 
 #: ../data/eom-image-properties-dialog.ui.h:5
+#: ../src/eom-metadata-sidebar.c:504
 msgid "Width:"
 msgstr "প্রস্থ:"
 
 #: ../data/eom-image-properties-dialog.ui.h:6
+#: ../src/eom-metadata-sidebar.c:506
 msgid "Height:"
 msgstr "উচ্চতা:"
 
 #: ../data/eom-image-properties-dialog.ui.h:7
+#: ../src/eom-metadata-sidebar.c:508
 msgid "Type:"
 msgstr "ধরন:"
 
@@ -114,66 +118,82 @@ msgid "Bytes:"
 msgstr "বাইট:"
 
 #: ../data/eom-image-properties-dialog.ui.h:9
+#: ../src/eom-metadata-sidebar.c:562
 msgid "Location:"
 msgstr "অবস্থান:"
 
 #: ../data/eom-image-properties-dialog.ui.h:10
+#: ../src/eom-metadata-sidebar.c:500
 msgid "General"
 msgstr "সাধারণ"
 
 #: ../data/eom-image-properties-dialog.ui.h:11
+#: ../src/eom-metadata-sidebar.c:534
 msgid "Aperture Value:"
 msgstr "অ্যাপারচার মান:"
 
 #: ../data/eom-image-properties-dialog.ui.h:12
+#: ../src/eom-metadata-sidebar.c:537
 msgid "Exposure Time:"
 msgstr "প্রদর্শনের সময়:"
 
 #: ../data/eom-image-properties-dialog.ui.h:13
+#: ../src/eom-metadata-sidebar.c:540
 msgid "Focal Length:"
 msgstr "ফোকাস দুরত্ব:"
 
 #: ../data/eom-image-properties-dialog.ui.h:14
+#: ../src/eom-metadata-sidebar.c:542
 msgid "Flash:"
 msgstr "ঝলক:"
 
 #: ../data/eom-image-properties-dialog.ui.h:15
+#: ../src/eom-metadata-sidebar.c:546
 msgid "ISO Speed Rating:"
 msgstr "ISO গতি নির্ধারক:"
 
 #: ../data/eom-image-properties-dialog.ui.h:16
+#: ../src/eom-metadata-sidebar.c:549
 msgid "Metering Mode:"
 msgstr "মিটারিং মোড:"
 
 #: ../data/eom-image-properties-dialog.ui.h:17
+#: ../src/eom-metadata-sidebar.c:552
 msgid "Camera Model:"
 msgstr "ক্যামেরা মডেল:"
 
 #: ../data/eom-image-properties-dialog.ui.h:18
+#: ../src/eom-metadata-sidebar.c:554
 msgid "Date/Time:"
 msgstr "তারিখ/সময়:"
 
 #: ../data/eom-image-properties-dialog.ui.h:19
+#: ../src/eom-metadata-sidebar.c:559
 msgid "Description:"
 msgstr "বর্ণনা:"
 
 #: ../data/eom-image-properties-dialog.ui.h:20
+#: ../src/eom-metadata-sidebar.c:565
 msgid "Keywords:"
 msgstr "মূলশব্দ:"
 
 #: ../data/eom-image-properties-dialog.ui.h:21
+#: ../src/eom-metadata-sidebar.c:567
 msgid "Author:"
 msgstr "লেখক:"
 
 #: ../data/eom-image-properties-dialog.ui.h:22
+#: ../src/eom-metadata-sidebar.c:570
 msgid "Copyright:"
 msgstr "স্বত্বাধিকার:"
 
 #: ../data/eom-image-properties-dialog.ui.h:23
+#: ../src/eom-metadata-sidebar.c:573
 msgid "Details"
 msgstr "বিস্তারিত"
 
 #: ../data/eom-image-properties-dialog.ui.h:24
+#: ../src/eom-metadata-sidebar.c:530
 msgid "Metadata"
 msgstr "মেটাডাটা"
 
@@ -570,12 +590,12 @@ msgstr "ডবল ক্লিক করে পর্দা জুড়ে প্�
 msgid "Activate fullscreen mode with double-click"
 msgstr "ডবল ক্লিক করে পর্দা জুড়ে প্রদর্শন প্রক্রিয়া সক্রিয় করুন"
 
-#: ../plugins/reload/eom-reload-plugin.c:44
+#: ../plugins/reload/eom-reload-plugin.c:45
 #: ../plugins/reload/reload.plugin.desktop.in.h:1
 msgid "Reload Image"
 msgstr "ছবি পুনরায় লোড করুন"
 
-#: ../plugins/reload/eom-reload-plugin.c:44
+#: ../plugins/reload/eom-reload-plugin.c:45
 #: ../plugins/reload/reload.plugin.desktop.in.h:2
 msgid "Reload current image"
 msgstr "বর্তমান ছবিটি পুনরায় লোড করুন"
@@ -588,28 +608,24 @@ msgstr " স্ট্যাটাসবারের তারিখ"
 msgid "Shows the image date in the window statusbar"
 msgstr "উইন্ডো স্ট্যাটাসবারে ছবির তারিখ প্রদর্শন"
 
-#: ../src/eom-application.c:124
-msgid "Running in fullscreen mode"
-msgstr "পর্দা জুড়ে প্রদর্শিত হচ্ছে"
-
-#: ../src/eom-close-confirmation-dialog.c:159
+#: ../src/eom-close-confirmation-dialog.c:154
 msgid "Close _without Saving"
 msgstr "সংরক্ষণ না করেই বন্ধ করুন (_w)"
 
-#: ../src/eom-close-confirmation-dialog.c:192
+#: ../src/eom-close-confirmation-dialog.c:187
 msgid "Question"
 msgstr "প্রশ্ন"
 
-#: ../src/eom-close-confirmation-dialog.c:373
+#: ../src/eom-close-confirmation-dialog.c:366
 msgid "If you don't save, your changes will be lost."
 msgstr "আপনি যদি সংরক্ষণ না করেন, তবে আপনার পরিবর্তনগুলো বাতিল হয়ে যাবে।"
 
-#: ../src/eom-close-confirmation-dialog.c:409
+#: ../src/eom-close-confirmation-dialog.c:402
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "বন্ধ করার আগে \"%s\" ছবিটিতে করা পরিবর্তনগুলো সংরক্ষণ করা হবে কি?"
 
-#: ../src/eom-close-confirmation-dialog.c:604
+#: ../src/eom-close-confirmation-dialog.c:597
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
@@ -617,20 +633,20 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/eom-close-confirmation-dialog.c:621
+#: ../src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
 msgstr "সংরক্ষণ করার জন্য ছবি নির্বাচন করুন: (_e)"
 
 #. Secondary label
-#: ../src/eom-close-confirmation-dialog.c:640
+#: ../src/eom-close-confirmation-dialog.c:633
 msgid "If you don't save, all your changes will be lost."
 msgstr "আপনি যদি সংরক্ষণ না করেন, তবে আপনার করা সকল পরিবর্তন বাতিল হয়ে যাবে।"
 
-#: ../src/eom-file-chooser.c:127
+#: ../src/eom-file-chooser.c:121
 msgid "File format is unknown or unsupported"
 msgstr "ফাইল ফরম্যাট অজানা বা অসমর্থিত"
 
-#: ../src/eom-file-chooser.c:132
+#: ../src/eom-file-chooser.c:126
 msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
@@ -638,72 +654,73 @@ msgstr ""
 "ফাইলের নামের উপর নির্ভর করে জিনোমের চোখ লিখনযোগ্য ফাইল ফরম্যাট নির্ধারণ করতে"
 " পারেনা।"
 
-#: ../src/eom-file-chooser.c:133
+#: ../src/eom-file-chooser.c:127
 msgid "Please try a different file extension like .png or .jpg."
 msgstr ""
 "অনুগ্রহপূর্বক ফাইলের অন্য একটি এক্সটেনশন যেমন: .png বা .jpg-তে চেষ্টা করুন।"
 
-#: ../src/eom-file-chooser.c:165
+#: ../src/eom-file-chooser.c:159
 msgid "All Files"
 msgstr "সব ফাইল"
 
-#: ../src/eom-file-chooser.c:170
+#: ../src/eom-file-chooser.c:164
 msgid "All Images"
 msgstr "সকল ছবি"
 
 #. Filter name: First description then file extension, eg. "The PNG-Format
 #. (*.png)".
-#: ../src/eom-file-chooser.c:191
+#: ../src/eom-file-chooser.c:185
 #, c-format
 msgid "%s (*.%s)"
 msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
-#: ../src/eom-file-chooser.c:287 ../src/eom-properties-dialog.c:137
-#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:519
+#: ../src/eom-file-chooser.c:281 ../src/eom-metadata-sidebar.c:234
+#: ../src/eom-metadata-sidebar.c:238 ../src/eom-properties-dialog.c:135
+#: ../src/eom-properties-dialog.c:137 ../src/eom-thumb-view.c:518
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/eom-file-chooser.c:457
+#: ../src/eom-file-chooser.c:451
 msgid "Open Image"
 msgstr ""
 
-#: ../src/eom-file-chooser.c:465
+#: ../src/eom-file-chooser.c:459
 msgid "Save Image"
 msgstr "চিত্রটি সংরক্ষণ করুন"
 
-#: ../src/eom-file-chooser.c:473
+#: ../src/eom-file-chooser.c:467 ../src/eom-window.c:3928
 msgid "Open Folder"
 msgstr "ফোল্ডার খুলুন"
 
-#: ../src/eom-image.c:566
+#: ../src/eom-image.c:561
 #, c-format
 msgid "Transformation on unloaded image."
 msgstr "লোড না করা ছবির রূপান্তর।"
 
-#: ../src/eom-image.c:594
+#: ../src/eom-image.c:589
 #, c-format
 msgid "Transformation failed."
 msgstr "রূপান্তর ব্যর্থ।"
 
-#: ../src/eom-image.c:1019
+#: ../src/eom-image.c:1032
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "এই ফাইল ফরম্যাটের জন্য EXIF সমর্থিত নয়।"
 
-#: ../src/eom-image.c:1162
+#: ../src/eom-image.c:1180
 #, c-format
 msgid "Image loading failed."
 msgstr " ছবির লোডিং প্রক্রিয়া ব্যর্থ।"
 
-#: ../src/eom-image.c:1691 ../src/eom-image.c:1793
+#: ../src/eom-image.c:1709 ../src/eom-image.c:1811
 #, c-format
 msgid "No image loaded."
 msgstr "কোন ছবি লোড করা হয়নি।"
 
-#: ../src/eom-image.c:1701 ../src/eom-image.c:1805
+#: ../src/eom-image.c:1719 ../src/eom-image.c:1823
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "অস্থায়ী ফাইল তৈরীতে ব্যর্থ।"
@@ -736,160 +753,84 @@ msgstr " '%s'-তে কোন ছবি পাওয়া যায়নি।"
 msgid "The given locations contain no images."
 msgstr "উল্লিখিত অবস্থানে কোন ছবি নেই।"
 
-#: ../src/eom-exif-details.c:68
+#: ../src/eom-exif-details.c:64
 msgid "Camera"
 msgstr "ক্যামেরা"
 
-#: ../src/eom-exif-details.c:69
+#: ../src/eom-exif-details.c:65
 msgid "Image Data"
 msgstr "ছবির তথ্য"
 
-#: ../src/eom-exif-details.c:70
+#: ../src/eom-exif-details.c:66
 msgid "Image Taking Conditions"
 msgstr "ছবি গ্রহণের শর্তাবলী"
 
-#: ../src/eom-exif-details.c:71
+#: ../src/eom-exif-details.c:67
+msgid "GPS Data"
+msgstr ""
+
+#: ../src/eom-exif-details.c:68
 msgid "Maker Note"
 msgstr "তৈরীকারকের নোট"
 
-#: ../src/eom-exif-details.c:72
+#: ../src/eom-exif-details.c:69
 msgid "Other"
 msgstr "অন্যান্য"
 
-#: ../src/eom-exif-details.c:74
+#: ../src/eom-exif-details.c:71
 msgid "XMP Exif"
 msgstr "XMP এক্সিফ"
 
-#: ../src/eom-exif-details.c:75
+#: ../src/eom-exif-details.c:72
 msgid "XMP IPTC"
 msgstr "XMP IPTC"
 
-#: ../src/eom-exif-details.c:76
+#: ../src/eom-exif-details.c:73
 msgid "XMP Rights Management"
 msgstr "XMP স্বত্বাধিকার কর্তৃপক্ষ"
 
-#: ../src/eom-exif-details.c:77
+#: ../src/eom-exif-details.c:74
 msgid "XMP Other"
 msgstr "XMP অন্যান্য"
 
-#: ../src/eom-exif-details.c:251
+#: ../src/eom-exif-details.c:250
 msgid "Tag"
 msgstr "ট্যাগ"
 
-#: ../src/eom-exif-details.c:258
+#: ../src/eom-exif-details.c:260
 msgid "Value"
 msgstr "মান"
 
+#: ../src/eom-exif-details.c:417
+msgid "North"
+msgstr "উত্তর"
+
+#: ../src/eom-exif-details.c:420
+msgid "East"
+msgstr "পূর্ব"
+
+#: ../src/eom-exif-details.c:423
+msgid "West"
+msgstr "পশ্চিম"
+
+#: ../src/eom-exif-details.c:426
+msgid "South"
+msgstr "দক্ষিণ"
+
 #. A strftime-formatted string, to display the date the image was taken.
-#: ../src/eom-exif-util.c:121 ../src/eom-exif-util.c:161
+#: ../src/eom-exif-util.c:122 ../src/eom-exif-util.c:162
 msgid "%a, %d %B %Y  %X"
 msgstr "%a, %d %B %Y  %X"
 
 #. A strftime-formatted string, to display the date the image was taken, for
 #. the case we don't have the time.
-#: ../src/eom-exif-util.c:155
+#: ../src/eom-exif-util.c:156
 msgid "%a, %d %B %Y"
 msgstr "%a, %d %B %Y"
 
-#: ../src/eom-print.c:371
-msgid "Image Settings"
-msgstr "ছবির সেটিংসমূহ"
-
-#: ../src/eom-print-image-setup.c:828
-msgid "Image"
-msgstr "ছবি"
-
-#: ../src/eom-print-image-setup.c:829
-msgid "The image whose printing properties will be set up"
-msgstr "যে ছবির মুদ্রণ বৈশিষ্টাবলী সেট আপ করা হবে"
-
-#: ../src/eom-print-image-setup.c:835
-msgid "Page Setup"
-msgstr "পৃষ্ঠার সেটআপ"
-
-#: ../src/eom-print-image-setup.c:836
-msgid "The information for the page where the image will be printed"
-msgstr "ছবিটি যেখানে মুদ্রিত হবে সেই পৃষ্ঠার জন্য তথ্যাবলী"
-
-#: ../src/eom-print-image-setup.c:864
-msgid "Position"
-msgstr "অবস্থান"
-
-#: ../src/eom-print-image-setup.c:868
-msgid "_Left:"
-msgstr "বাম: (_L)"
-
-#: ../src/eom-print-image-setup.c:870
-msgid "_Right:"
-msgstr "ডান: (_R)"
-
-#: ../src/eom-print-image-setup.c:871
-msgid "_Top:"
-msgstr "উপরে: (_T)"
-
-#: ../src/eom-print-image-setup.c:872
-msgid "_Bottom:"
-msgstr "নিচে: (_B)"
-
-#: ../src/eom-print-image-setup.c:875
-msgid "C_enter:"
-msgstr "কেন্দ্র: (_e)"
-
-#: ../src/eom-print-image-setup.c:880
-msgid "None"
-msgstr "একটিও নয়"
-
-#: ../src/eom-print-image-setup.c:882
-msgid "Horizontal"
-msgstr "অনুভূমিক "
-
-#: ../src/eom-print-image-setup.c:884
-msgid "Vertical"
-msgstr "উল্লম্ব"
-
-#: ../src/eom-print-image-setup.c:886
-msgid "Both"
-msgstr "উভয়"
-
-#: ../src/eom-print-image-setup.c:902
-msgid "Size"
-msgstr "আকার"
-
-#: ../src/eom-print-image-setup.c:905
-msgid "_Width:"
-msgstr "প্রস্থ: (_W)"
-
-#: ../src/eom-print-image-setup.c:907
-msgid "_Height:"
-msgstr "উচ্চতা: (_H)"
-
-#: ../src/eom-print-image-setup.c:910
-msgid "_Scaling:"
-msgstr "আকার পরিবর্তন: (_S)"
-
-#: ../src/eom-print-image-setup.c:921
-msgid "_Unit:"
-msgstr "একক: (_U)"
-
-#: ../src/eom-print-image-setup.c:926
-msgid "Millimeters"
-msgstr "মিলিমিটার"
-
-#: ../src/eom-print-image-setup.c:928
-msgid "Inches"
-msgstr "ইঞ্চি"
-
-#: ../src/eom-print-image-setup.c:956
-msgid "Preview"
-msgstr "প্রাকদর্শন"
-
-#: ../src/eom-properties-dialog.c:154
-msgid "Unknown"
-msgstr "অজানা"
-
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../src/eom-properties-dialog.c:232
+#: ../src/eom-exif-util.c:253
 #, c-format
 msgid "%.1f (lens)"
 msgstr "%.1f (লেন্স)"
@@ -897,10 +838,114 @@ msgstr "%.1f (লেন্স)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../src/eom-properties-dialog.c:243
+#: ../src/eom-exif-util.c:264
 #, c-format
 msgid "%.1f (35mm film)"
 msgstr "%.1f (35mm ফিল্ম)"
+
+#: ../src/eom-metadata-sidebar.c:247 ../src/eom-properties-dialog.c:152
+msgid "Unknown"
+msgstr "অজানা"
+
+#: ../src/eom-metadata-sidebar.c:510
+msgid "File size:"
+msgstr "ফাইলের মাপ:"
+
+#: ../src/eom-metadata-sidebar.c:512
+msgid "Folder:"
+msgstr "ফোল্ডার:"
+
+#: ../src/eom-print.c:371
+msgid "Image Settings"
+msgstr "ছবির সেটিংসমূহ"
+
+#: ../src/eom-print-image-setup.c:824
+msgid "Image"
+msgstr "ছবি"
+
+#: ../src/eom-print-image-setup.c:825
+msgid "The image whose printing properties will be set up"
+msgstr "যে ছবির মুদ্রণ বৈশিষ্টাবলী সেট আপ করা হবে"
+
+#: ../src/eom-print-image-setup.c:831
+msgid "Page Setup"
+msgstr "পৃষ্ঠার সেটআপ"
+
+#: ../src/eom-print-image-setup.c:832
+msgid "The information for the page where the image will be printed"
+msgstr "ছবিটি যেখানে মুদ্রিত হবে সেই পৃষ্ঠার জন্য তথ্যাবলী"
+
+#: ../src/eom-print-image-setup.c:858
+msgid "Position"
+msgstr "অবস্থান"
+
+#: ../src/eom-print-image-setup.c:862
+msgid "_Left:"
+msgstr "বাম: (_L)"
+
+#: ../src/eom-print-image-setup.c:864
+msgid "_Right:"
+msgstr "ডান: (_R)"
+
+#: ../src/eom-print-image-setup.c:865
+msgid "_Top:"
+msgstr "উপরে: (_T)"
+
+#: ../src/eom-print-image-setup.c:866
+msgid "_Bottom:"
+msgstr "নিচে: (_B)"
+
+#: ../src/eom-print-image-setup.c:869
+msgid "C_enter:"
+msgstr "কেন্দ্র: (_e)"
+
+#: ../src/eom-print-image-setup.c:874
+msgid "None"
+msgstr "একটিও নয়"
+
+#: ../src/eom-print-image-setup.c:876
+msgid "Horizontal"
+msgstr "অনুভূমিক "
+
+#: ../src/eom-print-image-setup.c:878
+msgid "Vertical"
+msgstr "উল্লম্ব"
+
+#: ../src/eom-print-image-setup.c:880
+msgid "Both"
+msgstr "উভয়"
+
+#: ../src/eom-print-image-setup.c:896
+msgid "Size"
+msgstr "আকার"
+
+#: ../src/eom-print-image-setup.c:899
+msgid "_Width:"
+msgstr "প্রস্থ: (_W)"
+
+#: ../src/eom-print-image-setup.c:901
+msgid "_Height:"
+msgstr "উচ্চতা: (_H)"
+
+#: ../src/eom-print-image-setup.c:904
+msgid "_Scaling:"
+msgstr "আকার পরিবর্তন: (_S)"
+
+#: ../src/eom-print-image-setup.c:915
+msgid "_Unit:"
+msgstr "একক: (_U)"
+
+#: ../src/eom-print-image-setup.c:920
+msgid "Millimeters"
+msgstr "মিলিমিটার"
+
+#: ../src/eom-print-image-setup.c:922
+msgid "Inches"
+msgstr "ইঞ্চি"
+
+#: ../src/eom-print-image-setup.c:950
+msgid "Preview"
+msgstr "প্রাকদর্শন"
 
 #: ../src/eom-save-as-dialog-helper.c:161
 msgid "as is"
@@ -916,16 +961,16 @@ msgstr "যেমন আছে"
 #. * Note that translating this doesn't guarantee that you get localized
 #. * digits. That needs support from your system and locale definition
 #. * too.
-#: ../src/eom-statusbar.c:127
+#: ../src/eom-statusbar.c:122
 #, c-format
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/eom-thumb-view.c:547
+#: ../src/eom-thumb-view.c:546
 msgid "Taken on"
 msgstr "গ্রহণ করা"
 
-#: ../src/eom-uri-converter.c:991
+#: ../src/eom-uri-converter.c:986
 #, c-format
 msgid "At least two file names are equal."
 msgstr "অন্তত দুইটি ফাইলের নাম অনুরূপ।"
@@ -944,32 +989,32 @@ msgstr " (অকার্যকর ইউনিকোড)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/eom-window.c:506
+#: ../src/eom-window.c:508
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/eom-window.c:807
+#: ../src/eom-window.c:809
 msgid "_Reload"
 msgstr "পুনরায় লোড করুন (_R)"
 
-#: ../src/eom-window.c:809 ../src/eom-window.c:2676
+#: ../src/eom-window.c:811 ../src/eom-window.c:2731
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr ""
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:819
+#: ../src/eom-window.c:821
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
 "Would you like to reload it?"
 msgstr ""
 
-#: ../src/eom-window.c:984
+#: ../src/eom-window.c:986
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "নির্বাচিত ছবিটি খোলার জন্য \"%s\" ব্যবহার করুন"
@@ -979,21 +1024,25 @@ msgstr "নির্বাচিত ছবিটি খোলার জন্য
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1140
+#: ../src/eom-window.c:1142
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "\"%s\" ছবি সংরক্ষণ করা হচ্ছে (%u/%u)"
 
-#: ../src/eom-window.c:1499
+#: ../src/eom-window.c:1501
 #, c-format
 msgid "Opening image \"%s\""
 msgstr ""
 
-#: ../src/eom-window.c:1855
+#: ../src/eom-window.c:1857
 msgid "Leave Fullscreen"
 msgstr "পূর্ণপর্দা ত্যাগ করুন"
 
-#: ../src/eom-window.c:2174
+#: ../src/eom-window.c:1990
+msgid "Viewing a slideshow"
+msgstr ""
+
+#: ../src/eom-window.c:2203
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1002,15 +1051,15 @@ msgstr ""
 "ফাইল মুদ্রণে ত্রুটি দেখা দিয়েছে:\n"
 "%s  "
 
-#: ../src/eom-window.c:2437
+#: ../src/eom-window.c:2466
 msgid "Toolbar Editor"
 msgstr "টুলবার সম্পাদক"
 
-#: ../src/eom-window.c:2440
+#: ../src/eom-window.c:2469
 msgid "_Reset to Default"
 msgstr "পূর্বনির্ধারিততে পুনর্বিন্যাস করুন (_R)"
 
-#: ../src/eom-window.c:2531
+#: ../src/eom-window.c:2560
 msgid "translator-credits"
 msgstr ""
 "অঙ্কুর প্রকল্পের পক্ষে, সায়মিন্দু দাশগুপ্ত <unmadindu@bengalinux.org>\n"
@@ -1019,7 +1068,7 @@ msgstr ""
 "লোবা ইয়াসমীন <loba@ankur.org.bd>\n"
 "ইসরাত জাহান <israt@ankur.org.bd>"
 
-#: ../src/eom-window.c:2534
+#: ../src/eom-window.c:2563
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1031,7 +1080,7 @@ msgstr ""
 "পারেন এবং/অথবা পরিবর্তনও করতে পারেন; লাইসেন্স সংস্করণ ২, অথবা (আপনার "
 "সুবিধানুযায়ী) পরবর্তী যেকোন সংস্করণ।\n"
 
-#: ../src/eom-window.c:2538
+#: ../src/eom-window.c:2567
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1043,26 +1092,30 @@ msgstr ""
 "যথাযথ হওয়ারও কোন গ্যারান্টি দেয় না। আরও বিস্তারিত তথ্যের জন্য GNU সাধারণ "
 "পাবলিক লাইসেন্স দেখুন।\n"
 
-#: ../src/eom-window.c:2542
+#: ../src/eom-window.c:2571
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 
-#: ../src/eom-window.c:2560
+#: ../src/eom-window.c:2589
 msgid "The MATE image viewer."
 msgstr "জিনোমের ছবি প্রদর্শক।"
 
+#: ../src/eom-window.c:2679 ../src/eom-window.c:2694
+msgid "Error launching appearance preferences dialog: "
+msgstr ""
+
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2674
+#: ../src/eom-window.c:2729
 msgid "_Open Background Preferences"
 msgstr ""
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2690
+#: ../src/eom-window.c:2745
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1071,11 +1124,11 @@ msgstr ""
 "\"%s\" ছবিটি ডেস্কটপের পটভূমি হিসেবে নির্ধারিত হয়েছে।\n"
 "আপনি কি এর অবয়ব পরিবর্তন করতে চান?"
 
-#: ../src/eom-window.c:3084
+#: ../src/eom-window.c:3181
 msgid "Saving image locally…"
 msgstr "স্থানীয়ভাবে ছবি সংরক্ষণ করা হচ্ছে…"
 
-#: ../src/eom-window.c:3164
+#: ../src/eom-window.c:3261
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1084,7 +1137,7 @@ msgstr ""
 "আপনি কি নিশ্চিত আপনি সত্যিই\n"
 "\"%s\" কে আবর্জনায় সরাতে চান?"
 
-#: ../src/eom-window.c:3167
+#: ../src/eom-window.c:3264
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
@@ -1093,7 +1146,7 @@ msgstr ""
 " \"%s\" এর জন্য কোন আবর্জনা পাওয়া যায়নি। আপনি কি ছবিটিকে স্থায়ীভাবে অপসারণ "
 "করতে চান?"
 
-#: ../src/eom-window.c:3172
+#: ../src/eom-window.c:3269
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1104,7 +1157,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/eom-window.c:3177
+#: ../src/eom-window.c:3274
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1112,407 +1165,419 @@ msgstr ""
 "নির্বাচিত কিছু ছবি আবর্জনায় সরিয়ে ফেলা অসম্ভব এবং স্থায়ীভাবে অপসারিত হবে। "
 "আপনি কি নিশ্চিত আপনি অগ্রসর হতে চান? "
 
-#: ../src/eom-window.c:3194 ../src/eom-window.c:3678 ../src/eom-window.c:3705
+#: ../src/eom-window.c:3291 ../src/eom-window.c:3778 ../src/eom-window.c:3805
 msgid "Move to _Trash"
 msgstr "আবর্জনায় সরিয়ে ফেলুন (_T)"
 
-#: ../src/eom-window.c:3196
+#: ../src/eom-window.c:3293
 msgid "_Do not ask again during this session"
 msgstr "এই সেশন চলাকালীন পুনরায় জিজ্ঞেস করা হবে না (_D)"
 
-#: ../src/eom-window.c:3241 ../src/eom-window.c:3255
+#: ../src/eom-window.c:3338 ../src/eom-window.c:3352
 #, c-format
 msgid "Couldn't access trash."
 msgstr "আবর্জনায় প্রবেশ করা যায়নি।"
 
-#: ../src/eom-window.c:3263
+#: ../src/eom-window.c:3360
 #, c-format
 msgid "Couldn't delete file"
 msgstr "ফাইলটি মুছে ফেলা যায়নি"
 
-#: ../src/eom-window.c:3360
+#: ../src/eom-window.c:3457
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "%s মুছে ফেলার সময় ত্রুটি দেখা দিয়েছে"
 
-#: ../src/eom-window.c:3602
+#: ../src/eom-window.c:3699
 msgid "_Image"
 msgstr "ছবি (_I)"
 
-#: ../src/eom-window.c:3603
+#: ../src/eom-window.c:3700
 msgid "_Edit"
 msgstr "সম্পাদনা (_E)"
 
-#: ../src/eom-window.c:3604
+#: ../src/eom-window.c:3701
 msgid "_View"
 msgstr "প্রদর্শন (_V)"
 
-#: ../src/eom-window.c:3605
+#: ../src/eom-window.c:3702
 msgid "_Go"
 msgstr "যাও (_G)"
 
-#: ../src/eom-window.c:3606
+#: ../src/eom-window.c:3703
 msgid "_Tools"
 msgstr "সরঞ্জাম (_T)"
 
-#: ../src/eom-window.c:3607
+#: ../src/eom-window.c:3704
 msgid "_Help"
 msgstr "সহায়িকা (_H)"
 
-#: ../src/eom-window.c:3609
+#: ../src/eom-window.c:3706
 msgid "_Open…"
 msgstr "খুলুন… (_O)"
 
-#: ../src/eom-window.c:3610
+#: ../src/eom-window.c:3707
 msgid "Open a file"
 msgstr "ফাইল খুলুন"
 
-#: ../src/eom-window.c:3612
+#: ../src/eom-window.c:3709
 msgid "_Close"
 msgstr "বন্ধ করুন (_C)"
 
-#: ../src/eom-window.c:3613
+#: ../src/eom-window.c:3710
 msgid "Close window"
 msgstr "উইন্ডো বন্ধ করুন"
 
-#: ../src/eom-window.c:3615
+#: ../src/eom-window.c:3712
 msgid "T_oolbar"
 msgstr "টুলবার (_o)"
 
-#: ../src/eom-window.c:3616
+#: ../src/eom-window.c:3713
 msgid "Edit the application toolbar"
 msgstr "অ্যাপলিকেশন টুলবার সম্পাদনা করুন"
 
-#: ../src/eom-window.c:3618
+#: ../src/eom-window.c:3715
 msgid "Prefere_nces"
 msgstr "পছন্দ (_n)"
 
-#: ../src/eom-window.c:3619
+#: ../src/eom-window.c:3716
 msgid "Preferences for Eye of MATE"
 msgstr "জিনোম চোখের পছন্দসমূহ"
 
-#: ../src/eom-window.c:3621
+#: ../src/eom-window.c:3718
 msgid "_Contents"
 msgstr "বিষয়বস্তু (_C)"
 
-#: ../src/eom-window.c:3622
+#: ../src/eom-window.c:3719
 msgid "Help on this application"
 msgstr "এই অ্যাপলিকেশনের সহায়তা"
 
-#: ../src/eom-window.c:3624
+#: ../src/eom-window.c:3721
 msgid "_About"
 msgstr "পরিচিতি (_A)"
 
-#: ../src/eom-window.c:3625
+#: ../src/eom-window.c:3722
 msgid "About this application"
 msgstr "অ্যাপ্লিকেশন পরিচিতি"
 
-#: ../src/eom-window.c:3630
+#: ../src/eom-window.c:3727
 msgid "_Toolbar"
 msgstr "টুলবার (_T)"
 
-#: ../src/eom-window.c:3631
+#: ../src/eom-window.c:3728
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "বর্তমান উইন্ডোতে টুলবারের দৃশ্যমানতা বদলায়"
 
-#: ../src/eom-window.c:3633
+#: ../src/eom-window.c:3730
 msgid "_Statusbar"
 msgstr "স্ট্যাটাস-বার (_S)"
 
-#: ../src/eom-window.c:3634
+#: ../src/eom-window.c:3731
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "বর্তমান উইন্ডোতে স্ট্যাটাসবারের দৃশ্যমানতা বদলায়"
 
-#: ../src/eom-window.c:3636
+#: ../src/eom-window.c:3733
 msgid "_Image Collection"
 msgstr "ছবি সংগ্রহ (_I)"
 
-#: ../src/eom-window.c:3637
+#: ../src/eom-window.c:3734
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "বর্তমান উইন্ডোতে ছবি সংগ্রাহকের দৃশ্যমানতা বদলায়"
 
-#: ../src/eom-window.c:3639
+#: ../src/eom-window.c:3736
 msgid "Side _Pane"
 msgstr "সাইড পেন (_P)"
 
-#: ../src/eom-window.c:3640
+#: ../src/eom-window.c:3737
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "বর্তমান উইন্ডোতে পার্শ্বদেশের দৃশ্যমানতা বদলায়"
 
-#: ../src/eom-window.c:3645
+#: ../src/eom-window.c:3742
 msgid "_Save"
 msgstr "সংরক্ষণ করুন (_S)"
 
-#: ../src/eom-window.c:3646
+#: ../src/eom-window.c:3743
 msgid "Save changes in currently selected images"
 msgstr "বর্তমানে নির্বাচিত ছবিগুলোর পরিবর্তন সংরক্ষণ করা হবে"
 
-#: ../src/eom-window.c:3648
+#: ../src/eom-window.c:3745
 msgid "Open _with"
 msgstr "সহযোগে খোলা হবে (_w)"
 
-#: ../src/eom-window.c:3649
+#: ../src/eom-window.c:3746
 msgid "Open the selected image with a different application"
 msgstr "নির্বাচিত ছবিটিকে ভিন্ন অ্যাপলিকেশনের সাথে খোলা হবে"
 
-#: ../src/eom-window.c:3651
+#: ../src/eom-window.c:3748
 msgid "Save _As…"
 msgstr "নতুনভাবে সংরক্ষণ… (_A)"
 
-#: ../src/eom-window.c:3652
+#: ../src/eom-window.c:3749
 msgid "Save the selected images with a different name"
 msgstr "নির্বাচিত ছবিগুলোকে ভিন্ন নামে সংরক্ষণ করা হবে"
 
-#: ../src/eom-window.c:3654
+#: ../src/eom-window.c:3751
+msgid "Open Containing _Folder"
+msgstr ""
+
+#: ../src/eom-window.c:3752
+msgid "Show the folder which contains this file in the file manager"
+msgstr ""
+
+#: ../src/eom-window.c:3754
 msgid "_Print…"
 msgstr "মুদ্রণ… (_P)"
 
-#: ../src/eom-window.c:3655
+#: ../src/eom-window.c:3755
 msgid "Print the selected image"
 msgstr "নির্বাচিত ছবিটিকে মুদ্রণ করা হবে"
 
-#: ../src/eom-window.c:3657
+#: ../src/eom-window.c:3757
 msgid "Prope_rties"
 msgstr "বৈশিষ্ট্যাবলী (_r)"
 
-#: ../src/eom-window.c:3658
+#: ../src/eom-window.c:3758
 msgid "Show the properties and metadata of the selected image"
 msgstr "নির্বাচিত ছবিটির বৈশিষ্ট্যাবলী ও মেটাডাটা প্রদর্শন"
 
-#: ../src/eom-window.c:3660
+#: ../src/eom-window.c:3760
 msgid "_Undo"
 msgstr "পূর্বাবস্থা (_U)"
 
-#: ../src/eom-window.c:3661
+#: ../src/eom-window.c:3761
 msgid "Undo the last change in the image"
 msgstr "ছবিটিতে করা শেষ পরিবর্তন বাতিল করা হবে"
 
-#: ../src/eom-window.c:3663
+#: ../src/eom-window.c:3763
 msgid "Flip _Horizontal"
 msgstr "অনুভূমিকভাবে উল্টানো হবে (_H) "
 
-#: ../src/eom-window.c:3664
+#: ../src/eom-window.c:3764
 msgid "Mirror the image horizontally"
 msgstr "ছবিটিকে অনুভূমিকভাবে প্রতিফলিত করা হবে"
 
-#: ../src/eom-window.c:3666
+#: ../src/eom-window.c:3766
 msgid "Flip _Vertical"
 msgstr "উল্লম্বভাবে উল্টানো হবে (_V)"
 
-#: ../src/eom-window.c:3667
+#: ../src/eom-window.c:3767
 msgid "Mirror the image vertically"
 msgstr "ছবিটিকে উল্লম্বভাবে প্রতিফলিত করা হবে"
 
-#: ../src/eom-window.c:3669
+#: ../src/eom-window.c:3769
 msgid "_Rotate Clockwise"
 msgstr "ঘড়ির কাঁটার দিকে ঘোরান (_R)"
 
-#: ../src/eom-window.c:3670
+#: ../src/eom-window.c:3770
 msgid "Rotate the image 90 degrees to the right"
 msgstr "ছবিটিকে ৯০ ডিগ্রী ডানে ঘোরান"
 
-#: ../src/eom-window.c:3672
+#: ../src/eom-window.c:3772
 msgid "Rotate Counterc_lockwise"
 msgstr "ঘড়ির কাঁটার বিপরীত দিকে ঘোরান (_l)"
 
-#: ../src/eom-window.c:3673
+#: ../src/eom-window.c:3773
 msgid "Rotate the image 90 degrees to the left"
 msgstr "ছবিটিকে ৯০ ডিগ্রী বামে ঘোরান"
 
-#: ../src/eom-window.c:3675
+#: ../src/eom-window.c:3775
 msgid "Set as _Desktop Background"
 msgstr "ডেক্সটপের পটভূমি হিসেবে নির্ধারণ করা হবে (_D)"
 
-#: ../src/eom-window.c:3676
+#: ../src/eom-window.c:3776
 msgid "Set the selected image as the desktop background"
 msgstr "নির্বাচিত ছবিটিকে ডেক্সটপের পটভূমি হিসেবে নির্ধারণ করা হবে"
 
-#: ../src/eom-window.c:3679
+#: ../src/eom-window.c:3779
 msgid "Move the selected image to the trash folder"
 msgstr "নির্বাচিত ছবিটিকে আবর্জনা ফোল্ডারে সরিয়ে ফেলা হবে"
 
-#: ../src/eom-window.c:3681
+#: ../src/eom-window.c:3781
 msgid "_Copy"
 msgstr "অনুলিপি করুন (_C)"
 
-#: ../src/eom-window.c:3682
+#: ../src/eom-window.c:3782
 msgid "Copy the selected image to the clipboard"
 msgstr ""
 
-#: ../src/eom-window.c:3684 ../src/eom-window.c:3696 ../src/eom-window.c:3699
+#: ../src/eom-window.c:3784 ../src/eom-window.c:3796 ../src/eom-window.c:3799
 msgid "_Zoom In"
 msgstr "বড় আকারে প্রদর্শন (_Z)"
 
-#: ../src/eom-window.c:3685 ../src/eom-window.c:3697
+#: ../src/eom-window.c:3785 ../src/eom-window.c:3797
 msgid "Enlarge the image"
 msgstr "ছবিটিকে বড় করা হবে"
 
-#: ../src/eom-window.c:3687 ../src/eom-window.c:3702
+#: ../src/eom-window.c:3787 ../src/eom-window.c:3802
 msgid "Zoom _Out"
 msgstr "ছোট আকারে প্রদর্শন (_O)"
 
-#: ../src/eom-window.c:3688 ../src/eom-window.c:3700 ../src/eom-window.c:3703
+#: ../src/eom-window.c:3788 ../src/eom-window.c:3800 ../src/eom-window.c:3803
 msgid "Shrink the image"
 msgstr "ছবিটিকে সঙ্কোচন করা হবে"
 
-#: ../src/eom-window.c:3690
+#: ../src/eom-window.c:3790
 msgid "_Normal Size"
 msgstr "স্বাভাবিক আকার (_N)"
 
-#: ../src/eom-window.c:3691
+#: ../src/eom-window.c:3791
 msgid "Show the image at its normal size"
 msgstr "ছবিটিকে এর নিজস্ব আকারে প্রদর্শন করা হবে"
 
-#: ../src/eom-window.c:3693
+#: ../src/eom-window.c:3793
 msgid "_Best Fit"
 msgstr "সেরা মাপসইকরণ (_B)"
 
-#: ../src/eom-window.c:3694
+#: ../src/eom-window.c:3794
 msgid "Fit the image to the window"
 msgstr "ছবিটিকে উইন্ডোর সাথে মানানসই করা হবে"
 
-#: ../src/eom-window.c:3711
+#: ../src/eom-window.c:3811
 msgid "_Fullscreen"
 msgstr "পূর্ণপর্দা (_F)"
 
-#: ../src/eom-window.c:3712
+#: ../src/eom-window.c:3812
 msgid "Show the current image in fullscreen mode"
 msgstr "বর্তমান ছবিটি পর্দাজুড়ে প্রদর্শন করা হবে"
 
-#: ../src/eom-window.c:3714
+#: ../src/eom-window.c:3814
 msgid "Pause Slideshow"
 msgstr ""
 
-#: ../src/eom-window.c:3715
+#: ../src/eom-window.c:3815
 msgid "Pause or resume the slideshow"
 msgstr ""
 
-#: ../src/eom-window.c:3720 ../src/eom-window.c:3735
+#: ../src/eom-window.c:3820 ../src/eom-window.c:3835
 msgid "_Previous Image"
 msgstr "পূর্ববর্তী ছবি (_P)"
 
-#: ../src/eom-window.c:3721
+#: ../src/eom-window.c:3821
 msgid "Go to the previous image of the collection"
 msgstr "এই সংগ্রহের পূর্ববর্তী ছবিতে যাও"
 
-#: ../src/eom-window.c:3723
+#: ../src/eom-window.c:3823
 msgid "_Next Image"
 msgstr "পরবর্তী ছবি (_N)"
 
-#: ../src/eom-window.c:3724
+#: ../src/eom-window.c:3824
 msgid "Go to the next image of the collection"
 msgstr "এই সংগ্রহের পরবর্তী ছবিতে যাও"
 
-#: ../src/eom-window.c:3726 ../src/eom-window.c:3738
+#: ../src/eom-window.c:3826 ../src/eom-window.c:3838
 msgid "_First Image"
 msgstr "প্রথম ছবি (_F) "
 
-#: ../src/eom-window.c:3727
+#: ../src/eom-window.c:3827
 msgid "Go to the first image of the collection"
 msgstr "এই সংগ্রহের প্রথম ছবিতে যাও"
 
-#: ../src/eom-window.c:3729 ../src/eom-window.c:3741
+#: ../src/eom-window.c:3829 ../src/eom-window.c:3841
 msgid "_Last Image"
 msgstr "শেষ ছবি (_L)"
 
-#: ../src/eom-window.c:3730
+#: ../src/eom-window.c:3830
 msgid "Go to the last image of the collection"
 msgstr "এই সংগ্রহের শেষ ছবিতে যাও"
 
-#: ../src/eom-window.c:3732
+#: ../src/eom-window.c:3832
 msgid "_Random Image"
 msgstr "র্যান্ডম ছবি (_R)"
 
-#: ../src/eom-window.c:3733
+#: ../src/eom-window.c:3833
 msgid "Go to a random image of the collection"
 msgstr "এই সংগ্রহের যেকোনো ছবিতে যান"
 
-#: ../src/eom-window.c:3747
+#: ../src/eom-window.c:3847
 msgid "S_lideshow"
 msgstr ""
 
-#: ../src/eom-window.c:3748
+#: ../src/eom-window.c:3848
 msgid "Start a slideshow view of the images"
 msgstr "ছবিগুলোর স্লাইড প্রদর্শন শুরু করা হবে"
 
-#: ../src/eom-window.c:3814
+#: ../src/eom-window.c:3914
 msgid "Previous"
 msgstr "পূর্ববর্তী"
 
-#: ../src/eom-window.c:3818
+#: ../src/eom-window.c:3918
 msgid "Next"
 msgstr "পরবর্তী"
 
-#: ../src/eom-window.c:3822
+#: ../src/eom-window.c:3922
 msgid "Right"
 msgstr "ডানদিকে"
 
-#: ../src/eom-window.c:3825
+#: ../src/eom-window.c:3925
 msgid "Left"
 msgstr "বামদিকে"
 
-#: ../src/eom-window.c:3828
+#: ../src/eom-window.c:3931
 msgid "In"
 msgstr "ভিতরে"
 
-#: ../src/eom-window.c:3831
+#: ../src/eom-window.c:3934
 msgid "Out"
 msgstr "বাহিরে"
 
-#: ../src/eom-window.c:3834
+#: ../src/eom-window.c:3937
 msgid "Normal"
 msgstr "স্বাভাবিক"
 
-#: ../src/eom-window.c:3837
+#: ../src/eom-window.c:3940
 msgid "Fit"
 msgstr "মানানসই"
 
-#: ../src/eom-window.c:3840
+#: ../src/eom-window.c:3943
 msgid "Collection"
 msgstr "সংগ্রহ"
 
-#: ../src/eom-window.c:3843
+#: ../src/eom-window.c:3946
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "ট্রাশ"
 
-#: ../src/eom-window.c:4192
+#: ../src/eom-window.c:4291
 #, c-format
 msgid "Edit the current image using %s"
 msgstr ""
 
-#: ../src/eom-window.c:4194
+#: ../src/eom-window.c:4293
 msgid "Edit Image"
 msgstr ""
 
-#: ../src/main.c:77
+#: ../src/eom-window.c:4508
+msgid "Properties"
+msgstr "বৈশিষ্ট্য"
+
+#: ../src/main.c:72
 msgid "Open in fullscreen mode"
 msgstr "পর্দাজুড়ে প্রদর্শন মোডে খুলুন"
 
-#: ../src/main.c:78
+#: ../src/main.c:73
 msgid "Disable image collection"
 msgstr "ছবি সংগ্রহ নিষ্ক্রিয় করুন"
 
-#: ../src/main.c:79
+#: ../src/main.c:74
 msgid "Open in slideshow mode"
 msgstr "স্লাইড প্রদর্শন মোডে খুলুন"
 
-#: ../src/main.c:81
+#: ../src/main.c:75
 msgid "Start a new instance instead of reusing an existing one"
 msgstr ""
 "বিদ্যমান দৃষ্টান্তকে পুনরায় ব্যবহার না করে নতুন দৃষ্টান্ত আরম্ভ করা হবে"
 
-#: ../src/main.c:84
+#: ../src/main.c:77
 msgid "Show the application's version"
 msgstr "অ্যাপ্লিকেশনের সংস্করণ সংখ্যা প্রদর্শন করা হবে"
 
-#: ../src/main.c:85
+#: ../src/main.c:107
 msgid "[FILE…]"
 msgstr "[FILE…]"
 
 #. I18N: The '%s' is replaced with eom's command name.
-#: ../src/main.c:212
+#: ../src/main.c:120
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "বিদ্যমান কমান্ড লাইন অপশনের পুরো তালিকা দেখতে '%s --সহায়তা' চালান।"

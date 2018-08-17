@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-14 08:51+0100\n"
+"POT-Creation-Date: 2018-07-17 22:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Waratha Kong, 2018\n"
 "Language-Team: Thai (https://www.transifex.com/mate/teams/13566/th/)\n"
@@ -25,32 +25,32 @@ msgstr ""
 #. * produce duplicates, but don't worry about it. If your language
 #. * normally has a mnemonic at the start, please use the _. If not,
 #. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:924
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:930
 #, c-format
 msgid "Show “_%s”"
 msgstr "แสดงแถบ “_%s”"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1390
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1396
 msgid "_Move on Toolbar"
 msgstr "_ย้ายที่ในแถบเครื่องมือ"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1391
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1397
 msgid "Move the selected item on the toolbar"
 msgstr "ย้ายรายการที่เลือกในแถบเครื่องมือ"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1392
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1398
 msgid "_Remove from Toolbar"
 msgstr "_ลบออกจากแถบเครื่องมือ"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1393
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1399
 msgid "Remove the selected item from the toolbar"
 msgstr "ลบแถบเครื่องมือที่เลือก"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1394
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1400
 msgid "_Delete Toolbar"
 msgstr "_ลบแถบเครื่องมือ"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1395
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1401
 msgid "Remove the selected toolbar"
 msgstr "ลบแถบเครื่องมือที่เลือก"
 
@@ -58,7 +58,7 @@ msgstr "ลบแถบเครื่องมือที่เลือก"
 msgid "Separator"
 msgstr "เส้นแบ่ง"
 
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2555
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2584
 msgid "Eye of MATE"
 msgstr "Eye of MATE"
 
@@ -73,7 +73,7 @@ msgid ""
 "subsequent images in the directory the image was loaded from. </p>"
 msgstr ""
 
-#: ../data/eom.desktop.in.in.h:1 ../src/main.c:70 ../src/main.c:264
+#: ../data/eom.desktop.in.in.h:1 ../src/main.c:65 ../src/main.c:163
 msgid "Eye of MATE Image Viewer"
 msgstr "Eye of MATE: โปรแกรมแสดงรูป"
 
@@ -94,18 +94,22 @@ msgid "_Next"
 msgstr "_ถัดไป"
 
 #: ../data/eom-image-properties-dialog.ui.h:4
+#: ../src/eom-metadata-sidebar.c:502
 msgid "Name:"
 msgstr "ชื่อ:"
 
 #: ../data/eom-image-properties-dialog.ui.h:5
+#: ../src/eom-metadata-sidebar.c:504
 msgid "Width:"
 msgstr "ความกว้าง:"
 
 #: ../data/eom-image-properties-dialog.ui.h:6
+#: ../src/eom-metadata-sidebar.c:506
 msgid "Height:"
 msgstr "ความสูง:"
 
 #: ../data/eom-image-properties-dialog.ui.h:7
+#: ../src/eom-metadata-sidebar.c:508
 msgid "Type:"
 msgstr "ชนิด:"
 
@@ -114,66 +118,82 @@ msgid "Bytes:"
 msgstr "จำนวนไบต์:"
 
 #: ../data/eom-image-properties-dialog.ui.h:9
+#: ../src/eom-metadata-sidebar.c:562
 msgid "Location:"
 msgstr "ตำแหน่ง:"
 
 #: ../data/eom-image-properties-dialog.ui.h:10
+#: ../src/eom-metadata-sidebar.c:500
 msgid "General"
 msgstr "ทั่วไป"
 
 #: ../data/eom-image-properties-dialog.ui.h:11
+#: ../src/eom-metadata-sidebar.c:534
 msgid "Aperture Value:"
 msgstr "หน้ากล้อง:"
 
 #: ../data/eom-image-properties-dialog.ui.h:12
+#: ../src/eom-metadata-sidebar.c:537
 msgid "Exposure Time:"
 msgstr "ความเร็วชัตเตอร์:"
 
 #: ../data/eom-image-properties-dialog.ui.h:13
+#: ../src/eom-metadata-sidebar.c:540
 msgid "Focal Length:"
 msgstr "ระยะโฟกัส:"
 
 #: ../data/eom-image-properties-dialog.ui.h:14
+#: ../src/eom-metadata-sidebar.c:542
 msgid "Flash:"
 msgstr "แฟลช:"
 
 #: ../data/eom-image-properties-dialog.ui.h:15
+#: ../src/eom-metadata-sidebar.c:546
 msgid "ISO Speed Rating:"
 msgstr "ความไวแสง (ISO):"
 
 #: ../data/eom-image-properties-dialog.ui.h:16
+#: ../src/eom-metadata-sidebar.c:549
 msgid "Metering Mode:"
 msgstr "วิธีวัดแสง:"
 
 #: ../data/eom-image-properties-dialog.ui.h:17
+#: ../src/eom-metadata-sidebar.c:552
 msgid "Camera Model:"
 msgstr "รุ่นกล้อง:"
 
 #: ../data/eom-image-properties-dialog.ui.h:18
+#: ../src/eom-metadata-sidebar.c:554
 msgid "Date/Time:"
 msgstr "วัน/เวลา:"
 
 #: ../data/eom-image-properties-dialog.ui.h:19
+#: ../src/eom-metadata-sidebar.c:559
 msgid "Description:"
 msgstr "คำอธิบาย:"
 
 #: ../data/eom-image-properties-dialog.ui.h:20
+#: ../src/eom-metadata-sidebar.c:565
 msgid "Keywords:"
 msgstr "คำหลัก:"
 
 #: ../data/eom-image-properties-dialog.ui.h:21
+#: ../src/eom-metadata-sidebar.c:567
 msgid "Author:"
 msgstr "ผู้เขียน:"
 
 #: ../data/eom-image-properties-dialog.ui.h:22
+#: ../src/eom-metadata-sidebar.c:570
 msgid "Copyright:"
 msgstr "สงวนลิขสิทธิ์:"
 
 #: ../data/eom-image-properties-dialog.ui.h:23
+#: ../src/eom-metadata-sidebar.c:573
 msgid "Details"
 msgstr "รายละเอียด"
 
 #: ../data/eom-image-properties-dialog.ui.h:24
+#: ../src/eom-metadata-sidebar.c:530
 msgid "Metadata"
 msgstr "ข้อมูลกำกับ"
 
@@ -568,12 +588,12 @@ msgstr "เต็มจอด้วยดับเบิลคลิก"
 msgid "Activate fullscreen mode with double-click"
 msgstr "เรียกโหมดแสดงเต็มจอด้วยดับเบิลคลิก"
 
-#: ../plugins/reload/eom-reload-plugin.c:44
+#: ../plugins/reload/eom-reload-plugin.c:45
 #: ../plugins/reload/reload.plugin.desktop.in.h:1
 msgid "Reload Image"
 msgstr "อ่านรูปใหม่"
 
-#: ../plugins/reload/eom-reload-plugin.c:44
+#: ../plugins/reload/eom-reload-plugin.c:45
 #: ../plugins/reload/reload.plugin.desktop.in.h:2
 msgid "Reload current image"
 msgstr "อ่านรูปปัจจุบันใหม่"
@@ -586,118 +606,115 @@ msgstr "วันที่ในแถบสถานะ"
 msgid "Shows the image date in the window statusbar"
 msgstr "แสดงวันที่ของรูปภาพในแถบสถานะของหน้าต่าง"
 
-#: ../src/eom-application.c:124
-msgid "Running in fullscreen mode"
-msgstr "กำลังทำงานในแบบเต็มจอ"
-
-#: ../src/eom-close-confirmation-dialog.c:159
+#: ../src/eom-close-confirmation-dialog.c:154
 msgid "Close _without Saving"
 msgstr "ปิดโดยไ_ม่บันทึก"
 
-#: ../src/eom-close-confirmation-dialog.c:192
+#: ../src/eom-close-confirmation-dialog.c:187
 msgid "Question"
 msgstr "คำถาม"
 
-#: ../src/eom-close-confirmation-dialog.c:373
+#: ../src/eom-close-confirmation-dialog.c:366
 msgid "If you don't save, your changes will be lost."
 msgstr "ถ้าคุณไม่บันทึก การเปลี่ยนแปลงต่างๆ ที่คุณทำมาก็จะสูญหายไป"
 
-#: ../src/eom-close-confirmation-dialog.c:409
+#: ../src/eom-close-confirmation-dialog.c:402
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "ต้องการบันทึกการเปลี่ยนแปลงในรูปภาพ \"%s\" ก่อนปิดหรือไม่?"
 
-#: ../src/eom-close-confirmation-dialog.c:604
+#: ../src/eom-close-confirmation-dialog.c:597
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] ""
 
-#: ../src/eom-close-confirmation-dialog.c:621
+#: ../src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
 msgstr "เ_ลือกรูปภาพที่คุณต้องการบันทึก:"
 
 #. Secondary label
-#: ../src/eom-close-confirmation-dialog.c:640
+#: ../src/eom-close-confirmation-dialog.c:633
 msgid "If you don't save, all your changes will be lost."
 msgstr "ถ้าคุณไม่บันทึก การเปลี่ยนแปลงทั้งหมดที่คุณทำมาก็จะสูญหายไป"
 
-#: ../src/eom-file-chooser.c:127
+#: ../src/eom-file-chooser.c:121
 msgid "File format is unknown or unsupported"
 msgstr "ไม่รู้จักหรือไม่รองรับแฟ้มฟอร์แมตนี้"
 
-#: ../src/eom-file-chooser.c:132
+#: ../src/eom-file-chooser.c:126
 msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
 msgstr ""
 "Eye of MATE ไม่สามารถพิจารณาฟอร์แมตแฟ้มที่รองรับที่จะเขียนจากชื่อแฟ้มนี้ได้"
 
-#: ../src/eom-file-chooser.c:133
+#: ../src/eom-file-chooser.c:127
 msgid "Please try a different file extension like .png or .jpg."
 msgstr "กรุณาลองใช้นามสกุลอื่น เช่น .png หรือ .jpg"
 
-#: ../src/eom-file-chooser.c:165
+#: ../src/eom-file-chooser.c:159
 msgid "All Files"
 msgstr "ทุกแฟ้ม"
 
-#: ../src/eom-file-chooser.c:170
+#: ../src/eom-file-chooser.c:164
 msgid "All Images"
 msgstr "ทุกรูป"
 
 #. Filter name: First description then file extension, eg. "The PNG-Format
 #. (*.png)".
-#: ../src/eom-file-chooser.c:191
+#: ../src/eom-file-chooser.c:185
 #, c-format
 msgid "%s (*.%s)"
 msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
-#: ../src/eom-file-chooser.c:287 ../src/eom-properties-dialog.c:137
-#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:519
+#: ../src/eom-file-chooser.c:281 ../src/eom-metadata-sidebar.c:234
+#: ../src/eom-metadata-sidebar.c:238 ../src/eom-properties-dialog.c:135
+#: ../src/eom-properties-dialog.c:137 ../src/eom-thumb-view.c:518
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] ""
 
-#: ../src/eom-file-chooser.c:457
+#: ../src/eom-file-chooser.c:451
 msgid "Open Image"
 msgstr "เปิดรูป"
 
-#: ../src/eom-file-chooser.c:465
+#: ../src/eom-file-chooser.c:459
 msgid "Save Image"
 msgstr "บันทึกภาพ"
 
-#: ../src/eom-file-chooser.c:473
+#: ../src/eom-file-chooser.c:467 ../src/eom-window.c:3928
 msgid "Open Folder"
 msgstr "เปิดโฟลเดอร์"
 
-#: ../src/eom-image.c:566
+#: ../src/eom-image.c:561
 #, c-format
 msgid "Transformation on unloaded image."
 msgstr "พยายามแปลงรูปภาพที่ยังไม่ได้อ่านเข้ามา"
 
-#: ../src/eom-image.c:594
+#: ../src/eom-image.c:589
 #, c-format
 msgid "Transformation failed."
 msgstr "แปลงรูปภาพไม่สำเร็จ"
 
-#: ../src/eom-image.c:1019
+#: ../src/eom-image.c:1032
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "ไม่สนับสนุน EXIF สำหรับแฟ้มชนิดนี้"
 
-#: ../src/eom-image.c:1162
+#: ../src/eom-image.c:1180
 #, c-format
 msgid "Image loading failed."
 msgstr "อ่านรูปไม่สำเร็จ"
 
-#: ../src/eom-image.c:1691 ../src/eom-image.c:1793
+#: ../src/eom-image.c:1709 ../src/eom-image.c:1811
 #, c-format
 msgid "No image loaded."
 msgstr "ไม่มีรูปที่อ่านไว้"
 
-#: ../src/eom-image.c:1701 ../src/eom-image.c:1805
+#: ../src/eom-image.c:1719 ../src/eom-image.c:1823
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "สร้างแฟ้มชั่วคราวไม่สำเร็จ"
@@ -730,160 +747,84 @@ msgstr "ไม่พบรูปใน '%s'"
 msgid "The given locations contain no images."
 msgstr "ไม่มีรูปในตำแหน่งเก็บที่กำหนด"
 
-#: ../src/eom-exif-details.c:68
+#: ../src/eom-exif-details.c:64
 msgid "Camera"
 msgstr "กล้อง"
 
-#: ../src/eom-exif-details.c:69
+#: ../src/eom-exif-details.c:65
 msgid "Image Data"
 msgstr "ข้อมูลรูป"
 
-#: ../src/eom-exif-details.c:70
+#: ../src/eom-exif-details.c:66
 msgid "Image Taking Conditions"
 msgstr "สภาวะขณะถ่ายรูป"
 
-#: ../src/eom-exif-details.c:71
+#: ../src/eom-exif-details.c:67
+msgid "GPS Data"
+msgstr ""
+
+#: ../src/eom-exif-details.c:68
 msgid "Maker Note"
 msgstr "หมายเหตุผู้ผลิต"
 
-#: ../src/eom-exif-details.c:72
+#: ../src/eom-exif-details.c:69
 msgid "Other"
 msgstr "อื่นๆ"
 
-#: ../src/eom-exif-details.c:74
+#: ../src/eom-exif-details.c:71
 msgid "XMP Exif"
 msgstr "Exif แบบ XMP"
 
-#: ../src/eom-exif-details.c:75
+#: ../src/eom-exif-details.c:72
 msgid "XMP IPTC"
 msgstr "IPTC แบบ XMP"
 
-#: ../src/eom-exif-details.c:76
+#: ../src/eom-exif-details.c:73
 msgid "XMP Rights Management"
 msgstr "ข้อมูลลิขสิทธิ์แบบ XMP"
 
-#: ../src/eom-exif-details.c:77
+#: ../src/eom-exif-details.c:74
 msgid "XMP Other"
 msgstr "XMP อื่นๆ"
 
-#: ../src/eom-exif-details.c:251
+#: ../src/eom-exif-details.c:250
 msgid "Tag"
 msgstr "ป้าย"
 
-#: ../src/eom-exif-details.c:258
+#: ../src/eom-exif-details.c:260
 msgid "Value"
 msgstr "ค่า"
 
+#: ../src/eom-exif-details.c:417
+msgid "North"
+msgstr "เหนือ"
+
+#: ../src/eom-exif-details.c:420
+msgid "East"
+msgstr "ตะวันออก"
+
+#: ../src/eom-exif-details.c:423
+msgid "West"
+msgstr "ตะวันตก"
+
+#: ../src/eom-exif-details.c:426
+msgid "South"
+msgstr "ใต้"
+
 #. A strftime-formatted string, to display the date the image was taken.
-#: ../src/eom-exif-util.c:121 ../src/eom-exif-util.c:161
+#: ../src/eom-exif-util.c:122 ../src/eom-exif-util.c:162
 msgid "%a, %d %B %Y  %X"
 msgstr "%a %d %B %Ey  %X"
 
 #. A strftime-formatted string, to display the date the image was taken, for
 #. the case we don't have the time.
-#: ../src/eom-exif-util.c:155
+#: ../src/eom-exif-util.c:156
 msgid "%a, %d %B %Y"
 msgstr "%a %d %B %Ey"
 
-#: ../src/eom-print.c:371
-msgid "Image Settings"
-msgstr "ค่าตั้งของรูป"
-
-#: ../src/eom-print-image-setup.c:828
-msgid "Image"
-msgstr "รูปภาพ"
-
-#: ../src/eom-print-image-setup.c:829
-msgid "The image whose printing properties will be set up"
-msgstr "รูปที่จะตั้งค่าการพิมพ์"
-
-#: ../src/eom-print-image-setup.c:835
-msgid "Page Setup"
-msgstr "ตั้งค่าหน้ากระดาษ"
-
-#: ../src/eom-print-image-setup.c:836
-msgid "The information for the page where the image will be printed"
-msgstr "ข้อมูลของหน้ากระดาษที่จะใช้พิมพ์รูป"
-
-#: ../src/eom-print-image-setup.c:864
-msgid "Position"
-msgstr "ตำแหน่ง"
-
-#: ../src/eom-print-image-setup.c:868
-msgid "_Left:"
-msgstr "_ซ้าย:"
-
-#: ../src/eom-print-image-setup.c:870
-msgid "_Right:"
-msgstr "_ขวา:"
-
-#: ../src/eom-print-image-setup.c:871
-msgid "_Top:"
-msgstr "_บน:"
-
-#: ../src/eom-print-image-setup.c:872
-msgid "_Bottom:"
-msgstr "_ล่าง:"
-
-#: ../src/eom-print-image-setup.c:875
-msgid "C_enter:"
-msgstr "_กึ่งกลาง:"
-
-#: ../src/eom-print-image-setup.c:880
-msgid "None"
-msgstr "ไม่มี"
-
-#: ../src/eom-print-image-setup.c:882
-msgid "Horizontal"
-msgstr "แนวนอน"
-
-#: ../src/eom-print-image-setup.c:884
-msgid "Vertical"
-msgstr "แนวตั้ง"
-
-#: ../src/eom-print-image-setup.c:886
-msgid "Both"
-msgstr "ทั้งสองแนว"
-
-#: ../src/eom-print-image-setup.c:902
-msgid "Size"
-msgstr "ขนาด"
-
-#: ../src/eom-print-image-setup.c:905
-msgid "_Width:"
-msgstr "ความ_กว้าง:"
-
-#: ../src/eom-print-image-setup.c:907
-msgid "_Height:"
-msgstr "สู_ง:"
-
-#: ../src/eom-print-image-setup.c:910
-msgid "_Scaling:"
-msgstr "_อัตราส่วน:"
-
-#: ../src/eom-print-image-setup.c:921
-msgid "_Unit:"
-msgstr "ห_น่วย:"
-
-#: ../src/eom-print-image-setup.c:926
-msgid "Millimeters"
-msgstr "มิลลิเมตร"
-
-#: ../src/eom-print-image-setup.c:928
-msgid "Inches"
-msgstr "นิ้ว"
-
-#: ../src/eom-print-image-setup.c:956
-msgid "Preview"
-msgstr "ตัวอย่าง"
-
-#: ../src/eom-properties-dialog.c:154
-msgid "Unknown"
-msgstr "ไม่ทราบ"
-
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../src/eom-properties-dialog.c:232
+#: ../src/eom-exif-util.c:253
 #, c-format
 msgid "%.1f (lens)"
 msgstr "%.1f (เลนส์)"
@@ -891,10 +832,114 @@ msgstr "%.1f (เลนส์)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../src/eom-properties-dialog.c:243
+#: ../src/eom-exif-util.c:264
 #, c-format
 msgid "%.1f (35mm film)"
 msgstr "%.1f (ฟิล์ม 35 มม.)"
+
+#: ../src/eom-metadata-sidebar.c:247 ../src/eom-properties-dialog.c:152
+msgid "Unknown"
+msgstr "ไม่ทราบ"
+
+#: ../src/eom-metadata-sidebar.c:510
+msgid "File size:"
+msgstr "ขนาดของแฟ้ม:"
+
+#: ../src/eom-metadata-sidebar.c:512
+msgid "Folder:"
+msgstr "โฟลเดอร์:"
+
+#: ../src/eom-print.c:371
+msgid "Image Settings"
+msgstr "ค่าตั้งของรูป"
+
+#: ../src/eom-print-image-setup.c:824
+msgid "Image"
+msgstr "รูปภาพ"
+
+#: ../src/eom-print-image-setup.c:825
+msgid "The image whose printing properties will be set up"
+msgstr "รูปที่จะตั้งค่าการพิมพ์"
+
+#: ../src/eom-print-image-setup.c:831
+msgid "Page Setup"
+msgstr "ตั้งค่าหน้ากระดาษ"
+
+#: ../src/eom-print-image-setup.c:832
+msgid "The information for the page where the image will be printed"
+msgstr "ข้อมูลของหน้ากระดาษที่จะใช้พิมพ์รูป"
+
+#: ../src/eom-print-image-setup.c:858
+msgid "Position"
+msgstr "ตำแหน่ง"
+
+#: ../src/eom-print-image-setup.c:862
+msgid "_Left:"
+msgstr "_ซ้าย:"
+
+#: ../src/eom-print-image-setup.c:864
+msgid "_Right:"
+msgstr "_ขวา:"
+
+#: ../src/eom-print-image-setup.c:865
+msgid "_Top:"
+msgstr "_บน:"
+
+#: ../src/eom-print-image-setup.c:866
+msgid "_Bottom:"
+msgstr "_ล่าง:"
+
+#: ../src/eom-print-image-setup.c:869
+msgid "C_enter:"
+msgstr "_กึ่งกลาง:"
+
+#: ../src/eom-print-image-setup.c:874
+msgid "None"
+msgstr "ไม่มี"
+
+#: ../src/eom-print-image-setup.c:876
+msgid "Horizontal"
+msgstr "แนวนอน"
+
+#: ../src/eom-print-image-setup.c:878
+msgid "Vertical"
+msgstr "แนวตั้ง"
+
+#: ../src/eom-print-image-setup.c:880
+msgid "Both"
+msgstr "ทั้งสองแนว"
+
+#: ../src/eom-print-image-setup.c:896
+msgid "Size"
+msgstr "ขนาด"
+
+#: ../src/eom-print-image-setup.c:899
+msgid "_Width:"
+msgstr "ความ_กว้าง:"
+
+#: ../src/eom-print-image-setup.c:901
+msgid "_Height:"
+msgstr "สู_ง:"
+
+#: ../src/eom-print-image-setup.c:904
+msgid "_Scaling:"
+msgstr "_อัตราส่วน:"
+
+#: ../src/eom-print-image-setup.c:915
+msgid "_Unit:"
+msgstr "ห_น่วย:"
+
+#: ../src/eom-print-image-setup.c:920
+msgid "Millimeters"
+msgstr "มิลลิเมตร"
+
+#: ../src/eom-print-image-setup.c:922
+msgid "Inches"
+msgstr "นิ้ว"
+
+#: ../src/eom-print-image-setup.c:950
+msgid "Preview"
+msgstr "ตัวอย่าง"
 
 #: ../src/eom-save-as-dialog-helper.c:161
 msgid "as is"
@@ -910,16 +955,16 @@ msgstr "ตามที่เป็น"
 #. * Note that translating this doesn't guarantee that you get localized
 #. * digits. That needs support from your system and locale definition
 #. * too.
-#: ../src/eom-statusbar.c:127
+#: ../src/eom-statusbar.c:122
 #, c-format
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/eom-thumb-view.c:547
+#: ../src/eom-thumb-view.c:546
 msgid "Taken on"
 msgstr "ถ่ายเมื่อ"
 
-#: ../src/eom-uri-converter.c:991
+#: ../src/eom-uri-converter.c:986
 #, c-format
 msgid "At least two file names are equal."
 msgstr "มีแฟ้มชื่อซ้ำกันอย่างน้อยสองแฟ้ม"
@@ -938,24 +983,24 @@ msgstr " (รหัสยูนิโค้ดไม่ถูกต้อง)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/eom-window.c:506
+#: ../src/eom-window.c:508
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] ""
 
-#: ../src/eom-window.c:807
+#: ../src/eom-window.c:809
 msgid "_Reload"
 msgstr "โห_ลดใหม่"
 
-#: ../src/eom-window.c:809 ../src/eom-window.c:2676
+#: ../src/eom-window.c:811 ../src/eom-window.c:2731
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "_ซ่อนทั้งหมด"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:819
+#: ../src/eom-window.c:821
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -964,7 +1009,7 @@ msgstr ""
 "รูปภาพ \"%s\" ถูกแก้ไขโดยใช้โปรแกรมภายนอกแล้ว\n"
 "คุณต้องการจะโหลดรูปภาพใหม่หรือไม่?"
 
-#: ../src/eom-window.c:984
+#: ../src/eom-window.c:986
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "ใช้ \"%s\" เปิดรูปที่เลือก"
@@ -974,21 +1019,25 @@ msgstr "ใช้ \"%s\" เปิดรูปที่เลือก"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1140
+#: ../src/eom-window.c:1142
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "กำลังบันทึกรูป \"%s\" (%u/%u)"
 
-#: ../src/eom-window.c:1499
+#: ../src/eom-window.c:1501
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "กำลังเปิดรูป \"%s\""
 
-#: ../src/eom-window.c:1855
+#: ../src/eom-window.c:1857
 msgid "Leave Fullscreen"
 msgstr "เลิกแสดงเต็มจอ"
 
-#: ../src/eom-window.c:2174
+#: ../src/eom-window.c:1990
+msgid "Viewing a slideshow"
+msgstr ""
+
+#: ../src/eom-window.c:2203
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -997,19 +1046,19 @@ msgstr ""
 "เกิดข้อผิดพลาดขณะพิมพ์แฟ้ม:\n"
 "%s"
 
-#: ../src/eom-window.c:2437
+#: ../src/eom-window.c:2466
 msgid "Toolbar Editor"
 msgstr "แก้ไขแถบเครื่องมือ"
 
-#: ../src/eom-window.c:2440
+#: ../src/eom-window.c:2469
 msgid "_Reset to Default"
 msgstr "เปลี่ยนกลับเป็นค่า_ปริยาย"
 
-#: ../src/eom-window.c:2531
+#: ../src/eom-window.c:2560
 msgid "translator-credits"
 msgstr "Akom Chotiphantawanon <knight2000@gmail.com>, 2016"
 
-#: ../src/eom-window.c:2534
+#: ../src/eom-window.c:2563
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1021,7 +1070,7 @@ msgstr ""
 "ที่เผยแพร่โดยมูลนิธิซอฟต์แวร์เสรีไม่ว่าจะเป็นสัญญาอนุญาตรุ่นที่ 2 "
 "หรือรุ่นถัดมา (ตามแต่คุณจะเลือก)\n"
 
-#: ../src/eom-window.c:2538
+#: ../src/eom-window.c:2567
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1033,7 +1082,7 @@ msgstr ""
 "_ความเหมาะสมสำหรับวัตถุประสงค์เฉพาะกิจใดๆ_ กรุณาอ่านGNU General Public "
 "License เพื่อดูรายละเอียดเพิ่มเติม\n"
 
-#: ../src/eom-window.c:2542
+#: ../src/eom-window.c:2571
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
@@ -1043,19 +1092,23 @@ msgstr ""
 "ถ้าคุณไม่ได้รับ กรุณาติดต่อไปที่ Free Software Foundation, Inc., 51 Franklin"
 " Street, Fifth Floor, Boston, MA 02110-1301 USA"
 
-#: ../src/eom-window.c:2560
+#: ../src/eom-window.c:2589
 msgid "The MATE image viewer."
 msgstr "โปรแกรมแสดงรูปของ MATE"
 
+#: ../src/eom-window.c:2679 ../src/eom-window.c:2694
+msgid "Error launching appearance preferences dialog: "
+msgstr ""
+
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2674
+#: ../src/eom-window.c:2729
 msgid "_Open Background Preferences"
 msgstr "_เปิดพื้นหลังที่ต้องการ"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2690
+#: ../src/eom-window.c:2745
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1064,11 +1117,11 @@ msgstr ""
 "รูปภาพ \"%s\" ถูกกำหนดให้เป็นภาพพื้นหลังพื้นโต๊ะแล้ว\n"
 "คุณต้องการจะปรับรูปแบบการแสดงภาพหรือไม่?"
 
-#: ../src/eom-window.c:3084
+#: ../src/eom-window.c:3181
 msgid "Saving image locally…"
 msgstr "กำลังบันทึกรูปลงในเครื่อง…"
 
-#: ../src/eom-window.c:3164
+#: ../src/eom-window.c:3261
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1077,14 +1130,14 @@ msgstr ""
 "แน่ใจหรือไม่ว่าจะย้าย\n"
 "\"%s\" ไปลงถังขยะ?"
 
-#: ../src/eom-window.c:3167
+#: ../src/eom-window.c:3264
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr "ไม่พบที่ทิ้งขยะสำหรับ \"%s\" คุณต้องการจะลบภาพนี้อย่างถาวรหรือไม่?"
 
-#: ../src/eom-window.c:3172
+#: ../src/eom-window.c:3269
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1094,7 +1147,7 @@ msgid_plural ""
 "the %d selected images to the trash?"
 msgstr[0] ""
 
-#: ../src/eom-window.c:3177
+#: ../src/eom-window.c:3274
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1102,406 +1155,418 @@ msgstr ""
 "ภาพบางภาพที่เลือกไม่สามารถทิ้งลงถังขยะได้ และจะลบทิ้งอย่างถาวร "
 "ยืนยันที่จะทำต่อไปหรือไม่?"
 
-#: ../src/eom-window.c:3194 ../src/eom-window.c:3678 ../src/eom-window.c:3705
+#: ../src/eom-window.c:3291 ../src/eom-window.c:3778 ../src/eom-window.c:3805
 msgid "Move to _Trash"
 msgstr "_ทิ้งลงถังขยะ"
 
-#: ../src/eom-window.c:3196
+#: ../src/eom-window.c:3293
 msgid "_Do not ask again during this session"
 msgstr "ไ_ม่ต้องถามอีกตลอดวาระนี้"
 
-#: ../src/eom-window.c:3241 ../src/eom-window.c:3255
+#: ../src/eom-window.c:3338 ../src/eom-window.c:3352
 #, c-format
 msgid "Couldn't access trash."
 msgstr "เปิดใช้ถังขยะไม่สำเร็จ"
 
-#: ../src/eom-window.c:3263
+#: ../src/eom-window.c:3360
 #, c-format
 msgid "Couldn't delete file"
 msgstr "ไม่สามารถลบแฟ้มได้"
 
-#: ../src/eom-window.c:3360
+#: ../src/eom-window.c:3457
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "ผิดพลาดขณะลบรูป %s"
 
-#: ../src/eom-window.c:3602
+#: ../src/eom-window.c:3699
 msgid "_Image"
 msgstr "_รูป"
 
-#: ../src/eom-window.c:3603
+#: ../src/eom-window.c:3700
 msgid "_Edit"
 msgstr "แ_ก้ไข"
 
-#: ../src/eom-window.c:3604
+#: ../src/eom-window.c:3701
 msgid "_View"
 msgstr "มุม_มอง"
 
-#: ../src/eom-window.c:3605
+#: ../src/eom-window.c:3702
 msgid "_Go"
 msgstr "ไ_ป"
 
-#: ../src/eom-window.c:3606
+#: ../src/eom-window.c:3703
 msgid "_Tools"
 msgstr "เครื่อ_งมือ"
 
-#: ../src/eom-window.c:3607
+#: ../src/eom-window.c:3704
 msgid "_Help"
 msgstr "_วิธีใช้"
 
-#: ../src/eom-window.c:3609
+#: ../src/eom-window.c:3706
 msgid "_Open…"
 msgstr "_เปิด…"
 
-#: ../src/eom-window.c:3610
+#: ../src/eom-window.c:3707
 msgid "Open a file"
 msgstr "เปิดแฟ้ม"
 
-#: ../src/eom-window.c:3612
+#: ../src/eom-window.c:3709
 msgid "_Close"
 msgstr "ปิ_ด"
 
-#: ../src/eom-window.c:3613
+#: ../src/eom-window.c:3710
 msgid "Close window"
 msgstr "ปิดหน้าต่าง"
 
-#: ../src/eom-window.c:3615
+#: ../src/eom-window.c:3712
 msgid "T_oolbar"
 msgstr "แถบเ_ครื่องมือ"
 
-#: ../src/eom-window.c:3616
+#: ../src/eom-window.c:3713
 msgid "Edit the application toolbar"
 msgstr "แก้ไขแถบเครื่องมือของโปรแกรม"
 
-#: ../src/eom-window.c:3618
+#: ../src/eom-window.c:3715
 msgid "Prefere_nces"
 msgstr "ปรับแ_ต่ง"
 
-#: ../src/eom-window.c:3619
+#: ../src/eom-window.c:3716
 msgid "Preferences for Eye of MATE"
 msgstr "ปรับแต่ง Eye of MATE"
 
-#: ../src/eom-window.c:3621
+#: ../src/eom-window.c:3718
 msgid "_Contents"
 msgstr "เ_นื้อหา"
 
-#: ../src/eom-window.c:3622
+#: ../src/eom-window.c:3719
 msgid "Help on this application"
 msgstr "วิธีใช้โปรแกรมนี้"
 
-#: ../src/eom-window.c:3624
+#: ../src/eom-window.c:3721
 msgid "_About"
 msgstr "เ_กี่ยวกับ"
 
-#: ../src/eom-window.c:3625
+#: ../src/eom-window.c:3722
 msgid "About this application"
 msgstr "เกี่ยวกับโปรแกรมนี้"
 
-#: ../src/eom-window.c:3630
+#: ../src/eom-window.c:3727
 msgid "_Toolbar"
 msgstr "แถบเ_ครื่องมือ"
 
-#: ../src/eom-window.c:3631
+#: ../src/eom-window.c:3728
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "แสดง/ซ่อน แถบเครื่องมือในหน้าต่างปัจจุบัน"
 
-#: ../src/eom-window.c:3633
+#: ../src/eom-window.c:3730
 msgid "_Statusbar"
 msgstr "แถบ_สถานะ"
 
-#: ../src/eom-window.c:3634
+#: ../src/eom-window.c:3731
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "แสดง/ซ่อน แถบสถานะในหน้าต่างปัจจุบัน"
 
-#: ../src/eom-window.c:3636
+#: ../src/eom-window.c:3733
 msgid "_Image Collection"
 msgstr "_สมุดรูป"
 
-#: ../src/eom-window.c:3637
+#: ../src/eom-window.c:3734
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "แสดง/ซ่อน ช่องสมุดรูปในหน้าต่างปัจจุบัน"
 
-#: ../src/eom-window.c:3639
+#: ../src/eom-window.c:3736
 msgid "Side _Pane"
 msgstr "แถบ_ข้าง"
 
-#: ../src/eom-window.c:3640
+#: ../src/eom-window.c:3737
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "แสดง/ซ่อน แถบข้างในหน้าต่างปัจจุบัน"
 
-#: ../src/eom-window.c:3645
+#: ../src/eom-window.c:3742
 msgid "_Save"
 msgstr "_บันทึก"
 
-#: ../src/eom-window.c:3646
+#: ../src/eom-window.c:3743
 msgid "Save changes in currently selected images"
 msgstr "บันทึกการแก้ไขรูปที่เลือก"
 
-#: ../src/eom-window.c:3648
+#: ../src/eom-window.c:3745
 msgid "Open _with"
 msgstr "เปิด_ด้วย"
 
-#: ../src/eom-window.c:3649
+#: ../src/eom-window.c:3746
 msgid "Open the selected image with a different application"
 msgstr "เปิดรูปที่เลือกด้วยโปรแกรมอื่น"
 
-#: ../src/eom-window.c:3651
+#: ../src/eom-window.c:3748
 msgid "Save _As…"
 msgstr "บันทึกเป็_น…"
 
-#: ../src/eom-window.c:3652
+#: ../src/eom-window.c:3749
 msgid "Save the selected images with a different name"
 msgstr "บันทึกรูปที่เลือกเป็นชื่ออื่น"
 
-#: ../src/eom-window.c:3654
+#: ../src/eom-window.c:3751
+msgid "Open Containing _Folder"
+msgstr "_เปิดโฟลเดอร์ที่เก็บ"
+
+#: ../src/eom-window.c:3752
+msgid "Show the folder which contains this file in the file manager"
+msgstr ""
+
+#: ../src/eom-window.c:3754
 msgid "_Print…"
 msgstr "_พิมพ์…"
 
-#: ../src/eom-window.c:3655
+#: ../src/eom-window.c:3755
 msgid "Print the selected image"
 msgstr "พิมพ์รูปที่เลือก"
 
-#: ../src/eom-window.c:3657
+#: ../src/eom-window.c:3757
 msgid "Prope_rties"
 msgstr "คุณ_สมบัติ"
 
-#: ../src/eom-window.c:3658
+#: ../src/eom-window.c:3758
 msgid "Show the properties and metadata of the selected image"
 msgstr "แสดงคุณสมบัติและข้อมูลประกอบของรูปที่เลือก"
 
-#: ../src/eom-window.c:3660
+#: ../src/eom-window.c:3760
 msgid "_Undo"
 msgstr "เรี_ยกคืน"
 
-#: ../src/eom-window.c:3661
+#: ../src/eom-window.c:3761
 msgid "Undo the last change in the image"
 msgstr "เรียกคืนการแก้ไขล่าสุดที่กระทำต่อรูป"
 
-#: ../src/eom-window.c:3663
+#: ../src/eom-window.c:3763
 msgid "Flip _Horizontal"
 msgstr "พลิกแนว_นอน"
 
-#: ../src/eom-window.c:3664
+#: ../src/eom-window.c:3764
 msgid "Mirror the image horizontally"
 msgstr "กลับซ้ายเป็นขวา"
 
-#: ../src/eom-window.c:3666
+#: ../src/eom-window.c:3766
 msgid "Flip _Vertical"
 msgstr "พลิกแนว_ตั้ง"
 
-#: ../src/eom-window.c:3667
+#: ../src/eom-window.c:3767
 msgid "Mirror the image vertically"
 msgstr "กลับบนลงล่าง"
 
-#: ../src/eom-window.c:3669
+#: ../src/eom-window.c:3769
 msgid "_Rotate Clockwise"
 msgstr "หมุนต_ามเข็มนาฬิกา"
 
-#: ../src/eom-window.c:3670
+#: ../src/eom-window.c:3770
 msgid "Rotate the image 90 degrees to the right"
 msgstr "หมุนรูปไปทางขวา 90 องศา"
 
-#: ../src/eom-window.c:3672
+#: ../src/eom-window.c:3772
 msgid "Rotate Counterc_lockwise"
 msgstr "หมุน_ทวนเข็มนาฬิกา"
 
-#: ../src/eom-window.c:3673
+#: ../src/eom-window.c:3773
 msgid "Rotate the image 90 degrees to the left"
 msgstr "หมุนรูปไปทางซ้าย 90 องศา"
 
-#: ../src/eom-window.c:3675
+#: ../src/eom-window.c:3775
 msgid "Set as _Desktop Background"
 msgstr "ใช้เป็น_พื้นหลังพื้นโต๊ะ"
 
-#: ../src/eom-window.c:3676
+#: ../src/eom-window.c:3776
 msgid "Set the selected image as the desktop background"
 msgstr "ใช้รูปที่เลือกอยู่เป็นภาพพื้นหลังของพื้นโต๊ะ"
 
-#: ../src/eom-window.c:3679
+#: ../src/eom-window.c:3779
 msgid "Move the selected image to the trash folder"
 msgstr "ทิ้งรูปที่เลือกอยู่ลงถังขยะ"
 
-#: ../src/eom-window.c:3681
+#: ../src/eom-window.c:3781
 msgid "_Copy"
 msgstr "_คัดลอก"
 
-#: ../src/eom-window.c:3682
+#: ../src/eom-window.c:3782
 msgid "Copy the selected image to the clipboard"
 msgstr "คัดลอกรูปที่เลือกไปไว้ที่คลิปบอร์ด"
 
-#: ../src/eom-window.c:3684 ../src/eom-window.c:3696 ../src/eom-window.c:3699
+#: ../src/eom-window.c:3784 ../src/eom-window.c:3796 ../src/eom-window.c:3799
 msgid "_Zoom In"
 msgstr "ขย_าย"
 
-#: ../src/eom-window.c:3685 ../src/eom-window.c:3697
+#: ../src/eom-window.c:3785 ../src/eom-window.c:3797
 msgid "Enlarge the image"
 msgstr "ขยายรูปให้ใหญ่ขึ้น"
 
-#: ../src/eom-window.c:3687 ../src/eom-window.c:3702
+#: ../src/eom-window.c:3787 ../src/eom-window.c:3802
 msgid "Zoom _Out"
 msgstr "_ย่อ"
 
-#: ../src/eom-window.c:3688 ../src/eom-window.c:3700 ../src/eom-window.c:3703
+#: ../src/eom-window.c:3788 ../src/eom-window.c:3800 ../src/eom-window.c:3803
 msgid "Shrink the image"
 msgstr "ย่อรูปให้เล็กลง"
 
-#: ../src/eom-window.c:3690
+#: ../src/eom-window.c:3790
 msgid "_Normal Size"
 msgstr "ขนาด_ปกติ"
 
-#: ../src/eom-window.c:3691
+#: ../src/eom-window.c:3791
 msgid "Show the image at its normal size"
 msgstr "แสดงรูปในขนาดปกติ"
 
-#: ../src/eom-window.c:3693
+#: ../src/eom-window.c:3793
 msgid "_Best Fit"
 msgstr "_พอดีหน้า"
 
-#: ../src/eom-window.c:3694
+#: ../src/eom-window.c:3794
 msgid "Fit the image to the window"
 msgstr "แสดงรูปในขนาดที่พอดีกับหน้าต่าง"
 
-#: ../src/eom-window.c:3711
+#: ../src/eom-window.c:3811
 msgid "_Fullscreen"
 msgstr "เต็_มจอ"
 
-#: ../src/eom-window.c:3712
+#: ../src/eom-window.c:3812
 msgid "Show the current image in fullscreen mode"
 msgstr "แสดงรูปปัจจุบันแบบเต็มจอ"
 
-#: ../src/eom-window.c:3714
+#: ../src/eom-window.c:3814
 msgid "Pause Slideshow"
 msgstr "พัก/หยุดการแสดงสไลด์ชั่วคราว"
 
-#: ../src/eom-window.c:3715
+#: ../src/eom-window.c:3815
 msgid "Pause or resume the slideshow"
 msgstr "หยุดชั่วคราวหรือเล่นต่อสไลด์โชว์"
 
-#: ../src/eom-window.c:3720 ../src/eom-window.c:3735
+#: ../src/eom-window.c:3820 ../src/eom-window.c:3835
 msgid "_Previous Image"
 msgstr "รูป_ก่อนหน้า"
 
-#: ../src/eom-window.c:3721
+#: ../src/eom-window.c:3821
 msgid "Go to the previous image of the collection"
 msgstr "ไปยังรูปก่อนหน้าในสมุดรูป"
 
-#: ../src/eom-window.c:3723
+#: ../src/eom-window.c:3823
 msgid "_Next Image"
 msgstr "รูป_ถัดไป"
 
-#: ../src/eom-window.c:3724
+#: ../src/eom-window.c:3824
 msgid "Go to the next image of the collection"
 msgstr "ไปยังรูปถัดไปในสมุดรูป"
 
-#: ../src/eom-window.c:3726 ../src/eom-window.c:3738
+#: ../src/eom-window.c:3826 ../src/eom-window.c:3838
 msgid "_First Image"
 msgstr "รูปแ_รก"
 
-#: ../src/eom-window.c:3727
+#: ../src/eom-window.c:3827
 msgid "Go to the first image of the collection"
 msgstr "ไปยังรูปแรกของสมุดรูป"
 
-#: ../src/eom-window.c:3729 ../src/eom-window.c:3741
+#: ../src/eom-window.c:3829 ../src/eom-window.c:3841
 msgid "_Last Image"
 msgstr "รูปสุด_ท้าย"
 
-#: ../src/eom-window.c:3730
+#: ../src/eom-window.c:3830
 msgid "Go to the last image of the collection"
 msgstr "ไปยังรูปสุดท้ายของสมุดรูป"
 
-#: ../src/eom-window.c:3732
+#: ../src/eom-window.c:3832
 msgid "_Random Image"
 msgstr "สุ่_มรูป"
 
-#: ../src/eom-window.c:3733
+#: ../src/eom-window.c:3833
 msgid "Go to a random image of the collection"
 msgstr "ไปยังรูปในสมุดรูปแบบสุ่ม"
 
-#: ../src/eom-window.c:3747
+#: ../src/eom-window.c:3847
 msgid "S_lideshow"
 msgstr "S_lideshow"
 
-#: ../src/eom-window.c:3748
+#: ../src/eom-window.c:3848
 msgid "Start a slideshow view of the images"
 msgstr "เริ่มแสดงภาพต่างๆ แบบฉายสไลด์"
 
-#: ../src/eom-window.c:3814
+#: ../src/eom-window.c:3914
 msgid "Previous"
 msgstr "ถอย"
 
-#: ../src/eom-window.c:3818
+#: ../src/eom-window.c:3918
 msgid "Next"
 msgstr "เดินหน้า"
 
-#: ../src/eom-window.c:3822
+#: ../src/eom-window.c:3922
 msgid "Right"
 msgstr "ขวา"
 
-#: ../src/eom-window.c:3825
+#: ../src/eom-window.c:3925
 msgid "Left"
 msgstr "ซ้าย"
 
-#: ../src/eom-window.c:3828
+#: ../src/eom-window.c:3931
 msgid "In"
 msgstr "ขยาย"
 
-#: ../src/eom-window.c:3831
+#: ../src/eom-window.c:3934
 msgid "Out"
 msgstr "ย่อ"
 
-#: ../src/eom-window.c:3834
+#: ../src/eom-window.c:3937
 msgid "Normal"
 msgstr "ปกติ"
 
-#: ../src/eom-window.c:3837
+#: ../src/eom-window.c:3940
 msgid "Fit"
 msgstr "พอดี"
 
-#: ../src/eom-window.c:3840
+#: ../src/eom-window.c:3943
 msgid "Collection"
 msgstr "สมุดรูป"
 
-#: ../src/eom-window.c:3843
+#: ../src/eom-window.c:3946
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "ถังขยะ"
 
-#: ../src/eom-window.c:4192
+#: ../src/eom-window.c:4291
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "แก้ไขรูปปัจจุบันโดยใช้ %s"
 
-#: ../src/eom-window.c:4194
+#: ../src/eom-window.c:4293
 msgid "Edit Image"
 msgstr "แก้ไขรูป"
 
-#: ../src/main.c:77
+#: ../src/eom-window.c:4508
+msgid "Properties"
+msgstr "คุณสมบัติ"
+
+#: ../src/main.c:72
 msgid "Open in fullscreen mode"
 msgstr "เปิดในแบบเต็มจอ"
 
-#: ../src/main.c:78
+#: ../src/main.c:73
 msgid "Disable image collection"
 msgstr "ปิดการแสดงสมุดรูป"
 
-#: ../src/main.c:79
+#: ../src/main.c:74
 msgid "Open in slideshow mode"
 msgstr "เปิดในแบบแสดงสไลด์"
 
-#: ../src/main.c:81
+#: ../src/main.c:75
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "เปิดโปรแกรมตัวใหม่ แทนที่จะใช้ตัวเก่าซ้ำ"
 
-#: ../src/main.c:84
+#: ../src/main.c:77
 msgid "Show the application's version"
 msgstr "แสดงรุ่นของโปรแกรม"
 
-#: ../src/main.c:85
+#: ../src/main.c:107
 msgid "[FILE…]"
 msgstr "[FILE…]"
 
 #. I18N: The '%s' is replaced with eom's command name.
-#: ../src/main.c:212
+#: ../src/main.c:120
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "เรียก '%s --help' เพื่อดูตัวเลือกทั้งหมดที่มีของบรรทัดคำสั่ง"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-14 08:51+0100\n"
+"POT-Creation-Date: 2018-07-17 22:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Amharic (https://www.transifex.com/mate/teams/13566/am/)\n"
@@ -25,32 +25,32 @@ msgstr ""
 #. * produce duplicates, but don't worry about it. If your language
 #. * normally has a mnemonic at the start, please use the _. If not,
 #. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:924
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:930
 #, c-format
 msgid "Show “_%s”"
 msgstr "ማሳያ “_%s”"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1390
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1396
 msgid "_Move on Toolbar"
 msgstr "_ወደ እቃ መደርደሪያው ማንቀሳቀሻ "
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1391
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1397
 msgid "Move the selected item on the toolbar"
 msgstr "የተመረጠውን እቃ ወደ መደርደሪያው ማንቀሳቀሻ "
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1392
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1398
 msgid "_Remove from Toolbar"
 msgstr "ከ እቃ መደርደሪያው _ማስወገጃ  "
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1393
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1399
 msgid "Remove the selected item from the toolbar"
 msgstr "የተመረጠውን ከ እቃ መደርደሪያው ማስወገጃ  "
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1394
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1400
 msgid "_Delete Toolbar"
 msgstr "እቃ መደርደሪያውን _ማጥፊያ "
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1395
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1401
 msgid "Remove the selected toolbar"
 msgstr "የተመረጠውን ከእቃ መደርደሪያው ማስወገጃ  "
 
@@ -58,7 +58,7 @@ msgstr "የተመረጠውን ከእቃ መደርደሪያው ማስወገጃ  "
 msgid "Separator"
 msgstr "መለያያ  "
 
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2555
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2584
 msgid "Eye of MATE"
 msgstr "የ ሜት አይን"
 
@@ -75,7 +75,7 @@ msgstr ""
 "<p> የ ሜት አይን ቀላል የ ምስል መመልከቻ ነው በ እርስዎ ኮምፒዩተር ውስጥ: አንድ ጊዜ ምስል ከ ተጫነ: እርስዎ "
 "ምስል ማሳየት እና ማዞር ይችላሉ: እና እንዲሁምተከታታይ ምስል ከ ዳይሬክቶሪ ውስጥ መመልከት ይችላሉ: ከ </p>"
 
-#: ../data/eom.desktop.in.in.h:1 ../src/main.c:70 ../src/main.c:264
+#: ../data/eom.desktop.in.in.h:1 ../src/main.c:65 ../src/main.c:163
 msgid "Eye of MATE Image Viewer"
 msgstr "የ ሜት አይን ምስል መመልከቻ"
 
@@ -96,18 +96,22 @@ msgid "_Next"
 msgstr "_የሚቀጥለው"
 
 #: ../data/eom-image-properties-dialog.ui.h:4
+#: ../src/eom-metadata-sidebar.c:502
 msgid "Name:"
 msgstr "ስም:"
 
 #: ../data/eom-image-properties-dialog.ui.h:5
+#: ../src/eom-metadata-sidebar.c:504
 msgid "Width:"
 msgstr "ስፋት:"
 
 #: ../data/eom-image-properties-dialog.ui.h:6
+#: ../src/eom-metadata-sidebar.c:506
 msgid "Height:"
 msgstr "እርዝመት:"
 
 #: ../data/eom-image-properties-dialog.ui.h:7
+#: ../src/eom-metadata-sidebar.c:508
 msgid "Type:"
 msgstr "አይነት: "
 
@@ -116,66 +120,82 @@ msgid "Bytes:"
 msgstr "ባይትስ :"
 
 #: ../data/eom-image-properties-dialog.ui.h:9
+#: ../src/eom-metadata-sidebar.c:562
 msgid "Location:"
 msgstr "አካባቢ:"
 
 #: ../data/eom-image-properties-dialog.ui.h:10
+#: ../src/eom-metadata-sidebar.c:500
 msgid "General"
 msgstr "ባጠቃላይ"
 
 #: ../data/eom-image-properties-dialog.ui.h:11
+#: ../src/eom-metadata-sidebar.c:534
 msgid "Aperture Value:"
 msgstr ""
 
 #: ../data/eom-image-properties-dialog.ui.h:12
+#: ../src/eom-metadata-sidebar.c:537
 msgid "Exposure Time:"
 msgstr "የተጋለጠበት ሰአት:"
 
 #: ../data/eom-image-properties-dialog.ui.h:13
+#: ../src/eom-metadata-sidebar.c:540
 msgid "Focal Length:"
 msgstr ""
 
 #: ../data/eom-image-properties-dialog.ui.h:14
+#: ../src/eom-metadata-sidebar.c:542
 msgid "Flash:"
 msgstr "ፍላሽ:"
 
 #: ../data/eom-image-properties-dialog.ui.h:15
+#: ../src/eom-metadata-sidebar.c:546
 msgid "ISO Speed Rating:"
 msgstr "የ ISO ፍጥነት መጠን:"
 
 #: ../data/eom-image-properties-dialog.ui.h:16
+#: ../src/eom-metadata-sidebar.c:549
 msgid "Metering Mode:"
 msgstr ""
 
 #: ../data/eom-image-properties-dialog.ui.h:17
+#: ../src/eom-metadata-sidebar.c:552
 msgid "Camera Model:"
 msgstr "የካሜራው አይነት :"
 
 #: ../data/eom-image-properties-dialog.ui.h:18
+#: ../src/eom-metadata-sidebar.c:554
 msgid "Date/Time:"
 msgstr "ቀን/ሰአት "
 
 #: ../data/eom-image-properties-dialog.ui.h:19
+#: ../src/eom-metadata-sidebar.c:559
 msgid "Description:"
 msgstr "መግለጫ:"
 
 #: ../data/eom-image-properties-dialog.ui.h:20
+#: ../src/eom-metadata-sidebar.c:565
 msgid "Keywords:"
 msgstr "ቁልፍ ቃሎች:"
 
 #: ../data/eom-image-properties-dialog.ui.h:21
+#: ../src/eom-metadata-sidebar.c:567
 msgid "Author:"
 msgstr "ደራሲ:"
 
 #: ../data/eom-image-properties-dialog.ui.h:22
+#: ../src/eom-metadata-sidebar.c:570
 msgid "Copyright:"
 msgstr "የ ቅጂ መብት:"
 
 #: ../data/eom-image-properties-dialog.ui.h:23
+#: ../src/eom-metadata-sidebar.c:573
 msgid "Details"
 msgstr "ዝርዝሮች "
 
 #: ../data/eom-image-properties-dialog.ui.h:24
+#: ../src/eom-metadata-sidebar.c:530
 msgid "Metadata"
 msgstr ""
 
@@ -490,11 +510,11 @@ msgstr "የ ምስል ስብስብ ክፍል እንደገና ይመጠን እን
 
 #: ../data/org.mate.eom.gschema.xml.in.h:34
 msgid "Show/Hide the window side pane."
-msgstr "የመስኮቱን የጎን ክፍል ማሳያ / መደበቂያ "
+msgstr "የ መስኮቱን የ ጎን ክፍል ማሳያ / መደበቂያ "
 
 #: ../data/org.mate.eom.gschema.xml.in.h:35
 msgid "Show/Hide the image collection pane scroll buttons."
-msgstr "የምስል ስብስብ ክፍል መሸብለያ ቁልፍ ማሳያ/መደበቂያ"
+msgstr "የ ምስል ስብስብ ክፍል መሸብለያ ቁልፍ ማሳያ/መደበቂያ"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:36
 msgid "Close main window without asking to save changes."
@@ -574,15 +594,15 @@ msgstr "ሁለት-ጊዜ ሲጫኑ በ ሙሉ መመልከቻ ዘዴ ማሳያ"
 msgid "Activate fullscreen mode with double-click"
 msgstr "ሁለት-ጊዜ ሲጫኑ በ ሙሉ መመልከቻ ዘዴ ማሳያ ማስነሻ"
 
-#: ../plugins/reload/eom-reload-plugin.c:44
+#: ../plugins/reload/eom-reload-plugin.c:45
 #: ../plugins/reload/reload.plugin.desktop.in.h:1
 msgid "Reload Image"
 msgstr "ምስሉን እንደገና መጫኛ"
 
-#: ../plugins/reload/eom-reload-plugin.c:44
+#: ../plugins/reload/eom-reload-plugin.c:45
 #: ../plugins/reload/reload.plugin.desktop.in.h:2
 msgid "Reload current image"
-msgstr "የአሁኑን ምስል እንደገና መጫኛ"
+msgstr "የ አሁኑን ምስል እንደገና መጫኛ"
 
 #: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
 msgid "Date in statusbar"
@@ -592,28 +612,24 @@ msgstr "ቀን እና የሁኔታ መደርደሪያ"
 msgid "Shows the image date in the window statusbar"
 msgstr "የ ምስሉን ቀን በ መስኮቱን የሁኔታ መደርደሪያ ላይ ማሳያ"
 
-#: ../src/eom-application.c:124
-msgid "Running in fullscreen mode"
-msgstr "በሙሉ መመልከቻው ዘዴ ማስኬጃ "
-
-#: ../src/eom-close-confirmation-dialog.c:159
+#: ../src/eom-close-confirmation-dialog.c:154
 msgid "Close _without Saving"
 msgstr "መዝጊያ  _ምንም ሳያስቀምጡ"
 
-#: ../src/eom-close-confirmation-dialog.c:192
+#: ../src/eom-close-confirmation-dialog.c:187
 msgid "Question"
 msgstr "ጥያቄ"
 
-#: ../src/eom-close-confirmation-dialog.c:373
+#: ../src/eom-close-confirmation-dialog.c:366
 msgid "If you don't save, your changes will be lost."
 msgstr "ካላስቀመጡት ለውጦቹ በሙሉ ይጠፋሉ"
 
-#: ../src/eom-close-confirmation-dialog.c:409
+#: ../src/eom-close-confirmation-dialog.c:402
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "ለውጡን ምስሉ ላይ ላስቀምጠው \"%s\" ከመዘጋቱ በፊት?"
 
-#: ../src/eom-close-confirmation-dialog.c:604
+#: ../src/eom-close-confirmation-dialog.c:597
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
@@ -621,91 +637,92 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/eom-close-confirmation-dialog.c:621
+#: ../src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
 msgstr "ይ_ምረጡ ማስቀመጥ የሚፈልጉትን ምስል :"
 
 #. Secondary label
-#: ../src/eom-close-confirmation-dialog.c:640
+#: ../src/eom-close-confirmation-dialog.c:633
 msgid "If you don't save, all your changes will be lost."
 msgstr "ካላስቀመጡት ለውጦቹ በሙሉ ይጠፋሉ "
 
-#: ../src/eom-file-chooser.c:127
+#: ../src/eom-file-chooser.c:121
 msgid "File format is unknown or unsupported"
 msgstr "የ ፋይሉ አቀራረብ አይታወቅም ወይንም አይደገፍም"
 
-#: ../src/eom-file-chooser.c:132
+#: ../src/eom-file-chooser.c:126
 msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
 msgstr ""
 "የ ሜት አይን መወሰን አልቻለም የ ተደገፉ ሊጻፍባቸው የሚችሉ የ ፋይሎች አቀራረብ የ ፋይል ስም መሰረት ባደረገ"
 
-#: ../src/eom-file-chooser.c:133
+#: ../src/eom-file-chooser.c:127
 msgid "Please try a different file extension like .png or .jpg."
 msgstr "እባክዎን የተለየ የ ፋይል ተጨማሪ ይሞክሩ እንደ .png ወይንም .jpg."
 
-#: ../src/eom-file-chooser.c:165
+#: ../src/eom-file-chooser.c:159
 msgid "All Files"
 msgstr "ሁሉንም ፋይሎች"
 
-#: ../src/eom-file-chooser.c:170
+#: ../src/eom-file-chooser.c:164
 msgid "All Images"
 msgstr "ሁሉንም ምስሎች "
 
 #. Filter name: First description then file extension, eg. "The PNG-Format
 #. (*.png)".
-#: ../src/eom-file-chooser.c:191
+#: ../src/eom-file-chooser.c:185
 #, c-format
 msgid "%s (*.%s)"
 msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
-#: ../src/eom-file-chooser.c:287 ../src/eom-properties-dialog.c:137
-#: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:519
+#: ../src/eom-file-chooser.c:281 ../src/eom-metadata-sidebar.c:234
+#: ../src/eom-metadata-sidebar.c:238 ../src/eom-properties-dialog.c:135
+#: ../src/eom-properties-dialog.c:137 ../src/eom-thumb-view.c:518
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ፒክስሎች"
+msgstr[1] "ፒክስሎች"
 
-#: ../src/eom-file-chooser.c:457
+#: ../src/eom-file-chooser.c:451
 msgid "Open Image"
 msgstr "ምስል መክፈቻ "
 
-#: ../src/eom-file-chooser.c:465
+#: ../src/eom-file-chooser.c:459
 msgid "Save Image"
 msgstr "ምስሉን ማስቀመጫ "
 
-#: ../src/eom-file-chooser.c:473
+#: ../src/eom-file-chooser.c:467 ../src/eom-window.c:3928
 msgid "Open Folder"
 msgstr "ፎልደር መክፈቻ "
 
-#: ../src/eom-image.c:566
+#: ../src/eom-image.c:561
 #, c-format
 msgid "Transformation on unloaded image."
 msgstr "ያልተጫኑ ምስሎች መቀየሪያ"
 
-#: ../src/eom-image.c:594
+#: ../src/eom-image.c:589
 #, c-format
 msgid "Transformation failed."
 msgstr "መቀየር አልተቻለም"
 
-#: ../src/eom-image.c:1019
+#: ../src/eom-image.c:1032
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "EXIF ለዚህ ፋይል አቀራረብ የ ተደገፈ አይደለም"
 
-#: ../src/eom-image.c:1162
+#: ../src/eom-image.c:1180
 #, c-format
 msgid "Image loading failed."
 msgstr "ምስል መጫን አልተቻለም "
 
-#: ../src/eom-image.c:1691 ../src/eom-image.c:1793
+#: ../src/eom-image.c:1709 ../src/eom-image.c:1811
 #, c-format
 msgid "No image loaded."
 msgstr "ምንም ምስል አልተጫነም "
 
-#: ../src/eom-image.c:1701 ../src/eom-image.c:1805
+#: ../src/eom-image.c:1719 ../src/eom-image.c:1823
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "ጊዚያዊ ፋይል መፍጠር አልተቻለም "
@@ -738,160 +755,84 @@ msgstr "ምስሉ አልተገኘም በ '%s'."
 msgid "The given locations contain no images."
 msgstr "የተሰጠው አካባቢ ምንም ምስሎች አልያዘም"
 
-#: ../src/eom-exif-details.c:68
+#: ../src/eom-exif-details.c:64
 msgid "Camera"
 msgstr "ካሜራ "
 
-#: ../src/eom-exif-details.c:69
+#: ../src/eom-exif-details.c:65
 msgid "Image Data"
 msgstr "የምስል ዳታ "
 
-#: ../src/eom-exif-details.c:70
+#: ../src/eom-exif-details.c:66
 msgid "Image Taking Conditions"
 msgstr "የ ምስል መውሰጃ ሁኔታዎች"
 
-#: ../src/eom-exif-details.c:71
+#: ../src/eom-exif-details.c:67
+msgid "GPS Data"
+msgstr ""
+
+#: ../src/eom-exif-details.c:68
 msgid "Maker Note"
 msgstr "ማስታወሻ መፍጠሪያ"
 
-#: ../src/eom-exif-details.c:72
+#: ../src/eom-exif-details.c:69
 msgid "Other"
 msgstr "ሌላ "
 
-#: ../src/eom-exif-details.c:74
+#: ../src/eom-exif-details.c:71
 msgid "XMP Exif"
 msgstr "XMP Exif"
 
-#: ../src/eom-exif-details.c:75
+#: ../src/eom-exif-details.c:72
 msgid "XMP IPTC"
 msgstr "XMP IPTC"
 
-#: ../src/eom-exif-details.c:76
+#: ../src/eom-exif-details.c:73
 msgid "XMP Rights Management"
 msgstr ""
 
-#: ../src/eom-exif-details.c:77
+#: ../src/eom-exif-details.c:74
 msgid "XMP Other"
 msgstr "XMP ሌላ"
 
-#: ../src/eom-exif-details.c:251
+#: ../src/eom-exif-details.c:250
 msgid "Tag"
 msgstr "Tag"
 
-#: ../src/eom-exif-details.c:258
+#: ../src/eom-exif-details.c:260
 msgid "Value"
 msgstr "ዋጋ"
 
+#: ../src/eom-exif-details.c:417
+msgid "North"
+msgstr "ከ ሰሜን"
+
+#: ../src/eom-exif-details.c:420
+msgid "East"
+msgstr "ከ ምስራቅ"
+
+#: ../src/eom-exif-details.c:423
+msgid "West"
+msgstr "ከ ምዕራብ"
+
+#: ../src/eom-exif-details.c:426
+msgid "South"
+msgstr "ከ ደቡብ"
+
 #. A strftime-formatted string, to display the date the image was taken.
-#: ../src/eom-exif-util.c:121 ../src/eom-exif-util.c:161
+#: ../src/eom-exif-util.c:122 ../src/eom-exif-util.c:162
 msgid "%a, %d %B %Y  %X"
 msgstr "%a, %d %B %Y  %X"
 
 #. A strftime-formatted string, to display the date the image was taken, for
 #. the case we don't have the time.
-#: ../src/eom-exif-util.c:155
+#: ../src/eom-exif-util.c:156
 msgid "%a, %d %B %Y"
 msgstr "%a, %d %B %Y"
 
-#: ../src/eom-print.c:371
-msgid "Image Settings"
-msgstr "ምስል ማሰናጃዎች "
-
-#: ../src/eom-print-image-setup.c:828
-msgid "Image"
-msgstr "ምስል"
-
-#: ../src/eom-print-image-setup.c:829
-msgid "The image whose printing properties will be set up"
-msgstr "ምስል የ ማተሚያ ባህሪዎች የሚሰናዳለት"
-
-#: ../src/eom-print-image-setup.c:835
-msgid "Page Setup"
-msgstr "ገጽ ማሰናጃ"
-
-#: ../src/eom-print-image-setup.c:836
-msgid "The information for the page where the image will be printed"
-msgstr "የ ገጽ መረጃ ምስሉ የሚታተምበት"
-
-#: ../src/eom-print-image-setup.c:864
-msgid "Position"
-msgstr "አካባቢ "
-
-#: ../src/eom-print-image-setup.c:868
-msgid "_Left:"
-msgstr "_በግራ :"
-
-#: ../src/eom-print-image-setup.c:870
-msgid "_Right:"
-msgstr "_በቀኝ :"
-
-#: ../src/eom-print-image-setup.c:871
-msgid "_Top:"
-msgstr "_ከላይ :"
-
-#: ../src/eom-print-image-setup.c:872
-msgid "_Bottom:"
-msgstr "_ከታች :"
-
-#: ../src/eom-print-image-setup.c:875
-msgid "C_enter:"
-msgstr "መ_ሀከል :"
-
-#: ../src/eom-print-image-setup.c:880
-msgid "None"
-msgstr "ምንም"
-
-#: ../src/eom-print-image-setup.c:882
-msgid "Horizontal"
-msgstr "በአግድም "
-
-#: ../src/eom-print-image-setup.c:884
-msgid "Vertical"
-msgstr "በቁመት "
-
-#: ../src/eom-print-image-setup.c:886
-msgid "Both"
-msgstr "ሁለቱንም"
-
-#: ../src/eom-print-image-setup.c:902
-msgid "Size"
-msgstr "መጠን "
-
-#: ../src/eom-print-image-setup.c:905
-msgid "_Width:"
-msgstr "_ስፋት :"
-
-#: ../src/eom-print-image-setup.c:907
-msgid "_Height:"
-msgstr "_እርዝመት :"
-
-#: ../src/eom-print-image-setup.c:910
-msgid "_Scaling:"
-msgstr "_መመጠኛ:"
-
-#: ../src/eom-print-image-setup.c:921
-msgid "_Unit:"
-msgstr "_መለኪያ:"
-
-#: ../src/eom-print-image-setup.c:926
-msgid "Millimeters"
-msgstr "ሚሊ ሚትር "
-
-#: ../src/eom-print-image-setup.c:928
-msgid "Inches"
-msgstr "ኢንቾች"
-
-#: ../src/eom-print-image-setup.c:956
-msgid "Preview"
-msgstr "ቅድመ እይታ "
-
-#: ../src/eom-properties-dialog.c:154
-msgid "Unknown"
-msgstr "ያልታወቀ"
-
 #. TRANSLATORS: This is the actual focal length used when
 #. the image was taken.
-#: ../src/eom-properties-dialog.c:232
+#: ../src/eom-exif-util.c:253
 #, c-format
 msgid "%.1f (lens)"
 msgstr "%.1f (ሌንስ)"
@@ -899,10 +840,114 @@ msgstr "%.1f (ሌንስ)"
 #. Print as float to get a similar look as above.
 #. TRANSLATORS: This is the equivalent focal length assuming
 #. a 35mm film camera.
-#: ../src/eom-properties-dialog.c:243
+#: ../src/eom-exif-util.c:264
 #, c-format
 msgid "%.1f (35mm film)"
 msgstr "%.1f (35ሚሚ ፊልም)"
+
+#: ../src/eom-metadata-sidebar.c:247 ../src/eom-properties-dialog.c:152
+msgid "Unknown"
+msgstr "ያልታወቀ"
+
+#: ../src/eom-metadata-sidebar.c:510
+msgid "File size:"
+msgstr "የፋይል መጠን፦"
+
+#: ../src/eom-metadata-sidebar.c:512
+msgid "Folder:"
+msgstr "ፎልደር:"
+
+#: ../src/eom-print.c:371
+msgid "Image Settings"
+msgstr "ምስል ማሰናጃዎች "
+
+#: ../src/eom-print-image-setup.c:824
+msgid "Image"
+msgstr "ምስል"
+
+#: ../src/eom-print-image-setup.c:825
+msgid "The image whose printing properties will be set up"
+msgstr "ምስል የ ማተሚያ ባህሪዎች የሚሰናዳለት"
+
+#: ../src/eom-print-image-setup.c:831
+msgid "Page Setup"
+msgstr "ገጽ ማሰናጃ"
+
+#: ../src/eom-print-image-setup.c:832
+msgid "The information for the page where the image will be printed"
+msgstr "የ ገጽ መረጃ ምስሉ የሚታተምበት"
+
+#: ../src/eom-print-image-setup.c:858
+msgid "Position"
+msgstr "አካባቢ "
+
+#: ../src/eom-print-image-setup.c:862
+msgid "_Left:"
+msgstr "_በግራ :"
+
+#: ../src/eom-print-image-setup.c:864
+msgid "_Right:"
+msgstr "_በቀኝ :"
+
+#: ../src/eom-print-image-setup.c:865
+msgid "_Top:"
+msgstr "_ከላይ :"
+
+#: ../src/eom-print-image-setup.c:866
+msgid "_Bottom:"
+msgstr "_ከታች :"
+
+#: ../src/eom-print-image-setup.c:869
+msgid "C_enter:"
+msgstr "መ_ሀከል :"
+
+#: ../src/eom-print-image-setup.c:874
+msgid "None"
+msgstr "ምንም"
+
+#: ../src/eom-print-image-setup.c:876
+msgid "Horizontal"
+msgstr "በአግድም "
+
+#: ../src/eom-print-image-setup.c:878
+msgid "Vertical"
+msgstr "በቁመት "
+
+#: ../src/eom-print-image-setup.c:880
+msgid "Both"
+msgstr "ሁለቱንም"
+
+#: ../src/eom-print-image-setup.c:896
+msgid "Size"
+msgstr "መጠን "
+
+#: ../src/eom-print-image-setup.c:899
+msgid "_Width:"
+msgstr "_ስፋት :"
+
+#: ../src/eom-print-image-setup.c:901
+msgid "_Height:"
+msgstr "_እርዝመት :"
+
+#: ../src/eom-print-image-setup.c:904
+msgid "_Scaling:"
+msgstr "_መመጠኛ:"
+
+#: ../src/eom-print-image-setup.c:915
+msgid "_Unit:"
+msgstr "_መለኪያ:"
+
+#: ../src/eom-print-image-setup.c:920
+msgid "Millimeters"
+msgstr "ሚሊ ሚትር "
+
+#: ../src/eom-print-image-setup.c:922
+msgid "Inches"
+msgstr "ኢንቾች"
+
+#: ../src/eom-print-image-setup.c:950
+msgid "Preview"
+msgstr "ቅድመ እይታ "
 
 #: ../src/eom-save-as-dialog-helper.c:161
 msgid "as is"
@@ -918,16 +963,16 @@ msgstr "እንደ ነበር"
 #. * Note that translating this doesn't guarantee that you get localized
 #. * digits. That needs support from your system and locale definition
 #. * too.
-#: ../src/eom-statusbar.c:127
+#: ../src/eom-statusbar.c:122
 #, c-format
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/eom-thumb-view.c:547
+#: ../src/eom-thumb-view.c:546
 msgid "Taken on"
 msgstr "የ ተወሰደው በ"
 
-#: ../src/eom-uri-converter.c:991
+#: ../src/eom-uri-converter.c:986
 #, c-format
 msgid "At least two file names are equal."
 msgstr "ቢያንስ ሁለት የ ፋይል ስሞች እኩል ናቸው"
@@ -946,25 +991,25 @@ msgstr " (ዋጋ የሌለው Unicode)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/eom-window.c:506
+#: ../src/eom-window.c:508
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%i × %i ፒክስሎች  %s    %i%%"
+msgstr[1] "%i × %i ፒክስሎች  %s    %i%%"
 
-#: ../src/eom-window.c:807
+#: ../src/eom-window.c:809
 msgid "_Reload"
 msgstr "_እንደገና መጫኛ"
 
-#: ../src/eom-window.c:809 ../src/eom-window.c:2676
+#: ../src/eom-window.c:811 ../src/eom-window.c:2731
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "መደ_በቂያ "
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:819
+#: ../src/eom-window.c:821
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -973,7 +1018,7 @@ msgstr ""
 "ይህ ምስል \"%s\" በ ውጪ መተግበሪያ ተሻሽሏል: \n"
 "እርስዎ እንደገና መጫን ይፈልጋሉ?"
 
-#: ../src/eom-window.c:984
+#: ../src/eom-window.c:986
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "ይህን ተጠቀም \"%s\" የተመረጠውን ምስል ለመክፈት "
@@ -983,21 +1028,25 @@ msgstr "ይህን ተጠቀም \"%s\" የተመረጠውን ምስል ለመክ�
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1140
+#: ../src/eom-window.c:1142
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "ምስሉን በማስቀመጥ ላይ \"%s\" (%u/%u)"
 
-#: ../src/eom-window.c:1499
+#: ../src/eom-window.c:1501
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "ምስሉን በመክፈት ላይ \"%s\""
 
-#: ../src/eom-window.c:1855
+#: ../src/eom-window.c:1857
 msgid "Leave Fullscreen"
 msgstr "ከሙሉ ገጽ መመልከቻ መውጫ "
 
-#: ../src/eom-window.c:2174
+#: ../src/eom-window.c:1990
+msgid "Viewing a slideshow"
+msgstr ""
+
+#: ../src/eom-window.c:2203
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1006,19 +1055,19 @@ msgstr ""
 "ስህተት ፋይሉን በማተም ላይ :\n"
 "%s"
 
-#: ../src/eom-window.c:2437
+#: ../src/eom-window.c:2466
 msgid "Toolbar Editor"
 msgstr "የእቃ መደርደሪያ ማረሚያ "
 
-#: ../src/eom-window.c:2440
+#: ../src/eom-window.c:2469
 msgid "_Reset to Default"
 msgstr "_እንደነበር መመለሻ ወደ ነባሩ "
 
-#: ../src/eom-window.c:2531
+#: ../src/eom-window.c:2560
 msgid "translator-credits"
 msgstr "Samson-Belete-Belayineh"
 
-#: ../src/eom-window.c:2534
+#: ../src/eom-window.c:2563
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1029,7 +1078,7 @@ msgstr ""
 "General Public License as published by the Free Software Foundation; either "
 "version 2 of the License, or (at your option) any later version.\n"
 
-#: ../src/eom-window.c:2538
+#: ../src/eom-window.c:2567
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1040,7 +1089,7 @@ msgstr ""
 "without even the implied warranty of MERCHANTABILITY or FITNESS FOR A "
 "PARTICULAR PURPOSE.  See the GNU General Public License for more details.\n"
 
-#: ../src/eom-window.c:2542
+#: ../src/eom-window.c:2571
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
@@ -1050,19 +1099,23 @@ msgstr ""
 "not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth "
 "Floor, Boston, MA 02110-1301, USA."
 
-#: ../src/eom-window.c:2560
+#: ../src/eom-window.c:2589
 msgid "The MATE image viewer."
 msgstr "የ ሜት ምስል መመልከቻ"
 
+#: ../src/eom-window.c:2679 ../src/eom-window.c:2694
+msgid "Error launching appearance preferences dialog: "
+msgstr ""
+
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2674
+#: ../src/eom-window.c:2729
 msgid "_Open Background Preferences"
 msgstr "የ መደብ ምርጫ _መክፈቻ"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2690
+#: ../src/eom-window.c:2745
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1071,11 +1124,11 @@ msgstr ""
 "ይህ ምስል \"%s\" እንደ ዴስክቶፕ መደብ ተሰናድቷል: \n"
 "አቀራረቡን ማሻሻል ይፈልጋሉ?"
 
-#: ../src/eom-window.c:3084
+#: ../src/eom-window.c:3181
 msgid "Saving image locally…"
 msgstr "በ አካባቢ ውስጥ ምስል በ ማስቀመጥ ላይ…"
 
-#: ../src/eom-window.c:3164
+#: ../src/eom-window.c:3261
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1084,14 +1137,14 @@ msgstr ""
 "በ እርግጥ በቋሚነት ማንቀሳቀስ\n"
 "\"%s\"ይፈልጋሉ ወደ ቆሻሻ ውስጥ"
 
-#: ../src/eom-window.c:3167
+#: ../src/eom-window.c:3264
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr "ቆሻሻ  \"%s\" ማግኘት አልተቻለም: ይህን ምስል በ ቋሚነት ማጥፋት ይፈልጋሉ?"
 
-#: ../src/eom-window.c:3172
+#: ../src/eom-window.c:3269
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1102,7 +1155,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/eom-window.c:3177
+#: ../src/eom-window.c:3274
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1110,406 +1163,418 @@ msgstr ""
 "አንዳንድ የ ተመረጡት ምስሎችን ወደ ቆሻሻ ማንቀሳቀስ አይቻልም ስለዚህ በ ቋሚነት ይጠፋሉ: እርስዎ በ እርግጥ መቀጠል "
 "ይፈልጋሉ?"
 
-#: ../src/eom-window.c:3194 ../src/eom-window.c:3678 ../src/eom-window.c:3705
+#: ../src/eom-window.c:3291 ../src/eom-window.c:3778 ../src/eom-window.c:3805
 msgid "Move to _Trash"
 msgstr "ወደ _ቆሻሻ ማንቀሳቀሻ"
 
-#: ../src/eom-window.c:3196
+#: ../src/eom-window.c:3293
 msgid "_Do not ask again during this session"
 msgstr "በዚህ ክፍለ ጊዜ ውስጥ በድጋሚ _አትጠይቀኝ"
 
-#: ../src/eom-window.c:3241 ../src/eom-window.c:3255
+#: ../src/eom-window.c:3338 ../src/eom-window.c:3352
 #, c-format
 msgid "Couldn't access trash."
 msgstr "ቆሻሻው ጋር መድረስ አልተቻለም"
 
-#: ../src/eom-window.c:3263
+#: ../src/eom-window.c:3360
 #, c-format
 msgid "Couldn't delete file"
 msgstr "ፋይሉን ማጥፋት አልተቻለም"
 
-#: ../src/eom-window.c:3360
+#: ../src/eom-window.c:3457
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "ስህተት ምስሉን በማጥፋት ላይ %s"
 
-#: ../src/eom-window.c:3602
+#: ../src/eom-window.c:3699
 msgid "_Image"
 msgstr "_ምስል "
 
-#: ../src/eom-window.c:3603
+#: ../src/eom-window.c:3700
 msgid "_Edit"
 msgstr "_ማረሚያ"
 
-#: ../src/eom-window.c:3604
+#: ../src/eom-window.c:3701
 msgid "_View"
 msgstr "_መመልከቻ"
 
-#: ../src/eom-window.c:3605
+#: ../src/eom-window.c:3702
 msgid "_Go"
 msgstr "_መሄጃ"
 
-#: ../src/eom-window.c:3606
+#: ../src/eom-window.c:3703
 msgid "_Tools"
 msgstr "_መሳሪያዎች"
 
-#: ../src/eom-window.c:3607
+#: ../src/eom-window.c:3704
 msgid "_Help"
 msgstr "_እርዳታ"
 
-#: ../src/eom-window.c:3609
+#: ../src/eom-window.c:3706
 msgid "_Open…"
 msgstr "_መክፈቻ…"
 
-#: ../src/eom-window.c:3610
+#: ../src/eom-window.c:3707
 msgid "Open a file"
 msgstr "ፋይል መክፈቻ"
 
-#: ../src/eom-window.c:3612
+#: ../src/eom-window.c:3709
 msgid "_Close"
 msgstr "_መዝጊያ"
 
-#: ../src/eom-window.c:3613
+#: ../src/eom-window.c:3710
 msgid "Close window"
 msgstr "መስኮቱን መዝጊያ"
 
-#: ../src/eom-window.c:3615
+#: ../src/eom-window.c:3712
 msgid "T_oolbar"
 msgstr "እ_ቃ መደርደሪያ "
 
-#: ../src/eom-window.c:3616
+#: ../src/eom-window.c:3713
 msgid "Edit the application toolbar"
 msgstr "የ መተግበሪያ እቃ መደርደሪያ ማረሚያ"
 
-#: ../src/eom-window.c:3618
+#: ../src/eom-window.c:3715
 msgid "Prefere_nces"
 msgstr "ምርጫ_ዎች"
 
-#: ../src/eom-window.c:3619
+#: ../src/eom-window.c:3716
 msgid "Preferences for Eye of MATE"
 msgstr "ለ ሜት አይን ምርጫዎች"
 
-#: ../src/eom-window.c:3621
+#: ../src/eom-window.c:3718
 msgid "_Contents"
 msgstr "_ይዞታዎች"
 
-#: ../src/eom-window.c:3622
+#: ../src/eom-window.c:3719
 msgid "Help on this application"
 msgstr "ለዚህ መተግበሪያ እርዳታ "
 
-#: ../src/eom-window.c:3624
+#: ../src/eom-window.c:3721
 msgid "_About"
 msgstr "_ስለ"
 
-#: ../src/eom-window.c:3625
+#: ../src/eom-window.c:3722
 msgid "About this application"
 msgstr "ስለዚህ ፕሮግራም"
 
-#: ../src/eom-window.c:3630
+#: ../src/eom-window.c:3727
 msgid "_Toolbar"
 msgstr "_እቃ መደርደሪያ"
 
-#: ../src/eom-window.c:3631
+#: ../src/eom-window.c:3728
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "በ አሁኑ መስኮት ውስጥ የ እቃ መደርደሪያውን መመልከቻ መቀየሪያ"
 
-#: ../src/eom-window.c:3633
+#: ../src/eom-window.c:3730
 msgid "_Statusbar"
 msgstr "_የሁኔታ መደርደሪያ"
 
-#: ../src/eom-window.c:3634
+#: ../src/eom-window.c:3731
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "በ አሁኑ መስኮት ውስጥ የ ሁኔታ መደርደሪያውን መመልከቻ መቀየሪያ"
 
-#: ../src/eom-window.c:3636
+#: ../src/eom-window.c:3733
 msgid "_Image Collection"
 msgstr "_የምስል ስብስብ"
 
-#: ../src/eom-window.c:3637
+#: ../src/eom-window.c:3734
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "በ አሁኑ መስኮት ውስጥ የ ክፍል ስብስብ መመልከቻ መቀየሪያ"
 
-#: ../src/eom-window.c:3639
+#: ../src/eom-window.c:3736
 msgid "Side _Pane"
-msgstr "የጎን _ክፍል "
+msgstr "የ ጎን _ክፍል "
 
-#: ../src/eom-window.c:3640
+#: ../src/eom-window.c:3737
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "በ አሁኑ መስኮት ውስጥ የ ጎን ክፍል መመልከቻ መቀየሪያ"
 
-#: ../src/eom-window.c:3645
+#: ../src/eom-window.c:3742
 msgid "_Save"
 msgstr "_ማስቀመጫ"
 
-#: ../src/eom-window.c:3646
+#: ../src/eom-window.c:3743
 msgid "Save changes in currently selected images"
 msgstr "አሁን በተመረጠው ፎልደር ውስጥ ለውጦችን ማስቀመጫ"
 
-#: ../src/eom-window.c:3648
+#: ../src/eom-window.c:3745
 msgid "Open _with"
 msgstr "መክፈቻ _በ "
 
-#: ../src/eom-window.c:3649
+#: ../src/eom-window.c:3746
 msgid "Open the selected image with a different application"
 msgstr "የተመረጠውን ምስል በ ተለያ መተግበሪያ መክፈቻ"
 
-#: ../src/eom-window.c:3651
+#: ../src/eom-window.c:3748
 msgid "Save _As…"
 msgstr "ማስቀመጫ _እንደ…"
 
-#: ../src/eom-window.c:3652
+#: ../src/eom-window.c:3749
 msgid "Save the selected images with a different name"
 msgstr "የተመረጠውን ምስል በ ተለያ ስም ማስቀመጫ"
 
-#: ../src/eom-window.c:3654
+#: ../src/eom-window.c:3751
+msgid "Open Containing _Folder"
+msgstr "የያዘውን _ፎልደር መክፈቻ"
+
+#: ../src/eom-window.c:3752
+msgid "Show the folder which contains this file in the file manager"
+msgstr ""
+
+#: ../src/eom-window.c:3754
 msgid "_Print…"
 msgstr "_ማተሚያ..."
 
-#: ../src/eom-window.c:3655
+#: ../src/eom-window.c:3755
 msgid "Print the selected image"
 msgstr "የተመረጠውን ምስል ማተሚያ "
 
-#: ../src/eom-window.c:3657
+#: ../src/eom-window.c:3757
 msgid "Prope_rties"
 msgstr "ባህ_ሪዎች "
 
-#: ../src/eom-window.c:3658
+#: ../src/eom-window.c:3758
 msgid "Show the properties and metadata of the selected image"
 msgstr "ለ ተመረጠው ምስል ባህሪዎች እና መግለጫ ማሳያ"
 
-#: ../src/eom-window.c:3660
+#: ../src/eom-window.c:3760
 msgid "_Undo"
 msgstr "_መተው"
 
-#: ../src/eom-window.c:3661
+#: ../src/eom-window.c:3761
 msgid "Undo the last change in the image"
 msgstr "የመጨረሻውን ለውጥ መተው በ ምስሉ ላይ"
 
-#: ../src/eom-window.c:3663
+#: ../src/eom-window.c:3763
 msgid "Flip _Horizontal"
 msgstr "በአግድም _መገልበጫ "
 
-#: ../src/eom-window.c:3664
+#: ../src/eom-window.c:3764
 msgid "Mirror the image horizontally"
 msgstr "ምስል በ አግድም ማንፀባረቂያ"
 
-#: ../src/eom-window.c:3666
+#: ../src/eom-window.c:3766
 msgid "Flip _Vertical"
 msgstr "በቁመት _መገልበጫ"
 
-#: ../src/eom-window.c:3667
+#: ../src/eom-window.c:3767
 msgid "Mirror the image vertically"
 msgstr "ምስል በ ቁመት ማንፀባረቂያ"
 
-#: ../src/eom-window.c:3669
+#: ../src/eom-window.c:3769
 msgid "_Rotate Clockwise"
 msgstr "ከግራ ወደ ቀኝ _ማዞሪያ "
 
-#: ../src/eom-window.c:3670
+#: ../src/eom-window.c:3770
 msgid "Rotate the image 90 degrees to the right"
 msgstr "ምስሉን 90 ዲግሪ ወደ ቀኝ ማዞሪያ "
 
-#: ../src/eom-window.c:3672
+#: ../src/eom-window.c:3772
 msgid "Rotate Counterc_lockwise"
 msgstr "ከ ቀኝ_ወደ ግራ ማዞሪያ"
 
-#: ../src/eom-window.c:3673
+#: ../src/eom-window.c:3773
 msgid "Rotate the image 90 degrees to the left"
 msgstr "ምስሉን 90 ዲግሪ ወደ ግራ ማዞሪያ "
 
-#: ../src/eom-window.c:3675
+#: ../src/eom-window.c:3775
 msgid "Set as _Desktop Background"
 msgstr "እንደ _ዴስክቶፕ መደብ ማሰናጃ "
 
-#: ../src/eom-window.c:3676
+#: ../src/eom-window.c:3776
 msgid "Set the selected image as the desktop background"
 msgstr "የተመረጠውን ምስል እንደ ዴስክቶፕ መደብ ማሰናጃ "
 
-#: ../src/eom-window.c:3679
+#: ../src/eom-window.c:3779
 msgid "Move the selected image to the trash folder"
 msgstr "የተመረጠውን ምስል ወደ ቆሻሻ ፎልደር ማንቀሳቀሻ "
 
-#: ../src/eom-window.c:3681
+#: ../src/eom-window.c:3781
 msgid "_Copy"
 msgstr "_ኮፒ "
 
-#: ../src/eom-window.c:3682
+#: ../src/eom-window.c:3782
 msgid "Copy the selected image to the clipboard"
 msgstr "የተመረጠው ምስል ወደ ቁራጭ ሰሌዳ ላይ ኮፒ ማድረጊያ"
 
-#: ../src/eom-window.c:3684 ../src/eom-window.c:3696 ../src/eom-window.c:3699
+#: ../src/eom-window.c:3784 ../src/eom-window.c:3796 ../src/eom-window.c:3799
 msgid "_Zoom In"
-msgstr "ከ_ቅርበት ዕይታ"
+msgstr "በ _ቅርብ ማሳያ"
 
-#: ../src/eom-window.c:3685 ../src/eom-window.c:3697
+#: ../src/eom-window.c:3785 ../src/eom-window.c:3797
 msgid "Enlarge the image"
 msgstr "ምስሉን ማሳደጊያ"
 
-#: ../src/eom-window.c:3687 ../src/eom-window.c:3702
+#: ../src/eom-window.c:3787 ../src/eom-window.c:3802
 msgid "Zoom _Out"
 msgstr "በርቀት _ማሳያ"
 
-#: ../src/eom-window.c:3688 ../src/eom-window.c:3700 ../src/eom-window.c:3703
+#: ../src/eom-window.c:3788 ../src/eom-window.c:3800 ../src/eom-window.c:3803
 msgid "Shrink the image"
 msgstr "ምስሉን ማሳነሻ "
 
-#: ../src/eom-window.c:3690
+#: ../src/eom-window.c:3790
 msgid "_Normal Size"
 msgstr "የ_ተለመደ መጠን"
 
-#: ../src/eom-window.c:3691
+#: ../src/eom-window.c:3791
 msgid "Show the image at its normal size"
 msgstr "ምስሉን በ መደበኛ መጠኑ ማሳያ"
 
-#: ../src/eom-window.c:3693
+#: ../src/eom-window.c:3793
 msgid "_Best Fit"
 msgstr "በ _ጥሩ ልክ"
 
-#: ../src/eom-window.c:3694
+#: ../src/eom-window.c:3794
 msgid "Fit the image to the window"
 msgstr "ምስሉን በ መስኮቱ ልክ ማድረጊያ "
 
-#: ../src/eom-window.c:3711
+#: ../src/eom-window.c:3811
 msgid "_Fullscreen"
 msgstr "_በሙሉ ገጽ መመልከቻ "
 
-#: ../src/eom-window.c:3712
+#: ../src/eom-window.c:3812
 msgid "Show the current image in fullscreen mode"
 msgstr "የ አሁኑን ምስል በሙሉ መመልከቻው ዘዴ ማሳያ"
 
-#: ../src/eom-window.c:3714
+#: ../src/eom-window.c:3814
 msgid "Pause Slideshow"
 msgstr "ተንሸራታች ማስቆሚያ "
 
-#: ../src/eom-window.c:3715
+#: ../src/eom-window.c:3815
 msgid "Pause or resume the slideshow"
 msgstr "ተንሸራታች ማሳያ ማስቆሚያ ወይንም መቀጠያ"
 
-#: ../src/eom-window.c:3720 ../src/eom-window.c:3735
+#: ../src/eom-window.c:3820 ../src/eom-window.c:3835
 msgid "_Previous Image"
 msgstr "_ቀደም ያለው ምስል "
 
-#: ../src/eom-window.c:3721
+#: ../src/eom-window.c:3821
 msgid "Go to the previous image of the collection"
 msgstr "በ ስብስቡ ውስጥ ወዳለፈው ምስል መሄጃ"
 
-#: ../src/eom-window.c:3723
+#: ../src/eom-window.c:3823
 msgid "_Next Image"
 msgstr "_የሚቀጥለው ምስል "
 
-#: ../src/eom-window.c:3724
+#: ../src/eom-window.c:3824
 msgid "Go to the next image of the collection"
 msgstr "በ ስብስቡ ውስጥ ወደሚቀጥለው ምስል መሄጃ"
 
-#: ../src/eom-window.c:3726 ../src/eom-window.c:3738
+#: ../src/eom-window.c:3826 ../src/eom-window.c:3838
 msgid "_First Image"
-msgstr "_የመጀመሪያው ምስል "
+msgstr "የ _መጀመሪያው ምስል "
 
-#: ../src/eom-window.c:3727
+#: ../src/eom-window.c:3827
 msgid "Go to the first image of the collection"
 msgstr "በ ስብስቡ ውስጥ ወደ መጀመሪያው ምስል መሄጃ"
 
-#: ../src/eom-window.c:3729 ../src/eom-window.c:3741
+#: ../src/eom-window.c:3829 ../src/eom-window.c:3841
 msgid "_Last Image"
-msgstr "_የመጨረሻው ምስል "
+msgstr "የ _መጨረሻው ምስል "
 
-#: ../src/eom-window.c:3730
+#: ../src/eom-window.c:3830
 msgid "Go to the last image of the collection"
 msgstr "በ ስብስቡ ውስጥ ወደ መጨረሻው ምስል መሄጃ"
 
-#: ../src/eom-window.c:3732
+#: ../src/eom-window.c:3832
 msgid "_Random Image"
 msgstr "_በደፈናው ምስል"
 
-#: ../src/eom-window.c:3733
+#: ../src/eom-window.c:3833
 msgid "Go to a random image of the collection"
 msgstr "በ ስብስቡ ውስጥ ወደ በደፈናው ምስል መሄጃ"
 
-#: ../src/eom-window.c:3747
+#: ../src/eom-window.c:3847
 msgid "S_lideshow"
 msgstr "ተ_ንሸራታች ማሳያ"
 
-#: ../src/eom-window.c:3748
+#: ../src/eom-window.c:3848
 msgid "Start a slideshow view of the images"
 msgstr "የ ምስል ተንሸራታች ትርኢት ማስጀመሪያ"
 
-#: ../src/eom-window.c:3814
+#: ../src/eom-window.c:3914
 msgid "Previous"
 msgstr "ቀደም ያለው "
 
-#: ../src/eom-window.c:3818
+#: ../src/eom-window.c:3918
 msgid "Next"
 msgstr "ይቀጥሉ"
 
-#: ../src/eom-window.c:3822
+#: ../src/eom-window.c:3922
 msgid "Right"
 msgstr "በ ቀኝ"
 
-#: ../src/eom-window.c:3825
+#: ../src/eom-window.c:3925
 msgid "Left"
 msgstr "በ ግራ "
 
-#: ../src/eom-window.c:3828
+#: ../src/eom-window.c:3931
 msgid "In"
 msgstr "ውስጥ "
 
-#: ../src/eom-window.c:3831
+#: ../src/eom-window.c:3934
 msgid "Out"
 msgstr "ውጪ "
 
-#: ../src/eom-window.c:3834
+#: ../src/eom-window.c:3937
 msgid "Normal"
 msgstr "መደበኛ"
 
-#: ../src/eom-window.c:3837
+#: ../src/eom-window.c:3940
 msgid "Fit"
 msgstr "ልክ "
 
-#: ../src/eom-window.c:3840
+#: ../src/eom-window.c:3943
 msgid "Collection"
 msgstr "ስብስብ"
 
-#: ../src/eom-window.c:3843
+#: ../src/eom-window.c:3946
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "ቆሻሻ "
 
-#: ../src/eom-window.c:4192
+#: ../src/eom-window.c:4291
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "የ አሁኑን ምስል ማረሚያ በ መጠቀም %s"
 
-#: ../src/eom-window.c:4194
+#: ../src/eom-window.c:4293
 msgid "Edit Image"
 msgstr "ምስል ማረሚያ"
 
-#: ../src/main.c:77
+#: ../src/eom-window.c:4508
+msgid "Properties"
+msgstr "ባህሪዎች"
+
+#: ../src/main.c:72
 msgid "Open in fullscreen mode"
 msgstr "በሙሉ መመልከቻው ዘዴ መክፋቻ "
 
-#: ../src/main.c:78
+#: ../src/main.c:73
 msgid "Disable image collection"
 msgstr "የምስል ስብስብ ማሰናከያ"
 
-#: ../src/main.c:79
+#: ../src/main.c:74
 msgid "Open in slideshow mode"
 msgstr "በ ተንሸራታች መመልከቻ ዘዴ መክፈቻ"
 
-#: ../src/main.c:81
+#: ../src/main.c:75
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "አዲስ ሁኔታ ማስጀመሪያ የ ነበረውን ከ መጠቀም ይልቅ"
 
-#: ../src/main.c:84
+#: ../src/main.c:77
 msgid "Show the application's version"
 msgstr "የ መተግበሪያዎች እትም ማሳያ"
 
-#: ../src/main.c:85
+#: ../src/main.c:107
 msgid "[FILE…]"
 msgstr "[ፋይል…]"
 
 #. I18N: The '%s' is replaced with eom's command name.
-#: ../src/main.c:212
+#: ../src/main.c:120
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "ማስኬጃ '%s --እርዳታ'ሁሉንም የ ትእዛዝ መስመር ምርጫ ለ መመልከት"
