@@ -279,7 +279,7 @@ eom_job_thumbnail_cb (EomJobThumbnail *job, gpointer data)
 				    EOM_LIST_STORE_THUMB_SET, TRUE,
 				    EOM_LIST_STORE_EOM_JOB, NULL,
 				    -1);
-
+		g_object_unref (image);
 		g_object_unref (thumbnail);
 	}
 
