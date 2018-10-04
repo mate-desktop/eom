@@ -7,6 +7,10 @@ HELP_MEDIA = 					\
 	figures/eom_start_window.png		\
 	figures/eom_toolbar_editor_window.png
 
-HELP_LINGUAS = ar ca cs da de el en_GB es eu fi fr it ja ko oc pa pl pt_BR ru sv th uk zh_CN zh_TW
+# Add linguas to be ignored, e.g. IGNORE_HELP_LINGUAS = ca de es fr
+IGNORE_HELP_LINGUAS =
+HELP_LINGUAS = $(if $(IGNORE_HELP_LINGUAS), \
+	$(filter-out $(IGNORE_HELP_LINGUAS),$(subst /,,$(dir $(wildcard */*.po)))), \
+	$(subst /,,$(dir $(wildcard */*.po))) )
 
 -include $(top_srcdir)/git.mk
