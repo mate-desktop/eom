@@ -3,14 +3,24 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Michal Slovák <michalslovak2@hotmail.com>, 2018
+# Pavol Šimo <palo.simo@gmail.com>, 2018
+# Ján Ďanovský <dagsoftware@yahoo.com>, 2018
+# Dušan Kazik <prescott66@gmail.com>, 2018
+# Juraj Oravec, 2018
+# Tibor Kaputa <tibbbi2@gmail.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Vendelín Slezák <klaykap@yandex.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-14 09:30+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Tibor Kaputa <tibbbi2@gmail.com>, 2018\n"
+"POT-Creation-Date: 2018-07-17 22:37+0200\n"
+"PO-Revision-Date: 2018-03-11 15:17+0000\n"
+"Last-Translator: Vendelín Slezák <klaykap@yandex.com>, 2018\n"
 "Language-Team: Slovak (https://www.transifex.com/mate/teams/13566/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -640,10 +650,10 @@ msgstr "Uložiť zmeny v obrázku „%s“ pred ukončením?"
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Neuložili ste %d obrázok. Chcete ho uložiť pred zavretím?"
+msgstr[1] "Neuložili ste %d obrázky. Chcete ich uložiť pred zavretím?"
+msgstr[2] "Neuložili ste %d obrázkov. Chcete ich uložiť pred zavretím?"
+msgstr[3] "Neuložili ste %d obrázkov. Chcete ich uložiť pred zavretím?"
 
 #: ../src/eom-close-confirmation-dialog.c:621
 msgid "S_elect the images you want to save:"
@@ -690,10 +700,10 @@ msgstr "%s (*.%s)"
 #: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:519
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "pixel"
+msgstr[1] "pixle"
+msgstr[2] "pixlov"
+msgstr[3] "pixlov"
 
 #: ../src/eom-file-chooser.c:457
 msgid "Open Image"
@@ -765,49 +775,69 @@ msgstr "Nenašli sa žiadne obrázky v „%s“."
 msgid "The given locations contain no images."
 msgstr "Zadané miesto neobsahuje obrázky."
 
-#: ../src/eom-exif-details.c:68
+#: ../src/eom-exif-details.c:69
 msgid "Camera"
 msgstr "Fotoaparát"
 
-#: ../src/eom-exif-details.c:69
+#: ../src/eom-exif-details.c:70
 msgid "Image Data"
 msgstr "Údaje obrázku"
 
-#: ../src/eom-exif-details.c:70
+#: ../src/eom-exif-details.c:71
 msgid "Image Taking Conditions"
 msgstr "Podmienky fotografovania"
 
-#: ../src/eom-exif-details.c:71
+#: ../src/eom-exif-details.c:72
+msgid "GPS Data"
+msgstr "GPS Dáta"
+
+#: ../src/eom-exif-details.c:73
 msgid "Maker Note"
 msgstr "Poznámka autora"
 
-#: ../src/eom-exif-details.c:72
+#: ../src/eom-exif-details.c:74
 msgid "Other"
 msgstr "Ostatné"
 
-#: ../src/eom-exif-details.c:74
+#: ../src/eom-exif-details.c:76
 msgid "XMP Exif"
 msgstr "XMP Exif"
 
-#: ../src/eom-exif-details.c:75
+#: ../src/eom-exif-details.c:77
 msgid "XMP IPTC"
 msgstr "XMP IPTC"
 
-#: ../src/eom-exif-details.c:76
+#: ../src/eom-exif-details.c:78
 msgid "XMP Rights Management"
 msgstr "XMP správa práv"
 
-#: ../src/eom-exif-details.c:77
+#: ../src/eom-exif-details.c:79
 msgid "XMP Other"
 msgstr "XMP iné"
 
-#: ../src/eom-exif-details.c:251
+#: ../src/eom-exif-details.c:253
 msgid "Tag"
 msgstr "Údaj"
 
-#: ../src/eom-exif-details.c:258
+#: ../src/eom-exif-details.c:263
 msgid "Value"
 msgstr "Hodnota"
+
+#: ../src/eom-exif-details.c:422
+msgid "North"
+msgstr "Sever"
+
+#: ../src/eom-exif-details.c:425
+msgid "East"
+msgstr "Východ"
+
+#: ../src/eom-exif-details.c:428
+msgid "West"
+msgstr "Západ"
+
+#: ../src/eom-exif-details.c:431
+msgid "South"
+msgstr "Juh"
 
 #. A strftime-formatted string, to display the date the image was taken.
 #: ../src/eom-exif-util.c:121 ../src/eom-exif-util.c:161
@@ -977,10 +1007,10 @@ msgstr " (neplatný Unicode)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%i × %i pixel  %s    %i%%"
+msgstr[1] "%i × %i pixle  %s    %i%%"
+msgstr[2] "%i × %i pixlov  %s    %i%%"
+msgstr[3] "%i × %i pixlov  %s    %i%%"
 
 #: ../src/eom-window.c:807
 msgid "_Reload"
@@ -1130,9 +1160,17 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
+"Naozaj chcete vyhodiť\n"
+"vybraný obrázok do koša?"
 msgstr[1] ""
+"Naozaj chcete vyhodiť\n"
+"%d vybrané obrázky do koša?"
 msgstr[2] ""
+"Naozaj chcete vyhodiť\n"
+"%d vybraných obrázkov do koša?"
 msgstr[3] ""
+"Naozaj chcete vyhodiť\n"
+"%d vybraných obrázkov do koša?"
 
 #: ../src/eom-window.c:3176
 msgid ""

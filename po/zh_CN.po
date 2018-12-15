@@ -3,13 +3,23 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Christopher Meng <i@cicku.me>, 2018
+# Dianjin Wang <1132321739qq@gmail.com>, 2018
+# 玉堂白鹤 <yjwork@qq.com>, 2018
+# Wylmer Wang, 2018
+# Mingcong Bai <jeffbai@aosc.xyz>, 2018
+# liushuyu011 <liushuyu011@gmail.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# zhangxianwei8 <zhang.xianwei8@zte.com.cn>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-14 09:30+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2018-07-17 22:37+0200\n"
+"PO-Revision-Date: 2018-03-11 15:17+0000\n"
 "Last-Translator: zhangxianwei8 <zhang.xianwei8@zte.com.cn>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -717,49 +727,69 @@ msgstr "“%s”中无图像。"
 msgid "The given locations contain no images."
 msgstr "给定的位置不包含图像。"
 
-#: ../src/eom-exif-details.c:68
+#: ../src/eom-exif-details.c:69
 msgid "Camera"
 msgstr "相机"
 
-#: ../src/eom-exif-details.c:69
+#: ../src/eom-exif-details.c:70
 msgid "Image Data"
 msgstr "图像数据"
 
-#: ../src/eom-exif-details.c:70
+#: ../src/eom-exif-details.c:71
 msgid "Image Taking Conditions"
 msgstr "图像获取条件"
 
-#: ../src/eom-exif-details.c:71
+#: ../src/eom-exif-details.c:72
+msgid "GPS Data"
+msgstr "GPS数据"
+
+#: ../src/eom-exif-details.c:73
 msgid "Maker Note"
 msgstr "制作者备忘"
 
-#: ../src/eom-exif-details.c:72
+#: ../src/eom-exif-details.c:74
 msgid "Other"
 msgstr "其它"
 
-#: ../src/eom-exif-details.c:74
+#: ../src/eom-exif-details.c:76
 msgid "XMP Exif"
 msgstr "XMP Exif"
 
-#: ../src/eom-exif-details.c:75
+#: ../src/eom-exif-details.c:77
 msgid "XMP IPTC"
 msgstr "XMP IPTC"
 
-#: ../src/eom-exif-details.c:76
+#: ../src/eom-exif-details.c:78
 msgid "XMP Rights Management"
 msgstr "XMP 权限管理"
 
-#: ../src/eom-exif-details.c:77
+#: ../src/eom-exif-details.c:79
 msgid "XMP Other"
 msgstr "XMP 其它"
 
-#: ../src/eom-exif-details.c:251
+#: ../src/eom-exif-details.c:253
 msgid "Tag"
 msgstr "标记"
 
-#: ../src/eom-exif-details.c:258
+#: ../src/eom-exif-details.c:263
 msgid "Value"
 msgstr "值"
+
+#: ../src/eom-exif-details.c:422
+msgid "North"
+msgstr "北"
+
+#: ../src/eom-exif-details.c:425
+msgid "East"
+msgstr "东"
+
+#: ../src/eom-exif-details.c:428
+msgid "West"
+msgstr "西"
+
+#: ../src/eom-exif-details.c:431
+msgid "South"
+msgstr "南"
 
 #. A strftime-formatted string, to display the date the image was taken.
 #: ../src/eom-exif-util.c:121 ../src/eom-exif-util.c:161
@@ -1119,11 +1149,11 @@ msgstr "图像(_I)"
 
 #: ../src/eom-window.c:3602
 msgid "_Edit"
-msgstr "编辑（_E）"
+msgstr "编辑(_E)"
 
 #: ../src/eom-window.c:3603
 msgid "_View"
-msgstr "视图（_V）"
+msgstr "视图(_V)"
 
 #: ../src/eom-window.c:3604
 msgid "_Go"
@@ -1135,7 +1165,7 @@ msgstr "工具(_T)"
 
 #: ../src/eom-window.c:3606
 msgid "_Help"
-msgstr "帮助（_H）"
+msgstr "帮助(_H)"
 
 #: ../src/eom-window.c:3608
 msgid "_Open…"

@@ -3,14 +3,28 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Étienne Deparis <etienne@depar.is>, 2018
+# Nicolas Dobigeon <dobigeon@gmail.com>, 2018
+# mauron, 2018
+# Scoubidou <david.vantyghem@free.fr>, 2018
+# Tubuntu <tubuntu@testimonium.be>, 2018
+# Xorg, 2018
+# Benjamin Teissier <enatheme@enatheme.org>, 2018
+# jeremy shields <jeremy.shields@orange.fr>, 2018
+# Laurent Napias <tamplan+transifex@free.fr>, 2018
+# Guillaume Fayard <guillaume2.fayard@wanadoo.fr>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Charles Monzat <c.monzat@laposte.net>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-14 09:30+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Arkelis <guillaume2.fayard@wanadoo.fr>, 2018\n"
+"POT-Creation-Date: 2018-07-17 22:37+0200\n"
+"PO-Revision-Date: 2018-03-11 15:17+0000\n"
+"Last-Translator: Charles Monzat <c.monzat@laposte.net>, 2018\n"
 "Language-Team: French (https://www.transifex.com/mate/teams/13566/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -103,7 +117,7 @@ msgstr "Nom :"
 
 #: ../data/eom-image-properties-dialog.ui.h:5
 msgid "Width:"
-msgstr "Largeur:"
+msgstr "Largeur :"
 
 #: ../data/eom-image-properties-dialog.ui.h:6
 msgid "Height:"
@@ -188,7 +202,7 @@ msgstr "Enregistrer sous"
 #: ../data/eom-multiple-save-as-dialog.ui.h:3
 #, no-c-format
 msgid "<b>%f:</b> original filename"
-msgstr "<b>%f :</b> nom du fichier original"
+msgstr "<b>%f :</b> nom du fichier original"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:5
 #, no-c-format
@@ -782,49 +796,69 @@ msgstr "Aucune image trouvée dans « %s »."
 msgid "The given locations contain no images."
 msgstr "Les emplacements indiqués ne contiennent pas d'images."
 
-#: ../src/eom-exif-details.c:68
+#: ../src/eom-exif-details.c:69
 msgid "Camera"
 msgstr "Appareil photo"
 
-#: ../src/eom-exif-details.c:69
+#: ../src/eom-exif-details.c:70
 msgid "Image Data"
 msgstr "Données de l'image"
 
-#: ../src/eom-exif-details.c:70
+#: ../src/eom-exif-details.c:71
 msgid "Image Taking Conditions"
 msgstr "Conditions de prise de l'image"
 
-#: ../src/eom-exif-details.c:71
+#: ../src/eom-exif-details.c:72
+msgid "GPS Data"
+msgstr "Données GPS "
+
+#: ../src/eom-exif-details.c:73
 msgid "Maker Note"
 msgstr "Note du fabricant"
 
-#: ../src/eom-exif-details.c:72
+#: ../src/eom-exif-details.c:74
 msgid "Other"
 msgstr "Autre"
 
-#: ../src/eom-exif-details.c:74
+#: ../src/eom-exif-details.c:76
 msgid "XMP Exif"
 msgstr "XMP Exif"
 
-#: ../src/eom-exif-details.c:75
+#: ../src/eom-exif-details.c:77
 msgid "XMP IPTC"
 msgstr "XMP IPTC"
 
-#: ../src/eom-exif-details.c:76
+#: ../src/eom-exif-details.c:78
 msgid "XMP Rights Management"
 msgstr "XMP gestion des droits"
 
-#: ../src/eom-exif-details.c:77
+#: ../src/eom-exif-details.c:79
 msgid "XMP Other"
 msgstr "XMP autre"
 
-#: ../src/eom-exif-details.c:251
+#: ../src/eom-exif-details.c:253
 msgid "Tag"
 msgstr "Étiquette"
 
-#: ../src/eom-exif-details.c:258
+#: ../src/eom-exif-details.c:263
 msgid "Value"
 msgstr "Valeur"
+
+#: ../src/eom-exif-details.c:422
+msgid "North"
+msgstr "Nord"
+
+#: ../src/eom-exif-details.c:425
+msgid "East"
+msgstr "Est"
+
+#: ../src/eom-exif-details.c:428
+msgid "West"
+msgstr "Ouest"
+
+#: ../src/eom-exif-details.c:431
+msgid "South"
+msgstr "Sud"
 
 #. A strftime-formatted string, to display the date the image was taken.
 #: ../src/eom-exif-util.c:121 ../src/eom-exif-util.c:161
@@ -1057,7 +1091,7 @@ msgstr "_Réinitialiser aux valeurs par défaut"
 #: ../src/eom-window.c:2530
 msgid "translator-credits"
 msgstr ""
-"Contributeurs au projet MATE :\n"
+"Contributeurs au projet MATE :\n"
 "Voir https://www.transifex.com/mate/teams/13566/fr/\n"
 "\n"
 "Contributeurs au projet GNOME :\n"

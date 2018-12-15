@@ -3,14 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Asier Iturralde Sarasola <asier.iturralde@gmail.com>, 2018
+# Aritz Jorge Sánchez <aritz.jorge@protonmail.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Alexander Gabilondo <alexgabilondo@gmail.com>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-14 09:30+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Aritz Jorge Sánchez <aritz.jorge@protonmail.com>, 2018\n"
+"POT-Creation-Date: 2018-07-17 22:37+0200\n"
+"PO-Revision-Date: 2018-03-11 15:17+0000\n"
+"Last-Translator: Alexander Gabilondo <alexgabilondo@gmail.com>, 2018\n"
 "Language-Team: Basque (https://www.transifex.com/mate/teams/13566/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -301,7 +307,7 @@ msgstr "Za_baldu irudiak pantaila betetzeko"
 
 #: ../data/eom-preferences-dialog.ui.h:17
 msgid "Sequence"
-msgstr "Sekuentzia"
+msgstr "Segida"
 
 #: ../data/eom-preferences-dialog.ui.h:18
 msgid "_Switch image after:"
@@ -313,11 +319,11 @@ msgstr "segundo ondoren"
 
 #: ../data/eom-preferences-dialog.ui.h:20
 msgid "_Random sequence"
-msgstr "_ Ausazko sekuentzia"
+msgstr "_ Ausazko segida"
 
 #: ../data/eom-preferences-dialog.ui.h:21
 msgid "_Loop sequence"
-msgstr "_Sekuentzia-begizta"
+msgstr "_Segida-begizta"
 
 #: ../data/eom-preferences-dialog.ui.h:22
 msgid "Slideshow"
@@ -394,6 +400,9 @@ msgid ""
 "color and none. If color is chosen, then the trans-color key determines the "
 "color value used."
 msgstr ""
+"Gardentasuna nola adierazi zehazten du. Baliozko aukerak dira: egiaztatuta, "
+"kolorea eta deus ez. Kolorea aukeratzen bada, trans_color gakoak zehazten du"
+" kolorearen balioa."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:13
 msgid "Scroll wheel zoom"
@@ -434,20 +443,20 @@ msgstr ""
 
 #: ../data/org.mate.eom.gschema.xml.in.h:20
 msgid "Randomize the image sequence"
-msgstr ""
+msgstr "Ausaz nahastu irudi segida"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:21
 msgid "Whether the sequence of images should be shown in an random loop."
-msgstr ""
+msgstr "Irudi segida ausazko begizta batean erakutsi behar den edo ez "
 
 #: ../data/org.mate.eom.gschema.xml.in.h:22
 msgid "Loop through the image sequence"
-msgstr "Begiztatu irudi-sekuentzia bitartez"
+msgstr "Begiztatu irudi-segida bitartez"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:23
 msgid "Whether the sequence of images should be shown in an endless loop."
 msgstr ""
-"Irudi-sekuentzia amaierarik gabeko begizta batean erakutsi behar den edo ez."
+"Irudi-segida amaierarik gabeko begizta batean erakutsi behar den edo ez."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:25
 #, no-c-format
@@ -489,7 +498,7 @@ msgstr "Erakutsi/ezkutatu irudi-bildumaren panela."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:32
 msgid "Image collection pane position."
-msgstr ""
+msgstr "Irudi bilduma panelaren kokapena"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:33
 msgid "Whether the image collection pane should be resizable."
@@ -505,7 +514,7 @@ msgstr "Erakutsi/ezkutatu irudi-bildumaren paneleko korritze-botoiak."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:36
 msgid "Close main window without asking to save changes."
-msgstr ""
+msgstr "Itxi leiho nagusia aldaketak gordetzeko eskatu gabe"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:37
 msgid "Trash images without asking"
@@ -543,7 +552,7 @@ msgstr ""
 
 #: ../data/org.mate.eom.gschema.xml.in.h:41
 msgid "External program to use for editing images"
-msgstr ""
+msgstr "Irudiak editatzeko kanpoko aplikazioa"
 
 #: ../data/org.mate.eom.gschema.xml.in.h:42
 msgid ""
@@ -551,6 +560,9 @@ msgid ""
 " for editing images (when the \"Edit Image\" toolbar button is clicked). Set"
 " to the empty string to disable this feature."
 msgstr ""
+"Irudiak editatzeko (tresna-barrako \"Editatu irudia\" botoia aktibatuta "
+"badago) erabiliko den mahaigaineko fitxategi-izena (\".desktop\" barne). "
+"Hutsik utzi bat ere ez erabiltzeko."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:43
 msgid ""
@@ -759,49 +771,69 @@ msgstr "Ez da irudirik aurkitu '%s'(e)n."
 msgid "The given locations contain no images."
 msgstr "Emandako kokalekuak ez du irudirik."
 
-#: ../src/eom-exif-details.c:68
+#: ../src/eom-exif-details.c:69
 msgid "Camera"
 msgstr "Kamera"
 
-#: ../src/eom-exif-details.c:69
+#: ../src/eom-exif-details.c:70
 msgid "Image Data"
 msgstr "Irudiaren datuak"
 
-#: ../src/eom-exif-details.c:70
+#: ../src/eom-exif-details.c:71
 msgid "Image Taking Conditions"
 msgstr "Irudia hartu zeneko baldintzak"
 
-#: ../src/eom-exif-details.c:71
+#: ../src/eom-exif-details.c:72
+msgid "GPS Data"
+msgstr "GPS datuak"
+
+#: ../src/eom-exif-details.c:73
 msgid "Maker Note"
 msgstr "Markagailuaren oharra"
 
-#: ../src/eom-exif-details.c:72
+#: ../src/eom-exif-details.c:74
 msgid "Other"
 msgstr "Bestelakoak"
 
-#: ../src/eom-exif-details.c:74
+#: ../src/eom-exif-details.c:76
 msgid "XMP Exif"
 msgstr "XMP Exif"
 
-#: ../src/eom-exif-details.c:75
+#: ../src/eom-exif-details.c:77
 msgid "XMP IPTC"
 msgstr "XMP IPTC"
 
-#: ../src/eom-exif-details.c:76
+#: ../src/eom-exif-details.c:78
 msgid "XMP Rights Management"
 msgstr "XMP kudeaketa-eskubideak"
 
-#: ../src/eom-exif-details.c:77
+#: ../src/eom-exif-details.c:79
 msgid "XMP Other"
 msgstr "Bestelako XMP"
 
-#: ../src/eom-exif-details.c:251
+#: ../src/eom-exif-details.c:253
 msgid "Tag"
 msgstr "Etiketa"
 
-#: ../src/eom-exif-details.c:258
+#: ../src/eom-exif-details.c:263
 msgid "Value"
 msgstr "Balioa"
+
+#: ../src/eom-exif-details.c:422
+msgid "North"
+msgstr "Iparraldea"
+
+#: ../src/eom-exif-details.c:425
+msgid "East"
+msgstr "Ekialdea"
+
+#: ../src/eom-exif-details.c:428
+msgid "West"
+msgstr "Mendebaldea"
+
+#: ../src/eom-exif-details.c:431
+msgid "South"
+msgstr "Hegoaldea"
 
 #. A strftime-formatted string, to display the date the image was taken.
 #: ../src/eom-exif-util.c:121 ../src/eom-exif-util.c:161
@@ -1067,6 +1099,9 @@ msgid ""
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
+"Programa honekin batera GNU Lizentzia Publiko Orokorraren kopia bat jasoko "
+"zenuen; hala ez bada, idatzi hona: Free Software Foundation, Inc., 51 "
+"Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA"
 
 #: ../src/eom-window.c:2559
 msgid "The MATE image viewer."
@@ -1448,7 +1483,7 @@ msgstr "Joan bildumaren hurrengo ausazko irudira"
 
 #: ../src/eom-window.c:3746
 msgid "S_lideshow"
-msgstr ""
+msgstr "Diapositiba-aurkezpena"
 
 #: ../src/eom-window.c:3747
 msgid "Start a slideshow view of the images"
@@ -1498,11 +1533,11 @@ msgstr "Zakarrontzia"
 #: ../src/eom-window.c:4191
 #, c-format
 msgid "Edit the current image using %s"
-msgstr ""
+msgstr "Erakutsi uneko irudia 1%s erabiliz"
 
 #: ../src/eom-window.c:4193
 msgid "Edit Image"
-msgstr ""
+msgstr "Editatu irudia"
 
 #: ../src/main.c:77
 msgid "Open in fullscreen mode"

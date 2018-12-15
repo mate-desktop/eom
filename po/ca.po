@@ -3,14 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Daniel <danicases@gmail.com>, 2018
+# Pere O. <gotrunks@gmail.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-14 09:30+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Pere O. <gotrunks@gmail.com>, 2018\n"
+"POT-Creation-Date: 2018-07-17 22:37+0200\n"
+"PO-Revision-Date: 2018-03-11 15:17+0000\n"
+"Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2018\n"
 "Language-Team: Catalan (https://www.transifex.com/mate/teams/13566/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -205,11 +211,11 @@ msgstr "Carpeta de destinació:"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:8
 msgid "Filename format:"
-msgstr "Format del nom del fitxer:"
+msgstr "Format del nom de fitxer:"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:9
 msgid "File Path Specifications"
-msgstr "Especificacions del camí dels fitxers"
+msgstr "Definició del camí dels fitxers"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:10
 msgid "Start counter at:"
@@ -217,7 +223,7 @@ msgstr "Inicia el comptador a:"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:11
 msgid "Replace spaces with underscores"
-msgstr "Substitueix els espais amb subratllats"
+msgstr "Substitueix els espais amb guions baixos"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:12
 msgid "Options"
@@ -233,7 +239,7 @@ msgstr "A:"
 
 #: ../data/eom-multiple-save-as-dialog.ui.h:15
 msgid "File Name Preview"
-msgstr "La visualització preliminar del nom del fitxer"
+msgstr "Vista prèvia del nom de fitxer"
 
 #: ../data/eom-preferences-dialog.ui.h:1
 msgid "Eye of MATE Preferences"
@@ -774,49 +780,69 @@ msgstr "No s'ha trobat cap imatge a «%s»."
 msgid "The given locations contain no images."
 msgstr "Les ubicacions donades no contenen cap imatge."
 
-#: ../src/eom-exif-details.c:68
+#: ../src/eom-exif-details.c:69
 msgid "Camera"
 msgstr "Càmera"
 
-#: ../src/eom-exif-details.c:69
+#: ../src/eom-exif-details.c:70
 msgid "Image Data"
 msgstr "Dades de la imatge"
 
-#: ../src/eom-exif-details.c:70
+#: ../src/eom-exif-details.c:71
 msgid "Image Taking Conditions"
 msgstr "Condicions de captura de la imatge"
 
-#: ../src/eom-exif-details.c:71
+#: ../src/eom-exif-details.c:72
+msgid "GPS Data"
+msgstr "Dades GPS"
+
+#: ../src/eom-exif-details.c:73
 msgid "Maker Note"
 msgstr "Nota de l'autor"
 
-#: ../src/eom-exif-details.c:72
+#: ../src/eom-exif-details.c:74
 msgid "Other"
 msgstr "Altres"
 
-#: ../src/eom-exif-details.c:74
+#: ../src/eom-exif-details.c:76
 msgid "XMP Exif"
 msgstr "XMP EXIF"
 
-#: ../src/eom-exif-details.c:75
+#: ../src/eom-exif-details.c:77
 msgid "XMP IPTC"
 msgstr "XMP IPTC"
 
-#: ../src/eom-exif-details.c:76
+#: ../src/eom-exif-details.c:78
 msgid "XMP Rights Management"
 msgstr "Gestió de drets XMP"
 
-#: ../src/eom-exif-details.c:77
+#: ../src/eom-exif-details.c:79
 msgid "XMP Other"
 msgstr "Altres XMP"
 
-#: ../src/eom-exif-details.c:251
+#: ../src/eom-exif-details.c:253
 msgid "Tag"
 msgstr "Etiqueta"
 
-#: ../src/eom-exif-details.c:258
+#: ../src/eom-exif-details.c:263
 msgid "Value"
 msgstr "Valor"
+
+#: ../src/eom-exif-details.c:422
+msgid "North"
+msgstr "Migjorn"
+
+#: ../src/eom-exif-details.c:425
+msgid "East"
+msgstr "Ponent"
+
+#: ../src/eom-exif-details.c:428
+msgid "West"
+msgstr "Llevant"
+
+#: ../src/eom-exif-details.c:431
+msgid "South"
+msgstr "Tramuntana"
 
 #. A strftime-formatted string, to display the date the image was taken.
 #: ../src/eom-exif-util.c:121 ../src/eom-exif-util.c:161
@@ -942,7 +968,7 @@ msgstr "%.1f (film de 35 mm)"
 
 #: ../src/eom-save-as-dialog-helper.c:161
 msgid "as is"
-msgstr "com està"
+msgstr "actual"
 
 #. Translators: This string is displayed in the statusbar.
 #. * The first token is the image number, the second is total image
@@ -1073,8 +1099,8 @@ msgid ""
 msgstr ""
 "Aquest programa es distribueix amb l'esperança que serà útil, però SENSE CAP"
 " GARANTIA; ni tan sols amb la garantia de COMERCIALITZACIÓ o APTITUD PER A "
-"PROPÒSITS DETERMINATS. Vegeu la Llicència general pública de GNU per a més "
-"detalls.\n"
+"PROPÒSITS DETERMINATS. Per obtenir més informació, consulteu la Llicència "
+"Pública General de GNU.\n"
 
 #: ../src/eom-window.c:2541
 msgid ""
@@ -1234,7 +1260,7 @@ msgstr "Preferències d'Eye of MATE"
 
 #: ../src/eom-window.c:3620
 msgid "_Contents"
-msgstr "_Continguts"
+msgstr "_Contingut"
 
 #: ../src/eom-window.c:3621
 msgid "Help on this application"

@@ -3,14 +3,26 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Ondřej Kolín <ondrej.kolin@gmail.com>, 2018
+# LiberteCzech <liberte.czech@gmail.com>, 2018
+# Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2018
+# Michal <sinope@seznam.cz>, 2018
+# jakubtalich, 2018
+# Stanislav Kučera <inactive+kacernator@transifex.com>, 2018
+# Roman Horník <roman.hornik@debian-linux.cz>, 2018
+# Lucas Lommer <drom@kdyne.net>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# ToMáš Marný, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-14 09:30+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Roman Horník <roman.hornik@debian-linux.cz>, 2018\n"
+"POT-Creation-Date: 2018-07-17 22:37+0200\n"
+"PO-Revision-Date: 2018-03-11 15:17+0000\n"
+"Last-Translator: ToMáš Marný, 2018\n"
 "Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -764,49 +776,69 @@ msgstr "V „%s“ nebyly nalezeny žádné obrázky."
 msgid "The given locations contain no images."
 msgstr "Zadaná umístění neobsahují žádné obrázky."
 
-#: ../src/eom-exif-details.c:68
+#: ../src/eom-exif-details.c:69
 msgid "Camera"
 msgstr "Fotoaparát"
 
-#: ../src/eom-exif-details.c:69
+#: ../src/eom-exif-details.c:70
 msgid "Image Data"
 msgstr "Údaje o obrázku"
 
-#: ../src/eom-exif-details.c:70
+#: ../src/eom-exif-details.c:71
 msgid "Image Taking Conditions"
 msgstr "Údaje o snímku"
 
-#: ../src/eom-exif-details.c:71
+#: ../src/eom-exif-details.c:72
+msgid "GPS Data"
+msgstr "Údaje GPS"
+
+#: ../src/eom-exif-details.c:73
 msgid "Maker Note"
 msgstr "Poznámka výrobce"
 
-#: ../src/eom-exif-details.c:72
+#: ../src/eom-exif-details.c:74
 msgid "Other"
 msgstr "Ostatní"
 
-#: ../src/eom-exif-details.c:74
+#: ../src/eom-exif-details.c:76
 msgid "XMP Exif"
 msgstr "XMP Exif"
 
-#: ../src/eom-exif-details.c:75
+#: ../src/eom-exif-details.c:77
 msgid "XMP IPTC"
 msgstr "XMP IPTC"
 
-#: ../src/eom-exif-details.c:76
+#: ../src/eom-exif-details.c:78
 msgid "XMP Rights Management"
 msgstr "XMP - správa práv"
 
-#: ../src/eom-exif-details.c:77
+#: ../src/eom-exif-details.c:79
 msgid "XMP Other"
 msgstr "XMP - ostatní"
 
-#: ../src/eom-exif-details.c:251
+#: ../src/eom-exif-details.c:253
 msgid "Tag"
 msgstr "Symbol"
 
-#: ../src/eom-exif-details.c:258
+#: ../src/eom-exif-details.c:263
 msgid "Value"
 msgstr "Hodnota"
+
+#: ../src/eom-exif-details.c:422
+msgid "North"
+msgstr "Sever"
+
+#: ../src/eom-exif-details.c:425
+msgid "East"
+msgstr "Východ"
+
+#: ../src/eom-exif-details.c:428
+msgid "West"
+msgstr "Západ"
+
+#: ../src/eom-exif-details.c:431
+msgid "South"
+msgstr "Jih"
 
 #. A strftime-formatted string, to display the date the image was taken.
 #: ../src/eom-exif-util.c:121 ../src/eom-exif-util.c:161

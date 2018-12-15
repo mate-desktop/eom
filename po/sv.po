@@ -3,14 +3,26 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Gaius Anderson, 2018
+# Claes-Göran Nydahl <goldug@gmail.com>, 2018
+# Kristoffer Grundström <hamnisdude@gmail.com>, 2018
+# Erik, 2018
+# Henrik Mattsson-Mårn <h@reglage.net>, 2018
+# Patrik Nilsson <asavartzeth@gmail.com>, 2018
+# Jonatan Nyberg, 2018
+# Tobias Lekare <lekare@linux.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Philip Andersen <renegadevi@codeofmagi.net>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-14 09:30+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Jonatan Nyberg, 2018\n"
+"POT-Creation-Date: 2018-07-17 22:37+0200\n"
+"PO-Revision-Date: 2018-03-11 15:17+0000\n"
+"Last-Translator: Philip Andersen <renegadevi@codeofmagi.net>, 2018\n"
 "Language-Team: Swedish (https://www.transifex.com/mate/teams/13566/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -641,7 +653,10 @@ msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] ""
+"Det finns %d bild med osparade ändringar. Spara ändringarna innan stängning?"
 msgstr[1] ""
+"Det finns %d bilder med osparade ändringar. Spara ändringarna innan "
+"stängning?"
 
 #: ../src/eom-close-confirmation-dialog.c:621
 msgid "S_elect the images you want to save:"
@@ -688,8 +703,8 @@ msgstr "%s (*.%s)"
 #: ../src/eom-properties-dialog.c:139 ../src/eom-thumb-view.c:519
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "pixel"
+msgstr[1] "bildpunkter"
 
 #: ../src/eom-file-chooser.c:457
 msgid "Open Image"
@@ -761,49 +776,69 @@ msgstr "Inga bilder hittades i \"%s\"."
 msgid "The given locations contain no images."
 msgstr "De angivna platserna innehåller inga bilder."
 
-#: ../src/eom-exif-details.c:68
+#: ../src/eom-exif-details.c:69
 msgid "Camera"
 msgstr "Kamera"
 
-#: ../src/eom-exif-details.c:69
+#: ../src/eom-exif-details.c:70
 msgid "Image Data"
 msgstr "Bilddata"
 
-#: ../src/eom-exif-details.c:70
+#: ../src/eom-exif-details.c:71
 msgid "Image Taking Conditions"
 msgstr "Förhållanden vid fototillfället"
 
-#: ../src/eom-exif-details.c:71
+#: ../src/eom-exif-details.c:72
+msgid "GPS Data"
+msgstr "GPS-Data"
+
+#: ../src/eom-exif-details.c:73
 msgid "Maker Note"
 msgstr "Anteckning från tillverkaren"
 
-#: ../src/eom-exif-details.c:72
+#: ../src/eom-exif-details.c:74
 msgid "Other"
 msgstr "Övrigt"
 
-#: ../src/eom-exif-details.c:74
+#: ../src/eom-exif-details.c:76
 msgid "XMP Exif"
 msgstr "XMP Exif"
 
-#: ../src/eom-exif-details.c:75
+#: ../src/eom-exif-details.c:77
 msgid "XMP IPTC"
 msgstr "XMP IPTC"
 
-#: ../src/eom-exif-details.c:76
+#: ../src/eom-exif-details.c:78
 msgid "XMP Rights Management"
 msgstr "XMP-rättighetshantering"
 
-#: ../src/eom-exif-details.c:77
+#: ../src/eom-exif-details.c:79
 msgid "XMP Other"
 msgstr "XMP Övrigt"
 
-#: ../src/eom-exif-details.c:251
+#: ../src/eom-exif-details.c:253
 msgid "Tag"
 msgstr "Tagg"
 
-#: ../src/eom-exif-details.c:258
+#: ../src/eom-exif-details.c:263
 msgid "Value"
 msgstr "Värde"
+
+#: ../src/eom-exif-details.c:422
+msgid "North"
+msgstr "Nord"
+
+#: ../src/eom-exif-details.c:425
+msgid "East"
+msgstr "Ost"
+
+#: ../src/eom-exif-details.c:428
+msgid "West"
+msgstr "Väst"
+
+#: ../src/eom-exif-details.c:431
+msgid "South"
+msgstr "Syd"
 
 #. A strftime-formatted string, to display the date the image was taken.
 #: ../src/eom-exif-util.c:121 ../src/eom-exif-util.c:161
@@ -973,8 +1008,8 @@ msgstr " (ogiltig Unicode)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%i × %i bildpunkt  %s    %i%%"
+msgstr[1] "%i × %i bildpunkter  %s    %i%%"
 
 #: ../src/eom-window.c:807
 msgid "_Reload"
@@ -1123,7 +1158,11 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
+"Är du säker att du vill flytta\n"
+"den valda bilden till papperskorgen?"
 msgstr[1] ""
+"Är du säker att du vill flytta\n"
+"de %d valda bilderna till papperskorgen?"
 
 #: ../src/eom-window.c:3176
 msgid ""
