@@ -21,7 +21,8 @@ DISTCLEANFILES =                \
 
 DISTCHECK_CONFIGURE_FLAGS =      \
 	--disable-schemas-install    \
-	--enable-gtk-doc
+	--enable-gtk-doc    \
+	CFLAGS='-Wno-deprecated-declarations'
 
 distuninstallcheck_listfiles = find . -type f -print | grep -v /share/mate/help/ | grep -v \.omf
 
