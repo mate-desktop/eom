@@ -276,7 +276,7 @@
 
   <sect2 id="eom-closeapp">
     <title>Closing &appname;</title>
-    <para>To close the current &app; window choose <menuchoice><guimenu>File</guimenu>
+    <para>To close the current &app; window choose <menuchoice><guimenu>Image</guimenu>
     <guimenuitem>Close</guimenuitem></menuchoice>, or press
     <keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>.</para>
   </sect2>
@@ -415,7 +415,7 @@
     application or window.</para></listitem>
     <listitem><para>Double-click on an image file in the file manager
     or other application.</para></listitem>
-    <listitem><para>Choose <menuchoice><guimenu>File</guimenu>
+    <listitem><para>Choose <menuchoice><guimenu>Image</guimenu>
     <guimenuitem>Open</guimenuitem></menuchoice> and select an image file
     in the <application>Load Image</application> dialog.</para></listitem>
     <listitem><para>Press <keycombo><keycap>Ctrl</keycap><keycap>O</keycap>
@@ -436,11 +436,11 @@
                 <orderedlist>
                   <listitem>
                     <para>
-                      Choose <menuchoice> <guimenu>File</guimenu><guimenuitem>Open</guimenuitem> </menuchoice>, or press <keycombo> <keycap>Ctrl</keycap><keycap>O</keycap> </keycombo>.  </para>
+                      Choose <menuchoice> <guimenu>Image</guimenu><guimenuitem>Open</guimenuitem> </menuchoice>, or press <keycombo> <keycap>Ctrl</keycap><keycap>O</keycap> </keycombo>.  </para>
                   </listitem>
                   <listitem>
                     <para>
-                      In the <guilabel>Load Image</guilabel> dialog, select the file you want to open.
+                      In the <guilabel>Open Image</guilabel> dialog, select the file you want to open.
                     </para>
                   </listitem>
                   <listitem>
@@ -450,7 +450,7 @@
                   </listitem>
                 </orderedlist>
                 <para> 
-	          To open another image, choose <menuchoice> <guimenu>File</guimenu><guimenuitem>Open</guimenuitem> </menuchoice> again. &app; opens each image in a new window.
+	          To open another image, choose <menuchoice> <guimenu>Image</guimenu><guimenuitem>Open</guimenuitem> </menuchoice> again. &app; opens each image in a new window.
                 </para>
 	</sect2>
 
@@ -531,12 +531,12 @@
 		<title>Flipping an Image</title>
 		<para>To flip an image along the horizontal axis of the image, choose 
 		<menuchoice>
-		<guimenu>Image</guimenu>
+		<guimenu>Edit</guimenu>
 		<guimenuitem>Flip Horizontal</guimenuitem>
 		</menuchoice>.</para>
 		<para>To flip an image along the vertical axis of the image, choose 
 		<menuchoice>
-		<guimenu>Image</guimenu>
+		<guimenu>Edit</guimenu>
 		<guimenuitem>Flip Vertical</guimenuitem>
 		</menuchoice>.</para>
 	</sect2>
@@ -546,13 +546,13 @@
 		<title>Rotating an Image</title>
 		<para>To rotate an image 90 degrees in a clockwise direction, choose 
 		<menuchoice>
-		<guimenu>Image</guimenu>
+		<guimenu>Edit</guimenu>
 		<guimenuitem>Rotate Clockwise</guimenuitem>
 		</menuchoice>.</para>
 		<para>To rotate an image 90 degrees in an anticlockwise direction, choose 
 		<menuchoice>
-		<guimenu>Image</guimenu>
-		<guimenuitem>Rotate Counter Clockwise</guimenuitem>
+		<guimenu>Edit</guimenu>
+		<guimenuitem>Rotate Counterclockwise</guimenuitem>
 		</menuchoice>.</para>
 	</sect2>
 
@@ -598,7 +598,7 @@
 		<title>Saving an Image</title>
 		<para>To save an image, choose 
 			<menuchoice>
-			<guimenu>File</guimenu>
+			<guimenu>Image</guimenu>
 			<guimenuitem>Save</guimenuitem>
 			</menuchoice>.
 		The image will be saved under the same name and file type. Therefore, unmodified images needn't be saved.</para>
@@ -609,7 +609,7 @@
 		<title>Saving an Image under a Different Name</title>
 		<para>To save an image under a different name, or convert it to a different file type, choose
 			<menuchoice>
-			<guimenu>File</guimenu>
+			<guimenu>Image</guimenu>
 			<guimenuitem>Save As</guimenuitem>
 			</menuchoice>.</para>
 		<para>Specify the filename in the <guilabel>Name</guilabel> field in the <guilabel>Save Image</guilabel> dialog, then click <guibutton>Save</guibutton>. The file is saved in the current folder by default. &app; tries to determine the file type from the given filename suffix. If the image should be saved in another folder or the file type detection failed, expand the dialog by clicking on <guilabel>Browse for other folders</guilabel>. This allows further folder navigation and the specification of the file type from the drop down box.</para>
@@ -622,7 +622,7 @@
 		<para>Saving multiple images at once allows you to convert several images to a different format, or give them similar filenames.</para>
 		<para>To save multiple images, select the images and choose 
 			<menuchoice>
-			<guimenu>File</guimenu>
+			<guimenu>Image</guimenu>
 			<guimenuitem>Save As</guimenuitem>
 			</menuchoice>. 		
 		The following window is displayed:</para>
@@ -664,7 +664,7 @@
 	<title>Printing Images</title>
 	<sect2 id="eom-print-pagesettings">
 		<title>Setting your Page Settings</title>
-		<para>Before printing you need to set the page settings you would like to use. To do that choose <menuchoice><guimenu>File</guimenu><guimenuitem>Page Setup</guimenuitem></menuchoice>.</para>
+		<para>Before printing you need to set the page settings you would like to use. To do that choose <menuchoice><guimenu>Image</guimenu><guimenuitem>Page Setup</guimenuitem></menuchoice>.</para>
 		<para>In the <guilabel>Page Setup</guilabel> dialog you can now choose paper size and orientation. If possible, configure your printer to have the page borders set correctly.</para>
 	</sect2>
 
@@ -673,7 +673,7 @@
 		<para>To print an image, perform the following steps:</para>
 		<orderedlist>
 			<listitem>
-				<para>Select <menuchoice><guimenu>File</guimenu><guimenuitem>Print</guimenuitem></menuchoice></para>
+				<para>Select <menuchoice><guimenu>Image</guimenu><guimenuitem>Print</guimenuitem></menuchoice></para>
 			</listitem>
 			<listitem>
 				<para>In the <guilabel>Print</guilabel> dialog, select the printer you want to use from the list.</para>
