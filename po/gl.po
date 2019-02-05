@@ -6,17 +6,17 @@
 # Translators:
 # André Rivero Castillo <hab130@gmail.com>, 2018
 # Martin Wimpress <code@flexion.org>, 2018
-# Miguel Anxo Bouzada <mbouzada@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Miguel Anxo Bouzada <mbouzada@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-17 22:37+0200\n"
+"POT-Creation-Date: 2019-02-04 11:44+0100\n"
 "PO-Revision-Date: 2018-03-11 15:17+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>, 2019\n"
 "Language-Team: Galician (https://www.transifex.com/mate/teams/13566/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -78,9 +78,9 @@ msgid ""
 "Once an image is loaded, you can zoom and rotate the image, and also view "
 "subsequent images in the directory the image was loaded from. </p>"
 msgstr ""
-"<p> Ollo do MATE é un visor sinxelo para examinar imaxes no seu equipo. Unha"
-" vez cargada a imaxe, pode ampliala ou rotala, pode tamén ver as imaxes "
-"seguintes no directorio do que foi cargada a imaxe. </p>"
+"<p> Ollo do MATE é un visor sinxelo para navegar polas imaxes no seu equipo."
+" Unha vez cargada a imaxe, pode ampliala ou rotala, pode tamén ver as imaxes"
+" seguintes no directorio do que foi cargada a imaxe. </p>"
 
 #: ../data/eom.desktop.in.in.h:1 ../src/main.c:70 ../src/main.c:264
 msgid "Eye of MATE Image Viewer"
@@ -484,20 +484,20 @@ msgid ""
 " the next one is shown automatically. Zero disables the automatic browsing."
 msgstr ""
 "Un valor maior que 0 determina os segundos que unha imaxe permanece na "
-"pantalla ata que a seguinte agochase automaticamente. O valor cero desactiva"
+"pantalla ata que a seguinte agachase automaticamente. O valor cero desactiva"
 " a navegación automática."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:29
 msgid "Show/Hide the window toolbar."
-msgstr "Amosar ou agochar a barra de ferramentas da xanela."
+msgstr "Amosar ou agachar a barra de ferramentas da xanela."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:30
 msgid "Show/Hide the window statusbar."
-msgstr "Amosar ou agochar a barra de estado da xanela."
+msgstr "Amosar ou agachar a barra de estado da xanela."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:31
 msgid "Show/Hide the image collection pane."
-msgstr "Amosar ou agochar o panel de colección de imaxes."
+msgstr "Amosar ou agachar o panel de colección de imaxes."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:32
 msgid "Image collection pane position."
@@ -510,12 +510,12 @@ msgstr ""
 
 #: ../data/org.mate.eom.gschema.xml.in.h:34
 msgid "Show/Hide the window side pane."
-msgstr "Amosar ou agochar a barra lateral da xanela."
+msgstr "Amosar ou agachar a barra lateral da xanela."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:35
 msgid "Show/Hide the image collection pane scroll buttons."
 msgstr ""
-"Amosar ou agochar os botóns de desprazamento do panel de colección de "
+"Amosar ou agachar os botóns de desprazamento do panel de colección de "
 "imaxes."
 
 #: ../data/org.mate.eom.gschema.xml.in.h:36
@@ -565,7 +565,7 @@ msgid ""
 " for editing images (when the \"Edit Image\" toolbar button is clicked). Set"
 " to the empty string to disable this feature."
 msgstr ""
-"O nome do ficheiro de escritorio (incluíndo «.desktop») da aplicación que "
+"O nome do ficheiro de escritorio (incluíndo «.desktop») do aplicativo que "
 "usar para editar imaxes (ao premer o botón da barra de ferramentas «Editar "
 "imaxe»). Deixar baleiro para desactivar esta característica."
 
@@ -605,11 +605,11 @@ msgstr ""
 
 #: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
 msgid "Fullscreen with double-click"
-msgstr "Pantalla completa con dobre clic"
+msgstr "Pantalla completa con dobre pulsación"
 
 #: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
 msgid "Activate fullscreen mode with double-click"
-msgstr "Activar o modo de pantalla completa cun dobre clic"
+msgstr "Activar o modo de pantalla completa cunha dobre pulsación"
 
 #: ../plugins/reload/eom-reload-plugin.c:44
 #: ../plugins/reload/reload.plugin.desktop.in.h:1
@@ -722,32 +722,32 @@ msgstr "Gardar a imaxe"
 msgid "Open Folder"
 msgstr "Abrir o cartafol"
 
-#: ../src/eom-image.c:566
+#: ../src/eom-image.c:555
 #, c-format
 msgid "Transformation on unloaded image."
 msgstr "Transformación nunha imaxe descargada."
 
-#: ../src/eom-image.c:594
+#: ../src/eom-image.c:583
 #, c-format
 msgid "Transformation failed."
 msgstr "Fallou a transformación."
 
-#: ../src/eom-image.c:1019
+#: ../src/eom-image.c:1008
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "EXIF non é compatíbel con este formato de ficheiro."
 
-#: ../src/eom-image.c:1162
+#: ../src/eom-image.c:1151
 #, c-format
 msgid "Image loading failed."
 msgstr "Produciuse un fallo ao cargar a imaxe."
 
-#: ../src/eom-image.c:1691 ../src/eom-image.c:1793
+#: ../src/eom-image.c:1680 ../src/eom-image.c:1782
 #, c-format
 msgid "No image loaded."
 msgstr "Non se cargou ningunha imaxe."
 
-#: ../src/eom-image.c:1701 ../src/eom-image.c:1805
+#: ../src/eom-image.c:1690 ../src/eom-image.c:1794
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "Produciuse un fallo ao crear o ficheiro temporal."
@@ -794,7 +794,7 @@ msgstr "Condicións de captura da imaxe"
 
 #: ../src/eom-exif-details.c:72
 msgid "GPS Data"
-msgstr ""
+msgstr "Datos GPS"
 
 #: ../src/eom-exif-details.c:73
 msgid "Maker Note"
@@ -857,7 +857,7 @@ msgstr "%a, %d de %B de %Y"
 
 #: ../src/eom-print.c:371
 msgid "Image Settings"
-msgstr "Configuración de imaxe"
+msgstr "Axustes da imaxe"
 
 #: ../src/eom-print-image-setup.c:828
 msgid "Image"
@@ -1022,7 +1022,7 @@ msgstr "_Recargar"
 #: ../src/eom-window.c:809 ../src/eom-window.c:2675
 msgctxt "MessageArea"
 msgid "Hi_de"
-msgstr "A_gochar"
+msgstr "A_gachar"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
