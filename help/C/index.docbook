@@ -1,27 +1,21 @@
-<?xml version="1.0"?>
-<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
-"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
-  <!ENTITY legal SYSTEM "legal.xml">
-  <!ENTITY appversion "1.10.2">
-  <!ENTITY manrevision "2.9">
-  <!ENTITY date "July 2015">
-  <!ENTITY app "<application>Image Viewer</application>">
-  <!ENTITY appname "Image Viewer">
-]>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- 
       (Do not remove this comment block.)
   Maintained by the MATE Documentation Project
   http://wiki.mate-desktop.org/dev-doc:doc-team-guide
   Template version: 2.0 beta
   Template last modified Feb 12, 2002
-  
 -->
-<!-- =============Document Header ============================= -->
-<article id="index" lang="en">
+<?db.chunk.max_depth 2?>
+<article xmlns="http://docbook.org/ns/docbook"
+         xmlns:db="http://docbook.org/ns/docbook"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         version="5.0" xml:id="index" xml:lang="en">
 <!-- please do not change the id; for translations, change lang to -->
 <!-- appropriate code -->
-  <articleinfo> 
-    <title>&appname; Manual</title>
+  <info>
+    <title>Image Viewer Manual</title>
 
     <copyright>
       <year>2015</year>
@@ -46,14 +40,7 @@
       <year>2000</year> 
       <holder>The Free Software Foundation</holder> 
     </copyright>	 
-<!-- translators: uncomment this:
 
-  <copyright>
-   <year>2003</year>
-   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
-  </copyright>
-
-   -->
 <!-- An address can be added to the publisher information.  If a role is 
      not specified, the publisher/author is the same for all versions of the 
      document.  -->
@@ -64,85 +51,85 @@
       <publishername> GNOME Documentation Project </publishername>
     </publisher>
 
-   &legal;
+   <xi:include href="legal.xml"/>
    <!-- This file  contains link to license for the documentation (GNU FDL), and 
         other legal stuff such as "NO WARRANTY" statement. Please do not change 
 	any of this. -->
+
    <authorgroup>
-   <author> 
-	<firstname>MATE Documentation Project</firstname>
-	<surname></surname>
-	<affiliation>
-	  <orgname>MATE Desktop</orgname>
-	</affiliation>
-   </author>
-   <author>
-	<firstname>Jens</firstname> 
-	<surname>Finke</surname> 
-	<affiliation> 
-	  <orgname>GNOME Documentation Project</orgname>
-	</affiliation>
-   </author>
-   <author> 
-	<firstname>Angela</firstname> 
-	<surname>Boyle</surname> 
-	<affiliation> 
-	  <orgname>GNOME Documentation Project</orgname>
-	</affiliation>
-   </author>
-   <author> 
-	<firstname>Stuart</firstname> 
-	<surname>Ellis</surname> 
-	<affiliation> 
-	  <orgname>GNOME Documentation Project</orgname>
-	</affiliation>
-   </author>
-   <author> 
-	<firstname>Sun</firstname> 
-	<surname>GNOME Documentation Team</surname>
-	<affiliation> 
-	  <orgname>Sun Microsystems</orgname>  
-	</affiliation> 
-   </author> 
-   <author> 
-	<firstname>Eliot</firstname> 
-	<surname>Landrum</surname> 
-	<affiliation> 
-	  <orgname>GNOME Documentation Project</orgname>
-	</affiliation> 
-   </author> 
-   <author> 
-	<firstname>Federico</firstname> 
-	<surname>Mena Quintero</surname> 
-	<affiliation> 
-	  <orgname>GNOME Documentation Project</orgname>
-	</affiliation> 
-   </author>	
-<!-- This is appropriate place for other contributors: translators,
-      maintainers,  etc. Commented out by default.
-       <othercredit role="translator">
-	<firstname>Latin</firstname> 
-	<surname>Translator 1</surname> 
-	<affiliation> 
-	  <orgname>Latin Translation Team</orgname> 
-	  <email>translator@gnome.org</email> 
-	</affiliation>
-	<contrib>Latin translation</contrib>
-      </othercredit>
--->
-    </authorgroup>
+       <author>
+           <orgname>MATE Documentation Project</orgname>
+           <affiliation>
+               <orgname>MATE Desktop</orgname>
+           </affiliation>
+       </author>
+       <author>
+           <personname>
+               <firstname>Jens</firstname>
+               <surname>Finke</surname>
+           </personname>
+           <affiliation>
+               <orgname>GNOME Documentation Project</orgname>
+           </affiliation>
+       </author>
+       <author>
+           <personname>
+               <firstname>Angela</firstname>
+               <surname>Boyle</surname>
+           </personname>
+           <affiliation>
+               <orgname>GNOME Documentation Project</orgname>
+           </affiliation>
+       </author>
+       <author>
+           <personname>
+               <firstname>Stuart</firstname>
+               <surname>Ellis</surname>
+           </personname>
+           <affiliation>
+               <orgname>GNOME Documentation Project</orgname>
+           </affiliation>
+       </author>
+       <author>
+           <personname>
+               <firstname>Sun</firstname>
+               <surname>GNOME Documentation Team</surname>
+           </personname>
+           <affiliation>
+               <orgname>Sun Microsystems</orgname>
+           </affiliation>
+       </author>
+       <author>
+           <personname>
+               <firstname>Eliot</firstname>
+               <surname>Landrum</surname>
+           </personname>
+           <affiliation>
+               <orgname>GNOME Documentation Project</orgname>
+           </affiliation>
+       </author>
+       <author>
+           <personname>
+               <firstname>Federico</firstname>
+               <surname>Mena Quintero</surname>
+           </personname>
+           <affiliation>
+               <orgname>GNOME Documentation Project</orgname>
+           </affiliation>
+       </author>	
+   </authorgroup>
  
     <revhistory>
     <revision> 
-		<revnumber>&appname; Manual V&manrevision;</revnumber> 
-		<date>&date;</date> 
+		<revnumber>2.9</revnumber>
+		<date>July 2015</date>
 		<revdescription> 
 	  		<para role="author">MATE Documentation Project</para>
 	  		<para role="publisher">MATE Documentation Project</para>
 		</revdescription> 
     </revision> 
     <revision>
-		<revnumber>Eye of GNOME Manual V2.8</revnumber>
+		<revnumber>2.8</revnumber>
 		<date>February 2007</date>
 		<revdescription>
 		    <para role="author">GNOME Documentation Project</para>
@@ -150,7 +137,7 @@
 		</revdescription>
     </revision>
     <revision>
-		<revnumber>Eye of GNOME Manual V2.7</revnumber>
+		<revnumber>2.7</revnumber>
 		<date>February 2004</date>
 		<revdescription>
 		    <para role="author">Sun GNOME Documentation Team</para>
@@ -158,7 +145,7 @@
 		</revdescription>
     </revision>
     <revision> 
-		<revnumber>Eye of GNOME Manual V2.6</revnumber>
+		<revnumber>2.6</revnumber>
 		<date>November 2003</date> 
 		<revdescription> 
 		    <para role="author">Sun GNOME Documentation Team</para>
@@ -166,7 +153,7 @@
 		</revdescription> 
     </revision>
     <revision> 
-		<revnumber>Eye of GNOME Manual V2.5</revnumber>
+		<revnumber>2.5</revnumber>
 		<date>September 2003</date> 
 		<revdescription> 
 		    <para role="author">Sun GNOME Documentation Team</para>
@@ -174,7 +161,7 @@
 		</revdescription> 
     </revision>
     <revision> 
-		<revnumber>Eye of GNOME Manual V2.4</revnumber>
+		<revnumber>2.4</revnumber>
 		<date>January 2003</date> 
 		<revdescription> 
 		    <para role="author">Sun GNOME Documentation Team</para>
@@ -182,7 +169,7 @@
 		</revdescription> 
     </revision>
     <revision> 
-		<revnumber>Eye of GNOME Manual V2.3</revnumber>
+		<revnumber>2.3</revnumber>
 		<date>October 2002</date> 
 		<revdescription> 
 		    <para role="author">Sun GNOME Documentation Team</para>
@@ -190,7 +177,7 @@
 		</revdescription> 
     </revision>
     <revision> 
-		<revnumber>Eye of GNOME Manual V2.2</revnumber>
+		<revnumber>2.2</revnumber>
 		<date>August 2002</date> 
 		<revdescription> 
 		    <para role="author">Sun GNOME Documentation Team</para>
@@ -198,7 +185,7 @@
 		</revdescription> 
     </revision>
     <revision> 
-		<revnumber>Eye of GNOME Manual V2.1</revnumber>
+		<revnumber>2.1</revnumber>
 		<date>July 2002</date> 
 		<revdescription> 
 		    <para role="author">Sun GNOME Documentation Team</para>
@@ -206,7 +193,7 @@
 		</revdescription> 
     </revision> 
     <revision> 
-		<revnumber>Eye of GNOME Manual V2.0</revnumber>
+		<revnumber>2.0</revnumber>
 		<date>May 2002</date> 
 		<revdescription> 
 		    <para role="author">Sun GNOME Documentation Team</para>
@@ -214,7 +201,7 @@
 		</revdescription> 
     </revision> 
     <revision> 
-		<revnumber>Eye of GNOME User's Guide</revnumber>
+		<revnumber>1.0</revnumber>
 		<date>2000</date> 
 		<revdescription> 
 		    <para role="author">Eliot Landrum
@@ -227,19 +214,9 @@
 		</revdescription> 
       </revision> 
     </revhistory> 
-    <releaseinfo>This manual describes version &appversion; of &appname;.
+    <releaseinfo>This manual describes version 1.10.2 of Image Viewer.
     </releaseinfo>
-    <legalnotice>
-      <title>Feedback</title>
-      <para>To report a bug or make a suggestion regarding the &appname; application or this manual, follow the directions in the <ulink url="help:mate-user-guide/feedback" type="help">MATE Feedback Page</ulink>.
-      </para>
-<!-- Translators may also add here feedback address for translations -->
-    </legalnotice>
-    <abstract role="description">
-      <para>User manual for <application>Eye of MATE Image Viewer</application>.</para>
-    </abstract>
-
-  </articleinfo> 
+  </info>
 
   <indexterm>
     <primary>Eye of MATE</primary> 
@@ -248,15 +225,15 @@
 <!-- ============= Document Body ============================= -->
 
 <!-- ============= Introduction ============================== -->
-<sect1 id="eom-introduction">
-  <title>Introduction</title>
+<section xml:id="eom-introduction"><info><title>Introduction</title></info>
+  
   <para>The <application>Eye of MATE Image Viewer</application>
   application enables you to view single image files, as well as large image collections.
   </para>
 
-  <sect2 id="eom-tostartapp">
-    <title>Starting &appname;</title>
-    <para>You can start &app; in the following ways:</para>
+  <section xml:id="eom-tostartapp"><info><title>Starting Image Viewer</title></info>
+    
+    <para>You can start <application>Image Viewer</application> in the following ways:</para>
     <itemizedlist>
       <listitem>
         <para>Open an image file in <application>Caja</application>.</para>
@@ -272,18 +249,18 @@
 	<application>Run Application</application> dialog.</para>
       </listitem>
     </itemizedlist>
-  </sect2>
+  </section>
 
-  <sect2 id="eom-closeapp">
-    <title>Closing &appname;</title>
-    <para>To close the current &app; window choose <menuchoice><guimenu>Image</guimenu>
+  <section xml:id="eom-closeapp"><info><title>Closing Image Viewer</title></info>
+    
+    <para>To close the current <application>Image Viewer</application> window choose <menuchoice><guimenu>Image</guimenu>
     <guimenuitem>Close</guimenuitem></menuchoice>, or press
     <keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>.</para>
-  </sect2>
+  </section>
 
-  <sect2 id="eom-filetypes">
-    <title>Supported File Types</title>
-    <para>&app; supports a variety of image file formats. The following image formats can be opened:</para>
+  <section xml:id="eom-filetypes"><info><title>Supported File Types</title></info>
+    
+    <para><application>Image Viewer</application> supports a variety of image file formats. The following image formats can be opened:</para>
 		<itemizedlist>
 			<listitem><para>ANI - Animation</para>
 			</listitem>
@@ -317,7 +294,7 @@
 			</listitem>
 		</itemizedlist>
 
-  <para>&app; supports the following formats for saving:</para>
+  <para><application>Image Viewer</application> supports the following formats for saving:</para>
 		<itemizedlist>
 			<listitem><para>BMP - Windows Bitmap</para>
 			</listitem>
@@ -328,53 +305,53 @@
 			<listitem><para>PNG - Portable Network Graphics </para>
 			</listitem>
 		</itemizedlist>
-		<para>&app; may be able to open and save other image formats, depending on your system configuration and other installed software.</para>
-  </sect2>
+		<para><application>Image Viewer</application> may be able to open and save other image formats, depending on your system configuration and other installed software.</para>
+  </section>
 
-  <sect2 id="eom-features">
-    <title>&appname; Features</title>
-    <para>&app; has a variety of features to help you view your images.
+  <section xml:id="eom-features"><info><title>Image Viewer Features</title></info>
+    
+    <para><application>Image Viewer</application> has a variety of features to help you view your images.
     You can zoom in and out or view the image full screen. Regardless of
-    your zoom level, &app; uses a low amount of memory. You can also
+    your zoom level, <application>Image Viewer</application> uses a low amount of memory. You can also
     rotate and flip the image you are viewing.</para>
 
     <para>The collection view allows the viewing and editing of large
     image collections. In this view image operations can be applied
     to all selected images at once. </para>
 
-    <para>&app; has special support for digital camera pictures and
+    <para><application>Image Viewer</application> has special support for digital camera pictures and
     displays EXIF metadata recorded with the image. This feature
     requires <systemitem class="library">libexif</systemitem> to be
     installed on your system. All modifications made in JPEG images 
     are lossless. That is, saving rotated and flipped JPEG images 
     will not recompress the image. Beside this all available metadata 
     (like EXIF) will be preserved and updated accordingly. </para>
-  </sect2>
-</sect1>
+  </section>
+</section>
 
 <!--============== When You Start ===========-->
-<sect1 id="eom-whenyoustart">
-  <title>Getting Started</title>
-  <para>When you start &app;, the following window is displayed:</para>
-  <figure id="mainwindow-fig">
-		<title>&appname; Start Up Window</title>
+<section xml:id="eom-whenyoustart"><info><title>Getting Started</title></info>
+  
+  <para>When you start <application>Image Viewer</application>, the following window is displayed:</para>
+  <figure xml:id="mainwindow-fig"><info><title>Image Viewer Start Up Window</title></info>
+		
 		<screenshot>
 		  <mediaobject>
 		    <imageobject>
 		      <imagedata fileref="figures/eom_start_window.png" format="PNG"/>
 		    </imageobject>
 		    <textobject>
-		      <phrase>Shows &app; main window. Contains titlebar, menubar, toolbar, and display area. Menubar contains File, Edit, View, and Help menus.</phrase>
+		      <phrase>Shows <application>Image Viewer</application> main window. Contains titlebar, menubar, toolbar, and display area. Menubar contains File, Edit, View, and Help menus.</phrase>
 		    </textobject>
 		  </mediaobject>
 		</screenshot>
   </figure>
-  <para>The &app; window contains the following elements:</para>
+  <para>The <application>Image Viewer</application> window contains the following elements:</para>
   <variablelist>
 	<varlistentry>
   	  <term>Menubar</term>
  	  <listitem>
-	    <para>The menus on the menubar contain all the commands that you need to work with images in &app;.</para>
+	    <para>The menus on the menubar contain all the commands that you need to work with images in <application>Image Viewer</application>.</para>
 	  </listitem>
  	</varlistentry>
 	<varlistentry>
@@ -408,10 +385,10 @@
 	  </listitem>
 	</varlistentry>
   </variablelist>
-  <para>Most actions in &app; can be performed several ways.  For example,
+  <para>Most actions in <application>Image Viewer</application> can be performed several ways.  For example,
   you can open a file in the following ways:</para>
   <itemizedlist>
-    <listitem><para>Drag an image file into the &app; window from another
+    <listitem><para>Drag an image file into the <application>Image Viewer</application> window from another
     application or window.</para></listitem>
     <listitem><para>Double-click on an image file in the file manager
     or other application.</para></listitem>
@@ -422,18 +399,18 @@
     </keycombo> and select an image file in the <application>Load
     Image</application> dialog.</para></listitem>
   </itemizedlist>
-</sect1>
+</section>
 
 
 <!-- ============= Viewing Images ============================== -->
-<sect1 id="eom-view">
-	<title>Viewing Images</title>
+<section xml:id="eom-view"><info><title>Viewing Images</title></info>
+	
 
 	<!--=========== To Open an Image ============================= -->
-	<sect2 id="eom-open-image">
-		<title>Opening an Image</title>
+	<section xml:id="eom-open-image"><info><title>Opening an Image</title></info>
+		
                 <para>To open an image, perform the following steps:</para>
-                <orderedlist>
+                <orderedlist inheritnum="ignore" continuation="restarts">
                   <listitem>
                     <para>
                       Choose <menuchoice> <guimenu>Image</guimenu><guimenuitem>Open</guimenuitem> </menuchoice>, or press <keycombo> <keycap>Ctrl</keycap><keycap>O</keycap> </keycombo>.  </para>
@@ -445,20 +422,20 @@
                   </listitem>
                   <listitem>
                     <para>
-                      Click <guibutton>Open</guibutton>. &app; displays the name of the image file in the titlebar of the window.
+                      Click <guibutton>Open</guibutton>. <application>Image Viewer</application> displays the name of the image file in the titlebar of the window.
                     </para>
                   </listitem>
                 </orderedlist>
                 <para> 
-	          To open another image, choose <menuchoice> <guimenu>Image</guimenu><guimenuitem>Open</guimenuitem> </menuchoice> again. &app; opens each image in a new window.
+	          To open another image, choose <menuchoice> <guimenu>Image</guimenu><guimenuitem>Open</guimenuitem> </menuchoice> again. <application>Image Viewer</application> opens each image in a new window.
                 </para>
-	</sect2>
+	</section>
 
 	<!--=========== To View the Images in a Directory ==================== -->
-	<sect2 id="eom-open-folder">
-		<title>Viewing the Images in a Folder</title>
+	<section xml:id="eom-open-folder"><info><title>Viewing the Images in a Folder</title></info>
+		
 		<para>To view all images in a folder, perform the following steps:</para>
-                <orderedlist>
+                <orderedlist inheritnum="ignore" continuation="restarts">
                   <listitem>
                     <para>
                       Open one of the images in the folder (see <xref linkend="eom-open-image"/>).  </para>
@@ -472,11 +449,11 @@
 	     <para>The collection shows thumbnails of all supported images in the folder. You can browse the images by clicking on an image in the collection, by choosing the appropriate option in the <guimenu>Go</guimenu> menu or by pressing <keycombo><keycap>Alt</keycap><keycap>Left</keycap></keycombo> or <keycombo><keycap>Alt</keycap><keycap>Right</keycap></keycombo>.</para>
              <para>To view all the directory images in fullscreen, choose <menuchoice> <guimenu>View</guimenu><guimenuitem>Full Screen</guimenuitem> </menuchoice> or press <keycap>F11</keycap>. To view them as a slide show, choose <menuchoice><guimenu>View</guimenu><guimenuitem>Slideshow</guimenuitem></menuchoice> or press <keycap>F5</keycap>. To return to the collection view, press the <keycap>Esc</keycap> key, or <keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>. For more information about how to customize the slide show, see <xref linkend="eom-prefs-slideshow"/>.
                     </para>
-	</sect2>
+	</section>
 
 	<!--============ To Scroll an Image ======================= -->
-	<sect2 id="eom-scroll-image">
-		<title>Scrolling an Image</title>
+	<section xml:id="eom-scroll-image"><info><title>Scrolling an Image</title></info>
+		
 		<para>To scroll around an image that is larger than the image window or full screen view, you can use the following methods:</para>
 		<itemizedlist>
 			<listitem><para>Use the arrow keys on the keyboard.</para>
@@ -486,11 +463,11 @@
 			<listitem><para>Use the scrollbars on the window.</para>
 			</listitem>
 		</itemizedlist>
-	</sect2>
+	</section>
 
 	<!--=========== To Zoom In and Out ==================== -->
-	<sect2 id="eom-zoom">
-		<title>Zooming</title>
+	<section xml:id="eom-zoom"><info><title>Zooming</title></info>
+		
 		<para>You can zoom in or out of the image in the following ways:</para>
 			<itemizedlist>
 				<listitem><para>Use the <mousebutton>scroll wheel</mousebutton> on your mouse. Scrolling down zooms out; scrolling up zooms in.</para></listitem>
@@ -504,31 +481,31 @@
 				<listitem><para>Use the keyboard. To zoom in, <keycombo> <keycap>Ctrl</keycap><keycap>+</keycap> </keycombo> or <keycap>+</keycap>. To zoom out, <keycombo> <keycap>Ctrl</keycap><keycap>-</keycap> </keycombo> or <keycap>-</keycap>. To go back to the normal size, <keycombo> <keycap>Ctrl</keycap><keycap>0</keycap> </keycombo> or <keycap>1</keycap>. To scale the image to fit the window, press <keycap>F</keycap>.</para></listitem>
 			</itemizedlist>
 			<para>When an image is zoomed to fit the window, resizing the window will also change the zoom level, so the image still fits the window.</para>
-	</sect2>
+	</section>
 
 	<!--=========== To View Image Fullscreen ==================== -->
-	<sect2 id="eom-fullscreen">
-		<title>Viewing an Image Full Screen/Slideshow</title>
+	<section xml:id="eom-fullscreen"><info><title>Viewing an Image Full Screen/Slideshow</title></info>
+		
 		<para>To show the image using the entire screen,  choose <menuchoice><guimenu>View</guimenu><guimenuitem>Full Screen</guimenuitem></menuchoice>.</para>
 		<para>No panels, window frames, or menubars are visible when an image is shown like this. To return to the normal view, press <keycap>Esc</keycap>, or <keycap>F11</keycap>, or <keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>.</para>
 		<para>You can zoom or scroll around the image in the same way as when it is shown in a window, using the mouse or the keyboard.</para>
 		<para>If you have multiple images in your collection you can press <keycap>Space</keycap> or use the right/down cursor keys to advance to the next image. The previous image can be reached by pressing <keycap>Backspace</keycap> or using the left/up cursor keys.</para>
-	<para>In this case you can also use the slideshow mode, where &app; automatically switches to the next image in your collection. You can start a slideshow by choosing <menuchoice><guimenu>View</guimenu><guimenuitem>Slideshow</guimenuitem></menuchoice> or by pressing <keycap>F5</keycap>. The slideshow can be paused/continued by pressing <keycap>P</keycap>. To stop the slideshow, press the <keycap>Esc</keycap> or <keycap>F5</keycap> key, or <keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>. For more information about how to customize the slide show, see <xref linkend="eom-prefs-slideshow"/>. </para>
-	</sect2>
-</sect1>
+	<para>In this case you can also use the slideshow mode, where <application>Image Viewer</application> automatically switches to the next image in your collection. You can start a slideshow by choosing <menuchoice><guimenu>View</guimenu><guimenuitem>Slideshow</guimenuitem></menuchoice> or by pressing <keycap>F5</keycap>. The slideshow can be paused/continued by pressing <keycap>P</keycap>. To stop the slideshow, press the <keycap>Esc</keycap> or <keycap>F5</keycap> key, or <keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>. For more information about how to customize the slide show, see <xref linkend="eom-prefs-slideshow"/>. </para>
+	</section>
+</section>
 
 
 <!-- ============= Manipulating Images ============================== -->
-<sect1 id="eom-manipulate">
-	<title>Manipulating Images</title>
+<section xml:id="eom-manipulate"><info><title>Manipulating Images</title></info>
+	
 
 	<para>All image manipulations apply to all selected images at once. The modifications are done
 	in memory and alter the original files on disk only when the images are saved with the save function (see <xref linkend="eom-save-image"/>).
 	</para>
 
 	<!--============ To Flip an Image ======================= -->
-	<sect2 id="eom-flip">
-		<title>Flipping an Image</title>
+	<section xml:id="eom-flip"><info><title>Flipping an Image</title></info>
+		
 		<para>To flip an image along the horizontal axis of the image, choose 
 		<menuchoice>
 		<guimenu>Edit</guimenu>
@@ -539,11 +516,11 @@
 		<guimenu>Edit</guimenu>
 		<guimenuitem>Flip Vertical</guimenuitem>
 		</menuchoice>.</para>
-	</sect2>
+	</section>
 
 	<!--============ To Rotate an Image ======================= -->
-	<sect2 id="eom-rotate">
-		<title>Rotating an Image</title>
+	<section xml:id="eom-rotate"><info><title>Rotating an Image</title></info>
+		
 		<para>To rotate an image 90 degrees in a clockwise direction, choose 
 		<menuchoice>
 		<guimenu>Edit</guimenu>
@@ -554,11 +531,11 @@
 		<guimenu>Edit</guimenu>
 		<guimenuitem>Rotate Counterclockwise</guimenuitem>
 		</menuchoice>.</para>
-	</sect2>
+	</section>
 
 	<!--============ To Undo an Action ======================= -->
-	<sect2 id="eom-undo">
-		<title>Undoing an Action</title>
+	<section xml:id="eom-undo"><info><title>Undoing an Action</title></info>
+		
 		<para>To undo a flip or rotate action, choose 
 		<menuchoice>
 		<guimenu>Edit</guimenu>
@@ -566,59 +543,58 @@
 		</menuchoice> or press 
 		<keycombo><keycap>Ctrl</keycap><keycap>Z</keycap></keycombo>
 		.</para>
-	</sect2>
+	</section>
 
 	<!--============ To Delete An Image ======================== -->
-	<sect2 id="eom-delete-image">
-		<title>Deleting an Image</title>
+	<section xml:id="eom-delete-image"><info><title>Deleting an Image</title></info>
+		
 		<para>To move an image to the Trash, choose
 			<menuchoice>
 			<guimenu>Edit</guimenu>
 			<guimenuitem>Move to Trash</guimenuitem>
 			</menuchoice>.
 			This moves the file to the Trash folder. Multiple images can also be moved to the trash in the same way: select them all first.</para>
-	    <para>To restore an image from the Trash, open the Trash folder in <application>Caja</application> file manager and move the image file to another folder. To delete the image permanently, empty the Trash. To find out more about using the Trash, see the <ulink type="help" url="help:mate-user-guide/caja-trash">Desktop User Guide</ulink>.</para>
+	    <para>To restore an image from the Trash, open the Trash folder in <application>Caja</application> file manager and move the image file to another folder. To delete the image permanently, empty the Trash. To find out more about using the Trash, see the <link xlink:href="help:mate-user-guide/caja-trash">Desktop User Guide</link>.</para>
 				
 			<note><para>You can also use the <keycap>Del</keycap> key to move an image to the Trash, in which case you will be asked for confirmation.</para></note>
 			
-	</sect2>
-</sect1> 
+	</section>
+</section> 
 
 <!-- ============= Saving Images ============================== -->
-<sect1 id="eom-save-rename">
-	<title>Saving Images</title>
+<section xml:id="eom-save-rename"><info><title>Saving Images</title></info>
+	
 
 	<para>
-	&app; always tries to choose the save method with the least impact to the image data. For example, if an otherwise unmodified image is saved under a different name in the same format, the file is simply copied. If <systemitem
-    class="library">libjpeg</systemitem> is available on the system all JPEG image modifications are done without loss of image information.
+	<application>Image Viewer</application> always tries to choose the save method with the least impact to the image data. For example, if an otherwise unmodified image is saved under a different name in the same format, the file is simply copied. If <systemitem class="library">libjpeg</systemitem> is available on the system all JPEG image modifications are done without loss of image information.
 	</para>
 
 <!--============ To Save an Image ======================= -->
-	<sect2 id="eom-save-image">
-		<title>Saving an Image</title>
+	<section xml:id="eom-save-image"><info><title>Saving an Image</title></info>
+		
 		<para>To save an image, choose 
 			<menuchoice>
 			<guimenu>Image</guimenu>
 			<guimenuitem>Save</guimenuitem>
 			</menuchoice>.
 		The image will be saved under the same name and file type. Therefore, unmodified images needn't be saved.</para>
-	</sect2>
+	</section>
 
 	<!--============ To Save As an Image ======================= -->
-	<sect2 id="eom-save-as-image">
-		<title>Saving an Image under a Different Name</title>
+	<section xml:id="eom-save-as-image"><info><title>Saving an Image under a Different Name</title></info>
+		
 		<para>To save an image under a different name, or convert it to a different file type, choose
 			<menuchoice>
 			<guimenu>Image</guimenu>
 			<guimenuitem>Save As</guimenuitem>
 			</menuchoice>.</para>
-		<para>Specify the filename in the <guilabel>Name</guilabel> field in the <guilabel>Save Image</guilabel> dialog, then click <guibutton>Save</guibutton>. The file is saved in the current folder by default. &app; tries to determine the file type from the given filename suffix. If the image should be saved in another folder or the file type detection failed, expand the dialog by clicking on <guilabel>Browse for other folders</guilabel>. This allows further folder navigation and the specification of the file type from the drop down box.</para>
+		<para>Specify the filename in the <guilabel>Name</guilabel> field in the <guilabel>Save Image</guilabel> dialog, then click <guibutton>Save</guibutton>. The file is saved in the current folder by default. <application>Image Viewer</application> tries to determine the file type from the given filename suffix. If the image should be saved in another folder or the file type detection failed, expand the dialog by clicking on <guilabel>Browse for other folders</guilabel>. This allows further folder navigation and the specification of the file type from the drop down box.</para>
 		<para>You can save multiple images at once: see the next section.</para>
-	</sect2>    
+	</section>    
 
 	<!--============ To Save As an Image ======================= -->
-	<sect2 id="eom-save-as-multiple">
-		<title>Saving Multiple Images</title>
+	<section xml:id="eom-save-as-multiple"><info><title>Saving Multiple Images</title></info>
+		
 		<para>Saving multiple images at once allows you to convert several images to a different format, or give them similar filenames.</para>
 		<para>To save multiple images, select the images and choose 
 			<menuchoice>
@@ -626,8 +602,8 @@
 			<guimenuitem>Save As</guimenuitem>
 			</menuchoice>. 		
 		The following window is displayed:</para>
-  		<figure id="saveas-dialog-fig">
-			<title>Save As dialog for multiple images</title>
+  		<figure xml:id="saveas-dialog-fig"><info><title>Save As dialog for multiple images</title></info>
+			
 			<screenshot>
 			  <mediaobject>
 			    <imageobject>
@@ -654,24 +630,24 @@
 		<para>The <guilabel>Options</guilabel> section allows to remove all space characters by underscores in the resulting filename if <guilabel>Replace spaces with underscores</guilabel> is checked. The <guilabel>Start counter at</guilabel> spin box determines at which number the counter starts if you use the %n tag for the file format specification.</para>
 		<para>The <guilabel>File Name Preview</guilabel> section of the dialog shows the resulting file name according to the above settings for an example filename from the selected images.
 		</para>
-	</sect2>
+	</section>
 
 
 
-</sect1>
+</section>
 
-<sect1 id="eom-print">
-	<title>Printing Images</title>
-	<sect2 id="eom-print-pagesettings">
-		<title>Setting your Page Settings</title>
+<section xml:id="eom-print"><info><title>Printing Images</title></info>
+	
+	<section xml:id="eom-print-pagesettings"><info><title>Setting your Page Settings</title></info>
+		
 		<para>Before printing you need to set the page settings you would like to use. To do that choose <menuchoice><guimenu>Image</guimenu><guimenuitem>Page Setup</guimenuitem></menuchoice>.</para>
 		<para>In the <guilabel>Page Setup</guilabel> dialog you can now choose paper size and orientation. If possible, configure your printer to have the page borders set correctly.</para>
-	</sect2>
+	</section>
 
-	<sect2 id="eom-print-image">
-		<title>Printing an Image</title>
+	<section xml:id="eom-print-image"><info><title>Printing an Image</title></info>
+		
 		<para>To print an image, perform the following steps:</para>
-		<orderedlist>
+		<orderedlist inheritnum="ignore" continuation="restarts">
 			<listitem>
 				<para>Select <menuchoice><guimenu>Image</guimenu><guimenuitem>Print</guimenuitem></menuchoice></para>
 			</listitem>
@@ -679,17 +655,17 @@
 				<para>In the <guilabel>Print</guilabel> dialog, select the printer you want to use from the list.</para>
 			</listitem>
 			<listitem>
-				<para>Click <guilabel>Print</guilabel>. &app; starts printing now.</para>
+				<para>Click <guilabel>Print</guilabel>. <application>Image Viewer</application> starts printing now.</para>
 			</listitem>
 		</orderedlist>
 		<para>Images that are too large for the page are automatically scaled down to fit the page. Images that are smaller than the page are centered on it.</para>
 		<important>
-			<para>Please note that &app; is currently lacking progress reporting while printing. During that time the user interface might become unresponsive for a short time.</para>
+			<para>Please note that <application>Image Viewer</application> is currently lacking progress reporting while printing. During that time the user interface might become unresponsive for a short time.</para>
 		</important>
-	</sect2>
+	</section>
 
-	<sect2 id="eom-print-settings">
-		<title>Arranging an Image on the Page</title>
+	<section xml:id="eom-print-settings"><info><title>Arranging an Image on the Page</title></info>
+		
 		<para>Maybe you don't want your image centered or want it scaled down even further. To do that you need to open the <guilabel>Print</guilabel> dialog (see <xref linkend="eom-print-image"/>) and then select the <guilabel>Image Settings</guilabel> tab which offers you the following options:</para>
 		<itemizedlist>
 			<listitem>
@@ -705,17 +681,17 @@
 				<para>The <guilabel>Unit</guilabel> option allows you to change the metric unit which is used by the options on the <guilabel>Image Settings</guilabel> tab. When you change this option the other fields values are converted accordingly.</para>
 			</listitem>
 		</itemizedlist>
-	</sect2>
+	</section>
 		
-</sect1>
-<sect1 id="eom-toolbareditor">
-	<title>Personalizing The Toolbar</title>
-	<para>&appname;'s default toolbar contains only a basic set of items to keep it simple. But you can modify the toolbar if you prefer a different set.</para>
-	<sect2 id="eom-toolbareditor-use">
-		<title>Modifying the Toolbar</title>
+</section>
+<section xml:id="eom-toolbareditor"><info><title>Personalizing The Toolbar</title></info>
+	
+	<para>Image Viewer's default toolbar contains only a basic set of items to keep it simple. But you can modify the toolbar if you prefer a different set.</para>
+	<section xml:id="eom-toolbareditor-use"><info><title>Modifying the Toolbar</title></info>
+		
 		<para>If you want to modify the toolbar you need to open the toolbar editor by going to <menuchoice><guimenu>Edit</guimenu><guimenuitem>Toolbar</guimenuitem></menuchoice>. The following window will pop up:</para>
-		<figure id="toolbar-editor-fig">
-			<title>The toolbar editor window</title>
+		<figure xml:id="toolbar-editor-fig"><info><title>The toolbar editor window</title></info>
+			
 			<screenshot>
 				<mediaobject>
 					<imageobject>
@@ -740,11 +716,11 @@
 			</listitem>
 		</itemizedlist>
 		<para>When you have finished editing the toolbar, click the <guibutton>Close</guibutton> button in the toolbar editor window. This will close the toolbar editor and make your modified toolbar active.</para>
-		</sect2>
-		<sect2 id="eom-toolbareditor-reset">
-			<title>Resetting the Toolbar</title>
+		</section>
+		<section xml:id="eom-toolbareditor-reset"><info><title>Resetting the Toolbar</title></info>
+			
 			<para>To revert your changes to the toolbar and return to the default layout, perform the following steps:</para>
-			<orderedlist>
+			<orderedlist inheritnum="ignore" continuation="restarts">
 				<listitem>
 					<para>Open the toolbar editor (see <xref linkend="eom-toolbareditor-use"/>).</para>
 				</listitem>
@@ -755,20 +731,20 @@
 					<para>Click the <guibutton>Close</guibutton> button to close the toolbar editor. The toolbar has been reset to the default layout now.</para>
 				</listitem>
 			</orderedlist>
-		</sect2>
-</sect1>
-<sect1 id="eom-prefs">
-	<title>Preferences</title>
+		</section>
+</section>
+<section xml:id="eom-prefs"><info><title>Preferences</title></info>
+	
 	<para>Preferences can be changed by going to <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>. You will be able to change the options for image viewing and slide shows. The changes apply to all open windows instantly.</para>
 
 	<!--============ Image View ======================= -->
-  <sect2 id="eom-prefs-image">
-         <title>Image View</title>
+  <section xml:id="eom-prefs-image"><info><title>Image View</title></info>
+         
 	<variablelist>
 	<varlistentry>
 		<term><guilabel>Image Enhancements</guilabel></term>
 		<listitem>
-		<para>Select the <guilabel>Smooth images when zoomed</guilabel> option to enable image smoothing when you change the image's zoom factor. If you select this option, your images will be smoothed to improve their display quality while viewing them with &app;.</para>
+		<para>Select the <guilabel>Smooth images when zoomed</guilabel> option to enable image smoothing when you change the image's zoom factor. If you select this option, your images will be smoothed to improve their display quality while viewing them with <application>Image Viewer</application>.</para>
                 <para>If you select the <guilabel>Automatic orientation</guilabel> option, your images will be rotated on loading according to their metadata. For example portraits are automatically rotated upright. Note that this function requires a correctly set orientation tag in the image's metadata and thus does not work with all images. The rotation is not saved until you save the rotated image (see <xref linkend="eom-save-rename"/>).</para>
 		</listitem>
 	</varlistentry>
@@ -776,7 +752,7 @@
 	<varlistentry>
 		<term><guilabel>Transparent Parts</guilabel></term>
 		<listitem>
-		<para>Select one of the following options to determine how &app; displays transparent parts of an image:</para>
+		<para>Select one of the following options to determine how <application>Image Viewer</application> displays transparent parts of an image:</para>
 		<itemizedlist>
 			<listitem><para><guilabel>As check pattern</guilabel> </para>
 			<para>Displays any transparent parts of the image in a check pattern.</para>
@@ -785,17 +761,17 @@
 			<para>Displays any transparent parts of the image in a solid color that you specify. Click on the color selector button to select a color. </para>
 			</listitem>
 			<listitem><para><guimenuitem>As background</guimenuitem> </para>
-			<para>Displays any transparent parts of the image in the background color of the &app; application. </para>
+			<para>Displays any transparent parts of the image in the background color of the <application>Image Viewer</application> application. </para>
 			</listitem>
 		</itemizedlist>
 		</listitem>
 	</varlistentry>		
 	</variablelist>
-  </sect2>
+  </section>
 		
 	<!--============ Slide Show ==================-->                                                                                               
-  <sect2 id="eom-prefs-slideshow">
-         <title>Slideshow</title>
+  <section xml:id="eom-prefs-slideshow"><info><title>Slideshow</title></info>
+         
 	<variablelist>
 	<varlistentry>
 		<term><guilabel>Image Zoom</guilabel></term>
@@ -813,6 +789,6 @@
 		</listitem>
 	</varlistentry>		
 	</variablelist>
-  </sect2>
-</sect1>
+  </section>
+</section>
 </article>
