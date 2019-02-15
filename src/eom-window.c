@@ -2582,9 +2582,9 @@ eom_window_cmd_about (GtkAction *action, gpointer user_data)
 	gtk_show_about_dialog (GTK_WINDOW (window),
 			       "program-name", _("Eye of MATE"),
 			       "version", VERSION,
-			       "copyright", "Copyright \xc2\xa9 2000-2010 Free Software Foundation, Inc.\n"
-			       "Copyright \xc2\xa9 2011 Perberos\n"
-			       "Copyright \xc2\xa9 2012-2018 MATE developers",
+			       "copyright", _("Copyright \xc2\xa9 2000-2010 Free Software Foundation, Inc.\n"
+			                      "Copyright \xc2\xa9 2011 Perberos\n"
+			                      "Copyright \xc2\xa9 2012-2019 MATE developers"),
 			       "comments",_("The MATE image viewer."),
 			       "authors", authors,
 			       "documenters", documenters,
