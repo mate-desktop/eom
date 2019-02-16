@@ -2581,6 +2581,7 @@ eom_window_cmd_about (GtkAction *action, gpointer user_data)
 
 	gtk_show_about_dialog (GTK_WINDOW (window),
 			       "program-name", _("Eye of MATE"),
+			       "title", _("About Eye of MATE"),
 			       "version", VERSION,
 			       "copyright", _("Copyright \xc2\xa9 2000-2010 Free Software Foundation, Inc.\n"
 			                      "Copyright \xc2\xa9 2011 Perberos\n"
