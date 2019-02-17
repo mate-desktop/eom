@@ -35,6 +35,7 @@ EXTRA_DIST = \
 	eom-preferences-dialog.ui \
 	eom-ui.xml		\
 	metadata-sidebar.ui	\
+	eom.about		\
 	$(DESKTOP_IN_FILES) \
 	$(appdata_in_files)
 
