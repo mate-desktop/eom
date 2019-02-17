@@ -2519,44 +2519,15 @@ eom_window_cmd_help (GtkAction *action, gpointer user_data)
 	eom_util_show_help (NULL, GTK_WINDOW (window));
 }
 
+#define ABOUT_GROUP "About"
+#define EMAILIFY(string) (g_strdelimit ((string), "%", '@'))
+
 static void
 eom_window_cmd_about (GtkAction *action, gpointer user_data)
 {
 	EomWindow *window;
 
 	g_return_if_fail (EOM_IS_WINDOW (user_data));
-
-	static const char *authors[] = {
-		"Perberos <perberos@gmail.com>",
-		"Steve Zesch <stevezesch2@gmail.com>",
-		"Stefano Karapetsas <stefano@karapetsas.com>",
-		"",
-		"Claudio Saavedra <csaavedra@igalia.com> (maintainer)",
-		"Felix Riemann <friemann@gnome.org> (maintainer)",
-		"",
-		"Lucas Rocha <lucasr@gnome.org>",
-		"Tim Gerla <tim+matebugs@gerla.net>",
-		"Philip Van Hoof <pvanhoof@gnome.org>",
-                "Paolo Borelli <pborelli@katamail.com>",
-		"Jens Finke <jens@triq.net>",
-		"Martin Baulig <martin@home-of-linux.org>",
-		"Arik Devens <arik@gnome.org>",
-		"Michael Meeks <mmeeks@gnu.org>",
-		"Federico Mena-Quintero <federico@gnu.org>",
-		"Lutz M\xc3\xbcller <urc8@rz.uni-karlsruhe.de>",
-		NULL
-	};
-
-	static const char *documenters[] = {
-		"Eliot Landrum <eliot@landrum.cx>",
-		"Federico Mena-Quintero <federico@gnu.org>",
-		"Sun GNOME Documentation Team <gdocteam@sun.com>",
-		NULL
-	};
-
-	const char *translators;
-
-	translators = _("translator-credits");
 
 	const char *license[] = {
 		N_("This program is free software; you can redistribute it and/or modify "
@@ -2573,9 +2544,34 @@ eom_window_cmd_about (GtkAction *action, gpointer user_data)
 	};
 
 	char *license_trans;
+	GKeyFile *key_file;
+	GBytes *bytes;
+	const guint8 *data;
+	gsize data_len;
+	GError *error = NULL;
+	char **authors, **documenters;
+	gsize n_authors = 0, n_documenters = 0 , i;
 
-	license_trans = g_strconcat (_(license[0]), "\n", _(license[1]), "\n",
-				     _(license[2]), "\n", NULL);
+	bytes = g_resources_lookup_data ("/org/mate/eom/ui/eom.about", G_RESOURCE_LOOKUP_FLAGS_NONE, &error);
+	g_assert_no_error (error);
+
+	data = g_bytes_get_data (bytes, &data_len);
+	key_file = g_key_file_new ();
+	g_key_file_load_from_data (key_file, (const char *) data, data_len, 0, &error);
+	g_assert_no_error (error);
+
+	authors = g_key_file_get_string_list (key_file, ABOUT_GROUP, "Authors", &n_authors, NULL);
+	documenters = g_key_file_get_string_list (key_file, ABOUT_GROUP, "Documenters", &n_documenters, NULL);
+
+	g_key_file_free (key_file);
+	g_bytes_unref (bytes);
+
+	for (i = 0; i < n_authors; ++i)
+		authors[i] = EMAILIFY (authors[i]);
+	for (i = 0; i < n_documenters; ++i)
+		documenters[i] = EMAILIFY (documenters[i]);
+
+	license_trans = g_strconcat (_(license[0]), "\n", _(license[1]), "\n", _(license[2]), "\n", NULL);
 
 	window = EOM_WINDOW (user_data);
 
@@ -2589,13 +2585,15 @@ eom_window_cmd_about (GtkAction *action, gpointer user_data)
 			       "comments",_("The MATE image viewer."),
 			       "authors", authors,
 			       "documenters", documenters,
-			       "translator-credits", translators,
+			       "translator-credits", _("translator-credits"),
 			       "website", "http://www.mate-desktop.org/",
 			       "logo-icon-name", "eom",
 			       "wrap-license", TRUE,
 			       "license", license_trans,
 			       NULL);
 
+	g_strfreev (authors);
+	g_strfreev (documenters);
 	g_free (license_trans);
 }
 
