@@ -2146,10 +2146,10 @@ eom_window_print (EomWindow *window)
 	/* Make sure the window stays valid while printing */
 	g_object_ref (window);
 
-	if (window->priv->page_setup !=NULL)
+	if (window->priv->page_setup != NULL)
 		page_setup = g_object_ref (window->priv->page_setup);
 	else
-		page_setup = NULL;
+		page_setup = eom_print_get_page_setup ();
 
 	print = eom_print_operation_new (window->priv->image,
 					 print_settings,
@@ -2183,6 +2183,7 @@ eom_window_print (EomWindow *window)
 		if (window->priv->page_setup != NULL)
 			g_object_unref (window->priv->page_setup);
 		window->priv->page_setup = g_object_ref (new_page_setup);
+		eom_print_set_page_setup (window->priv->page_setup);
 	}
 
 	if (page_setup != NULL)
