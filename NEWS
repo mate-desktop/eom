@@ -1,3 +1,24 @@
+### eom 1.22.0
+
+  * tx: sync with transifex
+  * Add update-authors.pl script which helps to update eom.about
+  * Read authors (updated) and documenters (updated) from eom.about gresource
+  * Initialize Travis CI support
+  * Ensure proper translation of the about dialog title
+  * Make translatable the copyright in about dialog
+  * Help - fix gui labels
+  * disable deprecation warnings for distcheck
+  * Update the appdata XML file
+  * Use make functions for HELP_LINGUAS
+  * Fix url of ulink to point to mate-user-guide
+  * Update Catalan screenhots
+  * Fix spelling and grammar mistakes
+  * Update eom_start_window.png
+  * tx: add eom help to transifex config
+  * Reduce the number of g_file_query_info calls at start-up
+  * EomImage: Remove unused constructor
+  * fix a memory leak
+
 ### eom 1.21.2
 
   * docs: remove eom-dialog.xml reference to fix distcheck
