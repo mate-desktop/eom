@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="http://docbook.org/xml/5.0/rng/dbits.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <!-- 
       (Do not remove this comment block.)
   Maintained by the MATE Documentation Project
@@ -9,6 +10,7 @@
 <?db.chunk.max_depth 2?>
 <article xmlns="http://docbook.org/ns/docbook"
          xmlns:db="http://docbook.org/ns/docbook"
+         xmlns:its="http://www.w3.org/2005/11/its"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          xmlns:xi="http://www.w3.org/2001/XInclude"
          version="5.0" xml:id="index" xml:lang="en">
@@ -17,50 +19,44 @@
   <info>
     <title>Image Viewer Manual</title>
 
-    <copyright>
+    <copyright its:translate="no">
       <year>2019</year>
       <holder>MATE Documentation Project</holder>
     </copyright>
-    <copyright> 
-      <year>2006</year> 
+    <copyright its:translate="no">
+      <year>2006</year>
       <year>2007</year>
       <holder>GNOME Documentation Project</holder>
     </copyright>
-    <copyright> 
-      <year>2002</year> 
-      <year>2003</year> 
-      <year>2004</year> 
-      <holder>Sun Microsystems</holder> 
-    </copyright> 
-    <copyright> 
-      <year>2000</year> 
-      <holder>Eliot Landrum</holder> 
+    <copyright its:translate="no">
+      <year>2002</year>
+      <year>2003</year>
+      <year>2004</year>
+      <holder>Sun Microsystems</holder>
     </copyright>
-    <copyright> 
-      <year>2000</year> 
-      <holder>The Free Software Foundation</holder> 
-    </copyright>	 
+    <copyright its:translate="no">
+      <year>2000</year>
+      <holder>Eliot Landrum</holder>
+    </copyright>
+    <copyright its:translate="no">
+      <year>2000</year>
+      <holder>The Free Software Foundation</holder>
+    </copyright>
 
-<!-- An address can be added to the publisher information.  If a role is 
-     not specified, the publisher/author is the same for all versions of the 
-     document.  -->
-    <publisher role="maintainer"> 
-      <publishername> MATE Documentation Project </publishername> 
-    </publisher> 
+    <publisher role="maintainer">
+      <publishername>MATE Documentation Project</publishername>
+    </publisher>
     <publisher>
-      <publishername> GNOME Documentation Project </publishername>
+      <publishername>GNOME Documentation Project</publishername>
     </publisher>
 
    <xi:include href="legal.xml"/>
-   <!-- This file  contains link to license for the documentation (GNU FDL), and 
-        other legal stuff such as "NO WARRANTY" statement. Please do not change 
-	any of this. -->
 
-   <authorgroup>
+   <authorgroup its:translate="no">
        <author>
-           <orgname>MATE Documentation Project</orgname>
+           <orgname its:translate="yes">MATE Documentation Project</orgname>
            <affiliation>
-               <orgname>MATE Desktop</orgname>
+               <orgname its:translate="yes">MATE Desktop</orgname>
            </affiliation>
        </author>
        <author>
@@ -69,7 +65,7 @@
                <surname>Finke</surname>
            </personname>
            <affiliation>
-               <orgname>GNOME Documentation Project</orgname>
+               <orgname its:translate="yes">GNOME Documentation Project</orgname>
            </affiliation>
        </author>
        <author>
@@ -78,7 +74,7 @@
                <surname>Boyle</surname>
            </personname>
            <affiliation>
-               <orgname>GNOME Documentation Project</orgname>
+               <orgname its:translate="yes">GNOME Documentation Project</orgname>
            </affiliation>
        </author>
        <author>
@@ -87,16 +83,16 @@
                <surname>Ellis</surname>
            </personname>
            <affiliation>
-               <orgname>GNOME Documentation Project</orgname>
+               <orgname its:translate="yes">GNOME Documentation Project</orgname>
            </affiliation>
        </author>
        <author>
            <personname>
-               <firstname>Sun</firstname>
-               <surname>GNOME Documentation Team</surname>
+               <firstname its:translate="yes">Sun</firstname>
+               <surname its:translate="yes">GNOME Documentation Team</surname>
            </personname>
            <affiliation>
-               <orgname>Sun Microsystems</orgname>
+               <orgname its:translate="yes">Sun Microsystems</orgname>
            </affiliation>
        </author>
        <author>
@@ -105,7 +101,7 @@
                <surname>Landrum</surname>
            </personname>
            <affiliation>
-               <orgname>GNOME Documentation Project</orgname>
+               <orgname its:translate="yes">GNOME Documentation Project</orgname>
            </affiliation>
        </author>
        <author>
@@ -114,106 +110,106 @@
                <surname>Mena Quintero</surname>
            </personname>
            <affiliation>
-               <orgname>GNOME Documentation Project</orgname>
+               <orgname its:translate="yes">GNOME Documentation Project</orgname>
            </affiliation>
        </author>	
    </authorgroup>
  
-    <revhistory>
-    <revision> 
+    <revhistory its:translate="no">
+    <revision>
 		<revnumber>2.9</revnumber>
-		<date>July 2015</date>
-		<revdescription> 
-	  		<para role="author">MATE Documentation Project</para>
-	  		<para role="publisher">MATE Documentation Project</para>
-		</revdescription> 
-    </revision> 
+		<date its:translate="yes">July 2015</date>
+		<revdescription>
+	  		<para role="author" its:translate="yes">MATE Documentation Project</para>
+	  		<para role="publisher" its:translate="yes">MATE Documentation Project</para>
+		</revdescription>
+    </revision>
     <revision>
 		<revnumber>2.8</revnumber>
-		<date>February 2007</date>
+		<date its:translate="yes">February 2007</date>
 		<revdescription>
-		    <para role="author">GNOME Documentation Project</para>
-		    <para role="publisher">GNOME Documentation Project</para>
+		    <para role="author" its:translate="yes">GNOME Documentation Project</para>
+		    <para role="publisher" its:translate="yes">GNOME Documentation Project</para>
 		</revdescription>
     </revision>
     <revision>
 		<revnumber>2.7</revnumber>
-		<date>February 2004</date>
+		<date its:translate="yes">February 2004</date>
 		<revdescription>
-		    <para role="author">Sun GNOME Documentation Team</para>
-		    <para role="publisher">GNOME Documentation Project</para>
+		    <para role="author" its:translate="yes">Sun GNOME Documentation Team</para>
+		    <para role="publisher" its:translate="yes">GNOME Documentation Project</para>
 		</revdescription>
     </revision>
-    <revision> 
+    <revision>
 		<revnumber>2.6</revnumber>
-		<date>November 2003</date> 
-		<revdescription> 
-		    <para role="author">Sun GNOME Documentation Team</para>
-		    <para role="publisher">GNOME Documentation Project</para>
-		</revdescription> 
+		<date its:translate="yes">November 2003</date>
+		<revdescription>
+		    <para role="author" its:translate="yes">Sun GNOME Documentation Team</para>
+		    <para role="publisher" its:translate="yes">GNOME Documentation Project</para>
+		</revdescription>
     </revision>
-    <revision> 
+    <revision>
 		<revnumber>2.5</revnumber>
-		<date>September 2003</date> 
-		<revdescription> 
-		    <para role="author">Sun GNOME Documentation Team</para>
-		    <para role="publisher">GNOME Documentation Project</para>
-		</revdescription> 
+		<date its:translate="yes">September 2003</date>
+		<revdescription>
+		    <para role="author" its:translate="yes">Sun GNOME Documentation Team</para>
+		    <para role="publisher" its:translate="yes">GNOME Documentation Project</para>
+		</revdescription>
     </revision>
-    <revision> 
+    <revision>
 		<revnumber>2.4</revnumber>
-		<date>January 2003</date> 
-		<revdescription> 
-		    <para role="author">Sun GNOME Documentation Team</para>
-		    <para role="publisher">GNOME Documentation Project</para>
-		</revdescription> 
+		<date its:translate="yes">January 2003</date>
+		<revdescription>
+		    <para role="author" its:translate="yes">Sun GNOME Documentation Team</para>
+		    <para role="publisher" its:translate="yes">GNOME Documentation Project</para>
+		</revdescription>
     </revision>
-    <revision> 
+    <revision>
 		<revnumber>2.3</revnumber>
-		<date>October 2002</date> 
-		<revdescription> 
-		    <para role="author">Sun GNOME Documentation Team</para>
-		    <para role="publisher">GNOME Documentation Project</para>
-		</revdescription> 
+		<date its:translate="yes">October 2002</date>
+		<revdescription>
+		    <para role="author" its:translate="yes">Sun GNOME Documentation Team</para>
+		    <para role="publisher" its:translate="yes">GNOME Documentation Project</para>
+		</revdescription>
     </revision>
-    <revision> 
+    <revision>
 		<revnumber>2.2</revnumber>
-		<date>August 2002</date> 
-		<revdescription> 
-		    <para role="author">Sun GNOME Documentation Team</para>
-		    <para role="publisher">GNOME Documentation Project</para>
-		</revdescription> 
+		<date its:translate="yes">August 2002</date>
+		<revdescription>
+		    <para role="author" its:translate="yes">Sun GNOME Documentation Team</para>
+		    <para role="publisher" its:translate="yes">GNOME Documentation Project</para>
+		</revdescription>
     </revision>
-    <revision> 
+    <revision>
 		<revnumber>2.1</revnumber>
-		<date>July 2002</date> 
-		<revdescription> 
-		    <para role="author">Sun GNOME Documentation Team</para>
-		    <para role="publisher">GNOME Documentation Project</para>
-		</revdescription> 
-    </revision> 
-    <revision> 
+		<date its:translate="yes">July 2002</date>
+		<revdescription>
+		    <para role="author" its:translate="yes">Sun GNOME Documentation Team</para>
+		    <para role="publisher" its:translate="yes">GNOME Documentation Project</para>
+		</revdescription>
+    </revision>
+    <revision>
 		<revnumber>2.0</revnumber>
-		<date>May 2002</date> 
-		<revdescription> 
-		    <para role="author">Sun GNOME Documentation Team</para>
-		    <para role="publisher">GNOME Documentation Project</para>
-		</revdescription> 
-    </revision> 
-    <revision> 
+		<date its:translate="yes">May 2002</date>
+		<revdescription>
+		    <para role="author" its:translate="yes">Sun GNOME Documentation Team</para>
+		    <para role="publisher" its:translate="yes">GNOME Documentation Project</para>
+		</revdescription>
+    </revision>
+    <revision>
 		<revnumber>1.0</revnumber>
-		<date>2000</date> 
-		<revdescription> 
+		<date>2000</date>
+		<revdescription>
 		    <para role="author">Eliot Landrum
 	    		  <email>eliot@landrum.cx</email>
 		    </para>
 		    <para role="author">Federico Mena Quintero
 	    		  <email>federico@gnu.org</email>
 		    </para>
-		    <para role="publisher">GNOME Documentation Project</para>
-		</revdescription> 
-      </revision> 
-    </revhistory> 
+		    <para role="publisher" its:translate="yes">GNOME Documentation Project</para>
+		</revdescription>
+      </revision>
+    </revhistory>
     <releaseinfo>This manual describes version 1.22 of Image Viewer.
     </releaseinfo>
   </info>
@@ -333,15 +329,14 @@
 <section xml:id="eom-whenyoustart"><info><title>Getting Started</title></info>
   
   <para>When you start <application>Image Viewer</application>, the following window is displayed:</para>
-  <figure xml:id="mainwindow-fig"><info><title>Image Viewer Start Up Window</title></info>
-		
+  <figure xml:id="mainwindow-fig" its:translate="no"><info><title its:translate="yes">Image Viewer Start Up Window</title></info>
 		<screenshot>
 		  <mediaobject>
 		    <imageobject>
 		      <imagedata fileref="figures/eom_start_window.png" format="PNG"/>
 		    </imageobject>
 		    <textobject>
-		      <phrase>Shows <application>Image Viewer</application> main window. Contains titlebar, menubar, toolbar, and display area. Menubar contains File, Edit, View, and Help menus.</phrase>
+		      <phrase its:translate="yes">Shows <application>Image Viewer</application> main window. Contains titlebar, menubar, toolbar, and display area. Menubar contains File, Edit, View, and Help menus.</phrase>
 		    </textobject>
 		  </mediaobject>
 		</screenshot>
@@ -602,15 +597,14 @@
 			<guimenuitem>Save As</guimenuitem>
 			</menuchoice>. 		
 		The following window is displayed:</para>
-  		<figure xml:id="saveas-dialog-fig"><info><title>Save As dialog for multiple images</title></info>
-			
+  		<figure xml:id="saveas-dialog-fig" its:translate="no"><info><title its:translate="yes">Save As dialog for multiple images</title></info>
 			<screenshot>
 			  <mediaobject>
 			    <imageobject>
 			      <imagedata fileref="figures/eom_save_as_window.png" format="PNG"/>
 			    </imageobject>
 			    <textobject>
-			      <phrase>Shows Eye of MATE <guilabel>Save As</guilabel> dialog when saving multiple images.</phrase>
+			      <phrase its:translate="yes">Shows Eye of MATE <guilabel>Save As</guilabel> dialog when saving multiple images.</phrase>
 			    </textobject>
 			  </mediaobject>
 			</screenshot>
@@ -690,15 +684,14 @@
 	<section xml:id="eom-toolbareditor-use"><info><title>Modifying the Toolbar</title></info>
 		
 		<para>If you want to modify the toolbar you need to open the toolbar editor by going to <menuchoice><guimenu>Edit</guimenu><guimenuitem>Toolbar</guimenuitem></menuchoice>. The following window will pop up:</para>
-		<figure xml:id="toolbar-editor-fig"><info><title>The toolbar editor window</title></info>
-			
+		<figure xml:id="toolbar-editor-fig" its:translate="no"><info><title its:translate="yes">The toolbar editor window</title></info>
 			<screenshot>
 				<mediaobject>
 					<imageobject>
 						<imagedata fileref="figures/eom_toolbar_editor_window.png" format="PNG"/>
 					</imageobject>
 					<textobject>
-						<phrase>Shows Eye of MATE toolbar editor window.</phrase>
+						<phrase its:translate="yes">Shows Eye of MATE toolbar editor window.</phrase>
 					</textobject>
 				</mediaobject>
 			</screenshot>
