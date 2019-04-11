@@ -339,12 +339,6 @@ data/eom.desktop.in
 data/org.mate.eom.gschema.xml
 data/pixmaps/Makefile
 data/icons/Makefile
-data/icons/16x16/Makefile
-data/icons/22x22/Makefile
-data/icons/24x24/Makefile
-data/icons/32x32/Makefile
-data/icons/48x48/Makefile
-data/icons/scalable/Makefile
 doc/Makefile
 doc/reference/Makefile
 doc/reference/version.xml
