@@ -118,6 +118,7 @@ requires:
     - dbus-glib-devel
     - clang
     - clang-analyzer
+    - cppcheck-htmlreport
     - desktop-file-utils
     - exempi-devel
     - gcc
@@ -202,7 +203,9 @@ build_scripts:
 
 after_scripts:
   - if [ ${DISTRO_NAME} == "fedora" ];then
-  -   ./gen-index -i https://github.com/mate-desktop/eom/raw/master/data/icons/16x16/apps/eom.png
+  -   cppcheck --xml --output-file=cppcheck.xml --enable=warning,style,performance,portability,information,missingInclude .
+  -   cppcheck-htmlreport --title=${REPO_NAME} --file=cppcheck.xml --report-dir=cppcheck-htmlreport
+  -   ./gen-index -l 20 -i https://github.com/mate-desktop/eom/raw/master/data/icons/16x16/apps/eom.png
   - fi
   - make distcheck
 
