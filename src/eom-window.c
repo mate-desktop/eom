@@ -219,6 +219,10 @@ static void eom_window_list_store_image_removed (GtkTreeModel *tree_model,
 						 gpointer      user_data);
 static void eom_window_set_wallpaper (EomWindow *window, const gchar *filename, const gchar *visible_filename);
 static gboolean eom_window_save_images (EomWindow *window, GList *images);
+static void disconnect_proxy_cb (GtkUIManager *manager,
+                                 GtkAction *action,
+                                 GtkWidget *proxy,
+                                 EomWindow *window);
 static void eom_window_finish_saving (EomWindow *window);
 static GAppInfo *get_appinfo_for_editor (EomWindow *window);
 
@@ -3882,6 +3886,7 @@ connect_proxy_cb (GtkUIManager *manager,
                   EomWindow *window)
 {
 	if (GTK_IS_MENU_ITEM (proxy)) {
+		disconnect_proxy_cb (manager, action, proxy, window);
 		g_signal_connect (proxy, "select",
 				  G_CALLBACK (menu_item_select_cb), window);
 		g_signal_connect (proxy, "deselect",
