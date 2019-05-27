@@ -945,6 +945,7 @@ eom_window_update_openwith_menu (EomWindow *window, EomImage *image)
 
 	if (priv->actions_open_with != NULL) {
 		gtk_ui_manager_remove_action_group (priv->ui_mgr, priv->actions_open_with);
+		g_object_unref (priv->actions_open_with);
 		priv->actions_open_with = NULL;
 	}
 
