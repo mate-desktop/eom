@@ -630,6 +630,7 @@ create_image_scaled (EomPrintPreview *preview)
 			gdouble scale;
 			scale = MIN ((gdouble) allocation.width/i_width,
 				     (gdouble) allocation.height/i_height);
+			scale *= gtk_widget_get_scale_factor (GTK_WIDGET (priv->area));
 			priv->image_scaled = gdk_pixbuf_scale_simple (priv->image,
 								      i_width*scale,
 								      i_height*scale,
@@ -645,7 +646,7 @@ static GdkPixbuf *
 create_preview_buffer (EomPrintPreview *preview)
 {
 	GdkPixbuf *pixbuf;
-	gint width, height;
+	gint width, height, widget_scale;
 	GdkInterpType type = GDK_INTERP_TILES;
 
 	if (preview->priv->image == NULL) {
@@ -656,9 +657,12 @@ create_preview_buffer (EomPrintPreview *preview)
 
 	width  = gdk_pixbuf_get_width (preview->priv->image);
 	height = gdk_pixbuf_get_height (preview->priv->image);
+	widget_scale = gtk_widget_get_scale_factor (GTK_WIDGET (preview->priv->area));
 
-	width   *= preview->priv->i_scale * preview->priv->p_scale;
-	height  *= preview->priv->i_scale * preview->priv->p_scale;
+	width   *= preview->priv->i_scale * preview->priv->p_scale
+			* widget_scale;
+	height  *= preview->priv->i_scale * preview->priv->p_scale
+			* widget_scale;
 
 	if (width < 1 || height < 1)
 		return NULL;
