@@ -6,7 +6,7 @@
  *
  * Based on gedit code (gedit/gedit-close-confirmation.h) by gedit Team
  *
- * Copyright (C) 2004-2009 GNOME Foundation 
+ * Copyright (C) 2004-2009 GNOME Foundation
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin St, Fifth Floor, 
- * Boston, MA 02110-1301, USA. 
+ * Foundation, Inc., 51 Franklin St, Fifth Floor,
+ * Boston, MA 02110-1301, USA.
  */
 
 #ifndef __EOM_CLOSE_CONFIRMATION_DIALOG_H__
@@ -43,7 +43,7 @@ typedef struct _EomCloseConfirmationDialog 		EomCloseConfirmationDialog;
 typedef struct _EomCloseConfirmationDialogClass 	EomCloseConfirmationDialogClass;
 typedef struct _EomCloseConfirmationDialogPrivate 	EomCloseConfirmationDialogPrivate;
 
-struct _EomCloseConfirmationDialog 
+struct _EomCloseConfirmationDialog
 {
 	GtkDialog parent;
 
@@ -51,7 +51,7 @@ struct _EomCloseConfirmationDialog
 	EomCloseConfirmationDialogPrivate *priv;
 };
 
-struct _EomCloseConfirmationDialogClass 
+struct _EomCloseConfirmationDialogClass
 {
 	GtkDialogClass parent_class;
 };
@@ -63,7 +63,7 @@ G_GNUC_INTERNAL
 GtkWidget	*eom_close_confirmation_dialog_new			(GtkWindow     *parent,
 									 GList         *unsaved_documents);
 G_GNUC_INTERNAL
-GtkWidget 	*eom_close_confirmation_dialog_new_single 		(GtkWindow     *parent, 
+GtkWidget 	*eom_close_confirmation_dialog_new_single 		(GtkWindow     *parent,
 									 EomImage      *image);
 
 G_GNUC_INTERNAL

@@ -146,7 +146,7 @@ eom_metadata_sidebar_update_general_section (EomMetadataSidebar *sidebar)
 		gtk_label_set_text (GTK_LABEL (priv->type_label), NULL);
 		gtk_label_set_text (GTK_LABEL (priv->filesize_label), NULL);
 		gtk_label_set_text (GTK_LABEL (priv->folder_label), NULL);
-		return;		
+		return;
 	}
 
 	eom_image_get_size (img, &width, &height);
@@ -277,13 +277,13 @@ eom_metadata_sidebar_set_image (EomMetadataSidebar *sidebar, EomImage *image)
 
 	if (priv->image) {
 		g_object_ref (priv->image);
-		priv->thumb_changed_id = 
+		priv->thumb_changed_id =
 			g_signal_connect (priv->image, "thumbnail-changed",
 					  G_CALLBACK (_thumbnail_changed_cb),
 					  sidebar);
 		eom_metadata_sidebar_update (sidebar);
 	}
-	
+
 	g_object_notify (G_OBJECT (sidebar), "image");
 }
 
@@ -366,7 +366,7 @@ eom_metadata_sidebar_set_parent_window (EomMetadataSidebar *sidebar,
 						  sidebar);
 
 	g_object_notify (G_OBJECT (sidebar), "parent-window");
-	
+
 }
 
 static void

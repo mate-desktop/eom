@@ -1102,7 +1102,7 @@ eom_image_real_load (EomImage *img,
                     priv->image = rsvg_handle_get_pixbuf (priv->svg);
                 } else
 #endif
-                
+
                 {
 
 		priv->anim = gdk_pixbuf_loader_get_animation (loader);
@@ -2246,7 +2246,7 @@ eom_image_iter_advance (EomImage *img)
 
 	priv = img->priv;
 
-	if ((new_frame = gdk_pixbuf_animation_iter_advance (img->priv->anim_iter, NULL)) == TRUE) {      
+	if ((new_frame = gdk_pixbuf_animation_iter_advance (img->priv->anim_iter, NULL)) == TRUE) {
 		g_mutex_lock (&priv->status_mutex);
 		g_object_unref (priv->image);
 		priv->image = gdk_pixbuf_animation_iter_get_pixbuf (priv->anim_iter);
@@ -2275,7 +2275,7 @@ eom_image_iter_advance (EomImage *img)
  * Checks whether a given image is animated.
  *
  * Returns: #TRUE if it is an animated image, #FALSE otherwise.
- * 
+ *
  **/
 gboolean
 eom_image_is_animation (EomImage *img)
@@ -2290,7 +2290,7 @@ private_timeout (gpointer data)
 	EomImage *img = EOM_IMAGE (data);
 	EomImagePrivate *priv = img->priv;
 
-	if (eom_image_is_animation (img) && 
+	if (eom_image_is_animation (img) &&
 	    !g_source_is_destroyed (g_main_current_source ()) &&
 	    priv->is_playing) {
 		while (eom_image_iter_advance (img) != TRUE) {}; /* cpu-sucking ? */

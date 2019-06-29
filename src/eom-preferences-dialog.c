@@ -196,7 +196,7 @@ eom_preferences_dialog_class_init (EomPreferencesDialogClass *klass)
 	                                              EomPreferencesDialog,
 	                                              plugin_manager);
 }
- 
+
 static void
 eom_preferences_dialog_init (EomPreferencesDialog *pref_dlg)
 {

@@ -45,7 +45,7 @@ typedef struct {
 } EomPoint;
 
 /* Convert degrees into radians */
-#define EOM_DEG_TO_RAD(degree) ((degree) * (G_PI/180.0)) 
+#define EOM_DEG_TO_RAD(degree) ((degree) * (G_PI/180.0))
 
 G_DEFINE_TYPE_WITH_PRIVATE (EomTransform, eom_transform, G_TYPE_OBJECT)
 

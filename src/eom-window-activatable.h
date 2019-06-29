@@ -5,7 +5,7 @@
  * Author: Felix Riemann <friemann@gnome.org>
  *
  * Copyright (C) 2011 Felix Riemann
- * 
+ *
  * Base on code by:
  * 	- Steve Frécinaux <code@istique.net>
  *

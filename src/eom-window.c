@@ -2326,7 +2326,7 @@ close_confirmation_dialog_response_handler (EomCloseConfirmationDialog *dlg,
 			/* Cancel */
 			gtk_widget_destroy (GTK_WIDGET (dlg));
 			break;
-	}	
+	}
 }
 
 static gboolean
@@ -2361,7 +2361,7 @@ eom_window_unsaved_images_confirm (EomWindow *window)
 				list = g_list_prepend (list, image);
 			}
 		} while (gtk_tree_model_iter_next (GTK_TREE_MODEL (priv->store), &iter));
-	}		
+	}
 
 	if (list) {
 		list = g_list_reverse (list);
@@ -3016,18 +3016,18 @@ static void
 eom_window_cmd_open_containing_folder (GtkAction *action, gpointer user_data)
 {
 	EomWindowPrivate *priv;
-	
+
 	GFile *file;
 	g_return_if_fail (EOM_IS_WINDOW (user_data));
 
 	priv = EOM_WINDOW (user_data)->priv;
-	
-	g_return_if_fail (priv->image != NULL);	
-	
+
+	g_return_if_fail (priv->image != NULL);
+
 	file = eom_image_get_file (priv->image);
 
 	g_return_if_fail (file != NULL);
-		
+
 	eom_util_show_file_in_filemanager (file,
 	                                   GTK_WINDOW (user_data));
 }
@@ -3256,7 +3256,7 @@ show_move_to_trash_confirm_dialog (EomWindow *window, GList *images, gboolean ca
 	 * asked and the trash is available */
 	if (can_trash && (dontaskagain || neverask))
 		return GTK_RESPONSE_OK;
-	
+
 	n_images = g_list_length (images);
 
 	if (n_images == 1) {
