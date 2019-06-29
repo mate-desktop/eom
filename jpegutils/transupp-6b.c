@@ -20,7 +20,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-/* based upon file transupp.c from the libjpeg package, original copyright 
+/* based upon file transupp.c from the libjpeg package, original copyright
  * note follows:
 .*
  *

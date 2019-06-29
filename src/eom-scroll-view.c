@@ -1682,7 +1682,7 @@ display_next_frame_cb (EomImage *image, gint delay, gpointer data)
 	priv = view->priv;
 
 	update_pixbuf (view, eom_image_get_pixbuf (image));
-	gtk_widget_queue_draw (GTK_WIDGET (priv->display)); 
+	gtk_widget_queue_draw (GTK_WIDGET (priv->display));
 }
 
 void
@@ -1719,7 +1719,7 @@ eom_scroll_view_set_image (EomScrollView *view, EomImage *image)
 							   (GCallback) image_changed_cb, view);
 		if (eom_image_is_animation (image) == TRUE ) {
 			eom_image_start_animation (image);
-			priv->frame_changed_id = g_signal_connect (image, "next-frame", 
+			priv->frame_changed_id = g_signal_connect (image, "next-frame",
 								    (GCallback) display_next_frame_cb, view);
 		}
 	}

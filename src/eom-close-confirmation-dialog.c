@@ -6,7 +6,7 @@
  *
  * Based on gedit code (gedit/gedit-close-confirmation.c) by gedit Team
  *
- * Copyright (C) 2004-2009 GNOME Foundation 
+ * Copyright (C) 2004-2009 GNOME Foundation
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin St, Fifth Floor, 
- * Boston, MA 02110-1301, USA. 
+ * Foundation, Inc., 51 Franklin St, Fifth Floor,
+ * Boston, MA 02110-1301, USA.
  */
 
 #ifdef HAVE_CONFIG_H
@@ -34,9 +34,9 @@
 #include <eom-window.h>
 
 /* Properties */
-enum 
+enum
 {
-	PROP_0,	
+	PROP_0,
 	PROP_UNSAVED_IMAGES
 };
 
@@ -57,10 +57,10 @@ enum
 	N_COLUMNS
 };
 
-struct _EomCloseConfirmationDialogPrivate 
+struct _EomCloseConfirmationDialogPrivate
 {
 	GList       *unsaved_images;
-	
+
 	GList       *selected_images;
 
 	GtkTreeModel *list_store;
@@ -111,7 +111,7 @@ get_nothumb_pixbuf (void)
 	return GDK_PIXBUF (g_object_ref (nothumb_once.retval));
 }
 
-/*  Since we connect in the costructor we are sure this handler will be called 
+/*  Since we connect in the costructor we are sure this handler will be called
  *  before the user ones
  */
 static void
@@ -124,7 +124,7 @@ response_cb (EomCloseConfirmationDialog *dlg,
 	g_return_if_fail (EOM_IS_CLOSE_CONFIRMATION_DIALOG (dlg));
 
 	priv = dlg->priv;
-	
+
 	if (priv->selected_images != NULL)
 		g_list_free (priv->selected_images);
 
@@ -132,7 +132,7 @@ response_cb (EomCloseConfirmationDialog *dlg,
 	{
 		if (GET_MODE (priv) == SINGLE_IMG_MODE)
 		{
-			priv->selected_images = 
+			priv->selected_images =
 				g_list_copy (priv->unsaved_images);
 		}
 		else
@@ -156,27 +156,27 @@ add_buttons (EomCloseConfirmationDialog *dlg)
 
 	gtk_dialog_add_button (GTK_DIALOG (dlg),
 			       "gtk-cancel", GTK_RESPONSE_CANCEL);
-	
+
 	gtk_dialog_add_button (GTK_DIALOG (dlg),
 			       "gtk-save",
 			       GTK_RESPONSE_YES);
 
-	gtk_dialog_set_default_response	(GTK_DIALOG (dlg), 
+	gtk_dialog_set_default_response	(GTK_DIALOG (dlg),
 					 GTK_RESPONSE_YES);
 }
 
-static void 
+static void
 eom_close_confirmation_dialog_init (EomCloseConfirmationDialog *dlg)
 {
 	AtkObject *atk_obj;
 
 	dlg->priv = eom_close_confirmation_dialog_get_instance_private (dlg);
 
-	gtk_container_set_border_width (GTK_CONTAINER (dlg), 5);		
+	gtk_container_set_border_width (GTK_CONTAINER (dlg), 5);
 	gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dlg))), 14);
 	gtk_window_set_resizable (GTK_WINDOW (dlg), FALSE);
 	gtk_window_set_skip_taskbar_hint (GTK_WINDOW (dlg), TRUE);
-	
+
 	gtk_window_set_title (GTK_WINDOW (dlg), "");
 
 	gtk_window_set_modal (GTK_WINDOW (dlg), TRUE);
@@ -185,14 +185,14 @@ eom_close_confirmation_dialog_init (EomCloseConfirmationDialog *dlg)
 	atk_obj = gtk_widget_get_accessible (GTK_WIDGET (dlg));
 	atk_object_set_role (atk_obj, ATK_ROLE_ALERT);
 	atk_object_set_name (atk_obj, _("Question"));
-	
+
 	g_signal_connect (dlg,
 			  "response",
 			  G_CALLBACK (response_cb),
 			  NULL);
 }
 
-static void 
+static void
 eom_close_confirmation_dialog_finalize (GObject *object)
 {
 	EomCloseConfirmationDialogPrivate *priv;
@@ -210,9 +210,9 @@ eom_close_confirmation_dialog_finalize (GObject *object)
 }
 
 static void
-eom_close_confirmation_dialog_set_property (GObject      *object, 
-					      guint         prop_id, 
-					      const GValue *value, 
+eom_close_confirmation_dialog_set_property (GObject      *object,
+					      guint         prop_id,
+					      const GValue *value,
 					      GParamSpec   *pspec)
 {
 	EomCloseConfirmationDialog *dlg;
@@ -224,7 +224,7 @@ eom_close_confirmation_dialog_set_property (GObject      *object,
 		case PROP_UNSAVED_IMAGES:
 			set_unsaved_image (dlg, g_value_get_pointer (value));
 			break;
-			
+
 		default:
 			G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
 			break;
@@ -232,9 +232,9 @@ eom_close_confirmation_dialog_set_property (GObject      *object,
 }
 
 static void
-eom_close_confirmation_dialog_get_property (GObject    *object, 
-					      guint       prop_id, 
-					      GValue     *value, 
+eom_close_confirmation_dialog_get_property (GObject    *object,
+					      guint       prop_id,
+					      GValue     *value,
 					      GParamSpec *pspec)
 {
 	EomCloseConfirmationDialogPrivate *priv;
@@ -253,7 +253,7 @@ eom_close_confirmation_dialog_get_property (GObject    *object,
 	}
 }
 
-static void 
+static void
 eom_close_confirmation_dialog_class_init (EomCloseConfirmationDialogClass *klass)
 {
 	GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
@@ -267,7 +267,7 @@ eom_close_confirmation_dialog_class_init (EomCloseConfirmationDialogClass *klass
 					 g_param_spec_pointer ("unsaved_images",
 						 	       "Unsaved Images",
 							       "List of Unsaved Images",
-							       (G_PARAM_READWRITE | 
+							       (G_PARAM_READWRITE |
 							        G_PARAM_CONSTRUCT_ONLY)));
 }
 
@@ -286,7 +286,7 @@ get_selected_imgs (GtkTreeModel *store)
 		gboolean to_save;
 		EomImage *img;
 
-		gtk_tree_model_get (store, &iter, 
+		gtk_tree_model_get (store, &iter,
 				    SAVE_COLUMN, &to_save,
 				    IMG_COLUMN, &img,
 				    -1);
@@ -310,7 +310,7 @@ eom_close_confirmation_dialog_get_selected_images (EomCloseConfirmationDialog *d
 }
 
 GtkWidget *
-eom_close_confirmation_dialog_new (GtkWindow *parent, 
+eom_close_confirmation_dialog_new (GtkWindow *parent,
 				   GList     *unsaved_images)
 {
 	GtkWidget *dlg;
@@ -333,26 +333,26 @@ eom_close_confirmation_dialog_new (GtkWindow *parent,
 		 * group. It makes no difference if it is already. */
 		gtk_window_group_add_window (wg, parent);
 		gtk_window_group_add_window (wg, GTK_WINDOW (dlg));
-		
-		gtk_window_set_transient_for (GTK_WINDOW (dlg), parent);					     
+
+		gtk_window_set_transient_for (GTK_WINDOW (dlg), parent);
 	}
 
 	return dlg;
 }
 
 GtkWidget *
-eom_close_confirmation_dialog_new_single (GtkWindow     *parent, 
+eom_close_confirmation_dialog_new_single (GtkWindow     *parent,
 					  EomImage	*image)
 {
 	GtkWidget *dlg;
 	GList *unsaved_images;
 	g_return_val_if_fail (image != NULL, NULL);
-	
+
 	unsaved_images = g_list_prepend (NULL, image);
 
-	dlg = eom_close_confirmation_dialog_new (parent, 
+	dlg = eom_close_confirmation_dialog_new (parent,
 						 unsaved_images);
-	
+
 	g_list_free (unsaved_images);
 
 	return dlg;
@@ -362,9 +362,9 @@ static gchar *
 get_text_secondary_label (EomImage *image)
 {
 	gchar *secondary_msg;
-	
+
 	secondary_msg = g_strdup (_("If you don't save, your changes will be lost."));
-	
+
 	return secondary_msg;
 }
 
@@ -422,17 +422,17 @@ build_single_img_dialog (EomCloseConfirmationDialog *dlg)
 	gtk_box_pack_start (GTK_BOX (hbox), image, FALSE, FALSE, 0);
 
 	vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 12);
-	
+
 	gtk_box_pack_start (GTK_BOX (hbox), vbox, FALSE, FALSE, 0);
 
 	gtk_box_pack_start (GTK_BOX (vbox), primary_label, FALSE, FALSE, 0);
-		      
+
 	gtk_box_pack_start (GTK_BOX (vbox), secondary_label, FALSE, FALSE, 0);
 
-	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dlg))), 
-			    hbox, 
-	                    FALSE, 
-			    FALSE, 
+	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dlg))),
+			    hbox,
+	                    FALSE,
+			    FALSE,
 			    0);
 
 	add_buttons (dlg);
@@ -518,7 +518,7 @@ create_treeview (EomCloseConfirmationDialogPrivate *priv)
 	g_object_unref (store);
 
 	priv->list_store = GTK_TREE_MODEL (store);
-	
+
 	/* Add columns */
 	priv->toggle_renderer = renderer = gtk_cell_renderer_toggle_new ();
 	g_signal_connect (renderer, "toggled",
@@ -540,7 +540,7 @@ create_treeview (EomCloseConfirmationDialogPrivate *priv)
 							   NULL);
 	gtk_tree_view_append_column (GTK_TREE_VIEW (treeview), column);
 
-	
+
 
 	renderer = gtk_cell_renderer_text_new ();
 	column = gtk_tree_view_column_new_with_attributes ("Name",
@@ -573,7 +573,7 @@ build_multiple_imgs_dialog (EomCloseConfirmationDialog *dlg)
 
 	hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
 	gtk_container_set_border_width (GTK_CONTAINER (hbox), 5);
-  	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dlg))), 
+  	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dlg))),
 			    hbox, TRUE, TRUE, 0);
 
 	/* Image */
@@ -603,11 +603,11 @@ build_multiple_imgs_dialog (EomCloseConfirmationDialog *dlg)
 
 	markup_str = g_strconcat ("<span weight=\"bold\" size=\"larger\">", str, "</span>", NULL);
 	g_free (str);
-	
+
 	gtk_label_set_markup (GTK_LABEL (primary_label), markup_str);
 	g_free (markup_str);
 	gtk_box_pack_start (GTK_BOX (vbox), primary_label, FALSE, FALSE, 0);
-	
+
 	vbox2 = gtk_box_new (GTK_ORIENTATION_VERTICAL, 8);
 	gtk_box_pack_start (GTK_BOX (vbox), vbox2, FALSE, FALSE, 0);
 
@@ -619,10 +619,10 @@ build_multiple_imgs_dialog (EomCloseConfirmationDialog *dlg)
 
 	scrolledwindow = gtk_scrolled_window_new (NULL, NULL);
 	gtk_box_pack_start (GTK_BOX (vbox2), scrolledwindow, TRUE, TRUE, 0);
-	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolledwindow), 
-					GTK_POLICY_AUTOMATIC, 
+	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolledwindow),
+					GTK_POLICY_AUTOMATIC,
 					GTK_POLICY_AUTOMATIC);
-	gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scrolledwindow), 
+	gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scrolledwindow),
 					     GTK_SHADOW_IN);
 
 	treeview = create_treeview (priv);
@@ -651,7 +651,7 @@ set_unsaved_image (EomCloseConfirmationDialog *dlg,
 {
 	EomCloseConfirmationDialogPrivate *priv;
 
-	g_return_if_fail (list != NULL);	
+	g_return_if_fail (list != NULL);
 
 	priv = dlg->priv;
 	g_return_if_fail (priv->unsaved_images == NULL);
@@ -665,7 +665,7 @@ set_unsaved_image (EomCloseConfirmationDialog *dlg,
 	else
 	{
 		build_multiple_imgs_dialog (dlg);
-	}	
+	}
 }
 
 const GList *

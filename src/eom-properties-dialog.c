@@ -449,7 +449,7 @@ pd_folder_button_clicked_cb (GtkButton *button, gpointer data)
 
 	if (!priv->folder_button_uri)
 		return;
-	
+
 	timestamp = gtk_get_current_event_time ();
 
 	window = GTK_WINDOW (data);

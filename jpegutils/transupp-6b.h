@@ -20,7 +20,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-/* based upon file transupp.h from the libjpeg package, original copyright 
+/* based upon file transupp.h from the libjpeg package, original copyright
  * note follows:
  *
  * transupp.h
@@ -113,18 +113,18 @@ typedef struct {
 
 
 /* Request any required workspace */
-void jtransform_request_workspace   (j_decompress_ptr     srcinfo, 
+void jtransform_request_workspace   (j_decompress_ptr     srcinfo,
 				     jpeg_transform_info *info);
 
 /* Adjust output image parameters */
 
-jvirt_barray_ptr * jtransform_adjust_parameters (j_decompress_ptr     srcinfo, 
+jvirt_barray_ptr * jtransform_adjust_parameters (j_decompress_ptr     srcinfo,
 						 j_compress_ptr       dstinfo,
 						 jvirt_barray_ptr    *src_coef_arrays,
 						 jpeg_transform_info *info);
 
 /* Execute the actual transformation, if any */
-void jtransform_execute_transformation (j_decompress_ptr     srcinfo, 
+void jtransform_execute_transformation (j_decompress_ptr     srcinfo,
 					j_compress_ptr       dstinfo,
 					jvirt_barray_ptr    *src_coef_arrays,
 					jpeg_transform_info *info);
@@ -143,11 +143,11 @@ typedef enum {
 #define JCOPYOPT_DEFAULT  JCOPYOPT_COMMENTS	/* recommended default */
 
 /* Setup decompression object to save desired markers in memory */
-void jcopy_markers_setup (j_decompress_ptr srcinfo, 
+void jcopy_markers_setup (j_decompress_ptr srcinfo,
 			  JCOPY_OPTION     option);
 
 /* Copy markers saved in the given source object to the destination object */
-void jcopy_markers_execute (j_decompress_ptr srcinfo, 
+void jcopy_markers_execute (j_decompress_ptr srcinfo,
 			    j_compress_ptr   dstinfo,
 			    JCOPY_OPTION     option);
 
