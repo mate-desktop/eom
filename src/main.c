@@ -107,7 +107,7 @@ main (int argc, char **argv)
 
 	ctx = g_option_context_new (_("[FILE…]"));
 	g_option_context_add_main_entries (ctx, goption_options, PACKAGE);
-	/* Option groups are free'd together with the context 
+	/* Option groups are free'd together with the context
 	 * Using gtk_get_option_group here initializes gtk during parsing */
 	g_option_context_add_group (ctx, gtk_get_option_group (TRUE));
 #ifdef HAVE_INTROSPECTION

@@ -333,7 +333,7 @@ static void
 eom_application_show_window (EomWindow *window, gpointer user_data)
 {
 	guint32 timestamp = GPOINTER_TO_UINT (user_data);
-	
+
 	/* set the proper interaction time on the window.
 	 * Fall back to roundtripping to the X server when we
 	 * don't have the timestamp, e.g. when launched from
@@ -342,13 +342,13 @@ eom_application_show_window (EomWindow *window, gpointer user_data)
 	 */
 	if (!gtk_widget_get_realized (GTK_WIDGET (window)))
 		gtk_widget_realize (GTK_WIDGET (window));
-	
+
 	if (timestamp <= 0)
 		timestamp = gdk_x11_get_server_time (gtk_widget_get_window (GTK_WIDGET (window)));
-	
+
 	gdk_x11_window_set_user_time (gtk_widget_get_window (GTK_WIDGET (window)),
 				                  timestamp);
-		      
+
 	gtk_window_present (GTK_WINDOW (window));
 }
 
