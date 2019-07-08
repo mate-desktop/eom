@@ -629,7 +629,14 @@ eom_image_apply_display_profile (EomImage *img, cmsHPROFILE screen)
 
 	priv = img->priv;
 
-	if (screen == NULL || priv->profile == NULL) return;
+	if (screen == NULL) return;
+
+	if (priv->profile == NULL) {
+		/* Assume sRGB color space for images without ICC profile */
+		eom_debug_message (DEBUG_LCMS, "Image has no ICC profile. "
+		                   "Assuming sRGB.");
+		priv->profile = cmsCreate_sRGBProfile ();
+	}
 
 	/* TODO: support other colorspaces than RGB */
 	if (cmsGetColorSpace (priv->profile) != cmsSigRgbData ||
