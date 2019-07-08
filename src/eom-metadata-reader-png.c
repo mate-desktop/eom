@@ -574,11 +574,11 @@ eom_metadata_reader_png_get_icc_profile (EomMetadataReaderPng *emr)
 		profile = cmsCreate_sRGBProfile ();
 	}
 
-	if (!profile && priv->cHRM_chunk) {
+	if (!profile && priv->cHRM_chunk && priv->gAMA_chunk) {
 		cmsCIExyY whitepoint;
 		cmsCIExyYTRIPLE primaries;
 		cmsToneCurve *gamma[3];
-		double gammaValue = 2.2; // 2.2 should be a sane default gamma
+		double gammaValue;
 
 		/* This uglyness extracts the chromacity and whitepoint values
 		 * from a PNG's cHRM chunk. These can be accurate up to the
@@ -597,14 +597,9 @@ eom_metadata_reader_png_get_icc_profile (EomMetadataReaderPng *emr)
 		primaries.Blue.x = EXTRACT_DOUBLE_UINT_BLOCK_OFFSET (priv->cHRM_chunk, 6, 100000);
 		primaries.Blue.y = EXTRACT_DOUBLE_UINT_BLOCK_OFFSET (priv->cHRM_chunk, 7, 100000);
 
-		primaries.Red.Y = primaries.Green.Y = primaries.Blue.Y = 1.0;
+		whitepoint.Y = primaries.Red.Y = primaries.Green.Y = primaries.Blue.Y = 1.0;
 
-		/* If the gAMA_chunk is present use its value which is saved
-		 * the same way as the whitepoint. Use 2.2 as default value if
-		 * the chunk is not present. */
-		if (priv->gAMA_chunk)
-			gammaValue = (double) 1.0/EXTRACT_DOUBLE_UINT_BLOCK_OFFSET (priv->gAMA_chunk, 0, 100000);
-
+		gammaValue = (double) 1.0/EXTRACT_DOUBLE_UINT_BLOCK_OFFSET (priv->gAMA_chunk, 0, 100000);
 		gamma[0] = gamma[1] = gamma[2] = cmsBuildGamma (NULL, gammaValue);
 
 		profile = cmsCreateRGBProfile (&whitepoint, &primaries, gamma);
