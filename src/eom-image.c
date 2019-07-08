@@ -632,10 +632,32 @@ eom_image_apply_display_profile (EomImage *img, cmsHPROFILE screen)
 	if (screen == NULL) return;
 
 	if (priv->profile == NULL) {
-		/* Assume sRGB color space for images without ICC profile */
-		eom_debug_message (DEBUG_LCMS, "Image has no ICC profile. "
-		                   "Assuming sRGB.");
-		priv->profile = cmsCreate_sRGBProfile ();
+		/* Check whether GdkPixbuf was able to extract a profile */
+		const char* data = gdk_pixbuf_get_option (priv->image,
+		                                          "icc-profile");
+
+		if(data) {
+			gsize   profile_size = 0;
+			guchar *profile_data = g_base64_decode(data,
+			                                       &profile_size);
+
+			if (profile_data && profile_size > 0) {
+				eom_debug_message (DEBUG_LCMS,
+				                   "Using ICC profile "
+				                   "extracted by GdkPixbuf");
+				priv->profile =
+					cmsOpenProfileFromMem(profile_data,
+					                      profile_size);
+				g_free(profile_data);
+			}
+		}
+
+		if(priv->profile == NULL) {
+			/* Assume sRGB color space for images without ICC profile */
+			eom_debug_message (DEBUG_LCMS, "Image has no ICC profile. "
+					   "Assuming sRGB.");
+			priv->profile = cmsCreate_sRGBProfile ();
+		}
 	}
 
 	/* TODO: support other colorspaces than RGB */
