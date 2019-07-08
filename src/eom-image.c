@@ -667,18 +667,17 @@ eom_image_apply_display_profile (EomImage *img, cmsHPROFILE screen)
 		return;
 	}
 
-	/* TODO: find the right way to colorcorrect RGBA images */
-	if (gdk_pixbuf_get_has_alpha (priv->image)) {
-		eom_debug_message (DEBUG_LCMS, "Colorcorrecting RGBA images is unsupported.");
-		return;
-	}
+	cmsUInt32Number color_type = TYPE_RGB_8;
+
+	if (gdk_pixbuf_get_has_alpha (priv->image))
+		color_type = TYPE_RGBA_8;
 
 	transform = cmsCreateTransform (priv->profile,
-				        TYPE_RGB_8,
-				        screen,
-				        TYPE_RGB_8,
-				        INTENT_PERCEPTUAL,
-				        0);
+	                                color_type,
+	                                screen,
+	                                color_type,
+	                                INTENT_PERCEPTUAL,
+	                                0);
 
 	if (G_LIKELY (transform != NULL)) {
 		rows = gdk_pixbuf_get_height (priv->image);
