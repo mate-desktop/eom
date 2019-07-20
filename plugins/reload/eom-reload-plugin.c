@@ -116,12 +116,14 @@ eom_reload_plugin_activate (EomWindowActivatable *activatable)
 
 	manager = eom_window_get_ui_manager (plugin->window);
 
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	plugin->ui_action_group = gtk_action_group_new ("EomReloadPluginActions");
 
 	gtk_action_group_set_translation_domain (plugin->ui_action_group, GETTEXT_PACKAGE);
 
 	gtk_action_group_add_actions (plugin->ui_action_group, action_entries,
 	                              G_N_ELEMENTS (action_entries), plugin->window);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 
 	gtk_ui_manager_insert_action_group (manager, plugin->ui_action_group, -1);
 
