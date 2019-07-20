@@ -813,6 +813,7 @@ eom_properties_dialog_new (GtkWindow    *parent,
 
 	g_return_val_if_fail (GTK_IS_WINDOW (parent), NULL);
 	g_return_val_if_fail (EOM_IS_THUMB_VIEW (thumbview), NULL);
+	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	g_return_val_if_fail (GTK_IS_ACTION (next_image_action), NULL);
 	g_return_val_if_fail (GTK_IS_ACTION (previous_image_action), NULL);
 
@@ -827,6 +828,7 @@ eom_properties_dialog_new (GtkWindow    *parent,
 	gtk_activatable_set_related_action (GTK_ACTIVATABLE (EOM_PROPERTIES_DIALOG (prop_dlg)->priv->next_button), next_image_action);
 
 	gtk_activatable_set_related_action (GTK_ACTIVATABLE (EOM_PROPERTIES_DIALOG (prop_dlg)->priv->previous_button), previous_image_action);
+	G_GNUC_END_IGNORE_DEPRECATIONS;
 
 	return GTK_WIDGET (prop_dlg);
 }
