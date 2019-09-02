@@ -45,8 +45,6 @@ enum {
 
 #define EOM_THUMB_VIEW_SPACING 0
 
-static void eom_thumb_view_init (EomThumbView *thumbview);
-
 static EomImage* eom_thumb_view_get_image_from_path (EomThumbView      *thumbview,
 						     GtkTreePath       *path);
 
