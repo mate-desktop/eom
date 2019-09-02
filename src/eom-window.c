@@ -3150,10 +3150,7 @@ static void
 eom_window_cmd_properties (GtkAction *action, gpointer user_data)
 {
 	EomWindow *window = EOM_WINDOW (user_data);
-	EomWindowPrivate *priv;
 	GtkWidget *dialog;
-
-	priv = window->priv;
 
 	dialog = eom_window_get_properties_dialog (window);
 	gtk_widget_show (dialog);
