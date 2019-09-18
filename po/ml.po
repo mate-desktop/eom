@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-16 17:39+0100\n"
+"POT-Creation-Date: 2019-04-22 13:04+0200\n"
 "PO-Revision-Date: 2019-03-12 12:45+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2019\n"
 "Language-Team: Malayalam (https://www.transifex.com/mate/teams/13566/ml/)\n"
@@ -62,7 +62,7 @@ msgstr "തെരഞ്ഞെടുത്ത ടൂള്‍ ബാര്‍ ന
 msgid "Separator"
 msgstr "വിടവടയാളം"
 
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2583
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2580
 msgid "Eye of MATE"
 msgstr "ഗ്നോം മിഴി"
 
@@ -720,7 +720,7 @@ msgstr ""
 msgid "Save Image"
 msgstr "ഇമേജ് സൂക്ഷിക്കുക"
 
-#: ../src/eom-file-chooser.c:467 ../src/eom-window.c:3928
+#: ../src/eom-file-chooser.c:467 ../src/eom-window.c:3927
 msgid "Open Folder"
 msgstr "അറ തുറക്കുക"
 
@@ -1025,7 +1025,7 @@ msgstr[1] ""
 msgid "_Reload"
 msgstr "_വീണ്ടും എടുക്കുക"
 
-#: ../src/eom-window.c:811 ../src/eom-window.c:2731
+#: ../src/eom-window.c:811 ../src/eom-window.c:2730
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr ""
@@ -1076,21 +1076,15 @@ msgstr ""
 "ഫയല്‍ അച്ചടിക്കുന്നതില്‍ പിശക്:\n"
 "%s"
 
-#: ../src/eom-window.c:2465
+#: ../src/eom-window.c:2466
 msgid "Toolbar Editor"
 msgstr "ടൂള്‍ ബാര്‍ എഡിറ്റര്‍"
 
-#: ../src/eom-window.c:2468
+#: ../src/eom-window.c:2469
 msgid "_Reset to Default"
 msgstr "സഹജമായതിലേക്ക് _മാറ്റുക"
 
-#: ../src/eom-window.c:2559
-msgid "translator-credits"
-msgstr ""
-"അനി പീറ്റര്‍ <peter.ani@gmail.com>\n"
-"പ്രവീണ്‍ അരിമ്പ്രത്തൊടിയില്‍ <pravi.a@gmail.com>"
-
-#: ../src/eom-window.c:2562
+#: ../src/eom-window.c:2534
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1103,7 +1097,7 @@ msgstr ""
 "മാറ്റങ്ങള്‍വരുത്താവുന്നതുമാണു്; ലൈസന്‍സിന്റെ ലക്കം 2 അല്ലെങ്കില്‍ (നിങ്ങള്‍ "
 "തിരഞ്ഞെടുക്കുന്ന) അതിനു് ശേഷമുള്ളഏതെങ്കിലും ലക്കമോ ഉപയോഗിക്കാം.\n"
 
-#: ../src/eom-window.c:2566
+#: ../src/eom-window.c:2538
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1115,52 +1109,58 @@ msgstr ""
 "പ്രത്യേക കാര്യത്തിനു്ചേരുന്നതാണെന്നോ പരോക്ഷമായി ഉള്‍‌ക്കൊള്ളുന്ന വാറണ്ടി "
 "പോലും ഇല്ല. കൂടുതല്‍ വിവരങ്ങള്‍ക്കു്ഗ്നു ജനറല്‍ പബ്ലിക് ലൈസന്‍സ് കാണുക.\n"
 
-#: ../src/eom-window.c:2570
+#: ../src/eom-window.c:2542
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 
-#: ../src/eom-window.c:2584
+#: ../src/eom-window.c:2581
 msgid "About Eye of MATE"
 msgstr ""
 
-#: ../src/eom-window.c:2586
+#: ../src/eom-window.c:2583
 msgid ""
 "Copyright © 2000-2010 Free Software Foundation, Inc.\n"
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2019 MATE developers"
 msgstr ""
 
-#: ../src/eom-window.c:2589
+#: ../src/eom-window.c:2586
 msgid "The MATE image viewer."
 msgstr "ഗ്നോം ചിത്രദര്‍ശിനി"
 
-#: ../src/eom-window.c:2679 ../src/eom-window.c:2694
+#: ../src/eom-window.c:2589
+msgid "translator-credits"
+msgstr ""
+"അനി പീറ്റര്‍ <peter.ani@gmail.com>\n"
+"പ്രവീണ്‍ അരിമ്പ്രത്തൊടിയില്‍ <pravi.a@gmail.com>"
+
+#: ../src/eom-window.c:2678 ../src/eom-window.c:2693
 msgid "Error launching appearance preferences dialog: "
 msgstr ""
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2729
+#: ../src/eom-window.c:2728
 msgid "_Open Background Preferences"
 msgstr ""
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2745
+#: ../src/eom-window.c:2744
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
 msgstr ""
 
-#: ../src/eom-window.c:3181
+#: ../src/eom-window.c:3180
 msgid "Saving image locally…"
 msgstr ""
 
-#: ../src/eom-window.c:3261
+#: ../src/eom-window.c:3260
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1169,7 +1169,7 @@ msgstr ""
 "നിങ്ങള്‍ക്ക് \"%s\" ചവറ്റുകുട്ടയിലേക്ക്\n"
 "നീക്കണം എന്നുറപ്പാണോ?"
 
-#: ../src/eom-window.c:3264
+#: ../src/eom-window.c:3263
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
@@ -1178,7 +1178,7 @@ msgstr ""
 "\"%s\"-നുള്ള ചവറ്റുകുട്ട ലഭ്യമാക്കുവാന്‍ സാധ്യമായില്ല. നിങ്ങള്‍ക്കു് ഈ "
 "ചിത്രം എന്നേക്കുമായി നീക്കം ചെയ്യണമോ?"
 
-#: ../src/eom-window.c:3269
+#: ../src/eom-window.c:3268
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1189,7 +1189,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/eom-window.c:3274
+#: ../src/eom-window.c:3273
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1198,389 +1198,389 @@ msgstr ""
 "കൂടാതെ അവ എന്നേക്കുമായി വെട്ടിനീക്കപ്പെടുന്നു. നിങ്ങള്‍ക്കു് "
 "തുടരണമെന്നുറപ്പാണോ?"
 
-#: ../src/eom-window.c:3291 ../src/eom-window.c:3778 ../src/eom-window.c:3805
+#: ../src/eom-window.c:3290 ../src/eom-window.c:3777 ../src/eom-window.c:3804
 msgid "Move to _Trash"
 msgstr "_ചവറ്റുകുട്ടയിലേക്ക് നീക്കുക"
 
-#: ../src/eom-window.c:3293
+#: ../src/eom-window.c:3292
 msgid "_Do not ask again during this session"
 msgstr "ഈ സെഷനില്‍ ഇനി _ചോദിക്കരുതു്"
 
-#: ../src/eom-window.c:3338 ../src/eom-window.c:3352
+#: ../src/eom-window.c:3337 ../src/eom-window.c:3351
 #, c-format
 msgid "Couldn't access trash."
 msgstr "ചവറ്റുകുട്ട ലഭ്യമാകുന്നില്ല."
 
-#: ../src/eom-window.c:3360
+#: ../src/eom-window.c:3359
 #, c-format
 msgid "Couldn't delete file"
 msgstr "ഫയല്‍ വെട്ടിനീക്കുവാന്‍ സാധ്യമല്ല"
 
-#: ../src/eom-window.c:3457
+#: ../src/eom-window.c:3456
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "ചിത്രം %s നീക്കം ചെയ്യുന്നതില്‍ പിശക്"
 
-#: ../src/eom-window.c:3699
+#: ../src/eom-window.c:3698
 msgid "_Image"
 msgstr "_ചിത്രം"
 
-#: ../src/eom-window.c:3700
+#: ../src/eom-window.c:3699
 msgid "_Edit"
 msgstr "_മാറ്റം വരുത്തുക"
 
-#: ../src/eom-window.c:3701
+#: ../src/eom-window.c:3700
 msgid "_View"
 msgstr "_കാഴ്ച"
 
-#: ../src/eom-window.c:3702
+#: ../src/eom-window.c:3701
 msgid "_Go"
 msgstr "_പോകുക"
 
-#: ../src/eom-window.c:3703
+#: ../src/eom-window.c:3702
 msgid "_Tools"
 msgstr "_പണിയായുധങ്ങള്‍"
 
-#: ../src/eom-window.c:3704
+#: ../src/eom-window.c:3703
 msgid "_Help"
 msgstr "_സഹായം"
 
-#: ../src/eom-window.c:3706
+#: ../src/eom-window.c:3705
 msgid "_Open…"
 msgstr ""
 
-#: ../src/eom-window.c:3707
+#: ../src/eom-window.c:3706
 msgid "Open a file"
 msgstr "ഒരു ഫയല്‍ തുറക്കുക"
 
-#: ../src/eom-window.c:3709
+#: ../src/eom-window.c:3708
 msgid "_Close"
 msgstr "_അടയ്ക്കു:"
 
-#: ../src/eom-window.c:3710
+#: ../src/eom-window.c:3709
 msgid "Close window"
 msgstr "ജാലകം അടയ്ക്കുക"
 
-#: ../src/eom-window.c:3712
+#: ../src/eom-window.c:3711
 msgid "T_oolbar"
 msgstr "_ടൂള്‍ ബാര്‍ "
 
-#: ../src/eom-window.c:3713
+#: ../src/eom-window.c:3712
 msgid "Edit the application toolbar"
 msgstr "പ്രയോഗത്തിനുള്ള ഉപകരണപ്പട്ടയില്‍ മാറ്റം വരുത്തുക"
 
-#: ../src/eom-window.c:3715
+#: ../src/eom-window.c:3714
 msgid "Prefere_nces"
 msgstr "മുന്‍ഗണനകള്‍"
 
-#: ../src/eom-window.c:3716
+#: ../src/eom-window.c:3715
 msgid "Preferences for Eye of MATE"
 msgstr "ഗ്നോ മിഴിയ്ക്കുള്ള മുന്‍ഗണനകള്‍"
 
-#: ../src/eom-window.c:3718
+#: ../src/eom-window.c:3717
 msgid "_Contents"
 msgstr "_ഉളളടക്കം"
 
-#: ../src/eom-window.c:3719
+#: ../src/eom-window.c:3718
 msgid "Help on this application"
 msgstr "ഈ പ്രയോഗത്തിനുളള സഹായം"
 
-#: ../src/eom-window.c:3721
+#: ../src/eom-window.c:3720
 msgid "_About"
 msgstr "_സംബന്ധിച്ച്"
 
-#: ../src/eom-window.c:3722
+#: ../src/eom-window.c:3721
 msgid "About this application"
 msgstr "ഈ പ്രയോഗം സംബന്ധിച്ച് "
 
-#: ../src/eom-window.c:3727
+#: ../src/eom-window.c:3726
 msgid "_Toolbar"
 msgstr "_ഉപകരണപ്പട്ട"
 
-#: ../src/eom-window.c:3728
+#: ../src/eom-window.c:3727
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "നിലവിലുളള ജാലകത്തിന്റെ ഉപകരണപ്പട്ടയുടെ ദൃശ്യത മാറ്റുന്നു"
 
-#: ../src/eom-window.c:3730
+#: ../src/eom-window.c:3729
 msgid "_Statusbar"
 msgstr "_അവസ്ഥാപട്ട"
 
-#: ../src/eom-window.c:3731
+#: ../src/eom-window.c:3730
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "നിലവിലുളള ജാലകത്തിന്റെ അവസ്ഥപട്ടയുടെ ദൃശ്യത മാറ്റുന്നു"
 
-#: ../src/eom-window.c:3733
+#: ../src/eom-window.c:3732
 msgid "_Image Collection"
 msgstr "_ചിത്ര ശേഖരം"
 
-#: ../src/eom-window.c:3734
+#: ../src/eom-window.c:3733
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "നിലവിലുള്ള ജാലകത്തിന്റെ ചിത്ര ശേഖരണ പാളിയുടെ ദ്രശ്യത മാറ്റുന്നു"
 
-#: ../src/eom-window.c:3736
+#: ../src/eom-window.c:3735
 msgid "Side _Pane"
 msgstr "_പാര്‍ശ്വപട്ട"
 
-#: ../src/eom-window.c:3737
+#: ../src/eom-window.c:3736
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "നിലവിലുളള ജാലകത്തിന്റെ വശത്തുള്ള പാളിയുടെ ദൃശ്യത മാറ്റുന്നു"
 
-#: ../src/eom-window.c:3742
+#: ../src/eom-window.c:3741
 msgid "_Save"
 msgstr "സംരക്ഷിക്കുക"
 
-#: ../src/eom-window.c:3743
+#: ../src/eom-window.c:3742
 msgid "Save changes in currently selected images"
 msgstr "ഇപ്പോള്‍ തിരഞ്ഞെടുത്ത ചിത്രങ്ങളിലെ വ്യത്യാസങ്ങള്‍ സൂക്ഷിക്കുക"
 
-#: ../src/eom-window.c:3745
+#: ../src/eom-window.c:3744
 msgid "Open _with"
 msgstr "ഒരു പ്രയോഗം _ഉപയോഗിച്ച് തുറക്കുക"
 
-#: ../src/eom-window.c:3746
+#: ../src/eom-window.c:3745
 msgid "Open the selected image with a different application"
 msgstr "തെരഞ്ഞെടുത്ത ചിത്രങ്ങള്‍ വേറെ പ്രയോഗം ഉപയോഗിച്ച് തുറക്കുക"
 
-#: ../src/eom-window.c:3748
+#: ../src/eom-window.c:3747
 msgid "Save _As…"
 msgstr ""
 
-#: ../src/eom-window.c:3749
+#: ../src/eom-window.c:3748
 msgid "Save the selected images with a different name"
 msgstr "തെരഞ്ഞെടുത്ത ചിത്രങ്ങള്‍ വേറെ പേരില്‍ സൂക്ഷിക്കുക"
 
-#: ../src/eom-window.c:3751
+#: ../src/eom-window.c:3750
 msgid "Open Containing _Folder"
 msgstr ""
 
-#: ../src/eom-window.c:3752
+#: ../src/eom-window.c:3751
 msgid "Show the folder which contains this file in the file manager"
 msgstr ""
 
-#: ../src/eom-window.c:3754
+#: ../src/eom-window.c:3753
 msgid "_Print…"
 msgstr ""
 
-#: ../src/eom-window.c:3755
+#: ../src/eom-window.c:3754
 msgid "Print the selected image"
 msgstr "തിരഞ്ഞെടുത്ത ചിത്രം അച്ചടിക്കുക"
 
-#: ../src/eom-window.c:3757
+#: ../src/eom-window.c:3756
 msgid "Prope_rties"
 msgstr "_ഗുണഗണങ്ങള്‍"
 
-#: ../src/eom-window.c:3758
+#: ../src/eom-window.c:3757
 msgid "Show the properties and metadata of the selected image"
 msgstr "തിരഞ്ഞെടുത്ത ചിത്രത്തിന്റെ ഗുണഗണങ്ങളും മെറ്റാ-ഡാറ്റയും കാണിക്കുക"
 
-#: ../src/eom-window.c:3760
+#: ../src/eom-window.c:3759
 msgid "_Undo"
 msgstr "വേണ്ട"
 
-#: ../src/eom-window.c:3761
+#: ../src/eom-window.c:3760
 msgid "Undo the last change in the image"
 msgstr "ചിത്രത്തിലേ അവസാന മാറ്റം റദ്ദാക്കുക"
 
-#: ../src/eom-window.c:3763
+#: ../src/eom-window.c:3762
 msgid "Flip _Horizontal"
 msgstr "_തിരശ്ചീന‌മായി ഞൊടിക്കുക"
 
-#: ../src/eom-window.c:3764
+#: ../src/eom-window.c:3763
 msgid "Mirror the image horizontally"
 msgstr "ചിത്രം തിരശ്ചീനമായി പ്രതിഫലിപ്പിക്കുക"
 
-#: ../src/eom-window.c:3766
+#: ../src/eom-window.c:3765
 msgid "Flip _Vertical"
 msgstr "_ലംബമായി ഞൊടിക്കുക"
 
-#: ../src/eom-window.c:3767
+#: ../src/eom-window.c:3766
 msgid "Mirror the image vertically"
 msgstr "ചിത്രം ലംബമായി പ്രതിഫലിപ്പിക്കുക"
 
-#: ../src/eom-window.c:3769
+#: ../src/eom-window.c:3768
 msgid "_Rotate Clockwise"
 msgstr "ഘടികാരദിശയില്‍ _തിരിയ്ക്കുക"
 
-#: ../src/eom-window.c:3770
+#: ../src/eom-window.c:3769
 msgid "Rotate the image 90 degrees to the right"
 msgstr "ചിത്രം വലത്തേക്ക് 90 ഡിഗ്രി കറക്കുക"
 
-#: ../src/eom-window.c:3772
+#: ../src/eom-window.c:3771
 msgid "Rotate Counterc_lockwise"
 msgstr "_ഘടികാരദിശയ്ക്കെതിരെ തിരിയ്ക്കുക"
 
-#: ../src/eom-window.c:3773
+#: ../src/eom-window.c:3772
 msgid "Rotate the image 90 degrees to the left"
 msgstr "ചിത്രം ഇടത്തേക്ക് 90 ഡിഗ്രി കറക്കുക"
 
-#: ../src/eom-window.c:3775
+#: ../src/eom-window.c:3774
 msgid "Set as _Desktop Background"
 msgstr "_പണിയിട പശ്ചാത്തലമായി സജ്ജമാക്കുക"
 
-#: ../src/eom-window.c:3776
+#: ../src/eom-window.c:3775
 msgid "Set the selected image as the desktop background"
 msgstr "തെരഞ്ഞെടുത്ത ചിത്രം പണിയിടത്തില്‍ വോള്‍പേപ്പറായി ഇടുക"
 
-#: ../src/eom-window.c:3779
+#: ../src/eom-window.c:3778
 msgid "Move the selected image to the trash folder"
 msgstr "തിരഞ്ഞെടുത്ത ചിത്രം ചവറ്റുകുട്ടയിലേക്ക നീക്കുക"
 
-#: ../src/eom-window.c:3781
+#: ../src/eom-window.c:3780
 msgid "_Copy"
 msgstr "പകര്‍ത്തുക (_C)"
 
-#: ../src/eom-window.c:3782
+#: ../src/eom-window.c:3781
 msgid "Copy the selected image to the clipboard"
 msgstr ""
 
-#: ../src/eom-window.c:3784 ../src/eom-window.c:3796 ../src/eom-window.c:3799
+#: ../src/eom-window.c:3783 ../src/eom-window.c:3795 ../src/eom-window.c:3798
 msgid "_Zoom In"
 msgstr "_വലുതാക്കുക"
 
-#: ../src/eom-window.c:3785 ../src/eom-window.c:3797
+#: ../src/eom-window.c:3784 ../src/eom-window.c:3796
 msgid "Enlarge the image"
 msgstr "ചിത്രം വലുതാക്കുക"
 
-#: ../src/eom-window.c:3787 ../src/eom-window.c:3802
+#: ../src/eom-window.c:3786 ../src/eom-window.c:3801
 msgid "Zoom _Out"
 msgstr "_ചെറുതാക്കുക"
 
-#: ../src/eom-window.c:3788 ../src/eom-window.c:3800 ../src/eom-window.c:3803
+#: ../src/eom-window.c:3787 ../src/eom-window.c:3799 ../src/eom-window.c:3802
 msgid "Shrink the image"
 msgstr "ചിത്രം ചെറുതാക്കുക"
 
-#: ../src/eom-window.c:3790
+#: ../src/eom-window.c:3789
 msgid "_Normal Size"
 msgstr "_സാധാരണ വലിപ്പം"
 
-#: ../src/eom-window.c:3791
+#: ../src/eom-window.c:3790
 msgid "Show the image at its normal size"
 msgstr "ചിത്രം തനതായ വലിപ്പത്തില്‍ കാണിക്കുക"
 
-#: ../src/eom-window.c:3793
+#: ../src/eom-window.c:3792
 msgid "_Best Fit"
 msgstr "_അനുയോജ്യമായ വലുപ്പം"
 
-#: ../src/eom-window.c:3794
+#: ../src/eom-window.c:3793
 msgid "Fit the image to the window"
 msgstr "ചിത്രം പുതിയ ജാലകത്തിനു പാകമാക്കുക"
 
-#: ../src/eom-window.c:3811
+#: ../src/eom-window.c:3810
 msgid "_Fullscreen"
 msgstr "_പരമാവധി വലുപ്പത്തിലുളള സ്ക്രീന്‍"
 
-#: ../src/eom-window.c:3812
+#: ../src/eom-window.c:3811
 msgid "Show the current image in fullscreen mode"
 msgstr "നിലവിലുള്ള ചിത്രം മുഴുവന്‍ സ്ക്രീനില്‍ കാണിക്കുക"
 
-#: ../src/eom-window.c:3814
+#: ../src/eom-window.c:3813
 msgid "Pause Slideshow"
 msgstr ""
 
-#: ../src/eom-window.c:3815
+#: ../src/eom-window.c:3814
 msgid "Pause or resume the slideshow"
 msgstr ""
 
-#: ../src/eom-window.c:3820 ../src/eom-window.c:3835
+#: ../src/eom-window.c:3819 ../src/eom-window.c:3834
 msgid "_Previous Image"
 msgstr "_മുമ്പത്തെ ചിത്രം"
 
-#: ../src/eom-window.c:3821
+#: ../src/eom-window.c:3820
 msgid "Go to the previous image of the collection"
 msgstr "ശേഖരണത്തില്‍ ഇതിനു മുമ്പുള്ള ചിത്രത്തിലേക്ക് പോവുക"
 
-#: ../src/eom-window.c:3823
+#: ../src/eom-window.c:3822
 msgid "_Next Image"
 msgstr "_അടുത്ത ചിത്രം"
 
-#: ../src/eom-window.c:3824
+#: ../src/eom-window.c:3823
 msgid "Go to the next image of the collection"
 msgstr "ശേഖരത്തിലെ അടുത്ത ചിത്രത്തിലേക്ക് പോവുക"
 
-#: ../src/eom-window.c:3826 ../src/eom-window.c:3838
+#: ../src/eom-window.c:3825 ../src/eom-window.c:3837
 msgid "_First Image"
 msgstr "_ആദ്യത്തെ ചിത്രം"
 
-#: ../src/eom-window.c:3827
+#: ../src/eom-window.c:3826
 msgid "Go to the first image of the collection"
 msgstr "ശേഖരത്തിലെ ആദ്യത്തെ ചിത്രത്തിലേക്ക് പോവുക"
 
-#: ../src/eom-window.c:3829 ../src/eom-window.c:3841
+#: ../src/eom-window.c:3828 ../src/eom-window.c:3840
 msgid "_Last Image"
 msgstr "_അവസാനത്തെ ചിത്രം"
 
-#: ../src/eom-window.c:3830
+#: ../src/eom-window.c:3829
 msgid "Go to the last image of the collection"
 msgstr "ശേഖരത്തിലെ അവസാനത്തെ ചിത്രത്തിലേക്ക് പോവുക"
 
-#: ../src/eom-window.c:3832
+#: ../src/eom-window.c:3831
 msgid "_Random Image"
 msgstr ""
 
-#: ../src/eom-window.c:3833
+#: ../src/eom-window.c:3832
 msgid "Go to a random image of the collection"
 msgstr ""
 
-#: ../src/eom-window.c:3847
+#: ../src/eom-window.c:3846
 msgid "S_lideshow"
 msgstr ""
 
-#: ../src/eom-window.c:3848
+#: ../src/eom-window.c:3847
 msgid "Start a slideshow view of the images"
 msgstr "ചിത്രങ്ങളുടെ ഒരു സ്ലൈഡ്-ഷോ കാണിക്കാന്‍ തുടങ്ങുക"
 
-#: ../src/eom-window.c:3914
+#: ../src/eom-window.c:3913
 msgid "Previous"
 msgstr "മുമ്പുള്ള"
 
-#: ../src/eom-window.c:3918
+#: ../src/eom-window.c:3917
 msgid "Next"
 msgstr "അടുത്ത"
 
-#: ../src/eom-window.c:3922
+#: ../src/eom-window.c:3921
 msgid "Right"
 msgstr "വലത്"
 
-#: ../src/eom-window.c:3925
+#: ../src/eom-window.c:3924
 msgid "Left"
 msgstr "ഇടത്"
 
-#: ../src/eom-window.c:3931
+#: ../src/eom-window.c:3930
 msgid "In"
 msgstr "അകത്ത്"
 
-#: ../src/eom-window.c:3934
+#: ../src/eom-window.c:3933
 msgid "Out"
 msgstr "പുറത്ത്"
 
-#: ../src/eom-window.c:3937
+#: ../src/eom-window.c:3936
 msgid "Normal"
 msgstr "സാധാരണ"
 
-#: ../src/eom-window.c:3940
+#: ../src/eom-window.c:3939
 msgid "Fit"
 msgstr "ചേര്‍ച്ച"
 
-#: ../src/eom-window.c:3943
+#: ../src/eom-window.c:3942
 msgid "Collection"
 msgstr "ശേഖരം "
 
-#: ../src/eom-window.c:3946
+#: ../src/eom-window.c:3945
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "ട്രാഷ്"
 
-#: ../src/eom-window.c:4291
+#: ../src/eom-window.c:4290
 #, c-format
 msgid "Edit the current image using %s"
 msgstr ""
 
-#: ../src/eom-window.c:4293
+#: ../src/eom-window.c:4292
 msgid "Edit Image"
 msgstr ""
 
-#: ../src/eom-window.c:4508
+#: ../src/eom-window.c:4507
 msgid "Properties"
 msgstr "ഗുണഗണങ്ങള്‍"
 
