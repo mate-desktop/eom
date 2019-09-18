@@ -1,3 +1,18 @@
+### eom 1.22.2
+
+  * Translations update
+  * remove warning: "HAVE_EXIF" is not defined, evaluates to 0 [-Wundef]
+  * Allow color correcting images with alpha channel
+  * EomMetadataReaderPng: Use built-in SRGB profile for matching cHRM/gAMA
+  * EomMetadataReaderPNG: Only build profile from cHRM if gAMA is present
+  * Assume sRGB if no display profile is set
+  * EomImage: Check GdkPixbuf for an ICC profile before falling back to sRGB
+  * Assume sRGB when image doesn't have an ICC profile attached
+  * require GLib 2.52
+  * Restore image types list and add wildcard
+  * Disconnect callbacks for "Open with" menu items before connecting new ones.
+  * Unref GtkUIManager so "Open with" menu is freed.
+
 ### eom 1.22.1
 
   * Translations update
