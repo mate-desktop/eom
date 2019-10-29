@@ -4,7 +4,7 @@ if ENABLE_JPEG
 jpeg_DIRS = jpegutils
 endif
 
-SUBDIRS = $(jpeg_DIRS) cut-n-paste src man plugins po help data doc
+SUBDIRS = po $(jpeg_DIRS) cut-n-paste src man plugins help data doc
 
 EXTRA_DIST = 		\
 	AUTHORS			\
@@ -14,10 +14,7 @@ EXTRA_DIST = 		\
 	NEWS			\
 	README
 
-DISTCLEANFILES =                \
-        intltool-extract        \
-        intltool-merge          \
-        intltool-update         
+DISTCLEANFILES =
 
 DISTCHECK_CONFIGURE_FLAGS =      \
 	--disable-schemas-install    \

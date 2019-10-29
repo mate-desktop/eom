@@ -64,6 +64,7 @@ env:
 requires:
   archlinux:
     # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/eom
+    - appstream-glib
     - clang
     - dbus-glib
     - exempi
@@ -126,6 +127,7 @@ requires:
     - gobject-introspection-devel
     - gtk3-devel
     - lcms2-devel
+    - libappstream-glib-devel
     - libexif-devel
     - libjpeg-turbo-devel
     - libpeas-devel
