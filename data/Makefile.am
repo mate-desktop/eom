@@ -1,17 +1,18 @@
 SUBDIRS = pixmaps icons
 
-@INTLTOOL_DESKTOP_RULE@
-
 DESKTOP_IN_FILES= eom.desktop.in.in
 DESKTOP_FILES= $(DESKTOP_IN_FILES:.desktop.in.in=.desktop)
 
 desktopdir = $(datadir)/applications
 desktop_DATA = $(DESKTOP_FILES)
+$(desktop_DATA): $(DESKTOP_IN_FILES)
+	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
-@INTLTOOL_XML_RULE@
 appdatadir = $(datadir)/metainfo
 appdata_in_files = eom.appdata.xml.in
 appdata_DATA = $(appdata_in_files:.xml.in=.xml)
+$(appdata_DATA): $(appdata_in_files)
+	$(AM_V_GEN) $(MSGFMT) --xml --template $< -d $(top_srcdir)/po -o $@
 
 gsettings_ENUM_NAMESPACE = org.mate.eom
 gsettings_ENUM_FILES = $(top_srcdir)/src/eom-scroll-view.h	\

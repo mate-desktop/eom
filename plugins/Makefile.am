@@ -46,9 +46,10 @@ endif
 
 # Generate plugin info files
 
-%.plugin: %.plugin.desktop.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*po) ; $(AM_V_GEN)$(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
-
 plugins_DATA = $(plugins_in_files:.plugin.desktop.in=.plugin)
+
+$(plugins_DATA): $(plugins_in_files)
+	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
 DISTCLEANFILES = $(plugins_DATA)
 CLEANFILES = $(plugins_DATA)
