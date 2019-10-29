@@ -71,7 +71,6 @@ requires:
     - gcc
     - git
     - gobject-introspection
-    - intltool
     - itstool
     - lcms2
     - libexif
@@ -86,13 +85,13 @@ requires:
   debian:
     # Useful URL: https://github.com/mate-desktop/debian-packages
     # Useful URL: https://salsa.debian.org/debian-mate-team/eom
+    - autopoint
     - clang
     - clang-tools
     - cppcheck
     - git
     - gobject-introspection
     - gtk-doc-tools
-    - intltool
     - libdbus-glib-1-dev
     - libdconf-dev
     - libexempi-dev
@@ -140,12 +139,12 @@ requires:
     - zlib-devel
 
   ubuntu:
+    - autopoint
     - clang
     - clang-tools
     - git
     - gobject-introspection
     - gtk-doc-tools
-    - intltool
     - libdbus-glib-1-dev
     - libdconf-dev
     - libexempi-dev
