@@ -6,17 +6,17 @@
 # Translators:
 # Mattias Põldaru <mahfiaz@gmail.com>, 2018
 # Rivo Zängov <eraser@eraser.ee>, 2018
-# Ivar Smolin <okul@linux.ee>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Ivar Smolin <okul@linux.ee>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-16 17:39+0100\n"
+"POT-Creation-Date: 2019-11-12 14:56+0100\n"
 "PO-Revision-Date: 2018-03-11 15:18+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"Last-Translator: Ivar Smolin <okul@linux.ee>, 2019\n"
 "Language-Team: Estonian (https://www.transifex.com/mate/teams/13566/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,40 +31,40 @@ msgstr ""
 #. * produce duplicates, but don't worry about it. If your language
 #. * normally has a mnemonic at the start, please use the _. If not,
 #. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:930
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:946
 #, c-format
 msgid "Show “_%s”"
 msgstr "Näita „_%s”"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1396
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
 msgid "_Move on Toolbar"
 msgstr "_Liiguta tööriistaribal"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1397
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
 msgid "Move the selected item on the toolbar"
 msgstr "Valitud kirje liigutamine tööriistaribal"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1398
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1422
 msgid "_Remove from Toolbar"
 msgstr "_Eemalda tööriistaribalt"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1399
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1423
 msgid "Remove the selected item from the toolbar"
 msgstr "Valitud kirje eemaldamine tööriistaribalt"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1400
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1424
 msgid "_Delete Toolbar"
 msgstr "_Kustuta tööriistariba"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1401
+#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1425
 msgid "Remove the selected toolbar"
 msgstr "Valitud tööriistariba eemaldamine"
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:485
+#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:483
 msgid "Separator"
 msgstr "Eraldaja"
 
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2583
+#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2636
 msgid "Eye of MATE"
 msgstr "Eye of MATE (gnoomi silm)"
 
@@ -743,7 +743,7 @@ msgstr "%s (*.%s)"
 
 #. Pixel size of image: width x height in pixel
 #: ../src/eom-file-chooser.c:281 ../src/eom-properties-dialog.c:163
-#: ../src/eom-properties-dialog.c:165 ../src/eom-thumb-view.c:518
+#: ../src/eom-properties-dialog.c:165 ../src/eom-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "piksel"
@@ -757,7 +757,7 @@ msgstr "Pildi avamine"
 msgid "Save Image"
 msgstr "Pildi salvestamine"
 
-#: ../src/eom-file-chooser.c:467 ../src/eom-window.c:3928
+#: ../src/eom-file-chooser.c:467 ../src/eom-window.c:4005
 msgid "Open Folder"
 msgstr "Avatakse kaust"
 
@@ -771,22 +771,22 @@ msgstr "Laadimata pildi transformeerimine."
 msgid "Transformation failed."
 msgstr "Transformeerimine nurjus."
 
-#: ../src/eom-image.c:1020
+#: ../src/eom-image.c:1048
 #, c-format
 msgid "EXIF not supported for this file format."
 msgstr "Selle failivormingu puhul pole EXIF toetatud."
 
-#: ../src/eom-image.c:1169
+#: ../src/eom-image.c:1197
 #, c-format
 msgid "Image loading failed."
 msgstr "Pildi laadimine nurjus."
 
-#: ../src/eom-image.c:1698 ../src/eom-image.c:1800
+#: ../src/eom-image.c:1726 ../src/eom-image.c:1828
 #, c-format
 msgid "No image loaded."
 msgstr "Pilti ei ole laetud."
 
-#: ../src/eom-image.c:1708 ../src/eom-image.c:1812
+#: ../src/eom-image.c:1736 ../src/eom-image.c:1840
 #, c-format
 msgid "Temporary file creation failed."
 msgstr "Tõrge ajutise faili loomisel."
@@ -1026,7 +1026,7 @@ msgstr "nagu on"
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/eom-thumb-view.c:546
+#: ../src/eom-thumb-view.c:544
 msgid "Taken on"
 msgstr "Pildistatud"
 
@@ -1049,25 +1049,25 @@ msgstr " (vigane Unicode)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/eom-window.c:508
+#: ../src/eom-window.c:517
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/eom-window.c:809
+#: ../src/eom-window.c:828
 msgid "_Reload"
 msgstr "Laadi _uuesti"
 
-#: ../src/eom-window.c:811 ../src/eom-window.c:2731
+#: ../src/eom-window.c:830 ../src/eom-window.c:2790
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "_Peida"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:821
+#: ../src/eom-window.c:840
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -1076,7 +1076,7 @@ msgstr ""
 "Pilti \"%s\" on mõne teise rakenduse poolt muudetud.\n"
 "Kas soovid seda uuesti laadida?"
 
-#: ../src/eom-window.c:986
+#: ../src/eom-window.c:1008
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Programmi \"%s\" kasutamine valitud pildi avamiseks"
@@ -1086,25 +1086,25 @@ msgstr "Programmi \"%s\" kasutamine valitud pildi avamiseks"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1142
+#: ../src/eom-window.c:1172
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Pildi \"%s\" (%u/%u) salvestamine"
 
-#: ../src/eom-window.c:1501
+#: ../src/eom-window.c:1539
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Pildi \"%s\" avamine"
 
-#: ../src/eom-window.c:1857
+#: ../src/eom-window.c:1905
 msgid "Leave Fullscreen"
 msgstr "Välju täisekraanvaatest"
 
-#: ../src/eom-window.c:1990
+#: ../src/eom-window.c:2046
 msgid "Viewing a slideshow"
 msgstr ""
 
-#: ../src/eom-window.c:2203
+#: ../src/eom-window.c:2259
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1113,24 +1113,15 @@ msgstr ""
 "Viga faili printimisel:\n"
 "%s"
 
-#: ../src/eom-window.c:2465
+#: ../src/eom-window.c:2522
 msgid "Toolbar Editor"
 msgstr "Tööriistariba redaktor"
 
-#: ../src/eom-window.c:2468
+#: ../src/eom-window.c:2525
 msgid "_Reset to Default"
 msgstr "_Taasta vaikeseaded"
 
-#: ../src/eom-window.c:2559
-msgid "translator-credits"
-msgstr ""
-"Lauris Kaplinski, 1999.\n"
-"Ilmar Kerm <ikerm hot ee>, 2001, 2002.\n"
-"Tõivo Leedjärv <toivo linux ee>, 2002, 2003.\n"
-"Priit Laes <plaes plaes org>, 2004–2006, 2008, 2009\n"
-"Ivar Smolin <okul linux ee>, 2005–2010, 2014–2015, 2018."
-
-#: ../src/eom-window.c:2562
+#: ../src/eom-window.c:2590
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1142,7 +1133,7 @@ msgstr ""
 " Vaba Tarkvara Fond; kas litsentsi versioonis number 2 või (vastavalt Teie "
 "valikule) ükskõik millises hilisemas versioonis.\n"
 
-#: ../src/eom-window.c:2566
+#: ../src/eom-window.c:2594
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1154,7 +1145,7 @@ msgstr ""
 "TEATUD KINDLAKS EESMÄRGIKS. Üksikasjade suhtes vaata GNU Üldist Avalikku "
 "Litsentsi.\n"
 
-#: ../src/eom-window.c:2570
+#: ../src/eom-window.c:2598
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
@@ -1164,34 +1155,46 @@ msgstr ""
 "programmiga; kui ei, siis võtke ühendust Free Software Foundation'iga, 51 "
 "Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 
-#: ../src/eom-window.c:2584
+#: ../src/eom-window.c:2637
 msgid "About Eye of MATE"
 msgstr ""
 
-#: ../src/eom-window.c:2586
+#: ../src/eom-window.c:2639
 msgid ""
 "Copyright © 2000-2010 Free Software Foundation, Inc.\n"
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2019 MATE developers"
 msgstr ""
+"Autoriõigus © 2000-2010 Free Software Foundation, Inc.\n"
+"Autoriõigus © 2011 Perberos\n"
+"Autoriõigus © 2012-2019 MATE arendajad"
 
-#: ../src/eom-window.c:2589
+#: ../src/eom-window.c:2642
 msgid "The MATE image viewer."
 msgstr "MATE pildinäitaja."
 
-#: ../src/eom-window.c:2679 ../src/eom-window.c:2694
+#: ../src/eom-window.c:2645
+msgid "translator-credits"
+msgstr ""
+"Lauris Kaplinski, 1999.\n"
+"Ilmar Kerm <ikerm hot ee>, 2001, 2002.\n"
+"Tõivo Leedjärv <toivo linux ee>, 2002, 2003.\n"
+"Priit Laes <plaes plaes org>, 2004–2006, 2008, 2009\n"
+"Ivar Smolin <okul linux ee>, 2005–2010, 2014–2015, 2018."
+
+#: ../src/eom-window.c:2738 ../src/eom-window.c:2753
 msgid "Error launching appearance preferences dialog: "
 msgstr ""
 
 #. I18N: When setting mnemonics for these strings, watch out to not
 #. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2729
+#: ../src/eom-window.c:2788
 msgid "_Open Background Preferences"
 msgstr "Ava _taustaeelistused"
 
 #. The newline character is currently necessary due to a problem
 #. * with the automatic line break.
-#: ../src/eom-window.c:2745
+#: ../src/eom-window.c:2804
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1200,18 +1203,18 @@ msgstr ""
 "Pilt \"%s\" määrati töölaua taustaks.\n"
 "Kas soovid selle välimust muuta?"
 
-#: ../src/eom-window.c:3181
+#: ../src/eom-window.c:3245
 msgid "Saving image locally…"
 msgstr "Pildi salvestamine kohalikule kettale…"
 
-#: ../src/eom-window.c:3261
+#: ../src/eom-window.c:3325
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
 msgstr "Soovid sa tõsta \"%s\" prügikasti?"
 
-#: ../src/eom-window.c:3264
+#: ../src/eom-window.c:3328
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
@@ -1220,18 +1223,18 @@ msgstr ""
 "Pildi \"%s\" jaoks pole võimalik prügikasti leida. Kas soovid selle pildi "
 "jäädavalt kustutada?"
 
-#: ../src/eom-window.c:3269
+#: ../src/eom-window.c:3333
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
-"the selected image to the trash?"
+"the %d selected image to the trash?"
 msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/eom-window.c:3274
+#: ../src/eom-window.c:3338
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1239,389 +1242,389 @@ msgstr ""
 "Osasid valitud pilte pole võimalik prügikasti visata ja need kustutatakse "
 "jäädavalt. Kas soovid kustutamisega jätkata?"
 
-#: ../src/eom-window.c:3291 ../src/eom-window.c:3778 ../src/eom-window.c:3805
+#: ../src/eom-window.c:3355 ../src/eom-window.c:3851 ../src/eom-window.c:3878
 msgid "Move to _Trash"
 msgstr "_Viska prügikasti"
 
-#: ../src/eom-window.c:3293
+#: ../src/eom-window.c:3357
 msgid "_Do not ask again during this session"
 msgstr "Seda _küsimust selle seansi vältel enam ei küsita"
 
-#: ../src/eom-window.c:3338 ../src/eom-window.c:3352
+#: ../src/eom-window.c:3402 ../src/eom-window.c:3416
 #, c-format
 msgid "Couldn't access trash."
 msgstr "Prügikasti pole võimalik kasutada."
 
-#: ../src/eom-window.c:3360
+#: ../src/eom-window.c:3424
 #, c-format
 msgid "Couldn't delete file"
 msgstr "Faili pole võimalik kustutada"
 
-#: ../src/eom-window.c:3457
+#: ../src/eom-window.c:3526
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Viga pildi %s kustutamisel"
 
-#: ../src/eom-window.c:3699
+#: ../src/eom-window.c:3772
 msgid "_Image"
 msgstr "_Pilt"
 
-#: ../src/eom-window.c:3700
+#: ../src/eom-window.c:3773
 msgid "_Edit"
 msgstr "_Redaktor"
 
-#: ../src/eom-window.c:3701
+#: ../src/eom-window.c:3774
 msgid "_View"
 msgstr "_Vaade"
 
-#: ../src/eom-window.c:3702
+#: ../src/eom-window.c:3775
 msgid "_Go"
 msgstr "_Liikumine"
 
-#: ../src/eom-window.c:3703
+#: ../src/eom-window.c:3776
 msgid "_Tools"
 msgstr "_Tööriistad"
 
-#: ../src/eom-window.c:3704
+#: ../src/eom-window.c:3777
 msgid "_Help"
 msgstr "A_bi"
 
-#: ../src/eom-window.c:3706
+#: ../src/eom-window.c:3779
 msgid "_Open…"
 msgstr "_Ava…"
 
-#: ../src/eom-window.c:3707
+#: ../src/eom-window.c:3780
 msgid "Open a file"
 msgstr "Faili avamine"
 
-#: ../src/eom-window.c:3709
+#: ../src/eom-window.c:3782
 msgid "_Close"
 msgstr "_Sulge"
 
-#: ../src/eom-window.c:3710
+#: ../src/eom-window.c:3783
 msgid "Close window"
 msgstr "Akna sulgemine"
 
-#: ../src/eom-window.c:3712
+#: ../src/eom-window.c:3785
 msgid "T_oolbar"
 msgstr "_Tööriistariba"
 
-#: ../src/eom-window.c:3713
+#: ../src/eom-window.c:3786
 msgid "Edit the application toolbar"
 msgstr "Rakenduse tööriistariba redigeerimine"
 
-#: ../src/eom-window.c:3715
+#: ../src/eom-window.c:3788
 msgid "Prefere_nces"
 msgstr "_Eelistused"
 
-#: ../src/eom-window.c:3716
+#: ../src/eom-window.c:3789
 msgid "Preferences for Eye of MATE"
 msgstr "Eye of Mate (gnoomi silma) eelistused"
 
-#: ../src/eom-window.c:3718
+#: ../src/eom-window.c:3791
 msgid "_Contents"
 msgstr "_Sisukord"
 
-#: ../src/eom-window.c:3719
+#: ../src/eom-window.c:3792
 msgid "Help on this application"
 msgstr "Selle rakenduse kohta käiv abiteave"
 
-#: ../src/eom-window.c:3721
+#: ../src/eom-window.c:3794
 msgid "_About"
 msgstr "_Lähemalt"
 
-#: ../src/eom-window.c:3722
+#: ../src/eom-window.c:3795
 msgid "About this application"
 msgstr "Teave programmi kohta"
 
-#: ../src/eom-window.c:3727
+#: ../src/eom-window.c:3800
 msgid "_Toolbar"
 msgstr "_Tööriistariba"
 
-#: ../src/eom-window.c:3728
+#: ../src/eom-window.c:3801
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Käesoleva akna tööriistariba nähtavaloleku muutmine"
 
-#: ../src/eom-window.c:3730
+#: ../src/eom-window.c:3803
 msgid "_Statusbar"
 msgstr "_Olekuriba"
 
-#: ../src/eom-window.c:3731
+#: ../src/eom-window.c:3804
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Käesoleva akna olekuriba nähtavaloleku muutmine"
 
-#: ../src/eom-window.c:3733
+#: ../src/eom-window.c:3806
 msgid "_Image Collection"
 msgstr "_Pildikogumik"
 
-#: ../src/eom-window.c:3734
+#: ../src/eom-window.c:3807
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "Pildikogumiku paani nähtavuse muutmine aktiivses aknas"
 
-#: ../src/eom-window.c:3736
+#: ../src/eom-window.c:3809
 msgid "Side _Pane"
 msgstr "Kül_gpaan"
 
-#: ../src/eom-window.c:3737
+#: ../src/eom-window.c:3810
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Käesoleva akna külgpaani nähtavaloleku muutmine"
 
-#: ../src/eom-window.c:3742
+#: ../src/eom-window.c:3815
 msgid "_Save"
 msgstr "_Salvesta"
 
-#: ../src/eom-window.c:3743
+#: ../src/eom-window.c:3816
 msgid "Save changes in currently selected images"
 msgstr "Hetkel valitud piltides tehtud muudatuste salvestamine"
 
-#: ../src/eom-window.c:3745
+#: ../src/eom-window.c:3818
 msgid "Open _with"
 msgstr "Ava _programmiga"
 
-#: ../src/eom-window.c:3746
+#: ../src/eom-window.c:3819
 msgid "Open the selected image with a different application"
 msgstr "Valitud pildi avamine teise rakendusega"
 
-#: ../src/eom-window.c:3748
+#: ../src/eom-window.c:3821
 msgid "Save _As…"
 msgstr "Salvesta _kui…"
 
-#: ../src/eom-window.c:3749
+#: ../src/eom-window.c:3822
 msgid "Save the selected images with a different name"
 msgstr "Valitud piltide salvestamine teise nimega"
 
-#: ../src/eom-window.c:3751
+#: ../src/eom-window.c:3824
 msgid "Open Containing _Folder"
 msgstr "Ava selle faili _kataloog"
 
-#: ../src/eom-window.c:3752
+#: ../src/eom-window.c:3825
 msgid "Show the folder which contains this file in the file manager"
 msgstr ""
 
-#: ../src/eom-window.c:3754
+#: ../src/eom-window.c:3827
 msgid "_Print…"
 msgstr "_Prindi…"
 
-#: ../src/eom-window.c:3755
+#: ../src/eom-window.c:3828
 msgid "Print the selected image"
 msgstr "Valitud pildi printimine"
 
-#: ../src/eom-window.c:3757
+#: ../src/eom-window.c:3830
 msgid "Prope_rties"
 msgstr "_Omadused"
 
-#: ../src/eom-window.c:3758
+#: ../src/eom-window.c:3831
 msgid "Show the properties and metadata of the selected image"
 msgstr "Valitud pildi omaduste ja metaandmete näitamine"
 
-#: ../src/eom-window.c:3760
+#: ../src/eom-window.c:3833
 msgid "_Undo"
 msgstr "_Unusta"
 
-#: ../src/eom-window.c:3761
+#: ../src/eom-window.c:3834
 msgid "Undo the last change in the image"
 msgstr "Pildile tehtud viimase muudatuse unustamine"
 
-#: ../src/eom-window.c:3763
+#: ../src/eom-window.c:3836
 msgid "Flip _Horizontal"
 msgstr "Peegelda _horisontaalselt"
 
-#: ../src/eom-window.c:3764
+#: ../src/eom-window.c:3837
 msgid "Mirror the image horizontally"
 msgstr "Pildi peegeldamine rõhtsuunas"
 
-#: ../src/eom-window.c:3766
+#: ../src/eom-window.c:3839
 msgid "Flip _Vertical"
 msgstr "Pee_gelda vertikaalselt"
 
-#: ../src/eom-window.c:3767
+#: ../src/eom-window.c:3840
 msgid "Mirror the image vertically"
 msgstr "Pildi peegeldamine püstsuunas"
 
-#: ../src/eom-window.c:3769
+#: ../src/eom-window.c:3842
 msgid "_Rotate Clockwise"
 msgstr "Pööra _päripäeva"
 
-#: ../src/eom-window.c:3770
+#: ../src/eom-window.c:3843
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Pildi pööramine 90 kraadi paremale"
 
-#: ../src/eom-window.c:3772
+#: ../src/eom-window.c:3845
 msgid "Rotate Counterc_lockwise"
 msgstr "Pööra _vastupäeva"
 
-#: ../src/eom-window.c:3773
+#: ../src/eom-window.c:3846
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Pildi pööramine 90 kraadi vasakule"
 
-#: ../src/eom-window.c:3775
+#: ../src/eom-window.c:3848
 msgid "Set as _Desktop Background"
 msgstr "Määra töölaua _taustaks"
 
-#: ../src/eom-window.c:3776
+#: ../src/eom-window.c:3849
 msgid "Set the selected image as the desktop background"
 msgstr "Valitud pildi määramine töölaua taustapildiks"
 
-#: ../src/eom-window.c:3779
+#: ../src/eom-window.c:3852
 msgid "Move the selected image to the trash folder"
 msgstr "Valitud pildi tõstmine prügikasti"
 
-#: ../src/eom-window.c:3781
+#: ../src/eom-window.c:3854
 msgid "_Copy"
 msgstr "_Kopeeri"
 
-#: ../src/eom-window.c:3782
+#: ../src/eom-window.c:3855
 msgid "Copy the selected image to the clipboard"
 msgstr "Valitud pildi kopeerimine lõikelauale"
 
-#: ../src/eom-window.c:3784 ../src/eom-window.c:3796 ../src/eom-window.c:3799
+#: ../src/eom-window.c:3857 ../src/eom-window.c:3869 ../src/eom-window.c:3872
 msgid "_Zoom In"
 msgstr "S_uurenda"
 
-#: ../src/eom-window.c:3785 ../src/eom-window.c:3797
+#: ../src/eom-window.c:3858 ../src/eom-window.c:3870
 msgid "Enlarge the image"
 msgstr "Pildi suurendamine"
 
-#: ../src/eom-window.c:3787 ../src/eom-window.c:3802
+#: ../src/eom-window.c:3860 ../src/eom-window.c:3875
 msgid "Zoom _Out"
 msgstr "_Vähenda"
 
-#: ../src/eom-window.c:3788 ../src/eom-window.c:3800 ../src/eom-window.c:3803
+#: ../src/eom-window.c:3861 ../src/eom-window.c:3873 ../src/eom-window.c:3876
 msgid "Shrink the image"
 msgstr "Pildi vähendamine"
 
-#: ../src/eom-window.c:3790
+#: ../src/eom-window.c:3863
 msgid "_Normal Size"
 msgstr "_Normaalsuurus"
 
-#: ../src/eom-window.c:3791
+#: ../src/eom-window.c:3864
 msgid "Show the image at its normal size"
 msgstr "Pildi normaalsuuruses näitamine"
 
-#: ../src/eom-window.c:3793
+#: ../src/eom-window.c:3866
 msgid "_Best Fit"
 msgstr "Pa_rim sobitus"
 
-#: ../src/eom-window.c:3794
+#: ../src/eom-window.c:3867
 msgid "Fit the image to the window"
 msgstr "Pildi sobitamine aknasse"
 
-#: ../src/eom-window.c:3811
+#: ../src/eom-window.c:3884
 msgid "_Fullscreen"
 msgstr "Täisek_raan"
 
-#: ../src/eom-window.c:3812
+#: ../src/eom-window.c:3885
 msgid "Show the current image in fullscreen mode"
 msgstr "Käesoleva pildi näitamine täisekraanil"
 
-#: ../src/eom-window.c:3814
+#: ../src/eom-window.c:3887
 msgid "Pause Slideshow"
 msgstr "Pausi slaidiesitlus"
 
-#: ../src/eom-window.c:3815
+#: ../src/eom-window.c:3888
 msgid "Pause or resume the slideshow"
 msgstr "Slaidiesituse pausimine/pausi lõpetamine"
 
-#: ../src/eom-window.c:3820 ../src/eom-window.c:3835
+#: ../src/eom-window.c:3893 ../src/eom-window.c:3908
 msgid "_Previous Image"
 msgstr "_Eelmine pilt"
 
-#: ../src/eom-window.c:3821
+#: ../src/eom-window.c:3894
 msgid "Go to the previous image of the collection"
 msgstr "Liikumine kogumiku eelmisele pildile"
 
-#: ../src/eom-window.c:3823
+#: ../src/eom-window.c:3896
 msgid "_Next Image"
 msgstr "_Järgmine pilt"
 
-#: ../src/eom-window.c:3824
+#: ../src/eom-window.c:3897
 msgid "Go to the next image of the collection"
 msgstr "Liikumine kogumiku järgmisele pildile"
 
-#: ../src/eom-window.c:3826 ../src/eom-window.c:3838
+#: ../src/eom-window.c:3899 ../src/eom-window.c:3911
 msgid "_First Image"
 msgstr "E_simene pilt"
 
-#: ../src/eom-window.c:3827
+#: ../src/eom-window.c:3900
 msgid "Go to the first image of the collection"
 msgstr "Liikumine kogumiku esimesele pildile"
 
-#: ../src/eom-window.c:3829 ../src/eom-window.c:3841
+#: ../src/eom-window.c:3902 ../src/eom-window.c:3914
 msgid "_Last Image"
 msgstr "_Viimane pilt"
 
-#: ../src/eom-window.c:3830
+#: ../src/eom-window.c:3903
 msgid "Go to the last image of the collection"
 msgstr "Liikumine kogumiku viimasele pildile"
 
-#: ../src/eom-window.c:3832
+#: ../src/eom-window.c:3905
 msgid "_Random Image"
 msgstr "_Juhuslik pilt"
 
-#: ../src/eom-window.c:3833
+#: ../src/eom-window.c:3906
 msgid "Go to a random image of the collection"
 msgstr "Liikumine juhuslikule kogumiku pildile"
 
-#: ../src/eom-window.c:3847
+#: ../src/eom-window.c:3920
 msgid "S_lideshow"
 msgstr "S_laidiesitus"
 
-#: ../src/eom-window.c:3848
+#: ../src/eom-window.c:3921
 msgid "Start a slideshow view of the images"
 msgstr "Piltide vaatamiseks slaidiesituse käivitamine"
 
-#: ../src/eom-window.c:3914
+#: ../src/eom-window.c:3991
 msgid "Previous"
 msgstr "Eelmine"
 
-#: ../src/eom-window.c:3918
+#: ../src/eom-window.c:3995
 msgid "Next"
 msgstr "Järgmine"
 
-#: ../src/eom-window.c:3922
+#: ../src/eom-window.c:3999
 msgid "Right"
 msgstr "Parem"
 
-#: ../src/eom-window.c:3925
+#: ../src/eom-window.c:4002
 msgid "Left"
 msgstr "Vasak"
 
-#: ../src/eom-window.c:3931
+#: ../src/eom-window.c:4008
 msgid "In"
 msgstr "Suurenda"
 
-#: ../src/eom-window.c:3934
+#: ../src/eom-window.c:4011
 msgid "Out"
 msgstr "Vähenda"
 
-#: ../src/eom-window.c:3937
+#: ../src/eom-window.c:4014
 msgid "Normal"
 msgstr "Tavaline"
 
-#: ../src/eom-window.c:3940
+#: ../src/eom-window.c:4017
 msgid "Fit"
 msgstr "Sobita"
 
-#: ../src/eom-window.c:3943
+#: ../src/eom-window.c:4020
 msgid "Collection"
 msgstr "Kogumik"
 
-#: ../src/eom-window.c:3946
+#: ../src/eom-window.c:4023
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Prügi"
 
-#: ../src/eom-window.c:4291
+#: ../src/eom-window.c:4381
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "Käesoleva pildi muutmine programmiga %s"
 
-#: ../src/eom-window.c:4293
+#: ../src/eom-window.c:4384
 msgid "Edit Image"
 msgstr "Redigeeri pilti"
 
-#: ../src/eom-window.c:4508
+#: ../src/eom-window.c:4608
 msgid "Properties"
 msgstr "Omadused"
 
