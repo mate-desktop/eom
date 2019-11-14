@@ -48,8 +48,8 @@ endif
 
 plugins_DATA = $(plugins_in_files:.plugin.desktop.in=.plugin)
 
-$(plugins_DATA): $(plugins_in_files)
-	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
+%.plugin: %.plugin.desktop.in
+	$(AM_V_GEN) $(MSGFMT) --desktop --keyword=Name --keyword=Description --template $< -d $(top_srcdir)/po -o $@
 
 DISTCLEANFILES = $(plugins_DATA)
 CLEANFILES = $(plugins_DATA)
