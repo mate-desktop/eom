@@ -1,24 +1,52 @@
+### eom 1.23.1
+
+  * Translations update
+  * help: fix Italian translation
+  * help: fix Russian translation
+  * Add translator hint
+  * migrate from intltools to gettext
+  * add missing format specifier for ngettext
+  * egg_editable_toolbar: avoid 'g_type_class_add_private'
+  * egg-toolbar-editor: avoid 'g_type_class_add_private'
+  * egg-toolbars-model: avoid 'g_type_class_add_private'
+  * remove warning: "HAVE_EXIF" is not defined, evaluates to 0 [-Wundef]
+  * remove warnings: incorrect usage of abs() [-Wabsolute-value]
+  * remove warnings: redundant redeclaration [-Wredundant-decls]
+  * remove warning: variable ‘priv’ set but not used
+  * reload-plugin: suppress GtkAction warnings
+  * properties-dialog: suppress GtkAction warnings
+  * eom-window: suppress GtkAction warnings
+  * egg-toolbar-editor: suppress GtkAction warnings
+  * egg-editable-toolbar: suppress GtkAction warnings
+  * Allow color correcting images with alpha channel
+  * EomMetadataReaderPng: Use built-in SRGB profile for matching cHRM/gAMA
+  * EomMetadataReaderPNG: Only build profile from cHRM if gAMA is present
+  * Assume sRGB if no display profile is set
+  * EomImage: Check GdkPixbuf for an ICC profile before falling back to sRGB
+  * Assume sRGB when image doesn't have an ICC profile attached
+  * Remove trailing whitespaces
+
 ### eom 1.23.0
 
-    tx: sync with transifex
-    require GLib 2.52
-    Update FSF address
-    Restore image types list and add wildcard
-    Disconnect callbacks for "Open with" menu items before connecting new ones.
-    Unref GtkUIManager so "Open with" menu is freed.
-    [ci] Add cppcheck html report
-    update image of eom_toolbar_editor_window
-    Use ITS in docbook article info, validate with dbits schemas
-    store: Add any image file in the current directory to the store
-    Simplify the installation process of the icons
-    enable clang analyzer
-    help: update copyright
-    Upgrade the manual to docbook 5.0
-    Use persistent page setup
+  * Translations update
+  * require GLib 2.52
+  * Update FSF address
+  * Restore image types list and add wildcard
+  * Disconnect callbacks for "Open with" menu items before connecting new ones.
+  * Unref GtkUIManager so "Open with" menu is freed.
+  * [ci] Add cppcheck html report
+  * update image of eom_toolbar_editor_window
+  * Use ITS in docbook article info, validate with dbits schemas
+  * store: Add any image file in the current directory to the store
+  * Simplify the installation process of the icons
+  * enable clang analyzer
+  * help: update copyright
+  * Upgrade the manual to docbook 5.0
+  * Use persistent page setup
 
 ### eom 1.22.0
 
-  * tx: sync with transifex
+  * Translations update
   * Add update-authors.pl script which helps to update eom.about
   * Read authors (updated) and documenters (updated) from eom.about gresource
   * Initialize Travis CI support
