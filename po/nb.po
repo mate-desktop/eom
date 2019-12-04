@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the eom package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -11,12 +11,11 @@
 # b84df44fb72862b85bae7a669218c6c2, 2019
 # Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2019
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-12 14:56+0100\n"
+"Project-Id-Version: eom 1.23.0\n"
+"Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
+"POT-Creation-Date: 2019-11-20 14:38+0100\n"
 "PO-Revision-Date: 2018-03-11 15:18+0000\n"
 "Last-Translator: Kjell Cato Heskjestad <cato@heskjestad.xyz>, 2019\n"
 "Language-Team: Norwegian Bokmål (https://www.transifex.com/mate/teams/13566/nb/)\n"
@@ -26,374 +25,377 @@ msgstr ""
 "Language: nb\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. Translaters: This string is for a toggle to display a toolbar.
-#. * The name of the toolbar is automatically computed from the widgets
-#. * on the toolbar, and is placed at the %s. Note the _ before the %s
-#. * which is used to add mnemonics. We know that this is likely to
-#. * produce duplicates, but don't worry about it. If your language
-#. * normally has a mnemonic at the start, please use the _. If not,
-#. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:946
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:946
 #, c-format
 msgid "Show “_%s”"
 msgstr "Vis «_%s»"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
 msgid "_Move on Toolbar"
 msgstr "_Flytt på verktøylinje"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
 msgid "Move the selected item on the toolbar"
 msgstr "Flytt valgt oppføring på verktøylinjen"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1422
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1422
 msgid "_Remove from Toolbar"
 msgstr "Fje_rn verktøylinje"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1423
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1423
 msgid "Remove the selected item from the toolbar"
 msgstr "Fjern valgt oppføring fra verktøylinjen"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1424
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1424
 msgid "_Delete Toolbar"
 msgstr "F_jern verktøylinje"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1425
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1425
 msgid "Remove the selected toolbar"
 msgstr "Fjern valgt verktøylinje"
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:483
+#: cut-n-paste/toolbar-editor/egg-toolbar-editor.c:483
 msgid "Separator"
 msgstr "Skillelinje"
 
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2636
+#: data/eom.appdata.xml.in:6 src/eom-window.c:2636
 msgid "Eye of MATE"
 msgstr "Eye of MATE"
 
-#: ../data/eom.appdata.xml.in.h:2
+#: data/eom.appdata.xml.in:7
 msgid "Simple image viewer"
 msgstr "Enkel bildeviser"
 
-#: ../data/eom.appdata.xml.in.h:3
+#: data/eom.appdata.xml.in:9
 msgid ""
-"<p> Eye of MATE is a simple viewer for browsing images on your computer. "
-"Once an image is loaded, you can zoom and rotate the image, and also view "
-"subsequent images in the directory the image was loaded from. </p>"
+"Eye of MATE is a simple viewer for browsing images on your computer. Once an"
+" image is loaded, you can zoom and rotate the image, and also view "
+"subsequent images in the directory the image was loaded from."
 msgstr ""
-"<p>Eye of MATE er en enkel fremviser for å se igjennom bilder på din "
+"Eye of MATE er en enkel fremviser for å se igjennom bilder på din "
 "datamaskin. Når et bilde er lastet inn, kan du forstørre og rotere bildet, "
-"og også se påfølgende bilder i mappen bildet ble lastet inn fra. </p>"
+"og også se påfølgende bilder i mappen bildet ble lastet inn fra. "
 
-#: ../data/eom.desktop.in.in.h:1 ../src/main.c:65 ../src/main.c:166
+#: data/eom.desktop.in.in:3 src/main.c:65 src/main.c:166
 msgid "Eye of MATE Image Viewer"
 msgstr "Eye of MATE bildevisning"
 
-#: ../data/eom.desktop.in.in.h:2
+#: data/eom.desktop.in.in:4
 msgid "Browse and rotate images"
 msgstr "Bla gjennom og roter bilder"
 
-#: ../data/eom-image-properties-dialog.ui.h:1
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: data/eom.desktop.in.in:8
+msgid "eom"
+msgstr ""
+
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: data/eom.desktop.in.in:14
+msgid "image;viewer;JPEG;PNG;TIFF;SVG;MATE;photos;browse;thumbnails;rotate;"
+msgstr ""
+
+#: data/eom-image-properties-dialog.ui:8
 msgid "Image Properties"
 msgstr "Egenskaper for bilde"
 
-#: ../data/eom-image-properties-dialog.ui.h:2
+#: data/eom-image-properties-dialog.ui:54
 msgid "_Previous"
 msgstr "_Forrige"
 
-#: ../data/eom-image-properties-dialog.ui.h:3
+#: data/eom-image-properties-dialog.ui:101
 msgid "_Next"
 msgstr "_Neste"
 
-#: ../data/eom-image-properties-dialog.ui.h:4
+#: data/eom-image-properties-dialog.ui:198
 msgid "Name:"
 msgstr "Navn:"
 
-#: ../data/eom-image-properties-dialog.ui.h:5
+#: data/eom-image-properties-dialog.ui:217
 msgid "Width:"
 msgstr "Bredde:"
 
-#: ../data/eom-image-properties-dialog.ui.h:6
+#: data/eom-image-properties-dialog.ui:235
 msgid "Height:"
 msgstr "Høyde:"
 
-#: ../data/eom-image-properties-dialog.ui.h:7
+#: data/eom-image-properties-dialog.ui:253
 msgid "Type:"
 msgstr "Type:"
 
-#: ../data/eom-image-properties-dialog.ui.h:8
+#: data/eom-image-properties-dialog.ui:271
 msgid "Bytes:"
 msgstr "Byte:"
 
-#: ../data/eom-image-properties-dialog.ui.h:9
+#: data/eom-image-properties-dialog.ui:289
+#: data/eom-image-properties-dialog.ui:614
 msgid "Location:"
 msgstr "Plassering:"
 
-#: ../data/eom-image-properties-dialog.ui.h:10
+#: data/eom-image-properties-dialog.ui:422
 msgid "General"
 msgstr "Generelt"
 
-#: ../data/eom-image-properties-dialog.ui.h:11
+#: data/eom-image-properties-dialog.ui:455
 msgid "Aperture Value:"
 msgstr "Blenderåpning:"
 
-#: ../data/eom-image-properties-dialog.ui.h:12
+#: data/eom-image-properties-dialog.ui:471
 msgid "Exposure Time:"
 msgstr "Eksponeringstid:"
 
-#: ../data/eom-image-properties-dialog.ui.h:13
+#: data/eom-image-properties-dialog.ui:487
 msgid "Focal Length:"
 msgstr "Brennvidde:"
 
-#: ../data/eom-image-properties-dialog.ui.h:14
+#: data/eom-image-properties-dialog.ui:503
 msgid "Flash:"
 msgstr "Blitz:"
 
-#: ../data/eom-image-properties-dialog.ui.h:15
+#: data/eom-image-properties-dialog.ui:519
 msgid "ISO Speed Rating:"
 msgstr "ISO-verdi:"
 
-#: ../data/eom-image-properties-dialog.ui.h:16
+#: data/eom-image-properties-dialog.ui:535
 msgid "Metering Mode:"
 msgstr "Lysmålingsmodus:"
 
-#: ../data/eom-image-properties-dialog.ui.h:17
+#: data/eom-image-properties-dialog.ui:551
 msgid "Camera Model:"
 msgstr "Kameramodell:"
 
-#: ../data/eom-image-properties-dialog.ui.h:18
+#: data/eom-image-properties-dialog.ui:568
 msgid "Date/Time:"
 msgstr "Dato/klokkeslett:"
 
-#: ../data/eom-image-properties-dialog.ui.h:19
+#: data/eom-image-properties-dialog.ui:598
 msgid "Description:"
 msgstr "Beskrivelse:"
 
-#: ../data/eom-image-properties-dialog.ui.h:20
+#: data/eom-image-properties-dialog.ui:630
 msgid "Keywords:"
 msgstr "Nøkkelord:"
 
-#: ../data/eom-image-properties-dialog.ui.h:21
+#: data/eom-image-properties-dialog.ui:646
 msgid "Author:"
 msgstr "Forfatter:"
 
-#: ../data/eom-image-properties-dialog.ui.h:22
+#: data/eom-image-properties-dialog.ui:662
 msgid "Copyright:"
 msgstr "Opphavsrett:"
 
-#: ../data/eom-image-properties-dialog.ui.h:23
-#: ../data/metadata-sidebar.ui.h:13
+#: data/eom-image-properties-dialog.ui:941
+#: data/eom-image-properties-dialog.ui:990 data/metadata-sidebar.ui:409
 msgid "Details"
 msgstr "Detaljer"
 
-#: ../data/eom-image-properties-dialog.ui.h:24
+#: data/eom-image-properties-dialog.ui:966
 msgid "Metadata"
 msgstr "Metadata"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:1
+#: data/eom-multiple-save-as-dialog.ui:16
 msgid "Save As"
 msgstr "Lagre som"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:3
-#, no-c-format
+#: data/eom-multiple-save-as-dialog.ui:101
 msgid "<b>%f:</b> original filename"
 msgstr "<b>%f:</b> opprinnelig filnavn"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:5
-#, no-c-format
+#: data/eom-multiple-save-as-dialog.ui:119
 msgid "<b>%n:</b> counter"
 msgstr "<b>%n:</b> teller"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:6
+#: data/eom-multiple-save-as-dialog.ui:169
 msgid "Choose a folder"
 msgstr "Velg en mappe"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:7
+#: data/eom-multiple-save-as-dialog.ui:182
 msgid "Destination folder:"
 msgstr "Målmappe:"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:8
+#: data/eom-multiple-save-as-dialog.ui:194
 msgid "Filename format:"
 msgstr "Format for filnavn:"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:9
+#: data/eom-multiple-save-as-dialog.ui:212
 msgid "File Path Specifications"
 msgstr "Spesifisert filsti"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:10
+#: data/eom-multiple-save-as-dialog.ui:253
 msgid "Start counter at:"
 msgstr "Start teller på:"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:11
+#: data/eom-multiple-save-as-dialog.ui:285
 msgid "Replace spaces with underscores"
 msgstr "Erstatt mellomrom med understreking"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:12
+#: data/eom-multiple-save-as-dialog.ui:307
 msgid "Options"
 msgstr "Valg"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:13
+#: data/eom-multiple-save-as-dialog.ui:369
 msgid "Rename from:"
 msgstr "Endre navn fra:"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:14
+#: data/eom-multiple-save-as-dialog.ui:381
 msgid "To:"
 msgstr "Til:"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:15
+#: data/eom-multiple-save-as-dialog.ui:396
 msgid "File Name Preview"
 msgstr "Forhåndsvisning av filnavn"
 
-#: ../data/eom-preferences-dialog.ui.h:1
+#: data/eom-preferences-dialog.ui:16
 msgid "Eye of MATE Preferences"
 msgstr "Brukervalg for Eye of MATE"
 
-#: ../data/eom-preferences-dialog.ui.h:2
+#: data/eom-preferences-dialog.ui:88
 msgid "Image Enhancements"
 msgstr "Bildeforbedringer"
 
-#: ../data/eom-preferences-dialog.ui.h:3
+#: data/eom-preferences-dialog.ui:117
 msgid "Smooth images when zoomed-_out"
 msgstr "Jevn ut bilder som for_minskes"
 
-#: ../data/eom-preferences-dialog.ui.h:4
+#: data/eom-preferences-dialog.ui:155
 msgid "Smooth images when zoomed-_in"
 msgstr "Jevn ut bilder som _forstørres"
 
-#: ../data/eom-preferences-dialog.ui.h:5
+#: data/eom-preferences-dialog.ui:193
 msgid "_Automatic orientation"
 msgstr "_Automatisk orientering"
 
-#: ../data/eom-preferences-dialog.ui.h:6
+#: data/eom-preferences-dialog.ui:231
 msgid "Background"
 msgstr "Bakgrunn"
 
-#: ../data/eom-preferences-dialog.ui.h:7
+#: data/eom-preferences-dialog.ui:250
 msgid "As custom color:"
 msgstr "Som egendefinert farge:"
 
-#: ../data/eom-preferences-dialog.ui.h:8
-#: ../data/org.mate.eom.gschema.xml.in.h:3
+#: data/eom-preferences-dialog.ui:267 data/org.mate.eom.gschema.xml.in:16
 msgid "Background Color"
 msgstr "Bakgrunnsfarge"
 
-#: ../data/eom-preferences-dialog.ui.h:9
+#: data/eom-preferences-dialog.ui:300
 msgid "Transparent Parts"
 msgstr "Gjennomsiktige deler"
 
-#: ../data/eom-preferences-dialog.ui.h:10
+#: data/eom-preferences-dialog.ui:335
 msgid "As check _pattern"
 msgstr "Som _rutemønster"
 
-#: ../data/eom-preferences-dialog.ui.h:11
+#: data/eom-preferences-dialog.ui:356
 msgid "As custom c_olor:"
 msgstr "Som tilpasset f_arge:"
 
-#: ../data/eom-preferences-dialog.ui.h:12
+#: data/eom-preferences-dialog.ui:377
 msgid "Color for Transparent Areas"
 msgstr "Farge for gjennomsiktige områder"
 
-#: ../data/eom-preferences-dialog.ui.h:13
+#: data/eom-preferences-dialog.ui:395
 msgid "As _background"
 msgstr "Som _bakgrunn"
 
-#: ../data/eom-preferences-dialog.ui.h:14
+#: data/eom-preferences-dialog.ui:437
 msgid "Image View"
 msgstr "Bildevisning"
 
-#: ../data/eom-preferences-dialog.ui.h:15
+#: data/eom-preferences-dialog.ui:461
 msgid "Image Zoom"
 msgstr "Bildeforstørrelse"
 
-#: ../data/eom-preferences-dialog.ui.h:16
+#: data/eom-preferences-dialog.ui:496
 msgid "E_xpand images to fit screen"
 msgstr "_Utvid bilder til å passe skjermen"
 
-#: ../data/eom-preferences-dialog.ui.h:17
+#: data/eom-preferences-dialog.ui:541
 msgid "Sequence"
 msgstr "Sekvens"
 
-#: ../data/eom-preferences-dialog.ui.h:18
+#: data/eom-preferences-dialog.ui:583
 msgid "_Switch image after:"
 msgstr "_Bytt bilde etter:"
 
-#: ../data/eom-preferences-dialog.ui.h:19
+#: data/eom-preferences-dialog.ui:611
 msgid "seconds"
 msgstr "sekunder"
 
-#: ../data/eom-preferences-dialog.ui.h:20
+#: data/eom-preferences-dialog.ui:628
 msgid "_Random sequence"
 msgstr "_Tilfeldig sekvens"
 
-#: ../data/eom-preferences-dialog.ui.h:21
+#: data/eom-preferences-dialog.ui:644
 msgid "_Loop sequence"
 msgstr "_Løkkesekvens"
 
-#: ../data/eom-preferences-dialog.ui.h:22
+#: data/eom-preferences-dialog.ui:688
 msgid "Slideshow"
 msgstr "Lysbildevisning"
 
-#: ../data/eom-preferences-dialog.ui.h:23
+#: data/eom-preferences-dialog.ui:722
 msgid "Plugins"
 msgstr "Programtillegg"
 
-#: ../data/metadata-sidebar.ui.h:1 ../src/eom-print-image-setup.c:896
+#: data/metadata-sidebar.ui:29 src/eom-print-image-setup.c:896
 msgid "Size"
 msgstr "Størrelse"
 
-#: ../data/metadata-sidebar.ui.h:2
+#: data/metadata-sidebar.ui:46
 msgid "Type"
 msgstr "Type"
 
-#: ../data/metadata-sidebar.ui.h:3
+#: data/metadata-sidebar.ui:63
 msgid "File Size"
 msgstr "Filstørrelse"
 
-#: ../data/metadata-sidebar.ui.h:4
+#: data/metadata-sidebar.ui:82
 msgid "Folder"
 msgstr "Mappe"
 
-#: ../data/metadata-sidebar.ui.h:5
+#: data/metadata-sidebar.ui:99
 msgid "Aperture"
 msgstr "Blenderverdi"
 
-#: ../data/metadata-sidebar.ui.h:6
+#: data/metadata-sidebar.ui:116
 msgid "Exposure"
 msgstr "Eksponeringstid"
 
-#: ../data/metadata-sidebar.ui.h:7
+#: data/metadata-sidebar.ui:133
 msgid "ISO"
 msgstr "ISO-verdi"
 
-#: ../data/metadata-sidebar.ui.h:8
+#: data/metadata-sidebar.ui:151
 msgid "Metering"
 msgstr "Lysmålingsmodus"
 
-#: ../data/metadata-sidebar.ui.h:9 ../src/eom-metadata-details.c:65
+#: data/metadata-sidebar.ui:169 src/eom-metadata-details.c:65
 msgid "Camera"
 msgstr "Kamera"
 
-#: ../data/metadata-sidebar.ui.h:10
+#: data/metadata-sidebar.ui:187
 msgid "Date"
 msgstr "Dato"
 
-#: ../data/metadata-sidebar.ui.h:11
+#: data/metadata-sidebar.ui:204
 msgid "Time"
 msgstr "Tid"
 
-#: ../data/metadata-sidebar.ui.h:12
+#: data/metadata-sidebar.ui:380
 msgid "Focal Length"
 msgstr "Brennvidde"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:1
+#: data/org.mate.eom.gschema.xml.in:11
 msgid "Automatic orientation"
 msgstr "Automatisk orientering"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:2
+#: data/org.mate.eom.gschema.xml.in:12
 msgid ""
 "Whether the image should be rotated automatically based on EXIF orientation."
 msgstr "Om bildet skal roteres automatisk basert på EXIF-orientering."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:4
+#: data/org.mate.eom.gschema.xml.in:17
 msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
@@ -402,11 +404,11 @@ msgstr ""
 "Fargen som brukes til å fylle området bak bildet. Hvis use-background-color "
 "nøkkelen ikke er satt blir fargen bestemt av aktiv GTK+drakt."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:5
+#: data/org.mate.eom.gschema.xml.in:21
 msgid "Use a custom background color"
 msgstr "Bruk en egendefinert bakgrunnsfarge"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:6
+#: data/org.mate.eom.gschema.xml.in:22
 msgid ""
 "If this is active, the color set by the background-color key will be used to"
 " fill the area behind the image. If it is not set, the current GTK+ theme "
@@ -416,11 +418,11 @@ msgstr ""
 "brukt til å fylle området bak bildet. Hvis den ikke er satt, vil gjeldende "
 "GTK+drakt bestemme fyllfargen."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:7
+#: data/org.mate.eom.gschema.xml.in:26
 msgid "Interpolate Image"
 msgstr "Interpoler bilde"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:8
+#: data/org.mate.eom.gschema.xml.in:27
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
@@ -428,11 +430,11 @@ msgstr ""
 "Om bildet skal interpoleres ved forminskning. Dette gir bedre kvalitet, men "
 "er noe tregere enn ikke-interpolerte bilder."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:9
+#: data/org.mate.eom.gschema.xml.in:31
 msgid "Extrapolate Image"
 msgstr "Ekstrapoler bilde"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:10
+#: data/org.mate.eom.gschema.xml.in:32
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
@@ -440,11 +442,11 @@ msgstr ""
 "Om bildet skal ekstrapoleres ved forstørrelse. Dette gir en uskarp effekt og"
 " er noe tregere enn ikke-ekstrapolerte bilder."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:11
+#: data/org.mate.eom.gschema.xml.in:36
 msgid "Transparency indicator"
 msgstr "Indikator for gjennomsiktighet"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:12
+#: data/org.mate.eom.gschema.xml.in:37
 msgid ""
 "Determines how transparency should be indicated. Valid values are checked, "
 "color and none. If color is chosen, then the trans-color key determines the "
@@ -454,20 +456,19 @@ msgstr ""
 "'color' og 'none'. Hvis en farge er valgt, bestemmer trans-colour -nøkkelen "
 "dem amgitte fargeverdien."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:13
+#: data/org.mate.eom.gschema.xml.in:41
 msgid "Scroll wheel zoom"
 msgstr "Forstørr med musehjul"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:14
+#: data/org.mate.eom.gschema.xml.in:42
 msgid "Whether the scroll wheel should be used for zooming."
 msgstr "Om musehjulet skal brukes til å forstørre eller ikke."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:15
+#: data/org.mate.eom.gschema.xml.in:46
 msgid "Zoom multiplier"
 msgstr "Forstørrelsesfaktor"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:17
-#, no-c-format
+#: data/org.mate.eom.gschema.xml.in:47
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
 "This value defines the zooming step used for each scroll event. For example,"
@@ -478,11 +479,11 @@ msgstr ""
 " definerer forstørrelsessteg til bruk for hver rullehendelse. 0.05 gir f.eks"
 " 5% forstørrelse for hver forstørrelseshendelse og 1.00 gir 100% per steg."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:18
+#: data/org.mate.eom.gschema.xml.in:51
 msgid "Transparency color"
 msgstr "Farge for gjennomsiktighet"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:19
+#: data/org.mate.eom.gschema.xml.in:52
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
@@ -490,28 +491,27 @@ msgstr ""
 "Hvis nøkkel for gjennomsiktighet har verdien COLOR bestemmer denne nøkkelen "
 "farge som brukes for å indikere gjennomsiktighet."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:20
+#: data/org.mate.eom.gschema.xml.in:58
 msgid "Randomize the image sequence"
 msgstr "Tilfeldiggjør bildesekvensen"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:21
+#: data/org.mate.eom.gschema.xml.in:59
 msgid "Whether the sequence of images should be shown in an random loop."
 msgstr "Om bildesekvensen skal vises i en tilfeldig løkke."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:22
+#: data/org.mate.eom.gschema.xml.in:63
 msgid "Loop through the image sequence"
 msgstr "Kontinuerlig visning av bildesekvensen"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:23
+#: data/org.mate.eom.gschema.xml.in:64
 msgid "Whether the sequence of images should be shown in an endless loop."
 msgstr "Om bildesekvensen skal vises i en uendelig løkke."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:25
-#, no-c-format
+#: data/org.mate.eom.gschema.xml.in:68
 msgid "Allow zoom greater than 100% initially"
 msgstr "Tillat forstørring større enn 100% ved start"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:26
+#: data/org.mate.eom.gschema.xml.in:69
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
@@ -519,11 +519,11 @@ msgstr ""
 "Hvis dette settes til FALSE vil ikke små bilder strekkes for å passe til "
 "skjermen."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:27
+#: data/org.mate.eom.gschema.xml.in:73
 msgid "Delay in seconds until showing the next image"
 msgstr "Pause i sekunder før visning av neste bilde"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:28
+#: data/org.mate.eom.gschema.xml.in:74
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until"
 " the next one is shown automatically. Zero disables the automatic browsing."
@@ -531,43 +531,43 @@ msgstr ""
 "En verdi større enn 0 bestemmer antall sekunder før neste bilde vises "
 "automatisk. Null deaktiverer automatisk fremvisning."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:29
+#: data/org.mate.eom.gschema.xml.in:80
 msgid "Show/Hide the window toolbar."
 msgstr "Vis/skjul vinduets verktøylinje."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:30
+#: data/org.mate.eom.gschema.xml.in:84
 msgid "Show/Hide the window statusbar."
 msgstr "Vis/skjul vinduets statuslinje."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:31
+#: data/org.mate.eom.gschema.xml.in:88
 msgid "Show/Hide the image collection pane."
 msgstr "Vis/skjul bildesamlingsområdet."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:32
+#: data/org.mate.eom.gschema.xml.in:92
 msgid "Image collection pane position."
 msgstr "Posisjon for bildeansamlingspanel."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:33
+#: data/org.mate.eom.gschema.xml.in:96
 msgid "Whether the image collection pane should be resizable."
 msgstr "Om bildesamlingsområdet skal kunne endre størrelse eller ikke."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:34
+#: data/org.mate.eom.gschema.xml.in:100
 msgid "Show/Hide the window side pane."
 msgstr "Vis/skjul vinduets sidelinje."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:35
+#: data/org.mate.eom.gschema.xml.in:104
 msgid "Show/Hide the image collection pane scroll buttons."
 msgstr "Vis/skjul rulleknapper for bildesamlingsområdet."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:36
+#: data/org.mate.eom.gschema.xml.in:108
 msgid "Close main window without asking to save changes."
 msgstr "Lukk hovedvinduet uten å spørre om å lagre endringer."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:37
+#: data/org.mate.eom.gschema.xml.in:112
 msgid "Trash images without asking"
 msgstr "Slett bilder uten å spørre"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:38
+#: data/org.mate.eom.gschema.xml.in:113
 msgid ""
 "If activated, Eye of MATE won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
@@ -577,12 +577,12 @@ msgstr ""
 " til papirkurven. Programmet vil dog stadig spørre om filene ikke kan "
 "flyttes til papirkurven og i steden for bil bli slettet."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:39
+#: data/org.mate.eom.gschema.xml.in:117
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
 msgstr "Hvorvidt metadatalisten i egenskaper-dialogen skal ha sin egen side."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:40
+#: data/org.mate.eom.gschema.xml.in:118
 msgid ""
 "If activated, the detailed metadata list in the properties dialog will be "
 "moved to its own page in the dialog. This should make the dialog more usable"
@@ -594,11 +594,11 @@ msgstr ""
 " dialogvinduet mer anvendelig på mindre skjermer, eksempelvis nettbærbare. "
 "Hvis avslått, vil kontrollen bli innebygd i «Metadata»-siden."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:41
+#: data/org.mate.eom.gschema.xml.in:122
 msgid "External program to use for editing images"
 msgstr "Eksternt program til bruk for redigering av bilder"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:42
+#: data/org.mate.eom.gschema.xml.in:123
 msgid ""
 "The desktop file name (including the \".desktop\") of the application to use"
 " for editing images (when the \"Edit Image\" toolbar button is clicked). Set"
@@ -608,7 +608,7 @@ msgstr ""
 "redigering av bilder (når \"Rediger bilde\" verktøyslinjen klikkes). Sett "
 "til en tom streng for å skru dette av."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:43
+#: data/org.mate.eom.gschema.xml.in:127
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images"
 " are loaded."
@@ -616,7 +616,7 @@ msgstr ""
 "Om filvelger skal bruke bilder fra brukers mappe hvis ingen bilder er "
 "lastet."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:44
+#: data/org.mate.eom.gschema.xml.in:128
 msgid ""
 "If activated and no image is loaded in the active window, the file chooser "
 "will display the user's pictures folder using the XDG special user "
@@ -628,11 +628,11 @@ msgstr ""
 " hvis bildemappa ikke har blitt satt opp, vil det vise gjeldende "
 "arbeidsmappe."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:45
+#: data/org.mate.eom.gschema.xml.in:134
 msgid "Active plugins"
 msgstr "Aktive tillegg"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:46
+#: data/org.mate.eom.gschema.xml.in:135
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
@@ -641,50 +641,49 @@ msgstr ""
 "Liste med aktive tillegg. Inne holder ikke «Plassering» for aktive tillegg. "
 "Se .eom-plugin-filen for å finne «Plassering» for et gitt tillegg."
 
-#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
+#: plugins/fullscreen/fullscreen.plugin.desktop.in:5
 msgid "Fullscreen with double-click"
 msgstr "Fullskjerm med dobbeltklikk"
 
-#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
-msgid "Activate fullscreen mode with double-click"
-msgstr "Aktiver fullskjermmodus med dobbeltklikk"
+#: plugins/fullscreen/fullscreen.plugin.desktop.in:6
+msgid "view-fullscreen"
+msgstr ""
 
-#: ../plugins/reload/eom-reload-plugin.c:45
-#: ../plugins/reload/reload.plugin.desktop.in.h:1
+#: plugins/reload/eom-reload-plugin.c:45
+#: plugins/reload/reload.plugin.desktop.in:5
 msgid "Reload Image"
 msgstr "Les bilde på nytt"
 
-#: ../plugins/reload/eom-reload-plugin.c:45
-#: ../plugins/reload/reload.plugin.desktop.in.h:2
+#: plugins/reload/eom-reload-plugin.c:45
 msgid "Reload current image"
 msgstr "Les dette bildet på nytt"
 
-#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
+#: plugins/reload/reload.plugin.desktop.in:6
+msgid "view-refresh"
+msgstr ""
+
+#: plugins/statusbar-date/statusbar-date.plugin.desktop.in:5
 msgid "Date in statusbar"
 msgstr "Dato i statuslinje"
 
-#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
-msgid "Shows the image date in the window statusbar"
-msgstr "Viser dato for bildet i statuslinjen"
-
-#: ../src/eom-close-confirmation-dialog.c:154
+#: src/eom-close-confirmation-dialog.c:154
 msgid "Close _without Saving"
 msgstr "Fortsett _uten å lagre"
 
-#: ../src/eom-close-confirmation-dialog.c:187
+#: src/eom-close-confirmation-dialog.c:187
 msgid "Question"
 msgstr "Spørsmål"
 
-#: ../src/eom-close-confirmation-dialog.c:366
+#: src/eom-close-confirmation-dialog.c:366
 msgid "If you don't save, your changes will be lost."
 msgstr "Hvis du ikke lagrer vil endringene gå tapt."
 
-#: ../src/eom-close-confirmation-dialog.c:402
+#: src/eom-close-confirmation-dialog.c:402
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "Lagre endringer i bilde «%s» før du lukker?"
 
-#: ../src/eom-close-confirmation-dialog.c:597
+#: src/eom-close-confirmation-dialog.c:597
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
@@ -696,20 +695,19 @@ msgstr[1] ""
 "Det finnes %d bilder med endringer som ikke er lagret. Lagre endringer før "
 "programmet lukkes?"
 
-#: ../src/eom-close-confirmation-dialog.c:614
+#: src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
 msgstr "V_elg bildene du vil lagre:"
 
-#. Secondary label
-#: ../src/eom-close-confirmation-dialog.c:633
+#: src/eom-close-confirmation-dialog.c:633
 msgid "If you don't save, all your changes will be lost."
 msgstr "Hvis du ikke lagrer vil alle endringene dine gå tapt."
 
-#: ../src/eom-file-chooser.c:121
+#: src/eom-file-chooser.c:121
 msgid "File format is unknown or unsupported"
 msgstr "Filformatet er ukjent eller ikke støttet"
 
-#: ../src/eom-file-chooser.c:126
+#: src/eom-file-chooser.c:126
 msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
@@ -717,292 +715,276 @@ msgstr ""
 "Eye of MATE kunne ikke bestemme et støttet skrivbart filformat basert på "
 "filnavnet."
 
-#: ../src/eom-file-chooser.c:127
+#: src/eom-file-chooser.c:127
 msgid "Please try a different file extension like .png or .jpg."
 msgstr "Prøv en annen filtype som .png eller .jpg."
 
-#: ../src/eom-file-chooser.c:159
+#: src/eom-file-chooser.c:159
 msgid "All Files"
 msgstr "Alle filer"
 
-#: ../src/eom-file-chooser.c:164
+#: src/eom-file-chooser.c:164
 msgid "All Images"
 msgstr "Alle bilder"
 
-#. Filter name: First description then file extension, eg. "The PNG-Format
-#. (*.png)".
-#: ../src/eom-file-chooser.c:185
+#: src/eom-file-chooser.c:185
 #, c-format
 msgid "%s (*.%s)"
 msgstr "%s (*.%s)"
 
-#. Pixel size of image: width x height in pixel
-#: ../src/eom-file-chooser.c:281 ../src/eom-properties-dialog.c:163
-#: ../src/eom-properties-dialog.c:165 ../src/eom-thumb-view.c:516
+#: src/eom-file-chooser.c:281 src/eom-properties-dialog.c:163
+#: src/eom-properties-dialog.c:165 src/eom-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "piksel"
 msgstr[1] "piksler"
 
-#: ../src/eom-file-chooser.c:451
+#: src/eom-file-chooser.c:451
 msgid "Open Image"
 msgstr "Åpne bilde"
 
-#: ../src/eom-file-chooser.c:459
+#: src/eom-file-chooser.c:459
 msgid "Save Image"
 msgstr "Lagre bilde"
 
-#: ../src/eom-file-chooser.c:467 ../src/eom-window.c:4005
+#: src/eom-file-chooser.c:467 src/eom-window.c:4005
 msgid "Open Folder"
 msgstr "Åpne mappe"
 
-#: ../src/eom-image.c:549
-#, c-format
+#: src/eom-image.c:549
 msgid "Transformation on unloaded image."
 msgstr "Transformasjon på bilde som ikke er lastet."
 
-#: ../src/eom-image.c:577
-#, c-format
+#: src/eom-image.c:577
 msgid "Transformation failed."
 msgstr "Transformasjon mislyktes."
 
-#: ../src/eom-image.c:1048
-#, c-format
+#: src/eom-image.c:1048
 msgid "EXIF not supported for this file format."
 msgstr "EXIF er ikke støttet for dette filformatet."
 
-#: ../src/eom-image.c:1197
-#, c-format
+#: src/eom-image.c:1197
 msgid "Image loading failed."
 msgstr "Innlasting av bilde mislyktes."
 
-#: ../src/eom-image.c:1726 ../src/eom-image.c:1828
-#, c-format
+#: src/eom-image.c:1726 src/eom-image.c:1828
 msgid "No image loaded."
 msgstr "Ingen bilder lastet."
 
-#: ../src/eom-image.c:1736 ../src/eom-image.c:1840
-#, c-format
+#: src/eom-image.c:1736 src/eom-image.c:1840
 msgid "Temporary file creation failed."
 msgstr "Oppretting av midlertidig fil mislyktes."
 
-#: ../src/eom-image-jpeg.c:384
+#: src/eom-image-jpeg.c:384
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr "Kunne ikke opprette midlertidig fil for lagring: %s"
 
-#: ../src/eom-image-jpeg.c:395
-#, c-format
+#: src/eom-image-jpeg.c:395
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "Kunne ikke reservere minne for lasting av JPEG-fil"
 
-#: ../src/eom-error-message-area.c:108
+#: src/eom-error-message-area.c:108
 msgid "_Retry"
 msgstr "_Prøv igjen"
 
-#: ../src/eom-error-message-area.c:151
+#: src/eom-error-message-area.c:151
 #, c-format
 msgid "Could not load image '%s'."
 msgstr "Kunne ikke laste bilde «%s»."
 
-#: ../src/eom-error-message-area.c:193
+#: src/eom-error-message-area.c:193
 #, c-format
 msgid "No images found in '%s'."
 msgstr "Ingen bilder funnet i «%s»."
 
-#: ../src/eom-error-message-area.c:200
+#: src/eom-error-message-area.c:200
 msgid "The given locations contain no images."
 msgstr "Oppgitte plasseringer inneholder ingen bilder."
 
-#: ../src/eom-metadata-details.c:66
+#: src/eom-metadata-details.c:66
 msgid "Image Data"
 msgstr "Bildedata"
 
-#: ../src/eom-metadata-details.c:67
+#: src/eom-metadata-details.c:67
 msgid "Image Taking Conditions"
 msgstr "Tilstand når bildet ble tatt"
 
-#: ../src/eom-metadata-details.c:68
+#: src/eom-metadata-details.c:68
 msgid "GPS Data"
 msgstr "GPS-data"
 
-#: ../src/eom-metadata-details.c:69
+#: src/eom-metadata-details.c:69
 msgid "Maker Note"
 msgstr "Utvidet metadata for kameramodell"
 
-#: ../src/eom-metadata-details.c:70
+#: src/eom-metadata-details.c:70
 msgid "Other"
 msgstr "Annet"
 
-#: ../src/eom-metadata-details.c:72
+#: src/eom-metadata-details.c:72
 msgid "XMP Exif"
 msgstr "XMP Exif"
 
-#: ../src/eom-metadata-details.c:73
+#: src/eom-metadata-details.c:73
 msgid "XMP IPTC"
 msgstr "XMP IPTC"
 
-#: ../src/eom-metadata-details.c:74
+#: src/eom-metadata-details.c:74
 msgid "XMP Rights Management"
 msgstr "XMP rettighetshåndtering"
 
-#: ../src/eom-metadata-details.c:75
+#: src/eom-metadata-details.c:75
 msgid "XMP Other"
 msgstr "XMP annet"
 
-#: ../src/eom-metadata-details.c:251
+#: src/eom-metadata-details.c:251
 msgid "Tag"
 msgstr "Merking"
 
-#: ../src/eom-metadata-details.c:261
+#: src/eom-metadata-details.c:261
 msgid "Value"
 msgstr "Verdi"
 
-#: ../src/eom-metadata-details.c:436
+#: src/eom-metadata-details.c:436
 msgid "North"
 msgstr "Nord"
 
-#: ../src/eom-metadata-details.c:439
+#: src/eom-metadata-details.c:439
 msgid "East"
 msgstr "Øst"
 
-#: ../src/eom-metadata-details.c:442
+#: src/eom-metadata-details.c:442
 msgid "West"
 msgstr "Vest"
 
-#: ../src/eom-metadata-details.c:445
+#: src/eom-metadata-details.c:445
 msgid "South"
 msgstr "Sør"
 
-#. A strftime-formatted string, to display the date the image was taken.
-#: ../src/eom-exif-util.c:191 ../src/eom-exif-util.c:193
+#: src/eom-exif-util.c:191 src/eom-exif-util.c:193
 msgid "%a, %d %B %Y  %X"
 msgstr "%a, %d %B %Y  %X"
 
-#. TRANSLATORS: This is the actual focal length used when
-#. the image was taken.
-#: ../src/eom-exif-util.c:282
+#: src/eom-exif-util.c:282
 #, c-format
 msgid "%.1f (lens)"
 msgstr "%.1f (linse)"
 
-#. Print as float to get a similar look as above.
-#. TRANSLATORS: This is the equivalent focal length assuming
-#. a 35mm film camera.
-#: ../src/eom-exif-util.c:293
+#: src/eom-exif-util.c:293
 #, c-format
 msgid "%.1f (35mm film)"
 msgstr "%.1f (35mm film)"
 
-#: ../src/eom-metadata-sidebar.c:153
+#: src/eom-metadata-sidebar.c:153
 #, c-format
 msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
 msgstr[0] "%i × %i piksel"
 msgstr[1] "%i × %i piksler"
 
-#: ../src/eom-metadata-sidebar.c:164 ../src/eom-properties-dialog.c:180
+#: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
 msgid "Unknown"
 msgstr "Ukjent"
 
-#: ../src/eom-metadata-sidebar.c:229
+#: src/eom-metadata-sidebar.c:229
 msgid "%a, %d %B %Y"
 msgstr "%a, %d %B %Y"
 
-#: ../src/eom-metadata-sidebar.c:233
+#: src/eom-metadata-sidebar.c:233
 #, c-format
 msgid "%X"
 msgstr "%X"
 
-#: ../src/eom-print.c:371
+#: src/eom-print.c:371
 msgid "Image Settings"
 msgstr "Egenskaper for bilde"
 
-#: ../src/eom-print-image-setup.c:824
+#: src/eom-print-image-setup.c:824
 msgid "Image"
 msgstr "Bilde"
 
-#: ../src/eom-print-image-setup.c:825
+#: src/eom-print-image-setup.c:825
 msgid "The image whose printing properties will be set up"
 msgstr "Bilde som skal brukes til egenskaper for utskrift"
 
-#: ../src/eom-print-image-setup.c:831
+#: src/eom-print-image-setup.c:831
 msgid "Page Setup"
 msgstr "Sideoppsett"
 
-#: ../src/eom-print-image-setup.c:832
+#: src/eom-print-image-setup.c:832
 msgid "The information for the page where the image will be printed"
 msgstr "Informasjon for siden hvor bildet skal skrives ut"
 
-#: ../src/eom-print-image-setup.c:858
+#: src/eom-print-image-setup.c:858
 msgid "Position"
 msgstr "Posisjon"
 
-#: ../src/eom-print-image-setup.c:862
+#: src/eom-print-image-setup.c:862
 msgid "_Left:"
 msgstr "_Venstre:"
 
-#: ../src/eom-print-image-setup.c:864
+#: src/eom-print-image-setup.c:864
 msgid "_Right:"
 msgstr "Høy_re:"
 
-#: ../src/eom-print-image-setup.c:865
+#: src/eom-print-image-setup.c:865
 msgid "_Top:"
 msgstr "_Topp:"
 
-#: ../src/eom-print-image-setup.c:866
+#: src/eom-print-image-setup.c:866
 msgid "_Bottom:"
 msgstr "_Bunn:"
 
-#: ../src/eom-print-image-setup.c:869
+#: src/eom-print-image-setup.c:869
 msgid "C_enter:"
 msgstr "S_entrert:"
 
-#: ../src/eom-print-image-setup.c:874
+#: src/eom-print-image-setup.c:874
 msgid "None"
 msgstr "Ingen"
 
-#: ../src/eom-print-image-setup.c:876
+#: src/eom-print-image-setup.c:876
 msgid "Horizontal"
 msgstr "Horisontal"
 
-#: ../src/eom-print-image-setup.c:878
+#: src/eom-print-image-setup.c:878
 msgid "Vertical"
 msgstr "Vertikal"
 
-#: ../src/eom-print-image-setup.c:880
+#: src/eom-print-image-setup.c:880
 msgid "Both"
 msgstr "Begge"
 
-#: ../src/eom-print-image-setup.c:899
+#: src/eom-print-image-setup.c:899
 msgid "_Width:"
 msgstr "_Bredde:"
 
-#: ../src/eom-print-image-setup.c:901
+#: src/eom-print-image-setup.c:901
 msgid "_Height:"
 msgstr "_Høyde:"
 
-#: ../src/eom-print-image-setup.c:904
+#: src/eom-print-image-setup.c:904
 msgid "_Scaling:"
 msgstr "_Skalering:"
 
-#: ../src/eom-print-image-setup.c:915
+#: src/eom-print-image-setup.c:915
 msgid "_Unit:"
 msgstr "En_het:"
 
-#: ../src/eom-print-image-setup.c:920
+#: src/eom-print-image-setup.c:920
 msgid "Millimeters"
 msgstr "Millimeter"
 
-#: ../src/eom-print-image-setup.c:922
+#: src/eom-print-image-setup.c:922
 msgid "Inches"
 msgstr "Tommer"
 
-#: ../src/eom-print-image-setup.c:950
+#: src/eom-print-image-setup.c:950
 msgid "Preview"
 msgstr "Forhåndsvisning"
 
-#: ../src/eom-save-as-dialog-helper.c:161
+#: src/eom-save-as-dialog-helper.c:161
 msgid "as is"
 msgstr "som det er"
 
@@ -1016,25 +998,24 @@ msgstr "som det er"
 #. * Note that translating this doesn't guarantee that you get localized
 #. * digits. That needs support from your system and locale definition
 #. * too.
-#: ../src/eom-statusbar.c:122
+#: src/eom-statusbar.c:122
 #, c-format
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/eom-thumb-view.c:544
+#: src/eom-thumb-view.c:544
 msgid "Taken on"
 msgstr "Tatt"
 
-#: ../src/eom-uri-converter.c:986
-#, c-format
+#: src/eom-uri-converter.c:986
 msgid "At least two file names are equal."
 msgstr "Minst to filnavn er like."
 
-#: ../src/eom-util.c:68
+#: src/eom-util.c:68
 msgid "Could not display help for Eye of MATE"
 msgstr "Kunne ikke vise hjelp for Eye of MATE"
 
-#: ../src/eom-util.c:116
+#: src/eom-util.c:116
 msgid " (invalid Unicode)"
 msgstr " (ugyldig Unicode)"
 
@@ -1044,25 +1025,23 @@ msgstr " (ugyldig Unicode)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/eom-window.c:517
+#: src/eom-window.c:517
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i piksel  %s    %i%%"
 msgstr[1] "%i × %i piksler  %s    %i%%"
 
-#: ../src/eom-window.c:828
+#: src/eom-window.c:828
 msgid "_Reload"
 msgstr "L_es på nytt"
 
-#: ../src/eom-window.c:830 ../src/eom-window.c:2790
+#: src/eom-window.c:830 src/eom-window.c:2790
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "S_kjul"
 
-#. The newline character is currently necessary due to a problem
-#. * with the automatic line break.
-#: ../src/eom-window.c:840
+#: src/eom-window.c:840
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -1071,7 +1050,7 @@ msgstr ""
 "Bilde «%s» er endret av et ekstert program.\n"
 "Vil du laste bildet på nytt?"
 
-#: ../src/eom-window.c:1008
+#: src/eom-window.c:1008
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Bruk «%s» til å åpne valgt bilde"
@@ -1081,25 +1060,25 @@ msgstr "Bruk «%s» til å åpne valgt bilde"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1172
+#: src/eom-window.c:1172
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Lagrer bilde «%s» (%u/%u)"
 
-#: ../src/eom-window.c:1539
+#: src/eom-window.c:1539
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Åpner bilde «%s»"
 
-#: ../src/eom-window.c:1905
+#: src/eom-window.c:1905
 msgid "Leave Fullscreen"
 msgstr "Forlat fullskjerm"
 
-#: ../src/eom-window.c:2046
+#: src/eom-window.c:2046
 msgid "Viewing a slideshow"
 msgstr "Viser lysbilder"
 
-#: ../src/eom-window.c:2259
+#: src/eom-window.c:2259
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1108,15 +1087,15 @@ msgstr ""
 "Feil under utskrift av fil:\n"
 "%s"
 
-#: ../src/eom-window.c:2522
+#: src/eom-window.c:2522
 msgid "Toolbar Editor"
 msgstr "Redigering av verktøylinje"
 
-#: ../src/eom-window.c:2525
+#: src/eom-window.c:2525
 msgid "_Reset to Default"
 msgstr "_Sett til forvalg"
 
-#: ../src/eom-window.c:2590
+#: src/eom-window.c:2590
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1128,7 +1107,7 @@ msgstr ""
 "av Free Software Foundation; enten versjon 2 av lisensen, eller (hvis du "
 "ønsker det) enhver senere versjon.\n"
 
-#: ../src/eom-window.c:2594
+#: src/eom-window.c:2594
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1139,7 +1118,7 @@ msgstr ""
 "NOEN GARANTI, ikke engang implisitt garanti om at det er SALGBART eller "
 "PASSER ET BESTEMT FORMÅL. Se GNU General Public License for detaljer.\n"
 
-#: ../src/eom-window.c:2598
+#: src/eom-window.c:2598
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
@@ -1149,11 +1128,11 @@ msgstr ""
 "programmet. Hvis dette ikke er tilfelle, kan du skrive til Free Software "
 "Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 
-#: ../src/eom-window.c:2637
+#: src/eom-window.c:2637
 msgid "About Eye of MATE"
 msgstr "Om Eye of MATE"
 
-#: ../src/eom-window.c:2639
+#: src/eom-window.c:2639
 msgid ""
 "Copyright © 2000-2010 Free Software Foundation, Inc.\n"
 "Copyright © 2011 Perberos\n"
@@ -1163,11 +1142,11 @@ msgstr ""
 "Opphavsrett © 2011 Perberos\n"
 "Opphavsrett © 2012-2019 MATE-utviklerne"
 
-#: ../src/eom-window.c:2642
+#: src/eom-window.c:2642
 msgid "The MATE image viewer."
 msgstr "Bildevisning for MATE."
 
-#: ../src/eom-window.c:2645
+#: src/eom-window.c:2645
 msgid "translator-credits"
 msgstr ""
 "Send en e-post om du finner feil eller mangler i oversettelsen.\n"
@@ -1181,19 +1160,15 @@ msgstr ""
 "\n"
 "Av totalt 11597 tekststrenger."
 
-#: ../src/eom-window.c:2738 ../src/eom-window.c:2753
+#: src/eom-window.c:2738 src/eom-window.c:2753
 msgid "Error launching appearance preferences dialog: "
 msgstr "Klarte ikke åpne vinduet med innstillinger for utseende:"
 
-#. I18N: When setting mnemonics for these strings, watch out to not
-#. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2788
+#: src/eom-window.c:2788
 msgid "_Open Background Preferences"
 msgstr "_Åpne brukervalg for bakgrunn"
 
-#. The newline character is currently necessary due to a problem
-#. * with the automatic line break.
-#: ../src/eom-window.c:2804
+#: src/eom-window.c:2804
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1202,11 +1177,11 @@ msgstr ""
 "Bilde «%s» er satt som skrivebordsbakgrunn.\n"
 "Vil du forandre utseende på bildet?"
 
-#: ../src/eom-window.c:3245
+#: src/eom-window.c:3245
 msgid "Saving image locally…"
 msgstr "Lagrer bildet lokalt …"
 
-#: ../src/eom-window.c:3325
+#: src/eom-window.c:3325
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1215,7 +1190,7 @@ msgstr ""
 "Er du sikker på at du vil\n"
 "flytte «%s» til papirkurven?"
 
-#: ../src/eom-window.c:3328
+#: src/eom-window.c:3328
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
@@ -1224,7 +1199,7 @@ msgstr ""
 "Fant ikke papirkurv for «%s». Er du sikker på at du vil fjerne dette bildet "
 "permanent?"
 
-#: ../src/eom-window.c:3333
+#: src/eom-window.c:3333
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1233,9 +1208,13 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
+"Er du sikker på at du vil flytte\n"
+"det %d valgte bildet til papirkurven?"
 msgstr[1] ""
+"Er du sikker på at du vil flytte\n"
+"de %d valgte bildene til papirkurven?"
 
-#: ../src/eom-window.c:3338
+#: src/eom-window.c:3338
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1243,418 +1222,415 @@ msgstr ""
 "Noen av de valgte bildene kan ikke flyttes til papirkurven og vil bli "
 "fjernet permanent. Er du sikker på at du vil fortsette?"
 
-#: ../src/eom-window.c:3355 ../src/eom-window.c:3851 ../src/eom-window.c:3878
+#: src/eom-window.c:3355 src/eom-window.c:3851 src/eom-window.c:3878
 msgid "Move to _Trash"
 msgstr "Flytt til _papirkurv"
 
-#: ../src/eom-window.c:3357
+#: src/eom-window.c:3357
 msgid "_Do not ask again during this session"
 msgstr "Ikke spør i_gjen under denne økta"
 
-#: ../src/eom-window.c:3402 ../src/eom-window.c:3416
-#, c-format
+#: src/eom-window.c:3402 src/eom-window.c:3416
 msgid "Couldn't access trash."
 msgstr "Kunne ikke aksessere papirkurv."
 
-#: ../src/eom-window.c:3424
-#, c-format
+#: src/eom-window.c:3424
 msgid "Couldn't delete file"
 msgstr "Kunne ikke slette fil"
 
-#: ../src/eom-window.c:3526
+#: src/eom-window.c:3526
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Feil under sletting av bilde %s"
 
-#: ../src/eom-window.c:3772
+#: src/eom-window.c:3772
 msgid "_Image"
 msgstr "_Bilde"
 
-#: ../src/eom-window.c:3773
+#: src/eom-window.c:3773
 msgid "_Edit"
 msgstr "_Rediger"
 
-#: ../src/eom-window.c:3774
+#: src/eom-window.c:3774
 msgid "_View"
 msgstr "_Vis"
 
-#: ../src/eom-window.c:3775
+#: src/eom-window.c:3775
 msgid "_Go"
 msgstr "_Gå til"
 
-#: ../src/eom-window.c:3776
+#: src/eom-window.c:3776
 msgid "_Tools"
 msgstr "_Verktøy"
 
-#: ../src/eom-window.c:3777
+#: src/eom-window.c:3777
 msgid "_Help"
 msgstr "_Hjelp"
 
-#: ../src/eom-window.c:3779
+#: src/eom-window.c:3779
 msgid "_Open…"
 msgstr "_Åpne …"
 
-#: ../src/eom-window.c:3780
+#: src/eom-window.c:3780
 msgid "Open a file"
 msgstr "Åpne en fil"
 
-#: ../src/eom-window.c:3782
+#: src/eom-window.c:3782
 msgid "_Close"
 msgstr "_Lukk"
 
-#: ../src/eom-window.c:3783
+#: src/eom-window.c:3783
 msgid "Close window"
 msgstr "Lukk vindu"
 
-#: ../src/eom-window.c:3785
+#: src/eom-window.c:3785
 msgid "T_oolbar"
 msgstr "V_erktøylinje"
 
-#: ../src/eom-window.c:3786
+#: src/eom-window.c:3786
 msgid "Edit the application toolbar"
 msgstr "Rediger programmets verktøylinje"
 
-#: ../src/eom-window.c:3788
+#: src/eom-window.c:3788
 msgid "Prefere_nces"
 msgstr "_Brukervalg"
 
-#: ../src/eom-window.c:3789
+#: src/eom-window.c:3789
 msgid "Preferences for Eye of MATE"
 msgstr "Brukervalg for Eye of MATE"
 
-#: ../src/eom-window.c:3791
+#: src/eom-window.c:3791
 msgid "_Contents"
 msgstr "_Innhold"
 
-#: ../src/eom-window.c:3792
+#: src/eom-window.c:3792
 msgid "Help on this application"
 msgstr "Hjelp om dette programmet"
 
-#: ../src/eom-window.c:3794
+#: src/eom-window.c:3794
 msgid "_About"
 msgstr "Om"
 
-#: ../src/eom-window.c:3795
+#: src/eom-window.c:3795
 msgid "About this application"
 msgstr "Om dette programmet"
 
-#: ../src/eom-window.c:3800
+#: src/eom-window.c:3800
 msgid "_Toolbar"
 msgstr "Verk_tøylinje"
 
-#: ../src/eom-window.c:3801
+#: src/eom-window.c:3801
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Endrer synlighet for verktøylinjen i aktivt vindu"
 
-#: ../src/eom-window.c:3803
+#: src/eom-window.c:3803
 msgid "_Statusbar"
 msgstr "_Statuslinje"
 
-#: ../src/eom-window.c:3804
+#: src/eom-window.c:3804
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Endrer synlighet for statuslinjen i aktivt vindu"
 
-#: ../src/eom-window.c:3806
+#: src/eom-window.c:3806
 msgid "_Image Collection"
 msgstr "B_ildesamling"
 
-#: ../src/eom-window.c:3807
+#: src/eom-window.c:3807
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "Endre synlighet for bildesamlingsområdet i aktivt vindu"
 
-#: ../src/eom-window.c:3809
+#: src/eom-window.c:3809
 msgid "Side _Pane"
 msgstr "Si_defelt"
 
-#: ../src/eom-window.c:3810
+#: src/eom-window.c:3810
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Endrer synlighet for sidelinjen i aktivt vindu"
 
-#: ../src/eom-window.c:3815
+#: src/eom-window.c:3815
 msgid "_Save"
 msgstr "_Lagre"
 
-#: ../src/eom-window.c:3816
+#: src/eom-window.c:3816
 msgid "Save changes in currently selected images"
 msgstr "Lagre endringene i de aktive valgte bildene"
 
-#: ../src/eom-window.c:3818
+#: src/eom-window.c:3818
 msgid "Open _with"
 msgstr "Åpne _med"
 
-#: ../src/eom-window.c:3819
+#: src/eom-window.c:3819
 msgid "Open the selected image with a different application"
 msgstr "Åpne det valgte bildet med et annet program"
 
-#: ../src/eom-window.c:3821
+#: src/eom-window.c:3821
 msgid "Save _As…"
 msgstr "L_agre som …"
 
-#: ../src/eom-window.c:3822
+#: src/eom-window.c:3822
 msgid "Save the selected images with a different name"
 msgstr "Lagre de valgte bildene med et annet navn"
 
-#: ../src/eom-window.c:3824
+#: src/eom-window.c:3824
 msgid "Open Containing _Folder"
 msgstr "Åpne inneholdende _mappe"
 
-#: ../src/eom-window.c:3825
+#: src/eom-window.c:3825
 msgid "Show the folder which contains this file in the file manager"
 msgstr "Vis mappen som inneholder denne filen i filhåndtereren"
 
-#: ../src/eom-window.c:3827
+#: src/eom-window.c:3827
 msgid "_Print…"
 msgstr "_Skriv ut …"
 
-#: ../src/eom-window.c:3828
+#: src/eom-window.c:3828
 msgid "Print the selected image"
 msgstr "Skriv ut valgt bilde"
 
-#: ../src/eom-window.c:3830
+#: src/eom-window.c:3830
 msgid "Prope_rties"
 msgstr "Egenskape_r"
 
-#: ../src/eom-window.c:3831
+#: src/eom-window.c:3831
 msgid "Show the properties and metadata of the selected image"
 msgstr "Vis egenskaper og metadata for det valgte bildet"
 
-#: ../src/eom-window.c:3833
+#: src/eom-window.c:3833
 msgid "_Undo"
 msgstr "A_ngre"
 
-#: ../src/eom-window.c:3834
+#: src/eom-window.c:3834
 msgid "Undo the last change in the image"
 msgstr "Angre siste endring i bildet"
 
-#: ../src/eom-window.c:3836
+#: src/eom-window.c:3836
 msgid "Flip _Horizontal"
 msgstr "Vend _horisontalt"
 
-#: ../src/eom-window.c:3837
+#: src/eom-window.c:3837
 msgid "Mirror the image horizontally"
 msgstr "Speil bildet horisontalt"
 
-#: ../src/eom-window.c:3839
+#: src/eom-window.c:3839
 msgid "Flip _Vertical"
 msgstr "Vend _vertikalt"
 
-#: ../src/eom-window.c:3840
+#: src/eom-window.c:3840
 msgid "Mirror the image vertically"
 msgstr "Speil bildet vertikalt"
 
-#: ../src/eom-window.c:3842
+#: src/eom-window.c:3842
 msgid "_Rotate Clockwise"
 msgstr "_Roter med klokken"
 
-#: ../src/eom-window.c:3843
+#: src/eom-window.c:3843
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Roter bildet 90 grader til høyre"
 
-#: ../src/eom-window.c:3845
+#: src/eom-window.c:3845
 msgid "Rotate Counterc_lockwise"
 msgstr "Roter mot k_lokken"
 
-#: ../src/eom-window.c:3846
+#: src/eom-window.c:3846
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Roter bildet 90 grader til venstre"
 
-#: ../src/eom-window.c:3848
+#: src/eom-window.c:3848
 msgid "Set as _Desktop Background"
 msgstr "Som bakgrunn for skrivebor_det"
 
-#: ../src/eom-window.c:3849
+#: src/eom-window.c:3849
 msgid "Set the selected image as the desktop background"
 msgstr "Sett valgt bilde som skrivebordsbakgrunn"
 
-#: ../src/eom-window.c:3852
+#: src/eom-window.c:3852
 msgid "Move the selected image to the trash folder"
 msgstr "Flytt valgt bilde til papirkurven"
 
-#: ../src/eom-window.c:3854
+#: src/eom-window.c:3854
 msgid "_Copy"
 msgstr "_Kopier"
 
-#: ../src/eom-window.c:3855
+#: src/eom-window.c:3855
 msgid "Copy the selected image to the clipboard"
 msgstr "Kopier valgt bilde til utklippstavlen"
 
-#: ../src/eom-window.c:3857 ../src/eom-window.c:3869 ../src/eom-window.c:3872
+#: src/eom-window.c:3857 src/eom-window.c:3869 src/eom-window.c:3872
 msgid "_Zoom In"
 msgstr "_Forstørr"
 
-#: ../src/eom-window.c:3858 ../src/eom-window.c:3870
+#: src/eom-window.c:3858 src/eom-window.c:3870
 msgid "Enlarge the image"
 msgstr "Forstørr bildet"
 
-#: ../src/eom-window.c:3860 ../src/eom-window.c:3875
+#: src/eom-window.c:3860 src/eom-window.c:3875
 msgid "Zoom _Out"
 msgstr "For_minsk"
 
-#: ../src/eom-window.c:3861 ../src/eom-window.c:3873 ../src/eom-window.c:3876
+#: src/eom-window.c:3861 src/eom-window.c:3873 src/eom-window.c:3876
 msgid "Shrink the image"
 msgstr "Krymp bildet"
 
-#: ../src/eom-window.c:3863
+#: src/eom-window.c:3863
 msgid "_Normal Size"
 msgstr "_Normal størrelse"
 
-#: ../src/eom-window.c:3864
+#: src/eom-window.c:3864
 msgid "Show the image at its normal size"
 msgstr "Vis bildet i normal størrelse"
 
-#: ../src/eom-window.c:3866
+#: src/eom-window.c:3866
 msgid "_Best Fit"
 msgstr "_Beste tilpasning"
 
-#: ../src/eom-window.c:3867
+#: src/eom-window.c:3867
 msgid "Fit the image to the window"
 msgstr "Tilpass bildet til vinduet"
 
-#: ../src/eom-window.c:3884
+#: src/eom-window.c:3884
 msgid "_Fullscreen"
 msgstr "_Fullskjerm"
 
-#: ../src/eom-window.c:3885
+#: src/eom-window.c:3885
 msgid "Show the current image in fullscreen mode"
 msgstr "Vis det aktive bildet i fullskjerm-modus"
 
-#: ../src/eom-window.c:3887
+#: src/eom-window.c:3887
 msgid "Pause Slideshow"
 msgstr "Sett lysbildevisning på pause"
 
-#: ../src/eom-window.c:3888
+#: src/eom-window.c:3888
 msgid "Pause or resume the slideshow"
 msgstr "Gjennoppta eller sett lysbildevisning på pause"
 
-#: ../src/eom-window.c:3893 ../src/eom-window.c:3908
+#: src/eom-window.c:3893 src/eom-window.c:3908
 msgid "_Previous Image"
 msgstr "F_orrige bilde"
 
-#: ../src/eom-window.c:3894
+#: src/eom-window.c:3894
 msgid "Go to the previous image of the collection"
 msgstr "Gå til forrige bilde i samlingen"
 
-#: ../src/eom-window.c:3896
+#: src/eom-window.c:3896
 msgid "_Next Image"
 msgstr "_Neste bilde"
 
-#: ../src/eom-window.c:3897
+#: src/eom-window.c:3897
 msgid "Go to the next image of the collection"
 msgstr "Gå til neste bilde i samlingen"
 
-#: ../src/eom-window.c:3899 ../src/eom-window.c:3911
+#: src/eom-window.c:3899 src/eom-window.c:3911
 msgid "_First Image"
 msgstr "_Første bilde"
 
-#: ../src/eom-window.c:3900
+#: src/eom-window.c:3900
 msgid "Go to the first image of the collection"
 msgstr "Gå til første bilde i samlingen"
 
-#: ../src/eom-window.c:3902 ../src/eom-window.c:3914
+#: src/eom-window.c:3902 src/eom-window.c:3914
 msgid "_Last Image"
 msgstr "_Siste bilde"
 
-#: ../src/eom-window.c:3903
+#: src/eom-window.c:3903
 msgid "Go to the last image of the collection"
 msgstr "Gå til siste bilde i samlingen"
 
-#: ../src/eom-window.c:3905
+#: src/eom-window.c:3905
 msgid "_Random Image"
 msgstr "Tilfel_dig bilde"
 
-#: ../src/eom-window.c:3906
+#: src/eom-window.c:3906
 msgid "Go to a random image of the collection"
 msgstr "Gå til et tilfeldig bilde i samlingen"
 
-#: ../src/eom-window.c:3920
+#: src/eom-window.c:3920
 msgid "S_lideshow"
 msgstr "_Lysbildeframvisning"
 
-#: ../src/eom-window.c:3921
+#: src/eom-window.c:3921
 msgid "Start a slideshow view of the images"
 msgstr "Start lysbildevisning av bildene"
 
-#: ../src/eom-window.c:3991
+#: src/eom-window.c:3991
 msgid "Previous"
 msgstr "Forrige"
 
-#: ../src/eom-window.c:3995
+#: src/eom-window.c:3995
 msgid "Next"
 msgstr "Neste"
 
-#: ../src/eom-window.c:3999
+#: src/eom-window.c:3999
 msgid "Right"
 msgstr "Høyre"
 
-#: ../src/eom-window.c:4002
+#: src/eom-window.c:4002
 msgid "Left"
 msgstr "Venstre"
 
-#: ../src/eom-window.c:4008
+#: src/eom-window.c:4008
 msgid "In"
 msgstr "Inn"
 
-#: ../src/eom-window.c:4011
+#: src/eom-window.c:4011
 msgid "Out"
 msgstr "Ut"
 
-#: ../src/eom-window.c:4014
+#: src/eom-window.c:4014
 msgid "Normal"
 msgstr "Normal"
 
-#: ../src/eom-window.c:4017
+#: src/eom-window.c:4017
 msgid "Fit"
 msgstr "Tilpass"
 
-#: ../src/eom-window.c:4020
+#: src/eom-window.c:4020
 msgid "Collection"
 msgstr "Samling"
 
-#: ../src/eom-window.c:4023
+#: src/eom-window.c:4023
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Papirkurv"
 
-#: ../src/eom-window.c:4381
+#: src/eom-window.c:4381
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "Rediger nåværende bilde ved bruk av %s"
 
-#: ../src/eom-window.c:4384
+#: src/eom-window.c:4384
 msgid "Edit Image"
 msgstr "Rediger bilde"
 
-#: ../src/eom-window.c:4608
+#: src/eom-window.c:4608
 msgid "Properties"
 msgstr "Egenskaper"
 
-#: ../src/main.c:72
+#: src/main.c:72
 msgid "Open in fullscreen mode"
 msgstr "Åpne i fullskjermmodus"
 
-#: ../src/main.c:73
+#: src/main.c:73
 msgid "Disable image collection"
 msgstr "Slå av bildesamling"
 
-#: ../src/main.c:74
+#: src/main.c:74
 msgid "Open in slideshow mode"
 msgstr "Åpne i presentasjonsmodus"
 
-#: ../src/main.c:75
+#: src/main.c:75
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "Starter en ny instans i stedet for å gjenbruke en eksisterende"
 
-#: ../src/main.c:77
+#: src/main.c:77
 msgid "Show the application's version"
 msgstr "Viser programmets versjon"
 
-#: ../src/main.c:108
+#: src/main.c:108
 msgid "[FILE…]"
 msgstr "[FIL…]"
 
-#. I18N: The '%s' is replaced with eom's command name.
-#: ../src/main.c:121
+#: src/main.c:121
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""

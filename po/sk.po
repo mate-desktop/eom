@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR MATE Desktop Environment team
+# This file is distributed under the same license as the eom package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -13,12 +13,11 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Vendelín Slezák <klaykap@yandex.com>, 2018
 # 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-12 14:56+0100\n"
+"Project-Id-Version: eom 1.23.0\n"
+"Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
+"POT-Creation-Date: 2019-11-20 14:38+0100\n"
 "PO-Revision-Date: 2018-03-11 15:18+0000\n"
 "Last-Translator: Vendelín Slezák <klaykap@yandex.com>, 2018\n"
 "Language-Team: Slovak (https://www.transifex.com/mate/teams/13566/sk/)\n"
@@ -28,374 +27,374 @@ msgstr ""
 "Language: sk\n"
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
 
-#. Translaters: This string is for a toggle to display a toolbar.
-#. * The name of the toolbar is automatically computed from the widgets
-#. * on the toolbar, and is placed at the %s. Note the _ before the %s
-#. * which is used to add mnemonics. We know that this is likely to
-#. * produce duplicates, but don't worry about it. If your language
-#. * normally has a mnemonic at the start, please use the _. If not,
-#. * please remove.
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:946
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:946
 #, c-format
 msgid "Show “_%s”"
 msgstr "Zobraziť „_%s“"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
 msgid "_Move on Toolbar"
 msgstr "_Presunúť na paneli nástrojov"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
 msgid "Move the selected item on the toolbar"
 msgstr "Presunúť vybranú položku na paneli nástrojov"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1422
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1422
 msgid "_Remove from Toolbar"
 msgstr "_Ostrániť z panelu nástrojov"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1423
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1423
 msgid "Remove the selected item from the toolbar"
 msgstr "Odstrániť vybranú položku z panelu nástrojov"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1424
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1424
 msgid "_Delete Toolbar"
 msgstr "_Odstrániť panel nástrojov"
 
-#: ../cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1425
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1425
 msgid "Remove the selected toolbar"
 msgstr "_Odstrániť vybraný panel nástrojov"
 
-#: ../cut-n-paste/toolbar-editor/egg-toolbar-editor.c:483
+#: cut-n-paste/toolbar-editor/egg-toolbar-editor.c:483
 msgid "Separator"
 msgstr "Oddeľovač"
 
-#: ../data/eom.appdata.xml.in.h:1 ../src/eom-window.c:2636
+#: data/eom.appdata.xml.in:6 src/eom-window.c:2636
 msgid "Eye of MATE"
 msgstr "Oko MATE"
 
-#: ../data/eom.appdata.xml.in.h:2
+#: data/eom.appdata.xml.in:7
 msgid "Simple image viewer"
 msgstr "Jednoduchý prehliadač obrázkov"
 
-#: ../data/eom.appdata.xml.in.h:3
+#: data/eom.appdata.xml.in:9
 msgid ""
-"<p> Eye of MATE is a simple viewer for browsing images on your computer. "
-"Once an image is loaded, you can zoom and rotate the image, and also view "
-"subsequent images in the directory the image was loaded from. </p>"
+"Eye of MATE is a simple viewer for browsing images on your computer. Once an"
+" image is loaded, you can zoom and rotate the image, and also view "
+"subsequent images in the directory the image was loaded from."
 msgstr ""
-"<p> Eye of MATE je jednoduchý prehliadač obrázkov na vašom počítači. "
-"Zobrazené obrázky si môžete priblížiť, otočiť, alebo prezrieť aj ďalšie "
-"obrázky z priečinka, z ktorého bol prvý obrázok načítaný. </p>"
 
-#: ../data/eom.desktop.in.in.h:1 ../src/main.c:65 ../src/main.c:166
+#: data/eom.desktop.in.in:3 src/main.c:65 src/main.c:166
 msgid "Eye of MATE Image Viewer"
 msgstr "Prehliadač obrázkov Oko MATE"
 
-#: ../data/eom.desktop.in.in.h:2
+#: data/eom.desktop.in.in:4
 msgid "Browse and rotate images"
 msgstr "Prehliadať a otáčať obrázky"
 
-#: ../data/eom-image-properties-dialog.ui.h:1
+#. Translators: Do NOT translate or transliterate this text (this is an icon
+#. file name)!
+#: data/eom.desktop.in.in:8
+msgid "eom"
+msgstr ""
+
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
+#: data/eom.desktop.in.in:14
+msgid "image;viewer;JPEG;PNG;TIFF;SVG;MATE;photos;browse;thumbnails;rotate;"
+msgstr ""
+
+#: data/eom-image-properties-dialog.ui:8
 msgid "Image Properties"
 msgstr "Vlastnosti obrázku"
 
-#: ../data/eom-image-properties-dialog.ui.h:2
+#: data/eom-image-properties-dialog.ui:54
 msgid "_Previous"
 msgstr "_Predchádzajúce"
 
-#: ../data/eom-image-properties-dialog.ui.h:3
+#: data/eom-image-properties-dialog.ui:101
 msgid "_Next"
 msgstr "_Nasledujúce"
 
-#: ../data/eom-image-properties-dialog.ui.h:4
+#: data/eom-image-properties-dialog.ui:198
 msgid "Name:"
 msgstr "Názov:"
 
-#: ../data/eom-image-properties-dialog.ui.h:5
+#: data/eom-image-properties-dialog.ui:217
 msgid "Width:"
 msgstr "Šírka:"
 
-#: ../data/eom-image-properties-dialog.ui.h:6
+#: data/eom-image-properties-dialog.ui:235
 msgid "Height:"
 msgstr "Výška:"
 
-#: ../data/eom-image-properties-dialog.ui.h:7
+#: data/eom-image-properties-dialog.ui:253
 msgid "Type:"
 msgstr "Typ:"
 
-#: ../data/eom-image-properties-dialog.ui.h:8
+#: data/eom-image-properties-dialog.ui:271
 msgid "Bytes:"
 msgstr "Bajty:"
 
-#: ../data/eom-image-properties-dialog.ui.h:9
+#: data/eom-image-properties-dialog.ui:289
+#: data/eom-image-properties-dialog.ui:614
 msgid "Location:"
 msgstr "Umiestnenie:"
 
-#: ../data/eom-image-properties-dialog.ui.h:10
+#: data/eom-image-properties-dialog.ui:422
 msgid "General"
 msgstr "Všeobecné"
 
-#: ../data/eom-image-properties-dialog.ui.h:11
+#: data/eom-image-properties-dialog.ui:455
 msgid "Aperture Value:"
 msgstr "Hodnota clony:"
 
-#: ../data/eom-image-properties-dialog.ui.h:12
+#: data/eom-image-properties-dialog.ui:471
 msgid "Exposure Time:"
 msgstr "Čas expozície:"
 
-#: ../data/eom-image-properties-dialog.ui.h:13
+#: data/eom-image-properties-dialog.ui:487
 msgid "Focal Length:"
 msgstr "Ohnisková vzdialenosť:"
 
-#: ../data/eom-image-properties-dialog.ui.h:14
+#: data/eom-image-properties-dialog.ui:503
 msgid "Flash:"
 msgstr "Blesk:"
 
-#: ../data/eom-image-properties-dialog.ui.h:15
+#: data/eom-image-properties-dialog.ui:519
 msgid "ISO Speed Rating:"
 msgstr "Hodnotenie rýchlosti ISO:"
 
-#: ../data/eom-image-properties-dialog.ui.h:16
+#: data/eom-image-properties-dialog.ui:535
 msgid "Metering Mode:"
 msgstr "Režim merania:"
 
-#: ../data/eom-image-properties-dialog.ui.h:17
+#: data/eom-image-properties-dialog.ui:551
 msgid "Camera Model:"
 msgstr "Typ fotoaparátu:"
 
-#: ../data/eom-image-properties-dialog.ui.h:18
+#: data/eom-image-properties-dialog.ui:568
 msgid "Date/Time:"
 msgstr "Dátum/Čas:"
 
-#: ../data/eom-image-properties-dialog.ui.h:19
+#: data/eom-image-properties-dialog.ui:598
 msgid "Description:"
 msgstr "Popis:"
 
-#: ../data/eom-image-properties-dialog.ui.h:20
+#: data/eom-image-properties-dialog.ui:630
 msgid "Keywords:"
 msgstr "Kľúčové slová:"
 
-#: ../data/eom-image-properties-dialog.ui.h:21
+#: data/eom-image-properties-dialog.ui:646
 msgid "Author:"
 msgstr "Autor:"
 
-#: ../data/eom-image-properties-dialog.ui.h:22
+#: data/eom-image-properties-dialog.ui:662
 msgid "Copyright:"
 msgstr "Copyright:"
 
-#: ../data/eom-image-properties-dialog.ui.h:23
-#: ../data/metadata-sidebar.ui.h:13
+#: data/eom-image-properties-dialog.ui:941
+#: data/eom-image-properties-dialog.ui:990 data/metadata-sidebar.ui:409
 msgid "Details"
 msgstr "Podrobnosti"
 
-#: ../data/eom-image-properties-dialog.ui.h:24
+#: data/eom-image-properties-dialog.ui:966
 msgid "Metadata"
 msgstr "Metadáta"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:1
+#: data/eom-multiple-save-as-dialog.ui:16
 msgid "Save As"
 msgstr "Uložiť ako"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:3
-#, no-c-format
+#: data/eom-multiple-save-as-dialog.ui:101
 msgid "<b>%f:</b> original filename"
 msgstr "<b>%f:</b> pôvodný názov súboru"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:5
-#, no-c-format
+#: data/eom-multiple-save-as-dialog.ui:119
 msgid "<b>%n:</b> counter"
 msgstr "<b>%n:</b> počítadlo"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:6
+#: data/eom-multiple-save-as-dialog.ui:169
 msgid "Choose a folder"
 msgstr "Vyberte priečinok"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:7
+#: data/eom-multiple-save-as-dialog.ui:182
 msgid "Destination folder:"
 msgstr "Cieľový priečinok:"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:8
+#: data/eom-multiple-save-as-dialog.ui:194
 msgid "Filename format:"
 msgstr "Formát mena súboru:"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:9
+#: data/eom-multiple-save-as-dialog.ui:212
 msgid "File Path Specifications"
 msgstr "Určenie cesty súborov"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:10
+#: data/eom-multiple-save-as-dialog.ui:253
 msgid "Start counter at:"
 msgstr "Začať počítadlo od:"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:11
+#: data/eom-multiple-save-as-dialog.ui:285
 msgid "Replace spaces with underscores"
 msgstr "Nahradiť medzery podčiarkovníkmi"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:12
+#: data/eom-multiple-save-as-dialog.ui:307
 msgid "Options"
 msgstr "Voľby"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:13
+#: data/eom-multiple-save-as-dialog.ui:369
 msgid "Rename from:"
 msgstr "Premenovať z:"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:14
+#: data/eom-multiple-save-as-dialog.ui:381
 msgid "To:"
 msgstr "Kam:"
 
-#: ../data/eom-multiple-save-as-dialog.ui.h:15
+#: data/eom-multiple-save-as-dialog.ui:396
 msgid "File Name Preview"
 msgstr "Náhľad názvu súboru"
 
-#: ../data/eom-preferences-dialog.ui.h:1
+#: data/eom-preferences-dialog.ui:16
 msgid "Eye of MATE Preferences"
 msgstr "Nastavenia Oka MATE"
 
-#: ../data/eom-preferences-dialog.ui.h:2
+#: data/eom-preferences-dialog.ui:88
 msgid "Image Enhancements"
 msgstr "Vylepšenie obrázkov"
 
-#: ../data/eom-preferences-dialog.ui.h:3
+#: data/eom-preferences-dialog.ui:117
 msgid "Smooth images when zoomed-_out"
 msgstr "Vyhladzovať obrázky pri _oddialení"
 
-#: ../data/eom-preferences-dialog.ui.h:4
+#: data/eom-preferences-dialog.ui:155
 msgid "Smooth images when zoomed-_in"
 msgstr "Vyhladzovať obrázky pri pr_blížení"
 
-#: ../data/eom-preferences-dialog.ui.h:5
+#: data/eom-preferences-dialog.ui:193
 msgid "_Automatic orientation"
 msgstr "_Automatická orientácia"
 
-#: ../data/eom-preferences-dialog.ui.h:6
+#: data/eom-preferences-dialog.ui:231
 msgid "Background"
 msgstr "Pozadie"
 
-#: ../data/eom-preferences-dialog.ui.h:7
+#: data/eom-preferences-dialog.ui:250
 msgid "As custom color:"
 msgstr "Ako vlastnú farbu:"
 
-#: ../data/eom-preferences-dialog.ui.h:8
-#: ../data/org.mate.eom.gschema.xml.in.h:3
+#: data/eom-preferences-dialog.ui:267 data/org.mate.eom.gschema.xml.in:16
 msgid "Background Color"
 msgstr "Farba pozadia"
 
-#: ../data/eom-preferences-dialog.ui.h:9
+#: data/eom-preferences-dialog.ui:300
 msgid "Transparent Parts"
 msgstr "Priesvitné časti"
 
-#: ../data/eom-preferences-dialog.ui.h:10
+#: data/eom-preferences-dialog.ui:335
 msgid "As check _pattern"
 msgstr "Ako _vzorka"
 
-#: ../data/eom-preferences-dialog.ui.h:11
+#: data/eom-preferences-dialog.ui:356
 msgid "As custom c_olor:"
 msgstr "Ako vlastná _farba:"
 
-#: ../data/eom-preferences-dialog.ui.h:12
+#: data/eom-preferences-dialog.ui:377
 msgid "Color for Transparent Areas"
 msgstr "Farba pre priesvitné oblasti"
 
-#: ../data/eom-preferences-dialog.ui.h:13
+#: data/eom-preferences-dialog.ui:395
 msgid "As _background"
 msgstr "Ako _pozadie"
 
-#: ../data/eom-preferences-dialog.ui.h:14
+#: data/eom-preferences-dialog.ui:437
 msgid "Image View"
 msgstr "Zobrazenie obrázku"
 
-#: ../data/eom-preferences-dialog.ui.h:15
+#: data/eom-preferences-dialog.ui:461
 msgid "Image Zoom"
 msgstr "Priblíženie obrázku"
 
-#: ../data/eom-preferences-dialog.ui.h:16
+#: data/eom-preferences-dialog.ui:496
 msgid "E_xpand images to fit screen"
 msgstr "_Roztiahnuť obrázok na celú obrazovku"
 
-#: ../data/eom-preferences-dialog.ui.h:17
+#: data/eom-preferences-dialog.ui:541
 msgid "Sequence"
 msgstr "Postupnosť"
 
-#: ../data/eom-preferences-dialog.ui.h:18
+#: data/eom-preferences-dialog.ui:583
 msgid "_Switch image after:"
 msgstr "_Prepnúť obrázok po:"
 
-#: ../data/eom-preferences-dialog.ui.h:19
+#: data/eom-preferences-dialog.ui:611
 msgid "seconds"
 msgstr "sekúnd"
 
-#: ../data/eom-preferences-dialog.ui.h:20
+#: data/eom-preferences-dialog.ui:628
 msgid "_Random sequence"
 msgstr "Náhodné poradie"
 
-#: ../data/eom-preferences-dialog.ui.h:21
+#: data/eom-preferences-dialog.ui:644
 msgid "_Loop sequence"
 msgstr "_Opakovať postupnosť"
 
-#: ../data/eom-preferences-dialog.ui.h:22
+#: data/eom-preferences-dialog.ui:688
 msgid "Slideshow"
 msgstr "Prezentácia"
 
-#: ../data/eom-preferences-dialog.ui.h:23
+#: data/eom-preferences-dialog.ui:722
 msgid "Plugins"
 msgstr "Zásuvné moduly"
 
-#: ../data/metadata-sidebar.ui.h:1 ../src/eom-print-image-setup.c:896
+#: data/metadata-sidebar.ui:29 src/eom-print-image-setup.c:896
 msgid "Size"
 msgstr "Veľkosť"
 
-#: ../data/metadata-sidebar.ui.h:2
+#: data/metadata-sidebar.ui:46
 msgid "Type"
 msgstr "Typ"
 
-#: ../data/metadata-sidebar.ui.h:3
+#: data/metadata-sidebar.ui:63
 msgid "File Size"
 msgstr ""
 
-#: ../data/metadata-sidebar.ui.h:4
+#: data/metadata-sidebar.ui:82
 msgid "Folder"
 msgstr "Priečinok"
 
-#: ../data/metadata-sidebar.ui.h:5
+#: data/metadata-sidebar.ui:99
 msgid "Aperture"
 msgstr ""
 
-#: ../data/metadata-sidebar.ui.h:6
+#: data/metadata-sidebar.ui:116
 msgid "Exposure"
 msgstr ""
 
-#: ../data/metadata-sidebar.ui.h:7
+#: data/metadata-sidebar.ui:133
 msgid "ISO"
 msgstr ""
 
-#: ../data/metadata-sidebar.ui.h:8
+#: data/metadata-sidebar.ui:151
 msgid "Metering"
 msgstr ""
 
-#: ../data/metadata-sidebar.ui.h:9 ../src/eom-metadata-details.c:65
+#: data/metadata-sidebar.ui:169 src/eom-metadata-details.c:65
 msgid "Camera"
 msgstr "Fotoaparát"
 
-#: ../data/metadata-sidebar.ui.h:10
+#: data/metadata-sidebar.ui:187
 msgid "Date"
 msgstr "Dátum"
 
-#: ../data/metadata-sidebar.ui.h:11
+#: data/metadata-sidebar.ui:204
 msgid "Time"
 msgstr "Čas"
 
-#: ../data/metadata-sidebar.ui.h:12
+#: data/metadata-sidebar.ui:380
 msgid "Focal Length"
 msgstr "Ohnisková vzdialenosť"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:1
+#: data/org.mate.eom.gschema.xml.in:11
 msgid "Automatic orientation"
 msgstr "Automatická orientácia"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:2
+#: data/org.mate.eom.gschema.xml.in:12
 msgid ""
 "Whether the image should be rotated automatically based on EXIF orientation."
 msgstr "Určuje, či sa má obrázok automaticky otáčať podľa orientácie EXIF."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:4
+#: data/org.mate.eom.gschema.xml.in:17
 msgid ""
 "The color that is used to fill the area behind the image. If the use-"
 "background-color key is not set, the color is determined by the active GTK+ "
@@ -405,11 +404,11 @@ msgstr ""
 "background-color nie je nastavený, farba je namiesto toho určená podľa "
 "aktívnej GTK+ témy."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:5
+#: data/org.mate.eom.gschema.xml.in:21
 msgid "Use a custom background color"
 msgstr "Použiť vlastnú farbu pozadia"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:6
+#: data/org.mate.eom.gschema.xml.in:22
 msgid ""
 "If this is active, the color set by the background-color key will be used to"
 " fill the area behind the image. If it is not set, the current GTK+ theme "
@@ -419,11 +418,11 @@ msgstr ""
 "použitá na vyplnenie oblasti za obrázkom. Ak táto položka nie je nastavená, "
 "aktuálna GTK+ téma určí farbu výplne."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:7
+#: data/org.mate.eom.gschema.xml.in:26
 msgid "Interpolate Image"
 msgstr "Interpolácia obrázku"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:8
+#: data/org.mate.eom.gschema.xml.in:27
 msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
@@ -431,11 +430,11 @@ msgstr ""
 "Určuje, či sa má pri zmenšení obrázok interpolovať. Zobrazenie je "
 "kvalitnejšie, ale je o niečo pomalšie ako neinterpolované obrázky."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:9
+#: data/org.mate.eom.gschema.xml.in:31
 msgid "Extrapolate Image"
 msgstr "Extrapolovať obrázok"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:10
+#: data/org.mate.eom.gschema.xml.in:32
 msgid ""
 "Whether the image should be extrapolated on zoom-in. This leads to blurry "
 "quality and is somewhat slower than non-extrapolated images."
@@ -443,11 +442,11 @@ msgstr ""
 "Určuje, či sa má pri zväčšení obrázok extrapolovať. Zobrazenie je rozmazané "
 "a je o niečo pomalšie ako neextrapolované obrázky."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:11
+#: data/org.mate.eom.gschema.xml.in:36
 msgid "Transparency indicator"
 msgstr "Indikátor priesvitnosti"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:12
+#: data/org.mate.eom.gschema.xml.in:37
 msgid ""
 "Determines how transparency should be indicated. Valid values are checked, "
 "color and none. If color is chosen, then the trans-color key determines the "
@@ -457,20 +456,19 @@ msgstr ""
 "farba a vypnuté oznamovanie. Ak je zvolená farba, hodnota použítej farby je "
 "určená kľúčom farby."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:13
+#: data/org.mate.eom.gschema.xml.in:41
 msgid "Scroll wheel zoom"
 msgstr "Zväčšovanie pomocou skrolovacieho tlačítka"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:14
+#: data/org.mate.eom.gschema.xml.in:42
 msgid "Whether the scroll wheel should be used for zooming."
 msgstr "Určuje, či má byť rolovacie koliesko použité pre zmenu priblíženia."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:15
+#: data/org.mate.eom.gschema.xml.in:46
 msgid "Zoom multiplier"
 msgstr "Násobok zväčšenia"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:17
-#, no-c-format
+#: data/org.mate.eom.gschema.xml.in:47
 msgid ""
 "The multiplier to be applied when using the mouse scroll wheel for zooming. "
 "This value defines the zooming step used for each scroll event. For example,"
@@ -482,11 +480,11 @@ msgstr ""
 "skrolovacieho tlačidla. Napríklad, hodnota 0.05 znamená priblíženie o 5% a "
 "1.00 znamená priblíženie o 100%."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:18
+#: data/org.mate.eom.gschema.xml.in:51
 msgid "Transparency color"
 msgstr "Farba priesvitnosti"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:19
+#: data/org.mate.eom.gschema.xml.in:52
 msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
@@ -494,28 +492,27 @@ msgstr ""
 "Ak je hodnota kľúča pre priesvitnosť COLOR, tento kľúč určuje farbu, ktorá "
 "sa má použiť pre označenie priesvitných častí."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:20
+#: data/org.mate.eom.gschema.xml.in:58
 msgid "Randomize the image sequence"
 msgstr "Nastaviť náhodné poradie obrázkov"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:21
+#: data/org.mate.eom.gschema.xml.in:59
 msgid "Whether the sequence of images should be shown in an random loop."
 msgstr "Určuje, či sa má sekvencia obrázkov zobrazovať v náhodnom cykle."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:22
+#: data/org.mate.eom.gschema.xml.in:63
 msgid "Loop through the image sequence"
 msgstr "Opakovať postupnosť obrázkov"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:23
+#: data/org.mate.eom.gschema.xml.in:64
 msgid "Whether the sequence of images should be shown in an endless loop."
 msgstr "Určuje, či sa má sekvencia obrázkov opakovať v nekonečnom cykle."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:25
-#, no-c-format
+#: data/org.mate.eom.gschema.xml.in:68
 msgid "Allow zoom greater than 100% initially"
 msgstr "Povoliť počiatočnú lupu väčšiu ako 100%"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:26
+#: data/org.mate.eom.gschema.xml.in:69
 msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
@@ -523,11 +520,11 @@ msgstr ""
 "Ak táto možnosť vybraná nie je, malé obrázky sa nebudú rozťahovať na celú "
 "obrazovku."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:27
+#: data/org.mate.eom.gschema.xml.in:73
 msgid "Delay in seconds until showing the next image"
 msgstr "Oneskorenie v sekundách pred zobrazením nasledujúceho obrázku."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:28
+#: data/org.mate.eom.gschema.xml.in:74
 msgid ""
 "A value greater than 0 determines the seconds an image stays on screen until"
 " the next one is shown automatically. Zero disables the automatic browsing."
@@ -535,43 +532,43 @@ msgstr ""
 "Hodnota väčšia ako 0 určuje počet sekúnd, počas ktorých zostane obrázok "
 "zobrazený, pred zobrazením ďalšieho. Nula vypne automatické prezeranie."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:29
+#: data/org.mate.eom.gschema.xml.in:80
 msgid "Show/Hide the window toolbar."
 msgstr "Zobrazovať/Skrývať panel nástrojov okna."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:30
+#: data/org.mate.eom.gschema.xml.in:84
 msgid "Show/Hide the window statusbar."
 msgstr "Zobrazovať/Skrývať stavový riadok okna."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:31
+#: data/org.mate.eom.gschema.xml.in:88
 msgid "Show/Hide the image collection pane."
 msgstr "Zobrazovať/Skrývať panel so zbierkou obrázkov."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:32
+#: data/org.mate.eom.gschema.xml.in:92
 msgid "Image collection pane position."
 msgstr "Poloha panela s obrázkami."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:33
+#: data/org.mate.eom.gschema.xml.in:96
 msgid "Whether the image collection pane should be resizable."
 msgstr "Určuje, či je možné meniť veľkosť panelu zbierky obrázkov."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:34
+#: data/org.mate.eom.gschema.xml.in:100
 msgid "Show/Hide the window side pane."
 msgstr "Zobrazovať/Skrývať bočný panel okna."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:35
+#: data/org.mate.eom.gschema.xml.in:104
 msgid "Show/Hide the image collection pane scroll buttons."
 msgstr "Zobrazovať/Skrývať tlačítka posuvu panelu so zbierkou obrázkov."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:36
+#: data/org.mate.eom.gschema.xml.in:108
 msgid "Close main window without asking to save changes."
 msgstr "Zatvoriť hlavné okno bez opýtania sa na uloženie zmien."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:37
+#: data/org.mate.eom.gschema.xml.in:112
 msgid "Trash images without asking"
 msgstr "Presunúť obrázky do Koša bez opýtania"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:38
+#: data/org.mate.eom.gschema.xml.in:113
 msgid ""
 "If activated, Eye of MATE won't ask for confirmation when moving images to "
 "the trash. It will still ask if any of the files cannot be moved to the "
@@ -581,12 +578,12 @@ msgstr ""
 "obrázkov do koša. Stále budete vyzvaný, pokiaľ niektorý z obrázkov nebude "
 "môcť byť presunutý do koša a namiesto toho bude zmazaný."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:39
+#: data/org.mate.eom.gschema.xml.in:117
 msgid ""
 "Whether the metadata list in the properties dialog should have its own page."
 msgstr "Určuje, či má mať zoznam metadát vlastnú stránku v okne vlastností."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:40
+#: data/org.mate.eom.gschema.xml.in:118
 msgid ""
 "If activated, the detailed metadata list in the properties dialog will be "
 "moved to its own page in the dialog. This should make the dialog more usable"
@@ -598,11 +595,11 @@ msgstr ""
 "menších obrazovkách, aké sú napr. používané na netbookoch. Ak je zakázané, "
 "widget bude vložený na stránku „Metadata“."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:41
+#: data/org.mate.eom.gschema.xml.in:122
 msgid "External program to use for editing images"
 msgstr "Externý program používaný na úpravu obrázkov"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:42
+#: data/org.mate.eom.gschema.xml.in:123
 msgid ""
 "The desktop file name (including the \".desktop\") of the application to use"
 " for editing images (when the \"Edit Image\" toolbar button is clicked). Set"
@@ -612,7 +609,7 @@ msgstr ""
 "používať na úpravu obrázkov (ak je možnosť „Upraviť obrázok“ v paneli "
 "nástrojov zapnutá). Pre vypnutie tejto funkcie nastavte prázdny reťazec."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:43
+#: data/org.mate.eom.gschema.xml.in:127
 msgid ""
 "Whether the file chooser should show the user's pictures folder if no images"
 " are loaded."
@@ -620,7 +617,7 @@ msgstr ""
 "Určuje, či má prehliadač súborov zobraziť používateľov priečinok s "
 "obrázkami, ak nie sú načítané žiadne obrázky."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:44
+#: data/org.mate.eom.gschema.xml.in:128
 msgid ""
 "If activated and no image is loaded in the active window, the file chooser "
 "will display the user's pictures folder using the XDG special user "
@@ -633,11 +630,11 @@ msgstr ""
 "priečinok s obrázkami nebol nastavený, bude zobrazený aktuálny pracovný "
 "priečinok."
 
-#: ../data/org.mate.eom.gschema.xml.in.h:45
+#: data/org.mate.eom.gschema.xml.in:134
 msgid "Active plugins"
 msgstr "Aktívne zásuvné moduly"
 
-#: ../data/org.mate.eom.gschema.xml.in.h:46
+#: data/org.mate.eom.gschema.xml.in:135
 msgid ""
 "List of active plugins. It doesn't contain the \"Location\" of the active "
 "plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
@@ -647,50 +644,49 @@ msgstr ""
 "zásuvných modulov. Ak chcete zistiť „Umiestnenie“ aktívnych modulov, prosím "
 "pozrite súbor .eom-plugin"
 
-#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:1
+#: plugins/fullscreen/fullscreen.plugin.desktop.in:5
 msgid "Fullscreen with double-click"
 msgstr "Celá obrazovka dvojklikom"
 
-#: ../plugins/fullscreen/fullscreen.plugin.desktop.in.h:2
-msgid "Activate fullscreen mode with double-click"
-msgstr "Dvojklikom aktivuje režim celej obrazovky"
+#: plugins/fullscreen/fullscreen.plugin.desktop.in:6
+msgid "view-fullscreen"
+msgstr ""
 
-#: ../plugins/reload/eom-reload-plugin.c:45
-#: ../plugins/reload/reload.plugin.desktop.in.h:1
+#: plugins/reload/eom-reload-plugin.c:45
+#: plugins/reload/reload.plugin.desktop.in:5
 msgid "Reload Image"
 msgstr "Znovu načítať obrázok"
 
-#: ../plugins/reload/eom-reload-plugin.c:45
-#: ../plugins/reload/reload.plugin.desktop.in.h:2
+#: plugins/reload/eom-reload-plugin.c:45
 msgid "Reload current image"
 msgstr "Znovu načítať aktuálny obrázok"
 
-#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:1
+#: plugins/reload/reload.plugin.desktop.in:6
+msgid "view-refresh"
+msgstr ""
+
+#: plugins/statusbar-date/statusbar-date.plugin.desktop.in:5
 msgid "Date in statusbar"
 msgstr "Dátum v stavovom riadku"
 
-#: ../plugins/statusbar-date/statusbar-date.plugin.desktop.in.h:2
-msgid "Shows the image date in the window statusbar"
-msgstr "Zobrazuje dátum obrázku v stavovom riadku okna"
-
-#: ../src/eom-close-confirmation-dialog.c:154
+#: src/eom-close-confirmation-dialog.c:154
 msgid "Close _without Saving"
 msgstr "Zavrieť _bez uloženie"
 
-#: ../src/eom-close-confirmation-dialog.c:187
+#: src/eom-close-confirmation-dialog.c:187
 msgid "Question"
 msgstr "Otázka"
 
-#: ../src/eom-close-confirmation-dialog.c:366
+#: src/eom-close-confirmation-dialog.c:366
 msgid "If you don't save, your changes will be lost."
 msgstr "Ak neuložíte, vaše zmeny budú stratené."
 
-#: ../src/eom-close-confirmation-dialog.c:402
+#: src/eom-close-confirmation-dialog.c:402
 #, c-format
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "Uložiť zmeny v obrázku „%s“ pred ukončením?"
 
-#: ../src/eom-close-confirmation-dialog.c:597
+#: src/eom-close-confirmation-dialog.c:597
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
@@ -700,20 +696,19 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: ../src/eom-close-confirmation-dialog.c:614
+#: src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
 msgstr "Vyberte _obrázky, ktoré chcete uložiť:"
 
-#. Secondary label
-#: ../src/eom-close-confirmation-dialog.c:633
+#: src/eom-close-confirmation-dialog.c:633
 msgid "If you don't save, all your changes will be lost."
 msgstr "Ak neuložíte, všetky vaše zmeny budú stratené."
 
-#: ../src/eom-file-chooser.c:121
+#: src/eom-file-chooser.c:121
 msgid "File format is unknown or unsupported"
 msgstr "Formát súboru je neznámy alebo nepodporovaný"
 
-#: ../src/eom-file-chooser.c:126
+#: src/eom-file-chooser.c:126
 msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
@@ -721,28 +716,25 @@ msgstr ""
 "Program Oko MATE nedokázal určiť podporovaný zapisovateľný formát na základe"
 " tohto názvu súboru."
 
-#: ../src/eom-file-chooser.c:127
+#: src/eom-file-chooser.c:127
 msgid "Please try a different file extension like .png or .jpg."
 msgstr "Prosím, skúste inú príponu súboru, napríklad .png alebo .jpg"
 
-#: ../src/eom-file-chooser.c:159
+#: src/eom-file-chooser.c:159
 msgid "All Files"
 msgstr "Všetky súbory"
 
-#: ../src/eom-file-chooser.c:164
+#: src/eom-file-chooser.c:164
 msgid "All Images"
 msgstr "Všetky obrázky"
 
-#. Filter name: First description then file extension, eg. "The PNG-Format
-#. (*.png)".
-#: ../src/eom-file-chooser.c:185
+#: src/eom-file-chooser.c:185
 #, c-format
 msgid "%s (*.%s)"
 msgstr "%s (*.%s)"
 
-#. Pixel size of image: width x height in pixel
-#: ../src/eom-file-chooser.c:281 ../src/eom-properties-dialog.c:163
-#: ../src/eom-properties-dialog.c:165 ../src/eom-thumb-view.c:516
+#: src/eom-file-chooser.c:281 src/eom-properties-dialog.c:163
+#: src/eom-properties-dialog.c:165 src/eom-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] ""
@@ -750,157 +742,144 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: ../src/eom-file-chooser.c:451
+#: src/eom-file-chooser.c:451
 msgid "Open Image"
 msgstr "Otvoriť obrázok"
 
-#: ../src/eom-file-chooser.c:459
+#: src/eom-file-chooser.c:459
 msgid "Save Image"
 msgstr "Uložiť obrázok"
 
-#: ../src/eom-file-chooser.c:467 ../src/eom-window.c:4005
+#: src/eom-file-chooser.c:467 src/eom-window.c:4005
 msgid "Open Folder"
 msgstr "Otvoriť priečinok"
 
-#: ../src/eom-image.c:549
-#, c-format
+#: src/eom-image.c:549
 msgid "Transformation on unloaded image."
 msgstr "Transformácia nenačítaného obrázku."
 
-#: ../src/eom-image.c:577
-#, c-format
+#: src/eom-image.c:577
 msgid "Transformation failed."
 msgstr "Transformácia zlyhala."
 
-#: ../src/eom-image.c:1048
-#, c-format
+#: src/eom-image.c:1048
 msgid "EXIF not supported for this file format."
 msgstr "Tento formát súboru nepodporuje EXIF."
 
-#: ../src/eom-image.c:1197
-#, c-format
+#: src/eom-image.c:1197
 msgid "Image loading failed."
 msgstr "Načítavanie obrázku zlyhalo."
 
-#: ../src/eom-image.c:1726 ../src/eom-image.c:1828
-#, c-format
+#: src/eom-image.c:1726 src/eom-image.c:1828
 msgid "No image loaded."
 msgstr "Nenačítal sa žiadny obrázok."
 
-#: ../src/eom-image.c:1736 ../src/eom-image.c:1840
-#, c-format
+#: src/eom-image.c:1736 src/eom-image.c:1840
 msgid "Temporary file creation failed."
 msgstr "Nepodarilo sa vytvoriť dočasný súbor."
 
-#: ../src/eom-image-jpeg.c:384
+#: src/eom-image-jpeg.c:384
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr "Nepodarilo sa vytvoriť dočasný súbor pre zápis: %s"
 
-#: ../src/eom-image-jpeg.c:395
-#, c-format
+#: src/eom-image-jpeg.c:395
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "Nepodarilo sa vyhradiť pamäť pre načítanie obrázku JPEG"
 
-#: ../src/eom-error-message-area.c:108
+#: src/eom-error-message-area.c:108
 msgid "_Retry"
 msgstr "_Skúsiť znovu"
 
-#: ../src/eom-error-message-area.c:151
+#: src/eom-error-message-area.c:151
 #, c-format
 msgid "Could not load image '%s'."
 msgstr "Nepodarilo sa načítať obrázok „%s“."
 
-#: ../src/eom-error-message-area.c:193
+#: src/eom-error-message-area.c:193
 #, c-format
 msgid "No images found in '%s'."
 msgstr "Nenašli sa žiadne obrázky v „%s“."
 
-#: ../src/eom-error-message-area.c:200
+#: src/eom-error-message-area.c:200
 msgid "The given locations contain no images."
 msgstr "Zadané miesto neobsahuje obrázky."
 
-#: ../src/eom-metadata-details.c:66
+#: src/eom-metadata-details.c:66
 msgid "Image Data"
 msgstr "Údaje obrázku"
 
-#: ../src/eom-metadata-details.c:67
+#: src/eom-metadata-details.c:67
 msgid "Image Taking Conditions"
 msgstr "Podmienky fotografovania"
 
-#: ../src/eom-metadata-details.c:68
+#: src/eom-metadata-details.c:68
 msgid "GPS Data"
 msgstr "GPS Dáta"
 
-#: ../src/eom-metadata-details.c:69
+#: src/eom-metadata-details.c:69
 msgid "Maker Note"
 msgstr "Poznámka autora"
 
-#: ../src/eom-metadata-details.c:70
+#: src/eom-metadata-details.c:70
 msgid "Other"
 msgstr "Ostatné"
 
-#: ../src/eom-metadata-details.c:72
+#: src/eom-metadata-details.c:72
 msgid "XMP Exif"
 msgstr "XMP Exif"
 
-#: ../src/eom-metadata-details.c:73
+#: src/eom-metadata-details.c:73
 msgid "XMP IPTC"
 msgstr "XMP IPTC"
 
-#: ../src/eom-metadata-details.c:74
+#: src/eom-metadata-details.c:74
 msgid "XMP Rights Management"
 msgstr "XMP správa práv"
 
-#: ../src/eom-metadata-details.c:75
+#: src/eom-metadata-details.c:75
 msgid "XMP Other"
 msgstr "XMP iné"
 
-#: ../src/eom-metadata-details.c:251
+#: src/eom-metadata-details.c:251
 msgid "Tag"
 msgstr "Údaj"
 
-#: ../src/eom-metadata-details.c:261
+#: src/eom-metadata-details.c:261
 msgid "Value"
 msgstr "Hodnota"
 
-#: ../src/eom-metadata-details.c:436
+#: src/eom-metadata-details.c:436
 msgid "North"
 msgstr "Sever"
 
-#: ../src/eom-metadata-details.c:439
+#: src/eom-metadata-details.c:439
 msgid "East"
 msgstr "Východ"
 
-#: ../src/eom-metadata-details.c:442
+#: src/eom-metadata-details.c:442
 msgid "West"
 msgstr "Západ"
 
-#: ../src/eom-metadata-details.c:445
+#: src/eom-metadata-details.c:445
 msgid "South"
 msgstr "Juh"
 
-#. A strftime-formatted string, to display the date the image was taken.
-#: ../src/eom-exif-util.c:191 ../src/eom-exif-util.c:193
+#: src/eom-exif-util.c:191 src/eom-exif-util.c:193
 msgid "%a, %d %B %Y  %X"
 msgstr "%a, %d %B %Y %X"
 
-#. TRANSLATORS: This is the actual focal length used when
-#. the image was taken.
-#: ../src/eom-exif-util.c:282
+#: src/eom-exif-util.c:282
 #, c-format
 msgid "%.1f (lens)"
 msgstr "%.1f (objektív)"
 
-#. Print as float to get a similar look as above.
-#. TRANSLATORS: This is the equivalent focal length assuming
-#. a 35mm film camera.
-#: ../src/eom-exif-util.c:293
+#: src/eom-exif-util.c:293
 #, c-format
 msgid "%.1f (35mm film)"
 msgstr "%.1f (35mm film)"
 
-#: ../src/eom-metadata-sidebar.c:153
+#: src/eom-metadata-sidebar.c:153
 #, c-format
 msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
@@ -909,108 +888,108 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: ../src/eom-metadata-sidebar.c:164 ../src/eom-properties-dialog.c:180
+#: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
 msgid "Unknown"
 msgstr "Neznámy"
 
-#: ../src/eom-metadata-sidebar.c:229
+#: src/eom-metadata-sidebar.c:229
 msgid "%a, %d %B %Y"
 msgstr "%a, %d %B %Y"
 
-#: ../src/eom-metadata-sidebar.c:233
+#: src/eom-metadata-sidebar.c:233
 #, c-format
 msgid "%X"
 msgstr ""
 
-#: ../src/eom-print.c:371
+#: src/eom-print.c:371
 msgid "Image Settings"
 msgstr "Nastavenie obrázku"
 
-#: ../src/eom-print-image-setup.c:824
+#: src/eom-print-image-setup.c:824
 msgid "Image"
 msgstr "Obrázok"
 
-#: ../src/eom-print-image-setup.c:825
+#: src/eom-print-image-setup.c:825
 msgid "The image whose printing properties will be set up"
 msgstr "Obrázok, ktorého vlastnosti tlače budú nastavené"
 
-#: ../src/eom-print-image-setup.c:831
+#: src/eom-print-image-setup.c:831
 msgid "Page Setup"
 msgstr "Nastavenie stránky"
 
-#: ../src/eom-print-image-setup.c:832
+#: src/eom-print-image-setup.c:832
 msgid "The information for the page where the image will be printed"
 msgstr "Informácie pre stránku, kde sa bude tlačiť tento obrázok"
 
-#: ../src/eom-print-image-setup.c:858
+#: src/eom-print-image-setup.c:858
 msgid "Position"
 msgstr "Pozícia"
 
-#: ../src/eom-print-image-setup.c:862
+#: src/eom-print-image-setup.c:862
 msgid "_Left:"
 msgstr "_Vľavo:"
 
-#: ../src/eom-print-image-setup.c:864
+#: src/eom-print-image-setup.c:864
 msgid "_Right:"
 msgstr "V_pravo:"
 
-#: ../src/eom-print-image-setup.c:865
+#: src/eom-print-image-setup.c:865
 msgid "_Top:"
 msgstr "_Hore:"
 
-#: ../src/eom-print-image-setup.c:866
+#: src/eom-print-image-setup.c:866
 msgid "_Bottom:"
 msgstr "_Dole:"
 
-#: ../src/eom-print-image-setup.c:869
+#: src/eom-print-image-setup.c:869
 msgid "C_enter:"
 msgstr "_Stred:"
 
-#: ../src/eom-print-image-setup.c:874
+#: src/eom-print-image-setup.c:874
 msgid "None"
 msgstr "Žiadne"
 
-#: ../src/eom-print-image-setup.c:876
+#: src/eom-print-image-setup.c:876
 msgid "Horizontal"
 msgstr "Vodorovne"
 
-#: ../src/eom-print-image-setup.c:878
+#: src/eom-print-image-setup.c:878
 msgid "Vertical"
 msgstr "Zvisle"
 
-#: ../src/eom-print-image-setup.c:880
+#: src/eom-print-image-setup.c:880
 msgid "Both"
 msgstr "Obidvoje"
 
-#: ../src/eom-print-image-setup.c:899
+#: src/eom-print-image-setup.c:899
 msgid "_Width:"
 msgstr "Ší_rka:"
 
-#: ../src/eom-print-image-setup.c:901
+#: src/eom-print-image-setup.c:901
 msgid "_Height:"
 msgstr "_Výška:"
 
-#: ../src/eom-print-image-setup.c:904
+#: src/eom-print-image-setup.c:904
 msgid "_Scaling:"
 msgstr "Š_kálovanie:"
 
-#: ../src/eom-print-image-setup.c:915
+#: src/eom-print-image-setup.c:915
 msgid "_Unit:"
 msgstr "_Jednotky:"
 
-#: ../src/eom-print-image-setup.c:920
+#: src/eom-print-image-setup.c:920
 msgid "Millimeters"
 msgstr "Milimetre"
 
-#: ../src/eom-print-image-setup.c:922
+#: src/eom-print-image-setup.c:922
 msgid "Inches"
 msgstr "Palce"
 
-#: ../src/eom-print-image-setup.c:950
+#: src/eom-print-image-setup.c:950
 msgid "Preview"
 msgstr "Náhľad"
 
-#: ../src/eom-save-as-dialog-helper.c:161
+#: src/eom-save-as-dialog-helper.c:161
 msgid "as is"
 msgstr "nezmenené"
 
@@ -1024,25 +1003,24 @@ msgstr "nezmenené"
 #. * Note that translating this doesn't guarantee that you get localized
 #. * digits. That needs support from your system and locale definition
 #. * too.
-#: ../src/eom-statusbar.c:122
+#: src/eom-statusbar.c:122
 #, c-format
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: ../src/eom-thumb-view.c:544
+#: src/eom-thumb-view.c:544
 msgid "Taken on"
 msgstr "Odfotené"
 
-#: ../src/eom-uri-converter.c:986
-#, c-format
+#: src/eom-uri-converter.c:986
 msgid "At least two file names are equal."
 msgstr "Najmenej dva súbory majú rovnaký názov."
 
-#: ../src/eom-util.c:68
+#: src/eom-util.c:68
 msgid "Could not display help for Eye of MATE"
 msgstr "Nepodarilo sa zobraziť pomocníka pre Oko MATE"
 
-#: ../src/eom-util.c:116
+#: src/eom-util.c:116
 msgid " (invalid Unicode)"
 msgstr " (neplatný Unicode)"
 
@@ -1052,7 +1030,7 @@ msgstr " (neplatný Unicode)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: ../src/eom-window.c:517
+#: src/eom-window.c:517
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
@@ -1061,18 +1039,16 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: ../src/eom-window.c:828
+#: src/eom-window.c:828
 msgid "_Reload"
 msgstr "_Znovu načítať"
 
-#: ../src/eom-window.c:830 ../src/eom-window.c:2790
+#: src/eom-window.c:830 src/eom-window.c:2790
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "_Skryť"
 
-#. The newline character is currently necessary due to a problem
-#. * with the automatic line break.
-#: ../src/eom-window.c:840
+#: src/eom-window.c:840
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -1081,7 +1057,7 @@ msgstr ""
 "Obrázok „%s“ bol upravený externým programom.\n"
 "Chcete ho znovu načítať?"
 
-#: ../src/eom-window.c:1008
+#: src/eom-window.c:1008
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Použiť  „%s“ na otvorenie vybraného obrázku"
@@ -1091,25 +1067,25 @@ msgstr "Použiť  „%s“ na otvorenie vybraného obrázku"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: ../src/eom-window.c:1172
+#: src/eom-window.c:1172
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Ukladám obrázok „%s“ (%u/%u)"
 
-#: ../src/eom-window.c:1539
+#: src/eom-window.c:1539
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Otvára sa obrázok „%s“"
 
-#: ../src/eom-window.c:1905
+#: src/eom-window.c:1905
 msgid "Leave Fullscreen"
 msgstr "Opustiť režim celej obrazovky"
 
-#: ../src/eom-window.c:2046
+#: src/eom-window.c:2046
 msgid "Viewing a slideshow"
 msgstr ""
 
-#: ../src/eom-window.c:2259
+#: src/eom-window.c:2259
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1118,15 +1094,15 @@ msgstr ""
 "Chyba pri tlači obrázku:\n"
 "%s"
 
-#: ../src/eom-window.c:2522
+#: src/eom-window.c:2522
 msgid "Toolbar Editor"
 msgstr "Editor panela nástrojov"
 
-#: ../src/eom-window.c:2525
+#: src/eom-window.c:2525
 msgid "_Reset to Default"
 msgstr "_Obnoviť predvolené nastavenia"
 
-#: ../src/eom-window.c:2590
+#: src/eom-window.c:2590
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1138,7 +1114,7 @@ msgstr ""
 " a to buď verzie licencie 2, alebo (podľa vášho uváženia) ľubovoľnej "
 "neskoršej verzie.\n"
 
-#: ../src/eom-window.c:2594
+#: src/eom-window.c:2594
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1150,7 +1126,7 @@ msgstr ""
 "VHODNOSTI PRE KONKRÉTNY ÚČEL. Pre ďalšie podrobnosti viď GNU General Public "
 "License.\n"
 
-#: ../src/eom-window.c:2598
+#: src/eom-window.c:2598
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
@@ -1160,23 +1136,23 @@ msgstr ""
 "napíšte na Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, "
 "Boston, MA 02110-1301, USA."
 
-#: ../src/eom-window.c:2637
+#: src/eom-window.c:2637
 msgid "About Eye of MATE"
 msgstr ""
 
-#: ../src/eom-window.c:2639
+#: src/eom-window.c:2639
 msgid ""
 "Copyright © 2000-2010 Free Software Foundation, Inc.\n"
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2019 MATE developers"
 msgstr ""
 
-#: ../src/eom-window.c:2642
+#: src/eom-window.c:2642
 msgid "The MATE image viewer."
 msgstr ""
 "Program pre prehliadanie obrázkov a ich katalogizáciu pre prostredie MATE."
 
-#: ../src/eom-window.c:2645
+#: src/eom-window.c:2645
 msgid "translator-credits"
 msgstr ""
 "Stanislav Višňovský\n"
@@ -1184,19 +1160,15 @@ msgstr ""
 "Tibor Kaputa <tibbbi2@gmail.com>\n"
 "Dušan Kazik <prescott66@gmail.com>"
 
-#: ../src/eom-window.c:2738 ../src/eom-window.c:2753
+#: src/eom-window.c:2738 src/eom-window.c:2753
 msgid "Error launching appearance preferences dialog: "
 msgstr ""
 
-#. I18N: When setting mnemonics for these strings, watch out to not
-#. clash with mnemonics from eom's menubar
-#: ../src/eom-window.c:2788
+#: src/eom-window.c:2788
 msgid "_Open Background Preferences"
 msgstr "_Otvoriť nastavenia pozadia"
 
-#. The newline character is currently necessary due to a problem
-#. * with the automatic line break.
-#: ../src/eom-window.c:2804
+#: src/eom-window.c:2804
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1205,25 +1177,25 @@ msgstr ""
 "Obrázok „%s“ bol nastavený ako pozadie plochy.\n"
 "Chcete upraviť jeho vzhľad?"
 
-#: ../src/eom-window.c:3245
+#: src/eom-window.c:3245
 msgid "Saving image locally…"
 msgstr "Obrázok sa ukladá miestne…"
 
-#: ../src/eom-window.c:3325
+#: src/eom-window.c:3325
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
 msgstr "Chcete presunúť obrázok „%s“ do Koša?"
 
-#: ../src/eom-window.c:3328
+#: src/eom-window.c:3328
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr "Kôš pre „%s“ nebol nájdený. Chcete tento obrázok odstrániť natrvalo?"
 
-#: ../src/eom-window.c:3333
+#: src/eom-window.c:3333
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1236,7 +1208,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: ../src/eom-window.c:3338
+#: src/eom-window.c:3338
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1244,418 +1216,415 @@ msgstr ""
 "Niektoré z vybraných obrázkov nie je možné presunúť do Koša a budú trvale "
 "odstránené. Ste si istý, že chcete pokračovať?"
 
-#: ../src/eom-window.c:3355 ../src/eom-window.c:3851 ../src/eom-window.c:3878
+#: src/eom-window.c:3355 src/eom-window.c:3851 src/eom-window.c:3878
 msgid "Move to _Trash"
 msgstr "Presunúť do _Koša"
 
-#: ../src/eom-window.c:3357
+#: src/eom-window.c:3357
 msgid "_Do not ask again during this session"
 msgstr "_Nepýtať sa znovu počas tejto relácie"
 
-#: ../src/eom-window.c:3402 ../src/eom-window.c:3416
-#, c-format
+#: src/eom-window.c:3402 src/eom-window.c:3416
 msgid "Couldn't access trash."
 msgstr "Nepodarilo sa použiť Kôš."
 
-#: ../src/eom-window.c:3424
-#, c-format
+#: src/eom-window.c:3424
 msgid "Couldn't delete file"
 msgstr "Súbor nie je možné vymazať"
 
-#: ../src/eom-window.c:3526
+#: src/eom-window.c:3526
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Chyba pri odstraňovaní obrázku %s"
 
-#: ../src/eom-window.c:3772
+#: src/eom-window.c:3772
 msgid "_Image"
 msgstr "_Obrázok"
 
-#: ../src/eom-window.c:3773
+#: src/eom-window.c:3773
 msgid "_Edit"
 msgstr "_Upraviť"
 
-#: ../src/eom-window.c:3774
+#: src/eom-window.c:3774
 msgid "_View"
 msgstr "Z_obrazenie"
 
-#: ../src/eom-window.c:3775
+#: src/eom-window.c:3775
 msgid "_Go"
 msgstr "_Prejsť"
 
-#: ../src/eom-window.c:3776
+#: src/eom-window.c:3776
 msgid "_Tools"
 msgstr "Nás_troje"
 
-#: ../src/eom-window.c:3777
+#: src/eom-window.c:3777
 msgid "_Help"
 msgstr "_Pomocník"
 
-#: ../src/eom-window.c:3779
+#: src/eom-window.c:3779
 msgid "_Open…"
 msgstr "_Otvoriť…"
 
-#: ../src/eom-window.c:3780
+#: src/eom-window.c:3780
 msgid "Open a file"
 msgstr "Otvoriť súbor"
 
-#: ../src/eom-window.c:3782
+#: src/eom-window.c:3782
 msgid "_Close"
 msgstr "Zat_voriť"
 
-#: ../src/eom-window.c:3783
+#: src/eom-window.c:3783
 msgid "Close window"
 msgstr "Zavrieť okno"
 
-#: ../src/eom-window.c:3785
+#: src/eom-window.c:3785
 msgid "T_oolbar"
 msgstr "Panel _nástrojov"
 
-#: ../src/eom-window.c:3786
+#: src/eom-window.c:3786
 msgid "Edit the application toolbar"
 msgstr "Upraviť panel nástrojov programu"
 
-#: ../src/eom-window.c:3788
+#: src/eom-window.c:3788
 msgid "Prefere_nces"
 msgstr "_Nastavenia"
 
-#: ../src/eom-window.c:3789
+#: src/eom-window.c:3789
 msgid "Preferences for Eye of MATE"
 msgstr "Nastavenia pre Oko MATE"
 
-#: ../src/eom-window.c:3791
+#: src/eom-window.c:3791
 msgid "_Contents"
 msgstr "Ob_sah"
 
-#: ../src/eom-window.c:3792
+#: src/eom-window.c:3792
 msgid "Help on this application"
 msgstr "Pomocník pre tento program"
 
-#: ../src/eom-window.c:3794
+#: src/eom-window.c:3794
 msgid "_About"
 msgstr "O progr_ame"
 
-#: ../src/eom-window.c:3795
+#: src/eom-window.c:3795
 msgid "About this application"
 msgstr "O tomto programe"
 
-#: ../src/eom-window.c:3800
+#: src/eom-window.c:3800
 msgid "_Toolbar"
 msgstr "Panel nás_trojov"
 
-#: ../src/eom-window.c:3801
+#: src/eom-window.c:3801
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Zmení viditeľnosť panelu nástrojov v aktuálnom okne"
 
-#: ../src/eom-window.c:3803
+#: src/eom-window.c:3803
 msgid "_Statusbar"
 msgstr "S_tavový riadok"
 
-#: ../src/eom-window.c:3804
+#: src/eom-window.c:3804
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Zmení viditeľnosť stavového riadku v aktuálnom okne"
 
-#: ../src/eom-window.c:3806
+#: src/eom-window.c:3806
 msgid "_Image Collection"
 msgstr "_Zbierku obrázkov"
 
-#: ../src/eom-window.c:3807
+#: src/eom-window.c:3807
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "Zmení viditeľnosť panelu zbierok obrázkov v aktuálnom okne"
 
-#: ../src/eom-window.c:3809
+#: src/eom-window.c:3809
 msgid "Side _Pane"
 msgstr "_Bočný panel"
 
-#: ../src/eom-window.c:3810
+#: src/eom-window.c:3810
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Zmení viditeľnosť bočného panelu v aktuálnom okne"
 
-#: ../src/eom-window.c:3815
+#: src/eom-window.c:3815
 msgid "_Save"
 msgstr "_Uložiť"
 
-#: ../src/eom-window.c:3816
+#: src/eom-window.c:3816
 msgid "Save changes in currently selected images"
 msgstr "Uložiť zmeny vybraných obrázkov"
 
-#: ../src/eom-window.c:3818
+#: src/eom-window.c:3818
 msgid "Open _with"
 msgstr "Otvoriť v _programe"
 
-#: ../src/eom-window.c:3819
+#: src/eom-window.c:3819
 msgid "Open the selected image with a different application"
 msgstr "Otvoriť vybraný obrázok iným programom"
 
-#: ../src/eom-window.c:3821
+#: src/eom-window.c:3821
 msgid "Save _As…"
 msgstr "Uložiť _ako..."
 
-#: ../src/eom-window.c:3822
+#: src/eom-window.c:3822
 msgid "Save the selected images with a different name"
 msgstr "Uložiť vybrané obrázky pod iným názvom"
 
-#: ../src/eom-window.c:3824
+#: src/eom-window.c:3824
 msgid "Open Containing _Folder"
 msgstr "Otvoriť obsiahnutý _priečinok"
 
-#: ../src/eom-window.c:3825
+#: src/eom-window.c:3825
 msgid "Show the folder which contains this file in the file manager"
 msgstr ""
 
-#: ../src/eom-window.c:3827
+#: src/eom-window.c:3827
 msgid "_Print…"
 msgstr "_Tlačiť…"
 
-#: ../src/eom-window.c:3828
+#: src/eom-window.c:3828
 msgid "Print the selected image"
 msgstr "Vytlačiť vybraný obrázok"
 
-#: ../src/eom-window.c:3830
+#: src/eom-window.c:3830
 msgid "Prope_rties"
 msgstr "_Vlastnosti"
 
-#: ../src/eom-window.c:3831
+#: src/eom-window.c:3831
 msgid "Show the properties and metadata of the selected image"
 msgstr "Zobraziť vlastnosti a metaúdaje vybraného obrázku"
 
-#: ../src/eom-window.c:3833
+#: src/eom-window.c:3833
 msgid "_Undo"
 msgstr "_Vrátiť"
 
-#: ../src/eom-window.c:3834
+#: src/eom-window.c:3834
 msgid "Undo the last change in the image"
 msgstr "Vrátiť späť poslednú zmenu obrázku"
 
-#: ../src/eom-window.c:3836
+#: src/eom-window.c:3836
 msgid "Flip _Horizontal"
 msgstr "Prevrátiť _horizontálne"
 
-#: ../src/eom-window.c:3837
+#: src/eom-window.c:3837
 msgid "Mirror the image horizontally"
 msgstr "Preklopiť horizontálne (zľava doprava)"
 
-#: ../src/eom-window.c:3839
+#: src/eom-window.c:3839
 msgid "Flip _Vertical"
 msgstr "Prevrátiť _vertikálne"
 
-#: ../src/eom-window.c:3840
+#: src/eom-window.c:3840
 msgid "Mirror the image vertically"
 msgstr "Preklopiť zvislo"
 
-#: ../src/eom-window.c:3842
+#: src/eom-window.c:3842
 msgid "_Rotate Clockwise"
 msgstr "Otočiť v _smere hodinových ručičiek"
 
-#: ../src/eom-window.c:3843
+#: src/eom-window.c:3843
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Otočiť obrázok o 90 stupňov doprava"
 
-#: ../src/eom-window.c:3845
+#: src/eom-window.c:3845
 msgid "Rotate Counterc_lockwise"
 msgstr "Otočiť p_roti smeru hodinových ručičiek"
 
-#: ../src/eom-window.c:3846
+#: src/eom-window.c:3846
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Otočiť obrázok o 90 stupňov doľava"
 
-#: ../src/eom-window.c:3848
+#: src/eom-window.c:3848
 msgid "Set as _Desktop Background"
 msgstr "Nastaviť ako poza_die plochy"
 
-#: ../src/eom-window.c:3849
+#: src/eom-window.c:3849
 msgid "Set the selected image as the desktop background"
 msgstr "Nastaviť vybraný obrázok ako pozadie plochy"
 
-#: ../src/eom-window.c:3852
+#: src/eom-window.c:3852
 msgid "Move the selected image to the trash folder"
 msgstr "Presunúť vybraný obrázok do odpadkového koša"
 
-#: ../src/eom-window.c:3854
+#: src/eom-window.c:3854
 msgid "_Copy"
 msgstr "_Kopírovať"
 
-#: ../src/eom-window.c:3855
+#: src/eom-window.c:3855
 msgid "Copy the selected image to the clipboard"
 msgstr "Skopírovať zvolený obrázok do schránky"
 
-#: ../src/eom-window.c:3857 ../src/eom-window.c:3869 ../src/eom-window.c:3872
+#: src/eom-window.c:3857 src/eom-window.c:3869 src/eom-window.c:3872
 msgid "_Zoom In"
 msgstr "Z_väčšiť"
 
-#: ../src/eom-window.c:3858 ../src/eom-window.c:3870
+#: src/eom-window.c:3858 src/eom-window.c:3870
 msgid "Enlarge the image"
 msgstr "Zväčšiť obrázok"
 
-#: ../src/eom-window.c:3860 ../src/eom-window.c:3875
+#: src/eom-window.c:3860 src/eom-window.c:3875
 msgid "Zoom _Out"
 msgstr "Z_menšiť"
 
-#: ../src/eom-window.c:3861 ../src/eom-window.c:3873 ../src/eom-window.c:3876
+#: src/eom-window.c:3861 src/eom-window.c:3873 src/eom-window.c:3876
 msgid "Shrink the image"
 msgstr "Zmenšiť obrázok"
 
-#: ../src/eom-window.c:3863
+#: src/eom-window.c:3863
 msgid "_Normal Size"
 msgstr "_Normálna veľkosť"
 
-#: ../src/eom-window.c:3864
+#: src/eom-window.c:3864
 msgid "Show the image at its normal size"
 msgstr "Zobraziť obrázok v jeho pôvodnej veľkosti"
 
-#: ../src/eom-window.c:3866
+#: src/eom-window.c:3866
 msgid "_Best Fit"
 msgstr "_Najlepšia veľkosť"
 
-#: ../src/eom-window.c:3867
+#: src/eom-window.c:3867
 msgid "Fit the image to the window"
 msgstr "Prispôsobiť obrázok veľkosti okna"
 
-#: ../src/eom-window.c:3884
+#: src/eom-window.c:3884
 msgid "_Fullscreen"
 msgstr "_Celá obrazovka"
 
-#: ../src/eom-window.c:3885
+#: src/eom-window.c:3885
 msgid "Show the current image in fullscreen mode"
 msgstr "Zobraziť tento obrázok na celú obrazovku"
 
-#: ../src/eom-window.c:3887
+#: src/eom-window.c:3887
 msgid "Pause Slideshow"
 msgstr "Pozastaviť prezentáciu"
 
-#: ../src/eom-window.c:3888
+#: src/eom-window.c:3888
 msgid "Pause or resume the slideshow"
 msgstr "Pozastaviť alebo pokračovať v prezentácii"
 
-#: ../src/eom-window.c:3893 ../src/eom-window.c:3908
+#: src/eom-window.c:3893 src/eom-window.c:3908
 msgid "_Previous Image"
 msgstr "_Predchádzajúci obrázok"
 
-#: ../src/eom-window.c:3894
+#: src/eom-window.c:3894
 msgid "Go to the previous image of the collection"
 msgstr "Prejsť na predchádzajúci obrázok v zbierke"
 
-#: ../src/eom-window.c:3896
+#: src/eom-window.c:3896
 msgid "_Next Image"
 msgstr "_Nasledujúci obrázok"
 
-#: ../src/eom-window.c:3897
+#: src/eom-window.c:3897
 msgid "Go to the next image of the collection"
 msgstr "Prejsť na nasledujúci obrázok v zbierke"
 
-#: ../src/eom-window.c:3899 ../src/eom-window.c:3911
+#: src/eom-window.c:3899 src/eom-window.c:3911
 msgid "_First Image"
 msgstr "P_rvý obrázok"
 
-#: ../src/eom-window.c:3900
+#: src/eom-window.c:3900
 msgid "Go to the first image of the collection"
 msgstr "Prejsť na prvý obrázok v zbierke"
 
-#: ../src/eom-window.c:3902 ../src/eom-window.c:3914
+#: src/eom-window.c:3902 src/eom-window.c:3914
 msgid "_Last Image"
 msgstr "Po_sledný obrázok"
 
-#: ../src/eom-window.c:3903
+#: src/eom-window.c:3903
 msgid "Go to the last image of the collection"
 msgstr "Prejsť na posledný obrázok v zbierke"
 
-#: ../src/eom-window.c:3905
+#: src/eom-window.c:3905
 msgid "_Random Image"
 msgstr "_Náhodný obrázok"
 
-#: ../src/eom-window.c:3906
+#: src/eom-window.c:3906
 msgid "Go to a random image of the collection"
 msgstr "Prejsť na náhodný obrázok v zbierke"
 
-#: ../src/eom-window.c:3920
+#: src/eom-window.c:3920
 msgid "S_lideshow"
 msgstr "Pre_zentácia"
 
-#: ../src/eom-window.c:3921
+#: src/eom-window.c:3921
 msgid "Start a slideshow view of the images"
 msgstr "Premietať ako snímky"
 
-#: ../src/eom-window.c:3991
+#: src/eom-window.c:3991
 msgid "Previous"
 msgstr "Predchádzajúca"
 
-#: ../src/eom-window.c:3995
+#: src/eom-window.c:3995
 msgid "Next"
 msgstr "Nasledujúca"
 
-#: ../src/eom-window.c:3999
+#: src/eom-window.c:3999
 msgid "Right"
 msgstr "Vpravo"
 
-#: ../src/eom-window.c:4002
+#: src/eom-window.c:4002
 msgid "Left"
 msgstr "Vľavo"
 
-#: ../src/eom-window.c:4008
+#: src/eom-window.c:4008
 msgid "In"
 msgstr "Zväčšiť"
 
-#: ../src/eom-window.c:4011
+#: src/eom-window.c:4011
 msgid "Out"
 msgstr "Zmenšiť"
 
-#: ../src/eom-window.c:4014
+#: src/eom-window.c:4014
 msgid "Normal"
 msgstr "Normálna"
 
-#: ../src/eom-window.c:4017
+#: src/eom-window.c:4017
 msgid "Fit"
 msgstr "Prispôsobiť"
 
-#: ../src/eom-window.c:4020
+#: src/eom-window.c:4020
 msgid "Collection"
 msgstr "Zbierka"
 
-#: ../src/eom-window.c:4023
+#: src/eom-window.c:4023
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Kôš"
 
-#: ../src/eom-window.c:4381
+#: src/eom-window.c:4381
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "Upraviť súčasný obrázok pomocou %s"
 
-#: ../src/eom-window.c:4384
+#: src/eom-window.c:4384
 msgid "Edit Image"
 msgstr "Upraviť obrázok"
 
-#: ../src/eom-window.c:4608
+#: src/eom-window.c:4608
 msgid "Properties"
 msgstr "Vlastnosti"
 
-#: ../src/main.c:72
+#: src/main.c:72
 msgid "Open in fullscreen mode"
 msgstr "Otvoriť v režime celej obrazovky"
 
-#: ../src/main.c:73
+#: src/main.c:73
 msgid "Disable image collection"
 msgstr "Vypnúť zbierku obrázkov"
 
-#: ../src/main.c:74
+#: src/main.c:74
 msgid "Open in slideshow mode"
 msgstr "Otvoriť v režime prezentácie"
 
-#: ../src/main.c:75
+#: src/main.c:75
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "Spustiť novú inštanciu namiesto znovu využitia existujúcej"
 
-#: ../src/main.c:77
+#: src/main.c:77
 msgid "Show the application's version"
 msgstr "Zobraziť verziu programu"
 
-#: ../src/main.c:108
+#: src/main.c:108
 msgid "[FILE…]"
 msgstr "[SÚBOR…]"
 
-#. I18N: The '%s' is replaced with eom's command name.
-#: ../src/main.c:121
+#: src/main.c:121
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
