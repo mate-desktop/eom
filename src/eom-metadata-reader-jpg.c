@@ -26,6 +26,7 @@
 #endif
 
 #include <string.h>
+#include <gdk/gdkx.h>
 
 #include "eom-metadata-reader.h"
 #include "eom-metadata-reader-jpg.h"
@@ -497,7 +498,7 @@ eom_metadata_reader_jpg_get_xmp_data (EomMetadataReaderJpg *emr )
  * parse the sections and construct a single memory chunk, or maybe even parse
  * the profile.
  */
-#ifdef HAVE_LCMS
+#if defined(HAVE_LCMS) && defined(GDK_WINDOWING_X11)
 static gpointer
 eom_metadata_reader_jpg_get_icc_profile (EomMetadataReaderJpg *emr)
 {
@@ -509,7 +510,9 @@ eom_metadata_reader_jpg_get_icc_profile (EomMetadataReaderJpg *emr)
 	priv = emr->priv;
 
 	if (priv->icc_chunk) {
-		profile = cmsOpenProfileFromMem(priv->icc_chunk + 14, priv->icc_len - 14);
+		if (GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+			profile = cmsOpenProfileFromMem(priv->icc_chunk + 14, priv->icc_len - 14);
+		}
 
 		if (profile) {
 			eom_debug_message (DEBUG_LCMS, "JPEG has ICC profile");
@@ -653,7 +656,7 @@ eom_metadata_reader_jpg_init_emr_iface (gpointer g_iface, gpointer iface_data)
 		(gpointer (*) (EomMetadataReader *self))
 			eom_metadata_reader_jpg_get_exif_data;
 #endif
-#ifdef HAVE_LCMS
+#if defined(HAVE_LCMS) && defined(GDK_WINDOWING_X11)
 	iface->get_icc_profile =
 		(gpointer (*) (EomMetadataReader *self))
 			eom_metadata_reader_jpg_get_icc_profile;

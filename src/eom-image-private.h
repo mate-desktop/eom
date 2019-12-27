@@ -73,7 +73,7 @@ struct _EomImagePrivate {
  	XmpPtr   xmp;
 #endif
 
-#ifdef HAVE_LCMS
+#if defined(HAVE_LCMS) && defined(GDK_WINDOWING_X11)
 	cmsHPROFILE       profile;
 #endif
 

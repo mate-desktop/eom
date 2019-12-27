@@ -28,6 +28,7 @@
 #include <math.h>
 #include <string.h>
 #include <zlib.h>
+#include <gdk/gdkx.h>
 
 #include "eom-metadata-reader.h"
 #include "eom-metadata-reader-png.h"
@@ -477,7 +478,7 @@ eom_metadata_reader_png_get_xmp_data (EomMetadataReaderPng *emr )
 }
 #endif
 
-#ifdef HAVE_LCMS
+#if defined(HAVE_LCMS) && defined(GDK_WINDOWING_X11)
 
 #define EXTRACT_DOUBLE_UINT_BLOCK_OFFSET(chunk,offset,divider) \
 		(double)(GUINT32_FROM_BE(*((guint32*)((chunk)+((offset)*4))))/(double)(divider))
@@ -585,7 +586,9 @@ eom_metadata_reader_png_get_icc_profile (EomMetadataReaderPng *emr)
 			return NULL;
 		}
 
-		profile = cmsOpenProfileFromMem(outbuf, zstr.total_out);
+		if (GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+			profile = cmsOpenProfileFromMem(outbuf, zstr.total_out);
+		}
 		inflateEnd (&zstr);
 		g_free (outbuf);
 
@@ -597,7 +600,9 @@ eom_metadata_reader_png_get_icc_profile (EomMetadataReaderPng *emr)
 		/* If the file has an sRGB chunk the image data is in the sRGB
 		 * colorspace. lcms has a built-in sRGB profile. */
 
-		profile = cmsCreate_sRGBProfile ();
+		if (GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+			profile = cmsCreate_sRGBProfile ();
+		}
 	}
 
 	if (!profile && priv->cHRM_chunk && priv->gAMA_chunk) {
@@ -632,13 +637,17 @@ eom_metadata_reader_png_get_icc_profile (EomMetadataReaderPng *emr)
 		 * profile instead of computing one that "gets close". */
 		if(_chrm_matches_srgb (&whitepoint, &primaries, gammaValue)) {
 			eom_debug_message (DEBUG_LCMS, "gAMA and cHRM match sRGB");
-			profile = cmsCreate_sRGBProfile ();
+			if (GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+				profile = cmsCreate_sRGBProfile ();
+			}
 		} else {
 			gamma[0] = gamma[1] = gamma[2] =
 				cmsBuildGamma (NULL, gammaValue);
-			profile = cmsCreateRGBProfile (&whitepoint, &primaries,
-						       gamma);
-			cmsFreeToneCurve(gamma[0]);
+			if (GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+				profile = cmsCreateRGBProfile (&whitepoint, &primaries,
+						gamma);
+				cmsFreeToneCurve(gamma[0]);
+			}
 		}
 	}
 
@@ -659,7 +668,7 @@ eom_metadata_reader_png_init_emr_iface (gpointer g_iface, gpointer iface_data)
 	iface->finished =
 		(gboolean (*) (EomMetadataReader *self))
 			eom_metadata_reader_png_finished;
-#ifdef HAVE_LCMS
+#if defined(HAVE_LCMS) && defined(GDK_WINDOWING_X11)
 	iface->get_icc_profile =
 		(cmsHPROFILE (*) (EomMetadataReader *self))
 			eom_metadata_reader_png_get_icc_profile;
