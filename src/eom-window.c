@@ -189,7 +189,7 @@ struct _EomWindowPrivate {
 
 	PeasExtensionSet    *extensions;
 
-#ifdef HAVE_LCMS
+#if defined(HAVE_LCMS) && defined(GDK_WINDOWING_X11)
 	cmsHPROFILE         *display_profile;
 #endif
 };
@@ -378,7 +378,7 @@ eom_window_can_save_changed_cb (GSettings *settings, gchar *key, gpointer user_d
 	G_GNUC_END_IGNORE_DEPRECATIONS;
 }
 
-#ifdef HAVE_LCMS
+#if defined(HAVE_LCMS) && defined(GDK_WINDOWING_X11)
 static cmsHPROFILE *
 eom_window_get_display_profile (GdkScreen *screen)
 {
@@ -392,6 +392,10 @@ eom_window_get_display_profile (GdkScreen *screen)
 	int result;
 	cmsHPROFILE *profile = NULL;
 	char *atom_name;
+
+	if (!GDK_IS_X11_SCREEN (screen)) {
+		return NULL;
+	}
 
 	dpy = GDK_DISPLAY_XDISPLAY (gdk_screen_get_display (screen));
 
@@ -1316,7 +1320,7 @@ eom_job_load_cb (EomJobLoad *job, gpointer data)
 	priv->image = g_object_ref (job->image);
 
 	if (EOM_JOB (job)->error == NULL) {
-#ifdef HAVE_LCMS
+#if defined(HAVE_LCMS) && defined(GDK_WINDOWING_X11)
 		eom_image_apply_display_profile (job->image,
 						 priv->display_profile);
 #endif
@@ -4740,7 +4744,7 @@ eom_window_init (EomWindow *window)
 	window->priv->mode = EOM_WINDOW_MODE_UNKNOWN;
 	window->priv->status = EOM_WINDOW_STATUS_UNKNOWN;
 
-#ifdef HAVE_LCMS
+#if defined(HAVE_LCMS) && defined(GDK_WINDOWING_X11)
 	window->priv->display_profile =
 		eom_window_get_display_profile (screen);
 #endif
@@ -4884,7 +4888,7 @@ eom_window_dispose (GObject *object)
 		priv->file_list = NULL;
 	}
 
-#ifdef HAVE_LCMS
+#if defined(HAVE_LCMS) && defined(GDK_WINDOWING_X11)
 	if (priv->display_profile != NULL) {
 		cmsCloseProfile (priv->display_profile);
 		priv->display_profile = NULL;

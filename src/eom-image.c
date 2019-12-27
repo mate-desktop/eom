@@ -24,6 +24,7 @@
 #endif
 
 #define GDK_PIXBUF_ENABLE_BACKEND
+#include <gdk/gdkx.h>
 
 #include "eom-image.h"
 #include "eom-image-private.h"
@@ -58,7 +59,7 @@
 #include <libexif/exif-loader.h>
 #endif
 
-#ifdef HAVE_LCMS
+#if defined(HAVE_LCMS) && defined(GDK_WINDOWING_X11)
 #include <lcms2.h>
 #ifndef EXIF_TAG_GAMMA
 #define EXIF_TAG_GAMMA 0xa500
@@ -142,9 +143,11 @@ eom_image_free_mem_private (EomImage *image)
 		}
 #endif
 
-#ifdef HAVE_LCMS
+#if defined(HAVE_LCMS) && defined(GDK_WINDOWING_X11)
 		if (priv->profile != NULL) {
-			cmsCloseProfile (priv->profile);
+			if (GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+				cmsCloseProfile (priv->profile);
+			}
 			priv->profile = NULL;
 		}
 #endif
@@ -306,7 +309,7 @@ eom_image_init (EomImage *img)
 #ifdef HAVE_EXEMPI
 	img->priv->xmp = NULL;
 #endif
-#ifdef HAVE_LCMS
+#if defined(HAVE_LCMS) && defined(GDK_WINDOWING_X11)
 	img->priv->profile = NULL;
 #endif
 #ifdef HAVE_RSVG
@@ -616,7 +619,7 @@ eom_image_get_file_info (EomImage *img,
 	}
 }
 
-#ifdef HAVE_LCMS
+#if defined(HAVE_LCMS) && defined(GDK_WINDOWING_X11)
 void
 eom_image_apply_display_profile (EomImage *img, cmsHPROFILE screen)
 {
@@ -630,6 +633,9 @@ eom_image_apply_display_profile (EomImage *img, cmsHPROFILE screen)
 	priv = img->priv;
 
 	if (screen == NULL) return;
+	if (!GDK_IS_X11_DISPLAY(gdk_display_get_default())) {
+		return;
+	}
 
 	if (priv->profile == NULL) {
 		/* Check whether GdkPixbuf was able to extract a profile */
@@ -1062,7 +1068,7 @@ eom_image_real_load (EomImage *img,
 				if (set_metadata) {
 					eom_image_set_exif_data (img, md_reader);
 
-#ifdef HAVE_LCMS
+#if defined(HAVE_LCMS) && defined(GDK_WINDOWING_X11)
 					eom_image_set_icc_data (img, md_reader);
 #endif
 
@@ -1348,7 +1354,7 @@ eom_image_get_pixbuf (EomImage *img)
 	return image;
 }
 
-#ifdef HAVE_LCMS
+#if defined(HAVE_LCMS) && defined(GDK_WINDOWING_X11)
 cmsHPROFILE
 eom_image_get_profile (EomImage *img)
 {
