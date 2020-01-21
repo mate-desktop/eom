@@ -285,6 +285,18 @@ fi
 
 AM_CONDITIONAL([HAVE_RSVG], [test "x$have_rsvg" = "xyes"])
 
+# ***********************
+# THUMBNAILER CFLAGS/LIBS
+# ***********************
+
+glib-2.0 gio-2.0 MagickWand
+
+PKG_CHECK_MODULES(THUMBNAILER, [
+	glib-2.0 >= $GLIB_REQUIRED
+	gio-2.0 >= $GLIB_REQUIRED
+        MagickWand
+])
+
 # ****************
 # CFLAGS/LIBS init
 # ****************
@@ -344,6 +356,7 @@ doc/reference/Makefile
 doc/reference/version.xml
 doc/reference/eom-docs.sgml
 plugins/Makefile
+thumbnailer/Makefile
 ])
 
 AC_OUTPUT
