@@ -6,14 +6,14 @@
 # Translators:
 # Asier Iturralde Sarasola <asier.iturralde@gmail.com>, 2018
 # Aritz Jorge Sánchez <aritz.jorge@protonmail.com>, 2018
-# Alexander Gabilondo <alexgabilondo@gmail.com>, 2018
+# Alexander Gabilondo <alexgabi@disroot.org>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: eom 1.23.0\n"
+"Project-Id-Version: eom 1.23.1\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
-"POT-Creation-Date: 2019-11-20 14:38+0100\n"
+"POT-Creation-Date: 2020-01-10 14:33+0100\n"
 "PO-Revision-Date: 2018-03-11 15:18+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
 "Language-Team: Basque (https://www.transifex.com/mate/teams/13566/eu/)\n"
@@ -56,7 +56,7 @@ msgstr "Kendu hautatutako tresna-barra"
 msgid "Separator"
 msgstr "Bereizlea"
 
-#: data/eom.appdata.xml.in:6 src/eom-window.c:2636
+#: data/eom.appdata.xml.in:6 src/eom-window.c:2640
 msgid "Eye of MATE"
 msgstr "MATEren begia"
 
@@ -746,31 +746,31 @@ msgstr "Ireki irudia"
 msgid "Save Image"
 msgstr "Gorde irudia"
 
-#: src/eom-file-chooser.c:467 src/eom-window.c:4005
+#: src/eom-file-chooser.c:467 src/eom-window.c:4009
 msgid "Open Folder"
 msgstr "Ireki karpeta"
 
-#: src/eom-image.c:549
+#: src/eom-image.c:552
 msgid "Transformation on unloaded image."
 msgstr "Deskargatutako irudia eraldatzea."
 
-#: src/eom-image.c:577
+#: src/eom-image.c:580
 msgid "Transformation failed."
 msgstr "Huts egin du eraldatzean."
 
-#: src/eom-image.c:1048
+#: src/eom-image.c:1054
 msgid "EXIF not supported for this file format."
 msgstr "Fitxategi-formatu honek ez du EXIF onartzen."
 
-#: src/eom-image.c:1197
+#: src/eom-image.c:1203
 msgid "Image loading failed."
 msgstr "Huts egin du irudia kargatzean."
 
-#: src/eom-image.c:1726 src/eom-image.c:1828
+#: src/eom-image.c:1732 src/eom-image.c:1834
 msgid "No image loaded."
 msgstr "Ez da irudirik kargatu."
 
-#: src/eom-image.c:1736 src/eom-image.c:1840
+#: src/eom-image.c:1742 src/eom-image.c:1846
 msgid "Temporary file creation failed."
 msgstr "Huts egin du aldi baterako fitxategia sortzean."
 
@@ -1024,23 +1024,23 @@ msgstr " (Unicode baliogabea)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: src/eom-window.c:517
+#: src/eom-window.c:521
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/eom-window.c:828
+#: src/eom-window.c:832
 msgid "_Reload"
 msgstr "_Birkargatu"
 
-#: src/eom-window.c:830 src/eom-window.c:2790
+#: src/eom-window.c:834 src/eom-window.c:2794
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "_Ezkutatu"
 
-#: src/eom-window.c:840
+#: src/eom-window.c:844
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -1049,7 +1049,7 @@ msgstr ""
 "\"%s\" irudia kanpoko aplikazio batek aldatu du.\n"
 "Nahi duzu berriro kargatzea?"
 
-#: src/eom-window.c:1008
+#: src/eom-window.c:1012
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Erabili \"%s\" hautatutako irudiak irekitzeko"
@@ -1059,25 +1059,25 @@ msgstr "Erabili \"%s\" hautatutako irudiak irekitzeko"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: src/eom-window.c:1172
+#: src/eom-window.c:1176
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "\"%s\" irudia gordetzen (%u/%u)"
 
-#: src/eom-window.c:1539
+#: src/eom-window.c:1543
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "\"%s\" irudia irekitzen"
 
-#: src/eom-window.c:1905
+#: src/eom-window.c:1909
 msgid "Leave Fullscreen"
 msgstr "Irten pantaila osotik"
 
-#: src/eom-window.c:2046
+#: src/eom-window.c:2050
 msgid "Viewing a slideshow"
 msgstr ""
 
-#: src/eom-window.c:2259
+#: src/eom-window.c:2263
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1086,15 +1086,15 @@ msgstr ""
 "Errorea fitxategia inprimatzean:\n"
 "%s"
 
-#: src/eom-window.c:2522
+#: src/eom-window.c:2526
 msgid "Toolbar Editor"
 msgstr "Tresna-barraren editorea"
 
-#: src/eom-window.c:2525
+#: src/eom-window.c:2529
 msgid "_Reset to Default"
 msgstr "_Berrasieratu lehenetsira"
 
-#: src/eom-window.c:2590
+#: src/eom-window.c:2594
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1106,7 +1106,7 @@ msgstr ""
 " edo (nahiago baduzu) beste berriago batean, jasotako baldintzak betez "
 "gero.\n"
 
-#: src/eom-window.c:2594
+#: src/eom-window.c:2598
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1118,7 +1118,7 @@ msgstr ""
 "MERKATURATZEKO edo HELBURU PARTIKULARRETARAKO ERABILTZEKO. Argibide gehiago "
 "nahi izanez gero, ikus GNU Lizentzia Publiko Orokorra.\n"
 
-#: src/eom-window.c:2598
+#: src/eom-window.c:2602
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
@@ -1128,36 +1128,36 @@ msgstr ""
 "zenuen; hala ez bada, idatzi hona: Free Software Foundation, Inc., 51 "
 "Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA"
 
-#: src/eom-window.c:2637
+#: src/eom-window.c:2641
 msgid "About Eye of MATE"
 msgstr ""
 
-#: src/eom-window.c:2639
+#: src/eom-window.c:2643
 msgid ""
 "Copyright © 2000-2010 Free Software Foundation, Inc.\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2019 MATE developers"
+"Copyright © 2012-2020 MATE developers"
 msgstr ""
 
-#: src/eom-window.c:2642
+#: src/eom-window.c:2646
 msgid "The MATE image viewer."
 msgstr "MATEren irudi-ikustailea."
 
-#: src/eom-window.c:2645
+#: src/eom-window.c:2649
 msgid "translator-credits"
 msgstr ""
 "Asier Iturralde Sarasola <asier.iturralde@gmail.com>\n"
 "Aritz Jorge Sánchez"
 
-#: src/eom-window.c:2738 src/eom-window.c:2753
+#: src/eom-window.c:2742 src/eom-window.c:2757
 msgid "Error launching appearance preferences dialog: "
 msgstr ""
 
-#: src/eom-window.c:2788
+#: src/eom-window.c:2792
 msgid "_Open Background Preferences"
 msgstr "_Ireki atzeko planoaren hobespenak"
 
-#: src/eom-window.c:2804
+#: src/eom-window.c:2808
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1166,11 +1166,11 @@ msgstr ""
 "\"%s\" irudia mahaigaineko atzeko planoko irudi gisa ezarri da.\n"
 "Nahi duzu bere itxura aldatzea?"
 
-#: src/eom-window.c:3245
+#: src/eom-window.c:3249
 msgid "Saving image locally…"
 msgstr "Irudia lokalean gordetzen..."
 
-#: src/eom-window.c:3325
+#: src/eom-window.c:3329
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1179,7 +1179,7 @@ msgstr ""
 "Ziur zaude \"%s\"\n"
 "zakarrontzira botatzea nahi duzula?"
 
-#: src/eom-window.c:3328
+#: src/eom-window.c:3332
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
@@ -1188,7 +1188,7 @@ msgstr ""
 "Ezin izan da \"%s\"(r)en zakarrontzia aurkitu. Nahi duzu irudi hau betirako "
 "kentzea?"
 
-#: src/eom-window.c:3333
+#: src/eom-window.c:3337
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1199,7 +1199,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/eom-window.c:3338
+#: src/eom-window.c:3342
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1207,387 +1207,387 @@ msgstr ""
 "Hautatutako irudi batzuk ezin dira zakarrontzira bota, eta betirako "
 "ezabatuko dira. Aurrera jarraitzea nahi duzu?"
 
-#: src/eom-window.c:3355 src/eom-window.c:3851 src/eom-window.c:3878
+#: src/eom-window.c:3359 src/eom-window.c:3855 src/eom-window.c:3882
 msgid "Move to _Trash"
 msgstr "Bota _zakarrontzira"
 
-#: src/eom-window.c:3357
+#: src/eom-window.c:3361
 msgid "_Do not ask again during this session"
 msgstr "_Ez galdetu berriro saio honetan"
 
-#: src/eom-window.c:3402 src/eom-window.c:3416
+#: src/eom-window.c:3406 src/eom-window.c:3420
 msgid "Couldn't access trash."
 msgstr "Ezin izan da zakarrontzirik erabili."
 
-#: src/eom-window.c:3424
+#: src/eom-window.c:3428
 msgid "Couldn't delete file"
 msgstr "Ezin izan da fitxategia ezabatu"
 
-#: src/eom-window.c:3526
+#: src/eom-window.c:3530
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Errorea %s irudia ezabatzean"
 
-#: src/eom-window.c:3772
+#: src/eom-window.c:3776
 msgid "_Image"
 msgstr "I_rudia"
 
-#: src/eom-window.c:3773
+#: src/eom-window.c:3777
 msgid "_Edit"
 msgstr "_Editatu"
 
-#: src/eom-window.c:3774
+#: src/eom-window.c:3778
 msgid "_View"
 msgstr "_Ikusi"
 
-#: src/eom-window.c:3775
+#: src/eom-window.c:3779
 msgid "_Go"
 msgstr "_Joan"
 
-#: src/eom-window.c:3776
+#: src/eom-window.c:3780
 msgid "_Tools"
 msgstr "_Tresnak"
 
-#: src/eom-window.c:3777
+#: src/eom-window.c:3781
 msgid "_Help"
 msgstr "_Laguntza"
 
-#: src/eom-window.c:3779
+#: src/eom-window.c:3783
 msgid "_Open…"
 msgstr "_Ireki..."
 
-#: src/eom-window.c:3780
+#: src/eom-window.c:3784
 msgid "Open a file"
 msgstr "Fitxategi bat irekitzen du"
 
-#: src/eom-window.c:3782
+#: src/eom-window.c:3786
 msgid "_Close"
 msgstr "_Itxi"
 
-#: src/eom-window.c:3783
+#: src/eom-window.c:3787
 msgid "Close window"
 msgstr "Itxi leihoa"
 
-#: src/eom-window.c:3785
+#: src/eom-window.c:3789
 msgid "T_oolbar"
 msgstr "_Tresna-barra"
 
-#: src/eom-window.c:3786
+#: src/eom-window.c:3790
 msgid "Edit the application toolbar"
 msgstr "Editatu aplikazioaren tresna-barra"
 
-#: src/eom-window.c:3788
+#: src/eom-window.c:3792
 msgid "Prefere_nces"
 msgstr "Hobes_penak"
 
-#: src/eom-window.c:3789
+#: src/eom-window.c:3793
 msgid "Preferences for Eye of MATE"
 msgstr "MATEren begiaren hobespenak"
 
-#: src/eom-window.c:3791
+#: src/eom-window.c:3795
 msgid "_Contents"
 msgstr "_Edukia"
 
-#: src/eom-window.c:3792
+#: src/eom-window.c:3796
 msgid "Help on this application"
 msgstr "Aplikazio honen laguntza"
 
-#: src/eom-window.c:3794
+#: src/eom-window.c:3798
 msgid "_About"
 msgstr "Honi _buruz"
 
-#: src/eom-window.c:3795
+#: src/eom-window.c:3799
 msgid "About this application"
 msgstr "Aplikazioari buruz"
 
-#: src/eom-window.c:3800
+#: src/eom-window.c:3804
 msgid "_Toolbar"
 msgstr "_Tresna-barra"
 
-#: src/eom-window.c:3801
+#: src/eom-window.c:3805
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Aldatu tresna-barraren ikusgaitasuna uneko leihoan"
 
-#: src/eom-window.c:3803
+#: src/eom-window.c:3807
 msgid "_Statusbar"
 msgstr "_Egoera-barra"
 
-#: src/eom-window.c:3804
+#: src/eom-window.c:3808
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Aldatu egoera-barraren ikusgaitasuna uneko leihoan"
 
-#: src/eom-window.c:3806
+#: src/eom-window.c:3810
 msgid "_Image Collection"
 msgstr "_Irudi-bilduma"
 
-#: src/eom-window.c:3807
+#: src/eom-window.c:3811
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "Aldatu irudi-bildumaren panelaren ikusgaitasuna uneko leihoan"
 
-#: src/eom-window.c:3809
+#: src/eom-window.c:3813
 msgid "Side _Pane"
 msgstr "Alboko p_anela"
 
-#: src/eom-window.c:3810
+#: src/eom-window.c:3814
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Albo-panelaren ikusgaitasuna aldatzen du uneko leihoan"
 
-#: src/eom-window.c:3815
+#: src/eom-window.c:3819
 msgid "_Save"
 msgstr "_Gorde"
 
-#: src/eom-window.c:3816
+#: src/eom-window.c:3820
 msgid "Save changes in currently selected images"
 msgstr "Gorde aldaketak unean hautatutako irudietan"
 
-#: src/eom-window.c:3818
+#: src/eom-window.c:3822
 msgid "Open _with"
 msgstr "Ireki _honekin"
 
-#: src/eom-window.c:3819
+#: src/eom-window.c:3823
 msgid "Open the selected image with a different application"
 msgstr "Ireki hautatutako irudia beste aplikazio batekin"
 
-#: src/eom-window.c:3821
+#: src/eom-window.c:3825
 msgid "Save _As…"
 msgstr "Gorde _honela..."
 
-#: src/eom-window.c:3822
+#: src/eom-window.c:3826
 msgid "Save the selected images with a different name"
 msgstr "Gorde hautatutako irudiak beste izenarekin"
 
-#: src/eom-window.c:3824
+#: src/eom-window.c:3828
 msgid "Open Containing _Folder"
 msgstr ""
 
-#: src/eom-window.c:3825
+#: src/eom-window.c:3829
 msgid "Show the folder which contains this file in the file manager"
 msgstr ""
 
-#: src/eom-window.c:3827
+#: src/eom-window.c:3831
 msgid "_Print…"
 msgstr "_Inprimatu..."
 
-#: src/eom-window.c:3828
+#: src/eom-window.c:3832
 msgid "Print the selected image"
 msgstr "Inprimatu hautatutako irudia"
 
-#: src/eom-window.c:3830
+#: src/eom-window.c:3834
 msgid "Prope_rties"
 msgstr "_Propietateak"
 
-#: src/eom-window.c:3831
+#: src/eom-window.c:3835
 msgid "Show the properties and metadata of the selected image"
 msgstr "Erakutsi hautatutako irudiaren propietateak eta metadatuak"
 
-#: src/eom-window.c:3833
+#: src/eom-window.c:3837
 msgid "_Undo"
 msgstr "_Desegin"
 
-#: src/eom-window.c:3834
+#: src/eom-window.c:3838
 msgid "Undo the last change in the image"
 msgstr "Desegin irudiaren azken aldaketa"
 
-#: src/eom-window.c:3836
+#: src/eom-window.c:3840
 msgid "Flip _Horizontal"
 msgstr "Irauli _horizontalki"
 
-#: src/eom-window.c:3837
+#: src/eom-window.c:3841
 msgid "Mirror the image horizontally"
 msgstr "Ispilatu irudia horizontalki"
 
-#: src/eom-window.c:3839
+#: src/eom-window.c:3843
 msgid "Flip _Vertical"
 msgstr "Irauli _bertikalki"
 
-#: src/eom-window.c:3840
+#: src/eom-window.c:3844
 msgid "Mirror the image vertically"
 msgstr "Ispilatu irudia bertikalki"
 
-#: src/eom-window.c:3842
+#: src/eom-window.c:3846
 msgid "_Rotate Clockwise"
 msgstr "Biratu e_skuinera"
 
-#: src/eom-window.c:3843
+#: src/eom-window.c:3847
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Biratu irudia 90 gradu eskuinera"
 
-#: src/eom-window.c:3845
+#: src/eom-window.c:3849
 msgid "Rotate Counterc_lockwise"
 msgstr "Biratu e_zkerrera"
 
-#: src/eom-window.c:3846
+#: src/eom-window.c:3850
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Biratu irudia 90 gradu ezkerrera"
 
-#: src/eom-window.c:3848
+#: src/eom-window.c:3852
 msgid "Set as _Desktop Background"
 msgstr "Ezarri _mahaigaineko atzeko plano gisa"
 
-#: src/eom-window.c:3849
+#: src/eom-window.c:3853
 msgid "Set the selected image as the desktop background"
 msgstr "Ezarri hautatutako irudia mahaigaineko atzeko plano gisa"
 
-#: src/eom-window.c:3852
+#: src/eom-window.c:3856
 msgid "Move the selected image to the trash folder"
 msgstr "Bota hautatutako irudia zakarrontzira"
 
-#: src/eom-window.c:3854
+#: src/eom-window.c:3858
 msgid "_Copy"
 msgstr "_Kopiatu"
 
-#: src/eom-window.c:3855
+#: src/eom-window.c:3859
 msgid "Copy the selected image to the clipboard"
 msgstr ""
 
-#: src/eom-window.c:3857 src/eom-window.c:3869 src/eom-window.c:3872
+#: src/eom-window.c:3861 src/eom-window.c:3873 src/eom-window.c:3876
 msgid "_Zoom In"
 msgstr "_Handiagotu"
 
-#: src/eom-window.c:3858 src/eom-window.c:3870
+#: src/eom-window.c:3862 src/eom-window.c:3874
 msgid "Enlarge the image"
 msgstr "Handiagotu irudia"
 
-#: src/eom-window.c:3860 src/eom-window.c:3875
+#: src/eom-window.c:3864 src/eom-window.c:3879
 msgid "Zoom _Out"
 msgstr "_Txikiagotu"
 
-#: src/eom-window.c:3861 src/eom-window.c:3873 src/eom-window.c:3876
+#: src/eom-window.c:3865 src/eom-window.c:3877 src/eom-window.c:3880
 msgid "Shrink the image"
 msgstr "Txikiagotu irudia"
 
-#: src/eom-window.c:3863
+#: src/eom-window.c:3867
 msgid "_Normal Size"
 msgstr "Tamaina _normala"
 
-#: src/eom-window.c:3864
+#: src/eom-window.c:3868
 msgid "Show the image at its normal size"
 msgstr "Erakutsi irudia bere tamaina normalean"
 
-#: src/eom-window.c:3866
+#: src/eom-window.c:3870
 msgid "_Best Fit"
 msgstr "_Egokiena"
 
-#: src/eom-window.c:3867
+#: src/eom-window.c:3871
 msgid "Fit the image to the window"
 msgstr "Doitu irudia leihora"
 
-#: src/eom-window.c:3884
+#: src/eom-window.c:3888
 msgid "_Fullscreen"
 msgstr "_Pantaila osoa"
 
-#: src/eom-window.c:3885
+#: src/eom-window.c:3889
 msgid "Show the current image in fullscreen mode"
 msgstr "Erakutsi uneko irudia pantaila osoko moduan"
 
-#: src/eom-window.c:3887
+#: src/eom-window.c:3891
 msgid "Pause Slideshow"
 msgstr "Pausatu diapositiba-aurkezpena"
 
-#: src/eom-window.c:3888
+#: src/eom-window.c:3892
 msgid "Pause or resume the slideshow"
 msgstr "Pausatu edo jarraitu diapositiba-aurkezpena"
 
-#: src/eom-window.c:3893 src/eom-window.c:3908
+#: src/eom-window.c:3897 src/eom-window.c:3912
 msgid "_Previous Image"
 msgstr "_Aurreko irudia"
 
-#: src/eom-window.c:3894
+#: src/eom-window.c:3898
 msgid "Go to the previous image of the collection"
 msgstr "Joan bildumaren aurreko irudira"
 
-#: src/eom-window.c:3896
+#: src/eom-window.c:3900
 msgid "_Next Image"
 msgstr "_Hurrengo irudia"
 
-#: src/eom-window.c:3897
+#: src/eom-window.c:3901
 msgid "Go to the next image of the collection"
 msgstr "Joan bildumaren hurrengo irudira"
 
-#: src/eom-window.c:3899 src/eom-window.c:3911
+#: src/eom-window.c:3903 src/eom-window.c:3915
 msgid "_First Image"
 msgstr "_Aurreneko irudia"
 
-#: src/eom-window.c:3900
+#: src/eom-window.c:3904
 msgid "Go to the first image of the collection"
 msgstr "Joan bildumaren aurreneko irudira"
 
-#: src/eom-window.c:3902 src/eom-window.c:3914
+#: src/eom-window.c:3906 src/eom-window.c:3918
 msgid "_Last Image"
 msgstr "_Azkeneko irudia"
 
-#: src/eom-window.c:3903
+#: src/eom-window.c:3907
 msgid "Go to the last image of the collection"
 msgstr "Joan bildumaren azkeneko irudira"
 
-#: src/eom-window.c:3905
+#: src/eom-window.c:3909
 msgid "_Random Image"
 msgstr "_Ausazko irudia"
 
-#: src/eom-window.c:3906
+#: src/eom-window.c:3910
 msgid "Go to a random image of the collection"
 msgstr "Joan bildumaren hurrengo ausazko irudira"
 
-#: src/eom-window.c:3920
+#: src/eom-window.c:3924
 msgid "S_lideshow"
 msgstr "Diapositiba-aurkezpena"
 
-#: src/eom-window.c:3921
+#: src/eom-window.c:3925
 msgid "Start a slideshow view of the images"
 msgstr "Hasi irudien diapositiba-aurkezpena"
 
-#: src/eom-window.c:3991
+#: src/eom-window.c:3995
 msgid "Previous"
 msgstr "Aurrekoa"
 
-#: src/eom-window.c:3995
+#: src/eom-window.c:3999
 msgid "Next"
 msgstr "Hurrengoa"
 
-#: src/eom-window.c:3999
+#: src/eom-window.c:4003
 msgid "Right"
 msgstr "Eskuina"
 
-#: src/eom-window.c:4002
+#: src/eom-window.c:4006
 msgid "Left"
 msgstr "Ezkerra"
 
-#: src/eom-window.c:4008
+#: src/eom-window.c:4012
 msgid "In"
 msgstr "Handiagotu"
 
-#: src/eom-window.c:4011
+#: src/eom-window.c:4015
 msgid "Out"
 msgstr "Txikiagotu"
 
-#: src/eom-window.c:4014
+#: src/eom-window.c:4018
 msgid "Normal"
 msgstr "Arrunta"
 
-#: src/eom-window.c:4017
+#: src/eom-window.c:4021
 msgid "Fit"
 msgstr "Doitu"
 
-#: src/eom-window.c:4020
+#: src/eom-window.c:4024
 msgid "Collection"
 msgstr "Bilduma"
 
-#: src/eom-window.c:4023
+#: src/eom-window.c:4027
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Zakarrontzia"
 
-#: src/eom-window.c:4381
+#: src/eom-window.c:4385
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "Erakutsi uneko irudia 1%s erabiliz"
 
-#: src/eom-window.c:4384
+#: src/eom-window.c:4388
 msgid "Edit Image"
 msgstr "Editatu irudia"
 
-#: src/eom-window.c:4608
+#: src/eom-window.c:4612
 msgid "Properties"
 msgstr "Propietateak"
 

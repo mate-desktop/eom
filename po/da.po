@@ -6,15 +6,15 @@
 # Translators:
 # Aputsiak Niels Janussen <aj@isit.gl>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Joe Hansen <joedalton2@yahoo.dk>, 2019
+# Joe Hansen <joedalton2@yahoo.dk>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: eom 1.23.0\n"
+"Project-Id-Version: eom 1.23.1\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
-"POT-Creation-Date: 2019-11-20 14:38+0100\n"
+"POT-Creation-Date: 2020-01-10 14:33+0100\n"
 "PO-Revision-Date: 2018-03-11 15:18+0000\n"
-"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2019\n"
+"Last-Translator: Joe Hansen <joedalton2@yahoo.dk>, 2020\n"
 "Language-Team: Danish (https://www.transifex.com/mate/teams/13566/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -55,7 +55,7 @@ msgstr "Fjern den valgte værktøjslinje"
 msgid "Separator"
 msgstr "Adskiller"
 
-#: data/eom.appdata.xml.in:6 src/eom-window.c:2636
+#: data/eom.appdata.xml.in:6 src/eom-window.c:2640
 msgid "Eye of MATE"
 msgstr "Mates øje"
 
@@ -517,8 +517,8 @@ msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
 msgstr ""
-"Hvis dette er sat til falsk, vil små billeder ikke blive strukket for at "
-"passe til skærmen ved start."
+"Hvis dette er sat til falsk, vil små billeder ikke blive strakt for at passe"
+" til skærmen ved start."
 
 #: data/org.mate.eom.gschema.xml.in:73
 msgid "Delay in seconds until showing the next image"
@@ -752,31 +752,31 @@ msgstr "Åbn billede"
 msgid "Save Image"
 msgstr "Gem billede"
 
-#: src/eom-file-chooser.c:467 src/eom-window.c:4005
+#: src/eom-file-chooser.c:467 src/eom-window.c:4009
 msgid "Open Folder"
 msgstr "Åbn mappe"
 
-#: src/eom-image.c:549
+#: src/eom-image.c:552
 msgid "Transformation on unloaded image."
 msgstr "Transformation af ikke indlæst billede."
 
-#: src/eom-image.c:577
+#: src/eom-image.c:580
 msgid "Transformation failed."
 msgstr "Transformationen fejlede."
 
-#: src/eom-image.c:1048
+#: src/eom-image.c:1054
 msgid "EXIF not supported for this file format."
 msgstr "EXIF er ikke understøttet for dette filformat."
 
-#: src/eom-image.c:1197
+#: src/eom-image.c:1203
 msgid "Image loading failed."
 msgstr "Indlæsning af billede mislykkedes."
 
-#: src/eom-image.c:1726 src/eom-image.c:1828
+#: src/eom-image.c:1732 src/eom-image.c:1834
 msgid "No image loaded."
 msgstr "Intet billede indlæst."
 
-#: src/eom-image.c:1736 src/eom-image.c:1840
+#: src/eom-image.c:1742 src/eom-image.c:1846
 msgid "Temporary file creation failed."
 msgstr "Oprettelse af midlertidig fil mislykkedes."
 
@@ -1030,23 +1030,23 @@ msgstr " (ugyldig Unicode)"
 #. * - image height
 #. * - image size in bytes
 #. * - zoom in percent
-#: src/eom-window.c:517
+#: src/eom-window.c:521
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i billedpunkt  %s    %i%%"
 msgstr[1] "%i × %i billedpunkter  %s    %i%%"
 
-#: src/eom-window.c:828
+#: src/eom-window.c:832
 msgid "_Reload"
 msgstr "_Genindlæs"
 
-#: src/eom-window.c:830 src/eom-window.c:2790
+#: src/eom-window.c:834 src/eom-window.c:2794
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "Skj_ul"
 
-#: src/eom-window.c:840
+#: src/eom-window.c:844
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -1055,7 +1055,7 @@ msgstr ""
 "Billedet »%s« er blevet modificeret af et eksternt program.\n"
 "Ønsker du at genindlæse det?"
 
-#: src/eom-window.c:1008
+#: src/eom-window.c:1012
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Brug »%s« til at åbne det valgte billede"
@@ -1065,25 +1065,25 @@ msgstr "Brug »%s« til at åbne det valgte billede"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: src/eom-window.c:1172
+#: src/eom-window.c:1176
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Gemmer billede »%s« (%u/%u)"
 
-#: src/eom-window.c:1539
+#: src/eom-window.c:1543
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Åbner billede »%s«"
 
-#: src/eom-window.c:1905
+#: src/eom-window.c:1909
 msgid "Leave Fullscreen"
 msgstr "Forlad fuldskærm"
 
-#: src/eom-window.c:2046
+#: src/eom-window.c:2050
 msgid "Viewing a slideshow"
 msgstr "Vis et diasshow"
 
-#: src/eom-window.c:2259
+#: src/eom-window.c:2263
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1092,15 +1092,15 @@ msgstr ""
 "Der opstod en fejl ved udskrivning af fil:\n"
 "%s"
 
-#: src/eom-window.c:2522
+#: src/eom-window.c:2526
 msgid "Toolbar Editor"
 msgstr "Rediger værktøjslinje"
 
-#: src/eom-window.c:2525
+#: src/eom-window.c:2529
 msgid "_Reset to Default"
 msgstr "_Gendan standard"
 
-#: src/eom-window.c:2590
+#: src/eom-window.c:2594
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1112,7 +1112,7 @@ msgstr ""
 " Free Software Foundation; enten version 2, eller (efter dit valg) en senere"
 " version.\n"
 
-#: src/eom-window.c:2594
+#: src/eom-window.c:2598
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1124,7 +1124,7 @@ msgstr ""
 "ANVENDELIGHED TIL ET GIVET FORMÅL. Se GNU General Public License for\n"
 "flere detaljer.\n"
 
-#: src/eom-window.c:2598
+#: src/eom-window.c:2602
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
@@ -1134,25 +1134,25 @@ msgstr ""
 "program; hvis ikke, så skriv til Free Software Foundation, Inc., 51 Franklin"
 " St, Fifth Floor, Boston, MA 02110-1301, USA."
 
-#: src/eom-window.c:2637
+#: src/eom-window.c:2641
 msgid "About Eye of MATE"
 msgstr "Om Mates øje"
 
-#: src/eom-window.c:2639
+#: src/eom-window.c:2643
 msgid ""
 "Copyright © 2000-2010 Free Software Foundation, Inc.\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2019 MATE developers"
+"Copyright © 2012-2020 MATE developers"
 msgstr ""
-"Ophavsret Free Software Foundation, Inc.\n"
+"Ophavsret 2000-2010 Free Software Foundation, Inc.\n"
 "Ophavsret 2011 Perberos\n"
-"Ophavsret 2012-2019 MATE-udviklerne"
+"Ophavsret 2012-2020 MATE-udviklerne"
 
-#: src/eom-window.c:2642
+#: src/eom-window.c:2646
 msgid "The MATE image viewer."
 msgstr "Mates øje - billedfremviser."
 
-#: src/eom-window.c:2645
+#: src/eom-window.c:2649
 msgid "translator-credits"
 msgstr ""
 "\"Joe Hansen, 2012, 2013, 2014, 2015, 2016, 2017, 2018.\\n\"\n"
@@ -1160,15 +1160,15 @@ msgstr ""
 "\"Dansk-gruppen <dansk@dansk-gruppen.dk>\\n\"\n"
 "\"Mere info: http://www.dansk-gruppen.dk\""
 
-#: src/eom-window.c:2738 src/eom-window.c:2753
+#: src/eom-window.c:2742 src/eom-window.c:2757
 msgid "Error launching appearance preferences dialog: "
 msgstr "Der opstod en fejl under opstart af præferencedialogen for udseende:"
 
-#: src/eom-window.c:2788
+#: src/eom-window.c:2792
 msgid "_Open Background Preferences"
 msgstr "_Åbn baggrundsindstillinger"
 
-#: src/eom-window.c:2804
+#: src/eom-window.c:2808
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1177,11 +1177,11 @@ msgstr ""
 "Billedet »%s« er blevet valgt som skrivebordsbaggrund.\n"
 "Ønsker du at ændre dets udseende?"
 
-#: src/eom-window.c:3245
+#: src/eom-window.c:3249
 msgid "Saving image locally…"
 msgstr "Gemmer billede lokalt …"
 
-#: src/eom-window.c:3325
+#: src/eom-window.c:3329
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1190,7 +1190,7 @@ msgstr ""
 "Ønsker du at flytte\n"
 "»%s« til papirkurven?"
 
-#: src/eom-window.c:3328
+#: src/eom-window.c:3332
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
@@ -1199,7 +1199,7 @@ msgstr ""
 "Der kunne ikke findes en papirkurv for »%s«. Ønsker du at slette dette "
 "billede permanent?"
 
-#: src/eom-window.c:3333
+#: src/eom-window.c:3337
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1214,7 +1214,7 @@ msgstr[1] ""
 "Ønsker du at flytte de %d\n"
 "valgte billeder til papirkurven?"
 
-#: src/eom-window.c:3338
+#: src/eom-window.c:3342
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1222,387 +1222,387 @@ msgstr ""
 "Nogle af de valgte billeder kan ikke flyttes til papirkurven, og vil blive "
 "slettet permanent. Er du sikker på, at du ønsker at fortsætte?"
 
-#: src/eom-window.c:3355 src/eom-window.c:3851 src/eom-window.c:3878
+#: src/eom-window.c:3359 src/eom-window.c:3855 src/eom-window.c:3882
 msgid "Move to _Trash"
 msgstr "Flyt til _papirkurv"
 
-#: src/eom-window.c:3357
+#: src/eom-window.c:3361
 msgid "_Do not ask again during this session"
 msgstr "_Spørg ikke igen under denne session"
 
-#: src/eom-window.c:3402 src/eom-window.c:3416
+#: src/eom-window.c:3406 src/eom-window.c:3420
 msgid "Couldn't access trash."
 msgstr "Kunne ikke tilgå papirkurven."
 
-#: src/eom-window.c:3424
+#: src/eom-window.c:3428
 msgid "Couldn't delete file"
 msgstr "Kunne ikke slette fil"
 
-#: src/eom-window.c:3526
+#: src/eom-window.c:3530
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Fejl ved sletning af billede %s"
 
-#: src/eom-window.c:3772
+#: src/eom-window.c:3776
 msgid "_Image"
 msgstr "_Billede"
 
-#: src/eom-window.c:3773
+#: src/eom-window.c:3777
 msgid "_Edit"
 msgstr "_Rediger"
 
-#: src/eom-window.c:3774
+#: src/eom-window.c:3778
 msgid "_View"
 msgstr "_Vis"
 
-#: src/eom-window.c:3775
+#: src/eom-window.c:3779
 msgid "_Go"
 msgstr "_Gå til"
 
-#: src/eom-window.c:3776
+#: src/eom-window.c:3780
 msgid "_Tools"
 msgstr "Værk_tøjer"
 
-#: src/eom-window.c:3777
+#: src/eom-window.c:3781
 msgid "_Help"
 msgstr "_Hjælp"
 
-#: src/eom-window.c:3779
+#: src/eom-window.c:3783
 msgid "_Open…"
 msgstr "_Åbn …"
 
-#: src/eom-window.c:3780
+#: src/eom-window.c:3784
 msgid "Open a file"
 msgstr "Åbn en fil"
 
-#: src/eom-window.c:3782
+#: src/eom-window.c:3786
 msgid "_Close"
 msgstr "_Luk"
 
-#: src/eom-window.c:3783
+#: src/eom-window.c:3787
 msgid "Close window"
 msgstr "Luk vinduet"
 
-#: src/eom-window.c:3785
+#: src/eom-window.c:3789
 msgid "T_oolbar"
 msgstr "_Værktøjslinje"
 
-#: src/eom-window.c:3786
+#: src/eom-window.c:3790
 msgid "Edit the application toolbar"
 msgstr "Rediger programmets værktøjslinje"
 
-#: src/eom-window.c:3788
+#: src/eom-window.c:3792
 msgid "Prefere_nces"
 msgstr "_Indstillinger"
 
-#: src/eom-window.c:3789
+#: src/eom-window.c:3793
 msgid "Preferences for Eye of MATE"
 msgstr "Indstillinger for Mates øje"
 
-#: src/eom-window.c:3791
+#: src/eom-window.c:3795
 msgid "_Contents"
 msgstr "_Indhold"
 
-#: src/eom-window.c:3792
+#: src/eom-window.c:3796
 msgid "Help on this application"
 msgstr "Hjælp til dette program"
 
-#: src/eom-window.c:3794
+#: src/eom-window.c:3798
 msgid "_About"
 msgstr "_Om"
 
-#: src/eom-window.c:3795
+#: src/eom-window.c:3799
 msgid "About this application"
 msgstr "Om dette program"
 
-#: src/eom-window.c:3800
+#: src/eom-window.c:3804
 msgid "_Toolbar"
 msgstr "_Værktøjslinje"
 
-#: src/eom-window.c:3801
+#: src/eom-window.c:3805
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Skifter synligheden af værktøjslinjen i det aktuelle vindue"
 
-#: src/eom-window.c:3803
+#: src/eom-window.c:3807
 msgid "_Statusbar"
 msgstr "_Statusbjælke"
 
-#: src/eom-window.c:3804
+#: src/eom-window.c:3808
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Skifter synligheden af statuslinjen i det aktuelle vindue"
 
-#: src/eom-window.c:3806
+#: src/eom-window.c:3810
 msgid "_Image Collection"
 msgstr "_Billedsamling"
 
-#: src/eom-window.c:3807
+#: src/eom-window.c:3811
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "Skifter synligheden af billedsamlingspanelet i det aktuelle vindue"
 
-#: src/eom-window.c:3809
+#: src/eom-window.c:3813
 msgid "Side _Pane"
 msgstr "Side_panel"
 
-#: src/eom-window.c:3810
+#: src/eom-window.c:3814
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Skifter synligheden af sidepanelet i det aktuelle vindue"
 
-#: src/eom-window.c:3815
+#: src/eom-window.c:3819
 msgid "_Save"
 msgstr "_Gem"
 
-#: src/eom-window.c:3816
+#: src/eom-window.c:3820
 msgid "Save changes in currently selected images"
 msgstr "Gem ændringer i de valgte billeder"
 
-#: src/eom-window.c:3818
+#: src/eom-window.c:3822
 msgid "Open _with"
 msgstr "Åbn _med"
 
-#: src/eom-window.c:3819
+#: src/eom-window.c:3823
 msgid "Open the selected image with a different application"
 msgstr "Åben det valgte billede med et andet program"
 
-#: src/eom-window.c:3821
+#: src/eom-window.c:3825
 msgid "Save _As…"
 msgstr "Gem _som …"
 
-#: src/eom-window.c:3822
+#: src/eom-window.c:3826
 msgid "Save the selected images with a different name"
 msgstr "Gem de valgte billeder under andre navne"
 
-#: src/eom-window.c:3824
+#: src/eom-window.c:3828
 msgid "Open Containing _Folder"
 msgstr "Åbn indeholdende _mappe"
 
-#: src/eom-window.c:3825
+#: src/eom-window.c:3829
 msgid "Show the folder which contains this file in the file manager"
 msgstr "Vis mappen som indeholder denne fil i filhåndteringen"
 
-#: src/eom-window.c:3827
+#: src/eom-window.c:3831
 msgid "_Print…"
 msgstr "_Udskriv …"
 
-#: src/eom-window.c:3828
+#: src/eom-window.c:3832
 msgid "Print the selected image"
 msgstr "Udskriv det valgte billede"
 
-#: src/eom-window.c:3830
+#: src/eom-window.c:3834
 msgid "Prope_rties"
 msgstr "_Egenskaber"
 
-#: src/eom-window.c:3831
+#: src/eom-window.c:3835
 msgid "Show the properties and metadata of the selected image"
 msgstr "Vis det valgte billedes egenskaber og metadata"
 
-#: src/eom-window.c:3833
+#: src/eom-window.c:3837
 msgid "_Undo"
 msgstr "_Fortryd"
 
-#: src/eom-window.c:3834
+#: src/eom-window.c:3838
 msgid "Undo the last change in the image"
 msgstr "Fortryd den seneste ændring i billedet"
 
-#: src/eom-window.c:3836
+#: src/eom-window.c:3840
 msgid "Flip _Horizontal"
 msgstr "Vend om _vandret"
 
-#: src/eom-window.c:3837
+#: src/eom-window.c:3841
 msgid "Mirror the image horizontally"
 msgstr "Spejlvend billedet vandret"
 
-#: src/eom-window.c:3839
+#: src/eom-window.c:3843
 msgid "Flip _Vertical"
 msgstr "Vend om _lodret"
 
-#: src/eom-window.c:3840
+#: src/eom-window.c:3844
 msgid "Mirror the image vertically"
 msgstr "Spejlvend billedet lodret"
 
-#: src/eom-window.c:3842
+#: src/eom-window.c:3846
 msgid "_Rotate Clockwise"
 msgstr "Roter m_ed uret"
 
-#: src/eom-window.c:3843
+#: src/eom-window.c:3847
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Roter billedet 90 grader til højre"
 
-#: src/eom-window.c:3845
+#: src/eom-window.c:3849
 msgid "Rotate Counterc_lockwise"
 msgstr "Roter m_od uret"
 
-#: src/eom-window.c:3846
+#: src/eom-window.c:3850
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Roter billedet 90 grader til venstre"
 
-#: src/eom-window.c:3848
+#: src/eom-window.c:3852
 msgid "Set as _Desktop Background"
 msgstr "Gør til _skrivebordsbaggrund"
 
-#: src/eom-window.c:3849
+#: src/eom-window.c:3853
 msgid "Set the selected image as the desktop background"
 msgstr "Gør det valgte billede til skrivebordsbaggrund"
 
-#: src/eom-window.c:3852
+#: src/eom-window.c:3856
 msgid "Move the selected image to the trash folder"
 msgstr "Flyt det valgte billede til papirkurven"
 
-#: src/eom-window.c:3854
+#: src/eom-window.c:3858
 msgid "_Copy"
 msgstr "_Kopier"
 
-#: src/eom-window.c:3855
+#: src/eom-window.c:3859
 msgid "Copy the selected image to the clipboard"
 msgstr "Kopier det valgte billeder til udklipsholderen"
 
-#: src/eom-window.c:3857 src/eom-window.c:3869 src/eom-window.c:3872
+#: src/eom-window.c:3861 src/eom-window.c:3873 src/eom-window.c:3876
 msgid "_Zoom In"
 msgstr "Zoom _ind"
 
-#: src/eom-window.c:3858 src/eom-window.c:3870
+#: src/eom-window.c:3862 src/eom-window.c:3874
 msgid "Enlarge the image"
 msgstr "Forstør billedet"
 
-#: src/eom-window.c:3860 src/eom-window.c:3875
+#: src/eom-window.c:3864 src/eom-window.c:3879
 msgid "Zoom _Out"
 msgstr "Zoom _ud"
 
-#: src/eom-window.c:3861 src/eom-window.c:3873 src/eom-window.c:3876
+#: src/eom-window.c:3865 src/eom-window.c:3877 src/eom-window.c:3880
 msgid "Shrink the image"
 msgstr "Formindsk billedet"
 
-#: src/eom-window.c:3863
+#: src/eom-window.c:3867
 msgid "_Normal Size"
 msgstr "_Normal størrelse"
 
-#: src/eom-window.c:3864
+#: src/eom-window.c:3868
 msgid "Show the image at its normal size"
 msgstr "Vis billedet i sin normale størrelse"
 
-#: src/eom-window.c:3866
+#: src/eom-window.c:3870
 msgid "_Best Fit"
 msgstr "_Bedste tilpasning"
 
-#: src/eom-window.c:3867
+#: src/eom-window.c:3871
 msgid "Fit the image to the window"
 msgstr "Tilpas billedet til vinduet"
 
-#: src/eom-window.c:3884
+#: src/eom-window.c:3888
 msgid "_Fullscreen"
 msgstr "_Fuldskærm"
 
-#: src/eom-window.c:3885
+#: src/eom-window.c:3889
 msgid "Show the current image in fullscreen mode"
 msgstr "Vis det valgte billede fuldskærmstilstand"
 
-#: src/eom-window.c:3887
+#: src/eom-window.c:3891
 msgid "Pause Slideshow"
 msgstr "Pause diasshow"
 
-#: src/eom-window.c:3888
+#: src/eom-window.c:3892
 msgid "Pause or resume the slideshow"
 msgstr "Pause eller genoptag diasshow"
 
-#: src/eom-window.c:3893 src/eom-window.c:3908
+#: src/eom-window.c:3897 src/eom-window.c:3912
 msgid "_Previous Image"
 msgstr "_Forrige billede"
 
-#: src/eom-window.c:3894
+#: src/eom-window.c:3898
 msgid "Go to the previous image of the collection"
 msgstr "Gå til det forrige billede i samlingen"
 
-#: src/eom-window.c:3896
+#: src/eom-window.c:3900
 msgid "_Next Image"
 msgstr "_Næste billede"
 
-#: src/eom-window.c:3897
+#: src/eom-window.c:3901
 msgid "Go to the next image of the collection"
 msgstr "Gå til det næste billede i samlingen"
 
-#: src/eom-window.c:3899 src/eom-window.c:3911
+#: src/eom-window.c:3903 src/eom-window.c:3915
 msgid "_First Image"
 msgstr "_Første billede"
 
-#: src/eom-window.c:3900
+#: src/eom-window.c:3904
 msgid "Go to the first image of the collection"
 msgstr "Gå til det første billede i samlingen"
 
-#: src/eom-window.c:3902 src/eom-window.c:3914
+#: src/eom-window.c:3906 src/eom-window.c:3918
 msgid "_Last Image"
 msgstr "_Sidste billede"
 
-#: src/eom-window.c:3903
+#: src/eom-window.c:3907
 msgid "Go to the last image of the collection"
 msgstr "Gå til det sidste billede i samlingen"
 
-#: src/eom-window.c:3905
+#: src/eom-window.c:3909
 msgid "_Random Image"
 msgstr "_Tilfældigt billede"
 
-#: src/eom-window.c:3906
+#: src/eom-window.c:3910
 msgid "Go to a random image of the collection"
 msgstr "Gå til et tilfældigt billede i samlingen"
 
-#: src/eom-window.c:3920
+#: src/eom-window.c:3924
 msgid "S_lideshow"
 msgstr "_Diasshow"
 
-#: src/eom-window.c:3921
+#: src/eom-window.c:3925
 msgid "Start a slideshow view of the images"
 msgstr "Start et diasshow af billederne"
 
-#: src/eom-window.c:3991
+#: src/eom-window.c:3995
 msgid "Previous"
 msgstr "Foregående"
 
-#: src/eom-window.c:3995
+#: src/eom-window.c:3999
 msgid "Next"
 msgstr "Næste"
 
-#: src/eom-window.c:3999
+#: src/eom-window.c:4003
 msgid "Right"
 msgstr "Højre"
 
-#: src/eom-window.c:4002
+#: src/eom-window.c:4006
 msgid "Left"
 msgstr "Venstre"
 
-#: src/eom-window.c:4008
+#: src/eom-window.c:4012
 msgid "In"
 msgstr "Ind"
 
-#: src/eom-window.c:4011
+#: src/eom-window.c:4015
 msgid "Out"
 msgstr "Ud"
 
-#: src/eom-window.c:4014
+#: src/eom-window.c:4018
 msgid "Normal"
 msgstr "Normal"
 
-#: src/eom-window.c:4017
+#: src/eom-window.c:4021
 msgid "Fit"
 msgstr "Tilpas"
 
-#: src/eom-window.c:4020
+#: src/eom-window.c:4024
 msgid "Collection"
 msgstr "Samling"
 
-#: src/eom-window.c:4023
+#: src/eom-window.c:4027
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Papirkurv"
 
-#: src/eom-window.c:4381
+#: src/eom-window.c:4385
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "Rediger det nuværende billede med %s"
 
-#: src/eom-window.c:4384
+#: src/eom-window.c:4388
 msgid "Edit Image"
 msgstr "Rediger billede"
 
-#: src/eom-window.c:4608
+#: src/eom-window.c:4612
 msgid "Properties"
 msgstr "Egenskaber"
 
