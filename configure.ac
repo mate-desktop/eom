@@ -93,6 +93,7 @@ GDKPIXBUF_REQUIRED=2.36.5
 SHARED_MIME_INFO_REQUIRED=0.20
 EXEMPI_REQUIRED=1.99.5
 LIBPEAS_REQUIRED=1.8.0
+MAGICK_REQUIRED=6.2.6
 
 PKG_CHECK_MODULES(GMODULE, gmodule-2.0, [GMODULE_ADD="gmodule-2.0"],[GMODULE_ADD=""])
 EOM_MODULES="gtk+-3.0 >= $GTK_REQUIRED \
@@ -285,6 +286,34 @@ fi
 
 AM_CONDITIONAL([HAVE_RSVG], [test "x$have_rsvg" = "xyes"])
 
+# ***********************
+# THUMBNAILER CFLAGS/LIBS
+# ***********************
+
+PKG_CHECK_MODULES(GLIB, glib-2.0 >= $GLIB_REQUIRED)
+PKG_CHECK_MODULES(GIO, gio-2.0 >= $GLIB_REQUIRED)
+PKG_CHECK_MODULES(MAGICK, MagickWand >= $MAGICK_REQUIRED)
+
+CPPFLAGS_save="$CPPFLAGS"
+CPPFLAGS="$CPPFLAGS $MAGICK_CFLAGS"
+AC_CHECK_HEADER([wand/MagickWand.h],
+	[have_im6="yes"],
+	[AC_CHECK_HEADER([MagickWand/MagickWand.h], [have_im7="yes"])])
+CPPFLAGS="$CPPFLAGS_save"
+
+if test "x$have_im6" = "xyes"; then
+  AC_DEFINE(HAVE_IMAGEMAGICK6,1, [Have ImageMagick 6])
+fi
+if test "x$have_im7" = "xyes"; then
+  AC_DEFINE(HAVE_IMAGEMAGICK7,1, [Have ImageMagick 7])
+fi
+
+THUMBNAILER_CFLAGS="$CFLAGS $GLIB_CFLAGS $GIO_CFLAGS $MAGICK_CFLAGS"
+AC_SUBST(THUMBNAILER_CFLAGS)
+
+THUMBNAILER_LIBS="$LIBS $GLIB_LIBS $GIO_LIBS $MAGICK_LIBS"
+AC_SUBST(THUMBNAILER_LIBS)
+
 # ****************
 # CFLAGS/LIBS init
 # ****************
@@ -344,6 +373,7 @@ doc/reference/Makefile
 doc/reference/version.xml
 doc/reference/eom-docs.sgml
 plugins/Makefile
+thumbnailer/Makefile
 ])
 
 AC_OUTPUT
