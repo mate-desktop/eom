@@ -4,7 +4,7 @@ if ENABLE_JPEG
 jpeg_DIRS = jpegutils
 endif
 
-SUBDIRS = po $(jpeg_DIRS) cut-n-paste src man plugins help data doc
+SUBDIRS = po $(jpeg_DIRS) cut-n-paste src man plugins help data doc thumbnailer
 
 EXTRA_DIST = 		\
 	AUTHORS			\
