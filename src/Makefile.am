@@ -132,6 +132,7 @@ libeom_la_SOURCES +=			\
 endif HAVE_EXEMPI
 
 libeom_la_CPPFLAGS =						\
+	-I$(srcdir)						\
 	-I$(top_srcdir)						\
 	-I$(top_srcdir)/jpegutils				\
 	-I$(top_srcdir)/cut-n-paste/toolbar-editor		\
