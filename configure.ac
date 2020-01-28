@@ -290,29 +290,59 @@ AM_CONDITIONAL([HAVE_RSVG], [test "x$have_rsvg" = "xyes"])
 # THUMBNAILER CFLAGS/LIBS
 # ***********************
 
-PKG_CHECK_MODULES(GLIB, glib-2.0 >= $GLIB_REQUIRED)
-PKG_CHECK_MODULES(GIO, gio-2.0 >= $GLIB_REQUIRED)
-PKG_CHECK_MODULES(MAGICK, MagickWand >= $MAGICK_REQUIRED)
+AC_ARG_ENABLE(thumbnailer,
+	[AS_HELP_STRING([--enable-thumbnailer],
+			[Enable thumbnailer])],
+	[enable_thumbnailer=$enableval],
+	[enable_thumbnailer=no])
+AM_CONDITIONAL(ENABLE_THUMBNAILER, test x$enable_thumbnailer != xno)
 
-CPPFLAGS_save="$CPPFLAGS"
-CPPFLAGS="$CPPFLAGS $MAGICK_CFLAGS"
-AC_CHECK_HEADER([wand/MagickWand.h],
-	[have_im6="yes"],
-	[AC_CHECK_HEADER([MagickWand/MagickWand.h], [have_im7="yes"])])
-CPPFLAGS="$CPPFLAGS_save"
+AC_ARG_WITH(gdk-pixbuf-thumbnailer,
+	[AS_HELP_STRING([--without-gdk-pixbuf-thumbnailer],
+		[Disable the use of gdk-pixbuf-thumbnailer])],
+	[],
+	[with_gdk_pixbuf_thumbnailer=yes])
+AM_CONDITIONAL(USE_INTERNAL_THUMBNAILER, test x$with_gdk_pixbuf_thumbnailer != xyes)
 
-if test "x$have_im6" = "xyes"; then
-  AC_DEFINE(HAVE_IMAGEMAGICK6,1, [Have ImageMagick 6])
+if test "x$enable_thumbnailer" != "xno"; then
+	if test "x$with_gdk_pixbuf_thumbnailer" = "xyes"; then
+		AC_PATH_PROG([GDK_PIXBUF_THUMBNAILER],[gdk-pixbuf-thumbnailer],[])
+		if test -z "$GDK_PIXBUF_THUMBNAILER"; then
+			AC_MSG_ERROR([gdk-pixbuf-thumbnailer not found])
+		fi
+		eom_thumbnailer="$GDK_PIXBUF_THUMBNAILER"
+	else
+		PKG_CHECK_MODULES(GLIB, glib-2.0 >= $GLIB_REQUIRED)
+		PKG_CHECK_MODULES(GIO, gio-2.0 >= $GLIB_REQUIRED)
+		PKG_CHECK_MODULES(MAGICK, MagickWand >= $MAGICK_REQUIRED)
+
+		CPPFLAGS_save="$CPPFLAGS"
+		CPPFLAGS="$CPPFLAGS $MAGICK_CFLAGS"
+		AC_CHECK_HEADER([wand/MagickWand.h],
+			[have_im6="yes"],
+			[AC_CHECK_HEADER([MagickWand/MagickWand.h], [have_im7="yes"])])
+		CPPFLAGS="$CPPFLAGS_save"
+
+		if test "x$have_im6" = "xyes"; then
+			 AC_DEFINE(HAVE_IMAGEMAGICK6,1, [Have ImageMagick 6])
+		fi
+		if test "x$have_im7" = "xyes"; then
+			AC_DEFINE(HAVE_IMAGEMAGICK7,1, [Have ImageMagick 7])
+		fi
+
+		THUMBNAILER_CFLAGS="$CFLAGS $GLIB_CFLAGS $GIO_CFLAGS $MAGICK_CFLAGS"
+		AC_SUBST(THUMBNAILER_CFLAGS)
+
+		THUMBNAILER_LIBS="$LIBS $GLIB_LIBS $GIO_LIBS $MAGICK_LIBS"
+		AC_SUBST(THUMBNAILER_LIBS)
+		eom_thumbnailer="eom-thumbnailer"
+	fi
+
+	EOM_THUMBNAILER="$eom_thumbnailer"
+	AC_SUBST(EOM_THUMBNAILER)
+else
+	eom_thumbnailer="no"
 fi
-if test "x$have_im7" = "xyes"; then
-  AC_DEFINE(HAVE_IMAGEMAGICK7,1, [Have ImageMagick 7])
-fi
-
-THUMBNAILER_CFLAGS="$CFLAGS $GLIB_CFLAGS $GIO_CFLAGS $MAGICK_CFLAGS"
-AC_SUBST(THUMBNAILER_CFLAGS)
-
-THUMBNAILER_LIBS="$LIBS $GLIB_LIBS $GIO_LIBS $MAGICK_LIBS"
-AC_SUBST(THUMBNAILER_LIBS)
 
 # ****************
 # CFLAGS/LIBS init
@@ -374,6 +404,7 @@ doc/reference/version.xml
 doc/reference/eom-docs.sgml
 plugins/Makefile
 thumbnailer/Makefile
+thumbnailer/eom-thumbnailer.thumbnailer
 ])
 
 AC_OUTPUT
@@ -391,4 +422,5 @@ Configure summary:
 	RSVG support ...............:  ${have_rsvg}
 	Colour management support ..:  ${have_lcms}
 	GObject Introspection.......:  ${have_introspection}
+	Thumbnailer.................:  ${eom_thumbnailer}
 "
