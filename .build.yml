@@ -1,0 +1,123 @@
+##########################################################
+# THE FOLLOWING LINES IS USED BY docker-build
+##########################################################
+requires:
+  archlinux:
+    # Useful URL: https://git.archlinux.org/svntogit/community.git/tree/eom
+    - dbus-glib
+    - exempi
+    - gcc
+    - git
+    - gobject-introspection
+    - intltool
+    - itstool
+    - lcms2
+    - libexif
+    - libjpeg-turbo
+    - libpeas
+    - make
+    - mate-desktop
+    - mate-common
+    - which
+    - yelp-tools
+
+  debian:
+    # Useful URL: https://github.com/mate-desktop/debian-packages
+    # Useful URL: https://salsa.debian.org/debian-mate-team/eom
+    - git
+    - gobject-introspection
+    - gtk-doc-tools
+    - intltool
+    - libdbus-glib-1-dev
+    - libdconf-dev
+    - libexempi-dev
+    - libexif-dev
+    - libgirepository1.0-dev
+    - libglib2.0-dev
+    - libgtk-3-dev
+    - libjpeg-dev
+    - liblcms2-dev
+    - libmate-desktop-dev
+    - libpeas-dev
+    - librsvg2-dev
+    - libstartup-notification0-dev
+    - libxml2-dev
+    - make
+    - mate-common
+    - shared-mime-info
+    - x11proto-core-dev
+    - yelp-tools
+    - zlib1g-dev
+
+  fedora:
+    # Useful URL: https://src.fedoraproject.org/cgit/rpms/eom.git
+    - dbus-glib-devel
+    - desktop-file-utils
+    - exempi-devel
+    - gcc
+    - git
+    - gobject-introspection-devel
+    - gtk3-devel
+    - lcms2-devel
+    - libexif-devel
+    - libjpeg-turbo-devel
+    - libpeas-devel
+    - librsvg2-devel
+    - libxml2-devel
+    - make
+    - mate-common
+    - mate-desktop-devel
+    - redhat-rpm-config
+    - zlib-devel
+
+  ubuntu:
+    - git
+    - gobject-introspection
+    - gtk-doc-tools
+    - intltool
+    - libdbus-glib-1-dev
+    - libdconf-dev
+    - libexempi-dev
+    - libexif-dev
+    - libgirepository1.0-dev
+    - libglib2.0-dev
+    - libgtk-3-dev
+    - libjpeg-dev
+    - liblcms2-dev
+    - libmate-desktop-dev
+    - libpeas-dev
+    - librsvg2-dev
+    - libstartup-notification0-dev
+    - libxml2-dev
+    - make
+    - mate-common
+    - shared-mime-info
+    - x11proto-core-dev
+    - yelp-tools
+    - zlib1g-dev
+
+variables:
+  - CFLAGS="-Wall -Werror=format-security"
+
+before_scripts:
+  - if [ ${DISTRO_NAME} == "debian" ];then
+  -     curl -Ls -o debian.sh https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/debian.sh
+  -     bash ./debian.sh
+  - fi
+
+after_scripts:
+  - make distcheck
+
+releases:
+  draft: false
+  prerelease: false
+  checksum: true
+  file_glob: true
+  files: eom-*.tar.xz
+  github_release:
+    tags: true
+    overwrite: true
+    base_version: 1.20.0
+    notify_servers:
+      - https://release.mate-desktop.org/release
+
