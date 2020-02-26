@@ -59,6 +59,7 @@ requires:
     - git
     - gobject-introspection-devel
     - gtk3-devel
+    - iso-codes-devel
     - lcms2-devel
     - libexif-devel
     - libjpeg-turbo-devel
@@ -105,6 +106,18 @@ before_scripts:
   -     curl -Ls -o debian.sh https://github.com/mate-desktop/mate-dev-scripts/raw/master/travis/debian.sh
   -     bash ./debian.sh
   - fi
+  # Install mate-desktop from 1.22 branch
+  - cd ${START_DIR}
+  - git clone --depth 1  https://github.com/mate-desktop/mate-desktop.git -b 1.22 mate-desktop-1.22
+  - cd mate-desktop-1.22
+  - ./autogen.sh
+  - if [ ${DISTRO_NAME} == "debian" -o ${DISTRO_NAME} == "ubuntu" ];then
+  -     ./configure --prefix=/usr --libdir=/usr/lib/x86_64-linux-gnu --libexecdir=/usr/lib/x86_64-linux-gnu
+  - else
+  -     ./configure --prefix=/usr
+  - fi
+  - make
+  - make install
 
 after_scripts:
   - make distcheck
