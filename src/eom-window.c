@@ -1599,8 +1599,7 @@ eom_window_open_recent_cb (GtkAction *action, EomWindow *window)
 				       0,
 				       NULL);
 
-	g_slist_foreach (list, (GFunc) g_free, NULL);
-	g_slist_free (list);
+	g_slist_free_full (list, g_free);
 }
 
 static void
@@ -1619,8 +1618,7 @@ file_open_dialog_response_cb (GtkWidget *chooser,
 					       0,
 					       NULL);
 
-		g_slist_foreach (uris, (GFunc) g_free, NULL);
-		g_slist_free (uris);
+		g_slist_free_full (uris, g_free);
 	}
 
 	gtk_widget_destroy (chooser);
@@ -3548,8 +3546,7 @@ eom_window_cmd_move_to_trash (GtkAction *action, gpointer user_data)
 	}
 
 	/* free list */
-	g_list_foreach (images, (GFunc) g_object_unref, NULL);
-	g_list_free (images);
+	g_list_free_full (images, g_object_unref);
 
 	/* select image at previously saved position */
 	pos = MIN (pos, eom_list_store_length (list) - 1);
@@ -4162,8 +4159,7 @@ eom_window_update_recent_files_menu (EomWindow *window)
 		g_free (tip);
 	}
 
-	g_list_foreach (items, (GFunc) gtk_recent_info_unref, NULL);
-	g_list_free (items);
+	g_list_free_full (items, (GDestroyNotify) gtk_recent_info_unref);
 }
 
 static void
@@ -4883,8 +4879,7 @@ eom_window_dispose (GObject *object)
 	}
 
 	if (priv->file_list != NULL) {
-		g_slist_foreach (priv->file_list, (GFunc) g_object_unref, NULL);
-		g_slist_free (priv->file_list);
+		g_slist_free_full (priv->file_list, g_object_unref);
 		priv->file_list = NULL;
 	}
 

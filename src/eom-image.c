@@ -199,8 +199,7 @@ eom_image_dispose (GObject *object)
 	}
 
 	if (priv->undo_stack) {
-		g_slist_foreach (priv->undo_stack, (GFunc) g_object_unref, NULL);
-		g_slist_free (priv->undo_stack);
+		g_slist_free_full (priv->undo_stack, g_object_unref);
 		priv->undo_stack = NULL;
 	}
 
@@ -1649,8 +1648,7 @@ eom_image_reset_modifications (EomImage *image)
 
 	priv = image->priv;
 
-	g_slist_foreach (priv->undo_stack, (GFunc) g_object_unref, NULL);
-	g_slist_free (priv->undo_stack);
+	g_slist_free_full (priv->undo_stack, g_object_unref);
 	priv->undo_stack = NULL;
 
 	if (priv->trans != NULL) {

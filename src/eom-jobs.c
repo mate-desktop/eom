@@ -443,11 +443,8 @@ eom_job_model_run (EomJob *ejob)
 
 	eom_list_store_add_files (job->store, filtered_list);
 
-	g_list_foreach (filtered_list, (GFunc) g_object_unref, NULL);
-	g_list_free (filtered_list);
-
-	g_list_foreach (error_list, (GFunc) g_free, NULL);
-	g_list_free (error_list);
+	g_list_free_full (filtered_list, g_object_unref);
+	g_list_free_full (error_list, g_free);
 
 	ejob->finished = TRUE;
 }
@@ -466,8 +463,7 @@ eom_job_transform_dispose (GObject *object)
 		job->trans = NULL;
 	}
 
-	g_list_foreach (job->images, (GFunc) g_object_unref, NULL);
-	g_list_free (job->images);
+	g_list_free_full (job->images, g_object_unref);
 
 	(* G_OBJECT_CLASS (eom_job_transform_parent_class)->dispose) (object);
 }
@@ -566,8 +562,7 @@ eom_job_save_dispose (GObject *object)
 	job = EOM_JOB_SAVE (object);
 
 	if (job->images) {
-		g_list_foreach (job->images, (GFunc) g_object_unref, NULL);
-		g_list_free (job->images);
+		g_list_free_full (job->images, g_object_unref);
 		job->images = NULL;
 	}
 
