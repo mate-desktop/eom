@@ -1312,8 +1312,7 @@ egg_editable_toolbar_deconstruct (EggEditableToolbar *toolbar)
     }
 
   children = gtk_container_get_children (GTK_CONTAINER (toolbar));
-  g_list_foreach (children, (GFunc) gtk_widget_destroy, NULL);
-  g_list_free (children);
+  g_list_free_full (children, (GDestroyNotify) gtk_widget_destroy);
 }
 
 void
@@ -1382,8 +1381,7 @@ egg_editable_toolbar_dispose (GObject *object)
   if (priv->visibility_paths)
     {
       children = priv->visibility_paths;
-      g_list_foreach (children, (GFunc) g_free, NULL);
-      g_list_free (children);
+      g_list_free_full (children, g_free);
       priv->visibility_paths = NULL;
     }
 

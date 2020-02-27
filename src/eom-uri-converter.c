@@ -79,8 +79,7 @@ eom_uri_converter_dispose (GObject *object)
 	}
 
 	if (priv->token_list) {
-		g_list_foreach (priv->token_list, (GFunc) free_token, NULL);
-		g_list_free (priv->token_list);
+		g_list_free_full (priv->token_list, free_token);
 		priv->token_list = NULL;
 	}
 

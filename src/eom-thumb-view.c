@@ -856,8 +856,7 @@ eom_thumb_view_get_first_selected_image (EomThumbView *thumbview)
 
 	image = eom_thumb_view_get_image_from_path (thumbview, path);
 
-	g_list_foreach (list, (GFunc) gtk_tree_path_free , NULL);
-	g_list_free (list);
+	g_list_free_full (list, (GDestroyNotify) gtk_tree_path_free);
 
 	return image;
 }
@@ -983,8 +982,7 @@ eom_thumb_view_select_single (EomThumbView *thumbview,
 	} else {
 		list = gtk_icon_view_get_selected_items (GTK_ICON_VIEW (thumbview));
 		path = gtk_tree_path_copy ((GtkTreePath *) list->data);
-		g_list_foreach (list, (GFunc) gtk_tree_path_free , NULL);
-		g_list_free (list);
+		g_list_free_full (list, (GDestroyNotify) gtk_tree_path_free);
 
 		gtk_icon_view_unselect_all (GTK_ICON_VIEW (thumbview));
 
