@@ -6,7 +6,7 @@ DESKTOP_FILES= $(DESKTOP_IN_FILES:.desktop.in.in=.desktop)
 desktopdir = $(datadir)/applications
 desktop_DATA = $(DESKTOP_FILES)
 $(desktop_DATA): $(DESKTOP_IN_FILES)
-	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
+	$(AM_V_GEN) $(MSGFMT) --desktop --keyword= --keyword=Name --keyword=Comment --keyword=Keywords --template $< -d $(top_srcdir)/po -o $@
 
 appdatadir = $(datadir)/metainfo
 appdata_in_files = eom.appdata.xml.in
