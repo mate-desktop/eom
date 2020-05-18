@@ -46,6 +46,7 @@ struct _EomPreferencesDialogPrivate {
 	GSettings    *ui_settings;
 	GSettings    *fullscreen_settings;
 
+	GtkWidget     *notebook;
 	GtkWidget     *interpolate_check;
 	GtkWidget     *extrapolate_check;
 	GtkWidget     *autorotate_check;
@@ -151,6 +152,9 @@ eom_preferences_dialog_class_init (EomPreferencesDialogClass *klass)
 
 	gtk_widget_class_set_template_from_resource (widget_class,
 	                                             "/org/mate/eom/ui/eom-preferences-dialog.ui");
+	gtk_widget_class_bind_template_child_private (widget_class,
+	                                              EomPreferencesDialog,
+	                                              notebook);
 	gtk_widget_class_bind_template_child_private (widget_class,
 	                                              EomPreferencesDialog,
 	                                              interpolate_check);
@@ -318,6 +322,13 @@ eom_preferences_dialog_init (EomPreferencesDialog *pref_dlg)
 	                 G_SETTINGS_BIND_DEFAULT);
 
 	gtk_widget_show_all (priv->plugin_manager);
+
+    /* Add tab scrolling support for GTK3 */
+    gtk_widget_add_events (priv->notebook, GDK_SCROLL_MASK);
+    g_signal_connect (priv->notebook,
+                      "scroll-event",
+                      G_CALLBACK (eom_notebook_page_scroll_event_cb),
+                      NULL);
 }
 
 GtkWidget *eom_preferences_dialog_get_instance (GtkWindow *parent)

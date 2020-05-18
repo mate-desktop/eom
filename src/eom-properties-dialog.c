@@ -789,6 +789,13 @@ eom_properties_dialog_init (EomPropertiesDialog *prop_dlg)
 	gtk_notebook_remove_page (GTK_NOTEBOOK (priv->notebook),
 				  EOM_PROPERTIES_DIALOG_PAGE_EXIF);
 #endif
+
+    /* Add tab scrolling support for GTK3 */
+    gtk_widget_add_events (priv->notebook, GDK_SCROLL_MASK);
+    g_signal_connect (priv->notebook,
+                      "scroll-event",
+                      G_CALLBACK (eom_notebook_page_scroll_event_cb),
+                      NULL);
 }
 
 /**
