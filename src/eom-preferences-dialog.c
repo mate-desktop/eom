@@ -327,7 +327,7 @@ eom_preferences_dialog_init (EomPreferencesDialog *pref_dlg)
     gtk_widget_add_events (priv->notebook, GDK_SCROLL_MASK);
     g_signal_connect (priv->notebook,
                       "scroll-event",
-                      G_CALLBACK (eom_notebook_page_scroll_event_cb),
+                      G_CALLBACK (eom_util_dialog_page_scroll_event_cb),
                       NULL);
 }
 
