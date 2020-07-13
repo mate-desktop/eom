@@ -455,8 +455,7 @@ eom_notebook_page_scroll_event_cb (GtkWidget         *widget,
     if (event_widget == action_widget || (action_widget != NULL && gtk_widget_is_ancestor (event_widget, action_widget)))
         return FALSE;
 
-    switch (event->direction)
-    {
+    switch (event->direction) {
         case GDK_SCROLL_RIGHT:
         case GDK_SCROLL_DOWN:
             gtk_notebook_next_page (notebook);
@@ -466,21 +465,20 @@ eom_notebook_page_scroll_event_cb (GtkWidget         *widget,
             gtk_notebook_prev_page (notebook);
             break;
         case GDK_SCROLL_SMOOTH:
-            switch (gtk_notebook_get_tab_pos (notebook))
-            {
+            switch (gtk_notebook_get_tab_pos (notebook)) {
                 case GTK_POS_LEFT:
                 case GTK_POS_RIGHT:
                     if (event->delta_y > 0)
-                    gtk_notebook_next_page (notebook);
+                        gtk_notebook_next_page (notebook);
                     else if (event->delta_y < 0)
-                    gtk_notebook_prev_page (notebook);
+                        gtk_notebook_prev_page (notebook);
                     break;
                 case GTK_POS_TOP:
                 case GTK_POS_BOTTOM:
                     if (event->delta_x > 0)
-                    gtk_notebook_next_page (notebook);
+                        gtk_notebook_next_page (notebook);
                     else if (event->delta_x < 0)
-                    gtk_notebook_prev_page (notebook);
+                        gtk_notebook_prev_page (notebook);
                     break;
             }
             break;
