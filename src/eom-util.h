@@ -65,7 +65,7 @@ G_GNUC_INTERNAL
 void     eom_util_show_file_in_filemanager   (GFile *file,
                                               GtkWindow *toplevel);
 
-gboolean eom_notebook_page_scroll_event_cb   (GtkWidget      *notebook,
+gboolean eom_notebook_scroll_event_cb        (GtkWidget      *notebook,
                                               GdkEventScroll *event);
 
 G_END_DECLS
