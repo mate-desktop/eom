@@ -959,7 +959,7 @@ toolbar_visibility_refresh (EggEditableToolbar *etoolbar)
                                    etoolbar, 0);
           G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
           gtk_action_group_add_action (priv->actions, GTK_ACTION (action));
-          G_GNUC_END_IGNORE_DEPRECATIONS;          
+          G_GNUC_END_IGNORE_DEPRECATIONS;
         }
       else
         {
