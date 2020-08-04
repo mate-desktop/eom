@@ -23,6 +23,8 @@
 #include <config.h>
 #endif
 
+#include <gdk/gdk.h>
+
 #include "eom-metadata-reader.h"
 #include "eom-metadata-reader-jpg.h"
 #include "eom-metadata-reader-png.h"
