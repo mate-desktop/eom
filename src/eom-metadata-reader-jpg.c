@@ -54,7 +54,6 @@ typedef enum {
 
 
 #define EOM_JPEG_MARKER_START   0xFF
-#define EOM_JPEG_MARKER_SOI     0xD8
 #define EOM_JPEG_MARKER_APP1	0xE1
 #define EOM_JPEG_MARKER_APP2	0xE2
 #define EOM_JPEG_MARKER_APP14	0xED

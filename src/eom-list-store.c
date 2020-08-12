@@ -29,9 +29,6 @@
 
 #include <string.h>
 
-#define EOM_LIST_STORE_GET_PRIVATE(object) \
-	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_LIST_STORE, EomListStorePrivate))
-
 struct _EomListStorePrivate {
 	GList *monitors;          /* Monitors for the directories */
 	gint initial_image;       /* The image that should be selected firstly by the view. */

@@ -33,9 +33,6 @@
 
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
-#define EOM_JOB_GET_PRIVATE(object) \
-	(G_TYPE_INSTANCE_GET_PRIVATE ((object), EOM_TYPE_JOB, EomJobPrivate))
-
 G_DEFINE_TYPE (EomJob, eom_job, G_TYPE_OBJECT);
 G_DEFINE_TYPE (EomJobThumbnail, eom_job_thumbnail, EOM_TYPE_JOB);
 G_DEFINE_TYPE (EomJobLoad, eom_job_load, EOM_TYPE_JOB);

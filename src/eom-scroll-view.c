@@ -19,10 +19,6 @@
 
 #include <gdk/gdk.h>
 
-/* Maximum size of delayed repaint rectangles */
-#define PAINT_RECT_WIDTH 128
-#define PAINT_RECT_HEIGHT 128
-
 /* Scroll step increment */
 #define SCROLL_STEP_SIZE 32
 
@@ -32,10 +28,8 @@
 
 #define CHECK_MEDIUM 8
 #define CHECK_BLACK "#000000"
-#define CHECK_DARK "#555555"
 #define CHECK_GRAY "#808080"
 #define CHECK_LIGHT "#cccccc"
-#define CHECK_WHITE "#ffffff"
 
 /* Default increment for zooming.  The current zoom factor is multiplied or
  * divided by this amount on every zooming step.  For consistency, you should
