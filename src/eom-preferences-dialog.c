@@ -38,7 +38,6 @@
 #include <gio/gio.h>
 #include <libpeas-gtk/peas-gtk-plugin-manager.h>
 
-#define GSETTINGS_OBJECT_KEY		"GSETTINGS_KEY"
 #define GSETTINGS_OBJECT_VALUE		"GSETTINGS_VALUE"
 
 struct _EomPreferencesDialogPrivate {

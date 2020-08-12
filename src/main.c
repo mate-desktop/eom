@@ -46,8 +46,6 @@
 #include <exempi/xmp.h>
 #endif
 
-#define EOM_CSS_FILE_PATH EOM_DATA_DIR G_DIR_SEPARATOR_S "eom.css"
-
 static EomStartupFlags flags;
 
 static gboolean fullscreen = FALSE;

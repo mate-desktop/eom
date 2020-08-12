@@ -61,9 +61,6 @@
 
 #if defined(HAVE_LCMS) && defined(GDK_WINDOWING_X11)
 #include <lcms2.h>
-#ifndef EXIF_TAG_GAMMA
-#define EXIF_TAG_GAMMA 0xa500
-#endif
 #endif
 
 #ifdef HAVE_RSVG
