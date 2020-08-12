@@ -34,7 +34,6 @@
 #include <string.h>
 
 #define EOM_THUMB_NAV_SCROLL_INC      20
-#define EOM_THUMB_NAV_SCROLL_MOVE     20
 #define EOM_THUMB_NAV_SCROLL_TIMEOUT  20
 
 enum
