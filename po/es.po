@@ -4,13 +4,14 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Arcenio Cid <gusty.miliki@gmail.com>, 2018
-# Adolfo Jayme-Barrientos, 2018
-# Lluís Tusquellas <lutusq@gmail.com>, 2018
-# Emiliano Fascetti, 2018
-# seacat <seacat.linux@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Joel Barrios <darkshram@gmail.com>, 2018
+# seacat <seacat.linux@gmail.com>, 2020
+# Arcenio Cid <gusty.miliki@gmail.com>, 2020
+# Adolfo Jayme-Barrientos, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Lluís Tusquellas <lutusq@gmail.com>, 2020
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# Emiliano Fascetti, 2020
+# Joel Barrios <darkshram@gmail.com>, 2020
 # Toni Estévez <toni.estevez@gmail.com>, 2020
 # 
 msgid ""
@@ -18,7 +19,7 @@ msgstr ""
 "Project-Id-Version: eom 1.23.1\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
 "POT-Creation-Date: 2020-01-10 14:33+0100\n"
-"PO-Revision-Date: 2018-03-11 15:18+0000\n"
+"PO-Revision-Date: 2020-02-14 12:07+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/mate/teams/13566/es/)\n"
 "MIME-Version: 1.0\n"
@@ -405,8 +406,8 @@ msgid ""
 "theme instead."
 msgstr ""
 "El color usado para rellenar el área detrás de la imagen. Si la clave «use-"
-"background-color» no está establecida, el color lo determina el tema de GTK+"
-" activo."
+"background-color» no está establecida, el color lo determina el tema de GTK "
+"activo."
 
 #: data/org.mate.eom.gschema.xml.in:21
 msgid "Use a custom background color"
@@ -574,7 +575,7 @@ msgstr "Cerrar la ventana principal sin preguntar si guardar los cambios."
 
 #: data/org.mate.eom.gschema.xml.in:112
 msgid "Trash images without asking"
-msgstr "Enviar imágenes a la papelera sin preguntar"
+msgstr "Mover las imágenes a la papelera sin preguntar"
 
 #: data/org.mate.eom.gschema.xml.in:113
 msgid ""
@@ -582,9 +583,8 @@ msgid ""
 "the trash. It will still ask if any of the files cannot be moved to the "
 "trash and would be deleted instead."
 msgstr ""
-"Si se ha activado, Ojo de MATE no pedirá confirmación al mover imágenes a la"
-" papelera. Preguntará si alguno de los archivos no se puede mover a la "
-"papelera y deberá eliminarse en su lugar."
+"Si se activa, Ojo de MATE no pedirá confirmación al mover imágenes a la papelera. Preguntará si alguno de los archivos no se puede mover a la papelera y deberá eliminarse en su lugar.\n"
+"Si se activa, Ojo de MATE no pedirá confirmación al mover imágenes a la papelera. Todavía preguntará si alguno de los archivos no se puede mover a la papelera y se debe eliminar."
 
 #: data/org.mate.eom.gschema.xml.in:117
 msgid ""
@@ -702,9 +702,7 @@ msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] ""
-"Hay %d imagen con cambios sin guardar. ¿Guardar cambios antes de cerrar?"
 msgstr[1] ""
-"Hay %dimágenes con cambios sin guardar. ¿Guardar cambios antes de cerrar?"
 
 #: src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
@@ -747,8 +745,8 @@ msgstr "%s (*.%s)"
 #: src/eom-properties-dialog.c:165 src/eom-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] "píxel"
-msgstr[1] "píxeles"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/eom-file-chooser.c:451
 msgid "Open Image"
@@ -891,8 +889,8 @@ msgstr "%.1f (película de 35mm)"
 #, c-format
 msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
-msgstr[0] "%i × %i pixel"
-msgstr[1] "%i × %i pixeles"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
 msgid "Unknown"
@@ -993,7 +991,7 @@ msgstr "Pulgadas"
 
 #: src/eom-print-image-setup.c:950
 msgid "Preview"
-msgstr "Vista previa"
+msgstr "Vista preliminar"
 
 #: src/eom-save-as-dialog-helper.c:161
 msgid "as is"
@@ -1040,8 +1038,8 @@ msgstr " (Unicode no válido)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] "%i × %i píxel  %s    %i%%"
-msgstr[1] "%i × %i píxeles  %s    %i%%"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/eom-window.c:832
 msgid "_Reload"
@@ -1161,7 +1159,7 @@ msgstr "El visor de imágenes de MATE."
 #: src/eom-window.c:2649
 msgid "translator-credits"
 msgstr ""
-"Toni Estevez <toni.estevez@gmail.com>, 2019\n"
+"Toni Estevez <toni.estevez@gmail.com>, 2020\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2010\n"
 "Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2003-2006\n"
 "Pablo Gonzalo del Campo <pablodc@bigfoot.com>, 2002-2003"
@@ -1216,11 +1214,7 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
-"¿Seguro que quiere mover\n"
-"%d imagen seleccionada a la papelera?"
 msgstr[1] ""
-"¿Seguro que quiere mover \n"
-"las %d imágenes seleccionadas a la papelera? "
 
 #: src/eom-window.c:3342
 msgid ""
@@ -1228,11 +1222,11 @@ msgid ""
 "permanently. Are you sure you want to proceed?"
 msgstr ""
 "Algunas de las imágenes seleccionadas no se pueden mover a la papelera y se "
-"eliminarán permanentemente. ¿Seguro que quiere seguir adelante?"
+"eliminarán permanentemente. ¿Seguro que quiere continuar?"
 
 #: src/eom-window.c:3359 src/eom-window.c:3855 src/eom-window.c:3882
 msgid "Move to _Trash"
-msgstr "Enviar a la _papelera"
+msgstr "Mover a la _papelera"
 
 #: src/eom-window.c:3361
 msgid "_Do not ask again during this session"

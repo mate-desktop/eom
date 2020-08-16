@@ -4,24 +4,24 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# hpiece 8 <hpiece8@gmail.com>, 2018
-# Kukuh Syafaat <syafaatkukuh@gmail.com>, 2018
-# Andika Triwidada <andika@gmail.com>, 2018
-# Ibnu Daru Aji, 2018
-# La Ode Muh. Fadlun Akbar <fadlun.net@gmail.com>, 2018
-# Rendiyono Wahyu Saputro <rendi.7936@gmail.com>, 2018
-# Rania el-Amina <reaamina@gmail.com>, 2018
-# Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# Kukuh Syafaat <syafaatkukuh@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Ibnu Daru Aji, 2020
+# Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2020
+# La Ode Muh. Fadlun Akbar <fadlun.net@gmail.com>, 2020
+# Rendiyono Wahyu Saputro <rendi.7936@gmail.com>, 2020
+# hpiece 8 <hpiece8@gmail.com>, 2020
+# Rania el-Amina <reaamina@gmail.com>, 2020
+# Andika Triwidada <andika@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: eom 1.23.1\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
 "POT-Creation-Date: 2020-01-10 14:33+0100\n"
-"PO-Revision-Date: 2018-03-11 15:18+0000\n"
-"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>, 2018\n"
+"PO-Revision-Date: 2020-02-14 12:07+0000\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>, 2020\n"
 "Language-Team: Indonesian (https://www.transifex.com/mate/teams/13566/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -76,6 +76,9 @@ msgid ""
 " image is loaded, you can zoom and rotate the image, and also view "
 "subsequent images in the directory the image was loaded from."
 msgstr ""
+"Eye of MATE adalah penampil sederhana untuk menjelajahi citra pada komputer "
+"Anda. Setelah citra dimuat, Anda bisa men-zum dan memutar citra, dan juga "
+"menampilkan citra berikutnya pada direktori dimana citra tersebut berada."
 
 #: data/eom.desktop.in.in:3 src/main.c:65 src/main.c:166
 msgid "Eye of MATE Image Viewer"
@@ -89,13 +92,15 @@ msgstr "Menampilkan dan memutar gambar"
 #. file name)!
 #: data/eom.desktop.in.in:8
 msgid "eom"
-msgstr ""
+msgstr "eom"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/eom.desktop.in.in:14
 msgid "image;viewer;JPEG;PNG;TIFF;SVG;MATE;photos;browse;thumbnails;rotate;"
 msgstr ""
+"citra;gambar;penampil;penilik;JPEG;PNG;TIFF;SVG;MATE;foto;ramban;gambar "
+"mini;rotasi;"
 
 #: data/eom-image-properties-dialog.ui:8
 msgid "Image Properties"
@@ -345,11 +350,11 @@ msgstr "Ukuran"
 
 #: data/metadata-sidebar.ui:46
 msgid "Type"
-msgstr "Jenis"
+msgstr "Tipe"
 
 #: data/metadata-sidebar.ui:63
 msgid "File Size"
-msgstr ""
+msgstr "Ukuran Berkas"
 
 #: data/metadata-sidebar.ui:82
 msgid "Folder"
@@ -357,19 +362,19 @@ msgstr "Folder"
 
 #: data/metadata-sidebar.ui:99
 msgid "Aperture"
-msgstr ""
+msgstr "Bukaan Lensa"
 
 #: data/metadata-sidebar.ui:116
 msgid "Exposure"
-msgstr ""
+msgstr "Pencahayaan"
 
 #: data/metadata-sidebar.ui:133
 msgid "ISO"
-msgstr ""
+msgstr "ISO"
 
 #: data/metadata-sidebar.ui:151
 msgid "Metering"
-msgstr ""
+msgstr "Pengukuran Cahaya"
 
 #: data/metadata-sidebar.ui:169 src/eom-metadata-details.c:65
 msgid "Camera"
@@ -661,7 +666,7 @@ msgstr "Layar penuh dengan klik ganda"
 
 #: plugins/fullscreen/fullscreen.plugin.desktop.in:6
 msgid "view-fullscreen"
-msgstr ""
+msgstr "view-fullscreen"
 
 #: plugins/reload/eom-reload-plugin.c:45
 #: plugins/reload/reload.plugin.desktop.in:5
@@ -674,7 +679,7 @@ msgstr "Memuat ulang gambar yang sedang dibuka"
 
 #: plugins/reload/reload.plugin.desktop.in:6
 msgid "view-refresh"
-msgstr ""
+msgstr "view-refresh"
 
 #: plugins/statusbar-date/statusbar-date.plugin.desktop.in:5
 msgid "Date in statusbar"
@@ -703,6 +708,7 @@ msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] ""
+"Ada %d citra dengan perubahan yang belum disimpan. Simpan sebelum menutup?"
 
 #: src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
@@ -745,7 +751,7 @@ msgstr "%s (*.%s)"
 #: src/eom-properties-dialog.c:165 src/eom-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] ""
+msgstr[0] "piksel"
 
 #: src/eom-file-chooser.c:451
 msgid "Open Image"
@@ -820,7 +826,7 @@ msgstr "Kondisi Pengambilan Gambar"
 
 #: src/eom-metadata-details.c:68
 msgid "GPS Data"
-msgstr ""
+msgstr "Data GPS"
 
 #: src/eom-metadata-details.c:69
 msgid "Maker Note"
@@ -888,7 +894,7 @@ msgstr "%.1f (film 35mm)"
 #, c-format
 msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
-msgstr[0] ""
+msgstr[0] "%i × %i piksel"
 
 #: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
 msgid "Unknown"
@@ -901,7 +907,7 @@ msgstr "%a, %d %B %Y"
 #: src/eom-metadata-sidebar.c:233
 #, c-format
 msgid "%X"
-msgstr ""
+msgstr "%X"
 
 #: src/eom-print.c:371
 msgid "Image Settings"
@@ -1036,7 +1042,7 @@ msgstr " (Unicode salah)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] ""
+msgstr[0] "%i × %i piksel  %s    %i%%"
 
 #: src/eom-window.c:832
 msgid "_Reload"
@@ -1082,7 +1088,7 @@ msgstr "Keluar dari Layar Penuh"
 
 #: src/eom-window.c:2050
 msgid "Viewing a slideshow"
-msgstr ""
+msgstr "Melihat pertunjukan salindia"
 
 #: src/eom-window.c:2263
 #, c-format
@@ -1136,7 +1142,7 @@ msgstr ""
 
 #: src/eom-window.c:2641
 msgid "About Eye of MATE"
-msgstr ""
+msgstr "Tentang Eye of MATE"
 
 #: src/eom-window.c:2643
 msgid ""
@@ -1144,6 +1150,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers"
 msgstr ""
+"Hak Cipta © 2000-2010 Free Software Foundation, Inc.\n"
+"Hak Cipta © 2011 Perberos\n"
+"Hak Cipta © 2012-2020 pengembang MATE"
 
 #: src/eom-window.c:2646
 msgid "The MATE image viewer."
@@ -1156,11 +1165,12 @@ msgstr ""
 "Ahmad Riza H Nst  <ari@160c.afraid.org>\n"
 "Dirgita <dirgita@gmail.com>\n"
 "Tim MATE Indonesia <http://id.mate.org>\n"
-"Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017."
+"Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017.\n"
+"Andika Triwidada <andika@gmail.com>, 2020."
 
 #: src/eom-window.c:2742 src/eom-window.c:2757
 msgid "Error launching appearance preferences dialog: "
-msgstr ""
+msgstr "Galat saat meluncurkan dialog preferensi penampilan:"
 
 #: src/eom-window.c:2792
 msgid "_Open Background Preferences"
@@ -1202,6 +1212,8 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
+"Anda yakin hendak memindah\n"
+"%d gambar yang dipilih ke tong sampah?"
 
 #: src/eom-window.c:3342
 msgid ""
@@ -1367,7 +1379,7 @@ msgstr "Buka _Folder "
 
 #: src/eom-window.c:3829
 msgid "Show the folder which contains this file in the file manager"
-msgstr ""
+msgstr "Menampilkan folder yang memuat berkas ini dalam manajer berkas"
 
 #: src/eom-window.c:3831
 msgid "_Print…"

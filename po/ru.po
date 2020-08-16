@@ -4,29 +4,31 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Дмитрий Михирев, 2018
-# Aleksey Kabanov <ak099@mail.ru>, 2018
-# Валентин Сайков <saikov.vb@gmail.com>, 2018
-# Dmitry Mandryk <dmandryk@gmail.com>, 2018
-# Dmitriy Kulikov <kulikov@dima.perm.ru>, 2018
-# Victor Kukshiev <andrey0bolkonsky@gmail.com>, 2018
-# Sergey Kolosov <kolosov@gmail.com>, 2018
-# theirix <theirix@gmail.com>, 2018
-# Alexei Sorokin <sor.alexei@meowr.ru>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# AlexL <loginov.alex.valer@gmail.com>, 2018
-# Lazybones Nightowl <mokkaran@gmail.com>, 2018
-# Alex Putz, 2018
-# Александр Кураченко <alexander@basealt.ru>, 2019
-# monsta <monsta@inbox.ru>, 2019
+# Дмитрий Михирев, 2020
+# Aleksey Kabanov <ak099@mail.ru>, 2020
+# Валентин Сайков <saikov.vb@gmail.com>, 2020
+# Dmitry Mandryk <dmandryk@gmail.com>, 2020
+# Dmitriy Kulikov <kulikov@dima.perm.ru>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Alexei Sorokin, 2020
+# Victor Kukshiev <andrey0bolkonsky@gmail.com>, 2020
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# AlexL <loginov.alex.valer@gmail.com>, 2020
+# Sergey Kolosov <kolosov@gmail.com>, 2020
+# theirix <theirix@gmail.com>, 2020
+# Lazybones Nightowl <mokkaran@gmail.com>, 2020
+# Alex Putz, 2020
+# Olesya Gerasimenko <gammaray@basealt.ru>, 2020
+# Александр Кураченко <alexander@basealt.ru>, 2020
+# Anna Vyalkova <cybertailor@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: eom 1.23.1\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
 "POT-Creation-Date: 2020-01-10 14:33+0100\n"
-"PO-Revision-Date: 2018-03-11 15:18+0000\n"
-"Last-Translator: monsta <monsta@inbox.ru>, 2019\n"
+"PO-Revision-Date: 2020-02-14 12:07+0000\n"
+"Last-Translator: Anna Vyalkova <cybertailor@gmail.com>, 2020\n"
 "Language-Team: Russian (https://www.transifex.com/mate/teams/13566/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -81,6 +83,10 @@ msgid ""
 " image is loaded, you can zoom and rotate the image, and also view "
 "subsequent images in the directory the image was loaded from."
 msgstr ""
+"Глаз MATE – это простой просмотрщик изображений на вашем компьютере. После "
+"загрузки изображения его можно увеличить или уменьшить, а также "
+"просматривать следующие изображения в каталоге, с которого изображение было "
+"загружено."
 
 #: data/eom.desktop.in.in:3 src/main.c:65 src/main.c:166
 msgid "Eye of MATE Image Viewer"
@@ -94,13 +100,14 @@ msgstr "Просмотр и вращение изображений"
 #. file name)!
 #: data/eom.desktop.in.in:8
 msgid "eom"
-msgstr ""
+msgstr "eom"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/eom.desktop.in.in:14
 msgid "image;viewer;JPEG;PNG;TIFF;SVG;MATE;photos;browse;thumbnails;rotate;"
 msgstr ""
+"изображение;просмотр;JPEG;PNG;TIFF;SVG;MATE;фото;обозреватель;tпредпросмотр;повернуть;"
 
 #: data/eom-image-properties-dialog.ui:8
 msgid "Image Properties"
@@ -342,7 +349,7 @@ msgstr "Слайд-шоу"
 
 #: data/eom-preferences-dialog.ui:722
 msgid "Plugins"
-msgstr "Плагины"
+msgstr "Модули"
 
 #: data/metadata-sidebar.ui:29 src/eom-print-image-setup.c:896
 msgid "Size"
@@ -665,7 +672,7 @@ msgstr "Полноэкранный режим по двойному щелчку
 
 #: plugins/fullscreen/fullscreen.plugin.desktop.in:6
 msgid "view-fullscreen"
-msgstr ""
+msgstr "view-fullscreen"
 
 #: plugins/reload/eom-reload-plugin.c:45
 #: plugins/reload/reload.plugin.desktop.in:5
@@ -678,7 +685,7 @@ msgstr "Перезагрузить текущее изображение"
 
 #: plugins/reload/reload.plugin.desktop.in:6
 msgid "view-refresh"
-msgstr ""
+msgstr "view-refresh"
 
 #: plugins/statusbar-date/statusbar-date.plugin.desktop.in:5
 msgid "Date in statusbar"
@@ -707,17 +714,9 @@ msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] ""
-"Есть %d изображение с несохранёнными изменениями. Сохранить изменения перед "
-"закрытием?"
 msgstr[1] ""
-"Есть %d изображений с несохранёнными изменениями. Сохранить изменения перед "
-"закрытием?"
 msgstr[2] ""
-"Есть %d изображений с несохранёнными изменениями. Сохранить изменения перед "
-"закрытием?"
 msgstr[3] ""
-"Есть %d изображений с несохранёнными изменениями. Сохранить изменения перед "
-"закрытием?"
 
 #: src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
@@ -760,10 +759,10 @@ msgstr "%s (*.%s)"
 #: src/eom-properties-dialog.c:165 src/eom-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] "пиксель"
-msgstr[1] "пикселей"
-msgstr[2] "пикселей"
-msgstr[3] "пикселей"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: src/eom-file-chooser.c:451
 msgid "Open Image"
@@ -906,14 +905,14 @@ msgstr "%.1f (эквивалент в 35 мм)"
 #, c-format
 msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
-msgstr[0] "%i×%iпиксель"
-msgstr[1] "%i×%iпикселей"
-msgstr[2] "%i×%iпикселей"
-msgstr[3] "%i×%iпикселей"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
 msgid "Unknown"
-msgstr "Неизвестный"
+msgstr "Неизвестная"
 
 #: src/eom-metadata-sidebar.c:229
 msgid "%a, %d %B %Y"
@@ -970,7 +969,7 @@ msgstr "_Центрировать:"
 
 #: src/eom-print-image-setup.c:874
 msgid "None"
-msgstr "Отсутствует"
+msgstr "Нет"
 
 #: src/eom-print-image-setup.c:876
 msgid "Horizontal"
@@ -1057,10 +1056,10 @@ msgstr " (неверный Юникод)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] "%i × %i пиксель %s %i%%"
-msgstr[1] "%i × %i пикселей  %s    %i%%"
-msgstr[2] "%i × %i пикселей  %s    %i%%"
-msgstr[3] "%i × %i пикселей  %s    %i%%"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: src/eom-window.c:832
 msgid "_Reload"
@@ -1119,7 +1118,7 @@ msgstr ""
 
 #: src/eom-window.c:2526
 msgid "Toolbar Editor"
-msgstr "Редактор панели инструментов"
+msgstr "Настройка панели инструментов"
 
 #: src/eom-window.c:2529
 msgid "_Reset to Default"
@@ -1169,6 +1168,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers"
 msgstr ""
+"Copyright © 2000-2010 Free Software Foundation, Inc.\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2020 MATE developers"
 
 #: src/eom-window.c:2646
 msgid "The MATE image viewer."
@@ -1202,6 +1204,7 @@ msgstr ""
 "Константин Гусев <kilolife@gmail.com>\n"
 "Леонид Кантер <leon@asplinux.ru>\n"
 "Макс Валянский <max.valjanski@gmail.com>\n"
+"Олеся Герасименко <gammaray@basealt.ru>\n"
 "Павел Жовнер <zhovner@ukr.net>\n"
 "Сергей Колосов <m17.admin@gmail.com>\n"
 "Сергей Панов <sipan@mit.edu>\n"
@@ -1255,17 +1258,9 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
-"Действительно хотите переместить\n"
-"%d выбранное изображение в корзину?"
 msgstr[1] ""
-"Действительно хотите переместить\n"
-"%d выбранных изображения в корзину?"
 msgstr[2] ""
-"Действительно хотите переместить\n"
-"%d выбранных изображений в корзину?"
 msgstr[3] ""
-"Действительно хотите переместить\n"
-"%d выбранных изображений в корзину?"
 
 #: src/eom-window.c:3342
 msgid ""
@@ -1318,7 +1313,7 @@ msgstr "С_ервис"
 
 #: src/eom-window.c:3781
 msgid "_Help"
-msgstr "_Помощь"
+msgstr "_Справка"
 
 #: src/eom-window.c:3783
 msgid "_Open…"
@@ -1362,7 +1357,7 @@ msgstr "Справка по этому приложению"
 
 #: src/eom-window.c:3798
 msgid "_About"
-msgstr "_Об апплете"
+msgstr "_О программе"
 
 #: src/eom-window.c:3799
 msgid "About this application"

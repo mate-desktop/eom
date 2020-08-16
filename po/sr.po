@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: eom 1.23.1\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
 "POT-Creation-Date: 2020-01-10 14:33+0100\n"
-"PO-Revision-Date: 2018-03-11 15:18+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"PO-Revision-Date: 2020-02-14 12:07+0000\n"
+"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>, 2020\n"
 "Language-Team: Serbian (https://www.transifex.com/mate/teams/13566/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -68,6 +68,9 @@ msgid ""
 " image is loaded, you can zoom and rotate the image, and also view "
 "subsequent images in the directory the image was loaded from."
 msgstr ""
+"Мејтово око је једноставан прегледач за разгледање слика на вашем рачунару. "
+"Након учитавања слике, можете да је увећате и окренете, а такође и да видите"
+" преостале слике у директоријуму из ког сте ту слику учитали."
 
 #: data/eom.desktop.in.in:3 src/main.c:65 src/main.c:166
 msgid "Eye of MATE Image Viewer"
@@ -81,13 +84,14 @@ msgstr "Прегледајте и окрените слике"
 #. file name)!
 #: data/eom.desktop.in.in:8
 msgid "eom"
-msgstr ""
+msgstr "eom"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/eom.desktop.in.in:14
 msgid "image;viewer;JPEG;PNG;TIFF;SVG;MATE;photos;browse;thumbnails;rotate;"
 msgstr ""
+"слика;прегледач;ЈПЕГ;ПНГ;ТИФФ;СВГ;Мејт;фотографије;разгледај;сличице;заокрени;"
 
 #: data/eom-image-properties-dialog.ui:8
 msgid "Image Properties"
@@ -341,7 +345,7 @@ msgstr "Врста"
 
 #: data/metadata-sidebar.ui:63
 msgid "File Size"
-msgstr ""
+msgstr "Величина датотеке"
 
 #: data/metadata-sidebar.ui:82
 msgid "Folder"
@@ -349,19 +353,19 @@ msgstr "Фасцикла"
 
 #: data/metadata-sidebar.ui:99
 msgid "Aperture"
-msgstr ""
+msgstr "Отвор бленде"
 
 #: data/metadata-sidebar.ui:116
 msgid "Exposure"
-msgstr ""
+msgstr "Изложеност"
 
 #: data/metadata-sidebar.ui:133
 msgid "ISO"
-msgstr ""
+msgstr "ИСО"
 
 #: data/metadata-sidebar.ui:151
 msgid "Metering"
-msgstr ""
+msgstr "Мерење светла"
 
 #: data/metadata-sidebar.ui:169 src/eom-metadata-details.c:65
 msgid "Camera"
@@ -646,7 +650,7 @@ msgstr "Цео екран на двоструки клик"
 
 #: plugins/fullscreen/fullscreen.plugin.desktop.in:6
 msgid "view-fullscreen"
-msgstr ""
+msgstr "view-fullscreen"
 
 #: plugins/reload/eom-reload-plugin.c:45
 #: plugins/reload/reload.plugin.desktop.in:5
@@ -659,7 +663,7 @@ msgstr "Поново учитава текућу слику"
 
 #: plugins/reload/reload.plugin.desktop.in:6
 msgid "view-refresh"
-msgstr ""
+msgstr "view-refresh"
 
 #: plugins/statusbar-date/statusbar-date.plugin.desktop.in:5
 msgid "Date in statusbar"
@@ -688,8 +692,11 @@ msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] ""
+"Постоји %d слика са несачуваним изменама. Да сачувам измене пре затварања?"
 msgstr[1] ""
+"Постоје %d слике са несачуваним изменама. Да сачувам измене пре затварања?"
 msgstr[2] ""
+"Постоји %d слика са несачуваним изменама. Да сачувам измене пре затварања?"
 
 #: src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
@@ -732,9 +739,9 @@ msgstr "%s (*.%s)"
 #: src/eom-properties-dialog.c:165 src/eom-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "пиксел"
+msgstr[1] "пиксела"
+msgstr[2] "пиксела"
 
 #: src/eom-file-chooser.c:451
 msgid "Open Image"
@@ -809,7 +816,7 @@ msgstr "Услови при снимању слике"
 
 #: src/eom-metadata-details.c:68
 msgid "GPS Data"
-msgstr ""
+msgstr "ГПС подаци"
 
 #: src/eom-metadata-details.c:69
 msgid "Maker Note"
@@ -877,9 +884,9 @@ msgstr "%.1f (35mm филм)"
 #, c-format
 msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%i × %i пиксел"
+msgstr[1] "%i × %i пиксела"
+msgstr[2] "%i × %i пиксела"
 
 #: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
 msgid "Unknown"
@@ -892,7 +899,7 @@ msgstr "%a, %d. %B %Y."
 #: src/eom-metadata-sidebar.c:233
 #, c-format
 msgid "%X"
-msgstr ""
+msgstr "%X"
 
 #: src/eom-print.c:371
 msgid "Image Settings"
@@ -1027,9 +1034,9 @@ msgstr " (неисправан Уникод)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%i × %i пиксел  %s    %i%%"
+msgstr[1] "%i × %i пиксела  %s    %i%%"
+msgstr[2] "%i × %i пиксела  %s    %i%%"
 
 #: src/eom-window.c:832
 msgid "_Reload"
@@ -1075,7 +1082,7 @@ msgstr "Напусти цео екран"
 
 #: src/eom-window.c:2050
 msgid "Viewing a slideshow"
-msgstr ""
+msgstr "Прегледање у покретном приказу"
 
 #: src/eom-window.c:2263
 #, c-format
@@ -1129,7 +1136,7 @@ msgstr ""
 
 #: src/eom-window.c:2641
 msgid "About Eye of MATE"
-msgstr ""
+msgstr "О Мејтовом оку"
 
 #: src/eom-window.c:2643
 msgid ""
@@ -1137,6 +1144,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers"
 msgstr ""
+"Ауторска права © 2000-2010 Фондација слободног софтвера, Доо.\n"
+"Ауторска права © 2011 Перберос\n"
+"Ауторска права © 2012-2020 Програмери Мејта"
 
 #: src/eom-window.c:2646
 msgid "The MATE image viewer."
@@ -1148,7 +1158,7 @@ msgstr "Мирослав Николић <miroslavnikolic@rocketmail.com>"
 
 #: src/eom-window.c:2742 src/eom-window.c:2757
 msgid "Error launching appearance preferences dialog: "
-msgstr ""
+msgstr "Грешка приликом покретања прозорчета поставки изгледа: "
 
 #: src/eom-window.c:2792
 msgid "_Open Background Preferences"
@@ -1193,8 +1203,14 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
+"Да ли заиста желите да преместите \n"
+"%d изабрану слику у смеће?"
 msgstr[1] ""
+"Да ли заиста желите да преместите \n"
+"%d изабране слике у смеће?"
 msgstr[2] ""
+"Да ли заиста желите да преместите \n"
+"%d изабраних слика у смеће?"
 
 #: src/eom-window.c:3342
 msgid ""
@@ -1360,7 +1376,7 @@ msgstr "Отвори садржајну _фасциклу"
 
 #: src/eom-window.c:3829
 msgid "Show the folder which contains this file in the file manager"
-msgstr ""
+msgstr "Прикажите фасциклу која садржи овај документ у управнику датотека"
 
 #: src/eom-window.c:3831
 msgid "_Print…"

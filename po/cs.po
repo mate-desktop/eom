@@ -4,24 +4,25 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Ondřej Kolín <ondrej.kolin@gmail.com>, 2018
-# Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2018
-# Michal <sinope@seznam.cz>, 2018
-# jakubtalich, 2018
-# Stanislav Kučera <inactive+kacernator@transifex.com>, 2018
-# Roman Horník <roman.hornik@debian-linux.cz>, 2018
-# LiberteCzech <liberte.czech@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Lucas Lommer <drom@kdyne.net>, 2019
-# ToMáš Marný, 2019
+# LiberteCzech <liberte.czech@gmail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2020
+# Ondřej Kolín <ondrej.kolin@gmail.com>, 2020
+# Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2020
+# ToMáš Marný, 2020
+# Michal <sinope@seznam.cz>, 2020
+# clefebvre <clement.lefebvre@linuxmint.com>, 2020
+# 1e6459e9b1241af8afa03d508d281c17_dbe0d8b, 2020
+# 6e833d5535e2fe0dd9dfa7fe5bf473f2_d78f422 <64c38a0ff10419c64e8e03d54c72b3bd_352524>, 2020
+# Roman Horník <roman.hornik@debian-linux.cz>, 2020
+# Lucas Lommer <drom@kdyne.net>, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: eom 1.23.1\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
 "POT-Creation-Date: 2020-01-10 14:33+0100\n"
-"PO-Revision-Date: 2018-03-11 15:18+0000\n"
-"Last-Translator: ToMáš Marný, 2019\n"
+"PO-Revision-Date: 2020-02-14 12:07+0000\n"
+"Last-Translator: Lucas Lommer <drom@kdyne.net>, 2020\n"
 "Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -140,7 +141,7 @@ msgstr "Umístění:"
 
 #: data/eom-image-properties-dialog.ui:422
 msgid "General"
-msgstr "Obecné"
+msgstr "Všeobecné"
 
 #: data/eom-image-properties-dialog.ui:455
 msgid "Aperture Value:"
@@ -742,10 +743,10 @@ msgstr "%s (*.%s)"
 #: src/eom-properties-dialog.c:165 src/eom-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] "bod"
-msgstr[1] "body"
-msgstr[2] "bodů"
-msgstr[3] "bodů"
+msgstr[0] "pixel"
+msgstr[1] "pixely"
+msgstr[2] "pixelů"
+msgstr[3] "pixelů"
 
 #: src/eom-file-chooser.c:451
 msgid "Open Image"
@@ -890,7 +891,7 @@ msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
 msgstr[0] "%i × %i pixel"
 msgstr[1] "%i × %i pixely"
-msgstr[2] "%i × %i pixels"
+msgstr[2] "%i × %i pixelů"
 msgstr[3] "%i × %i pixelů"
 
 #: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
@@ -952,7 +953,7 @@ msgstr "Uprostř_ed:"
 
 #: src/eom-print-image-setup.c:874
 msgid "None"
-msgstr "Nic"
+msgstr "Žádné"
 
 #: src/eom-print-image-setup.c:876
 msgid "Horizontal"
@@ -1027,7 +1028,7 @@ msgstr "Nelze zobrazit nápovědu pro Eye of MATE"
 
 #: src/eom-util.c:116
 msgid " (invalid Unicode)"
-msgstr " (neplatný Unicode)"
+msgstr " (neplatné Unicode)"
 
 #. Translators: This is the string displayed in the statusbar
 #. * The tokens are from left to right:
@@ -1039,10 +1040,10 @@ msgstr " (neplatný Unicode)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] "%i × %i bod  %s    %i%%"
-msgstr[1] "%i × %i body  %s    %i%%"
-msgstr[2] "%i × %i bodů  %s    %i%%"
-msgstr[3] "%i × %i bodů  %s    %i%%"
+msgstr[0] "%i × %i pixel  %s    %i%%"
+msgstr[1] "%i × %i pixely  %s    %i%%"
+msgstr[2] "%i × %i pixelů  %s    %i%%"
+msgstr[3] "%i × %i pixelů  %s    %i%%"
 
 #: src/eom-window.c:832
 msgid "_Reload"
@@ -1138,7 +1139,7 @@ msgid ""
 msgstr ""
 "Kopii GNU General Public License byste měli obdržet spolu s tímto programem;"
 " pokud se tak nestalo, napište si o ni Free Software Foundation, Inc., 51 "
-"Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA"
+"Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
 
 #: src/eom-window.c:2641
 msgid "About Eye of MATE"
@@ -1150,6 +1151,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers"
 msgstr ""
+"Copyright © 2000-2010 Free Software Foundation, Inc.\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2020 vývojáři MATE"
 
 #: src/eom-window.c:2646
 msgid "The MATE image viewer."
@@ -1163,8 +1167,12 @@ msgstr ""
 "Miloslav Trmač <mitr@volny.cz>\n"
 "Petr Tomeš <ptomes@gmail.com>\n"
 "Jakub Friedl <jfriedl@suse.cz>\n"
-"Lucas Lommer <drom@kdyne.net>\n"
+"Petr Tomeš <ptomes@gmail.com>\n"
+"Lukáš Novotný <lukasnov@cvs.gnome.org>\n"
+"Kamil Páral <ripper42@gmail.com>\n"
 "Petr Kovář <pknbe@volny.cz>\n"
+"Lucas Lommer <drom@kdyne.net>\n"
+"Tomas Bzatek <tbzatek@redhat.com>\n"
 "Roman Horník <roman.hornik@debian-linux.cz>"
 
 #: src/eom-window.c:2742 src/eom-window.c:2757
@@ -1289,7 +1297,7 @@ msgstr "Otevřít soubor"
 
 #: src/eom-window.c:3786
 msgid "_Close"
-msgstr "_Zavřít"
+msgstr "Zavřít"
 
 #: src/eom-window.c:3787
 msgid "Close window"
@@ -1329,7 +1337,7 @@ msgstr "O této aplikaci"
 
 #: src/eom-window.c:3804
 msgid "_Toolbar"
-msgstr "_Lišta nástrojů"
+msgstr "_Nástrojová lišta"
 
 #: src/eom-window.c:3805
 msgid "Changes the visibility of the toolbar in the current window"
@@ -1478,7 +1486,7 @@ msgstr "Zvětšit obrázek"
 
 #: src/eom-window.c:3864 src/eom-window.c:3879
 msgid "Zoom _Out"
-msgstr "_Oddálit"
+msgstr "Z_menšit"
 
 #: src/eom-window.c:3865 src/eom-window.c:3877 src/eom-window.c:3880
 msgid "Shrink the image"
