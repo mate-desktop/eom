@@ -4,12 +4,12 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Marco Bartolucci <nap.84@live.it>, 2018
 # Dario Di Nucci <linkin88mail@gmail.com>, 2018
 # l3nn4rt, 2018
 # Guybrush88 <erpizzo@alice.it>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Giuseppe Pignataro <rogepix@gmail.com>, 2018
+# Alessandro Volturno <alelvb@inwind.it>, 2020
 # Enrico B. <enricobe@hotmail.com>, 2020
 # 
 msgid ""
@@ -33,11 +33,11 @@ msgstr "Mostra \"_%s\""
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
 msgid "_Move on Toolbar"
-msgstr "_Muovi nella barra strumenti"
+msgstr "_Muovi sulla barra strumenti"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
 msgid "Move the selected item on the toolbar"
-msgstr "Muove l'elemento selezionato nella barra strumenti"
+msgstr "Muove l'elemento selezionato sulla barra strumenti"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1422
 msgid "_Remove from Toolbar"
@@ -97,11 +97,11 @@ msgstr "eom"
 #: data/eom.desktop.in.in:14
 msgid "image;viewer;JPEG;PNG;TIFF;SVG;MATE;photos;browse;thumbnails;rotate;"
 msgstr ""
-"immagine;immagini;visualizzatore;JPEG;PNG;TIFF;SVG;MATE;foto;sfoglia;anteprima;ruota;"
+"immagine;visualizzatore;JPEG;PNG;TIFF;SVG;MATE;foto;sfoglia;anteprima;ruota;"
 
 #: data/eom-image-properties-dialog.ui:8
 msgid "Image Properties"
-msgstr "Proprietà immagine"
+msgstr "Proprietà dell'immagine"
 
 #: data/eom-image-properties-dialog.ui:54
 msgid "_Previous"
@@ -142,7 +142,7 @@ msgstr "Generale"
 
 #: data/eom-image-properties-dialog.ui:455
 msgid "Aperture Value:"
-msgstr "Valore apertura:"
+msgstr "Valore di apertura:"
 
 #: data/eom-image-properties-dialog.ui:471
 msgid "Exposure Time:"
@@ -162,7 +162,7 @@ msgstr "Sensibilità ISO:"
 
 #: data/eom-image-properties-dialog.ui:535
 msgid "Metering Mode:"
-msgstr "Modalità esposimetro:"
+msgstr "Modalità di misurazione:"
 
 #: data/eom-image-properties-dialog.ui:551
 msgid "Camera Model:"
@@ -223,7 +223,7 @@ msgstr "Formato del nome file:"
 
 #: data/eom-multiple-save-as-dialog.ui:212
 msgid "File Path Specifications"
-msgstr "Specifiche percorso file"
+msgstr "Specifiche del percorso ai file"
 
 #: data/eom-multiple-save-as-dialog.ui:253
 msgid "Start counter at:"
@@ -247,7 +247,7 @@ msgstr "A:"
 
 #: data/eom-multiple-save-as-dialog.ui:396
 msgid "File Name Preview"
-msgstr "Anteprima nome file"
+msgstr "Anteprima nome del file"
 
 #: data/eom-preferences-dialog.ui:16
 msgid "Eye of MATE Preferences"
@@ -255,7 +255,7 @@ msgstr "Preferenze di Eye of MATE"
 
 #: data/eom-preferences-dialog.ui:88
 msgid "Image Enhancements"
-msgstr "Miglioramenti immagine"
+msgstr "Miglioramenti dell'immagine"
 
 #: data/eom-preferences-dialog.ui:117
 msgid "Smooth images when zoomed-_out"
@@ -275,7 +275,7 @@ msgstr "Sfondo"
 
 #: data/eom-preferences-dialog.ui:250
 msgid "As custom color:"
-msgstr "Colore personalizzato:"
+msgstr "Come colore personalizzato:"
 
 #: data/eom-preferences-dialog.ui:267 data/org.mate.eom.gschema.xml.in:16
 msgid "Background Color"
@@ -287,11 +287,11 @@ msgstr "Parti trasparenti"
 
 #: data/eom-preferences-dialog.ui:335
 msgid "As check _pattern"
-msgstr " _Scacchiera"
+msgstr "Come _scacchiera"
 
 #: data/eom-preferences-dialog.ui:356
 msgid "As custom c_olor:"
-msgstr "Colore _personalizzato:"
+msgstr "Come colore _personalizzato:"
 
 #: data/eom-preferences-dialog.ui:377
 msgid "Color for Transparent Areas"
@@ -299,7 +299,7 @@ msgstr "Colore per aree trasparenti"
 
 #: data/eom-preferences-dialog.ui:395
 msgid "As _background"
-msgstr "S_fondo"
+msgstr "Come s_fondo"
 
 #: data/eom-preferences-dialog.ui:437
 msgid "Image View"
@@ -371,7 +371,7 @@ msgstr "ISO"
 
 #: data/metadata-sidebar.ui:151
 msgid "Metering"
-msgstr "Esposimetro"
+msgstr "Misurazione"
 
 #: data/metadata-sidebar.ui:169 src/eom-metadata-details.c:65
 msgid "Camera"
@@ -406,9 +406,9 @@ msgid ""
 "background-color key is not set, the color is determined by the active GTK+ "
 "theme instead."
 msgstr ""
-"Il colore che sarà usato per riempire l'area dietro l'immagine. Se la chiave"
-" use-background-color non è impostata, il colore è determinato dal tema GTK+"
-" attivo."
+"Colore usato per riempire l'area dietro all'immagine. Se la chiave \"use-"
+"background-color\" non è impostata, il colore è determinato dal tema GTK+ "
+"attivo."
 
 #: data/org.mate.eom.gschema.xml.in:21
 msgid "Use a custom background color"
@@ -433,9 +433,9 @@ msgid ""
 "Whether the image should be interpolated on zoom-out. This leads to better "
 "quality but is somewhat slower than non-interpolated images."
 msgstr ""
-"Indica se l'immagine debba essere interpolata quando rimpicciolita. Ciò "
-"comporta una qualità migliore, ma il programma risulta più lento che con le "
-"immagini non interpolate."
+"Indica se l'immagine debba essere interpolata quando viene rimpicciolita. "
+"Ciò comporta una qualità migliore, ma il programma risulta più lento che con"
+" le immagini non interpolate."
 
 #: data/org.mate.eom.gschema.xml.in:31
 msgid "Extrapolate Image"
@@ -461,8 +461,8 @@ msgid ""
 "color value used."
 msgstr ""
 "Determina come la trasparenza dovrebbe essere indicata. Valori validi sono "
-"verificato, colore o nessuno. Se un colore viene scelto, la chiave trans-"
-"color determina il valore del colore usato. "
+"verificato, colore o nessuno. Se un colore viene scelto, la chiave \"trans-"
+"color\" determina il valore del colore usato. "
 
 #: data/org.mate.eom.gschema.xml.in:41
 msgid "Scroll wheel zoom"
@@ -508,7 +508,7 @@ msgstr "Rende casuale la sequenza di immagini"
 #: data/org.mate.eom.gschema.xml.in:59
 msgid "Whether the sequence of images should be shown in an random loop."
 msgstr ""
-"Determina se la sequenza di immagini deve essere visualizzata in un ciclo "
+"Determina se la sequenza di immagini debba essere visualizzata in un ciclo "
 "casuale."
 
 #: data/org.mate.eom.gschema.xml.in:63
@@ -611,8 +611,9 @@ msgid ""
 msgstr ""
 "Se attivata, l'elenco dettagliato dei metadati nella finestra delle "
 "proprietà viene spostato in una propria scheda nel dialogo. Questo dovrebbe "
-"rendere il dialogo più usabile sugli schermi più piccoli, come sui netbook. "
-"Se disattivata, il widget è integrato nella scheda \"Metadati\"."
+"rendere il dialogo più agevole da usare sugli schermi più piccoli, come "
+"quelli sui netbook. Se disattivata, il widget è integrato nella scheda "
+"\"Metadati\"."
 
 #: data/org.mate.eom.gschema.xml.in:122
 msgid "External program to use for editing images"
@@ -624,10 +625,10 @@ msgid ""
 " for editing images (when the \"Edit Image\" toolbar button is clicked). Set"
 " to the empty string to disable this feature."
 msgstr ""
-"Il nome del desktop file (incluso il \".desktop\") dell'applicazione da "
-"usare per modificare le immagini (quando il bottone della toolbar \"Modifica"
-" immagine\" viene cliccato). Inserisci la stringa vuota per disabilitare "
-"questa caratteristica."
+"Il nome del file desktop (incluso il \".desktop\") dell'applicazione da "
+"usare per modificare le immagini (clic sul pulsante della barra degli "
+"strumenti \"Modifica immagine\"). Lascia la stringa vuota per disabilitare "
+"questa funzionalità."
 
 #: data/org.mate.eom.gschema.xml.in:127
 msgid ""
@@ -660,12 +661,12 @@ msgid ""
 "plugin."
 msgstr ""
 "Lista dei plugin attivi. Non contiene la \"posizione\" dei plugin attivi. "
-"Consultare il file .eom-plugin per ottenere la \"posizione\" di un "
-"determinato plugin."
+"Consulta il file .eom-plugin per ottenere la \"posizione\" di un determinato"
+" plugin."
 
 #: plugins/fullscreen/fullscreen.plugin.desktop.in:5
 msgid "Fullscreen with double-click"
-msgstr "Schermo intero col doppio-clic"
+msgstr "Schermo intero con doppio-clic"
 
 #: plugins/fullscreen/fullscreen.plugin.desktop.in:6
 msgid "view-fullscreen"
@@ -674,7 +675,7 @@ msgstr "visualizza-schermo intero"
 #: plugins/reload/eom-reload-plugin.c:45
 #: plugins/reload/reload.plugin.desktop.in:5
 msgid "Reload Image"
-msgstr "Ricarica immagine"
+msgstr "Ricarica l'immagine"
 
 #: plugins/reload/eom-reload-plugin.c:45
 msgid "Reload current image"
@@ -698,7 +699,7 @@ msgstr "Domanda"
 
 #: src/eom-close-confirmation-dialog.c:366
 msgid "If you don't save, your changes will be lost."
-msgstr "Se non si salva, le modifiche saranno perse."
+msgstr "Se non salvi, le modifiche andranno perse."
 
 #: src/eom-close-confirmation-dialog.c:402
 #, c-format
@@ -723,7 +724,7 @@ msgstr "S_eleziona le immagini da salvare:"
 
 #: src/eom-close-confirmation-dialog.c:633
 msgid "If you don't save, all your changes will be lost."
-msgstr "Se non si salva, tutte le modifiche saranno perse."
+msgstr "Se non salvi, tutte le modifiche andranno perse."
 
 #: src/eom-file-chooser.c:121
 msgid "File format is unknown or unsupported"
@@ -734,12 +735,12 @@ msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
 msgstr ""
-"Non è possibile per Eye of MATE determinare un formato di file scrivibile "
-"supportato in base al nome di file."
+"Sulla base del nome del file Eye of MATE non può determinare un formato di "
+"file scrivibile supportato."
 
 #: src/eom-file-chooser.c:127
 msgid "Please try a different file extension like .png or .jpg."
-msgstr "Provare una differente estensione di file come .png o .jpg."
+msgstr "Prova un'estensione di file diversa come .png o .jpg."
 
 #: src/eom-file-chooser.c:159
 msgid "All Files"
@@ -763,19 +764,19 @@ msgstr[1] "pixel"
 
 #: src/eom-file-chooser.c:451
 msgid "Open Image"
-msgstr "Apri immagine"
+msgstr "Apri l'immagine"
 
 #: src/eom-file-chooser.c:459
 msgid "Save Image"
-msgstr "Salva immagine"
+msgstr "Salva l'immagine"
 
 #: src/eom-file-chooser.c:467 src/eom-window.c:4009
 msgid "Open Folder"
-msgstr "Apertura cartella"
+msgstr "Apri la cartella"
 
 #: src/eom-image.c:552
 msgid "Transformation on unloaded image."
-msgstr "Trasformazione su immagine non caricata."
+msgstr "Trasformazione su un'immagine non caricata."
 
 #: src/eom-image.c:580
 msgid "Transformation failed."
@@ -838,7 +839,7 @@ msgstr "Dati GPS"
 
 #: src/eom-metadata-details.c:69
 msgid "Maker Note"
-msgstr "Note"
+msgstr "Note sull'autore"
 
 #: src/eom-metadata-details.c:70
 msgid "Other"
@@ -896,7 +897,7 @@ msgstr "%.1f (obiettivo)"
 #: src/eom-exif-util.c:293
 #, c-format
 msgid "%.1f (35mm film)"
-msgstr "%.1fmm (film 35mm)"
+msgstr "%.1f (pellicola 35mm)"
 
 #: src/eom-metadata-sidebar.c:153
 #, c-format
@@ -920,7 +921,7 @@ msgstr "%X"
 
 #: src/eom-print.c:371
 msgid "Image Settings"
-msgstr "Impostazioni immagine"
+msgstr "Impostazioni dell'immagine"
 
 #: src/eom-print-image-setup.c:824
 msgid "Image"
@@ -1027,7 +1028,7 @@ msgstr "%d / %d"
 
 #: src/eom-thumb-view.c:544
 msgid "Taken on"
-msgstr "Ripresa il"
+msgstr "Scattata il"
 
 #: src/eom-uri-converter.c:986
 msgid "At least two file names are equal."
@@ -1147,9 +1148,10 @@ msgid ""
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
-"Si dovrebbe ricevere una copia della GNU General Public License insieme "
-"all'applicazione; altrimenti, scrivere alla Free Software Foundation, Inc., "
-"51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
+"Si dovrebbe aver ricevuto una copia della GNU General Public License insieme all'applicazione; in caso contrario, scrivere alla\n"
+"Free Software Foundation, Inc., \n"
+"51 Franklin St, Fifth Floor, \n"
+"Boston, MA 02110-1301, USA."
 
 #: src/eom-window.c:2641
 msgid "About Eye of MATE"
@@ -1171,7 +1173,7 @@ msgstr "Il visualizzatore di immagini di MATE."
 
 #: src/eom-window.c:2649
 msgid "translator-credits"
-msgstr "Riconoscimenti-traduzione"
+msgstr "Enrico Bella, 2020 "
 
 #: src/eom-window.c:2742 src/eom-window.c:2757
 msgid "Error launching appearance preferences dialog: "
@@ -1209,8 +1211,7 @@ msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr ""
-"Impossibile spostare nel cestino «%s». Eliminare definitivamente questa "
-"immagine? "
+"Impossibile spostare nel cestino «%s». Elimino definitivamente l'immagine? "
 
 #: src/eom-window.c:3337
 #, c-format
@@ -1241,7 +1242,7 @@ msgstr "Sposta nel _cestino"
 
 #: src/eom-window.c:3361
 msgid "_Do not ask again during this session"
-msgstr "_Non domandare ancora durante questa sessione"
+msgstr "_Non chiedere di nuovo in questa sessione"
 
 #: src/eom-window.c:3406 src/eom-window.c:3420
 msgid "Couldn't access trash."
@@ -1294,7 +1295,7 @@ msgstr "_Chiudi"
 
 #: src/eom-window.c:3787
 msgid "Close window"
-msgstr "Chiude la finestra"
+msgstr "Chiudi la finestra"
 
 #: src/eom-window.c:3789
 msgid "T_oolbar"
@@ -1418,7 +1419,7 @@ msgstr "_Annulla"
 
 #: src/eom-window.c:3838
 msgid "Undo the last change in the image"
-msgstr "Annulla l'ultimo cambiamento all'immagine"
+msgstr "Annulla l'ultima moifica all'immagine"
 
 #: src/eom-window.c:3840
 msgid "Flip _Horizontal"
@@ -1426,7 +1427,7 @@ msgstr "Capovolgi ori_zzontalmente"
 
 #: src/eom-window.c:3841
 msgid "Mirror the image horizontally"
-msgstr "Specchia l'immagine in orizzontale"
+msgstr "Rifletti l'immagine in orizzontale"
 
 #: src/eom-window.c:3843
 msgid "Flip _Vertical"
@@ -1434,7 +1435,7 @@ msgstr "Capovolgi _verticalmente"
 
 #: src/eom-window.c:3844
 msgid "Mirror the image vertically"
-msgstr "Specchia l'immagine in verticale"
+msgstr "Rifletti l'immagine in verticale"
 
 #: src/eom-window.c:3846
 msgid "_Rotate Clockwise"
@@ -1470,7 +1471,7 @@ msgstr "_Copia"
 
 #: src/eom-window.c:3859
 msgid "Copy the selected image to the clipboard"
-msgstr "Copia l'immagine selezionato negli appunti"
+msgstr "Copia l'immagine selezionata negli appunti"
 
 #: src/eom-window.c:3861 src/eom-window.c:3873 src/eom-window.c:3876
 msgid "_Zoom In"
@@ -1486,7 +1487,7 @@ msgstr "Rid_uci ingrandimento"
 
 #: src/eom-window.c:3865 src/eom-window.c:3877 src/eom-window.c:3880
 msgid "Shrink the image"
-msgstr "Restringe l'immagine"
+msgstr "Restringi l'immagine"
 
 #: src/eom-window.c:3867
 msgid "_Normal Size"
@@ -1514,7 +1515,7 @@ msgstr "Mostra l'immagine corrente nella modalità schermo intero"
 
 #: src/eom-window.c:3891
 msgid "Pause Slideshow"
-msgstr "Pausa"
+msgstr "Sospendi presentazione"
 
 #: src/eom-window.c:3892
 msgid "Pause or resume the slideshow"
@@ -1526,7 +1527,7 @@ msgstr "Immagine pr_ecedente"
 
 #: src/eom-window.c:3898
 msgid "Go to the previous image of the collection"
-msgstr "Va alla precedente immagine della raccolta"
+msgstr "Vai alla precedente immagine della raccolta"
 
 #: src/eom-window.c:3900
 msgid "_Next Image"
@@ -1534,7 +1535,7 @@ msgstr "Immagine _successiva"
 
 #: src/eom-window.c:3901
 msgid "Go to the next image of the collection"
-msgstr "Va alla successiva immagine della raccolta"
+msgstr "Vai alla successiva immagine della raccolta"
 
 #: src/eom-window.c:3903 src/eom-window.c:3915
 msgid "_First Image"
@@ -1542,7 +1543,7 @@ msgstr "_Prima immagine"
 
 #: src/eom-window.c:3904
 msgid "Go to the first image of the collection"
-msgstr "Va alla prima immagine della raccolta"
+msgstr "Vai alla prima immagine della raccolta"
 
 #: src/eom-window.c:3906 src/eom-window.c:3918
 msgid "_Last Image"
@@ -1550,19 +1551,19 @@ msgstr "_Ultima immagine"
 
 #: src/eom-window.c:3907
 msgid "Go to the last image of the collection"
-msgstr "Va all'ultima immagine della raccolta"
+msgstr "Vai all'ultima immagine della raccolta"
 
 #: src/eom-window.c:3909
 msgid "_Random Image"
-msgstr "Ricarica cas_uale"
+msgstr "Immagine cas_uale"
 
 #: src/eom-window.c:3910
 msgid "Go to a random image of the collection"
-msgstr "Va a un'immagine casuale della raccolta"
+msgstr "Vai a un'immagine casuale della raccolta"
 
 #: src/eom-window.c:3924
 msgid "S_lideshow"
-msgstr "S_lideshow"
+msgstr "Presentazione"
 
 #: src/eom-window.c:3925
 msgid "Start a slideshow view of the images"
@@ -1616,7 +1617,7 @@ msgstr "Modifica l'immagine corrente usando %s"
 
 #: src/eom-window.c:4388
 msgid "Edit Image"
-msgstr "Modifica immagine"
+msgstr "Modifica l'immagine"
 
 #: src/eom-window.c:4612
 msgid "Properties"

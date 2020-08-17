@@ -4,9 +4,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Cfpo Miègjorn-Pirenèus <inactive+cfpomp@transifex.com>, 2018
+# 48c2de07903ce5a77a8e90265f95c4c2_8909374 <837c8d0ab97b27e737893c19f79bd4de_348476>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Cédric Valmary <cvalmary@yahoo.fr>, 2018
+# Quentin PAGÈS, 2020
 # 
 msgid ""
 msgstr ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
 "POT-Creation-Date: 2020-01-10 14:33+0100\n"
 "PO-Revision-Date: 2018-03-11 15:18+0000\n"
-"Last-Translator: Cédric Valmary <cvalmary@yahoo.fr>, 2018\n"
+"Last-Translator: Quentin PAGÈS, 2020\n"
 "Language-Team: Occitan (post 1500) (https://www.transifex.com/mate/teams/13566/oc/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -61,7 +62,7 @@ msgstr "Eye of MATE"
 
 #: data/eom.appdata.xml.in:7
 msgid "Simple image viewer"
-msgstr ""
+msgstr "Visualizaira d'imatges"
 
 #: data/eom.appdata.xml.in:9
 msgid ""
@@ -69,6 +70,10 @@ msgid ""
 " image is loaded, you can zoom and rotate the image, and also view "
 "subsequent images in the directory the image was loaded from."
 msgstr ""
+"Eye of MATE es una visualizaira d'imatges simpla per percórrer los imatges "
+"de vòstre ordenador. Un còp un imatge es cargat, podètz agrandir o far virar"
+" l’imatge, e tanben veire los imatges contenguts dins lo repertòri d’ont es "
+"cargat l’imatge."
 
 #: data/eom.desktop.in.in:3 src/main.c:65 src/main.c:166
 msgid "Eye of MATE Image Viewer"
@@ -82,13 +87,14 @@ msgstr "Percórrer e pivotar los imatges"
 #. file name)!
 #: data/eom.desktop.in.in:8
 msgid "eom"
-msgstr ""
+msgstr "eom"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/eom.desktop.in.in:14
 msgid "image;viewer;JPEG;PNG;TIFF;SVG;MATE;photos;browse;thumbnails;rotate;"
 msgstr ""
+"image;viewer;JPEG;PNG;TIFF;SVG;MATE;photos;thumbnails;rotate;imatge;foto:fòto;"
 
 #: data/eom-image-properties-dialog.ui:8
 msgid "Image Properties"
@@ -318,7 +324,7 @@ msgstr "segondas"
 
 #: data/eom-preferences-dialog.ui:628
 msgid "_Random sequence"
-msgstr ""
+msgstr "_Sequéncia aleatòria"
 
 #: data/eom-preferences-dialog.ui:644
 msgid "_Loop sequence"
@@ -330,7 +336,7 @@ msgstr "Diaporama"
 
 #: data/eom-preferences-dialog.ui:722
 msgid "Plugins"
-msgstr "Empeutons"
+msgstr "Extensions"
 
 #: data/metadata-sidebar.ui:29 src/eom-print-image-setup.c:896
 msgid "Size"
@@ -342,7 +348,7 @@ msgstr "Tipe"
 
 #: data/metadata-sidebar.ui:63
 msgid "File Size"
-msgstr ""
+msgstr "Talha del fichièr"
 
 #: data/metadata-sidebar.ui:82
 msgid "Folder"
@@ -354,11 +360,11 @@ msgstr ""
 
 #: data/metadata-sidebar.ui:116
 msgid "Exposure"
-msgstr ""
+msgstr "Durada d'exposicion"
 
 #: data/metadata-sidebar.ui:133
 msgid "ISO"
-msgstr ""
+msgstr "ISO"
 
 #: data/metadata-sidebar.ui:151
 msgid "Metering"
@@ -490,7 +496,7 @@ msgstr ""
 
 #: data/org.mate.eom.gschema.xml.in:58
 msgid "Randomize the image sequence"
-msgstr ""
+msgstr "Far venir aleatòria la sequéncia d’imatges"
 
 #: data/org.mate.eom.gschema.xml.in:59
 msgid "Whether the sequence of images should be shown in an random loop."
@@ -599,7 +605,7 @@ msgstr ""
 
 #: data/org.mate.eom.gschema.xml.in:122
 msgid "External program to use for editing images"
-msgstr ""
+msgstr "Programa extèrn a utilizar per modificar las imatges"
 
 #: data/org.mate.eom.gschema.xml.in:123
 msgid ""
@@ -631,7 +637,7 @@ msgstr ""
 
 #: data/org.mate.eom.gschema.xml.in:134
 msgid "Active plugins"
-msgstr "Empeutons actius"
+msgstr "Extensions activas"
 
 #: data/org.mate.eom.gschema.xml.in:135
 msgid ""
@@ -639,8 +645,9 @@ msgid ""
 "plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
 "plugin."
 msgstr ""
-"Tièra dels apondons actius. Conten pas l'emplaçament dels apondons actius. "
-"Legissètz lo fichièr .eom-plugin per obténer l'emplaçament d'un apondon."
+"Lista de las extensions activas. Conten pas l'emplaçament del las extensions"
+" activas. Legissètz lo fichièr .eom-plugin per obténer l'emplaçament d'una "
+"extension."
 
 #: plugins/fullscreen/fullscreen.plugin.desktop.in:5
 msgid "Fullscreen with double-click"
@@ -692,7 +699,11 @@ msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] ""
+"I a %d imatge amb de modificacions pas enregistradas. Volètz enregistrar las"
+" modificacions abans de tampar ?"
 msgstr[1] ""
+"I a %d imatges amb de modificacions pas enregistradas. Volètz enregistrar "
+"las modificacions abans de tampar ?"
 
 #: src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
@@ -735,8 +746,8 @@ msgstr "%s (*.%s)"
 #: src/eom-properties-dialog.c:165 src/eom-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "pixèl"
+msgstr[1] "pixèls"
 
 #: src/eom-file-chooser.c:451
 msgid "Open Image"
@@ -790,12 +801,12 @@ msgstr "_Tornar ensajar"
 #: src/eom-error-message-area.c:151
 #, c-format
 msgid "Could not load image '%s'."
-msgstr "Impossible de cargar l'imatge '%s'."
+msgstr "Impossible de cargar l'imatge « %s »."
 
 #: src/eom-error-message-area.c:193
 #, c-format
 msgid "No images found in '%s'."
-msgstr "Pas cap d'imatge trobat dins '%s'."
+msgstr "Cap d'imatge pas trobat dins « %s »."
 
 #: src/eom-error-message-area.c:200
 msgid "The given locations contain no images."
@@ -811,7 +822,7 @@ msgstr "Condicions de la presa d'imatge"
 
 #: src/eom-metadata-details.c:68
 msgid "GPS Data"
-msgstr ""
+msgstr "Donadas GPS"
 
 #: src/eom-metadata-details.c:69
 msgid "Maker Note"
@@ -879,8 +890,8 @@ msgstr "%.1f (filme 35 mm)"
 #, c-format
 msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%i × %i pixèl"
+msgstr[1] "%i × %i pixèls"
 
 #: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
 msgid "Unknown"
@@ -893,7 +904,7 @@ msgstr "%a %e %B %Y"
 #: src/eom-metadata-sidebar.c:233
 #, c-format
 msgid "%X"
-msgstr ""
+msgstr "%X"
 
 #: src/eom-print.c:371
 msgid "Image Settings"
@@ -1028,8 +1039,8 @@ msgstr " (Unicode invalid)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%i × %i pixèl %s %i %%"
+msgstr[1] "%i × %i pixèls %s %i %%"
 
 #: src/eom-window.c:832
 msgid "_Reload"
@@ -1067,15 +1078,15 @@ msgstr "Enregistrament de l'imatge \"%s\" (%u/%u)"
 #: src/eom-window.c:1543
 #, c-format
 msgid "Opening image \"%s\""
-msgstr "Dobrir l'imatge \"%s\""
+msgstr "Dobrir l'imatge « %s »"
 
 #: src/eom-window.c:1909
 msgid "Leave Fullscreen"
-msgstr ""
+msgstr "Quitar lo plen ecran"
 
 #: src/eom-window.c:2050
 msgid "Viewing a slideshow"
-msgstr ""
+msgstr "Visualizacion d’un diaporama"
 
 #: src/eom-window.c:2263
 #, c-format
@@ -1124,10 +1135,13 @@ msgid ""
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
+"Deuriatz aver recebut una còpia de la licéncia GNU GPL amb aqueste programa "
+"; s'es pas lo cas, escrivètz a Free Software Foundation, Inc., 551 Franklin "
+"St, Fifth Floor, Boston, MA 02110-1301, USA."
 
 #: src/eom-window.c:2641
 msgid "About Eye of MATE"
-msgstr ""
+msgstr "A prepaus d’Eye of MATE"
 
 #: src/eom-window.c:2643
 msgid ""
@@ -1135,6 +1149,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers"
 msgstr ""
+"Copyright © 2000-2010 Free Software Foundation, Inc.\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2020 Les desvolopaires de MATE"
 
 #: src/eom-window.c:2646
 msgid "The MATE image viewer."
@@ -1173,8 +1190,8 @@ msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
 msgstr ""
-"Sètz segur que volètz desplaçar\n"
-"\"%s\" dins la banasta ?"
+"Volètz vertadièrament desplaçar\n"
+"« %s » a l’escobilhièr ?"
 
 #: src/eom-window.c:3332
 #, c-format
@@ -1194,7 +1211,11 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
+"Volètz vertadièrament desplaçar\n"
+"lo %d imatge seleccionat a l’escobilhièr ?"
 msgstr[1] ""
+"Volètz vertadièrament desplaçar\n"
+"los %d imatges seleccionats a l’escobilhièr ?"
 
 #: src/eom-window.c:3342
 msgid ""
@@ -1206,7 +1227,7 @@ msgstr ""
 
 #: src/eom-window.c:3359 src/eom-window.c:3855 src/eom-window.c:3882
 msgid "Move to _Trash"
-msgstr "Desplaçar dins l' _escobilhièr"
+msgstr "Desplaçar dins l’_escobilhièr"
 
 #: src/eom-window.c:3361
 msgid "_Do not ask again during this session"
@@ -1360,7 +1381,7 @@ msgstr "Enregistrar los imatges seleccionats jos un autre nom"
 
 #: src/eom-window.c:3828
 msgid "Open Containing _Folder"
-msgstr ""
+msgstr "_Dobrir lo dossièr contenent"
 
 #: src/eom-window.c:3829
 msgid "Show the folder which contains this file in the file manager"
@@ -1432,7 +1453,7 @@ msgstr "Definir l'imatge seleccionat coma fons de burèu"
 
 #: src/eom-window.c:3856
 msgid "Move the selected image to the trash folder"
-msgstr "Desplaçar l'imatge seleccionat dins lo repertòri de la banasta"
+msgstr "Desplaçar l'imatge seleccionat dins lo repertòri de l’escobilhièr"
 
 #: src/eom-window.c:3858
 msgid "_Copy"
@@ -1440,7 +1461,7 @@ msgstr "_Copiar"
 
 #: src/eom-window.c:3859
 msgid "Copy the selected image to the clipboard"
-msgstr ""
+msgstr "Copiar l’imatge seleccionat dins lo quichapapièr"
 
 #: src/eom-window.c:3861 src/eom-window.c:3873 src/eom-window.c:3876
 msgid "_Zoom In"
@@ -1582,11 +1603,11 @@ msgstr "Escobilhièr"
 #: src/eom-window.c:4385
 #, c-format
 msgid "Edit the current image using %s"
-msgstr ""
+msgstr "Modificar l’imatge actual en utilizant %s"
 
 #: src/eom-window.c:4388
 msgid "Edit Image"
-msgstr ""
+msgstr "Modificar l’imatge"
 
 #: src/eom-window.c:4612
 msgid "Properties"
