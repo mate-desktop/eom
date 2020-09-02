@@ -141,7 +141,7 @@ fi
 # EXIF (optional)
 # ***************
 
-LIBEXIF_REQUIRED=0.6.14
+LIBEXIF_REQUIRED=0.6.22
 
 AC_ARG_WITH([libexif], AC_HELP_STRING([--without-libexif], [disable EXIF support]))
 have_exif=no
