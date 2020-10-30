@@ -653,6 +653,8 @@ adjustment_changed_cb (GtkAdjustment *adj, gpointer data)
 
 	scroll_to (view, gtk_adjustment_get_value (priv->hadj),
 		   gtk_adjustment_get_value (priv->vadj), FALSE);
+
+	gtk_widget_queue_resize (view);
 }
 
 
