@@ -958,7 +958,7 @@ eom_image_real_load (EomImage *img,
 		}
 
 		if (!strcmp (mime_type, "image/svg+xml")
-#if LIBRSVG_CHECK_FEATURE(SVGZ)
+#if defined (LIBRSVG_HAVE_SVGZ) && LIBRSVG_HAVE_SVGZ
                     || !strcmp (mime_type, "image/svg+xml-compressed")
 #endif
                 ) {
