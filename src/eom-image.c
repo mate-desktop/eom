@@ -81,8 +81,6 @@ enum {
 
 static guint signals[SIGNAL_LAST] = { 0 };
 
-static GList *supported_mime_types = NULL;
-
 #define EOM_IMAGE_READ_BUFFER_SIZE 65535
 
 static void
@@ -2214,11 +2212,12 @@ compare_quarks (gconstpointer a, gconstpointer b)
 GList *
 eom_image_get_supported_mime_types (void)
 {
+	static GList *supported_mime_types = NULL;
 	GSList *format_list, *it;
 	gchar **mime_types;
 	int i;
 
-	if (!supported_mime_types) {
+	if (supported_mime_types == NULL) {
 		format_list = gdk_pixbuf_get_formats ();
 
 		for (it = format_list; it != NULL; it = it->next) {
@@ -2246,18 +2245,16 @@ eom_image_get_supported_mime_types (void)
 gboolean
 eom_image_is_supported_mime_type (const char *mime_type)
 {
-	GList *supported_mime_types, *result;
+	GList *result;
 	GQuark quark;
 
 	if (mime_type == NULL) {
 		return FALSE;
 	}
 
-	supported_mime_types = eom_image_get_supported_mime_types ();
-
 	quark = g_quark_from_string (mime_type);
 
-	result = g_list_find_custom (supported_mime_types,
+	result = g_list_find_custom (eom_image_get_supported_mime_types (),
 				     GINT_TO_POINTER (quark),
 				     (GCompareFunc) compare_quarks);
 
@@ -2443,4 +2440,3 @@ eom_image_is_jpeg (EomImage *img)
 
 	return ((img->priv->file_type != NULL) && (g_ascii_strcasecmp (img->priv->file_type, EOM_FILE_FORMAT_JPEG) == 0));
 }
-

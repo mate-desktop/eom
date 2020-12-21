@@ -407,8 +407,6 @@ file_monitor_changed_cb (GFileMonitor *monitor,
 		break;
 	case G_FILE_MONITOR_EVENT_DELETED:
 		if (is_file_in_list_store_file (store, file, &iter)) {
-			EomImage *image;
-
 			gtk_tree_model_get (GTK_TREE_MODEL (store), &iter,
 					    EOM_LIST_STORE_EOM_IMAGE, &image,
 					    -1);
