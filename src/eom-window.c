@@ -3232,12 +3232,12 @@ eom_window_cmd_wallpaper (GtkAction *action, gpointer user_data)
 	if (filename == NULL || !eom_util_file_is_persistent (file))
 	{
 		GList *files = NULL;
-		GtkAction *action;
+		GtkAction *action_set_as_wp;
 
 		G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-		action = gtk_action_group_get_action (window->priv->actions_image,
-						      "ImageSetAsWallpaper");
-		gtk_action_set_sensitive (action, FALSE);
+		action_set_as_wp = gtk_action_group_get_action (window->priv->actions_image,
+		                                                "ImageSetAsWallpaper");
+		gtk_action_set_sensitive (action_set_as_wp, FALSE);
 		G_GNUC_END_IGNORE_DEPRECATIONS;
 
 		priv->copy_file_cid = gtk_statusbar_get_context_id (GTK_STATUSBAR (priv->statusbar),

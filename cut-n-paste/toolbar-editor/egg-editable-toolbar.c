@@ -468,11 +468,9 @@ configure_item_cursor (GtkToolItem *item,
                 }
               if (icon_name)
                 {
-                  GdkScreen *screen;
                   GtkIconTheme *icon_theme;
                   gint width, height;
 
-                  screen = gtk_widget_get_screen (widget);
                   icon_theme = gtk_icon_theme_get_for_screen (screen);
 
                   if (!gtk_icon_size_lookup (GTK_ICON_SIZE_LARGE_TOOLBAR,
@@ -858,7 +856,7 @@ toolbar_visibility_refresh (EggEditableToolbar *etoolbar)
 {
   EggEditableToolbarPrivate *priv = etoolbar->priv;
   gint n_toolbars, n_items, i, j, k;
-  GtkToggleAction *action;
+  GtkToggleAction *toggle_action;
   GList *list;
   GString *string;
   gboolean showing;
@@ -951,27 +949,28 @@ toolbar_visibility_refresh (EggEditableToolbar *etoolbar)
       if (i >= priv->visibility_actions->len)
         {
           G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-          action = gtk_toggle_action_new (action_name, action_label, NULL, NULL);
+          toggle_action = gtk_toggle_action_new (action_name, action_label, NULL, NULL);
           G_GNUC_END_IGNORE_DEPRECATIONS;
-          g_ptr_array_add (priv->visibility_actions, action);
-          g_signal_connect_object (action, "toggled",
+          g_ptr_array_add (priv->visibility_actions, toggle_action);
+          g_signal_connect_object (toggle_action, "toggled",
                                    G_CALLBACK (toggled_visibility_cb),
                                    etoolbar, 0);
           G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-          gtk_action_group_add_action (priv->actions, GTK_ACTION (action));
+          gtk_action_group_add_action (priv->actions, GTK_ACTION (toggle_action));
           G_GNUC_END_IGNORE_DEPRECATIONS;
         }
       else
         {
-	  action = g_ptr_array_index (priv->visibility_actions, i);
-	  g_object_set (action, "label", action_label, NULL);
+	  toggle_action = g_ptr_array_index (priv->visibility_actions, i);
+	  g_object_set (toggle_action, "label", action_label, NULL);
         }
 
       G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-      gtk_action_set_visible (GTK_ACTION (action), (egg_toolbars_model_get_flags (priv->model, i)
-                                                    & EGG_TB_MODEL_NOT_REMOVABLE) == 0);
-      gtk_action_set_sensitive (GTK_ACTION (action), showing);
-      gtk_toggle_action_set_active (action, gtk_widget_get_visible
+      gtk_action_set_visible (GTK_ACTION (toggle_action),
+                              (egg_toolbars_model_get_flags (priv->model, i)
+                               & EGG_TB_MODEL_NOT_REMOVABLE) == 0);
+      gtk_action_set_sensitive (GTK_ACTION (toggle_action), showing);
+      gtk_toggle_action_set_active (toggle_action, gtk_widget_get_visible
                                     (get_dock_nth (etoolbar, i)));
       G_GNUC_END_IGNORE_DEPRECATIONS;
 
@@ -989,10 +988,10 @@ toolbar_visibility_refresh (EggEditableToolbar *etoolbar)
 
   while (i < priv->visibility_actions->len)
     {
-      action = g_ptr_array_index (priv->visibility_actions, i);
+      toggle_action = g_ptr_array_index (priv->visibility_actions, i);
       g_ptr_array_remove_index_fast (priv->visibility_actions, i);
       G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
-      gtk_action_group_remove_action (priv->actions, GTK_ACTION (action));
+      gtk_action_group_remove_action (priv->actions, GTK_ACTION (toggle_action));
       G_GNUC_END_IGNORE_DEPRECATIONS;
       i++;
     }
