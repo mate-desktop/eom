@@ -794,7 +794,7 @@ eom_uri_converter_do (EomURIConverter *conv, EomImage *image,
 
 	repl_str = replace_remove_chars (str, priv->convert_spaces, priv->space_character);
 
-	if (repl_str->len > 0) {
+	if ((repl_str != NULL) && (repl_str->len > 0)) {
 		build_absolute_file (conv, image, repl_str, file, format);
 	}
 
