@@ -1108,12 +1108,14 @@ static void
 update_fixed (EggEditableToolbar *etoolbar)
 {
   GtkWidget *toolbar, *dock;
-  if (!etoolbar->priv->fixed_toolbar) return;
+
+  if (!etoolbar->priv->fixed_toolbar)
+    return;
 
   toolbar = etoolbar->priv->fixed_toolbar;
   dock = get_dock_nth (etoolbar, 0);
 
-  if (dock && toolbar && gtk_widget_get_parent (toolbar) == NULL)
+  if (dock && gtk_widget_get_parent (toolbar) == NULL)
     {
       gtk_box_pack_end (GTK_BOX (dock), toolbar, FALSE, TRUE, 0);
 

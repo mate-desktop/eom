@@ -1952,7 +1952,7 @@ eom_image_get_caption (EomImage *img)
 				/* Guaranteed to be correct utf8 here */
 				validated = TRUE;
 			}
-		} else if (!broken_filenames) {
+		} else {
 			/* name was valid, no need to re-validate */
 			validated = TRUE;
 		}

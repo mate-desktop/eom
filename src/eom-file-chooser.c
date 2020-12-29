@@ -379,9 +379,7 @@ update_preview_cb (GtkFileChooser *file_chooser, gpointer data)
 			set_preview_pixbuf (EOM_FILE_CHOOSER (file_chooser), pixbuf,
 					    g_file_info_get_size (file_info));
 
-			if (pixbuf != NULL) {
-				g_object_unref (pixbuf);
-			}
+			g_object_unref (pixbuf);
 		}
 	}
 
