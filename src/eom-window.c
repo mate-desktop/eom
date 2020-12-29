@@ -3989,11 +3989,11 @@ set_action_properties (GtkActionGroup *window_group,
 
 	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
         action = gtk_action_group_get_action (collection_group, "GoPrevious");
-        g_object_set (action, "short_label", _("Previous"), NULL);
+        g_object_set (action, "short_label", _("_Previous"), NULL);
         g_object_set (action, "is-important", TRUE, NULL);
 
         action = gtk_action_group_get_action (collection_group, "GoNext");
-        g_object_set (action, "short_label", _("Next"), NULL);
+        g_object_set (action, "short_label", _("_Next"), NULL);
         g_object_set (action, "is-important", TRUE, NULL);
 
         action = gtk_action_group_get_action (image_group, "EditRotate90");
