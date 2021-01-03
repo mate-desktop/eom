@@ -382,12 +382,12 @@ eom_sidebar_init (EomSidebar *eom_sidebar)
 			       GTK_RELIEF_NONE);
 
 	g_signal_connect (eom_sidebar->priv->select_button, "button_press_event",
-			  G_CALLBACK (eom_sidebar_select_button_press_cb),
-			  eom_sidebar);
+	                  G_CALLBACK (eom_sidebar_select_button_press_cb),
+	                  eom_sidebar);
 
 	g_signal_connect (eom_sidebar->priv->select_button, "key_press_event",
-			  G_CALLBACK (eom_sidebar_select_button_key_press_cb),
-			  eom_sidebar);
+	                  G_CALLBACK (eom_sidebar_select_button_key_press_cb),
+	                  eom_sidebar);
 
 	select_hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
 
@@ -416,8 +416,8 @@ eom_sidebar_init (EomSidebar *eom_sidebar)
 	gtk_button_set_relief (GTK_BUTTON (close_button), GTK_RELIEF_NONE);
 
 	g_signal_connect (close_button, "clicked",
-			  G_CALLBACK (eom_sidebar_close_clicked_cb),
-			  eom_sidebar);
+	                  G_CALLBACK (eom_sidebar_close_clicked_cb),
+	                  eom_sidebar);
 
 	image = gtk_image_new_from_icon_name ("window-close",
 					  GTK_ICON_SIZE_MENU);
@@ -430,8 +430,8 @@ eom_sidebar_init (EomSidebar *eom_sidebar)
 	eom_sidebar->priv->menu = gtk_menu_new ();
 
 	g_signal_connect (eom_sidebar->priv->menu, "deactivate",
-			  G_CALLBACK (eom_sidebar_menu_deactivate_cb),
-			  eom_sidebar->priv->select_button);
+	                  G_CALLBACK (eom_sidebar_menu_deactivate_cb),
+	                  eom_sidebar->priv->select_button);
 
 	gtk_menu_attach_to_widget (GTK_MENU (eom_sidebar->priv->menu),
 				   GTK_WIDGET (eom_sidebar),
@@ -481,8 +481,8 @@ eom_sidebar_add_page (EomSidebar   *eom_sidebar,
 	menu_item = gtk_menu_item_new_with_label (title);
 
 	g_signal_connect (menu_item, "activate",
-			  G_CALLBACK (eom_sidebar_menu_item_activate_cb),
-			  eom_sidebar);
+	                  G_CALLBACK (eom_sidebar_menu_item_activate_cb),
+	                  eom_sidebar);
 
 	gtk_widget_show (menu_item);
 
@@ -521,8 +521,7 @@ eom_sidebar_add_page (EomSidebar   *eom_sidebar,
 
 	eom_sidebar_update_arrow_visibility (eom_sidebar);
 
-	g_signal_emit (G_OBJECT (eom_sidebar),
-		       signals[SIGNAL_PAGE_ADDED], 0, main_widget);
+	g_signal_emit (eom_sidebar, signals[SIGNAL_PAGE_ADDED], 0, main_widget);
 }
 
 void
@@ -567,8 +566,7 @@ eom_sidebar_remove_page (EomSidebar *eom_sidebar, GtkWidget *main_widget)
 
 		eom_sidebar_update_arrow_visibility (eom_sidebar);
 
-		g_signal_emit (G_OBJECT (eom_sidebar),
-			       signals[SIGNAL_PAGE_REMOVED], 0, main_widget);
+		g_signal_emit (eom_sidebar, signals[SIGNAL_PAGE_REMOVED], 0, main_widget);
 	}
 }
 

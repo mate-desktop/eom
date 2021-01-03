@@ -860,7 +860,8 @@ image_file_changed_cb (EomImage *img, EomWindow *window)
 
 	eom_window_set_message_area (window, info_bar);
 	g_signal_connect (info_bar, "response",
-			  G_CALLBACK (file_changed_info_bar_response), window);
+	                  G_CALLBACK (file_changed_info_bar_response),
+	                  window);
 }
 
 static void
@@ -879,13 +880,12 @@ eom_window_display_image (EomWindow *window, EomImage *image)
 	priv = window->priv;
 
 	if (image != NULL) {
-		g_signal_connect (image,
-				  "thumbnail_changed",
-				  G_CALLBACK (image_thumb_changed_cb),
-				  window);
+		g_signal_connect (image, "thumbnail_changed",
+		                  G_CALLBACK (image_thumb_changed_cb),
+		                  window);
 		g_signal_connect (image, "file-changed",
-				  G_CALLBACK (image_file_changed_cb),
-				  window);
+		                  G_CALLBACK (image_file_changed_cb),
+		                  window);
 
 		image_thumb_changed_cb (image, window);
 	}
@@ -1030,10 +1030,9 @@ eom_window_update_openwith_menu (EomWindow *window, EomImage *image)
 		g_object_set_data_full (G_OBJECT (action), "app", app,
 				                (GDestroyNotify) g_object_unref);
 
-		g_signal_connect (action,
-				          "activate",
-				          G_CALLBACK (open_with_launch_application_cb),
-				          image);
+		g_signal_connect (action, "activate",
+		                  G_CALLBACK (open_with_launch_application_cb),
+		                  image);
 
 		G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 		gtk_action_group_add_action (priv->actions_open_with, action);
@@ -1112,12 +1111,12 @@ eom_window_clear_load_job (EomWindow *window)
 			eom_job_queue_remove_job (priv->load_job);
 
 		g_signal_handlers_disconnect_by_func (priv->load_job,
-						      eom_job_progress_cb,
-						      window);
+		                                      eom_job_progress_cb,
+		                                      window);
 
 		g_signal_handlers_disconnect_by_func (priv->load_job,
-						      eom_job_load_cb,
-						      window);
+		                                      eom_job_load_cb,
+		                                      window);
 
 		eom_image_cancel_load (EOM_JOB_LOAD (priv->load_job)->image);
 
@@ -1308,11 +1307,11 @@ eom_job_load_cb (EomJobLoad *job, gpointer data)
 
 	if (priv->image != NULL) {
 		g_signal_handlers_disconnect_by_func (priv->image,
-						      image_thumb_changed_cb,
-						      window);
+		                                      image_thumb_changed_cb,
+		                                      window);
 		g_signal_handlers_disconnect_by_func (priv->image,
-						      image_file_changed_cb,
-						      window);
+		                                      image_file_changed_cb,
+		                                      window);
 
 		g_object_unref (priv->image);
 	}
@@ -1337,10 +1336,9 @@ eom_job_load_cb (EomJobLoad *job, gpointer data)
 					eom_image_get_caption (job->image),
 					EOM_JOB (job)->error);
 
-		g_signal_connect (message_area,
-				  "response",
-				  G_CALLBACK (eom_window_error_message_area_response),
-				  window);
+		g_signal_connect (message_area, "response",
+		                  G_CALLBACK (eom_window_error_message_area_response),
+		                  window);
 
 		gtk_window_set_icon (GTK_WINDOW (window), NULL);
 		gtk_window_set_title (GTK_WINDOW (window),
@@ -1373,10 +1371,9 @@ eom_job_load_cb (EomJobLoad *job, gpointer data)
 	if (window->priv->status == EOM_WINDOW_STATUS_INIT) {
 		window->priv->status = EOM_WINDOW_STATUS_NORMAL;
 
-		g_signal_handlers_disconnect_by_func
-			(job->image,
-			 G_CALLBACK (eom_window_obtain_desired_size),
-			 window);
+		g_signal_handlers_disconnect_by_func (job->image,
+		                                      eom_window_obtain_desired_size,
+		                                      window);
 	}
 
 	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
@@ -1402,8 +1399,8 @@ eom_window_clear_transform_job (EomWindow *window)
 			eom_job_queue_remove_job (priv->transform_job);
 
 		g_signal_handlers_disconnect_by_func (priv->transform_job,
-						      eom_job_transform_cb,
-						      window);
+		                                      eom_job_transform_cb,
+		                                      window);
 		g_object_unref (priv->transform_job);
 		priv->transform_job = NULL;
 	}
@@ -1455,15 +1452,13 @@ apply_transformation (EomWindow *window, EomTransform *trans)
 
 	priv->transform_job = eom_job_transform_new (images, trans);
 
-	g_signal_connect (priv->transform_job,
-			  "finished",
-			  G_CALLBACK (eom_job_transform_cb),
-			  window);
+	g_signal_connect (priv->transform_job, "finished",
+	                  G_CALLBACK (eom_job_transform_cb),
+	                  window);
 
-	g_signal_connect (priv->transform_job,
-			  "progress",
-			  G_CALLBACK (eom_job_progress_cb),
-			  window);
+	g_signal_connect (priv->transform_job, "progress",
+	                  G_CALLBACK (eom_job_progress_cb),
+	                  window);
 
 	eom_job_queue_add_job (priv->transform_job);
 }
@@ -1518,23 +1513,20 @@ handle_image_selection_changed_cb (EomThumbView *thumbview, EomWindow *window)
 	}
 
 	if (priv->status == EOM_WINDOW_STATUS_INIT) {
-		g_signal_connect (image,
-				  "size-prepared",
-				  G_CALLBACK (eom_window_obtain_desired_size),
-				  window);
+		g_signal_connect (image, "size-prepared",
+		                  G_CALLBACK (eom_window_obtain_desired_size),
+		                  window);
 	}
 
 	priv->load_job = eom_job_load_new (image, EOM_IMAGE_DATA_ALL);
 
-	g_signal_connect (priv->load_job,
-			  "finished",
-			  G_CALLBACK (eom_job_load_cb),
-			  window);
+	g_signal_connect (priv->load_job, "finished",
+	                  G_CALLBACK (eom_job_load_cb),
+	                  window);
 
-	g_signal_connect (priv->load_job,
-			  "progress",
-			  G_CALLBACK (eom_job_progress_cb),
-			  window);
+	g_signal_connect (priv->load_job, "progress",
+	                  G_CALLBACK (eom_job_progress_cb),
+	                  window);
 
 	eom_job_queue_add_job (priv->load_job);
 
@@ -1633,15 +1625,17 @@ eom_window_update_fullscreen_action (EomWindow *window)
 	action = gtk_action_group_get_action (window->priv->actions_image,
 					      "ViewFullscreen");
 
-	g_signal_handlers_block_by_func
-		(action, G_CALLBACK (eom_window_cmd_fullscreen), window);
+	g_signal_handlers_block_by_func (action,
+	                                 eom_window_cmd_fullscreen,
+	                                 window);
 
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
 				      window->priv->mode == EOM_WINDOW_MODE_FULLSCREEN);
 	G_GNUC_END_IGNORE_DEPRECATIONS;
 
-	g_signal_handlers_unblock_by_func
-		(action, G_CALLBACK (eom_window_cmd_fullscreen), window);
+	g_signal_handlers_unblock_by_func (action,
+	                                   eom_window_cmd_fullscreen,
+	                                   window);
 }
 
 static void
@@ -1653,15 +1647,17 @@ eom_window_update_slideshow_action (EomWindow *window)
 	action = gtk_action_group_get_action (window->priv->actions_collection,
 					      "ViewSlideshow");
 
-	g_signal_handlers_block_by_func
-		(action, G_CALLBACK (eom_window_cmd_slideshow), window);
+	g_signal_handlers_block_by_func (action,
+	                                 eom_window_cmd_slideshow,
+	                                 window);
 
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
 				      window->priv->mode == EOM_WINDOW_MODE_SLIDESHOW);
 	G_GNUC_END_IGNORE_DEPRECATIONS;
 
-	g_signal_handlers_unblock_by_func
-		(action, G_CALLBACK (eom_window_cmd_slideshow), window);
+	g_signal_handlers_unblock_by_func (action,
+	                                   eom_window_cmd_slideshow,
+	                                   window);
 }
 
 static void
@@ -1673,15 +1669,17 @@ eom_window_update_pause_slideshow_action (EomWindow *window)
 	action = gtk_action_group_get_action (window->priv->actions_image,
 					      "PauseSlideshow");
 
-	g_signal_handlers_block_by_func
-		(action, G_CALLBACK (eom_window_cmd_pause_slideshow), window);
+	g_signal_handlers_block_by_func (action,
+	                                 eom_window_cmd_pause_slideshow,
+	                                 window);
 
 	gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
 				      window->priv->mode != EOM_WINDOW_MODE_SLIDESHOW);
 	G_GNUC_END_IGNORE_DEPRECATIONS;
 
-	g_signal_handlers_unblock_by_func
-		(action, G_CALLBACK (eom_window_cmd_pause_slideshow), window);
+	g_signal_handlers_unblock_by_func (action,
+	                                   eom_window_cmd_pause_slideshow,
+	                                   window);
 }
 
 static void
@@ -1908,8 +1906,8 @@ eom_window_get_exit_fullscreen_button (EomWindow *window)
 	gtk_button_set_image (GTK_BUTTON (button), gtk_image_new_from_icon_name ("view-restore", GTK_ICON_SIZE_BUTTON));
 
 	g_signal_connect (button, "clicked",
-			  G_CALLBACK (exit_fullscreen_button_clicked_cb),
-			  window);
+	                  G_CALLBACK (exit_fullscreen_button_clicked_cb),
+	                  window);
 
 	return button;
 }
@@ -1944,13 +1942,12 @@ eom_window_create_fullscreen_popup (EomWindow *window)
 	screen = gtk_widget_get_screen (GTK_WIDGET (window));
 
 	g_signal_connect_object (screen, "size-changed",
-			         G_CALLBACK (screen_size_changed_cb),
-				 window, 0);
+	                         G_CALLBACK (screen_size_changed_cb),
+	                         window, 0);
 
-	g_signal_connect (popup,
-			  "enter-notify-event",
-			  G_CALLBACK (fullscreen_leave_notify_cb),
-			  window);
+	g_signal_connect (popup, "enter-notify-event",
+	                  G_CALLBACK (fullscreen_leave_notify_cb),
+	                  window);
 
 	gtk_window_set_screen (GTK_WINDOW (popup), screen);
 
@@ -2096,25 +2093,21 @@ eom_window_run_fullscreen (EomWindow *window, gboolean slideshow)
 	g_assert (GTK_IS_WIDGET (menubar));
 	gtk_widget_hide (menubar);
 
-	g_signal_connect (priv->view,
-			  "motion-notify-event",
-			  G_CALLBACK (fullscreen_motion_notify_cb),
-			  window);
+	g_signal_connect (priv->view, "motion-notify-event",
+	                  G_CALLBACK (fullscreen_motion_notify_cb),
+	                  window);
 
-	g_signal_connect (priv->view,
-			  "leave-notify-event",
-			  G_CALLBACK (fullscreen_leave_notify_cb),
-			  window);
+	g_signal_connect (priv->view, "leave-notify-event",
+	                  G_CALLBACK (fullscreen_leave_notify_cb),
+	                  window);
 
-	g_signal_connect (priv->thumbview,
-			  "motion-notify-event",
-			  G_CALLBACK (fullscreen_motion_notify_cb),
-			  window);
+	g_signal_connect (priv->thumbview, "motion-notify-event",
+	                  G_CALLBACK (fullscreen_motion_notify_cb),
+	                  window);
 
-	g_signal_connect (priv->thumbview,
-			  "leave-notify-event",
-			  G_CALLBACK (fullscreen_leave_notify_cb),
-			  window);
+	g_signal_connect (priv->thumbview, "leave-notify-event",
+	                  G_CALLBACK (fullscreen_leave_notify_cb),
+	                  window);
 
 	fullscreen_set_timeout (window);
 
@@ -2178,20 +2171,20 @@ eom_window_stop_fullscreen (EomWindow *window, gboolean slideshow)
 	}
 
 	g_signal_handlers_disconnect_by_func (priv->view,
-					      (gpointer) fullscreen_motion_notify_cb,
-					      window);
+	                                      fullscreen_motion_notify_cb,
+	                                      window);
 
 	g_signal_handlers_disconnect_by_func (priv->view,
-					      (gpointer) fullscreen_leave_notify_cb,
+	                                      fullscreen_leave_notify_cb,
 					      window);
 
 	g_signal_handlers_disconnect_by_func (priv->thumbview,
-					      (gpointer) fullscreen_motion_notify_cb,
-					      window);
+	                                      fullscreen_motion_notify_cb,
+	                                      window);
 
 	g_signal_handlers_disconnect_by_func (priv->thumbview,
-					      (gpointer) fullscreen_leave_notify_cb,
-					      window);
+	                                      fullscreen_leave_notify_cb,
+	                                      window);
 
 	update_ui_visibility (window);
 
@@ -2261,7 +2254,8 @@ eom_window_print (EomWindow *window)
 						 _("Error printing file:\n%s"),
 						 error->message);
 		g_signal_connect (dialog, "response",
-				  G_CALLBACK (gtk_widget_destroy), NULL);
+		                  G_CALLBACK (gtk_widget_destroy),
+		                  NULL);
 		gtk_widget_show (dialog);
 		g_error_free (error);
 	} else if (res == GTK_PRINT_OPERATION_RESULT_APPLY) {
@@ -2326,8 +2320,8 @@ eom_window_cmd_file_open (GtkAction *action, gpointer user_data)
 	}
 
 	g_signal_connect (dlg, "response",
-			  G_CALLBACK (file_open_dialog_response_cb),
-			  window);
+	                  G_CALLBACK (file_open_dialog_response_cb),
+	                  window);
 
 	gtk_widget_show_all (dlg);
 }
@@ -2338,8 +2332,8 @@ eom_job_close_save_cb (EomJobSave *job, gpointer user_data)
 	EomWindow *window = EOM_WINDOW (user_data);
 
 	g_signal_handlers_disconnect_by_func (job,
-					      eom_job_close_save_cb,
-					      window);
+	                                      eom_job_close_save_cb,
+	                                      window);
 
 	gtk_widget_destroy (GTK_WIDGET (window));
 }
@@ -2360,10 +2354,9 @@ close_confirmation_dialog_response_handler (EomCloseConfirmationDialog *dlg,
 			/* save selected images */
 			selected_images = eom_close_confirmation_dialog_get_selected_images (dlg);
 			if (eom_window_save_images (window, selected_images)) {
-				g_signal_connect (priv->save_job,
-							  "finished",
-							  G_CALLBACK (eom_job_close_save_cb),
-							  window);
+				g_signal_connect (priv->save_job, "finished",
+				                  G_CALLBACK (eom_job_close_save_cb),
+				                  window);
 
 				eom_job_queue_add_job (priv->save_job);
 			}
@@ -2422,10 +2415,9 @@ eom_window_unsaved_images_confirm (EomWindow *window)
 							    list);
 
 		g_list_free (list);
-		g_signal_connect (dialog,
-				  "response",
-				  G_CALLBACK (close_confirmation_dialog_response_handler),
-				  window);
+		g_signal_connect (dialog, "response",
+		                  G_CALLBACK (close_confirmation_dialog_response_handler),
+		                  window);
 		gtk_window_set_destroy_with_parent (GTK_WINDOW (dialog), TRUE);
 
 		gtk_widget_show (dialog);
@@ -2558,10 +2550,9 @@ eom_window_cmd_edit_toolbar (GtkAction *action, gpointer *user_data)
 
 	g_object_set_data (G_OBJECT (dialog), "EggToolbarEditor", editor);
 
-	g_signal_connect (dialog,
-                          "response",
-			  G_CALLBACK (eom_window_cmd_edit_toolbar_cb),
-			  window);
+	g_signal_connect (dialog, "response",
+	                  G_CALLBACK (eom_window_cmd_edit_toolbar_cb),
+	                  window);
 
 	gtk_widget_show_all (dialog);
 }
@@ -2828,7 +2819,8 @@ eom_window_set_wallpaper (EomWindow *window, const gchar *filename, const gchar 
 	gtk_info_bar_set_default_response (GTK_INFO_BAR (info_bar),
 					   GTK_RESPONSE_YES);
 	g_signal_connect (info_bar, "response",
-			  G_CALLBACK (wallpaper_info_bar_response), window);
+	                  G_CALLBACK (wallpaper_info_bar_response),
+	                  window);
 }
 
 static void
@@ -2838,12 +2830,12 @@ eom_job_save_cb (EomJobSave *job, gpointer user_data)
 	GtkAction *action_save;
 
 	g_signal_handlers_disconnect_by_func (job,
-					      eom_job_save_cb,
-					      window);
+	                                      eom_job_save_cb,
+	                                      window);
 
 	g_signal_handlers_disconnect_by_func (job,
-					      eom_job_save_progress_cb,
-					      window);
+	                                      eom_job_save_progress_cb,
+	                                      window);
 
 	g_object_unref (window->priv->save_job);
 	window->priv->save_job = NULL;
@@ -2916,15 +2908,13 @@ eom_window_save_images (EomWindow *window, GList *images)
 
 	priv->save_job = eom_job_save_new (images);
 
-	g_signal_connect (priv->save_job,
-			  "finished",
-			  G_CALLBACK (eom_job_save_cb),
-			  window);
+	g_signal_connect (priv->save_job, "finished",
+	                  G_CALLBACK (eom_job_save_cb),
+	                  window);
 
-	g_signal_connect (priv->save_job,
-			  "progress",
-			  G_CALLBACK (eom_job_save_progress_cb),
-			  window);
+	g_signal_connect (priv->save_job, "progress",
+	                  G_CALLBACK (eom_job_save_progress_cb),
+	                  window);
 
 	return TRUE;
 }
@@ -3060,15 +3050,13 @@ eom_window_cmd_save_as (GtkAction *action, gpointer user_data)
 		return;
 	}
 
-	g_signal_connect (priv->save_job,
-			  "finished",
-			  G_CALLBACK (eom_job_save_cb),
-			  window);
+	g_signal_connect (priv->save_job, "finished",
+	                  G_CALLBACK (eom_job_save_cb),
+	                  window);
 
-	g_signal_connect (priv->save_job,
-			  "progress",
-			  G_CALLBACK (eom_job_save_progress_cb),
-			  window);
+	g_signal_connect (priv->save_job, "progress",
+	                  G_CALLBACK (eom_job_save_progress_cb),
+	                  window);
 
 	eom_job_queue_add_job (priv->save_job);
 }
@@ -3248,14 +3236,12 @@ eom_window_cmd_wallpaper (GtkAction *action, gpointer user_data)
 
 		files = g_list_append (files, eom_image_get_file (image));
 		priv->copy_job = eom_job_copy_new (files, g_get_user_data_dir ());
-		g_signal_connect (priv->copy_job,
-				  "finished",
-				  G_CALLBACK (eom_job_copy_cb),
-				  window);
-		g_signal_connect (priv->copy_job,
-				  "progress",
-				  G_CALLBACK (eom_job_progress_cb),
-				  window);
+		g_signal_connect (priv->copy_job, "finished",
+		                  G_CALLBACK (eom_job_copy_cb),
+		                  window);
+		g_signal_connect (priv->copy_job, "progress",
+		                  G_CALLBACK (eom_job_progress_cb),
+		                  window);
 		eom_job_queue_add_job (priv->copy_job);
 
 		g_object_unref (file);
@@ -3960,9 +3946,11 @@ connect_proxy_cb (GtkUIManager *manager,
 	if (GTK_IS_MENU_ITEM (proxy)) {
 		disconnect_proxy_cb (manager, action, proxy, window);
 		g_signal_connect (proxy, "select",
-				  G_CALLBACK (menu_item_select_cb), window);
+		                  G_CALLBACK (menu_item_select_cb),
+		                  window);
 		g_signal_connect (proxy, "deselect",
-				  G_CALLBACK (menu_item_deselect_cb), window);
+		                  G_CALLBACK (menu_item_deselect_cb),
+		                  window);
 	}
 }
 
@@ -3973,10 +3961,12 @@ disconnect_proxy_cb (GtkUIManager *manager,
                      EomWindow *window)
 {
 	if (GTK_IS_MENU_ITEM (proxy)) {
-		g_signal_handlers_disconnect_by_func
-			(proxy, G_CALLBACK (menu_item_select_cb), window);
-		g_signal_handlers_disconnect_by_func
-			(proxy, G_CALLBACK (menu_item_deselect_cb), window);
+		g_signal_handlers_disconnect_by_func (proxy,
+		                                      menu_item_select_cb,
+		                                      window);
+		g_signal_handlers_disconnect_by_func (proxy,
+		                                      menu_item_deselect_cb,
+		                                      window);
 	}
 }
 
@@ -4079,9 +4069,9 @@ eom_window_update_recent_files_menu (EomWindow *window)
 	actions = gtk_action_group_list_actions (priv->actions_recent);
 
 	for (li = actions; li != NULL; li = li->next) {
-		g_signal_handlers_disconnect_by_func (GTK_ACTION (li->data),
-						      G_CALLBACK(eom_window_open_recent_cb),
-						      window);
+		g_signal_handlers_disconnect_by_func (li->data,
+		                                      eom_window_open_recent_cb,
+		                                      window);
 
 		gtk_action_group_remove_action (priv->actions_recent,
 						GTK_ACTION (li->data));
@@ -4140,8 +4130,8 @@ eom_window_update_recent_files_menu (EomWindow *window)
 		g_object_set (G_OBJECT (action), "icon-name", "image-x-generic", NULL);
 
 		g_signal_connect (action, "activate",
-				  G_CALLBACK (eom_window_open_recent_cb),
-				  window);
+		                  G_CALLBACK (eom_window_open_recent_cb),
+		                  window);
 
 		G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 		gtk_action_group_add_action (priv->actions_recent, action);
@@ -4386,7 +4376,8 @@ eom_window_add_open_editor_action (EomWindow *window)
 	gtk_action_set_is_important (action, TRUE);
 
 	g_signal_connect (action, "activate",
-	                  G_CALLBACK (eom_window_open_editor), window);
+	                  G_CALLBACK (eom_window_open_editor),
+	                  window);
 
 	gtk_action_group_add_action (window->priv->actions_image, action);
 	G_GNUC_END_IGNORE_DEPRECATIONS;
@@ -4487,9 +4478,12 @@ eom_window_construct_ui (EomWindow *window)
 	}
 
 	g_signal_connect (priv->ui_mgr, "connect_proxy",
-			  G_CALLBACK (connect_proxy_cb), window);
+	                  G_CALLBACK (connect_proxy_cb),
+	                  window);
+
 	g_signal_connect (priv->ui_mgr, "disconnect_proxy",
-			  G_CALLBACK (disconnect_proxy_cb), window);
+	                  G_CALLBACK (disconnect_proxy_cb),
+	                  window);
 
 	menubar = gtk_ui_manager_get_widget (priv->ui_mgr, "/MainMenu");
 	g_assert (GTK_IS_WIDGET (menubar));
@@ -4547,8 +4541,8 @@ eom_window_construct_ui (EomWindow *window)
 	G_GNUC_END_IGNORE_DEPRECATIONS;
 
 	g_signal_connect (gtk_recent_manager_get_default (), "changed",
-			  G_CALLBACK (eom_window_recent_manager_changed_cb),
-			  window);
+	                  G_CALLBACK (eom_window_recent_manager_changed_cb),
+	                  window);
 
 	eom_window_update_recent_files_menu (window);
 
@@ -4582,25 +4576,21 @@ eom_window_construct_ui (EomWindow *window)
 
 	gtk_widget_set_size_request (priv->sidebar, 210, -1);
 
-	g_signal_connect_after (priv->sidebar,
-				"show",
-				G_CALLBACK (eom_window_sidebar_visibility_changed),
-				window);
+	g_signal_connect_after (priv->sidebar, "show",
+	                        G_CALLBACK (eom_window_sidebar_visibility_changed),
+	                        window);
 
-	g_signal_connect_after (priv->sidebar,
-				"hide",
-				G_CALLBACK (eom_window_sidebar_visibility_changed),
-				window);
+	g_signal_connect_after (priv->sidebar, "hide",
+	                        G_CALLBACK (eom_window_sidebar_visibility_changed),
+	                        window);
 
-	g_signal_connect_after (priv->sidebar,
-				"page-added",
-				G_CALLBACK (eom_window_sidebar_page_added),
-				window);
+	g_signal_connect_after (priv->sidebar, "page-added",
+	                        G_CALLBACK (eom_window_sidebar_page_added),
+	                        window);
 
-	g_signal_connect_after (priv->sidebar,
-				"page-removed",
-				G_CALLBACK (eom_window_sidebar_page_removed),
-				window);
+	g_signal_connect_after (priv->sidebar, "page-removed",
+	                        G_CALLBACK (eom_window_sidebar_page_removed),
+	                        window);
 
  	priv->view = eom_scroll_view_new ();
 
@@ -4609,10 +4599,9 @@ eom_window_construct_ui (EomWindow *window)
 			      GTK_WIDGET (eom_metadata_sidebar_new (window)));
 
 	gtk_widget_set_size_request (GTK_WIDGET (priv->view), 100, 100);
-	g_signal_connect (G_OBJECT (priv->view),
-			  "zoom_changed",
-			  G_CALLBACK (view_zoom_changed_cb),
-			  window);
+	g_signal_connect (priv->view, "zoom_changed",
+	                  G_CALLBACK (view_zoom_changed_cb),
+	                  window);
 
 	g_settings_bind (priv->view_settings, EOM_CONF_VIEW_SCROLL_WHEEL_ZOOM,
 			 priv->view, "scrollwheel-zoom", G_SETTINGS_BIND_GET);
@@ -4643,8 +4632,9 @@ eom_window_construct_ui (EomWindow *window)
 	gtk_icon_view_set_margin (GTK_ICON_VIEW (priv->thumbview), 4);
 	gtk_icon_view_set_row_spacing (GTK_ICON_VIEW (priv->thumbview), 0);
 
-	g_signal_connect (G_OBJECT (priv->thumbview), "selection_changed",
-			  G_CALLBACK (handle_image_selection_changed_cb), window);
+	g_signal_connect (priv->thumbview, "selection_changed",
+	                  G_CALLBACK (handle_image_selection_changed_cb),
+	                  window);
 
 	priv->nav = eom_thumb_nav_new (priv->thumbview,
 				       EOM_THUMB_NAV_MODE_ONE_ROW,
@@ -4710,10 +4700,9 @@ eom_window_init (EomWindow *window)
 	priv->fullscreen_settings = g_settings_new (EOM_CONF_FULLSCREEN);
 	priv->lockdown_settings = g_settings_new (EOM_CONF_LOCKDOWN_SCHEMA);
 
-	g_signal_connect (priv->lockdown_settings,
-					  "changed::" EOM_CONF_LOCKDOWN_CAN_SAVE,
-					  G_CALLBACK (eom_window_can_save_changed_cb),
-					  window);
+	g_signal_connect (priv->lockdown_settings, "changed::" EOM_CONF_LOCKDOWN_CAN_SAVE,
+	                  G_CALLBACK (eom_window_can_save_changed_cb),
+	                  window);
 
 	window->priv->store = NULL;
 	window->priv->image = NULL;
@@ -4789,29 +4778,29 @@ eom_window_dispose (GObject *object)
 		/* Disconnect so we don't get any unwanted callbacks
 		 * when the thumb view is disposed. */
 		g_signal_handlers_disconnect_by_func (priv->thumbview,
-		                 G_CALLBACK (handle_image_selection_changed_cb),
-		                 window);
+		                                      handle_image_selection_changed_cb,
+		                                      window);
 		g_clear_object (&priv->thumbview);
 	}
 
 	if (priv->store != NULL) {
 		g_signal_handlers_disconnect_by_func (priv->store,
-					      eom_window_list_store_image_added,
-					      window);
+		                                      eom_window_list_store_image_added,
+		                                      window);
 		g_signal_handlers_disconnect_by_func (priv->store,
-					    eom_window_list_store_image_removed,
-					    window);
+		                                      eom_window_list_store_image_removed,
+		                                      window);
 		g_object_unref (priv->store);
 		priv->store = NULL;
 	}
 
 	if (priv->image != NULL) {
 	  	g_signal_handlers_disconnect_by_func (priv->image,
-						      image_thumb_changed_cb,
-						      window);
+		                                      image_thumb_changed_cb,
+		                                      window);
 		g_signal_handlers_disconnect_by_func (priv->image,
-						      image_file_changed_cb,
-						      window);
+		                                      image_file_changed_cb,
+		                                      window);
 		g_object_unref (priv->image);
 		priv->image = NULL;
 	}
@@ -4852,8 +4841,8 @@ eom_window_dispose (GObject *object)
 	eom_window_uninhibit_screensaver (window);
 
 	g_signal_handlers_disconnect_by_func (gtk_recent_manager_get_default (),
-					      G_CALLBACK (eom_window_recent_manager_changed_cb),
-					      window);
+	                                      eom_window_recent_manager_changed_cb,
+	                                      window);
 
 	priv->recent_menu_id = 0;
 
@@ -5241,9 +5230,11 @@ eom_window_constructor (GType type,
 	peas_extension_set_call (priv->extensions, "activate");
 
 	g_signal_connect (priv->extensions, "extension-added",
-			  G_CALLBACK (on_extension_added), object);
+	                  G_CALLBACK (on_extension_added),
+	                  object);
 	g_signal_connect (priv->extensions, "extension-removed",
-			  G_CALLBACK (on_extension_removed), object);
+	                  G_CALLBACK (on_extension_removed),
+	                  object);
 
 	return object;
 }
@@ -5413,15 +5404,13 @@ eom_job_model_cb (EomJobModel *job, gpointer data)
 
 	eom_thumb_view_set_model (EOM_THUMB_VIEW (priv->thumbview), priv->store);
 
-	g_signal_connect (G_OBJECT (priv->store),
-			  "row-inserted",
-			  G_CALLBACK (eom_window_list_store_image_added),
-			  window);
+	g_signal_connect (priv->store, "row-inserted",
+	                  G_CALLBACK (eom_window_list_store_image_added),
+	                  window);
 
-	g_signal_connect (G_OBJECT (priv->store),
-			  "row-deleted",
-			  G_CALLBACK (eom_window_list_store_image_removed),
-			  window);
+	g_signal_connect (priv->store, "row-deleted",
+	                  G_CALLBACK (eom_window_list_store_image_removed),
+	                  window);
 
 	if (n_images == 0) {
 		gint n_files;
@@ -5473,10 +5462,9 @@ eom_window_open_file_list (EomWindow *window, GSList *file_list)
 
 	job = eom_job_model_new (file_list);
 
-	g_signal_connect (job,
-			  "finished",
-			  G_CALLBACK (eom_job_model_cb),
-			  window);
+	g_signal_connect (job, "finished",
+	                  G_CALLBACK (eom_job_model_cb),
+	                  window);
 
 	eom_job_queue_add_job (job);
 	g_object_unref (job);

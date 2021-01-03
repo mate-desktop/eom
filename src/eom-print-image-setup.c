@@ -791,24 +791,41 @@ connect_signals (EomPrintImageSetup *setup)
 
 	priv = setup->priv;
 
-	g_signal_connect (G_OBJECT (priv->left), "value-changed",
-			  G_CALLBACK (on_left_value_changed), setup);
-	g_signal_connect (G_OBJECT (priv->right), "value-changed",
-			  G_CALLBACK (on_right_value_changed), setup);
-	g_signal_connect (G_OBJECT (priv->top), "value-changed",
-			  G_CALLBACK (on_top_value_changed), setup);
-	g_signal_connect (G_OBJECT (priv->bottom), "value-changed",
-			  G_CALLBACK (on_bottom_value_changed), setup);
-	g_signal_connect (G_OBJECT (priv->width), "value-changed",
-			  G_CALLBACK (on_width_value_changed), setup);
-	g_signal_connect (G_OBJECT (priv->height), "value-changed",
-			  G_CALLBACK (on_height_value_changed), setup);
-	g_signal_connect (G_OBJECT (priv->scaling), "value-changed",
-			  G_CALLBACK (on_scale_changed), setup);
-	g_signal_connect (G_OBJECT (priv->scaling), "format-value",
-			  G_CALLBACK (on_scale_format_value), NULL);
-	g_signal_connect (G_OBJECT (priv->preview), "image-moved",
-			  G_CALLBACK (on_preview_image_moved), setup);
+	g_signal_connect (priv->left, "value-changed",
+	                  G_CALLBACK (on_left_value_changed),
+	                  setup);
+
+	g_signal_connect (priv->right, "value-changed",
+			  G_CALLBACK (on_right_value_changed),
+	                  setup);
+
+	g_signal_connect (priv->top, "value-changed",
+	                  G_CALLBACK (on_top_value_changed),
+	                  setup);
+
+	g_signal_connect (priv->bottom, "value-changed",
+	                  G_CALLBACK (on_bottom_value_changed),
+	                  setup);
+
+	g_signal_connect (priv->width, "value-changed",
+	                  G_CALLBACK (on_width_value_changed),
+	                  setup);
+
+	g_signal_connect (priv->height, "value-changed",
+	                  G_CALLBACK (on_height_value_changed),
+	                  setup);
+
+	g_signal_connect (priv->scaling, "value-changed",
+	                  G_CALLBACK (on_scale_changed),
+	                  setup);
+
+	g_signal_connect (priv->scaling, "format-value",
+	                  G_CALLBACK (on_scale_format_value),
+	                  NULL);
+
+	g_signal_connect (priv->preview, "image-moved",
+	                  G_CALLBACK (on_preview_image_moved),
+	                  setup);
 }
 
 static void
@@ -887,8 +904,9 @@ eom_print_image_setup_init (EomPrintImageSetup *setup)
 							 1, 1);
 	gtk_label_set_mnemonic_widget (GTK_LABEL (label), combobox);
 	priv->center = combobox;
-	g_signal_connect (G_OBJECT (combobox), "changed",
-			  G_CALLBACK (on_center_changed), setup);
+	g_signal_connect (combobox, "changed",
+	                  G_CALLBACK (on_center_changed),
+	                  setup);
 
 	grid = gtk_grid_new ();
 	gtk_grid_set_row_spacing (GTK_GRID (grid), 6);
@@ -939,8 +957,9 @@ eom_print_image_setup_init (EomPrintImageSetup *setup)
 							 1, 1);
 	gtk_label_set_mnemonic_widget (GTK_LABEL (label), combobox);
 	priv->unit = combobox;
-	g_signal_connect (G_OBJECT (combobox), "changed",
-			  G_CALLBACK (on_unit_changed), setup);
+	g_signal_connect (combobox, "changed",
+	                  G_CALLBACK (on_unit_changed),
+	                  setup);
 
 	priv->preview = eom_print_preview_new ();
 

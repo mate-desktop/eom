@@ -189,12 +189,12 @@ free_image_resources (EomScrollView *view)
 	priv = view->priv;
 
 	if (priv->image_changed_id > 0) {
-		g_signal_handler_disconnect (G_OBJECT (priv->image), priv->image_changed_id);
+		g_signal_handler_disconnect (priv->image, priv->image_changed_id);
 		priv->image_changed_id = 0;
 	}
 
 	if (priv->frame_changed_id > 0) {
-		g_signal_handler_disconnect (G_OBJECT (priv->image), priv->frame_changed_id);
+		g_signal_handler_disconnect (priv->image, priv->frame_changed_id);
 		priv->frame_changed_id = 0;
 	}
 
@@ -762,7 +762,7 @@ set_zoom (EomScrollView *view, double zoom,
 	/* repaint the whole image */
 	gtk_widget_queue_draw (priv->display);
 
-	g_signal_emit (view, view_signals [SIGNAL_ZOOM_CHANGED], 0, priv->zoom);
+	g_signal_emit (view, view_signals[SIGNAL_ZOOM_CHANGED], 0, priv->zoom);
 }
 
 /* Zooms the image to fit the available allocation */
@@ -799,7 +799,7 @@ set_zoom_fit (EomScrollView *view)
 	priv->xofs = 0;
 	priv->yofs = 0;
 
-	g_signal_emit (view, view_signals [SIGNAL_ZOOM_CHANGED], 0, priv->zoom);
+	g_signal_emit (view, view_signals[SIGNAL_ZOOM_CHANGED], 0, priv->zoom);
 }
 
 /*===================================
@@ -1161,19 +1161,19 @@ display_size_change (GtkWidget *widget, GdkEventConfigure *event, gpointer data)
 
 static gboolean
 eom_scroll_view_focus_in_event (GtkWidget     *widget,
-			    GdkEventFocus *event,
-			    gpointer data)
+                                GdkEventFocus *event,
+                                gpointer       data)
 {
-	g_signal_stop_emission_by_name (G_OBJECT (widget), "focus_in_event");
+	g_signal_stop_emission_by_name (widget, "focus_in_event");
 	return FALSE;
 }
 
 static gboolean
 eom_scroll_view_focus_out_event (GtkWidget     *widget,
-			     GdkEventFocus *event,
-			     gpointer data)
+                                 GdkEventFocus *event,
+                                 gpointer       data)
 {
-	g_signal_stop_emission_by_name (G_OBJECT (widget), "focus_out_event");
+	g_signal_stop_emission_by_name (widget, "focus_out_event");
 	return FALSE;
 }
 
@@ -1712,11 +1712,13 @@ eom_scroll_view_set_image (EomScrollView *view, EomImage *image)
 		}
 
 		priv->image_changed_id = g_signal_connect (image, "changed",
-							   (GCallback) image_changed_cb, view);
+		                                           G_CALLBACK (image_changed_cb),
+		                                           view);
 		if (eom_image_is_animation (image) == TRUE ) {
 			eom_image_start_animation (image);
 			priv->frame_changed_id = g_signal_connect (image, "next-frame",
-								    (GCallback) display_next_frame_cb, view);
+			                                           G_CALLBACK (display_next_frame_cb),
+			                                           view);
 		}
 	}
 
@@ -1827,14 +1829,14 @@ eom_scroll_view_init (EomScrollView *view)
 
 	priv->hadj = GTK_ADJUSTMENT (gtk_adjustment_new (0, 100, 0, 10, 10, 100));
 	g_signal_connect (priv->hadj, "value_changed",
-			  G_CALLBACK (adjustment_changed_cb),
-			  view);
+	                  G_CALLBACK (adjustment_changed_cb),
+	                  view);
 
 	priv->hbar = gtk_scrollbar_new (GTK_ORIENTATION_HORIZONTAL, priv->hadj);
 	priv->vadj = GTK_ADJUSTMENT (gtk_adjustment_new (0, 100, 0, 10, 10, 100));
 	g_signal_connect (priv->vadj, "value_changed",
-			  G_CALLBACK (adjustment_changed_cb),
-			  view);
+	                  G_CALLBACK (adjustment_changed_cb),
+	                  view);
 
 	priv->vbar = gtk_scrollbar_new (GTK_ORIENTATION_VERTICAL, priv->vadj);
 	priv->display = g_object_new (GTK_TYPE_DRAWING_AREA,
@@ -1850,37 +1852,59 @@ eom_scroll_view_init (EomScrollView *view)
 			       | GDK_POINTER_MOTION_HINT_MASK
 			       | GDK_SCROLL_MASK
 			       | GDK_KEY_PRESS_MASK);
-	g_signal_connect (G_OBJECT (priv->display), "configure_event",
-			  G_CALLBACK (display_size_change), view);
-	g_signal_connect (G_OBJECT (priv->display), "draw", G_CALLBACK (display_draw), view);
-	g_signal_connect (G_OBJECT (priv->display), "map_event",
-			  G_CALLBACK (display_map_event), view);
-	g_signal_connect (G_OBJECT (priv->display), "button_press_event",
-			  G_CALLBACK (eom_scroll_view_button_press_event),
-			  view);
-	g_signal_connect (G_OBJECT (priv->display), "motion_notify_event",
-			  G_CALLBACK (eom_scroll_view_motion_event), view);
-	g_signal_connect (G_OBJECT (priv->display), "button_release_event",
-			  G_CALLBACK (eom_scroll_view_button_release_event),
-			  view);
-	g_signal_connect (G_OBJECT (priv->display), "scroll_event",
-			  G_CALLBACK (eom_scroll_view_scroll_event), view);
-	g_signal_connect (G_OBJECT (priv->display), "focus_in_event",
-			  G_CALLBACK (eom_scroll_view_focus_in_event), NULL);
-	g_signal_connect (G_OBJECT (priv->display), "focus_out_event",
-			  G_CALLBACK (eom_scroll_view_focus_out_event), NULL);
 
-	g_signal_connect (G_OBJECT (view), "key_press_event",
-			  G_CALLBACK (display_key_press_event), view);
+	g_signal_connect (priv->display, "configure_event",
+	                  G_CALLBACK (display_size_change),
+	                  view);
+
+	g_signal_connect (priv->display, "draw",
+	                  G_CALLBACK (display_draw),
+	                  view);
+
+	g_signal_connect (priv->display, "map_event",
+	                  G_CALLBACK (display_map_event),
+	                  view);
+
+	g_signal_connect (priv->display, "button_press_event",
+	                  G_CALLBACK (eom_scroll_view_button_press_event),
+	                  view);
+
+	g_signal_connect (priv->display, "motion_notify_event",
+	                  G_CALLBACK (eom_scroll_view_motion_event),
+	                  view);
+
+	g_signal_connect (priv->display, "button_release_event",
+	                  G_CALLBACK (eom_scroll_view_button_release_event),
+	                  view);
+
+	g_signal_connect (priv->display, "scroll_event",
+	                  G_CALLBACK (eom_scroll_view_scroll_event),
+	                  view);
+
+	g_signal_connect (priv->display, "focus_in_event",
+	                  G_CALLBACK (eom_scroll_view_focus_in_event),
+	                  NULL);
+
+	g_signal_connect (priv->display, "focus_out_event",
+	                  G_CALLBACK (eom_scroll_view_focus_out_event),
+	                  NULL);
+
+	g_signal_connect (view, "key_press_event",
+	                  G_CALLBACK (display_key_press_event),
+	                  view);
 
 	gtk_drag_source_set (priv->display, GDK_BUTTON1_MASK,
 			     target_table, G_N_ELEMENTS (target_table),
 			     GDK_ACTION_COPY | GDK_ACTION_MOVE |
 			     GDK_ACTION_LINK | GDK_ACTION_ASK);
-	g_signal_connect (G_OBJECT (priv->display), "drag-data-get",
-			  G_CALLBACK (view_on_drag_data_get_cb), view);
-	g_signal_connect (G_OBJECT (priv->display), "drag-begin",
-			  G_CALLBACK (view_on_drag_begin_cb), view);
+
+	g_signal_connect (priv->display, "drag-data-get",
+	                  G_CALLBACK (view_on_drag_data_get_cb),
+	                  view);
+
+	g_signal_connect (priv->display, "drag-begin",
+	                  G_CALLBACK (view_on_drag_begin_cb),
+	                  view);
 
 	gtk_grid_attach (GTK_GRID (view), priv->display,
 					 0, 0, 1, 1);
@@ -2259,8 +2283,9 @@ eom_scroll_view_set_popup (EomScrollView *view,
 				   GTK_WIDGET (view),
 				   NULL);
 
-	g_signal_connect (G_OBJECT (view), "button_press_event",
-			  G_CALLBACK (view_on_button_press_event_cb), NULL);
+	g_signal_connect (view, "button_press_event",
+	                  G_CALLBACK (view_on_button_press_event_cb),
+	                  NULL);
 }
 
 static gboolean

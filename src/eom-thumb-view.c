@@ -131,17 +131,17 @@ eom_thumb_view_constructed (GObject *object)
 
 	g_object_set (thumbview, "has-tooltip", TRUE, NULL);
 
-	g_signal_connect (thumbview,
-			  "query-tooltip",
-			  G_CALLBACK (thumbview_on_query_tooltip_cb),
-			  NULL);
+	g_signal_connect (thumbview, "query-tooltip",
+	                  G_CALLBACK (thumbview_on_query_tooltip_cb),
+	                  NULL);
 
 	thumbview->priv->start_thumb = 0;
 	thumbview->priv->end_thumb = 0;
 	thumbview->priv->menu = NULL;
 
-	g_signal_connect (G_OBJECT (thumbview), "parent-set",
-			  G_CALLBACK (thumbview_on_parent_set_cb), NULL);
+	g_signal_connect (thumbview, "parent-set",
+	                  G_CALLBACK (thumbview_on_parent_set_cb),
+	                  NULL);
 
 	gtk_icon_view_enable_model_drag_source (GTK_ICON_VIEW (thumbview), 0,
 						NULL, 0,
@@ -151,8 +151,9 @@ eom_thumb_view_constructed (GObject *object)
 						GDK_ACTION_ASK);
 	gtk_drag_source_add_uri_targets (GTK_WIDGET (thumbview));
 
-	g_signal_connect (G_OBJECT (thumbview), "drag-data-get",
-			  G_CALLBACK (thumbview_on_drag_data_get_cb), NULL);
+	g_signal_connect (thumbview, "drag-data-get",
+	                  G_CALLBACK (thumbview_on_drag_data_get_cb),
+	                  NULL);
 }
 
 static void
@@ -380,20 +381,20 @@ thumbview_on_parent_set_cb (GtkWidget *widget,
 	vadjustment = gtk_scrolled_window_get_vadjustment (GTK_SCROLLED_WINDOW (sw));
 
 	/* when scrolling */
-	g_signal_connect_data (G_OBJECT (hadjustment), "value-changed",
-			       G_CALLBACK (thumbview_on_visible_range_changed_cb),
-			       thumbview, NULL, G_CONNECT_SWAPPED | G_CONNECT_AFTER);
-	g_signal_connect_data (G_OBJECT (vadjustment), "value-changed",
-			       G_CALLBACK (thumbview_on_visible_range_changed_cb),
-			       thumbview, NULL, G_CONNECT_SWAPPED | G_CONNECT_AFTER);
+	g_signal_connect_data (hadjustment, "value-changed",
+	                       G_CALLBACK (thumbview_on_visible_range_changed_cb),
+	                       thumbview, NULL, G_CONNECT_SWAPPED | G_CONNECT_AFTER);
+	g_signal_connect_data (vadjustment, "value-changed",
+	                       G_CALLBACK (thumbview_on_visible_range_changed_cb),
+	                       thumbview, NULL, G_CONNECT_SWAPPED | G_CONNECT_AFTER);
 
 	/* when the adjustment is changed, ie. probably we have new images added. */
-	g_signal_connect_data (G_OBJECT (hadjustment), "changed",
-			       G_CALLBACK (thumbview_on_adjustment_changed_cb),
-			       thumbview, NULL, G_CONNECT_SWAPPED | G_CONNECT_AFTER);
-	g_signal_connect_data (G_OBJECT (vadjustment), "changed",
-			       G_CALLBACK (thumbview_on_adjustment_changed_cb),
-			       thumbview, NULL, G_CONNECT_SWAPPED | G_CONNECT_AFTER);
+	g_signal_connect_data (hadjustment, "changed",
+	                       G_CALLBACK (thumbview_on_adjustment_changed_cb),
+	                       thumbview, NULL, G_CONNECT_SWAPPED | G_CONNECT_AFTER);
+	g_signal_connect_data (vadjustment, "changed",
+	                       G_CALLBACK (thumbview_on_adjustment_changed_cb),
+	                       thumbview, NULL, G_CONNECT_SWAPPED | G_CONNECT_AFTER);
 
 	/* when resizing the scrolled window */
 	g_signal_connect_swapped (G_OBJECT (sw), "size-allocate",
@@ -609,9 +610,9 @@ thumbview_on_query_tooltip_cb (GtkWidget  *widget,
 		EomJob *job;
 
 		job = eom_job_load_new (image, data);
-		g_signal_connect (G_OBJECT (job), "finished",
-				  G_CALLBACK (on_data_loaded_cb),
-				  widget);
+		g_signal_connect (job, "finished",
+		                  G_CALLBACK (on_data_loaded_cb),
+		                  widget);
 		eom_job_queue_add_job (job);
 		g_object_unref (image);
 		g_object_unref (job);
@@ -730,13 +731,12 @@ eom_thumb_view_set_model (EomThumbView *thumbview, EomListStore *store)
 		}
 	}
 
-	priv->image_add_id = g_signal_connect (G_OBJECT (store), "row-inserted",
-	                            G_CALLBACK (eom_thumb_view_row_inserted_cb),
-	                            thumbview);
-	priv->image_removed_id = g_signal_connect (G_OBJECT (store),
-	                             "row-deleted",
-	                             G_CALLBACK (eom_thumb_view_row_deleted_cb),
-	                             thumbview);
+	priv->image_add_id = g_signal_connect (store, "row-inserted",
+	                                       G_CALLBACK (eom_thumb_view_row_inserted_cb),
+	                                       thumbview);
+	priv->image_removed_id = g_signal_connect (store, "row-deleted",
+	                                           G_CALLBACK (eom_thumb_view_row_deleted_cb),
+	                                           thumbview);
 
 	thumbview->priv->n_images = eom_list_store_length (store);
 
@@ -1047,9 +1047,9 @@ eom_thumb_view_set_thumbnail_popup (EomThumbView *thumbview,
 				   GTK_WIDGET (thumbview),
 				   NULL);
 
-	g_signal_connect (G_OBJECT (thumbview), "button_press_event",
-			  G_CALLBACK (thumbview_on_button_press_event_cb), NULL);
-
+	g_signal_connect (thumbview, "button_press_event",
+	                  G_CALLBACK (thumbview_on_button_press_event_cb),
+	                  NULL);
 }
 
 
