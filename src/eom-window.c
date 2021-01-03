@@ -2226,10 +2226,30 @@ eom_window_print (EomWindow *window)
 	GtkPageSetup *page_setup;
 	GtkPrintSettings *print_settings;
 	gboolean page_setup_disabled = FALSE;
+	char *atril_path;
 
 	eom_debug (DEBUG_PRINTING);
 
 	print_settings = eom_print_get_print_settings ();
+
+	if ((atril_path = g_find_program_in_path ("atril")) != NULL) {
+		char *cmdline;
+
+		cmdline = g_strjoin (" ",
+		                     atril_path,
+		                     "--unlink-tempfile",
+		                     "--preview",
+		                     "--print-settings",
+		                     "%s",
+		                     "%f",
+		                     NULL);
+
+		g_object_set (gtk_widget_get_settings (GTK_WIDGET (window)),
+		              "gtk-print-preview-command", cmdline,
+		              NULL);
+		g_free (cmdline);
+		g_free (atril_path);
+	}
 
 	/* Make sure the window stays valid while printing */
 	g_object_ref (window);
