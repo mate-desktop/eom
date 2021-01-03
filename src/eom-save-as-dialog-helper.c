@@ -236,17 +236,21 @@ eom_save_as_dialog_new (GtkWindow *main, GList *images, GFile *base_file)
 	data->image = g_object_ref (EOM_IMAGE (g_list_nth_data (images, data->nth_image)));
 	g_object_set_data_full (G_OBJECT (dlg), "data", data, destroy_data_cb);
 
-	g_signal_connect (G_OBJECT (data->format_combobox), "changed",
-			  (GCallback) on_format_combobox_changed, dlg);
+	g_signal_connect (data->format_combobox, "changed",
+	                  G_CALLBACK (on_format_combobox_changed),
+	                  dlg);
 
-	g_signal_connect (G_OBJECT (data->token_entry), "changed",
-			  (GCallback) on_token_entry_changed, dlg);
+	g_signal_connect (data->token_entry, "changed",
+	                  G_CALLBACK (on_token_entry_changed),
+	                  dlg);
 
-	g_signal_connect (G_OBJECT (data->replace_spaces_check), "toggled",
-			  (GCallback) on_replace_spaces_check_clicked, dlg);
+	g_signal_connect (data->replace_spaces_check, "toggled",
+	                  G_CALLBACK (on_replace_spaces_check_clicked),
+	                  dlg);
 
-	g_signal_connect (G_OBJECT (data->counter_spin), "changed",
-			  (GCallback) on_counter_spin_changed, dlg);
+	g_signal_connect (data->counter_spin, "changed",
+	                  G_CALLBACK (on_counter_spin_changed),
+	                  dlg);
 
 	label = GTK_WIDGET (gtk_builder_get_object (xml, "preview_label_from"));
 	gtk_label_set_text (GTK_LABEL (label), eom_image_get_caption (data->image));

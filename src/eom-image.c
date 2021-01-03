@@ -982,8 +982,7 @@ eom_image_real_load (EomImage *img,
 			        loader = gdk_pixbuf_loader_new ();
 		        }
 
-		        g_signal_connect_object (G_OBJECT (loader),
-					         "size-prepared",
+		        g_signal_connect_object (loader, "size-prepared",
 					         G_CALLBACK (eom_image_size_prepared),
 					         img,
 					         0);
@@ -1459,8 +1458,7 @@ transfer_progress_cb (goffset cur_bytes,
 	EomImage *image = EOM_IMAGE (user_data);
 
 	if (cur_bytes > 0) {
-		g_signal_emit (G_OBJECT(image),
-			       signals[SIGNAL_SAVE_PROGRESS],
+		g_signal_emit (image, signals[SIGNAL_SAVE_PROGRESS],
 			       0,
 			       (gfloat) cur_bytes / (gfloat) total_bytes);
 	}
@@ -2112,7 +2110,7 @@ eom_image_modified (EomImage *img)
 {
 	g_return_if_fail (EOM_IS_IMAGE (img));
 
-	g_signal_emit (G_OBJECT (img), signals[SIGNAL_CHANGED], 0);
+	g_signal_emit (img, signals[SIGNAL_CHANGED], 0);
 }
 
 gchar*

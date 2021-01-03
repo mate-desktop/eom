@@ -521,24 +521,29 @@ eom_print_preview_new (void)
 
 /* 	update_relative_sizes (preview); */
 
-	g_signal_connect (G_OBJECT (area),
-			  "draw", G_CALLBACK (draw_cb),
-			  preview);
+	g_signal_connect (area, "draw",
+	                  G_CALLBACK (draw_cb),
+	                  preview);
 
-	g_signal_connect (G_OBJECT (area), "motion-notify-event",
-			  G_CALLBACK (motion_notify_event_cb), preview);
+	g_signal_connect (area, "motion-notify-event",
+			  G_CALLBACK (motion_notify_event_cb),
+	                  preview);
 
- 	g_signal_connect (G_OBJECT (area), "button-press-event",
- 			  G_CALLBACK (button_press_event_cb), preview);
+ 	g_signal_connect (area, "button-press-event",
+	                  G_CALLBACK (button_press_event_cb),
+	                  preview);
 
-	g_signal_connect (G_OBJECT (area), "button-release-event",
-			  G_CALLBACK (button_release_event_cb), preview);
+	g_signal_connect (area, "button-release-event",
+	                  G_CALLBACK (button_release_event_cb),
+	                  preview);
 
-	g_signal_connect (G_OBJECT (area), "key-press-event",
-			  G_CALLBACK (key_press_event_cb), preview);
+	g_signal_connect (area, "key-press-event",
+	                  G_CALLBACK (key_press_event_cb),
+	                  preview);
 
 	g_signal_connect (area, "size-allocate",
-			  G_CALLBACK (size_allocate_cb), preview);
+	                  G_CALLBACK (size_allocate_cb),
+	                  preview);
 
 	return GTK_WIDGET (preview);
 }
@@ -796,9 +801,7 @@ key_press_event_cb (GtkWidget   *widget,
 			      NULL);
 
 		stop_emission = TRUE;
-		g_signal_emit (G_OBJECT (user_data),
-			       preview_signals
-			       [SIGNAL_IMAGE_MOVED], 0);
+		g_signal_emit (user_data, preview_signals[SIGNAL_IMAGE_MOVED], 0);
 	}
 
 	return stop_emission;
@@ -845,9 +848,7 @@ motion_notify_event_cb (GtkWidget      *widget,
 		priv->cursorx = event->x;
 		priv->cursory = event->y;
 
-		g_signal_emit (G_OBJECT (user_data),
-			       preview_signals
-			       [SIGNAL_IMAGE_MOVED], 0);
+		g_signal_emit (user_data, preview_signals[SIGNAL_IMAGE_MOVED], 0);
 	} else {
 		if (press_inside_image_area (EOM_PRINT_PREVIEW (user_data), event->x, event->y)) {
 		  	GdkCursor *cursor;

@@ -213,8 +213,7 @@ eom_preferences_dialog_init (EomPreferencesDialog *pref_dlg)
 	priv->view_settings = g_settings_new (EOM_CONF_VIEW);
 	priv->fullscreen_settings = g_settings_new (EOM_CONF_FULLSCREEN);
 
-	g_signal_connect (G_OBJECT (pref_dlg),
-	                  "response",
+	g_signal_connect (pref_dlg, "response",
 	                  G_CALLBACK (eom_preferences_response_cb),
 	                  pref_dlg);
 
@@ -246,8 +245,7 @@ eom_preferences_dialog_init (EomPreferencesDialog *pref_dlg)
 	                   GSETTINGS_OBJECT_VALUE,
 	                   GINT_TO_POINTER (EOM_TRANSP_COLOR));
 
-	g_signal_connect (G_OBJECT (priv->color_radio),
-	                  "toggled",
+	g_signal_connect (priv->color_radio, "toggled",
 	                  G_CALLBACK (pd_transp_radio_toggle_cb),
 	                  priv->view_settings);
 
@@ -255,8 +253,7 @@ eom_preferences_dialog_init (EomPreferencesDialog *pref_dlg)
 	                   GSETTINGS_OBJECT_VALUE,
 	                   GINT_TO_POINTER (EOM_TRANSP_CHECKED));
 
-	g_signal_connect (G_OBJECT (priv->checkpattern_radio),
-	                  "toggled",
+	g_signal_connect (priv->checkpattern_radio, "toggled",
 	                  G_CALLBACK (pd_transp_radio_toggle_cb),
 	                  priv->view_settings);
 
@@ -264,8 +261,7 @@ eom_preferences_dialog_init (EomPreferencesDialog *pref_dlg)
 	                   GSETTINGS_OBJECT_VALUE,
 	                   GINT_TO_POINTER (EOM_TRANSP_BACKGROUND));
 
-	g_signal_connect (G_OBJECT (priv->background_radio),
-	                  "toggled",
+	g_signal_connect (priv->background_radio, "toggled",
 	                  G_CALLBACK (pd_transp_radio_toggle_cb),
 	                  priv->view_settings);
 
@@ -307,8 +303,7 @@ eom_preferences_dialog_init (EomPreferencesDialog *pref_dlg)
 	                 EOM_CONF_FULLSCREEN_RANDOM,
 	                 priv->random_check, "active",
 	                 G_SETTINGS_BIND_DEFAULT);
-	g_signal_connect (priv->fullscreen_settings,
-	                  "changed::" EOM_CONF_FULLSCREEN_RANDOM,
+	g_signal_connect (priv->fullscreen_settings, "changed::" EOM_CONF_FULLSCREEN_RANDOM,
 	                  G_CALLBACK (random_change_cb),
 	                  priv->loop_check);
 	random_change_cb (priv->fullscreen_settings,
@@ -324,8 +319,7 @@ eom_preferences_dialog_init (EomPreferencesDialog *pref_dlg)
 
     /* Add tab scrolling support for GTK3 */
     gtk_widget_add_events (priv->notebook, GDK_SCROLL_MASK);
-    g_signal_connect (priv->notebook,
-                      "scroll-event",
+    g_signal_connect (priv->notebook, "scroll-event",
                       G_CALLBACK (eom_notebook_scroll_event_cb),
                       NULL);
 }

@@ -651,8 +651,7 @@ eom_job_save_run (EomJob *ejob)
 			}
 		}
 
-		handler_id = g_signal_connect (G_OBJECT (image),
-					       "save-progress",
+		handler_id = g_signal_connect (image, "save-progress",
 				               G_CALLBACK (save_progress_handler),
 					       job);
 
@@ -666,7 +665,7 @@ eom_job_save_run (EomJob *ejob)
 			g_object_unref (save_info);
 
 		if (handler_id != 0)
-			g_signal_handler_disconnect (G_OBJECT (image), handler_id);
+			g_signal_handler_disconnect (image, handler_id);
 
 		eom_image_data_unref (image);
 
@@ -782,8 +781,7 @@ eom_job_save_as_run (EomJob *ejob)
 
 		g_assert (ejob->error == NULL);
 
-		handler_id = g_signal_connect (G_OBJECT (image),
-					       "save-progress",
+		handler_id = g_signal_connect (image, "save-progress",
 				               G_CALLBACK (save_progress_handler),
 					       job);
 
@@ -829,7 +827,7 @@ eom_job_save_as_run (EomJob *ejob)
 			g_object_unref (dest_info);
 
 		if (handler_id != 0)
-			g_signal_handler_disconnect (G_OBJECT (image), handler_id);
+			g_signal_handler_disconnect (image, handler_id);
 
 		eom_image_data_unref (image);
 
