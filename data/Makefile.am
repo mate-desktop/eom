@@ -4,15 +4,25 @@ desktopdir = $(datadir)/applications
 desktop_DATA = eom.desktop
 desktop_in_files = $(desktop_DATA:.desktop=.desktop.in)
 desktop_in_in_files = $(desktop_in_files:.desktop.in=.desktop.in.in)
+
 $(desktop_DATA): $(desktop_in_files)
+if USE_NLS
 	$(AM_V_GEN) $(MSGFMT) --desktop --keyword= --keyword=Name --keyword=Comment --keyword=Keywords --template $< -d $(top_srcdir)/po -o $@
+else
+	$(AM_V_GEN) cp $< $@
+endif
 
 appdatadir = $(datadir)/metainfo
 appdata_DATA = eom.appdata.xml
 appdata_in_files = $(appdata_DATA:.xml=.xml.in)
 appdata_in_in_files = $(appdata_in_files:.xml.in=.xml.in.in)
+
 $(appdata_DATA): $(appdata_in_files)
+if USE_NLS
 	$(AM_V_GEN) $(MSGFMT) --xml --template $< -d $(top_srcdir)/po -o $@
+else
+	$(AM_V_GEN) cp $< $@
+endif
 
 gsettings_ENUM_NAMESPACE = org.mate.eom
 gsettings_ENUM_FILES = $(top_srcdir)/src/eom-scroll-view.h	\

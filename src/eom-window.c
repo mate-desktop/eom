@@ -4412,8 +4412,10 @@ eom_window_construct_ui (EomWindow *window)
 	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	priv->actions_window = gtk_action_group_new ("MenuActionsWindow");
 
+#ifdef ENABLE_NLS
 	gtk_action_group_set_translation_domain (priv->actions_window,
 						 GETTEXT_PACKAGE);
+#endif /* ENABLE_NLS */
 
 	gtk_action_group_add_actions (priv->actions_window,
 				      action_entries_window,
@@ -4430,8 +4432,10 @@ eom_window_construct_ui (EomWindow *window)
 
 	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	priv->actions_image = gtk_action_group_new ("MenuActionsImage");
+#ifdef ENABLE_NLS
 	gtk_action_group_set_translation_domain (priv->actions_image,
 						 GETTEXT_PACKAGE);
+#endif /* ENABLE_NLS */
 
 	gtk_action_group_add_actions (priv->actions_image,
 				      action_entries_image,
@@ -4450,8 +4454,10 @@ eom_window_construct_ui (EomWindow *window)
 
 	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	priv->actions_collection = gtk_action_group_new ("MenuActionsCollection");
+#ifdef ENABLE_NLS
 	gtk_action_group_set_translation_domain (priv->actions_collection,
 						 GETTEXT_PACKAGE);
+#endif /* ENABLE_NLS */
 
 	gtk_action_group_add_actions (priv->actions_collection,
 				      action_entries_collection,
@@ -4536,8 +4542,10 @@ eom_window_construct_ui (EomWindow *window)
 
 	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	priv->actions_recent = gtk_action_group_new ("RecentFilesActions");
+#ifdef ENABLE_NLS
 	gtk_action_group_set_translation_domain (priv->actions_recent,
 						 GETTEXT_PACKAGE);
+#endif /* ENABLE_NLS */
 	G_GNUC_END_IGNORE_DEPRECATIONS;
 
 	g_signal_connect (gtk_recent_manager_get_default (), "changed",

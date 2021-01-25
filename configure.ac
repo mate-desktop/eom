@@ -45,6 +45,10 @@ GTK_DOC_CHECK(1.9)
 
 AC_CHECK_FUNCS(strptime)
 
+GETTEXT_PACKAGE=AC_PACKAGE_NAME
+AC_SUBST(GETTEXT_PACKAGE)
+AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Gettext package.])
+
 # ****************************************************************
 # Support for nl_langinfo (_NL_MEASUREMENT_MEASUREMENT) (optional)
 # ****************************************************************
@@ -62,13 +66,9 @@ fi
 # ***********
 # Translation
 # ***********
-AM_GNU_GETTEXT_VERSION([0.19.8])
-AM_GNU_GETTEXT_REQUIRE_VERSION([0.19.8])
 AM_GNU_GETTEXT([external])
-
-GETTEXT_PACKAGE=AC_PACKAGE_NAME
-AC_SUBST(GETTEXT_PACKAGE)
-AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Gettext package.])
+AM_GNU_GETTEXT_VERSION([0.19.8])
+AM_CONDITIONAL([USE_NLS], [test "x${USE_NLS}" = "xyes"])
 
 AC_SUBST(CFLAGS)
 AC_SUBST(LDFLAGS)
@@ -429,5 +429,6 @@ Configure summary:
 	RSVG support ...............:  ${have_rsvg}
 	Colour management support ..:  ${have_lcms}
 	GObject Introspection.......:  ${have_introspection}
+	Gettext support.............:  ${USE_NLS}
 	Thumbnailer.................:  ${eom_thumbnailer}
 "
