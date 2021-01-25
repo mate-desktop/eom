@@ -207,7 +207,9 @@ eom_save_as_dialog_new (GtkWindow *main, GList *images, GFile *base_file)
 	GtkWidget *label;
 
 	xml = gtk_builder_new_from_resource ("/org/mate/eom/ui/eom-multiple-save-as-dialog.ui");
+#ifdef ENABLE_NLS
 	gtk_builder_set_translation_domain (xml, GETTEXT_PACKAGE);
+#endif /* ENABLE_NLS */
 
 	dlg = GTK_WIDGET (g_object_ref (gtk_builder_get_object (xml, "eom_multiple_save_as_dialog")));
 	gtk_window_set_transient_for (GTK_WINDOW (dlg), GTK_WINDOW (main));

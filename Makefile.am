@@ -1,10 +1,14 @@
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
+if USE_NLS
+PO_SUBDIR = po
+endif
+
 if ENABLE_JPEG
 jpeg_DIRS = jpegutils
 endif
 
-SUBDIRS = po $(jpeg_DIRS) cut-n-paste src man plugins help data doc
+SUBDIRS = $(PO_SUBDIR) $(jpeg_DIRS) cut-n-paste src man plugins help data doc
 
 if ENABLE_THUMBNAILER
 SUBDIRS += thumbnailer

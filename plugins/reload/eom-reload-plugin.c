@@ -119,7 +119,9 @@ eom_reload_plugin_activate (EomWindowActivatable *activatable)
 	G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
 	plugin->ui_action_group = gtk_action_group_new ("EomReloadPluginActions");
 
+#ifdef ENABLE_NLS
 	gtk_action_group_set_translation_domain (plugin->ui_action_group, GETTEXT_PACKAGE);
+#endif /* ENABLE_NLS */
 
 	gtk_action_group_add_actions (plugin->ui_action_group, action_entries,
 	                              G_N_ELEMENTS (action_entries), plugin->window);

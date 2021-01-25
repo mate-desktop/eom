@@ -50,7 +50,11 @@ plugins_in_in_files = $(plugins_in_files:.desktop.in=.desktop.in.in)
 plugins_DATA = $(plugins_in_files:.plugin.desktop.in=.plugin)
 
 %.plugin: %.plugin.desktop.in
+if USE_NLS
 	$(AM_V_GEN) $(MSGFMT) --desktop --keyword=Name --keyword=Description --template $< -d $(top_srcdir)/po -o $@
+else
+	$(AM_V_GEN) cp $< $@
+endif
 
 DISTCLEANFILES = $(plugins_in_files)
 CLEANFILES = $(plugins_DATA)
