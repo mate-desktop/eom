@@ -2636,7 +2636,7 @@ eom_window_cmd_about (GtkAction *action, gpointer user_data)
 			       "authors", authors,
 			       "documenters", documenters,
 			       "translator-credits", _("translator-credits"),
-			       "website", "http://www.mate-desktop.org/",
+			       "website", PACKAGE_URL,
 			       "logo-icon-name", "eom",
 			       "wrap-license", TRUE,
 			       "license", license_trans,

@@ -46,14 +46,15 @@ endif
 
 # Generate plugin info files
 
+plugins_in_in_files = $(plugins_in_files:.desktop.in=.desktop.in.in)
 plugins_DATA = $(plugins_in_files:.plugin.desktop.in=.plugin)
 
 %.plugin: %.plugin.desktop.in
 	$(AM_V_GEN) $(MSGFMT) --desktop --keyword=Name --keyword=Description --template $< -d $(top_srcdir)/po -o $@
 
-DISTCLEANFILES = $(plugins_DATA)
+DISTCLEANFILES = $(plugins_in_files)
 CLEANFILES = $(plugins_DATA)
 
-EXTRA_DIST = $(plugins_in_files)
+EXTRA_DIST = $(plugins_in_in_files)
 
 -include $(top_srcdir)/git.mk
