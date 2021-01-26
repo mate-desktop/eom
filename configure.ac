@@ -6,7 +6,7 @@ m4_define(eom_minor_version, 25)
 m4_define(eom_micro_version, 0)
 m4_define(eom_version, eom_major_version.eom_minor_version.eom_micro_version)
 
-AC_INIT([eom], eom_version, [http://www.mate-desktop.org], [eom])
+AC_INIT([eom], eom_version, https://github.com/mate-desktop/eom/issues, [eom], [https://mate-desktop.org])
 AM_INIT_AUTOMAKE([1.9 foreign no-dist-gzip dist-xz check-news])
 
 # Support silencing the build output if supported (automake-1.11+)
@@ -394,6 +394,7 @@ help/Makefile
 po/Makefile.in
 data/Makefile
 data/eom.pc
+data/eom.appdata.xml.in
 data/eom.desktop.in
 data/org.mate.eom.gschema.xml
 data/pixmaps/Makefile
@@ -403,6 +404,9 @@ doc/reference/Makefile
 doc/reference/version.xml
 doc/reference/eom-docs.sgml
 plugins/Makefile
+plugins/fullscreen/fullscreen.plugin.desktop.in
+plugins/reload/reload.plugin.desktop.in
+plugins/statusbar-date/statusbar-date.plugin.desktop.in
 thumbnailer/Makefile
 thumbnailer/eom-thumbnailer.thumbnailer
 ])
