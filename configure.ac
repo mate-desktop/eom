@@ -412,6 +412,9 @@ AC_OUTPUT
 echo "
 Configure summary:
 
+	${PACKAGE_STRING}
+	`echo $PACKAGE_STRING | sed "s/./=/g"`
+
 	Source code location .......:  ${srcdir}
 	Compiler ...................:  ${CC}
 	Extra Compiler Warnings ....:  ${WARN_CFLAGS}
