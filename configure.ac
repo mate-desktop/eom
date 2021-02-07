@@ -429,6 +429,6 @@ Configure summary:
 	RSVG support ...............:  ${have_rsvg}
 	Colour management support ..:  ${have_lcms}
 	GObject Introspection.......:  ${have_introspection}
-	Gettext support.............:  ${USE_NLS}
+	Native Language support.....:  ${USE_NLS}
 	Thumbnailer.................:  ${eom_thumbnailer}
 "
