@@ -3756,12 +3756,12 @@ eom_window_cmd_go_random (GtkAction *action, gpointer user_data)
 }
 
 static const GtkActionEntry action_entries_window[] = {
-	{ "Image", NULL, N_("_Image") },
-	{ "Edit",  NULL, N_("_Edit") },
-	{ "View",  NULL, N_("_View") },
-	{ "Go",    NULL, N_("_Go") },
-	{ "Tools", NULL, N_("_Tools") },
-	{ "Help",  NULL, N_("_Help") },
+	{ "Image", NULL, N_("_Image"), NULL, NULL, NULL },
+	{ "Edit",  NULL, N_("_Edit"),  NULL, NULL, NULL },
+	{ "View",  NULL, N_("_View"),  NULL, NULL, NULL },
+	{ "Go",    NULL, N_("_Go"),    NULL, NULL, NULL },
+	{ "Tools", NULL, N_("_Tools"), NULL, NULL, NULL },
+	{ "Help",  NULL, N_("_Help"),  NULL, NULL, NULL },
 
 	{ "ImageOpen", "document-open",  N_("_Open…"), "<control>O",
 	  N_("Open a file"),
@@ -4323,7 +4323,8 @@ eom_window_open_editor (GtkAction *action,
 {
 	GdkAppLaunchContext *context;
 	GAppInfo *app_info;
-	GList files;
+	GList *files = NULL;
+	GFile *file;
 
 	app_info = get_appinfo_for_editor (window);
 
@@ -4339,15 +4340,14 @@ eom_window_open_editor (GtkAction *action,
 	gdk_app_launch_context_set_timestamp (context,
 	  gtk_get_current_event_time ());
 
-	{
-		GList f = { eom_image_get_file (window->priv->image) };
-		files = f;
-	}
+	file = eom_image_get_file (window->priv->image);
+	files = g_list_append (files, file);
 
 	g_app_info_launch (app_info, &files,
                            G_APP_LAUNCH_CONTEXT (context), NULL);
 
-	g_object_unref (files.data);
+	g_list_free (files);
+	g_object_unref (file);
 	g_object_unref (context);
 }
 
