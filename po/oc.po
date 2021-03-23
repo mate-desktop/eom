@@ -11,9 +11,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: eom 1.23.1\n"
+"Project-Id-Version: eom 1.24.0\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
-"POT-Creation-Date: 2020-01-10 14:33+0100\n"
+"POT-Creation-Date: 2020-08-16 21:02+0200\n"
 "PO-Revision-Date: 2020-02-14 12:07+0000\n"
 "Last-Translator: Quentin PAGÈS, 2020\n"
 "Language-Team: Occitan (post 1500) (https://www.transifex.com/mate/teams/13566/oc/)\n"
@@ -82,12 +82,6 @@ msgstr "Visualizaira d'imatges Eye of MATE"
 #: data/eom.desktop.in.in:4
 msgid "Browse and rotate images"
 msgstr "Percórrer e pivotar los imatges"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/eom.desktop.in.in:8
-msgid "eom"
-msgstr "eom"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -356,7 +350,7 @@ msgstr "Repertòri"
 
 #: data/metadata-sidebar.ui:99
 msgid "Aperture"
-msgstr ""
+msgstr "Dobertura"
 
 #: data/metadata-sidebar.ui:116
 msgid "Exposure"
@@ -368,7 +362,7 @@ msgstr "ISO"
 
 #: data/metadata-sidebar.ui:151
 msgid "Metering"
-msgstr ""
+msgstr "Mòde de mesura"
 
 #: data/metadata-sidebar.ui:169 src/eom-metadata-details.c:65
 msgid "Camera"
@@ -456,6 +450,9 @@ msgid ""
 "color and none. If color is chosen, then the trans-color key determines the "
 "color value used."
 msgstr ""
+"Determina lo biais que la transparéncia deu èsser indicada. Las valors "
+"validas son checked, color e none. Se COLOR es causit, alara la clau trans-"
+"color determina la valor de la color utilizada."
 
 #: data/org.mate.eom.gschema.xml.in:41
 msgid "Scroll wheel zoom"
@@ -500,7 +497,7 @@ msgstr "Far venir aleatòria la sequéncia d’imatges"
 
 #: data/org.mate.eom.gschema.xml.in:59
 msgid "Whether the sequence of images should be shown in an random loop."
-msgstr ""
+msgstr "Indique se una sequéncia d'imatge se deu afichar en bocla."
 
 #: data/org.mate.eom.gschema.xml.in:63
 msgid "Loop through the image sequence"
@@ -549,7 +546,7 @@ msgstr "Visualizar/amagar lo panèl de la colleccion d'images."
 
 #: data/org.mate.eom.gschema.xml.in:92
 msgid "Image collection pane position."
-msgstr ""
+msgstr "Posicion de la fenèstra de la colleccion d'imatges"
 
 #: data/org.mate.eom.gschema.xml.in:96
 msgid "Whether the image collection pane should be resizable."
@@ -582,6 +579,9 @@ msgid ""
 "the trash. It will still ask if any of the files cannot be moved to the "
 "trash and would be deleted instead."
 msgstr ""
+"Se activat, Eye of MATE demanda pas de confirmacion quand los imatges son "
+"mesas a l'escobilhièr. Demanda totjorn se un fichièr pòt èsser mes a "
+"l'escobilhièr e deuriá doncas èsser suprimit dirèctament."
 
 #: data/org.mate.eom.gschema.xml.in:117
 msgid ""
@@ -613,6 +613,10 @@ msgid ""
 " for editing images (when the \"Edit Image\" toolbar button is clicked). Set"
 " to the empty string to disable this feature."
 msgstr ""
+"Lo nom del fichir de buru (inclusent lo « .desktop » de l'aplicacion "
+"d'utilizar per l'edicion d'imatges (quand lo boton de la barra d'aisinas « "
+"Modificar l'imatge». Definissètz una cadena de tèxt voida per desactivar "
+"aquesta foncionalitat."
 
 #: data/org.mate.eom.gschema.xml.in:127
 msgid ""
@@ -645,16 +649,12 @@ msgid ""
 "plugins. See the .eom-plugin file for obtaining the \"Location\" of a given "
 "plugin."
 msgstr ""
-"Tièra dels apondons actius. Conten pas l'emplaçament dels apondons actius. "
+"Lista dels apondons actius. Conten pas l'emplaçament dels apondons actius. "
 "Legissètz lo fichièr .eom-plugin per obténer l'emplaçament d'un apondon."
 
 #: plugins/fullscreen/fullscreen.plugin.desktop.in:5
 msgid "Fullscreen with double-click"
 msgstr "Ecran complet amb un clic doble"
-
-#: plugins/fullscreen/fullscreen.plugin.desktop.in:6
-msgid "view-fullscreen"
-msgstr ""
 
 #: plugins/reload/eom-reload-plugin.c:45
 #: plugins/reload/reload.plugin.desktop.in:5
@@ -664,10 +664,6 @@ msgstr "Recargar l'imatge"
 #: plugins/reload/eom-reload-plugin.c:45
 msgid "Reload current image"
 msgstr "Recargar l'imatge actual"
-
-#: plugins/reload/reload.plugin.desktop.in:6
-msgid "view-refresh"
-msgstr ""
 
 #: plugins/statusbar-date/statusbar-date.plugin.desktop.in:5
 msgid "Date in statusbar"
@@ -796,12 +792,12 @@ msgstr "_Tornar ensajar"
 #: src/eom-error-message-area.c:151
 #, c-format
 msgid "Could not load image '%s'."
-msgstr "Impossible de cargar l'imatge '%s'."
+msgstr "Cargament impossible de l’imatge « %s »."
 
 #: src/eom-error-message-area.c:193
 #, c-format
 msgid "No images found in '%s'."
-msgstr "Pas cap d'imatge trobat dins '%s'."
+msgstr "Pas cap d'imatge trobat dins « %s »."
 
 #: src/eom-error-message-area.c:200
 msgid "The given locations contain no images."
@@ -1058,7 +1054,7 @@ msgstr ""
 #: src/eom-window.c:1012
 #, c-format
 msgid "Use \"%s\" to open the selected image"
-msgstr "Utilizaire \"%s\" per dobrir l'imatge seleccionat"
+msgstr "Utilizar « %s » per dobrir l'imatge seleccionat"
 
 #. Translators: This string is displayed in the statusbar
 #. * while saving images. The tokens are from left to right:
@@ -1068,12 +1064,12 @@ msgstr "Utilizaire \"%s\" per dobrir l'imatge seleccionat"
 #: src/eom-window.c:1176
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
-msgstr "Enregistrament de l'imatge \"%s\" (%u/%u)"
+msgstr "Enregistrament de l’imatge « %s » (%u/%u)"
 
 #: src/eom-window.c:1543
 #, c-format
 msgid "Opening image \"%s\""
-msgstr "Dobrir l'imatge \"%s\""
+msgstr "Dobrir l'imatge « %s »"
 
 #: src/eom-window.c:1909
 msgid "Leave Fullscreen"
@@ -1120,9 +1116,9 @@ msgid ""
 "more details.\n"
 msgstr ""
 "Aqueste programa es distribuit en esperant que vos serà util mas SENS CAP DE"
-" GARANTIA ; sens tanpauc la garantia implicita de VALOR MERCANDA o "
-"D'ADEQÜACION A UN BESONH PARTICULIER. Consultatz la licéncia publica "
-"generala GNU per mai d'entresenhas.\n"
+" GARANTIDA ; sens tanpauc la garantida implicita de VALOR MERCANDA o "
+"D'ADEQÜACION A UN BESONH PARTICULAR. Consultatz la licéncia publica generala"
+" GNU per mai d'entresenhas.\n"
 
 #: src/eom-window.c:2602
 msgid ""
@@ -1131,8 +1127,8 @@ msgid ""
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 "Deuriatz aver recebut una còpia de la licéncia GNU GPL amb aqueste programa "
-"; s'es pas lo cas, escrivètz a Free Software Foundation, Inc., 59 Temple "
-"Place, Suite 330, Boston, MA  02111-1307  USA."
+"; s'es pas lo cas, escrivètz a Free Software Foundation, Inc., 51 Franklin "
+"St, Fifth Floor, Boston, MA 02110-1301, USA."
 
 #: src/eom-window.c:2641
 msgid "About Eye of MATE"
@@ -1161,6 +1157,8 @@ msgstr ""
 #: src/eom-window.c:2742 src/eom-window.c:2757
 msgid "Error launching appearance preferences dialog: "
 msgstr ""
+"I a aguda una error al moment de dobrir la fenèstra de preferéncia "
+"d'aparéncia :"
 
 #: src/eom-window.c:2792
 msgid "_Open Background Preferences"
@@ -1185,8 +1183,8 @@ msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
 msgstr ""
-"Sètz segur que volètz desplaçar\n"
-"\"%s\" dins la banasta ?"
+"Volètz vertadièrament desplaçar\n"
+"« %s » a l’escobilhièr ?"
 
 #: src/eom-window.c:3332
 #, c-format
@@ -1222,7 +1220,7 @@ msgstr "Desplaçar dins l' _escobilhièr"
 
 #: src/eom-window.c:3361
 msgid "_Do not ask again during this session"
-msgstr "_Demandar pas pus pendent aquesta sesilha"
+msgstr "_Demandar pas mai pendent aquesta session"
 
 #: src/eom-window.c:3406 src/eom-window.c:3420
 msgid "Couldn't access trash."
@@ -1377,6 +1375,7 @@ msgstr "_Dobrir lo dossièr contenidor"
 #: src/eom-window.c:3829
 msgid "Show the folder which contains this file in the file manager"
 msgstr ""
+"Aficha lo dorsièr que conten aqueste fichièr dins lo gestionari de fichièrs"
 
 #: src/eom-window.c:3831
 msgid "_Print…"
@@ -1496,7 +1495,7 @@ msgstr "Afichar l'imatge actual"
 
 #: src/eom-window.c:3891
 msgid "Pause Slideshow"
-msgstr ""
+msgstr "Metre lo diaporama en pausa"
 
 #: src/eom-window.c:3892
 msgid "Pause or resume the slideshow"
@@ -1544,7 +1543,7 @@ msgstr "Anar a l'imatge seguent de la colleccion"
 
 #: src/eom-window.c:3924
 msgid "S_lideshow"
-msgstr ""
+msgstr "_Diaporama"
 
 #: src/eom-window.c:3925
 msgid "Start a slideshow view of the images"

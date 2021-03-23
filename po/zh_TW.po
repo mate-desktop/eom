@@ -11,9 +11,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: eom 1.23.1\n"
+"Project-Id-Version: eom 1.24.0\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
-"POT-Creation-Date: 2020-01-10 14:33+0100\n"
+"POT-Creation-Date: 2020-08-16 21:02+0200\n"
 "PO-Revision-Date: 2020-02-14 12:07+0000\n"
 "Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2020\n"
 "Language-Team: Chinese (Taiwan) (https://www.transifex.com/mate/teams/13566/zh_TW/)\n"
@@ -79,12 +79,6 @@ msgstr "Eye of MATE 圖片檢視器"
 #: data/eom.desktop.in.in:4
 msgid "Browse and rotate images"
 msgstr "瀏覽及更改圖片的方向"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/eom.desktop.in.in:8
-msgid "eom"
-msgstr "eom"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -612,10 +606,6 @@ msgstr "使用中外掛程式的清單。這裡沒有包含這些外掛程式的
 msgid "Fullscreen with double-click"
 msgstr "雙擊全螢幕模式"
 
-#: plugins/fullscreen/fullscreen.plugin.desktop.in:6
-msgid "view-fullscreen"
-msgstr "view-fullscreen"
-
 #: plugins/reload/eom-reload-plugin.c:45
 #: plugins/reload/reload.plugin.desktop.in:5
 msgid "Reload Image"
@@ -624,10 +614,6 @@ msgstr "重新載入圖片"
 #: plugins/reload/eom-reload-plugin.c:45
 msgid "Reload current image"
 msgstr "重新載入目前的圖片"
-
-#: plugins/reload/reload.plugin.desktop.in:6
-msgid "view-refresh"
-msgstr "view-refresh"
 
 #: plugins/statusbar-date/statusbar-date.plugin.desktop.in:5
 msgid "Date in statusbar"
@@ -655,7 +641,7 @@ msgstr "關閉前要儲存修改到圖片「%s」嗎？"
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
-msgstr[0] ""
+msgstr[0] "%d 張圖像有未儲存的變更。要在關閉之前儲存變更？"
 
 #: src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
@@ -696,7 +682,7 @@ msgstr "%s (*.%s)"
 #: src/eom-properties-dialog.c:165 src/eom-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] ""
+msgstr[0] "像素"
 
 #: src/eom-file-chooser.c:451
 msgid "Open Image"
@@ -839,7 +825,7 @@ msgstr "%.1f (35mm 軟片)"
 #, c-format
 msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
-msgstr[0] ""
+msgstr[0] "%i × %i 像素"
 
 #: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
 msgid "Unknown"
@@ -987,7 +973,7 @@ msgstr "（無效的萬國碼）"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] ""
+msgstr[0] "%i × %i  像素   %s    %i%%"
 
 #: src/eom-window.c:832
 msgid "_Reload"
@@ -1152,6 +1138,8 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
+"您確定您想要移動\n"
+"%d 個選定的圖片到垃圾筒嗎？"
 
 #: src/eom-window.c:3342
 msgid ""

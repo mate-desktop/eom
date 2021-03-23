@@ -15,9 +15,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: eom 1.23.1\n"
+"Project-Id-Version: eom 1.24.0\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
-"POT-Creation-Date: 2020-01-10 14:33+0100\n"
+"POT-Creation-Date: 2020-08-16 21:02+0200\n"
 "PO-Revision-Date: 2020-02-14 12:07+0000\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>, 2020\n"
 "Language-Team: Slovak (https://www.transifex.com/mate/teams/13566/sk/)\n"
@@ -62,7 +62,7 @@ msgstr "Oddeľovač"
 
 #: data/eom.appdata.xml.in:6 src/eom-window.c:2640
 msgid "Eye of MATE"
-msgstr "Oko MATE"
+msgstr "Oko prostredia MATE"
 
 #: data/eom.appdata.xml.in:7
 msgid "Simple image viewer"
@@ -74,26 +74,24 @@ msgid ""
 " image is loaded, you can zoom and rotate the image, and also view "
 "subsequent images in the directory the image was loaded from."
 msgstr ""
+"Oko prostredia MATE je jednoduchý prehliadač obrázkov vo vašom počítači. "
+"Zobrazené obrázky si môžete priblížiť, otočiť, alebo prezrieť aj ďalšie "
+"obrázky z priečinka, z ktorého bol prvý obrázok načítaný."
 
 #: data/eom.desktop.in.in:3 src/main.c:65 src/main.c:166
 msgid "Eye of MATE Image Viewer"
-msgstr "Prehliadač obrázkov Oko MATE"
+msgstr "Prehliadač obrázkov Oko prostredia MATE"
 
 #: data/eom.desktop.in.in:4
 msgid "Browse and rotate images"
 msgstr "Prehliadať a otáčať obrázky"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/eom.desktop.in.in:8
-msgid "eom"
-msgstr "eom"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/eom.desktop.in.in:14
 msgid "image;viewer;JPEG;PNG;TIFF;SVG;MATE;photos;browse;thumbnails;rotate;"
 msgstr ""
+"obrázok;prehliadač;JPEG;PNG;TIFF;SVG;MATE;fotky;fotografie;náhľady;miniatúry;otočiť;otočenie;"
 
 #: data/eom-image-properties-dialog.ui:8
 msgid "Image Properties"
@@ -247,7 +245,7 @@ msgstr "Náhľad názvu súboru"
 
 #: data/eom-preferences-dialog.ui:16
 msgid "Eye of MATE Preferences"
-msgstr "Nastavenia Oka MATE"
+msgstr "Predvoľby aplikácie Oko prostredia MATE"
 
 #: data/eom-preferences-dialog.ui:88
 msgid "Image Enhancements"
@@ -574,9 +572,9 @@ msgid ""
 "the trash. It will still ask if any of the files cannot be moved to the "
 "trash and would be deleted instead."
 msgstr ""
-"Ak je aktivované, Eye of MATE nebude žiadať potvrdenie pri premiestňovaní "
-"obrázkov do koša. Stále budete vyzvaný, pokiaľ niektorý z obrázkov nebude "
-"môcť byť presunutý do koša a namiesto toho bude zmazaný."
+"Ak je aktivované, Oko prostredia MATE nebude žiadať potvrdenie pri "
+"premiestňovaní obrázkov do koša. Stále budete vyzvaný, pokiaľ niektorý z "
+"obrázkov nebude môcť byť presunutý do koša a namiesto toho bude zmazaný."
 
 #: data/org.mate.eom.gschema.xml.in:117
 msgid ""
@@ -648,10 +646,6 @@ msgstr ""
 msgid "Fullscreen with double-click"
 msgstr "Celá obrazovka dvojklikom"
 
-#: plugins/fullscreen/fullscreen.plugin.desktop.in:6
-msgid "view-fullscreen"
-msgstr "view-fullscreen"
-
 #: plugins/reload/eom-reload-plugin.c:45
 #: plugins/reload/reload.plugin.desktop.in:5
 msgid "Reload Image"
@@ -660,10 +654,6 @@ msgstr "Znovu načítať obrázok"
 #: plugins/reload/eom-reload-plugin.c:45
 msgid "Reload current image"
 msgstr "Znovu načítať aktuálny obrázok"
-
-#: plugins/reload/reload.plugin.desktop.in:6
-msgid "view-refresh"
-msgstr "view-refresh"
 
 #: plugins/statusbar-date/statusbar-date.plugin.desktop.in:5
 msgid "Date in statusbar"
@@ -691,10 +681,11 @@ msgstr "Uložiť zmeny v obrázku „%s“ pred ukončením?"
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
-msgstr[0] ""
+msgstr[0] "%d obrázok nemá uložené zmeny. Chcete uložiť zmeny pred zavretím?"
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+"%d obrázky nemajú uložené zmeny. Chcete uložiť zmeny pred zavretím?"
+msgstr[2] "%d obrázku nemá uložené zmeny. Chcete uložiť zmeny pred zavretím?"
+msgstr[3] "%d obrázkov nemá uložené zmeny. Chcete uložiť zmeny pred zavretím?"
 
 #: src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
@@ -713,8 +704,8 @@ msgid ""
 "Eye of MATE could not determine a supported writable file format based on "
 "the filename."
 msgstr ""
-"Program Oko MATE nedokázal určiť podporovaný zapisovateľný formát na základe"
-" tohto názvu súboru."
+"Aplikácii Oko prostredia MATE sa nepodarilo rozpoznať podporovaný "
+"zapisovateľný formát na základe tohto názvu súboru."
 
 #: src/eom-file-chooser.c:127
 msgid "Please try a different file extension like .png or .jpg."
@@ -883,10 +874,10 @@ msgstr "%.1f (35mm film)"
 #, c-format
 msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%i × %i pixel"
+msgstr[1] "%i × %i pixely"
+msgstr[2] "%i × %i pixelu"
+msgstr[3] "%i × %i pixelov"
 
 #: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
 msgid "Unknown"
@@ -1018,7 +1009,7 @@ msgstr "Najmenej dva súbory majú rovnaký názov."
 
 #: src/eom-util.c:68
 msgid "Could not display help for Eye of MATE"
-msgstr "Nepodarilo sa zobraziť pomocníka pre Oko MATE"
+msgstr "Nepodarilo sa zobraziť pomocníka aplikácie Oko prostredia MATE"
 
 #: src/eom-util.c:116
 msgid " (invalid Unicode)"
@@ -1034,10 +1025,10 @@ msgstr " (neplatný Unicode)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%i × %i pixel  %s    %i%%"
+msgstr[1] "%i × %i pixely  %s    %i%%"
+msgstr[2] "%i × %i pixelu  %s    %i%%"
+msgstr[3] "%i × %i pixelov  %s    %i%%"
 
 #: src/eom-window.c:832
 msgid "_Reload"
@@ -1166,7 +1157,7 @@ msgstr ""
 
 #: src/eom-window.c:2742 src/eom-window.c:2757
 msgid "Error launching appearance preferences dialog: "
-msgstr ""
+msgstr "Chyba pri spúšťaní dialógového okna s predvoľbami vzhľadu:"
 
 #: src/eom-window.c:2792
 msgid "_Open Background Preferences"
@@ -1303,7 +1294,7 @@ msgstr "_Nastavenia"
 
 #: src/eom-window.c:3793
 msgid "Preferences for Eye of MATE"
-msgstr "Nastavenia pre Oko MATE"
+msgstr "Predvoľby aplikácie Oko prostredia MATE"
 
 #: src/eom-window.c:3795
 msgid "_Contents"
@@ -1384,7 +1375,7 @@ msgstr "Otvoriť obsiahnutý _priečinok"
 
 #: src/eom-window.c:3829
 msgid "Show the folder which contains this file in the file manager"
-msgstr ""
+msgstr "Zobraziť priečinok obsahujúci tento súbor v správcovi súborov"
 
 #: src/eom-window.c:3831
 msgid "_Print…"

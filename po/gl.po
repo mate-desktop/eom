@@ -7,15 +7,15 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Martin Wimpress <code@flexion.org>, 2020
 # André Rivero Castillo <hab130@gmail.com>, 2020
-# Miguel Anxo Bouzada <mbouzada@gmail.com>, 2020
+# Miguel Anxo Bouzada <mbouzada@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: eom 1.23.1\n"
+"Project-Id-Version: eom 1.24.0\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
-"POT-Creation-Date: 2020-01-10 14:33+0100\n"
+"POT-Creation-Date: 2020-08-16 21:02+0200\n"
 "PO-Revision-Date: 2020-02-14 12:07+0000\n"
-"Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>, 2020\n"
+"Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>, 2021\n"
 "Language-Team: Galician (https://www.transifex.com/mate/teams/13566/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -81,12 +81,6 @@ msgstr "Visor de imaxes Ollo do MATE"
 #: data/eom.desktop.in.in:4
 msgid "Browse and rotate images"
 msgstr "Ver e rotar imaxes"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/eom.desktop.in.in:8
-msgid "eom"
-msgstr "eom"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -173,7 +167,7 @@ msgstr "Descrición:"
 
 #: data/eom-image-properties-dialog.ui:630
 msgid "Keywords:"
-msgstr "Palabras chave:"
+msgstr "Palabras clave:"
 
 #: data/eom-image-properties-dialog.ui:646
 msgid "Author:"
@@ -401,7 +395,7 @@ msgid ""
 "background-color key is not set, the color is determined by the active GTK+ "
 "theme instead."
 msgstr ""
-"A cor que se usa para rechear o área detrás da imaxe. Se a chave use-"
+"A cor que se usa para encher o área detrás da imaxe. Se a clave use-"
 "background-color non está estabelecida, a cor é determinada polo tema de "
 "GTK+ activo."
 
@@ -415,8 +409,8 @@ msgid ""
 " fill the area behind the image. If it is not set, the current GTK+ theme "
 "will determine the fill color."
 msgstr ""
-"Se isto está activado usarase a cor definida pola chave background-color "
-"para rechear a área detrás da imaxe. Se non está definida, o tema de GTK+ "
+"Se isto está activado usarase a cor definida pola clave background-color "
+"para encher a área detrás da imaxe. Se non está definida, o tema de GTK+ "
 "actual determinará a cor de recheo."
 
 #: data/org.mate.eom.gschema.xml.in:26
@@ -454,7 +448,7 @@ msgid ""
 "color value used."
 msgstr ""
 "Determina como debería indicarse a transparencia. Os valores aceptados son "
-"CHECKED, COLOR e NONE. Se se escolle COLOR, entón a chave «trans-color» "
+"CHECKED, COLOR e NONE. Se se escolle COLOR, entón a clave «trans-color» "
 "determina o valor da cor usada."
 
 #: data/org.mate.eom.gschema.xml.in:41
@@ -490,7 +484,7 @@ msgid ""
 "If the transparency key has the value COLOR, then this key determines the "
 "color which is used for indicating transparency."
 msgstr ""
-"Se a chave de transparencia ten o valor COLOR, entón esta chave determina a "
+"Se a clave de transparencia ten o valor COLOR, entón esta clave determina a "
 "cor que se utilizará para indicar a transparencia."
 
 #: data/org.mate.eom.gschema.xml.in:58
@@ -520,7 +514,7 @@ msgid ""
 "If this is set to FALSE small images will not be stretched to fit into the "
 "screen initially."
 msgstr ""
-"Se está definido como FALSE, as imaxes pequenas non se expandirán "
+"Se está definido como FALSO, as imaxes pequenas non se expandirán "
 "inicialmente para encaixar na pantalla."
 
 #: data/org.mate.eom.gschema.xml.in:73
@@ -602,7 +596,7 @@ msgstr ""
 "Se está activada a lista de metadatos detallados no diálogo de propiedades "
 "moverase á súa propia páxina no diálogo. Isto debería facer o diálogo máis "
 "usábel en pantallas pequenas, i.e. as usadas nos notebooks. Se está "
-"desactivada o widget incorporarase na páxina «Metadata»."
+"desactivada o trebello incorporarase na páxina «Metadata»."
 
 #: data/org.mate.eom.gschema.xml.in:122
 msgid "External program to use for editing images"
@@ -656,10 +650,6 @@ msgstr ""
 msgid "Fullscreen with double-click"
 msgstr "Pantalla completa con dobre pulsación"
 
-#: plugins/fullscreen/fullscreen.plugin.desktop.in:6
-msgid "view-fullscreen"
-msgstr "vista a pantalla completa"
-
 #: plugins/reload/eom-reload-plugin.c:45
 #: plugins/reload/reload.plugin.desktop.in:5
 msgid "Reload Image"
@@ -668,10 +658,6 @@ msgstr "Volver cargar a imaxe"
 #: plugins/reload/eom-reload-plugin.c:45
 msgid "Reload current image"
 msgstr "Volver cargar a imaxe actual"
-
-#: plugins/reload/reload.plugin.desktop.in:6
-msgid "view-refresh"
-msgstr "actualizar a vista"
 
 #: plugins/statusbar-date/statusbar-date.plugin.desktop.in:5
 msgid "Date in statusbar"
@@ -687,7 +673,7 @@ msgstr "Pregunta"
 
 #: src/eom-close-confirmation-dialog.c:366
 msgid "If you don't save, your changes will be lost."
-msgstr "Se non garda, os seus cambios perderanse."
+msgstr "Se non os garda, os seus cambios perderanse."
 
 #: src/eom-close-confirmation-dialog.c:402
 #, c-format
@@ -712,7 +698,7 @@ msgstr "S_eleccione as imaxes que quere gardar:"
 
 #: src/eom-close-confirmation-dialog.c:633
 msgid "If you don't save, all your changes will be lost."
-msgstr "Se non garda, todos os seus cambios perderanse."
+msgstr "Se non os garda, todos os seus cambios perderanse."
 
 #: src/eom-file-chooser.c:121
 msgid "File format is unknown or unsupported"

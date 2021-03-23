@@ -15,17 +15,19 @@
 # clefebvre <clement.lefebvre@linuxmint.com>, 2020
 # Jan Bońkowski <bonkowskijan@gmail.com>, 2020
 # Przemek P <ppjg@dami.pl>, 2020
-# pietrasagh <pietrasagh@gmail.com>, 2020
+# pietrasagh <kowalik.piotr@pm.me>, 2020
 # Daniel Tokarzewski <bezimo@gmail.com>, 2020
 # Dominik Adrian Grzywak, 2020
+# No Ne, 2021
+# Szymon Blaut <szymonblaut315@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: eom 1.23.1\n"
+"Project-Id-Version: eom 1.24.0\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
-"POT-Creation-Date: 2020-01-10 14:33+0100\n"
+"POT-Creation-Date: 2020-08-16 21:02+0200\n"
 "PO-Revision-Date: 2020-02-14 12:07+0000\n"
-"Last-Translator: Dominik Adrian Grzywak, 2020\n"
+"Last-Translator: Szymon Blaut <szymonblaut315@gmail.com>, 2021\n"
 "Language-Team: Polish (https://www.transifex.com/mate/teams/13566/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -90,12 +92,6 @@ msgstr "Przeglądarka obrazów Eye of MATE"
 #: data/eom.desktop.in.in:4
 msgid "Browse and rotate images"
 msgstr "Przeglądanie i obracanie obrazów"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/eom.desktop.in.in:8
-msgid "eom"
-msgstr "eom"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -659,10 +655,6 @@ msgstr ""
 msgid "Fullscreen with double-click"
 msgstr "Pełny ekran za pomocą dwukrotnego kliknięcia"
 
-#: plugins/fullscreen/fullscreen.plugin.desktop.in:6
-msgid "view-fullscreen"
-msgstr "view-fullscreen"
-
 #: plugins/reload/eom-reload-plugin.c:45
 #: plugins/reload/reload.plugin.desktop.in:5
 msgid "Reload Image"
@@ -671,10 +663,6 @@ msgstr "Wczytaj obraz ponownie"
 #: plugins/reload/eom-reload-plugin.c:45
 msgid "Reload current image"
 msgstr "Wczytuje bieżący obraz ponownie"
-
-#: plugins/reload/reload.plugin.desktop.in:6
-msgid "view-refresh"
-msgstr "view-refresh"
 
 #: plugins/statusbar-date/statusbar-date.plugin.desktop.in:5
 msgid "Date in statusbar"
@@ -703,9 +691,16 @@ msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] ""
+"Mamy %d zdjęcie z nie zapisanymi zmianami. Zapisać przed zamknięciem?"
 msgstr[1] ""
+"%d zmienionych obrazów nie zostało zapisanych. Zapisać zmiany przed "
+"zamknięciem?"
 msgstr[2] ""
+"%d zmienionych obrazów nie zostało zapisanych. Zapisać zmiany przed "
+"zamknięciem?"
 msgstr[3] ""
+"%d zmienionych obrazów nie zostało zapisanych. Zapisać zmiany przed "
+"zamknięciem?"
 
 #: src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
@@ -749,10 +744,10 @@ msgstr "%s (*.%s)"
 #: src/eom-properties-dialog.c:165 src/eom-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "piksel"
+msgstr[1] "piksele"
+msgstr[2] "pikseli"
+msgstr[3] "pikseli"
 
 #: src/eom-file-chooser.c:451
 msgid "Open Image"
@@ -895,10 +890,10 @@ msgstr "%.1f (film 35mm)"
 #, c-format
 msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%i x %i piksel"
+msgstr[1] "%i x %i pikseli"
+msgstr[2] "%i x %i pikseli"
+msgstr[3] "%i x %i pikseli"
 
 #: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
 msgid "Unknown"
@@ -1046,10 +1041,10 @@ msgstr " (nieprawidłowy unikod)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%ix %i piksel %s    %i%% "
+msgstr[1] "%i × %i pikseli  %s    %i%%"
+msgstr[2] "%i × %i pikseli  %s    %i%%"
+msgstr[3] "%i × %i pikseli  %s    %i%%"
 
 #: src/eom-window.c:832
 msgid "_Reload"
@@ -1162,7 +1157,7 @@ msgid ""
 msgstr ""
 "Prawa autorskie © 2000-2010 Free Software Foundation, Inc.\n"
 "Prawa autorskie © 2011 Perberos\n"
-"Prawa autorskie © 2012-2020 Programiści MATE"
+"Prawa autorskie © 2012-2020 programiści MATE"
 
 #: src/eom-window.c:2646
 msgid "The MATE image viewer."
@@ -1228,9 +1223,17 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
+"Na pewno przenieść\n"
+"%d zaznaczony obraz do kosza?"
 msgstr[1] ""
+"Na pewno przenieść\n"
+"%d zaznaczonych obrazów do kosza?"
 msgstr[2] ""
+"Na pewno przenieść\n"
+"%d zaznaczonych obrazów do kosza?"
 msgstr[3] ""
+"Na pewno przenieść\n"
+"%d zaznaczonych obrazów do kosza?"
 
 #: src/eom-window.c:3342
 msgid ""

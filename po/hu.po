@@ -14,9 +14,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: eom 1.23.1\n"
+"Project-Id-Version: eom 1.24.0\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
-"POT-Creation-Date: 2020-01-10 14:33+0100\n"
+"POT-Creation-Date: 2020-08-16 21:02+0200\n"
 "PO-Revision-Date: 2020-02-14 12:07+0000\n"
 "Last-Translator: Balázs Meskó <meskobalazs@mailbox.org>, 2020\n"
 "Language-Team: Hungarian (https://www.transifex.com/mate/teams/13566/hu/)\n"
@@ -73,6 +73,9 @@ msgid ""
 " image is loaded, you can zoom and rotate the image, and also view "
 "subsequent images in the directory the image was loaded from."
 msgstr ""
+"Az Eye of MATE egy egyszerű képnézegető program. Ha a kép betöltődött, akkor"
+" az nagyítható és forgatható, valamint a képet tartalmazó könyvtár többi "
+"képei is megnézhetők."
 
 #: data/eom.desktop.in.in:3 src/main.c:65 src/main.c:166
 msgid "Eye of MATE Image Viewer"
@@ -82,17 +85,12 @@ msgstr "Eye of MATE képmegjelenítő"
 msgid "Browse and rotate images"
 msgstr "Képek böngészése és forgatása"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/eom.desktop.in.in:8
-msgid "eom"
-msgstr ""
-
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/eom.desktop.in.in:14
 msgid "image;viewer;JPEG;PNG;TIFF;SVG;MATE;photos;browse;thumbnails;rotate;"
 msgstr ""
+"kép;megjelenítő;JPEG;PNG;TIFF;SVG;MATE;fényképek;tallózás;bélyegkép;forgatás;"
 
 #: data/eom-image-properties-dialog.ui:8
 msgid "Image Properties"
@@ -647,10 +645,6 @@ msgstr ""
 msgid "Fullscreen with double-click"
 msgstr "Teljes képernyő dupla kattintásra"
 
-#: plugins/fullscreen/fullscreen.plugin.desktop.in:6
-msgid "view-fullscreen"
-msgstr ""
-
 #: plugins/reload/eom-reload-plugin.c:45
 #: plugins/reload/reload.plugin.desktop.in:5
 msgid "Reload Image"
@@ -659,10 +653,6 @@ msgstr "Kép újratöltése"
 #: plugins/reload/eom-reload-plugin.c:45
 msgid "Reload current image"
 msgstr "Aktuális kép újratöltése"
-
-#: plugins/reload/reload.plugin.desktop.in:6
-msgid "view-refresh"
-msgstr ""
 
 #: plugins/statusbar-date/statusbar-date.plugin.desktop.in:5
 msgid "Date in statusbar"
@@ -691,7 +681,11 @@ msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] ""
+"%d kép nem mentett változtatásokat tartalmaz. Bezárás előtt menti a "
+"változtatásokat?"
 msgstr[1] ""
+"%d kép nem mentett változtatásokat tartalmaz. Bezárás előtt menti a "
+"változtatásokat?"
 
 #: src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
@@ -734,8 +728,8 @@ msgstr "%s (*.%s)"
 #: src/eom-properties-dialog.c:165 src/eom-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "képpont"
+msgstr[1] "képpont"
 
 #: src/eom-file-chooser.c:451
 msgid "Open Image"
@@ -878,8 +872,8 @@ msgstr "%.1f (35 mm film)"
 #, c-format
 msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%i × %i képpont"
+msgstr[1] "%i × %i képpont"
 
 #: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
 msgid "Unknown"
@@ -1027,8 +1021,8 @@ msgstr " (érvénytelen Unicode)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%i × %i képpont,  %s    %i%%"
+msgstr[1] "%i × %i képpont,  %s    %i%%"
 
 #: src/eom-window.c:832
 msgid "_Reload"
@@ -1137,6 +1131,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers"
 msgstr ""
+"Copyright © 2000-2010 Free Software Foundation, Inc.\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2020 MATE fejlesztők"
 
 #: src/eom-window.c:2646
 msgid "The MATE image viewer."
@@ -1201,7 +1198,11 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
+"Biztos, hogy át akarja helyezni\n"
+"a kijelölt %d képet a Kukába?"
 msgstr[1] ""
+"Biztos, hogy át akarja helyezni\n"
+"a kijelölt %d képet a Kukába?"
 
 #: src/eom-window.c:3342
 msgid ""

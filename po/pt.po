@@ -14,17 +14,17 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Rui <xymarior@yandex.com>, 2020
 # Luis Filipe Teixeira <lufilte@gmail.com>, 2020
-# José Vieira <jvieira33@sapo.pt>, 2020
 # Guilherme Campos <guilhermemiguel97@hotmail.com>, 2020
 # Hugo Carvalho <hugokarvalho@hotmail.com>, 2020
+# José Vieira <jvieira33@sapo.pt>, 2020
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: eom 1.23.1\n"
+"Project-Id-Version: eom 1.24.0\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
-"POT-Creation-Date: 2020-01-10 14:33+0100\n"
+"POT-Creation-Date: 2020-08-16 21:02+0200\n"
 "PO-Revision-Date: 2020-02-14 12:07+0000\n"
-"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>, 2020\n"
+"Last-Translator: José Vieira <jvieira33@sapo.pt>, 2020\n"
 "Language-Team: Portuguese (https://www.transifex.com/mate/teams/13566/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -91,12 +91,6 @@ msgstr "Visualizador de imagens Eye of MATE"
 #: data/eom.desktop.in.in:4
 msgid "Browse and rotate images"
 msgstr "Explorar e rodar imagens"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/eom.desktop.in.in:8
-msgid "eom"
-msgstr "eom"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -666,10 +660,6 @@ msgstr ""
 msgid "Fullscreen with double-click"
 msgstr "Ecrã completo com dois cliques"
 
-#: plugins/fullscreen/fullscreen.plugin.desktop.in:6
-msgid "view-fullscreen"
-msgstr "vista-ecrãcompleto"
-
 #: plugins/reload/eom-reload-plugin.c:45
 #: plugins/reload/reload.plugin.desktop.in:5
 msgid "Reload Image"
@@ -678,10 +668,6 @@ msgstr "Recarregar imagem"
 #: plugins/reload/eom-reload-plugin.c:45
 msgid "Reload current image"
 msgstr "Recarregar imagem atual"
-
-#: plugins/reload/reload.plugin.desktop.in:6
-msgid "view-refresh"
-msgstr "vista-recarregar"
 
 #: plugins/statusbar-date/statusbar-date.plugin.desktop.in:5
 msgid "Date in statusbar"
@@ -710,7 +696,11 @@ msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] ""
+"Há %d imagem com alterações não gravadas. Gravar as alterações antes de "
+"fechar?"
 msgstr[1] ""
+"Há %d imagens com alterações não gravadas. Gravar as alterações antes de "
+"fechar?"
 
 #: src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
@@ -753,8 +743,8 @@ msgstr "%s (*.%s)"
 #: src/eom-properties-dialog.c:165 src/eom-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "píxel"
+msgstr[1] "píxeis"
 
 #: src/eom-file-chooser.c:451
 msgid "Open Image"
@@ -897,8 +887,8 @@ msgstr "%.1f (rolo de 35mm)"
 #, c-format
 msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%i × %i píxel"
+msgstr[1] "%i × %i píxeis"
 
 #: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
 msgid "Unknown"
@@ -1046,8 +1036,8 @@ msgstr " (Unicode inválido)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%i × %i píxel  %s    %i%%"
+msgstr[1] "%i × %i píxeis  %s    %i%%"
 
 #: src/eom-window.c:832
 msgid "_Reload"
@@ -1216,7 +1206,11 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
+"Tem a certeza de que pretende mover\n"
+"a imagem %d selecionada para o lixo?"
 msgstr[1] ""
+"Tem a certeza de que pretende mover\n"
+"as imagens %d selecionadas para o lixo?"
 
 #: src/eom-window.c:3342
 msgid ""

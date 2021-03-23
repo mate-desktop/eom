@@ -8,19 +8,19 @@
 # Rax Garfield <admin@dvizho.ks.ua>, 2020
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # zubr139, 2020
-# Микола Ткач <chistomov@gmail.com>, 2020
 # 8368efb4263ae7005ba7cc0c0f943bdd_16f29c1, 2020
 # clefebvre <clement.lefebvre@linuxmint.com>, 2020
 # Шаповалов Анатолій Романович <elrond.716.smith@gmail.com>, 2020
 # Oleksii Khalikov <oleksii.khalikov@gmail.com>, 2020
+# Микола Ткач <chistomov@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: eom 1.23.1\n"
+"Project-Id-Version: eom 1.24.0\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
-"POT-Creation-Date: 2020-01-10 14:33+0100\n"
+"POT-Creation-Date: 2020-08-16 21:02+0200\n"
 "PO-Revision-Date: 2020-02-14 12:07+0000\n"
-"Last-Translator: Oleksii Khalikov <oleksii.khalikov@gmail.com>, 2020\n"
+"Last-Translator: Микола Ткач <chistomov@gmail.com>, 2021\n"
 "Language-Team: Ukrainian (https://www.transifex.com/mate/teams/13566/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -87,12 +87,6 @@ msgstr "Програма \"Око MATE\""
 #: data/eom.desktop.in.in:4
 msgid "Browse and rotate images"
 msgstr "Перегляд та обертання зображень"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/eom.desktop.in.in:8
-msgid "eom"
-msgstr "eom"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -658,10 +652,6 @@ msgstr ""
 msgid "Fullscreen with double-click"
 msgstr "На увесь екран подвійним клацанням"
 
-#: plugins/fullscreen/fullscreen.plugin.desktop.in:6
-msgid "view-fullscreen"
-msgstr "view-fullscreen"
-
 #: plugins/reload/eom-reload-plugin.c:45
 #: plugins/reload/reload.plugin.desktop.in:5
 msgid "Reload Image"
@@ -670,10 +660,6 @@ msgstr "Перезавантажити зображення"
 #: plugins/reload/eom-reload-plugin.c:45
 msgid "Reload current image"
 msgstr "Перезавантажити поточне зображення"
-
-#: plugins/reload/reload.plugin.desktop.in:6
-msgid "view-refresh"
-msgstr "view-refresh"
 
 #: plugins/statusbar-date/statusbar-date.plugin.desktop.in:5
 msgid "Date in statusbar"
@@ -747,10 +733,10 @@ msgstr "%s (*.%s)"
 #: src/eom-properties-dialog.c:165 src/eom-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "піксель"
+msgstr[1] "пікселі"
+msgstr[2] "пікселів"
+msgstr[3] "пікселів"
 
 #: src/eom-file-chooser.c:451
 msgid "Open Image"
@@ -893,10 +879,10 @@ msgstr "%.1f (35мм плівка)"
 #, c-format
 msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%i × %i піксель"
+msgstr[1] "%i × %i пікселі"
+msgstr[2] "%i × %i пікселів"
+msgstr[3] "%i × %i пікселів"
 
 #: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
 msgid "Unknown"
@@ -1044,10 +1030,10 @@ msgstr " (неприйнятний символ Unicode)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%i × %i піксель  %s    %i%%"
+msgstr[1] "%i × %i пікселі  %s    %i%%"
+msgstr[2] "%i × %i пікселів  %s    %i%%"
+msgstr[3] "%i × %i пікселів  %s    %i%%"
 
 #: src/eom-window.c:832
 msgid "_Reload"
@@ -1156,6 +1142,9 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2020 MATE developers"
 msgstr ""
+"Авторські права © 2000-2010 Фонд вільного програмного забезпечення, Inc.\n"
+"Авторське право © 2011 Перберос\n"
+"Авторське право © 2012-2020 Розробники MATE"
 
 #: src/eom-window.c:2646
 msgid "The MATE image viewer."
