@@ -96,6 +96,7 @@ main (int argc, char **argv)
 	GOptionContext *ctx;
 	GFile *css_file;
 	GtkCssProvider *provider;
+	gboolean success;
 
 #ifdef ENABLE_NLS
 	bindtextdomain (GETTEXT_PACKAGE, EOM_LOCALE_DIR);
@@ -114,7 +115,11 @@ main (int argc, char **argv)
 	g_option_context_add_group (ctx, g_irepository_get_option_group ());
 #endif
 
-	if (!g_option_context_parse (ctx, &argc, &argv, &error)) {
+	success = g_option_context_parse (ctx, &argc, &argv, &error);
+	g_option_context_free (ctx);
+	g_strfreev (startup_files);
+
+	if (!success) {
 		gchar *help_msg;
 
 		/* I18N: The '%s' is replaced with eom's command name. */
@@ -124,12 +129,9 @@ main (int argc, char **argv)
                 g_printerr ("%s\n%s\n", error->message, help_msg);
                 g_error_free (error);
 		g_free (help_msg);
-                g_option_context_free (ctx);
 
                 return 1;
         }
-	g_option_context_free (ctx);
-
 
 	set_startup_flags ();
 
@@ -174,7 +176,6 @@ main (int argc, char **argv)
 
 	g_application_run (G_APPLICATION (EOM_APP), argc, argv);
 	g_object_unref (EOM_APP);
-	g_strfreev (startup_files);
 
 #ifdef HAVE_EXEMPI
 	xmp_terminate();
