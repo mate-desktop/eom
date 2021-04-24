@@ -174,9 +174,7 @@ main (int argc, char **argv)
 
 	g_application_run (G_APPLICATION (EOM_APP), argc, argv);
 	g_object_unref (EOM_APP);
-
-  	if (startup_files)
-		g_strfreev (startup_files);
+	g_strfreev (startup_files);
 
 #ifdef HAVE_EXEMPI
 	xmp_terminate();
