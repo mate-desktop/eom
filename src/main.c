@@ -71,8 +71,8 @@ static const GOptionEntry goption_options[] =
 	{ "disable-image-collection", 'c', 0, G_OPTION_ARG_NONE, &disable_collection, N_("Disable image collection"), NULL  },
 	{ "slide-show", 's', 0, G_OPTION_ARG_NONE, &slide_show, N_("Open in slideshow mode"), NULL  },
 	{ "new-instance", 'n', 0, G_OPTION_ARG_NONE, &force_new_instance, N_("Start a new instance instead of reusing an existing one"), NULL },
-	{ "version", 0, G_OPTION_FLAG_NO_ARG, G_OPTION_ARG_CALLBACK,
-	  _print_version_and_exit, N_("Show the application's version"), NULL},
+	{ "version", 0, G_OPTION_FLAG_NO_ARG, G_OPTION_ARG_CALLBACK, _print_version_and_exit, N_("Show the application's version"), NULL},
+	{ G_OPTION_REMAINING, 0, 0, G_OPTION_ARG_FILENAME_ARRAY, &startup_files, NULL, N_("[FILE…]") },
 	{ NULL }
 };
 
@@ -105,7 +105,7 @@ main (int argc, char **argv)
 
 	gdk_set_allowed_backends ("wayland,x11");
 
-	ctx = g_option_context_new (_("[FILE…]"));
+	ctx = g_option_context_new (_("- Eye of MATE Image Viewer"));
 	g_option_context_add_main_entries (ctx, goption_options, PACKAGE);
 	/* Option groups are free'd together with the context
 	 * Using gtk_get_option_group here initializes gtk during parsing */
