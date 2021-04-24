@@ -130,7 +130,7 @@ main (int argc, char **argv)
                 g_error_free (error);
 		g_free (help_msg);
 
-                return 1;
+                return EXIT_FAILURE;
         }
 
 	set_startup_flags ();
@@ -180,5 +180,5 @@ main (int argc, char **argv)
 #ifdef HAVE_EXEMPI
 	xmp_terminate();
 #endif
-	return 0;
+	return EXIT_SUCCESS;
 }
