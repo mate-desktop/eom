@@ -1,3 +1,27 @@
+### eom 1.25.1
+
+  * Translations update
+  * eom-window: Remove -Wmissing-field-initializers warnings
+  * build: change the message for NLS in the configure summary
+  * build: allow users to disable gettext support (--disable-nls)
+  * build: Use PACKAGE_URL variable
+  * build: display package name and version in configure summary
+  * Fix desktop file validation warning
+  * Remove cppcheck warning knownConditionTrueFalse
+  * Remove unnecessary casts on signal function calls
+  * Update copyright to 2021
+  * Remove warning -Wshadow
+  * eom-uri-converter: dereference of NULL 'repl_str' reported by gcc
+  * Do not remove the accelerators from image properties dialog
+  * Upgrade ui files
+  * eom-save-as-dialog-helper: Fix resource path
+  * eom-image: warning -Wexpansion-to-defined
+  * eom-scroll-view.c: Redundant casting GTK_WIDGET
+  * eom-scroll-view: Remove warning incompatible-pointer-types
+  * Ensure scrollbar moves when dragged to move image
+  * require libexif 0.6.22
+  * Remove unused macros
+
 ### eom 1.25.0
 
   * Translations update
