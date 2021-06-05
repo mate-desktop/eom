@@ -6,20 +6,21 @@
 # Translators:
 # Rockers <sumorock@hotmail.com>, 2018
 # Ikuru K <kanumaiku@gmail.com>, 2018
-# ABE Tsunehiko, 2018
 # あわしろいくや <ikunya@gmail.com>, 2018
 # shinmili <rmsk.pl.ur.lpt@gmail.com>, 2018
 # Mika Kobayashi, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# 323484, 2020
+# ABE Tsunehiko, 2021
+# 323484, 2021
+# Green, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: eom 1.23.1\n"
+"Project-Id-Version: eom 1.25.0\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
-"POT-Creation-Date: 2020-01-10 14:33+0100\n"
+"POT-Creation-Date: 2021-01-16 10:43+0100\n"
 "PO-Revision-Date: 2018-03-11 15:18+0000\n"
-"Last-Translator: 323484, 2020\n"
+"Last-Translator: Green, 2021\n"
 "Language-Team: Japanese (https://www.transifex.com/mate/teams/13566/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,46 +28,46 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:946
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:944
 #, c-format
 msgid "Show “_%s”"
 msgstr "\"%s\" の表示"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1417
 msgid "_Move on Toolbar"
 msgstr "ツールバー上で移動(_M)"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1418
 msgid "Move the selected item on the toolbar"
 msgstr "選択したアイテムをツールバー上で移動します"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1422
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1419
 msgid "_Remove from Toolbar"
 msgstr "ツールバーから削除(_R)"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1423
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
 msgid "Remove the selected item from the toolbar"
 msgstr "選択したアイテムをツールバーから削除します"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1424
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
 msgid "_Delete Toolbar"
 msgstr "ツールバーの削除(_D)"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1425
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1422
 msgid "Remove the selected toolbar"
 msgstr "選択したツールバーを削除します"
 
 #: cut-n-paste/toolbar-editor/egg-toolbar-editor.c:483
 msgid "Separator"
-msgstr "セパレーター"
+msgstr "区切り"
 
-#: data/eom.appdata.xml.in:6 src/eom-window.c:2640
+#: data/eom.appdata.xml.in:6 src/eom-window.c:2638
 msgid "Eye of MATE"
 msgstr "Eye of MATE"
 
 #: data/eom.appdata.xml.in:7
 msgid "Simple image viewer"
-msgstr "簡潔な画像ビューア"
+msgstr "簡易画像ビューア"
 
 #: data/eom.appdata.xml.in:9
 msgid ""
@@ -74,8 +75,10 @@ msgid ""
 " image is loaded, you can zoom and rotate the image, and also view "
 "subsequent images in the directory the image was loaded from."
 msgstr ""
+"Eye of MATE "
+"は、コンピュータ上の画像を閲覧するためのシンプルなビューアです。画像が読み込まれると、その画像を拡大・回転させたり、同じ画像が読み込まれたディレクトリにある他の画像を表示したりすることができます。"
 
-#: data/eom.desktop.in.in:3 src/main.c:65 src/main.c:166
+#: data/eom.desktop.in.in:3 src/main.c:63 src/main.c:164
 msgid "Eye of MATE Image Viewer"
 msgstr "Eye of MATE 画像ビューア"
 
@@ -83,257 +86,268 @@ msgstr "Eye of MATE 画像ビューア"
 msgid "Browse and rotate images"
 msgstr "いろいろな画像を閲覧します"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/eom.desktop.in.in:8
-msgid "eom"
-msgstr ""
-
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/eom.desktop.in.in:14
 msgid "image;viewer;JPEG;PNG;TIFF;SVG;MATE;photos;browse;thumbnails;rotate;"
-msgstr ""
+msgstr "image;viewer;JPEG;PNG;TIFF;SVG;MATE;photos;browse;thumbnails;rotate;"
 
-#: data/eom-image-properties-dialog.ui:8
+#: data/eom-image-properties-dialog.ui:23
 msgid "Image Properties"
 msgstr "画像の設定"
 
-#: data/eom-image-properties-dialog.ui:54
+#: data/eom-image-properties-dialog.ui:39 src/eom-window.c:3992
 msgid "_Previous"
 msgstr "前を検索(_P)"
 
-#: data/eom-image-properties-dialog.ui:101
+#: data/eom-image-properties-dialog.ui:54 src/eom-window.c:3996
 msgid "_Next"
 msgstr "次を検索(_N)"
 
-#: data/eom-image-properties-dialog.ui:198
+#: data/eom-image-properties-dialog.ui:69 data/eom-preferences-dialog.ui:55
+#: src/eom-window.c:3783
+msgid "_Close"
+msgstr "閉じる(_C)"
+
+#: data/eom-image-properties-dialog.ui:147
 msgid "Name:"
 msgstr "名前:"
 
-#: data/eom-image-properties-dialog.ui:217
+#: data/eom-image-properties-dialog.ui:166
 msgid "Width:"
 msgstr "幅:"
 
-#: data/eom-image-properties-dialog.ui:235
+#: data/eom-image-properties-dialog.ui:184
 msgid "Height:"
 msgstr "高さ:"
 
-#: data/eom-image-properties-dialog.ui:253
+#: data/eom-image-properties-dialog.ui:202
 msgid "Type:"
 msgstr "種類:"
 
-#: data/eom-image-properties-dialog.ui:271
+#: data/eom-image-properties-dialog.ui:220
 msgid "Bytes:"
 msgstr "サイズ:"
 
-#: data/eom-image-properties-dialog.ui:289
-#: data/eom-image-properties-dialog.ui:614
+#: data/eom-image-properties-dialog.ui:238
+#: data/eom-image-properties-dialog.ui:563
 msgid "Location:"
 msgstr "場所:"
 
-#: data/eom-image-properties-dialog.ui:422
+#: data/eom-image-properties-dialog.ui:371
 msgid "General"
 msgstr "全般"
 
-#: data/eom-image-properties-dialog.ui:455
+#: data/eom-image-properties-dialog.ui:404
 msgid "Aperture Value:"
 msgstr "絞り:"
 
-#: data/eom-image-properties-dialog.ui:471
+#: data/eom-image-properties-dialog.ui:420
 msgid "Exposure Time:"
 msgstr "露出時間:"
 
-#: data/eom-image-properties-dialog.ui:487
+#: data/eom-image-properties-dialog.ui:436
 msgid "Focal Length:"
 msgstr "焦点距離:"
 
-#: data/eom-image-properties-dialog.ui:503
+#: data/eom-image-properties-dialog.ui:452
 msgid "Flash:"
 msgstr "フラッシュ:"
 
-#: data/eom-image-properties-dialog.ui:519
+#: data/eom-image-properties-dialog.ui:468
 msgid "ISO Speed Rating:"
 msgstr "ISO 感度:"
 
-#: data/eom-image-properties-dialog.ui:535
+#: data/eom-image-properties-dialog.ui:484
 msgid "Metering Mode:"
-msgstr "露出補正モード:"
+msgstr "測光方式:"
 
-#: data/eom-image-properties-dialog.ui:551
+#: data/eom-image-properties-dialog.ui:500
 msgid "Camera Model:"
 msgstr "カメラの型式:"
 
-#: data/eom-image-properties-dialog.ui:568
+#: data/eom-image-properties-dialog.ui:517
 msgid "Date/Time:"
 msgstr "日付/時刻:"
 
-#: data/eom-image-properties-dialog.ui:598
+#: data/eom-image-properties-dialog.ui:547
 msgid "Description:"
 msgstr "説明:"
 
-#: data/eom-image-properties-dialog.ui:630
+#: data/eom-image-properties-dialog.ui:579
 msgid "Keywords:"
 msgstr "キーワード:"
 
-#: data/eom-image-properties-dialog.ui:646
+#: data/eom-image-properties-dialog.ui:595
 msgid "Author:"
 msgstr "作者:"
 
-#: data/eom-image-properties-dialog.ui:662
+#: data/eom-image-properties-dialog.ui:611
 msgid "Copyright:"
 msgstr "著作権:"
 
-#: data/eom-image-properties-dialog.ui:941
-#: data/eom-image-properties-dialog.ui:990 data/metadata-sidebar.ui:409
+#: data/eom-image-properties-dialog.ui:890
+#: data/eom-image-properties-dialog.ui:939 data/metadata-sidebar.ui:409
 msgid "Details"
 msgstr "詳細"
 
-#: data/eom-image-properties-dialog.ui:966
+#: data/eom-image-properties-dialog.ui:915
 msgid "Metadata"
 msgstr "メタデータ"
 
-#: data/eom-multiple-save-as-dialog.ui:16
+#: data/eom-multiple-save-as-dialog.ui:26
 msgid "Save As"
 msgstr "別名で保存"
 
-#: data/eom-multiple-save-as-dialog.ui:101
+#: data/eom-multiple-save-as-dialog.ui:42
+msgid "_Cancel"
+msgstr "キャンセル(_C)"
+
+#: data/eom-multiple-save-as-dialog.ui:57
+msgid "Save _As"
+msgstr "別名で保存(_A)"
+
+#: data/eom-multiple-save-as-dialog.ui:114
 msgid "<b>%f:</b> original filename"
 msgstr "<b>%f:</b> オリジナルのファイル名"
 
-#: data/eom-multiple-save-as-dialog.ui:119
+#: data/eom-multiple-save-as-dialog.ui:132
 msgid "<b>%n:</b> counter"
 msgstr "<b>%n:</b> カウンタ"
 
-#: data/eom-multiple-save-as-dialog.ui:169
+#: data/eom-multiple-save-as-dialog.ui:182
 msgid "Choose a folder"
 msgstr "フォルダの選択"
 
-#: data/eom-multiple-save-as-dialog.ui:182
+#: data/eom-multiple-save-as-dialog.ui:195
 msgid "Destination folder:"
 msgstr "保存先のフォルダ:"
 
-#: data/eom-multiple-save-as-dialog.ui:194
+#: data/eom-multiple-save-as-dialog.ui:207
 msgid "Filename format:"
 msgstr "ファイル名の書式:"
 
-#: data/eom-multiple-save-as-dialog.ui:212
+#: data/eom-multiple-save-as-dialog.ui:225
 msgid "File Path Specifications"
 msgstr "パス名の詳細"
 
-#: data/eom-multiple-save-as-dialog.ui:253
+#: data/eom-multiple-save-as-dialog.ui:266
 msgid "Start counter at:"
 msgstr "開始番号:"
 
-#: data/eom-multiple-save-as-dialog.ui:285
+#: data/eom-multiple-save-as-dialog.ui:298
 msgid "Replace spaces with underscores"
 msgstr "空白をアンダースコアで置き換える"
 
-#: data/eom-multiple-save-as-dialog.ui:307
+#: data/eom-multiple-save-as-dialog.ui:320
 msgid "Options"
 msgstr "オプション"
 
-#: data/eom-multiple-save-as-dialog.ui:369
+#: data/eom-multiple-save-as-dialog.ui:383
 msgid "Rename from:"
 msgstr "変更前:"
 
-#: data/eom-multiple-save-as-dialog.ui:381
+#: data/eom-multiple-save-as-dialog.ui:395
 msgid "To:"
 msgstr "コピー先:"
 
-#: data/eom-multiple-save-as-dialog.ui:396
+#: data/eom-multiple-save-as-dialog.ui:425
 msgid "File Name Preview"
 msgstr "ファイル名のプレビュー"
 
-#: data/eom-preferences-dialog.ui:16
+#: data/eom-preferences-dialog.ui:26
 msgid "Eye of MATE Preferences"
 msgstr "Eye of MATE の設定"
 
-#: data/eom-preferences-dialog.ui:88
+#: data/eom-preferences-dialog.ui:39 src/eom-window.c:3778
+msgid "_Help"
+msgstr "ヘルプ(_H)"
+
+#: data/eom-preferences-dialog.ui:100
 msgid "Image Enhancements"
 msgstr "画像の強調"
 
-#: data/eom-preferences-dialog.ui:117
+#: data/eom-preferences-dialog.ui:129
 msgid "Smooth images when zoomed-_out"
 msgstr "拡大する際に画像を補正する(_O)"
 
-#: data/eom-preferences-dialog.ui:155
+#: data/eom-preferences-dialog.ui:167
 msgid "Smooth images when zoomed-_in"
 msgstr "縮小する際に画像を補正する(_I)"
 
-#: data/eom-preferences-dialog.ui:193
+#: data/eom-preferences-dialog.ui:205
 msgid "_Automatic orientation"
 msgstr "自動的に向きを調整する(_A)"
 
-#: data/eom-preferences-dialog.ui:231
+#: data/eom-preferences-dialog.ui:243
 msgid "Background"
 msgstr "背景"
 
-#: data/eom-preferences-dialog.ui:250
+#: data/eom-preferences-dialog.ui:262
 msgid "As custom color:"
 msgstr "カスタム色:"
 
-#: data/eom-preferences-dialog.ui:267 data/org.mate.eom.gschema.xml.in:16
+#: data/eom-preferences-dialog.ui:279 data/org.mate.eom.gschema.xml.in:16
 msgid "Background Color"
 msgstr "背景の色"
 
-#: data/eom-preferences-dialog.ui:300
+#: data/eom-preferences-dialog.ui:312
 msgid "Transparent Parts"
 msgstr "透過な部分"
 
-#: data/eom-preferences-dialog.ui:335
+#: data/eom-preferences-dialog.ui:347
 msgid "As check _pattern"
 msgstr "格子縞にする(_P)"
 
-#: data/eom-preferences-dialog.ui:356
+#: data/eom-preferences-dialog.ui:368
 msgid "As custom c_olor:"
 msgstr "その他(_O):"
 
-#: data/eom-preferences-dialog.ui:377
+#: data/eom-preferences-dialog.ui:389
 msgid "Color for Transparent Areas"
 msgstr "透過な部分の色"
 
-#: data/eom-preferences-dialog.ui:395
+#: data/eom-preferences-dialog.ui:407
 msgid "As _background"
 msgstr "背景と同じ(_B)"
 
-#: data/eom-preferences-dialog.ui:437
+#: data/eom-preferences-dialog.ui:449
 msgid "Image View"
 msgstr "画像の表示"
 
-#: data/eom-preferences-dialog.ui:461
+#: data/eom-preferences-dialog.ui:473
 msgid "Image Zoom"
 msgstr "画像の拡大/縮小"
 
-#: data/eom-preferences-dialog.ui:496
+#: data/eom-preferences-dialog.ui:508
 msgid "E_xpand images to fit screen"
 msgstr "画面一杯に広げる(_X)"
 
-#: data/eom-preferences-dialog.ui:541
+#: data/eom-preferences-dialog.ui:553
 msgid "Sequence"
 msgstr "順番"
 
-#: data/eom-preferences-dialog.ui:583
+#: data/eom-preferences-dialog.ui:595
 msgid "_Switch image after:"
 msgstr "画像を切り替える時間(_S):"
 
-#: data/eom-preferences-dialog.ui:611
+#: data/eom-preferences-dialog.ui:623
 msgid "seconds"
 msgstr "秒"
 
-#: data/eom-preferences-dialog.ui:628
+#: data/eom-preferences-dialog.ui:640
 msgid "_Random sequence"
 msgstr "ランダム(_R)"
 
-#: data/eom-preferences-dialog.ui:644
+#: data/eom-preferences-dialog.ui:656
 msgid "_Loop sequence"
 msgstr "繰り返す(_L)"
 
-#: data/eom-preferences-dialog.ui:688
+#: data/eom-preferences-dialog.ui:700
 msgid "Slideshow"
 msgstr "スライドショー"
 
-#: data/eom-preferences-dialog.ui:722
+#: data/eom-preferences-dialog.ui:734
 msgid "Plugins"
 msgstr "プラグイン"
 
@@ -347,7 +361,7 @@ msgstr "種類"
 
 #: data/metadata-sidebar.ui:63
 msgid "File Size"
-msgstr ""
+msgstr "ファイルのサイズ"
 
 #: data/metadata-sidebar.ui:82
 msgid "Folder"
@@ -355,19 +369,19 @@ msgstr "フォルダ"
 
 #: data/metadata-sidebar.ui:99
 msgid "Aperture"
-msgstr ""
+msgstr "絞り"
 
 #: data/metadata-sidebar.ui:116
 msgid "Exposure"
-msgstr ""
+msgstr "露出"
 
 #: data/metadata-sidebar.ui:133
 msgid "ISO"
-msgstr ""
+msgstr "ISO"
 
 #: data/metadata-sidebar.ui:151
 msgid "Metering"
-msgstr ""
+msgstr "測光"
 
 #: data/metadata-sidebar.ui:169 src/eom-metadata-details.c:65
 msgid "Camera"
@@ -625,10 +639,6 @@ msgstr ""
 msgid "Fullscreen with double-click"
 msgstr "ダブルクリックでフルスクリーンモードにする"
 
-#: plugins/fullscreen/fullscreen.plugin.desktop.in:6
-msgid "view-fullscreen"
-msgstr ""
-
 #: plugins/reload/eom-reload-plugin.c:45
 #: plugins/reload/reload.plugin.desktop.in:5
 msgid "Reload Image"
@@ -637,10 +647,6 @@ msgstr "画像の再読み込み"
 #: plugins/reload/eom-reload-plugin.c:45
 msgid "Reload current image"
 msgstr "現在の画像をもう一度読み込みます"
-
-#: plugins/reload/reload.plugin.desktop.in:6
-msgid "view-refresh"
-msgstr ""
 
 #: plugins/statusbar-date/statusbar-date.plugin.desktop.in:5
 msgid "Date in statusbar"
@@ -668,7 +674,7 @@ msgstr "\"%s\" への変更を閉じる前に保存しますか?"
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
-msgstr[0] ""
+msgstr[0] "変更が保存されていない%d画像があります。閉じる前に変更を保存しますか？"
 
 #: src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
@@ -709,7 +715,7 @@ msgstr "%s (*.%s)"
 #: src/eom-properties-dialog.c:165 src/eom-thumb-view.c:516
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] ""
+msgstr[0] "ピクセル"
 
 #: src/eom-file-chooser.c:451
 msgid "Open Image"
@@ -719,31 +725,31 @@ msgstr "画像を開く"
 msgid "Save Image"
 msgstr "画像の保存"
 
-#: src/eom-file-chooser.c:467 src/eom-window.c:4009
+#: src/eom-file-chooser.c:467 src/eom-window.c:4006
 msgid "Open Folder"
 msgstr "フォルダーを開く"
 
-#: src/eom-image.c:552
+#: src/eom-image.c:546
 msgid "Transformation on unloaded image."
 msgstr "読み込んでいない画像で変換します。"
 
-#: src/eom-image.c:580
+#: src/eom-image.c:574
 msgid "Transformation failed."
 msgstr "変換に失敗しました。"
 
-#: src/eom-image.c:1054
+#: src/eom-image.c:1048
 msgid "EXIF not supported for this file format."
 msgstr "このファイル形式では EXIF をサポートしていません。"
 
-#: src/eom-image.c:1203
+#: src/eom-image.c:1197
 msgid "Image loading failed."
 msgstr "画像の読み込みに失敗しました。"
 
-#: src/eom-image.c:1732 src/eom-image.c:1834
+#: src/eom-image.c:1725 src/eom-image.c:1827
 msgid "No image loaded."
 msgstr "画像が読み込まれていません。"
 
-#: src/eom-image.c:1742 src/eom-image.c:1846
+#: src/eom-image.c:1735 src/eom-image.c:1839
 msgid "Temporary file creation failed."
 msgstr "作業用ファイルの生成に失敗しました。"
 
@@ -784,7 +790,7 @@ msgstr "画像の調整"
 
 #: src/eom-metadata-details.c:68
 msgid "GPS Data"
-msgstr ""
+msgstr "GPS データ"
 
 #: src/eom-metadata-details.c:69
 msgid "Maker Note"
@@ -852,7 +858,7 @@ msgstr "%.1f (35mm のフィルム)"
 #, c-format
 msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
-msgstr[0] ""
+msgstr[0] "%i × %i ピクセル"
 
 #: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
 msgid "Unknown"
@@ -865,7 +871,7 @@ msgstr "%Y年%B%e日 (%a)"
 #: src/eom-metadata-sidebar.c:233
 #, c-format
 msgid "%X"
-msgstr ""
+msgstr "%X"
 
 #: src/eom-print.c:371
 msgid "Image Settings"
@@ -978,15 +984,15 @@ msgstr "%d / %Id"
 msgid "Taken on"
 msgstr "撮影日: "
 
-#: src/eom-uri-converter.c:986
+#: src/eom-uri-converter.c:985
 msgid "At least two file names are equal."
 msgstr "同じ名前のファイルです。"
 
-#: src/eom-util.c:68
+#: src/eom-util.c:65
 msgid "Could not display help for Eye of MATE"
 msgstr "Eye of MATE のヘルプを表示できませんでした"
 
-#: src/eom-util.c:116
+#: src/eom-util.c:113
 msgid " (invalid Unicode)"
 msgstr " (不正な Unicode)"
 
@@ -1000,13 +1006,13 @@ msgstr " (不正な Unicode)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] ""
+msgstr[0] "%i × %i ピクセル  %s    %i%%"
 
 #: src/eom-window.c:832
 msgid "_Reload"
 msgstr "再読み込み(_R)"
 
-#: src/eom-window.c:834 src/eom-window.c:2794
+#: src/eom-window.c:834 src/eom-window.c:2792
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "隠す(_D)"
@@ -1040,15 +1046,15 @@ msgstr "画像 \"%s\" を保存しています (%u/%u)"
 msgid "Opening image \"%s\""
 msgstr "画像 \"%s\" を開いています"
 
-#: src/eom-window.c:1909
+#: src/eom-window.c:1907
 msgid "Leave Fullscreen"
-msgstr "フルスクリーンの解除"
+msgstr "全画面表示の解除"
 
-#: src/eom-window.c:2050
+#: src/eom-window.c:2048
 msgid "Viewing a slideshow"
-msgstr ""
+msgstr "スライドショーを表示中"
 
-#: src/eom-window.c:2263
+#: src/eom-window.c:2261
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1057,15 +1063,15 @@ msgstr ""
 "ファイルを印刷する際にエラー:\n"
 "%s"
 
-#: src/eom-window.c:2526
+#: src/eom-window.c:2524
 msgid "Toolbar Editor"
 msgstr "ツールバーの編集"
 
-#: src/eom-window.c:2529
+#: src/eom-window.c:2527
 msgid "_Reset to Default"
 msgstr "デフォルトに戻す(_R)"
 
-#: src/eom-window.c:2594
+#: src/eom-window.c:2592
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1075,7 +1081,7 @@ msgstr ""
 "このプログラムはフリーソフトウェアです;フリーソフトウェア財団が提供する GNU  "
 "一般公衆利用許諾契約書の第二版、あるいはそれ以降の版が定める条項の下で本プログラムを再頒布または変更することができます。\n"
 
-#: src/eom-window.c:2598
+#: src/eom-window.c:2596
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1085,7 +1091,7 @@ msgstr ""
 "このプログラムは有用とは思いますが、その頒布にあたっては市場性及び特定の目的、その適合性についての暗黙の保証を含めて、いかなる保証も行ないません。詳細については"
 " GNU  一般公衆利用許諾契約書をご覧ください。\n"
 
-#: src/eom-window.c:2602
+#: src/eom-window.c:2600
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
@@ -1095,45 +1101,51 @@ msgstr ""
 "Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA "
 "へ手紙を書いてください。"
 
-#: src/eom-window.c:2641
+#: src/eom-window.c:2639
 msgid "About Eye of MATE"
-msgstr ""
+msgstr "Eye of MATE について"
 
-#: src/eom-window.c:2643
+#: src/eom-window.c:2641
 msgid ""
 "Copyright © 2000-2010 Free Software Foundation, Inc.\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2021 MATE developers"
 msgstr ""
+"Copyright © 2000-2010 フリーソフトウェア財団\n"
+"Copyright © 2011 Perberos\n"
+"Copyright © 2012-2021 MATE 開発者"
 
-#: src/eom-window.c:2646
-msgid "The MATE image viewer."
-msgstr "MATE の画像ビューアです。"
+#: src/eom-window.c:2644
+msgid ""
+"Eye of MATE is a simple graphics viewer for the MATE Desktop Environment."
+msgstr "Eye of MATE は MATEデスクトップ環境用のシンプルな画像ビューアです。"
 
-#: src/eom-window.c:2649
+#: src/eom-window.c:2647
 msgid "translator-credits"
 msgstr ""
-"相花 毅 <takeshi.aihana@gmail.com>\n"
-"佐藤 暁 <ss@gnome.gr.jp>\n"
-"KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>\n"
-"Akira TAGOH <tagoh@gnome.gr.jp>\n"
-"Yukihiro Nakai <nakai@gnome.gr.jp>\n"
-"Yuusuke Tahara <tahara@gnome.gr.jp>\n"
-"Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>\n"
-"やまね ひでき <henrich@debian.or.jp>\n"
-"草野 貴之 <AE5T-KSN@asahi-net.or.jp>\n"
-"松澤 二郎 <jmatsuzawa@gnome.org>\n"
-"日本GNOMEユーザー会 http://www.gnome.gr.jp/"
+"相花 毅 \n"
+"佐藤 暁 \n"
+"KAMAGASAKO Masatoshi \n"
+"Akira TAGOH \n"
+"Yukihiro Nakai \n"
+"Yuusuke Tahara \n"
+"Akira Higuchi \n"
+"やまね ひでき \n"
+"草野 貴之 \n"
+"松澤 二郎 \n"
+"Green, alias usergreen\n"
+"日本GNOMEユーザー会 http://www.gnome.gr.jp/\n"
+"MATE 文書化チーム https://www.transifex.com/mate/ "
 
-#: src/eom-window.c:2742 src/eom-window.c:2757
+#: src/eom-window.c:2740 src/eom-window.c:2755
 msgid "Error launching appearance preferences dialog: "
-msgstr ""
+msgstr "外観の環境設定ダイアログの起動エラー："
 
-#: src/eom-window.c:2792
+#: src/eom-window.c:2790
 msgid "_Open Background Preferences"
 msgstr "背景の設定を開く(_O)"
 
-#: src/eom-window.c:2808
+#: src/eom-window.c:2806
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1142,11 +1154,11 @@ msgstr ""
 "画像 \"%s\" がデスクトップの背景に設定されました。\n"
 "見た目を変更しますか?"
 
-#: src/eom-window.c:3249
+#: src/eom-window.c:3247
 msgid "Saving image locally…"
 msgstr "画像をローカルに保存中…"
 
-#: src/eom-window.c:3329
+#: src/eom-window.c:3327
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1155,14 +1167,14 @@ msgstr ""
 "本当に \"%s\" を\n"
 "ゴミ箱へ移動しますか?"
 
-#: src/eom-window.c:3332
+#: src/eom-window.c:3330
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr "\"%s\" をゴミ箱へ移動できません。この画像を直接削除しますか?"
 
-#: src/eom-window.c:3337
+#: src/eom-window.c:3335
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1170,423 +1182,407 @@ msgid ""
 msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
-msgstr[0] ""
+msgstr[0] "本当に選択した画像%dをゴミ箱に移動させてよろしいですか？"
 
-#: src/eom-window.c:3342
+#: src/eom-window.c:3340
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
 msgstr "選択した画像のいくつかはゴミ箱へ移動できません。直接削除しますが、続行してもよろしいですか?"
 
-#: src/eom-window.c:3359 src/eom-window.c:3855 src/eom-window.c:3882
+#: src/eom-window.c:3357 src/eom-window.c:3852 src/eom-window.c:3879
 msgid "Move to _Trash"
 msgstr "ゴミ箱に移動(_T)"
 
-#: src/eom-window.c:3361
+#: src/eom-window.c:3359
 msgid "_Do not ask again during this session"
 msgstr "このセッション中に二度と確認しない(_D)"
 
-#: src/eom-window.c:3406 src/eom-window.c:3420
+#: src/eom-window.c:3404 src/eom-window.c:3418
 msgid "Couldn't access trash."
 msgstr "ゴミ箱にアクセスできませんでした。"
 
-#: src/eom-window.c:3428
+#: src/eom-window.c:3426
 msgid "Couldn't delete file"
 msgstr "ファイルを削除できませんでした"
 
-#: src/eom-window.c:3530
+#: src/eom-window.c:3528
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "画像 %s を削除する際にエラー"
 
-#: src/eom-window.c:3776
+#: src/eom-window.c:3773
 msgid "_Image"
 msgstr "画像(_I)"
 
-#: src/eom-window.c:3777
+#: src/eom-window.c:3774
 msgid "_Edit"
 msgstr "編集(_E)"
 
-#: src/eom-window.c:3778
+#: src/eom-window.c:3775
 msgid "_View"
 msgstr "表示(_V)"
 
-#: src/eom-window.c:3779
+#: src/eom-window.c:3776
 msgid "_Go"
-msgstr "ジャンプ(_G)"
+msgstr "移動(_G)"
 
-#: src/eom-window.c:3780
+#: src/eom-window.c:3777
 msgid "_Tools"
 msgstr "ツール(_T)"
 
-#: src/eom-window.c:3781
-msgid "_Help"
-msgstr "ヘルプ(_H)"
-
-#: src/eom-window.c:3783
+#: src/eom-window.c:3780
 msgid "_Open…"
 msgstr "開く(_O)…"
 
-#: src/eom-window.c:3784
+#: src/eom-window.c:3781
 msgid "Open a file"
 msgstr "ファイルを開きます"
 
-#: src/eom-window.c:3786
-msgid "_Close"
-msgstr "閉じる(_C)"
-
-#: src/eom-window.c:3787
+#: src/eom-window.c:3784
 msgid "Close window"
 msgstr "ウィンドウを閉じる"
 
-#: src/eom-window.c:3789
+#: src/eom-window.c:3786
 msgid "T_oolbar"
 msgstr "ツールバー(_O)"
 
-#: src/eom-window.c:3790
+#: src/eom-window.c:3787
 msgid "Edit the application toolbar"
 msgstr "ツールバーのアイテムを編集します"
 
-#: src/eom-window.c:3792
+#: src/eom-window.c:3789
 msgid "Prefere_nces"
 msgstr "設定(_N)"
 
-#: src/eom-window.c:3793
+#: src/eom-window.c:3790
 msgid "Preferences for Eye of MATE"
 msgstr "Eye of MATE の設定を変更します"
 
-#: src/eom-window.c:3795
+#: src/eom-window.c:3792
 msgid "_Contents"
 msgstr "目次(_C)"
 
-#: src/eom-window.c:3796
+#: src/eom-window.c:3793
 msgid "Help on this application"
 msgstr "このアプリケーションのヘルプです"
 
-#: src/eom-window.c:3798
+#: src/eom-window.c:3795
 msgid "_About"
 msgstr "情報(_A)"
 
-#: src/eom-window.c:3799
+#: src/eom-window.c:3796
 msgid "About this application"
 msgstr "このアプリケーションについて"
 
-#: src/eom-window.c:3804
+#: src/eom-window.c:3801
 msgid "_Toolbar"
 msgstr "ツールバー(_T)"
 
-#: src/eom-window.c:3805
+#: src/eom-window.c:3802
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "ツールバーの表示を切り替えます"
 
-#: src/eom-window.c:3807
+#: src/eom-window.c:3804
 msgid "_Statusbar"
 msgstr "ステータスバー(_S)"
 
-#: src/eom-window.c:3808
+#: src/eom-window.c:3805
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "ステータスバーの表示を切り替えます"
 
-#: src/eom-window.c:3810
+#: src/eom-window.c:3807
 msgid "_Image Collection"
 msgstr "画像のコレクション(_I)"
 
-#: src/eom-window.c:3811
+#: src/eom-window.c:3808
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "画像コレクションの表示を切り替えます"
 
-#: src/eom-window.c:3813
+#: src/eom-window.c:3810
 msgid "Side _Pane"
 msgstr "サイドペイン(_P)"
 
-#: src/eom-window.c:3814
+#: src/eom-window.c:3811
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "サイド・ペインの表示/非表示を切り替えます"
 
-#: src/eom-window.c:3819
+#: src/eom-window.c:3816
 msgid "_Save"
 msgstr "保存(_S)"
 
-#: src/eom-window.c:3820
+#: src/eom-window.c:3817
 msgid "Save changes in currently selected images"
 msgstr "選択した画像の変更点を保存します"
 
-#: src/eom-window.c:3822
+#: src/eom-window.c:3819
 msgid "Open _with"
 msgstr "次で開く(_W)"
 
-#: src/eom-window.c:3823
+#: src/eom-window.c:3820
 msgid "Open the selected image with a different application"
 msgstr "選択した画像を別のアプリケーションで開きます"
 
-#: src/eom-window.c:3825
+#: src/eom-window.c:3822
 msgid "Save _As…"
 msgstr "別名で保存(_A)…"
 
-#: src/eom-window.c:3826
+#: src/eom-window.c:3823
 msgid "Save the selected images with a different name"
 msgstr "選択した画像に名前を付けて保存します"
 
-#: src/eom-window.c:3828
+#: src/eom-window.c:3825
 msgid "Open Containing _Folder"
 msgstr "これを含むフォルダーを開く(_F)"
 
-#: src/eom-window.c:3829
+#: src/eom-window.c:3826
 msgid "Show the folder which contains this file in the file manager"
-msgstr ""
+msgstr "ファイルマネージャでこのファイルを含むフォルダを表示します"
 
-#: src/eom-window.c:3831
+#: src/eom-window.c:3828
 msgid "_Print…"
 msgstr "印刷(_P)…"
 
-#: src/eom-window.c:3832
+#: src/eom-window.c:3829
 msgid "Print the selected image"
 msgstr "選択した画像を印刷します"
 
-#: src/eom-window.c:3834
+#: src/eom-window.c:3831
 msgid "Prope_rties"
 msgstr "プロパティ(_R)"
 
-#: src/eom-window.c:3835
+#: src/eom-window.c:3832
 msgid "Show the properties and metadata of the selected image"
 msgstr "選択した画像のプロパティとメタデータを表示します"
 
-#: src/eom-window.c:3837
+#: src/eom-window.c:3834
 msgid "_Undo"
 msgstr "元に戻す(_U)"
 
-#: src/eom-window.c:3838
+#: src/eom-window.c:3835
 msgid "Undo the last change in the image"
 msgstr "最後に適用した変更点を戻します"
 
-#: src/eom-window.c:3840
+#: src/eom-window.c:3837
 msgid "Flip _Horizontal"
 msgstr "水平方向にひっくり返す(_H)"
 
-#: src/eom-window.c:3841
+#: src/eom-window.c:3838
 msgid "Mirror the image horizontally"
 msgstr "画像を水平方向にひっくり返します"
 
-#: src/eom-window.c:3843
+#: src/eom-window.c:3840
 msgid "Flip _Vertical"
 msgstr "垂直方向にひっくり返す(_V)"
 
-#: src/eom-window.c:3844
+#: src/eom-window.c:3841
 msgid "Mirror the image vertically"
 msgstr "画像を垂直方向にひっくり返します"
 
-#: src/eom-window.c:3846
+#: src/eom-window.c:3843
 msgid "_Rotate Clockwise"
 msgstr "時計回りに回転する(_R)"
 
-#: src/eom-window.c:3847
+#: src/eom-window.c:3844
 msgid "Rotate the image 90 degrees to the right"
 msgstr "画像を右回りで90°回転させます"
 
-#: src/eom-window.c:3849
+#: src/eom-window.c:3846
 msgid "Rotate Counterc_lockwise"
 msgstr "反時計回りに回転する(_L)"
 
-#: src/eom-window.c:3850
+#: src/eom-window.c:3847
 msgid "Rotate the image 90 degrees to the left"
 msgstr "画像を左回りで90°回転させます"
 
-#: src/eom-window.c:3852
+#: src/eom-window.c:3849
 msgid "Set as _Desktop Background"
 msgstr "背景にする(_D)"
 
-#: src/eom-window.c:3853
+#: src/eom-window.c:3850
 msgid "Set the selected image as the desktop background"
 msgstr "選択した画像をデスクトップの背景にします"
 
-#: src/eom-window.c:3856
+#: src/eom-window.c:3853
 msgid "Move the selected image to the trash folder"
 msgstr "選択した画像をゴミ箱のフォルダへ移動します"
 
-#: src/eom-window.c:3858
+#: src/eom-window.c:3855
 msgid "_Copy"
 msgstr "コピー(_C)"
 
-#: src/eom-window.c:3859
+#: src/eom-window.c:3856
 msgid "Copy the selected image to the clipboard"
 msgstr "選択された画像をクリップボードへコピーします。"
 
-#: src/eom-window.c:3861 src/eom-window.c:3873 src/eom-window.c:3876
+#: src/eom-window.c:3858 src/eom-window.c:3870 src/eom-window.c:3873
 msgid "_Zoom In"
 msgstr "拡大(_I)"
 
-#: src/eom-window.c:3862 src/eom-window.c:3874
+#: src/eom-window.c:3859 src/eom-window.c:3871
 msgid "Enlarge the image"
 msgstr "画像を拡大します"
 
-#: src/eom-window.c:3864 src/eom-window.c:3879
+#: src/eom-window.c:3861 src/eom-window.c:3876
 msgid "Zoom _Out"
 msgstr "縮小(_O)"
 
-#: src/eom-window.c:3865 src/eom-window.c:3877 src/eom-window.c:3880
+#: src/eom-window.c:3862 src/eom-window.c:3874 src/eom-window.c:3877
 msgid "Shrink the image"
 msgstr "画像を縮小します"
 
-#: src/eom-window.c:3867
+#: src/eom-window.c:3864
 msgid "_Normal Size"
 msgstr "元のサイズ(_N)"
 
-#: src/eom-window.c:3868
+#: src/eom-window.c:3865
 msgid "Show the image at its normal size"
 msgstr "元の大きさで画像を表示します"
 
-#: src/eom-window.c:3870
+#: src/eom-window.c:3867
 msgid "_Best Fit"
 msgstr "全体に合わせる(_B)"
 
-#: src/eom-window.c:3871
+#: src/eom-window.c:3868
 msgid "Fit the image to the window"
 msgstr "画像をウィンドウに合わせた大きさにします"
 
-#: src/eom-window.c:3888
+#: src/eom-window.c:3885
 msgid "_Fullscreen"
-msgstr "フルスクリーン(_F)"
+msgstr "全画面(_F)"
 
-#: src/eom-window.c:3889
+#: src/eom-window.c:3886
 msgid "Show the current image in fullscreen mode"
-msgstr "画像をフルスクリーンモードで表示します"
+msgstr "画像を全画面モードで表示します"
 
-#: src/eom-window.c:3891
+#: src/eom-window.c:3888
 msgid "Pause Slideshow"
 msgstr "スライドショー停止"
 
-#: src/eom-window.c:3892
+#: src/eom-window.c:3889
 msgid "Pause or resume the slideshow"
 msgstr "スライドショーを停止したり再開したりします"
 
-#: src/eom-window.c:3897 src/eom-window.c:3912
+#: src/eom-window.c:3894 src/eom-window.c:3909
 msgid "_Previous Image"
 msgstr "前の画像へ(_P)"
 
-#: src/eom-window.c:3898
+#: src/eom-window.c:3895
 msgid "Go to the previous image of the collection"
-msgstr "コレクションで前の画像を表示します"
+msgstr "画像のコレクションで前の画像を表示します"
 
-#: src/eom-window.c:3900
+#: src/eom-window.c:3897
 msgid "_Next Image"
 msgstr "次の画像へ(_N)"
 
-#: src/eom-window.c:3901
+#: src/eom-window.c:3898
 msgid "Go to the next image of the collection"
-msgstr "コレクションで次の画像を表示します"
+msgstr "画像のコレクションで次の画像を表示します"
 
-#: src/eom-window.c:3903 src/eom-window.c:3915
+#: src/eom-window.c:3900 src/eom-window.c:3912
 msgid "_First Image"
 msgstr "先頭へ(_F)"
 
-#: src/eom-window.c:3904
+#: src/eom-window.c:3901
 msgid "Go to the first image of the collection"
 msgstr "コレクションの一番最初の画像を表示します"
 
-#: src/eom-window.c:3906 src/eom-window.c:3918
+#: src/eom-window.c:3903 src/eom-window.c:3915
 msgid "_Last Image"
 msgstr "最後へ(_L)"
 
-#: src/eom-window.c:3907
+#: src/eom-window.c:3904
 msgid "Go to the last image of the collection"
 msgstr "コレクションの一番最後の画像を表示します"
 
-#: src/eom-window.c:3909
+#: src/eom-window.c:3906
 msgid "_Random Image"
 msgstr "ランダムな画像(_R)"
 
-#: src/eom-window.c:3910
+#: src/eom-window.c:3907
 msgid "Go to a random image of the collection"
 msgstr "コレクションでランダムに画像を表示します"
 
-#: src/eom-window.c:3924
+#: src/eom-window.c:3921
 msgid "S_lideshow"
 msgstr "スライドショー(_L)"
 
-#: src/eom-window.c:3925
+#: src/eom-window.c:3922
 msgid "Start a slideshow view of the images"
 msgstr "複数の画像をスライドショーで表示します"
 
-#: src/eom-window.c:3995
-msgid "Previous"
-msgstr "前へ"
-
-#: src/eom-window.c:3999
-msgid "Next"
-msgstr "次へ"
-
-#: src/eom-window.c:4003
+#: src/eom-window.c:4000
 msgid "Right"
 msgstr "右"
 
-#: src/eom-window.c:4006
+#: src/eom-window.c:4003
 msgid "Left"
 msgstr "左"
 
-#: src/eom-window.c:4012
+#: src/eom-window.c:4009
 msgid "In"
 msgstr "拡大"
 
-#: src/eom-window.c:4015
+#: src/eom-window.c:4012
 msgid "Out"
 msgstr "縮小"
 
-#: src/eom-window.c:4018
+#: src/eom-window.c:4015
 msgid "Normal"
 msgstr "標準"
 
-#: src/eom-window.c:4021
+#: src/eom-window.c:4018
 msgid "Fit"
 msgstr "合わせる"
 
-#: src/eom-window.c:4024
+#: src/eom-window.c:4021
 msgid "Collection"
 msgstr "コレクション"
 
-#: src/eom-window.c:4027
+#: src/eom-window.c:4024
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "ゴミ箱"
 
-#: src/eom-window.c:4385
+#: src/eom-window.c:4381
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "%s を用いて現在の画像を編集"
 
-#: src/eom-window.c:4388
+#: src/eom-window.c:4384
 msgid "Edit Image"
 msgstr "画像を編集"
 
-#: src/eom-window.c:4612
+#: src/eom-window.c:4608
 msgid "Properties"
 msgstr "プロパティ"
 
-#: src/main.c:72
+#: src/main.c:70
 msgid "Open in fullscreen mode"
-msgstr "フルスクリーンモードで開く"
+msgstr "全画面モードで開く"
 
-#: src/main.c:73
+#: src/main.c:71
 msgid "Disable image collection"
 msgstr "画像のコレクションを無効にする"
 
-#: src/main.c:74
+#: src/main.c:72
 msgid "Open in slideshow mode"
 msgstr "スライドショー・モードで開く"
 
-#: src/main.c:75
+#: src/main.c:73
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "既存のウィンドウを再利用せずに新しいインスタンスを起動する"
 
-#: src/main.c:77
+#: src/main.c:75
 msgid "Show the application's version"
 msgstr "アプリケーションのバージョンを表示する"
 
-#: src/main.c:108
+#: src/main.c:106
 msgid "[FILE…]"
 msgstr "[ファイル…]"
 
-#: src/main.c:121
+#: src/main.c:119
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "'%s --help' を実行すると利用可能なすべてのコマンドライン・オプションの一覧が表示されます"

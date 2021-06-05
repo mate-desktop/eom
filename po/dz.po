@@ -4,15 +4,15 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: eom 1.23.1\n"
+"Project-Id-Version: eom 1.25.0\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
-"POT-Creation-Date: 2020-01-10 14:33+0100\n"
+"POT-Creation-Date: 2021-01-16 10:43+0100\n"
 "PO-Revision-Date: 2018-03-11 15:18+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2021\n"
 "Language-Team: Dzongkha (https://www.transifex.com/mate/teams/13566/dz/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,32 +20,32 @@ msgstr ""
 "Language: dz\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:946
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:944
 #, c-format
 msgid "Show “_%s”"
 msgstr "“_%s”སྟོན།"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1417
 msgid "_Move on Toolbar"
 msgstr "ལག་ཆས་ཕྲ་རིང་གུ་སྤོ། (_M)"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1418
 msgid "Move the selected item on the toolbar"
 msgstr "སེལ་འཐུ་འབད་མི་རྣམ་གྲངས་ ལག་ཆས་ཕྲ་རིང་གུ་སྤོ།"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1422
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1419
 msgid "_Remove from Toolbar"
 msgstr "ལག་ཆས་ཕྲ་རིང་གུ་ལས་ རྩ་བསྐྲད་གཏང་།(_R)"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1423
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
 msgid "Remove the selected item from the toolbar"
 msgstr "ལག་ཆས་ཕྲ་རིང་གུ་ལས་ སེལ་འཐུ་འབད་མི་རྣམ་གྲངས་དེ་ རྩ་བསྐྲད་གཏང་།"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1424
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
 msgid "_Delete Toolbar"
 msgstr "ལག་ཆས་ཕྲ་རིང་བཏོན་གཏང་།(_R)"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1425
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1422
 msgid "Remove the selected toolbar"
 msgstr "སེལ་འཐུ་འབད་མི་ ལག་ཆས་ཕྲ་རིང་རྩ་བསྐྲད་གཏང་།"
 
@@ -53,7 +53,7 @@ msgstr "སེལ་འཐུ་འབད་མི་ ལག་ཆས་ཕྲ�
 msgid "Separator"
 msgstr "དབྱེ་བྱེད།"
 
-#: data/eom.appdata.xml.in:6 src/eom-window.c:2640
+#: data/eom.appdata.xml.in:6 src/eom-window.c:2638
 msgid "Eye of MATE"
 msgstr "ཨའི་ཨོཕ་ཇི་ནོམ།"
 
@@ -68,7 +68,7 @@ msgid ""
 "subsequent images in the directory the image was loaded from."
 msgstr ""
 
-#: data/eom.desktop.in.in:3 src/main.c:65 src/main.c:166
+#: data/eom.desktop.in.in:3 src/main.c:63 src/main.c:164
 msgid "Eye of MATE Image Viewer"
 msgstr "ཇི་ནོམ་ གཟུགས་བརྙན་སྟོན་བྱེད་ཀྱི་མིག་ཏོ་"
 
@@ -76,257 +76,268 @@ msgstr "ཇི་ནོམ་ གཟུགས་བརྙན་སྟོན་�
 msgid "Browse and rotate images"
 msgstr "གཟུགས་བརྙན་ཚུ་ བརྡ་འཚོལ་འབད་དེ་བསྒྱིར་"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/eom.desktop.in.in:8
-msgid "eom"
-msgstr ""
-
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/eom.desktop.in.in:14
 msgid "image;viewer;JPEG;PNG;TIFF;SVG;MATE;photos;browse;thumbnails;rotate;"
 msgstr ""
 
-#: data/eom-image-properties-dialog.ui:8
+#: data/eom-image-properties-dialog.ui:23
 msgid "Image Properties"
 msgstr "གཟུགས་བརྙན་གྱི་རྒྱུ་དངོས་ཚུ་"
 
-#: data/eom-image-properties-dialog.ui:54
+#: data/eom-image-properties-dialog.ui:39 src/eom-window.c:3992
 msgid "_Previous"
 msgstr "ཧེ་མམ།(_P)"
 
-#: data/eom-image-properties-dialog.ui:101
+#: data/eom-image-properties-dialog.ui:54 src/eom-window.c:3996
 msgid "_Next"
 msgstr "ཤུལ་མམ།(_N)"
 
-#: data/eom-image-properties-dialog.ui:198
+#: data/eom-image-properties-dialog.ui:69 data/eom-preferences-dialog.ui:55
+#: src/eom-window.c:3783
+msgid "_Close"
+msgstr "ཁ་བསྡམས།(_C)"
+
+#: data/eom-image-properties-dialog.ui:147
 msgid "Name:"
 msgstr "མིང་:།"
 
-#: data/eom-image-properties-dialog.ui:217
+#: data/eom-image-properties-dialog.ui:166
 msgid "Width:"
 msgstr ""
 
-#: data/eom-image-properties-dialog.ui:235
+#: data/eom-image-properties-dialog.ui:184
 msgid "Height:"
 msgstr ""
 
-#: data/eom-image-properties-dialog.ui:253
+#: data/eom-image-properties-dialog.ui:202
 msgid "Type:"
 msgstr "དབྱེ་བ:"
 
-#: data/eom-image-properties-dialog.ui:271
+#: data/eom-image-properties-dialog.ui:220
 msgid "Bytes:"
 msgstr ""
 
-#: data/eom-image-properties-dialog.ui:289
-#: data/eom-image-properties-dialog.ui:614
+#: data/eom-image-properties-dialog.ui:238
+#: data/eom-image-properties-dialog.ui:563
 msgid "Location:"
 msgstr "གནས་ཁོངས:།"
 
-#: data/eom-image-properties-dialog.ui:422
+#: data/eom-image-properties-dialog.ui:371
 msgid "General"
 msgstr "ཡོངས་ཁྱབ།"
 
-#: data/eom-image-properties-dialog.ui:455
+#: data/eom-image-properties-dialog.ui:404
 msgid "Aperture Value:"
 msgstr ""
 
-#: data/eom-image-properties-dialog.ui:471
+#: data/eom-image-properties-dialog.ui:420
 msgid "Exposure Time:"
 msgstr ""
 
-#: data/eom-image-properties-dialog.ui:487
+#: data/eom-image-properties-dialog.ui:436
 msgid "Focal Length:"
 msgstr ""
 
-#: data/eom-image-properties-dialog.ui:503
+#: data/eom-image-properties-dialog.ui:452
 msgid "Flash:"
 msgstr ""
 
-#: data/eom-image-properties-dialog.ui:519
+#: data/eom-image-properties-dialog.ui:468
 msgid "ISO Speed Rating:"
 msgstr ""
 
-#: data/eom-image-properties-dialog.ui:535
+#: data/eom-image-properties-dialog.ui:484
 msgid "Metering Mode:"
 msgstr ""
 
-#: data/eom-image-properties-dialog.ui:551
+#: data/eom-image-properties-dialog.ui:500
 msgid "Camera Model:"
 msgstr ""
 
-#: data/eom-image-properties-dialog.ui:568
+#: data/eom-image-properties-dialog.ui:517
 msgid "Date/Time:"
 msgstr ""
 
-#: data/eom-image-properties-dialog.ui:598
+#: data/eom-image-properties-dialog.ui:547
 msgid "Description:"
 msgstr "འགྲེལ་བཤད་:"
 
-#: data/eom-image-properties-dialog.ui:630
+#: data/eom-image-properties-dialog.ui:579
 msgid "Keywords:"
 msgstr ""
 
-#: data/eom-image-properties-dialog.ui:646
+#: data/eom-image-properties-dialog.ui:595
 msgid "Author:"
 msgstr ""
 
-#: data/eom-image-properties-dialog.ui:662
+#: data/eom-image-properties-dialog.ui:611
 msgid "Copyright:"
 msgstr "འདྲ་བཤུས་དབང་ཆ་:"
 
-#: data/eom-image-properties-dialog.ui:941
-#: data/eom-image-properties-dialog.ui:990 data/metadata-sidebar.ui:409
+#: data/eom-image-properties-dialog.ui:890
+#: data/eom-image-properties-dialog.ui:939 data/metadata-sidebar.ui:409
 msgid "Details"
 msgstr "རྒྱས་བཤད།"
 
-#: data/eom-image-properties-dialog.ui:966
+#: data/eom-image-properties-dialog.ui:915
 msgid "Metadata"
 msgstr "མེ་ཊ་གནད་སྡུད་"
 
-#: data/eom-multiple-save-as-dialog.ui:16
+#: data/eom-multiple-save-as-dialog.ui:26
 msgid "Save As"
 msgstr "དེ་སྦེ་སྲུངས།"
 
-#: data/eom-multiple-save-as-dialog.ui:101
+#: data/eom-multiple-save-as-dialog.ui:42
+msgid "_Cancel"
+msgstr "ཆ་མེད།(_C)"
+
+#: data/eom-multiple-save-as-dialog.ui:57
+msgid "Save _As"
+msgstr ""
+
+#: data/eom-multiple-save-as-dialog.ui:114
 msgid "<b>%f:</b> original filename"
 msgstr ""
 
-#: data/eom-multiple-save-as-dialog.ui:119
+#: data/eom-multiple-save-as-dialog.ui:132
 msgid "<b>%n:</b> counter"
 msgstr ""
 
-#: data/eom-multiple-save-as-dialog.ui:169
+#: data/eom-multiple-save-as-dialog.ui:182
 msgid "Choose a folder"
 msgstr "སྣོད་འཛིན་ཅིག་གདམ་ཁ་བརྐྱབས"
 
-#: data/eom-multiple-save-as-dialog.ui:182
+#: data/eom-multiple-save-as-dialog.ui:195
 msgid "Destination folder:"
 msgstr "འགྲོ་་ཡུལ་སྣོད་འཛིན:"
 
-#: data/eom-multiple-save-as-dialog.ui:194
+#: data/eom-multiple-save-as-dialog.ui:207
 msgid "Filename format:"
 msgstr "ཡིག་སྣོད་མིང་་གི་རྩ་སྒྲིག:"
 
-#: data/eom-multiple-save-as-dialog.ui:212
+#: data/eom-multiple-save-as-dialog.ui:225
 msgid "File Path Specifications"
 msgstr ""
 
-#: data/eom-multiple-save-as-dialog.ui:253
+#: data/eom-multiple-save-as-dialog.ui:266
 msgid "Start counter at:"
 msgstr "ལུ་: གདོང་ལན་འགོ་བཙུགས:"
 
-#: data/eom-multiple-save-as-dialog.ui:285
+#: data/eom-multiple-save-as-dialog.ui:298
 msgid "Replace spaces with underscores"
 msgstr "བར་་སྟོང་ཚུ་གི་ཚབ་ལུ་ གཤམ་ཐིག་བཙུགས"
 
-#: data/eom-multiple-save-as-dialog.ui:307
+#: data/eom-multiple-save-as-dialog.ui:320
 msgid "Options"
 msgstr "གདམ་ཁ་ཚུ།"
 
-#: data/eom-multiple-save-as-dialog.ui:369
+#: data/eom-multiple-save-as-dialog.ui:383
 msgid "Rename from:"
 msgstr " ལས་བསྐྱར་མིང་བཏགས:"
 
-#: data/eom-multiple-save-as-dialog.ui:381
+#: data/eom-multiple-save-as-dialog.ui:395
 msgid "To:"
 msgstr "ལུ་:"
 
-#: data/eom-multiple-save-as-dialog.ui:396
+#: data/eom-multiple-save-as-dialog.ui:425
 msgid "File Name Preview"
 msgstr ""
 
-#: data/eom-preferences-dialog.ui:16
+#: data/eom-preferences-dialog.ui:26
 msgid "Eye of MATE Preferences"
 msgstr "ཨའི་ཨོཕ་ཇི་ནོམ་གྱི་་དགའ་གདམ།"
 
-#: data/eom-preferences-dialog.ui:88
+#: data/eom-preferences-dialog.ui:39 src/eom-window.c:3778
+msgid "_Help"
+msgstr "གྲོགས་རམ།(_H)"
+
+#: data/eom-preferences-dialog.ui:100
 msgid "Image Enhancements"
 msgstr ""
 
-#: data/eom-preferences-dialog.ui:117
+#: data/eom-preferences-dialog.ui:129
 msgid "Smooth images when zoomed-_out"
 msgstr ""
 
-#: data/eom-preferences-dialog.ui:155
+#: data/eom-preferences-dialog.ui:167
 msgid "Smooth images when zoomed-_in"
 msgstr ""
 
-#: data/eom-preferences-dialog.ui:193
+#: data/eom-preferences-dialog.ui:205
 msgid "_Automatic orientation"
 msgstr "རང་བཞིན་གྱིས་ཕྱོགས་(_A)"
 
-#: data/eom-preferences-dialog.ui:231
+#: data/eom-preferences-dialog.ui:243
 msgid "Background"
 msgstr "རྒྱབ་གཞི་"
 
-#: data/eom-preferences-dialog.ui:250
+#: data/eom-preferences-dialog.ui:262
 msgid "As custom color:"
 msgstr ""
 
-#: data/eom-preferences-dialog.ui:267 data/org.mate.eom.gschema.xml.in:16
+#: data/eom-preferences-dialog.ui:279 data/org.mate.eom.gschema.xml.in:16
 msgid "Background Color"
 msgstr "རྒྱབ་གཞིའི་ཚོས་གཞི།"
 
-#: data/eom-preferences-dialog.ui:300
+#: data/eom-preferences-dialog.ui:312
 msgid "Transparent Parts"
 msgstr ""
 
-#: data/eom-preferences-dialog.ui:335
+#: data/eom-preferences-dialog.ui:347
 msgid "As check _pattern"
 msgstr "ཐིག་ཁྲ་ཅན་གྱི་ དཔེ་གཞི་བཟུམ་སྦེ།(_p)"
 
-#: data/eom-preferences-dialog.ui:356
+#: data/eom-preferences-dialog.ui:368
 msgid "As custom c_olor:"
 msgstr "\"སྲོལ་སྒྲིག་གི་ ཚོས་གཞི་བཟུམ་སྦེ།(_o)\""
 
-#: data/eom-preferences-dialog.ui:377
+#: data/eom-preferences-dialog.ui:389
 msgid "Color for Transparent Areas"
 msgstr "དྭངས་གསལ་ཅན་གྱི་ མངའ་ཁོངས་ཀྱི་དོན་ལུ་ཚོས་གཞི།"
 
-#: data/eom-preferences-dialog.ui:395
+#: data/eom-preferences-dialog.ui:407
 msgid "As _background"
 msgstr "རྒྱབ་གཞི་བཟུམ་སྦེ།(_b)"
 
-#: data/eom-preferences-dialog.ui:437
+#: data/eom-preferences-dialog.ui:449
 msgid "Image View"
 msgstr "གཟུགས་བརྙན་མཐོང་སྣང་།(_V)"
 
-#: data/eom-preferences-dialog.ui:461
+#: data/eom-preferences-dialog.ui:473
 msgid "Image Zoom"
 msgstr ""
 
-#: data/eom-preferences-dialog.ui:496
+#: data/eom-preferences-dialog.ui:508
 msgid "E_xpand images to fit screen"
 msgstr "གསལ་གཞི་ཚུད་སྒྲིག་འབད་ནིའི་དོན་ལུ་ གཟུགས་བརྙན་རྒྱ་བསྐྱེད་འབད་(_x)"
 
-#: data/eom-preferences-dialog.ui:541
+#: data/eom-preferences-dialog.ui:553
 msgid "Sequence"
 msgstr ""
 
-#: data/eom-preferences-dialog.ui:583
+#: data/eom-preferences-dialog.ui:595
 msgid "_Switch image after:"
 msgstr "ཤུལ་ལས་གཟུགས་བརྙན་སོར་:"
 
-#: data/eom-preferences-dialog.ui:611
+#: data/eom-preferences-dialog.ui:623
 msgid "seconds"
 msgstr "སྐར་ཆ།"
 
-#: data/eom-preferences-dialog.ui:628
+#: data/eom-preferences-dialog.ui:640
 msgid "_Random sequence"
 msgstr ""
 
-#: data/eom-preferences-dialog.ui:644
+#: data/eom-preferences-dialog.ui:656
 msgid "_Loop sequence"
 msgstr "འབྱུང་རིམ་འཕྲལ་བཀོལ་འབད།(_L)"
 
-#: data/eom-preferences-dialog.ui:688
+#: data/eom-preferences-dialog.ui:700
 msgid "Slideshow"
 msgstr "བཤུད་བརྙན་"
 
-#: data/eom-preferences-dialog.ui:722
+#: data/eom-preferences-dialog.ui:734
 msgid "Plugins"
 msgstr "པལག་ཨིནསི།"
 
@@ -616,10 +627,6 @@ msgstr ""
 msgid "Fullscreen with double-click"
 msgstr ""
 
-#: plugins/fullscreen/fullscreen.plugin.desktop.in:6
-msgid "view-fullscreen"
-msgstr ""
-
 #: plugins/reload/eom-reload-plugin.c:45
 #: plugins/reload/reload.plugin.desktop.in:5
 msgid "Reload Image"
@@ -627,10 +634,6 @@ msgstr ""
 
 #: plugins/reload/eom-reload-plugin.c:45
 msgid "Reload current image"
-msgstr ""
-
-#: plugins/reload/reload.plugin.desktop.in:6
-msgid "view-refresh"
 msgstr ""
 
 #: plugins/statusbar-date/statusbar-date.plugin.desktop.in:5
@@ -715,32 +718,32 @@ msgstr ""
 msgid "Save Image"
 msgstr "གཟུགས་བརྙན་སྲུངས་"
 
-#: src/eom-file-chooser.c:467 src/eom-window.c:4009
+#: src/eom-file-chooser.c:467 src/eom-window.c:4006
 msgid "Open Folder"
 msgstr "སྣོད་འཛིན་ཁ་ཕྱེ།"
 
-#: src/eom-image.c:552
+#: src/eom-image.c:546
 msgid "Transformation on unloaded image."
 msgstr "གཟུགས་བརྙན་རྐྱང་པོའི་དོན་ལས་ གཟུགས་བརྙན་གྱི་བརྡ་དོན་ སྟོན/སྦ།"
 
-#: src/eom-image.c:580
+#: src/eom-image.c:574
 msgid "Transformation failed."
 msgstr "བཟོ་བསྒྱུར་འབད་ནི་ འཐུས་ཤོར་འབྱུང་ཡོདཔ། "
 
-#: src/eom-image.c:1054
+#: src/eom-image.c:1048
 msgid "EXIF not supported for this file format."
 msgstr ""
 "ཡིག་སྣོད་རྩ་སྒྲིག་འདི་གི་དོན་ལུ་ ཨི་ཨེགསི་ཨའི་ཨེཕ་ལུ་ རྒྱབ་སྐྱོར་མིན་འདུག།"
 
-#: src/eom-image.c:1203
+#: src/eom-image.c:1197
 msgid "Image loading failed."
 msgstr "གཟུགས་བརྙན་ མངོན་གསལ་འབད་ནི་ འཐུས་ཤོར་བྱུང་ཡོདཔ་ "
 
-#: src/eom-image.c:1732 src/eom-image.c:1834
+#: src/eom-image.c:1725 src/eom-image.c:1827
 msgid "No image loaded."
 msgstr "གཟུགས་བརྙན་ཅིག་ཡང་ མངོན་གསལ་མ་འབད་བས།"
 
-#: src/eom-image.c:1742 src/eom-image.c:1846
+#: src/eom-image.c:1735 src/eom-image.c:1839
 msgid "Temporary file creation failed."
 msgstr "གནས་སྐབས་ཀྱི་ཡིག་སྣོད་ གསར་བསྐྲུན་འབད་མ་ཚུགས།"
 
@@ -975,15 +978,15 @@ msgstr ""
 msgid "Taken on"
 msgstr "གུ་ལུ་འབག་ཡོདཔ"
 
-#: src/eom-uri-converter.c:986
+#: src/eom-uri-converter.c:985
 msgid "At least two file names are equal."
 msgstr "ཉུང་མཐའ་ལུ་ ཡིག་སྣོད་གཉིས་ཀྱི་མིང་ འདྲ་མཉམ་འདུག"
 
-#: src/eom-util.c:68
+#: src/eom-util.c:65
 msgid "Could not display help for Eye of MATE"
 msgstr "ཨའི་ཨོཕ་ཇི་ནོམ་གྱི་དོན་ལུ་ གྲོགས་རམ་བཀྲམ་སྟོན་འབད་མ་ཚུགས།"
 
-#: src/eom-util.c:116
+#: src/eom-util.c:113
 msgid " (invalid Unicode)"
 msgstr "(ནུས་མེད་ཡུ་ནི་ཀོཌི)"
 
@@ -1003,7 +1006,7 @@ msgstr[0] ""
 msgid "_Reload"
 msgstr "སླར་མངོན་གསལ་འབད།(_R)"
 
-#: src/eom-window.c:834 src/eom-window.c:2794
+#: src/eom-window.c:834 src/eom-window.c:2792
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr ""
@@ -1035,15 +1038,15 @@ msgstr "གཟུགས་བརྙན་ \"%s\" (%u/%u) སྲུང་བཞ�
 msgid "Opening image \"%s\""
 msgstr ""
 
-#: src/eom-window.c:1909
+#: src/eom-window.c:1907
 msgid "Leave Fullscreen"
 msgstr "གསལ་གཞང་གངམ་བཞག"
 
-#: src/eom-window.c:2050
+#: src/eom-window.c:2048
 msgid "Viewing a slideshow"
 msgstr ""
 
-#: src/eom-window.c:2263
+#: src/eom-window.c:2261
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1052,15 +1055,15 @@ msgstr ""
 "ཡིག་སྣོད་དཔར་བསྐྲུན་འབད་ནི་ལུ་འཛོལ་བ་བྱུང་ནུག:\n"
 "%s"
 
-#: src/eom-window.c:2526
+#: src/eom-window.c:2524
 msgid "Toolbar Editor"
 msgstr "ལག་ཆས་ཕྲ་རིང་ཞུན་དགཔ།"
 
-#: src/eom-window.c:2529
+#: src/eom-window.c:2527
 msgid "_Reset to Default"
 msgstr "སྔོན་སྒྲིག་ལུ་ སླར་སྒྲིག་འབད་ (_R)"
 
-#: src/eom-window.c:2594
+#: src/eom-window.c:2592
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1073,7 +1076,7 @@ msgstr ""
 "ཤུལ་ལས་ཀྱི་ཐོན་རིམ་གང་རུང་གི་ ཁ་ཚིག་དང་འཁྲིལ་ཏེ་ བསྐྱར་འགྲེམ་འབད་བ་ ཡང་ན་ "
 "ལེགས་བཅོས་འབད་ཆོག\n"
 
-#: src/eom-window.c:2598
+#: src/eom-window.c:2596
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1085,69 +1088,70 @@ msgstr ""
 "དམིགས་བསལ་དགོས་དོན་ཅིག་གི་དོན་ལུ་ ཚུད་སྒྲིག་ཡོད་མེད་ཀྱི་ཉེན་ལེན་ཙམ་ཡང་མེད། "
 "རྒྱས་བཤད་ཀྱི་དོན་ལུ་ ཇི་ཨེན་ཡུ་ ཡོངས་ཁྱབ་མི་མང་ཆོག་ཐམ་ལུ་བལྟ།\n"
 
-#: src/eom-window.c:2602
+#: src/eom-window.c:2600
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
 
-#: src/eom-window.c:2641
+#: src/eom-window.c:2639
 msgid "About Eye of MATE"
 msgstr ""
 
-#: src/eom-window.c:2643
+#: src/eom-window.c:2641
 msgid ""
 "Copyright © 2000-2010 Free Software Foundation, Inc.\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2021 MATE developers"
 msgstr ""
 
-#: src/eom-window.c:2646
-msgid "The MATE image viewer."
-msgstr "ཇི་ནོམ་ གཟུགས་བརྙན་ མཐོང་བྱེད། "
+#: src/eom-window.c:2644
+msgid ""
+"Eye of MATE is a simple graphics viewer for the MATE Desktop Environment."
+msgstr ""
 
-#: src/eom-window.c:2649
+#: src/eom-window.c:2647
 msgid "translator-credits"
 msgstr ""
 "ཨའི་ཌི་ཨར་སི་གི་མ་དངུལ་རྒྱབ་སྐྱོར་ཐོག་ལས་ བརྡ་དོན་འཕྲུལ་རིག་ལས་ཁུངས་ནང་ "
 "སྐད་བསྒྱུར་འབད་ཡི། ཁ་གསལ་གྱི་དོན་ལུ་ འབྲེལ་བ་འཐབ་ས་: "
 "<pema_geyleg@druknet.bt>/<pgeyleg@dit.gov.bt>(_c)"
 
-#: src/eom-window.c:2742 src/eom-window.c:2757
+#: src/eom-window.c:2740 src/eom-window.c:2755
 msgid "Error launching appearance preferences dialog: "
 msgstr ""
 
-#: src/eom-window.c:2792
+#: src/eom-window.c:2790
 msgid "_Open Background Preferences"
 msgstr ""
 
-#: src/eom-window.c:2808
+#: src/eom-window.c:2806
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
 "Would you like to modify its appearance?"
 msgstr ""
 
-#: src/eom-window.c:3249
+#: src/eom-window.c:3247
 msgid "Saving image locally…"
 msgstr ""
 
-#: src/eom-window.c:3329
+#: src/eom-window.c:3327
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
 msgstr "ཁྱོད་ཀྱིས་\"%s\"ངེས་པར་དུ་ཕྱགས་ཧོད་ནང་ སྤོ་ནི་ཨིན་ན?"
 
-#: src/eom-window.c:3332
+#: src/eom-window.c:3330
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr ""
 
-#: src/eom-window.c:3337
+#: src/eom-window.c:3335
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1157,429 +1161,413 @@ msgid_plural ""
 "the %d selected images to the trash?"
 msgstr[0] ""
 
-#: src/eom-window.c:3342
+#: src/eom-window.c:3340
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
 msgstr ""
 
-#: src/eom-window.c:3359 src/eom-window.c:3855 src/eom-window.c:3882
+#: src/eom-window.c:3357 src/eom-window.c:3852 src/eom-window.c:3879
 msgid "Move to _Trash"
 msgstr "ཕྱགས་ཧོད་ལུ་སྤོ་བཤུད་འབད།(_T)"
 
-#: src/eom-window.c:3361
+#: src/eom-window.c:3359
 msgid "_Do not ask again during this session"
 msgstr ""
 
-#: src/eom-window.c:3406 src/eom-window.c:3420
+#: src/eom-window.c:3404 src/eom-window.c:3418
 msgid "Couldn't access trash."
 msgstr "ཕྱགས་ཧོད་ནང་ འཛུལ་སྤྱོད་འབད་མ་ཚུགས།"
 
-#: src/eom-window.c:3428
+#: src/eom-window.c:3426
 msgid "Couldn't delete file"
 msgstr ""
 
-#: src/eom-window.c:3530
+#: src/eom-window.c:3528
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "གཟུགས་བརྙན་ %s བཏོན་གཏང་ནི་ལུ་འཛོལ་བ།"
 
-#: src/eom-window.c:3776
+#: src/eom-window.c:3773
 msgid "_Image"
 msgstr "གཟུགས་བརྙན་ཆ།(_I)"
 
-#: src/eom-window.c:3777
+#: src/eom-window.c:3774
 msgid "_Edit"
 msgstr "ཞུན་དག(_)"
 
-#: src/eom-window.c:3778
+#: src/eom-window.c:3775
 msgid "_View"
 msgstr "མཐོང་སྣང་།(_V)"
 
-#: src/eom-window.c:3779
+#: src/eom-window.c:3776
 msgid "_Go"
 msgstr "འགྱོ།(_G)"
 
-#: src/eom-window.c:3780
+#: src/eom-window.c:3777
 msgid "_Tools"
 msgstr "ལག་ཆས།(_T)"
 
-#: src/eom-window.c:3781
-msgid "_Help"
-msgstr "གྲོགས་རམ།(_H)"
-
-#: src/eom-window.c:3783
+#: src/eom-window.c:3780
 msgid "_Open…"
 msgstr ""
 
-#: src/eom-window.c:3784
+#: src/eom-window.c:3781
 msgid "Open a file"
 msgstr "ཡིག་སྣོད་ཅིག་ཁ་ཕྱེ།"
 
-#: src/eom-window.c:3786
-msgid "_Close"
-msgstr "ཁ་བསྡམས།(_C)"
-
-#: src/eom-window.c:3787
+#: src/eom-window.c:3784
 msgid "Close window"
 msgstr "སྒོ་སྒྲིག་ཁ་བསྡམས།"
 
-#: src/eom-window.c:3789
+#: src/eom-window.c:3786
 msgid "T_oolbar"
 msgstr "ལག་ཆས་ཕྲ་རིང་།(_o)"
 
-#: src/eom-window.c:3790
+#: src/eom-window.c:3787
 msgid "Edit the application toolbar"
 msgstr "ལག་ཆས་ཕྲ་རིང་གིས་འཇུག་སྤྱོད་ཞུན་དག་འབད"
 
-#: src/eom-window.c:3792
+#: src/eom-window.c:3789
 msgid "Prefere_nces"
 msgstr "དགའ་གདམ་ཚུ།(_n)"
 
-#: src/eom-window.c:3793
+#: src/eom-window.c:3790
 msgid "Preferences for Eye of MATE"
 msgstr "ཨའི་ཨོཕ་ཇི་ནོམ་གྱི་དོན་ལུ་དགའ་གདམ་ཚུ།"
 
-#: src/eom-window.c:3795
+#: src/eom-window.c:3792
 msgid "_Contents"
 msgstr "ནང་དོན།(_C)"
 
-#: src/eom-window.c:3796
+#: src/eom-window.c:3793
 msgid "Help on this application"
 msgstr "གློག་རིམ་འདིལུ་  གྲོགས་རམ་འབད་"
 
-#: src/eom-window.c:3798
+#: src/eom-window.c:3795
 msgid "_About"
 msgstr "སྐོར་ལས།(_A)"
 
-#: src/eom-window.c:3799
+#: src/eom-window.c:3796
 msgid "About this application"
 msgstr "གློག་རིམ་འདི་གི་སྐོར་ལས།"
 
-#: src/eom-window.c:3804
+#: src/eom-window.c:3801
 msgid "_Toolbar"
 msgstr "ལག་ཆས་ཕྲ་རིང་། (_T)"
 
-#: src/eom-window.c:3805
+#: src/eom-window.c:3802
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "ད་ལྟོའི་སྒོ་སྒྲིག་ནང་ ལག་ཆས་ཕྲ་རིང་གི་མཐོང་གསལ་ བསྒྱུར་བཅོས་འབད།"
 
-#: src/eom-window.c:3807
+#: src/eom-window.c:3804
 msgid "_Statusbar"
 msgstr "གནས་ཚད་ཕྲ་རིང་།(_S)"
 
-#: src/eom-window.c:3808
+#: src/eom-window.c:3805
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "ད་ལྟོའི་སྒོ་སྒྲིག་ནང་ གནས་ཚད་ཕྲ་རིང་གི་མཐོང་གསལ་ བསྒྱུར་བཅོས་འབད།"
 
-#: src/eom-window.c:3810
+#: src/eom-window.c:3807
 msgid "_Image Collection"
 msgstr "གཟུགས་བརྙན་བསྡུ་ལེན།(_I)"
 
-#: src/eom-window.c:3811
+#: src/eom-window.c:3808
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr ""
 "ད་ལྟོའི་སྒོ་སྒྲིག་ནང་ གཟུགས་བརྙན་བསྡུ་ལེན་པེན་གྱི་མཐོང་གསལ་ "
 "བསྒྱུར་བཅོས་འབདཝ་ཨིན།"
 
-#: src/eom-window.c:3813
+#: src/eom-window.c:3810
 msgid "Side _Pane"
 msgstr "ཟུར་ཁའི་པེན།"
 
-#: src/eom-window.c:3814
+#: src/eom-window.c:3811
 msgid "Changes the visibility of the side pane in the current window"
 msgstr ""
 "ད་ལྟོའི་སྒོ་སྒྲིག་ནང་ ཟུར་ཁའི་་པེན་གྱི་མཐོང་གསལ་ བསྒྱུར་བཅོས་འབདཝ་ཨིན་ "
 
-#: src/eom-window.c:3819
+#: src/eom-window.c:3816
 msgid "_Save"
 msgstr "སྲུངས།(_S)"
 
-#: src/eom-window.c:3820
+#: src/eom-window.c:3817
 msgid "Save changes in currently selected images"
 msgstr ""
 "ད་ལྟོ་ སེལ་འཐུ་གྲུབ་ཡོད་པའི་གཟུགས་ཚུ་ནང་ བསྒྱུར་བཅོས་ཚུ་ སྲུང་བཞག་འབད་ "
 
-#: src/eom-window.c:3822
+#: src/eom-window.c:3819
 msgid "Open _with"
 msgstr "ཁ་ཕྱེ་(_w)"
 
-#: src/eom-window.c:3823
+#: src/eom-window.c:3820
 msgid "Open the selected image with a different application"
 msgstr ""
 "སེལ་འཐུ་གྲུབ་ཡོད་པའི་ གཟུགས་བརྙན་དེ་ གློག་རིམ་སོ་སོ་ཅིག་དང་གཅིག་ཁར་ཁ་ཕྱེ་ "
 
-#: src/eom-window.c:3825
+#: src/eom-window.c:3822
 msgid "Save _As…"
 msgstr ""
 
-#: src/eom-window.c:3826
+#: src/eom-window.c:3823
 msgid "Save the selected images with a different name"
 msgstr ""
 "སེལ་འཐུ་གྲུབ་ཡོད་པའི་ གཟུགས་བརྙན་དེ་ མིང་སོ་སོ་ཅིག་སྦེ་ སྲུང་བཞག་འབད་ "
 
-#: src/eom-window.c:3828
+#: src/eom-window.c:3825
 msgid "Open Containing _Folder"
 msgstr ""
 
-#: src/eom-window.c:3829
+#: src/eom-window.c:3826
 msgid "Show the folder which contains this file in the file manager"
 msgstr ""
 
-#: src/eom-window.c:3831
+#: src/eom-window.c:3828
 msgid "_Print…"
 msgstr ""
 
-#: src/eom-window.c:3832
+#: src/eom-window.c:3829
 msgid "Print the selected image"
 msgstr "སེལ་འཐུ་གྲུབ་ཡོད་པའི་གཟུགས་བརྙེན་དེ་ དཔར་བསྐྲུན་འབད། "
 
-#: src/eom-window.c:3834
+#: src/eom-window.c:3831
 msgid "Prope_rties"
 msgstr "རྒྱུ་དངོས་ཚུ་ (_P)"
 
-#: src/eom-window.c:3835
+#: src/eom-window.c:3832
 msgid "Show the properties and metadata of the selected image"
 msgstr ""
 "གསལ་འཐུ་གྲུབ་པའི་གཟུགས་བརྙན་དེའི་ མེ་ཊ་གནས་སྡུད་ཀྱི་ རྒྱུ་དངོས་ཚུ་ སྟོན་ "
 
-#: src/eom-window.c:3837
+#: src/eom-window.c:3834
 msgid "_Undo"
 msgstr "་འབད་བཤོལ།(_U)"
 
-#: src/eom-window.c:3838
+#: src/eom-window.c:3835
 msgid "Undo the last change in the image"
 msgstr "གཟུགས་བརྙན་ནང་་མཇུག་གི་ བསྒྱུར་བཅོས་དེ་ འབད་བཤོལ་འབད་ "
 
-#: src/eom-window.c:3840
+#: src/eom-window.c:3837
 msgid "Flip _Horizontal"
 msgstr "ཐད་སྙོམས་མྱུར་ལྷོག(_H)"
 
-#: src/eom-window.c:3841
+#: src/eom-window.c:3838
 msgid "Mirror the image horizontally"
 msgstr "གཟུགས་བརྙན་དེ་ ཐད་སྙོམས་སྦེ་ ངོ་འཆར་འབད་ "
 
-#: src/eom-window.c:3843
+#: src/eom-window.c:3840
 msgid "Flip _Vertical"
 msgstr "ཀེར་ཕྲང་མྱུར་ལྷོག(_V)"
 
-#: src/eom-window.c:3844
+#: src/eom-window.c:3841
 msgid "Mirror the image vertically"
 msgstr "གཟུགས་བརྙན་དེ་ ཀེར་ཕྲང་ ངོ་འཆར་འབད་ "
 
-#: src/eom-window.c:3846
+#: src/eom-window.c:3843
 msgid "_Rotate Clockwise"
 msgstr "གཡས་སྐོར་སྦེ་བསྒྱིར།(_R)"
 
-#: src/eom-window.c:3847
+#: src/eom-window.c:3844
 msgid "Rotate the image 90 degrees to the right"
 msgstr "གཟུགས་བརྙན་དེ་ གཡས་ཁ་ཐུག་ལུ་ ཌིག་རི་ ༩༠ བསྒྱིར་ "
 
-#: src/eom-window.c:3849
+#: src/eom-window.c:3846
 msgid "Rotate Counterc_lockwise"
 msgstr "གཡོན་སྐོར་སྦེ་བསྒྱིར།(_l)"
 
-#: src/eom-window.c:3850
+#: src/eom-window.c:3847
 msgid "Rotate the image 90 degrees to the left"
 msgstr "གཟུགས་བརྙན་དེ་ གཡོན་་ཁ་ཐུག་ལུ་ ཌིག་རི་ ༩༠ བསྒྱིར་ "
 
-#: src/eom-window.c:3852
+#: src/eom-window.c:3849
 msgid "Set as _Desktop Background"
 msgstr ""
 
-#: src/eom-window.c:3853
+#: src/eom-window.c:3850
 msgid "Set the selected image as the desktop background"
 msgstr ""
 
-#: src/eom-window.c:3856
+#: src/eom-window.c:3853
 msgid "Move the selected image to the trash folder"
 msgstr "སེལ་འཐུ་གྲུབ་པའི་ གཟུགས་བརྙན་དེ་ ཕྱགས་ཧོད་ནང་ བཀོག་ "
 
-#: src/eom-window.c:3858
+#: src/eom-window.c:3855
 msgid "_Copy"
 msgstr "འདྲ་བཤུས།(_C)"
 
-#: src/eom-window.c:3859
+#: src/eom-window.c:3856
 msgid "Copy the selected image to the clipboard"
 msgstr ""
 
-#: src/eom-window.c:3861 src/eom-window.c:3873 src/eom-window.c:3876
+#: src/eom-window.c:3858 src/eom-window.c:3870 src/eom-window.c:3873
 msgid "_Zoom In"
 msgstr "ཕྱིར་རྒྱས།(_Z)"
 
-#: src/eom-window.c:3862 src/eom-window.c:3874
+#: src/eom-window.c:3859 src/eom-window.c:3871
 msgid "Enlarge the image"
 msgstr "གཟུགས་བརྙན་དེ་ ཆེར་བསྐྱེད་འབད་ "
 
-#: src/eom-window.c:3864 src/eom-window.c:3879
+#: src/eom-window.c:3861 src/eom-window.c:3876
 msgid "Zoom _Out"
 msgstr "ནང་ཟུམ།(_O)"
 
-#: src/eom-window.c:3865 src/eom-window.c:3877 src/eom-window.c:3880
+#: src/eom-window.c:3862 src/eom-window.c:3874 src/eom-window.c:3877
 msgid "Shrink the image"
 msgstr "གཟུགས་བརྙན་དེ་ བསྐུམ་ "
 
-#: src/eom-window.c:3867
+#: src/eom-window.c:3864
 msgid "_Normal Size"
 msgstr "སྤྱིར་བཏང་གི་ཚད།(_N)"
 
-#: src/eom-window.c:3868
+#: src/eom-window.c:3865
 msgid "Show the image at its normal size"
 msgstr "གཟུགས་བརྙན་དེ་ ཁོ་རའི་སྤྱིར་གཏང་གི་ཚད་ནང་སྟོན་ "
 
-#: src/eom-window.c:3870
+#: src/eom-window.c:3867
 msgid "_Best Fit"
 msgstr "ལེགས་སྒྲིག(_B)"
 
-#: src/eom-window.c:3871
+#: src/eom-window.c:3868
 msgid "Fit the image to the window"
 msgstr "གཟུགས་བརྙན་དེ་ སྒོ་སྒྲིག་་ཅིག་ནང་བཙུགས་"
 
-#: src/eom-window.c:3888
+#: src/eom-window.c:3885
 msgid "_Fullscreen"
 msgstr "གསལ་གཞི་གངམ།(_F)"
 
-#: src/eom-window.c:3889
+#: src/eom-window.c:3886
 msgid "Show the current image in fullscreen mode"
 msgstr "ད་ལྟོའི་ གཟུགས་བརྙན་དེ་  ཐབས་ལམ་གསལགཞི་གངམ་ནང་སྟོན་"
 
-#: src/eom-window.c:3891
+#: src/eom-window.c:3888
 msgid "Pause Slideshow"
 msgstr ""
 
-#: src/eom-window.c:3892
+#: src/eom-window.c:3889
 msgid "Pause or resume the slideshow"
 msgstr ""
 
-#: src/eom-window.c:3897 src/eom-window.c:3912
+#: src/eom-window.c:3894 src/eom-window.c:3909
 msgid "_Previous Image"
 msgstr "གཟུགས་བརྙན་ཧེ་མམ།(_P)"
 
-#: src/eom-window.c:3898
+#: src/eom-window.c:3895
 msgid "Go to the previous image of the collection"
 msgstr "བསྡུ་གསོག་གི་ གཟུགས་བརྙན་ ཧེ་མམ་ནང་འགྱོ་"
 
-#: src/eom-window.c:3900
+#: src/eom-window.c:3897
 msgid "_Next Image"
 msgstr "གཟུགས་བརྙན་ཤུལ་མམ།(_N)"
 
-#: src/eom-window.c:3901
+#: src/eom-window.c:3898
 msgid "Go to the next image of the collection"
 msgstr "བསྡུ་གསོག་གི་ གཟུགས་བརྙན་ ཤུལ་མམ་ནང་འགྱོ་ "
 
-#: src/eom-window.c:3903 src/eom-window.c:3915
+#: src/eom-window.c:3900 src/eom-window.c:3912
 msgid "_First Image"
 msgstr "གཟུགས་བརྙན་དང་པམ་།(_F)"
 
-#: src/eom-window.c:3904
+#: src/eom-window.c:3901
 msgid "Go to the first image of the collection"
 msgstr "བསྡུ་གསོག་གི་ གཟུགས་བརྙན་དང་པམ་ནང་འགྱོ་"
 
-#: src/eom-window.c:3906 src/eom-window.c:3918
+#: src/eom-window.c:3903 src/eom-window.c:3915
 msgid "_Last Image"
 msgstr "གཟུགས་བརྙན་མཐའ་མམ།(_L)"
 
-#: src/eom-window.c:3907
+#: src/eom-window.c:3904
 msgid "Go to the last image of the collection"
 msgstr "བསྡུ་གསོག་གི་ གཟུགས་བརྙན་ མཇུག་མམ་དེ་ནང་འགྱོ་ "
 
-#: src/eom-window.c:3909
+#: src/eom-window.c:3906
 msgid "_Random Image"
 msgstr ""
 
-#: src/eom-window.c:3910
+#: src/eom-window.c:3907
 msgid "Go to a random image of the collection"
 msgstr ""
 
-#: src/eom-window.c:3924
+#: src/eom-window.c:3921
 msgid "S_lideshow"
 msgstr ""
 
-#: src/eom-window.c:3925
+#: src/eom-window.c:3922
 msgid "Start a slideshow view of the images"
 msgstr ""
 "སེལ་འཐུ་གྲུབ་ཡོད་པའི་ གཟུགས་བརྙན་ཚི་གི་ བཤུད་བརྙན་ མཐོང་སྣང་ཅིག་ འགོ་བཙུགས་ "
 
-#: src/eom-window.c:3995
-msgid "Previous"
-msgstr "ཧེ་མམ།"
-
-#: src/eom-window.c:3999
-msgid "Next"
-msgstr "ཤུལ་མམ།"
-
-#: src/eom-window.c:4003
+#: src/eom-window.c:4000
 msgid "Right"
 msgstr "གཡས"
 
-#: src/eom-window.c:4006
+#: src/eom-window.c:4003
 msgid "Left"
 msgstr "གཡོན"
 
-#: src/eom-window.c:4012
+#: src/eom-window.c:4009
 msgid "In"
 msgstr "ནང་ན།"
 
-#: src/eom-window.c:4015
+#: src/eom-window.c:4012
 msgid "Out"
 msgstr "ཕྱི་ཁ།"
 
-#: src/eom-window.c:4018
+#: src/eom-window.c:4015
 msgid "Normal"
 msgstr "སྤྱིར་བཏང་"
 
-#: src/eom-window.c:4021
+#: src/eom-window.c:4018
 msgid "Fit"
 msgstr "ཚུད་སྒྲིག"
 
-#: src/eom-window.c:4024
+#: src/eom-window.c:4021
 msgid "Collection"
 msgstr "བསྡུ་གསོག་ "
 
-#: src/eom-window.c:4027
+#: src/eom-window.c:4024
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "ཕྱགས་ཧོད།"
 
-#: src/eom-window.c:4385
+#: src/eom-window.c:4381
 #, c-format
 msgid "Edit the current image using %s"
 msgstr ""
 
-#: src/eom-window.c:4388
+#: src/eom-window.c:4384
 msgid "Edit Image"
 msgstr ""
 
-#: src/eom-window.c:4612
+#: src/eom-window.c:4608
 msgid "Properties"
 msgstr "རྒྱུ་དངོས་ཚུ།"
 
-#: src/main.c:72
+#: src/main.c:70
 msgid "Open in fullscreen mode"
 msgstr "གསལ་གཞི་གངམ་གྱི་ཐབས་ལམ་ནང་ ཁ་ཕྱེ་"
 
-#: src/main.c:73
+#: src/main.c:71
 msgid "Disable image collection"
 msgstr "གཟུགས་བརྙན་བསྡུ་ལེན་ ལྕོགས་མིན་བཟོ་"
 
-#: src/main.c:74
+#: src/main.c:72
 msgid "Open in slideshow mode"
 msgstr ""
 
-#: src/main.c:75
+#: src/main.c:73
 msgid "Start a new instance instead of reusing an existing one"
 msgstr ""
 
-#: src/main.c:77
+#: src/main.c:75
 msgid "Show the application's version"
 msgstr "གློག་རིམ་དེ་གི་ཐོན་རིམ་སྟོན།"
 
-#: src/main.c:108
+#: src/main.c:106
 msgid "[FILE…]"
 msgstr ""
 
-#: src/main.c:121
+#: src/main.c:119
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""

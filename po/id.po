@@ -10,18 +10,18 @@
 # La Ode Muh. Fadlun Akbar <fadlun.net@gmail.com>, 2018
 # Rendiyono Wahyu Saputro <rendi.7936@gmail.com>, 2018
 # Rania el-Amina <reaamina@gmail.com>, 2018
-# Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Wolfgang Ulbrich <mate@raveit.de>, 2018
-# Andika Triwidada <andika@gmail.com>, 2020
+# Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2021
+# Andika Triwidada <andika@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: eom 1.23.1\n"
+"Project-Id-Version: eom 1.25.0\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
-"POT-Creation-Date: 2020-01-10 14:33+0100\n"
+"POT-Creation-Date: 2021-01-16 10:43+0100\n"
 "PO-Revision-Date: 2018-03-11 15:18+0000\n"
-"Last-Translator: Andika Triwidada <andika@gmail.com>, 2020\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>, 2021\n"
 "Language-Team: Indonesian (https://www.transifex.com/mate/teams/13566/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,32 +29,32 @@ msgstr ""
 "Language: id\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:946
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:944
 #, c-format
 msgid "Show “_%s”"
 msgstr "Menampilkan “_%s”"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1417
 msgid "_Move on Toolbar"
 msgstr "_Pindah pada Bilah Alat"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1418
 msgid "Move the selected item on the toolbar"
 msgstr "Memindahkan butir yang dipilih pada bilah alat"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1422
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1419
 msgid "_Remove from Toolbar"
 msgstr "_Singkirkan dari Bilah Alat"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1423
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
 msgid "Remove the selected item from the toolbar"
 msgstr "Menyingkirkan butir yang dipilih dari bilah alat"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1424
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
 msgid "_Delete Toolbar"
 msgstr "_Hapus Bilah Alat"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1425
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1422
 msgid "Remove the selected toolbar"
 msgstr "Menyingkirkan bilah alat yang dipilih"
 
@@ -62,7 +62,7 @@ msgstr "Menyingkirkan bilah alat yang dipilih"
 msgid "Separator"
 msgstr "Pemisah"
 
-#: data/eom.appdata.xml.in:6 src/eom-window.c:2640
+#: data/eom.appdata.xml.in:6 src/eom-window.c:2638
 msgid "Eye of MATE"
 msgstr "Eye of MATE"
 
@@ -80,19 +80,13 @@ msgstr ""
 "Anda. Setelah citra dimuat, Anda bisa men-zum dan memutar citra, dan juga "
 "menampilkan citra berikutnya pada direktori dimana citra tersebut berada."
 
-#: data/eom.desktop.in.in:3 src/main.c:65 src/main.c:166
+#: data/eom.desktop.in.in:3 src/main.c:63 src/main.c:164
 msgid "Eye of MATE Image Viewer"
 msgstr "Penampil Citra Eye of MATE"
 
 #: data/eom.desktop.in.in:4
 msgid "Browse and rotate images"
 msgstr "Meramban dan memutar citra"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/eom.desktop.in.in:8
-msgid "eom"
-msgstr "eom"
 
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
@@ -102,245 +96,262 @@ msgstr ""
 "citra;gambar;penampil;penilik;JPEG;PNG;TIFF;SVG;MATE;foto;ramban;gambar "
 "mini;rotasi;"
 
-#: data/eom-image-properties-dialog.ui:8
+#: data/eom-image-properties-dialog.ui:23
 msgid "Image Properties"
 msgstr "Properti Citra"
 
-#: data/eom-image-properties-dialog.ui:54
+#: data/eom-image-properties-dialog.ui:39 src/eom-window.c:3992
 msgid "_Previous"
 msgstr "_Sebelumnya"
 
-#: data/eom-image-properties-dialog.ui:101
+#: data/eom-image-properties-dialog.ui:54 src/eom-window.c:3996
 msgid "_Next"
 msgstr "Sela_njutnya"
 
-#: data/eom-image-properties-dialog.ui:198
+#: data/eom-image-properties-dialog.ui:69 data/eom-preferences-dialog.ui:55
+#: src/eom-window.c:3783
+msgid "_Close"
+msgstr "_Tutup"
+
+#: data/eom-image-properties-dialog.ui:147
 msgid "Name:"
 msgstr "Nama:"
 
-#: data/eom-image-properties-dialog.ui:217
+#: data/eom-image-properties-dialog.ui:166
 msgid "Width:"
 msgstr "Lebar:"
 
-#: data/eom-image-properties-dialog.ui:235
+#: data/eom-image-properties-dialog.ui:184
 msgid "Height:"
 msgstr "Tinggi:"
 
-#: data/eom-image-properties-dialog.ui:253
+#: data/eom-image-properties-dialog.ui:202
 msgid "Type:"
 msgstr "Jenis:"
 
-#: data/eom-image-properties-dialog.ui:271
+#: data/eom-image-properties-dialog.ui:220
 msgid "Bytes:"
 msgstr "Bita:"
 
-#: data/eom-image-properties-dialog.ui:289
-#: data/eom-image-properties-dialog.ui:614
+#: data/eom-image-properties-dialog.ui:238
+#: data/eom-image-properties-dialog.ui:563
 msgid "Location:"
 msgstr "Lokasi:"
 
-#: data/eom-image-properties-dialog.ui:422
+#: data/eom-image-properties-dialog.ui:371
 msgid "General"
 msgstr "Umum"
 
-#: data/eom-image-properties-dialog.ui:455
+#: data/eom-image-properties-dialog.ui:404
 msgid "Aperture Value:"
 msgstr "Nilai Bukaan Lensa:"
 
-#: data/eom-image-properties-dialog.ui:471
+#: data/eom-image-properties-dialog.ui:420
 msgid "Exposure Time:"
 msgstr "Waktu Pencahayaan:"
 
-#: data/eom-image-properties-dialog.ui:487
+#: data/eom-image-properties-dialog.ui:436
 msgid "Focal Length:"
 msgstr "Panjang Fokus:"
 
-#: data/eom-image-properties-dialog.ui:503
+#: data/eom-image-properties-dialog.ui:452
 msgid "Flash:"
 msgstr "Lampu Kilat:"
 
-#: data/eom-image-properties-dialog.ui:519
+#: data/eom-image-properties-dialog.ui:468
 msgid "ISO Speed Rating:"
 msgstr "Rating Kecepatan ISO:"
 
-#: data/eom-image-properties-dialog.ui:535
+#: data/eom-image-properties-dialog.ui:484
 msgid "Metering Mode:"
 msgstr "Mode Pengukuran:"
 
-#: data/eom-image-properties-dialog.ui:551
+#: data/eom-image-properties-dialog.ui:500
 msgid "Camera Model:"
 msgstr "Model Kamera:"
 
-#: data/eom-image-properties-dialog.ui:568
+#: data/eom-image-properties-dialog.ui:517
 msgid "Date/Time:"
 msgstr "Tanggal/Waktu:"
 
-#: data/eom-image-properties-dialog.ui:598
+#: data/eom-image-properties-dialog.ui:547
 msgid "Description:"
 msgstr "Deskripsi:"
 
-#: data/eom-image-properties-dialog.ui:630
+#: data/eom-image-properties-dialog.ui:579
 msgid "Keywords:"
 msgstr "Kata Kunci:"
 
-#: data/eom-image-properties-dialog.ui:646
+#: data/eom-image-properties-dialog.ui:595
 msgid "Author:"
 msgstr "Pembuat"
 
-#: data/eom-image-properties-dialog.ui:662
+#: data/eom-image-properties-dialog.ui:611
 msgid "Copyright:"
 msgstr "Hak Cipta:"
 
-#: data/eom-image-properties-dialog.ui:941
-#: data/eom-image-properties-dialog.ui:990 data/metadata-sidebar.ui:409
+#: data/eom-image-properties-dialog.ui:890
+#: data/eom-image-properties-dialog.ui:939 data/metadata-sidebar.ui:409
 msgid "Details"
 msgstr "Rincian"
 
-#: data/eom-image-properties-dialog.ui:966
+#: data/eom-image-properties-dialog.ui:915
 msgid "Metadata"
 msgstr "Metadata"
 
-#: data/eom-multiple-save-as-dialog.ui:16
+#: data/eom-multiple-save-as-dialog.ui:26
 msgid "Save As"
 msgstr "Simpan Sebagai"
 
-#: data/eom-multiple-save-as-dialog.ui:101
+#: data/eom-multiple-save-as-dialog.ui:42
+msgid "_Cancel"
+msgstr "_Batal"
+
+#: data/eom-multiple-save-as-dialog.ui:57
+msgid "Save _As"
+msgstr "Simp_an Sebagai"
+
+#: data/eom-multiple-save-as-dialog.ui:114
 msgid "<b>%f:</b> original filename"
 msgstr "<b>%f:</b> nama berkas asli"
 
-#: data/eom-multiple-save-as-dialog.ui:119
+#: data/eom-multiple-save-as-dialog.ui:132
 msgid "<b>%n:</b> counter"
 msgstr "<b>%n:</b> penghitung"
 
-#: data/eom-multiple-save-as-dialog.ui:169
+#: data/eom-multiple-save-as-dialog.ui:182
 msgid "Choose a folder"
 msgstr "Pilih folder"
 
-#: data/eom-multiple-save-as-dialog.ui:182
+#: data/eom-multiple-save-as-dialog.ui:195
 msgid "Destination folder:"
 msgstr "Folder tujuan:"
 
-#: data/eom-multiple-save-as-dialog.ui:194
+#: data/eom-multiple-save-as-dialog.ui:207
 msgid "Filename format:"
 msgstr "Format nama berkas:"
 
-#: data/eom-multiple-save-as-dialog.ui:212
+#: data/eom-multiple-save-as-dialog.ui:225
 msgid "File Path Specifications"
 msgstr "Spesifikasi Lokasi Berkas"
 
-#: data/eom-multiple-save-as-dialog.ui:253
+#: data/eom-multiple-save-as-dialog.ui:266
 msgid "Start counter at:"
 msgstr "Mulai penghitung dari:"
 
-#: data/eom-multiple-save-as-dialog.ui:285
+#: data/eom-multiple-save-as-dialog.ui:298
 msgid "Replace spaces with underscores"
 msgstr "Ganti spasi dengan garis bawah"
 
-#: data/eom-multiple-save-as-dialog.ui:307
+#: data/eom-multiple-save-as-dialog.ui:320
 msgid "Options"
 msgstr "Opsi"
 
-#: data/eom-multiple-save-as-dialog.ui:369
+#: data/eom-multiple-save-as-dialog.ui:383
 msgid "Rename from:"
 msgstr "Ubah nama dari:"
 
-#: data/eom-multiple-save-as-dialog.ui:381
+#: data/eom-multiple-save-as-dialog.ui:395
 msgid "To:"
 msgstr "Ke:"
 
-#: data/eom-multiple-save-as-dialog.ui:396
+#: data/eom-multiple-save-as-dialog.ui:425
 msgid "File Name Preview"
 msgstr "Pratinjau Nama Berkas"
 
-#: data/eom-preferences-dialog.ui:16
+#: data/eom-preferences-dialog.ui:26
 msgid "Eye of MATE Preferences"
 msgstr "Preferensi Eye of Mate"
 
-#: data/eom-preferences-dialog.ui:88
+#: data/eom-preferences-dialog.ui:39 src/eom-window.c:3778
+msgid "_Help"
+msgstr "_Bantuan"
+
+#: data/eom-preferences-dialog.ui:100
 msgid "Image Enhancements"
 msgstr "Peningkatan Gambar"
 
-#: data/eom-preferences-dialog.ui:117
+#: data/eom-preferences-dialog.ui:129
 msgid "Smooth images when zoomed-_out"
 msgstr "_Memperkecil tampilan gambar dengan halus"
 
-#: data/eom-preferences-dialog.ui:155
+#: data/eom-preferences-dialog.ui:167
 msgid "Smooth images when zoomed-_in"
 msgstr "Memperbesar tamp_ilan gambar dengan halus"
 
-#: data/eom-preferences-dialog.ui:193
+#: data/eom-preferences-dialog.ui:205
 msgid "_Automatic orientation"
 msgstr "Orient_asi otomatis"
 
-#: data/eom-preferences-dialog.ui:231
+#: data/eom-preferences-dialog.ui:243
 msgid "Background"
 msgstr "Latar Belakang"
 
-#: data/eom-preferences-dialog.ui:250
+#: data/eom-preferences-dialog.ui:262
 msgid "As custom color:"
 msgstr "Sebagai warna ubahan:"
 
-#: data/eom-preferences-dialog.ui:267 data/org.mate.eom.gschema.xml.in:16
+#: data/eom-preferences-dialog.ui:279 data/org.mate.eom.gschema.xml.in:16
 msgid "Background Color"
 msgstr "Warna Latar Belakang"
 
-#: data/eom-preferences-dialog.ui:300
+#: data/eom-preferences-dialog.ui:312
 msgid "Transparent Parts"
 msgstr "Bagian Transparan"
 
-#: data/eom-preferences-dialog.ui:335
+#: data/eom-preferences-dialog.ui:347
 msgid "As check _pattern"
 msgstr "Sebagai _pola kotak-kotak"
 
-#: data/eom-preferences-dialog.ui:356
+#: data/eom-preferences-dialog.ui:368
 msgid "As custom c_olor:"
 msgstr "Sebagai _warna ubahan:"
 
-#: data/eom-preferences-dialog.ui:377
+#: data/eom-preferences-dialog.ui:389
 msgid "Color for Transparent Areas"
 msgstr "Warna untuk Wilayah Transparan"
 
-#: data/eom-preferences-dialog.ui:395
+#: data/eom-preferences-dialog.ui:407
 msgid "As _background"
 msgstr "Latar _belakang aplikasi"
 
-#: data/eom-preferences-dialog.ui:437
+#: data/eom-preferences-dialog.ui:449
 msgid "Image View"
 msgstr "Tampilan Gambar"
 
-#: data/eom-preferences-dialog.ui:461
+#: data/eom-preferences-dialog.ui:473
 msgid "Image Zoom"
 msgstr "Perbesaran Gambar"
 
-#: data/eom-preferences-dialog.ui:496
+#: data/eom-preferences-dialog.ui:508
 msgid "E_xpand images to fit screen"
 msgstr "_Perbesar gambar hingga sesuai dengan layar"
 
-#: data/eom-preferences-dialog.ui:541
+#: data/eom-preferences-dialog.ui:553
 msgid "Sequence"
 msgstr "Sekuens"
 
-#: data/eom-preferences-dialog.ui:583
+#: data/eom-preferences-dialog.ui:595
 msgid "_Switch image after:"
 msgstr "_Berganti gambar setelah:"
 
-#: data/eom-preferences-dialog.ui:611
+#: data/eom-preferences-dialog.ui:623
 msgid "seconds"
 msgstr "detik"
 
-#: data/eom-preferences-dialog.ui:628
+#: data/eom-preferences-dialog.ui:640
 msgid "_Random sequence"
 msgstr "U_rut acak"
 
-#: data/eom-preferences-dialog.ui:644
+#: data/eom-preferences-dialog.ui:656
 msgid "_Loop sequence"
 msgstr "U_langi sekuens"
 
-#: data/eom-preferences-dialog.ui:688
+#: data/eom-preferences-dialog.ui:700
 msgid "Slideshow"
 msgstr "Pertunjukan Salindia"
 
-#: data/eom-preferences-dialog.ui:722
+#: data/eom-preferences-dialog.ui:734
 msgid "Plugins"
 msgstr "Pengaya"
 
@@ -664,10 +675,6 @@ msgstr ""
 msgid "Fullscreen with double-click"
 msgstr "Layar penuh dengan klik ganda"
 
-#: plugins/fullscreen/fullscreen.plugin.desktop.in:6
-msgid "view-fullscreen"
-msgstr "view-fullscreen"
-
 #: plugins/reload/eom-reload-plugin.c:45
 #: plugins/reload/reload.plugin.desktop.in:5
 msgid "Reload Image"
@@ -676,10 +683,6 @@ msgstr "Muat Ulang Gambar"
 #: plugins/reload/eom-reload-plugin.c:45
 msgid "Reload current image"
 msgstr "Memuat ulang gambar yang sedang dibuka"
-
-#: plugins/reload/reload.plugin.desktop.in:6
-msgid "view-refresh"
-msgstr "view-refresh"
 
 #: plugins/statusbar-date/statusbar-date.plugin.desktop.in:5
 msgid "Date in statusbar"
@@ -761,31 +764,31 @@ msgstr "Buka Gambar"
 msgid "Save Image"
 msgstr "Simpan Gambar"
 
-#: src/eom-file-chooser.c:467 src/eom-window.c:4009
+#: src/eom-file-chooser.c:467 src/eom-window.c:4006
 msgid "Open Folder"
 msgstr "Buka Folder"
 
-#: src/eom-image.c:552
+#: src/eom-image.c:546
 msgid "Transformation on unloaded image."
 msgstr "Transformasi pada gambar yang belum dimuat."
 
-#: src/eom-image.c:580
+#: src/eom-image.c:574
 msgid "Transformation failed."
 msgstr "Transformasi gagal."
 
-#: src/eom-image.c:1054
+#: src/eom-image.c:1048
 msgid "EXIF not supported for this file format."
 msgstr "EXIF tidak didukung pada format berkas ini."
 
-#: src/eom-image.c:1203
+#: src/eom-image.c:1197
 msgid "Image loading failed."
 msgstr "Gagal memuat gambar."
 
-#: src/eom-image.c:1732 src/eom-image.c:1834
+#: src/eom-image.c:1725 src/eom-image.c:1827
 msgid "No image loaded."
 msgstr "Tidak ada gambar yang dimuat."
 
-#: src/eom-image.c:1742 src/eom-image.c:1846
+#: src/eom-image.c:1735 src/eom-image.c:1839
 msgid "Temporary file creation failed."
 msgstr "Gagal membuat berkas temporer."
 
@@ -1020,15 +1023,15 @@ msgstr "%d / %d"
 msgid "Taken on"
 msgstr "Diambil pada"
 
-#: src/eom-uri-converter.c:986
+#: src/eom-uri-converter.c:985
 msgid "At least two file names are equal."
 msgstr "Ada dua nama berkas yang sama"
 
-#: src/eom-util.c:68
+#: src/eom-util.c:65
 msgid "Could not display help for Eye of MATE"
 msgstr "Tidak dapat menampilkan layar bantuan untuk Mata MATE"
 
-#: src/eom-util.c:116
+#: src/eom-util.c:113
 msgid " (invalid Unicode)"
 msgstr " (Unicode salah)"
 
@@ -1048,7 +1051,7 @@ msgstr[0] "%i × %i piksel  %s    %i%%"
 msgid "_Reload"
 msgstr "_Muat Ulang"
 
-#: src/eom-window.c:834 src/eom-window.c:2794
+#: src/eom-window.c:834 src/eom-window.c:2792
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "Sem_bunyikan"
@@ -1082,15 +1085,15 @@ msgstr "Menyimpan gambar \"%s\" (%u/%u)"
 msgid "Opening image \"%s\""
 msgstr "Membuka gambar \"%s\""
 
-#: src/eom-window.c:1909
+#: src/eom-window.c:1907
 msgid "Leave Fullscreen"
 msgstr "Keluar dari Layar Penuh"
 
-#: src/eom-window.c:2050
+#: src/eom-window.c:2048
 msgid "Viewing a slideshow"
 msgstr "Melihat pertunjukan salindia"
 
-#: src/eom-window.c:2263
+#: src/eom-window.c:2261
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1099,15 +1102,15 @@ msgstr ""
 "Galat mencetak berkas:\n"
 "%s"
 
-#: src/eom-window.c:2526
+#: src/eom-window.c:2524
 msgid "Toolbar Editor"
 msgstr "Penyunting Bilah Alat"
 
-#: src/eom-window.c:2529
+#: src/eom-window.c:2527
 msgid "_Reset to Default"
 msgstr "_Kembali ke Awal"
 
-#: src/eom-window.c:2594
+#: src/eom-window.c:2592
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1119,7 +1122,7 @@ msgstr ""
 "dipublikasikan oleh Free Software Foundation; baik versi 2 dari Lisensi, "
 "atau (terserah pilihan Anda) versi setelahnya.\n"
 
-#: src/eom-window.c:2598
+#: src/eom-window.c:2596
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1130,7 +1133,7 @@ msgstr ""
 "ADANYA JAMINAN; termasuk tanpa jaminan DAYA JUAL atau KELAIKAN UNTUK TUJUAN "
 "TERTENTU. Lihat GNU General Public License untuk rincian lebih lanjut.\n"
 
-#: src/eom-window.c:2602
+#: src/eom-window.c:2600
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
@@ -1140,25 +1143,27 @@ msgstr ""
 "bersama dengan program ini; jika tidak, tulis ke Free Software Foundation, "
 "Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 
-#: src/eom-window.c:2641
+#: src/eom-window.c:2639
 msgid "About Eye of MATE"
 msgstr "Tentang Eye of MATE"
 
-#: src/eom-window.c:2643
+#: src/eom-window.c:2641
 msgid ""
 "Copyright © 2000-2010 Free Software Foundation, Inc.\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2021 MATE developers"
 msgstr ""
 "Hak Cipta © 2000-2010 Free Software Foundation, Inc.\n"
 "Hak Cipta © 2011 Perberos\n"
-"Hak Cipta © 2012-2020 pengembang MATE"
+"Hak Cipta © 2012-2021 para pengembang MATE"
 
-#: src/eom-window.c:2646
-msgid "The MATE image viewer."
-msgstr "Penampil gambar MATE."
+#: src/eom-window.c:2644
+msgid ""
+"Eye of MATE is a simple graphics viewer for the MATE Desktop Environment."
+msgstr ""
+"Eye of MATE adalah penampil grafis sederhana untuk Lingkungan Desktop MATE."
 
-#: src/eom-window.c:2649
+#: src/eom-window.c:2647
 msgid "translator-credits"
 msgstr ""
 "Mohammad DAMT <mdamt@bisnisweb.com>\n"
@@ -1166,17 +1171,17 @@ msgstr ""
 "Dirgita <dirgita@gmail.com>\n"
 "Tim MATE Indonesia <http://id.mate.org>\n"
 "Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017.\n"
-"Andika Triwidada <andika@gmail.com>, 2020."
+"Andika Triwidada <andika@gmail.com>, 2020, 2021."
 
-#: src/eom-window.c:2742 src/eom-window.c:2757
+#: src/eom-window.c:2740 src/eom-window.c:2755
 msgid "Error launching appearance preferences dialog: "
 msgstr "Galat saat meluncurkan dialog preferensi penampilan:"
 
-#: src/eom-window.c:2792
+#: src/eom-window.c:2790
 msgid "_Open Background Preferences"
 msgstr "_Buka Preferensi Latar"
 
-#: src/eom-window.c:2808
+#: src/eom-window.c:2806
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1185,25 +1190,25 @@ msgstr ""
 "Gambar \"%s\" sudah dijadikan Latar Belakang Desktop.\n"
 "Ubah  penampilannya?"
 
-#: src/eom-window.c:3249
+#: src/eom-window.c:3247
 msgid "Saving image locally…"
 msgstr "Menyimpan gambar lokal..."
 
-#: src/eom-window.c:3329
+#: src/eom-window.c:3327
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
 "\"%s\" to the trash?"
 msgstr "Pindahkan \"%s\" ke tempat sampah?"
 
-#: src/eom-window.c:3332
+#: src/eom-window.c:3330
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr "Tempat sampah untuk \"%s\" tidak ditemukan. Hapus gambar secara permanen?"
 
-#: src/eom-window.c:3337
+#: src/eom-window.c:3335
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1215,7 +1220,7 @@ msgstr[0] ""
 "Anda yakin hendak memindah\n"
 "%d gambar yang dipilih ke tong sampah?"
 
-#: src/eom-window.c:3342
+#: src/eom-window.c:3340
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1223,415 +1228,399 @@ msgstr ""
 "Beberapa gambar tidak dapat dipindahkan ke tempat sampah dan harus dihapus "
 "permanen. Laksanakan?"
 
-#: src/eom-window.c:3359 src/eom-window.c:3855 src/eom-window.c:3882
+#: src/eom-window.c:3357 src/eom-window.c:3852 src/eom-window.c:3879
 msgid "Move to _Trash"
 msgstr "Pindahkan ke _Tong Sampah"
 
-#: src/eom-window.c:3361
+#: src/eom-window.c:3359
 msgid "_Do not ask again during this session"
 msgstr "_Jangan tanya lagi selama sesi ini"
 
-#: src/eom-window.c:3406 src/eom-window.c:3420
+#: src/eom-window.c:3404 src/eom-window.c:3418
 msgid "Couldn't access trash."
 msgstr "Tidak dapat mengakses tempat sampah."
 
-#: src/eom-window.c:3428
+#: src/eom-window.c:3426
 msgid "Couldn't delete file"
 msgstr "Tidak dapat menghapus berkas"
 
-#: src/eom-window.c:3530
+#: src/eom-window.c:3528
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Galat menghapus berkas %s"
 
-#: src/eom-window.c:3776
+#: src/eom-window.c:3773
 msgid "_Image"
 msgstr "_Gambar"
 
-#: src/eom-window.c:3777
+#: src/eom-window.c:3774
 msgid "_Edit"
 msgstr "_Edit"
 
-#: src/eom-window.c:3778
+#: src/eom-window.c:3775
 msgid "_View"
 msgstr "_Tampilan"
 
-#: src/eom-window.c:3779
+#: src/eom-window.c:3776
 msgid "_Go"
 msgstr "_Jalan"
 
-#: src/eom-window.c:3780
+#: src/eom-window.c:3777
 msgid "_Tools"
-msgstr "_Alat"
+msgstr "Ala_t"
 
-#: src/eom-window.c:3781
-msgid "_Help"
-msgstr "_Bantuan"
-
-#: src/eom-window.c:3783
+#: src/eom-window.c:3780
 msgid "_Open…"
 msgstr "_Buka…"
 
-#: src/eom-window.c:3784
+#: src/eom-window.c:3781
 msgid "Open a file"
 msgstr "Buka berkas"
 
-#: src/eom-window.c:3786
-msgid "_Close"
-msgstr "_Tutup"
-
-#: src/eom-window.c:3787
+#: src/eom-window.c:3784
 msgid "Close window"
 msgstr "Tutup jendela"
 
-#: src/eom-window.c:3789
+#: src/eom-window.c:3786
 msgid "T_oolbar"
-msgstr "Bilah_ Alat"
+msgstr "Bilah _Alat"
 
-#: src/eom-window.c:3790
+#: src/eom-window.c:3787
 msgid "Edit the application toolbar"
 msgstr "Menyunting bilah alat aplikasi"
 
-#: src/eom-window.c:3792
+#: src/eom-window.c:3789
 msgid "Prefere_nces"
 msgstr "Prefere_nsi"
 
-#: src/eom-window.c:3793
+#: src/eom-window.c:3790
 msgid "Preferences for Eye of MATE"
 msgstr "Preferensi Eye of Mate"
 
-#: src/eom-window.c:3795
+#: src/eom-window.c:3792
 msgid "_Contents"
 msgstr "_Isi"
 
-#: src/eom-window.c:3796
+#: src/eom-window.c:3793
 msgid "Help on this application"
 msgstr "Bantuan untuk aplikasi ini"
 
-#: src/eom-window.c:3798
+#: src/eom-window.c:3795
 msgid "_About"
-msgstr "_Tentang"
+msgstr "Tent_ang"
 
-#: src/eom-window.c:3799
+#: src/eom-window.c:3796
 msgid "About this application"
 msgstr "Tentang aplikasi ini"
 
-#: src/eom-window.c:3804
+#: src/eom-window.c:3801
 msgid "_Toolbar"
-msgstr "_Bilah Alat"
+msgstr "Bilah Ala_t"
 
-#: src/eom-window.c:3805
+#: src/eom-window.c:3802
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Mengubah kenampakan bilah alat pada jendela yang aktif"
 
-#: src/eom-window.c:3807
+#: src/eom-window.c:3804
 msgid "_Statusbar"
-msgstr "_Status panel"
+msgstr "Bilah _Status"
 
-#: src/eom-window.c:3808
+#: src/eom-window.c:3805
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Mengubah kenampakan baris status pada jendela yang aktif"
 
-#: src/eom-window.c:3810
+#: src/eom-window.c:3807
 msgid "_Image Collection"
 msgstr "Koleks_i Gambar"
 
-#: src/eom-window.c:3811
+#: src/eom-window.c:3808
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "Ubah penampakan panel koleksi gambar pada jendela ini"
 
-#: src/eom-window.c:3813
+#: src/eom-window.c:3810
 msgid "Side _Pane"
-msgstr "Panel _Samping"
+msgstr "_Panel Samping"
 
-#: src/eom-window.c:3814
+#: src/eom-window.c:3811
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Mengubah kenampakan panel samping pada jendela yang aktif"
 
-#: src/eom-window.c:3819
+#: src/eom-window.c:3816
 msgid "_Save"
 msgstr "_Simpan"
 
-#: src/eom-window.c:3820
+#: src/eom-window.c:3817
 msgid "Save changes in currently selected images"
 msgstr "Menyimpan perubahan pada gambar yang dipilih"
 
-#: src/eom-window.c:3822
+#: src/eom-window.c:3819
 msgid "Open _with"
 msgstr "Buka _dengan"
 
-#: src/eom-window.c:3823
+#: src/eom-window.c:3820
 msgid "Open the selected image with a different application"
 msgstr "Membuka gambar yang dipilih dengan aplikasi yang berbeda"
 
-#: src/eom-window.c:3825
+#: src/eom-window.c:3822
 msgid "Save _As…"
 msgstr "Simp_an Sebagai..."
 
-#: src/eom-window.c:3826
+#: src/eom-window.c:3823
 msgid "Save the selected images with a different name"
 msgstr "Menyimpan gambar yang dipilih dengan nama berbeda"
 
-#: src/eom-window.c:3828
+#: src/eom-window.c:3825
 msgid "Open Containing _Folder"
-msgstr "Buka _Folder "
+msgstr "Buka _Folder Yang Memuat"
 
-#: src/eom-window.c:3829
+#: src/eom-window.c:3826
 msgid "Show the folder which contains this file in the file manager"
 msgstr "Menampilkan folder yang memuat berkas ini dalam manajer berkas"
 
-#: src/eom-window.c:3831
+#: src/eom-window.c:3828
 msgid "_Print…"
 msgstr "_Cetak…"
 
-#: src/eom-window.c:3832
+#: src/eom-window.c:3829
 msgid "Print the selected image"
 msgstr "Mencetak gambar yang dipilih"
 
-#: src/eom-window.c:3834
+#: src/eom-window.c:3831
 msgid "Prope_rties"
 msgstr "Prope_rti"
 
-#: src/eom-window.c:3835
+#: src/eom-window.c:3832
 msgid "Show the properties and metadata of the selected image"
 msgstr "Menampilkan properti dan metadata dari gambar yang dipilih"
 
-#: src/eom-window.c:3837
+#: src/eom-window.c:3834
 msgid "_Undo"
 msgstr "_Tak Jadi"
 
-#: src/eom-window.c:3838
+#: src/eom-window.c:3835
 msgid "Undo the last change in the image"
 msgstr "Membatalkan perubahan terakhir pada gambar"
 
-#: src/eom-window.c:3840
+#: src/eom-window.c:3837
 msgid "Flip _Horizontal"
 msgstr "Lipat _Horisontal"
 
-#: src/eom-window.c:3841
+#: src/eom-window.c:3838
 msgid "Mirror the image horizontally"
 msgstr "Membalikkan gambar secara horisontal"
 
-#: src/eom-window.c:3843
+#: src/eom-window.c:3840
 msgid "Flip _Vertical"
 msgstr "Lipat _Vertikal"
 
-#: src/eom-window.c:3844
+#: src/eom-window.c:3841
 msgid "Mirror the image vertically"
 msgstr "Membalikkan gambar secara vertikal"
 
-#: src/eom-window.c:3846
+#: src/eom-window.c:3843
 msgid "_Rotate Clockwise"
 msgstr "Puta_r Searah Jarum Jam"
 
-#: src/eom-window.c:3847
+#: src/eom-window.c:3844
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Memutar gambar 90 derajat ke kanan"
 
-#: src/eom-window.c:3849
+#: src/eom-window.c:3846
 msgid "Rotate Counterc_lockwise"
 msgstr "Putar Ber_lawanan Jarum Jam"
 
-#: src/eom-window.c:3850
+#: src/eom-window.c:3847
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Memutar gambar 90 derajat ke kiri"
 
-#: src/eom-window.c:3852
+#: src/eom-window.c:3849
 msgid "Set as _Desktop Background"
 msgstr "Jadikan Latar Belakang _Desktop"
 
-#: src/eom-window.c:3853
+#: src/eom-window.c:3850
 msgid "Set the selected image as the desktop background"
 msgstr "Menjadikan gambar yang dipilih sebagai latar belakang desktop"
 
-#: src/eom-window.c:3856
+#: src/eom-window.c:3853
 msgid "Move the selected image to the trash folder"
 msgstr "Memindahkan gambar yang dipilih ke folder tempat sampah"
 
-#: src/eom-window.c:3858
+#: src/eom-window.c:3855
 msgid "_Copy"
 msgstr "_Salin"
 
-#: src/eom-window.c:3859
+#: src/eom-window.c:3856
 msgid "Copy the selected image to the clipboard"
 msgstr "Salin citra yang terpilih pada clipboard"
 
-#: src/eom-window.c:3861 src/eom-window.c:3873 src/eom-window.c:3876
+#: src/eom-window.c:3858 src/eom-window.c:3870 src/eom-window.c:3873
 msgid "_Zoom In"
 msgstr "_Perbesar"
 
-#: src/eom-window.c:3862 src/eom-window.c:3874
+#: src/eom-window.c:3859 src/eom-window.c:3871
 msgid "Enlarge the image"
 msgstr "Memperbesar tampilan gambar"
 
-#: src/eom-window.c:3864 src/eom-window.c:3879
+#: src/eom-window.c:3861 src/eom-window.c:3876
 msgid "Zoom _Out"
 msgstr "P_erkecil"
 
-#: src/eom-window.c:3865 src/eom-window.c:3877 src/eom-window.c:3880
+#: src/eom-window.c:3862 src/eom-window.c:3874 src/eom-window.c:3877
 msgid "Shrink the image"
 msgstr "Memperkecil tampilan gambar"
 
-#: src/eom-window.c:3867
+#: src/eom-window.c:3864
 msgid "_Normal Size"
 msgstr "Ukuran _Normal"
 
-#: src/eom-window.c:3868
+#: src/eom-window.c:3865
 msgid "Show the image at its normal size"
 msgstr "Menampilkan gambar dalam ukuran normal"
 
-#: src/eom-window.c:3870
+#: src/eom-window.c:3867
 msgid "_Best Fit"
 msgstr "_Sehalaman Penuh"
 
-#: src/eom-window.c:3871
+#: src/eom-window.c:3868
 msgid "Fit the image to the window"
 msgstr "Menyesuaikan gambar dengan jendela aplikasi"
 
-#: src/eom-window.c:3888
+#: src/eom-window.c:3885
 msgid "_Fullscreen"
 msgstr "_Layar Penuh"
 
-#: src/eom-window.c:3889
+#: src/eom-window.c:3886
 msgid "Show the current image in fullscreen mode"
 msgstr "Menampilkan gambar dalam modus layar penuh"
 
-#: src/eom-window.c:3891
+#: src/eom-window.c:3888
 msgid "Pause Slideshow"
 msgstr "Jeda Pertunjukan Slide"
 
-#: src/eom-window.c:3892
+#: src/eom-window.c:3889
 msgid "Pause or resume the slideshow"
 msgstr "Jeda atau melanjutkan pertunjukan slide"
 
-#: src/eom-window.c:3897 src/eom-window.c:3912
+#: src/eom-window.c:3894 src/eom-window.c:3909
 msgid "_Previous Image"
 msgstr "Gambar _Sebelumnya"
 
-#: src/eom-window.c:3898
+#: src/eom-window.c:3895
 msgid "Go to the previous image of the collection"
 msgstr "Lompat ke gambar sebelumnya dari koleksi"
 
-#: src/eom-window.c:3900
+#: src/eom-window.c:3897
 msgid "_Next Image"
 msgstr "Gambar Sela_njutnya"
 
-#: src/eom-window.c:3901
+#: src/eom-window.c:3898
 msgid "Go to the next image of the collection"
 msgstr "Lompat ke gambar selanjutnya dari koleksi"
 
-#: src/eom-window.c:3903 src/eom-window.c:3915
+#: src/eom-window.c:3900 src/eom-window.c:3912
 msgid "_First Image"
 msgstr "Gambar _Pertama"
 
-#: src/eom-window.c:3904
+#: src/eom-window.c:3901
 msgid "Go to the first image of the collection"
 msgstr "Lompat ke gambar pertama dari koleksi"
 
-#: src/eom-window.c:3906 src/eom-window.c:3918
+#: src/eom-window.c:3903 src/eom-window.c:3915
 msgid "_Last Image"
 msgstr "Gambar _Terakhir"
 
-#: src/eom-window.c:3907
+#: src/eom-window.c:3904
 msgid "Go to the last image of the collection"
 msgstr "Lompat ke gambar terakhir dari koleksi"
 
-#: src/eom-window.c:3909
+#: src/eom-window.c:3906
 msgid "_Random Image"
 msgstr "Gamba_r Acak"
 
-#: src/eom-window.c:3910
+#: src/eom-window.c:3907
 msgid "Go to a random image of the collection"
 msgstr "Lompat ke suatu gambar acak dari koleksi"
 
-#: src/eom-window.c:3924
+#: src/eom-window.c:3921
 msgid "S_lideshow"
 msgstr "S_lideshow"
 
-#: src/eom-window.c:3925
+#: src/eom-window.c:3922
 msgid "Start a slideshow view of the images"
 msgstr "Memulai deretan gambar"
 
-#: src/eom-window.c:3995
-msgid "Previous"
-msgstr "Sebelumnya"
-
-#: src/eom-window.c:3999
-msgid "Next"
-msgstr "Selanjutnya"
-
-#: src/eom-window.c:4003
+#: src/eom-window.c:4000
 msgid "Right"
 msgstr "Kanan"
 
-#: src/eom-window.c:4006
+#: src/eom-window.c:4003
 msgid "Left"
 msgstr "Kiri"
 
-#: src/eom-window.c:4012
+#: src/eom-window.c:4009
 msgid "In"
 msgstr "Perbesar"
 
-#: src/eom-window.c:4015
+#: src/eom-window.c:4012
 msgid "Out"
 msgstr "Perkecil"
 
-#: src/eom-window.c:4018
+#: src/eom-window.c:4015
 msgid "Normal"
 msgstr "Normal"
 
-#: src/eom-window.c:4021
+#: src/eom-window.c:4018
 msgid "Fit"
 msgstr "Pas"
 
-#: src/eom-window.c:4024
+#: src/eom-window.c:4021
 msgid "Collection"
 msgstr "Koleksi"
 
-#: src/eom-window.c:4027
+#: src/eom-window.c:4024
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Tempat Sampah"
 
-#: src/eom-window.c:4385
+#: src/eom-window.c:4381
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "Edit citra aktual menggunakan %s"
 
-#: src/eom-window.c:4388
+#: src/eom-window.c:4384
 msgid "Edit Image"
 msgstr "Edit Citra"
 
-#: src/eom-window.c:4612
+#: src/eom-window.c:4608
 msgid "Properties"
 msgstr "Properti"
 
-#: src/main.c:72
+#: src/main.c:70
 msgid "Open in fullscreen mode"
 msgstr "Dibuka dalam mode layar penuh"
 
-#: src/main.c:73
+#: src/main.c:71
 msgid "Disable image collection"
 msgstr "Matikan koleksi gambar"
 
-#: src/main.c:74
+#: src/main.c:72
 msgid "Open in slideshow mode"
 msgstr "Dibuka dalam mode deretan gambar"
 
-#: src/main.c:75
+#: src/main.c:73
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "Memulai sesi baru ketimbang menggunakan yang sudah ada"
 
-#: src/main.c:77
+#: src/main.c:75
 msgid "Show the application's version"
 msgstr "Tampilkan versi aplikasinya"
 
-#: src/main.c:108
+#: src/main.c:106
 msgid "[FILE…]"
 msgstr "[BERKAS…]"
 
-#: src/main.c:121
+#: src/main.c:119
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr "Jalankan '%s --help' untuk daftar lengkap opsi yang tersedia."

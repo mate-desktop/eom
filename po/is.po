@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Sveinn í Felli <sv1@fellsnet.is>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# Sveinn í Felli <sv1@fellsnet.is>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: eom 1.23.1\n"
+"Project-Id-Version: eom 1.25.0\n"
 "Report-Msgid-Bugs-To: http://www.mate-desktop.org\n"
-"POT-Creation-Date: 2020-01-10 14:33+0100\n"
+"POT-Creation-Date: 2021-01-16 10:43+0100\n"
 "PO-Revision-Date: 2018-03-11 15:18+0000\n"
-"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2018\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>, 2021\n"
 "Language-Team: Icelandic (https://www.transifex.com/mate/teams/13566/is/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,32 +21,32 @@ msgstr ""
 "Language: is\n"
 "Plural-Forms: nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);\n"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:946
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:944
 #, c-format
 msgid "Show “_%s”"
 msgstr "Birta „_%s“"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1417
 msgid "_Move on Toolbar"
 msgstr "_Færa á verkfærastiku"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1418
 msgid "Move the selected item on the toolbar"
 msgstr "Færa valda hlutinn á verkfærastikuna"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1422
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1419
 msgid "_Remove from Toolbar"
 msgstr "_Fjarlægja af verkfærastiku"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1423
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
 msgid "Remove the selected item from the toolbar"
 msgstr "Fjarlægja valinn hlut af verkfærastiku"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1424
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
 msgid "_Delete Toolbar"
 msgstr "_Eyða verkfærastiku"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1425
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1422
 msgid "Remove the selected toolbar"
 msgstr "Fjarlægja völdu verkfærastikuna"
 
@@ -54,7 +54,7 @@ msgstr "Fjarlægja völdu verkfærastikuna"
 msgid "Separator"
 msgstr "Aðgreinir"
 
-#: data/eom.appdata.xml.in:6 src/eom-window.c:2640
+#: data/eom.appdata.xml.in:6 src/eom-window.c:2638
 msgid "Eye of MATE"
 msgstr "Eye of MATE myndasskoðun"
 
@@ -69,7 +69,7 @@ msgid ""
 "subsequent images in the directory the image was loaded from."
 msgstr ""
 
-#: data/eom.desktop.in.in:3 src/main.c:65 src/main.c:166
+#: data/eom.desktop.in.in:3 src/main.c:63 src/main.c:164
 msgid "Eye of MATE Image Viewer"
 msgstr "Eye of MATE myndasskoðun"
 
@@ -77,257 +77,268 @@ msgstr "Eye of MATE myndasskoðun"
 msgid "Browse and rotate images"
 msgstr "Skoða og snúa myndum"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon
-#. file name)!
-#: data/eom.desktop.in.in:8
-msgid "eom"
-msgstr ""
-
 #. Translators: Search terms to find this application. Do NOT translate or
 #. localize the semicolons! The list MUST also end with a semicolon!
 #: data/eom.desktop.in.in:14
 msgid "image;viewer;JPEG;PNG;TIFF;SVG;MATE;photos;browse;thumbnails;rotate;"
 msgstr ""
 
-#: data/eom-image-properties-dialog.ui:8
+#: data/eom-image-properties-dialog.ui:23
 msgid "Image Properties"
 msgstr "Eiginleikar myndar"
 
-#: data/eom-image-properties-dialog.ui:54
+#: data/eom-image-properties-dialog.ui:39 src/eom-window.c:3992
 msgid "_Previous"
 msgstr "_Fyrra"
 
-#: data/eom-image-properties-dialog.ui:101
+#: data/eom-image-properties-dialog.ui:54 src/eom-window.c:3996
 msgid "_Next"
 msgstr "_Næsta"
 
-#: data/eom-image-properties-dialog.ui:198
+#: data/eom-image-properties-dialog.ui:69 data/eom-preferences-dialog.ui:55
+#: src/eom-window.c:3783
+msgid "_Close"
+msgstr "_Loka"
+
+#: data/eom-image-properties-dialog.ui:147
 msgid "Name:"
 msgstr "Heiti:"
 
-#: data/eom-image-properties-dialog.ui:217
+#: data/eom-image-properties-dialog.ui:166
 msgid "Width:"
 msgstr "Breidd:"
 
-#: data/eom-image-properties-dialog.ui:235
+#: data/eom-image-properties-dialog.ui:184
 msgid "Height:"
 msgstr "Hæð:"
 
-#: data/eom-image-properties-dialog.ui:253
+#: data/eom-image-properties-dialog.ui:202
 msgid "Type:"
 msgstr "Tegund:"
 
-#: data/eom-image-properties-dialog.ui:271
+#: data/eom-image-properties-dialog.ui:220
 msgid "Bytes:"
 msgstr "Bæti:"
 
-#: data/eom-image-properties-dialog.ui:289
-#: data/eom-image-properties-dialog.ui:614
+#: data/eom-image-properties-dialog.ui:238
+#: data/eom-image-properties-dialog.ui:563
 msgid "Location:"
 msgstr "Staðsetning:"
 
-#: data/eom-image-properties-dialog.ui:422
+#: data/eom-image-properties-dialog.ui:371
 msgid "General"
 msgstr "Almennt"
 
-#: data/eom-image-properties-dialog.ui:455
+#: data/eom-image-properties-dialog.ui:404
 msgid "Aperture Value:"
 msgstr "Gildi ljósops:"
 
-#: data/eom-image-properties-dialog.ui:471
+#: data/eom-image-properties-dialog.ui:420
 msgid "Exposure Time:"
 msgstr "Lýsingartími:"
 
-#: data/eom-image-properties-dialog.ui:487
+#: data/eom-image-properties-dialog.ui:436
 msgid "Focal Length:"
 msgstr "Brennivídd:"
 
-#: data/eom-image-properties-dialog.ui:503
+#: data/eom-image-properties-dialog.ui:452
 msgid "Flash:"
 msgstr "Leifturljós:"
 
-#: data/eom-image-properties-dialog.ui:519
+#: data/eom-image-properties-dialog.ui:468
 msgid "ISO Speed Rating:"
 msgstr "ISO hraði:"
 
-#: data/eom-image-properties-dialog.ui:535
+#: data/eom-image-properties-dialog.ui:484
 msgid "Metering Mode:"
 msgstr "Mælihamur:"
 
-#: data/eom-image-properties-dialog.ui:551
+#: data/eom-image-properties-dialog.ui:500
 msgid "Camera Model:"
 msgstr "Gerð myndavélar:"
 
-#: data/eom-image-properties-dialog.ui:568
+#: data/eom-image-properties-dialog.ui:517
 msgid "Date/Time:"
 msgstr "Dagsetning og tími:"
 
-#: data/eom-image-properties-dialog.ui:598
+#: data/eom-image-properties-dialog.ui:547
 msgid "Description:"
 msgstr "Lýsing:"
 
-#: data/eom-image-properties-dialog.ui:630
+#: data/eom-image-properties-dialog.ui:579
 msgid "Keywords:"
 msgstr "Stikkorð:"
 
-#: data/eom-image-properties-dialog.ui:646
+#: data/eom-image-properties-dialog.ui:595
 msgid "Author:"
 msgstr "Höfundur:"
 
-#: data/eom-image-properties-dialog.ui:662
+#: data/eom-image-properties-dialog.ui:611
 msgid "Copyright:"
 msgstr "Höfundarréttur:"
 
-#: data/eom-image-properties-dialog.ui:941
-#: data/eom-image-properties-dialog.ui:990 data/metadata-sidebar.ui:409
+#: data/eom-image-properties-dialog.ui:890
+#: data/eom-image-properties-dialog.ui:939 data/metadata-sidebar.ui:409
 msgid "Details"
 msgstr "Nánar"
 
-#: data/eom-image-properties-dialog.ui:966
+#: data/eom-image-properties-dialog.ui:915
 msgid "Metadata"
 msgstr "Lýsigögn"
 
-#: data/eom-multiple-save-as-dialog.ui:16
+#: data/eom-multiple-save-as-dialog.ui:26
 msgid "Save As"
 msgstr "Vista sem"
 
-#: data/eom-multiple-save-as-dialog.ui:101
+#: data/eom-multiple-save-as-dialog.ui:42
+msgid "_Cancel"
+msgstr "_Hætta við"
+
+#: data/eom-multiple-save-as-dialog.ui:57
+msgid "Save _As"
+msgstr ""
+
+#: data/eom-multiple-save-as-dialog.ui:114
 msgid "<b>%f:</b> original filename"
 msgstr "<b>%f:</b> upprunalegt skráarheiti"
 
-#: data/eom-multiple-save-as-dialog.ui:119
+#: data/eom-multiple-save-as-dialog.ui:132
 msgid "<b>%n:</b> counter"
 msgstr "<b>%n:</b> teljari"
 
-#: data/eom-multiple-save-as-dialog.ui:169
+#: data/eom-multiple-save-as-dialog.ui:182
 msgid "Choose a folder"
 msgstr "Veldu möppu"
 
-#: data/eom-multiple-save-as-dialog.ui:182
+#: data/eom-multiple-save-as-dialog.ui:195
 msgid "Destination folder:"
 msgstr "Móttökumappa:"
 
-#: data/eom-multiple-save-as-dialog.ui:194
+#: data/eom-multiple-save-as-dialog.ui:207
 msgid "Filename format:"
 msgstr "Snið skráarheitis:"
 
-#: data/eom-multiple-save-as-dialog.ui:212
+#: data/eom-multiple-save-as-dialog.ui:225
 msgid "File Path Specifications"
 msgstr "Nánar um skráarslóð"
 
-#: data/eom-multiple-save-as-dialog.ui:253
+#: data/eom-multiple-save-as-dialog.ui:266
 msgid "Start counter at:"
 msgstr "Byrja að telja með:"
 
-#: data/eom-multiple-save-as-dialog.ui:285
+#: data/eom-multiple-save-as-dialog.ui:298
 msgid "Replace spaces with underscores"
 msgstr "Skipta bilum út fyrir undirstrik"
 
-#: data/eom-multiple-save-as-dialog.ui:307
+#: data/eom-multiple-save-as-dialog.ui:320
 msgid "Options"
 msgstr "Valkostir"
 
-#: data/eom-multiple-save-as-dialog.ui:369
+#: data/eom-multiple-save-as-dialog.ui:383
 msgid "Rename from:"
 msgstr "Endurnefna frá:"
 
-#: data/eom-multiple-save-as-dialog.ui:381
+#: data/eom-multiple-save-as-dialog.ui:395
 msgid "To:"
 msgstr "Sem:"
 
-#: data/eom-multiple-save-as-dialog.ui:396
+#: data/eom-multiple-save-as-dialog.ui:425
 msgid "File Name Preview"
 msgstr "Forskoðun skráarheitis"
 
-#: data/eom-preferences-dialog.ui:16
+#: data/eom-preferences-dialog.ui:26
 msgid "Eye of MATE Preferences"
 msgstr "Stillingar Eye of MATE"
 
-#: data/eom-preferences-dialog.ui:88
+#: data/eom-preferences-dialog.ui:39 src/eom-window.c:3778
+msgid "_Help"
+msgstr "_Hjálp"
+
+#: data/eom-preferences-dialog.ui:100
 msgid "Image Enhancements"
 msgstr "Endurbætur á mynd"
 
-#: data/eom-preferences-dialog.ui:117
+#: data/eom-preferences-dialog.ui:129
 msgid "Smooth images when zoomed-_out"
 msgstr "Mý_kja myndir við að renna frá"
 
-#: data/eom-preferences-dialog.ui:155
+#: data/eom-preferences-dialog.ui:167
 msgid "Smooth images when zoomed-_in"
 msgstr "Mýk_ja myndir við að renna að"
 
-#: data/eom-preferences-dialog.ui:193
+#: data/eom-preferences-dialog.ui:205
 msgid "_Automatic orientation"
 msgstr "Sjálfvirk stefn_a"
 
-#: data/eom-preferences-dialog.ui:231
+#: data/eom-preferences-dialog.ui:243
 msgid "Background"
 msgstr "Bakgrunnur"
 
-#: data/eom-preferences-dialog.ui:250
+#: data/eom-preferences-dialog.ui:262
 msgid "As custom color:"
 msgstr "Sem sérsniðinn litur:"
 
-#: data/eom-preferences-dialog.ui:267 data/org.mate.eom.gschema.xml.in:16
+#: data/eom-preferences-dialog.ui:279 data/org.mate.eom.gschema.xml.in:16
 msgid "Background Color"
 msgstr "Bakgrunnslitur"
 
-#: data/eom-preferences-dialog.ui:300
+#: data/eom-preferences-dialog.ui:312
 msgid "Transparent Parts"
 msgstr "Gegnsæir hlutar"
 
-#: data/eom-preferences-dialog.ui:335
+#: data/eom-preferences-dialog.ui:347
 msgid "As check _pattern"
 msgstr "Sem hakað m_ynstur"
 
-#: data/eom-preferences-dialog.ui:356
+#: data/eom-preferences-dialog.ui:368
 msgid "As custom c_olor:"
 msgstr "Sem sérsniðinn _litur:"
 
-#: data/eom-preferences-dialog.ui:377
+#: data/eom-preferences-dialog.ui:389
 msgid "Color for Transparent Areas"
 msgstr "Litur fyrir glær svæði"
 
-#: data/eom-preferences-dialog.ui:395
+#: data/eom-preferences-dialog.ui:407
 msgid "As _background"
 msgstr "Sem _bakgrunnur"
 
-#: data/eom-preferences-dialog.ui:437
+#: data/eom-preferences-dialog.ui:449
 msgid "Image View"
 msgstr "Myndasýn"
 
-#: data/eom-preferences-dialog.ui:461
+#: data/eom-preferences-dialog.ui:473
 msgid "Image Zoom"
 msgstr "Aðdráttur mynda"
 
-#: data/eom-preferences-dialog.ui:496
+#: data/eom-preferences-dialog.ui:508
 msgid "E_xpand images to fit screen"
 msgstr "Stækka m_yndir svo þær passi á skjá"
 
-#: data/eom-preferences-dialog.ui:541
+#: data/eom-preferences-dialog.ui:553
 msgid "Sequence"
 msgstr "Syrpa"
 
-#: data/eom-preferences-dialog.ui:583
+#: data/eom-preferences-dialog.ui:595
 msgid "_Switch image after:"
 msgstr "_Skipta mynd eftir:"
 
-#: data/eom-preferences-dialog.ui:611
+#: data/eom-preferences-dialog.ui:623
 msgid "seconds"
 msgstr "sekúndur"
 
-#: data/eom-preferences-dialog.ui:628
+#: data/eom-preferences-dialog.ui:640
 msgid "_Random sequence"
 msgstr "Slembi-sy_rpa"
 
-#: data/eom-preferences-dialog.ui:644
+#: data/eom-preferences-dialog.ui:656
 msgid "_Loop sequence"
 msgstr "_Endurtaka syrpu"
 
-#: data/eom-preferences-dialog.ui:688
+#: data/eom-preferences-dialog.ui:700
 msgid "Slideshow"
 msgstr "Skyggnusýning"
 
-#: data/eom-preferences-dialog.ui:722
+#: data/eom-preferences-dialog.ui:734
 msgid "Plugins"
 msgstr "Viðbætur"
 
@@ -644,10 +655,6 @@ msgstr ""
 msgid "Fullscreen with double-click"
 msgstr "Fylla skjá með því að tvísmella"
 
-#: plugins/fullscreen/fullscreen.plugin.desktop.in:6
-msgid "view-fullscreen"
-msgstr ""
-
 #: plugins/reload/eom-reload-plugin.c:45
 #: plugins/reload/reload.plugin.desktop.in:5
 msgid "Reload Image"
@@ -656,10 +663,6 @@ msgstr "Endurhlaða mynd"
 #: plugins/reload/eom-reload-plugin.c:45
 msgid "Reload current image"
 msgstr "Hleður núverandi mynd aftur inn"
-
-#: plugins/reload/reload.plugin.desktop.in:6
-msgid "view-refresh"
-msgstr ""
 
 #: plugins/statusbar-date/statusbar-date.plugin.desktop.in:5
 msgid "Date in statusbar"
@@ -742,31 +745,31 @@ msgstr "Opna mynd"
 msgid "Save Image"
 msgstr "Vista mynd"
 
-#: src/eom-file-chooser.c:467 src/eom-window.c:4009
+#: src/eom-file-chooser.c:467 src/eom-window.c:4006
 msgid "Open Folder"
 msgstr "Opna Möppu"
 
-#: src/eom-image.c:552
+#: src/eom-image.c:546
 msgid "Transformation on unloaded image."
 msgstr "Umbreyting á óhlaðinni mynd"
 
-#: src/eom-image.c:580
+#: src/eom-image.c:574
 msgid "Transformation failed."
 msgstr "Umbreyting mistókst."
 
-#: src/eom-image.c:1054
+#: src/eom-image.c:1048
 msgid "EXIF not supported for this file format."
 msgstr "Þetta skráasnið styður ekki EXIF."
 
-#: src/eom-image.c:1203
+#: src/eom-image.c:1197
 msgid "Image loading failed."
 msgstr "Ekki tókst að hlaða myndinni."
 
-#: src/eom-image.c:1732 src/eom-image.c:1834
+#: src/eom-image.c:1725 src/eom-image.c:1827
 msgid "No image loaded."
 msgstr "Engar innhlaðnar myndir."
 
-#: src/eom-image.c:1742 src/eom-image.c:1846
+#: src/eom-image.c:1735 src/eom-image.c:1839
 msgid "Temporary file creation failed."
 msgstr "Gerð bráðabirgðaskrár mistókst."
 
@@ -1002,15 +1005,15 @@ msgstr "%d / %d"
 msgid "Taken on"
 msgstr "Tökudagur"
 
-#: src/eom-uri-converter.c:986
+#: src/eom-uri-converter.c:985
 msgid "At least two file names are equal."
 msgstr "Að minnsta kosti tvö skráaheiti eru eins."
 
-#: src/eom-util.c:68
+#: src/eom-util.c:65
 msgid "Could not display help for Eye of MATE"
 msgstr "Gat ekki birt hjálp fyrir Eye of MATE"
 
-#: src/eom-util.c:116
+#: src/eom-util.c:113
 msgid " (invalid Unicode)"
 msgstr " (ógilt Unicode)"
 
@@ -1031,7 +1034,7 @@ msgstr[1] ""
 msgid "_Reload"
 msgstr "Endu_rhlaða"
 
-#: src/eom-window.c:834 src/eom-window.c:2794
+#: src/eom-window.c:834 src/eom-window.c:2792
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "_Fela"
@@ -1065,15 +1068,15 @@ msgstr "Vista myndina „%s“ (%u/%u)"
 msgid "Opening image \"%s\""
 msgstr "Opna mynd \"%s\""
 
-#: src/eom-window.c:1909
+#: src/eom-window.c:1907
 msgid "Leave Fullscreen"
 msgstr ""
 
-#: src/eom-window.c:2050
+#: src/eom-window.c:2048
 msgid "Viewing a slideshow"
 msgstr ""
 
-#: src/eom-window.c:2263
+#: src/eom-window.c:2261
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1082,15 +1085,15 @@ msgstr ""
 "Villa við að prenta skrána:\n"
 "%s"
 
-#: src/eom-window.c:2526
+#: src/eom-window.c:2524
 msgid "Toolbar Editor"
 msgstr "Breyta verkfærastikunni"
 
-#: src/eom-window.c:2529
+#: src/eom-window.c:2527
 msgid "_Reset to Default"
 msgstr "_Endurstilla"
 
-#: src/eom-window.c:2594
+#: src/eom-window.c:2592
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1102,7 +1105,7 @@ msgstr ""
 "Frjálsu hugbúnaðarstofnuninni; annaðhvort útgáfu 2 af GPL-leyfinu, eða (ef "
 "þér sýnist svo) einhverja nýrri útgáfu leyfisins.\n"
 
-#: src/eom-window.c:2598
+#: src/eom-window.c:2596
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1114,7 +1117,7 @@ msgstr ""
 "SELJANLEIKA eða EIGINLEIKUM TIL TILTEKINNA NOTA. Sjá almenna GNU GPL "
 "notkunarleyfið fyrir nánari upplýsingar.\n"
 
-#: src/eom-window.c:2602
+#: src/eom-window.c:2600
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
@@ -1125,37 +1128,38 @@ msgstr ""
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, "
 "USA."
 
-#: src/eom-window.c:2641
+#: src/eom-window.c:2639
 msgid "About Eye of MATE"
 msgstr ""
 
-#: src/eom-window.c:2643
+#: src/eom-window.c:2641
 msgid ""
 "Copyright © 2000-2010 Free Software Foundation, Inc.\n"
 "Copyright © 2011 Perberos\n"
-"Copyright © 2012-2020 MATE developers"
+"Copyright © 2012-2021 MATE developers"
 msgstr ""
 
-#: src/eom-window.c:2646
-msgid "The MATE image viewer."
-msgstr "MATE myndasskoðarinn."
+#: src/eom-window.c:2644
+msgid ""
+"Eye of MATE is a simple graphics viewer for the MATE Desktop Environment."
+msgstr ""
 
-#: src/eom-window.c:2649
+#: src/eom-window.c:2647
 msgid "translator-credits"
 msgstr ""
 "Samúel Jón Gunnarsson <sammi@techattack.nu>, 2003\n"
 "Sveinn í Felli <sv1@fellsnet.is>, 2012-2016\n"
 "Aðrir FOSS íslenskuþýðendur"
 
-#: src/eom-window.c:2742 src/eom-window.c:2757
+#: src/eom-window.c:2740 src/eom-window.c:2755
 msgid "Error launching appearance preferences dialog: "
 msgstr ""
 
-#: src/eom-window.c:2792
+#: src/eom-window.c:2790
 msgid "_Open Background Preferences"
 msgstr "_Opna kjörstillingar fyrir bakgrunn"
 
-#: src/eom-window.c:2808
+#: src/eom-window.c:2806
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1164,11 +1168,11 @@ msgstr ""
 "Myndin \"%s\" hefur verið sett sem bakgrunnur skjáborðsins\n"
 "Viltu breyta framsetningu hennar?"
 
-#: src/eom-window.c:3249
+#: src/eom-window.c:3247
 msgid "Saving image locally…"
 msgstr "Vista mynd á tölvunni..."
 
-#: src/eom-window.c:3329
+#: src/eom-window.c:3327
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1177,14 +1181,14 @@ msgstr ""
 "Ert þú viss um að þú viljir flytja\n"
 "\"%s\" í ruslið?"
 
-#: src/eom-window.c:3332
+#: src/eom-window.c:3330
 #, c-format
 msgid ""
 "A trash for \"%s\" couldn't be found. Do you want to remove this image "
 "permanently?"
 msgstr "Ruslmappa fyrir \"%s\" fannst ekki. Viltu eyða þessari mynd varanlega?"
 
-#: src/eom-window.c:3337
+#: src/eom-window.c:3335
 #, c-format
 msgid ""
 "Are you sure you want to move\n"
@@ -1195,7 +1199,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/eom-window.c:3342
+#: src/eom-window.c:3340
 msgid ""
 "Some of the selected images can't be moved to the trash and will be removed "
 "permanently. Are you sure you want to proceed?"
@@ -1203,415 +1207,399 @@ msgstr ""
 "Sumt af myndunum er ekki hægt að setja í ruslið og verður því endanlega "
 "eytt. Ertu viss um að þú viljir halda áfram?"
 
-#: src/eom-window.c:3359 src/eom-window.c:3855 src/eom-window.c:3882
+#: src/eom-window.c:3357 src/eom-window.c:3852 src/eom-window.c:3879
 msgid "Move to _Trash"
 msgstr "_Henda í ruslið"
 
-#: src/eom-window.c:3361
+#: src/eom-window.c:3359
 msgid "_Do not ask again during this session"
 msgstr "_Ekki spyrja aftur í þessari setu"
 
-#: src/eom-window.c:3406 src/eom-window.c:3420
+#: src/eom-window.c:3404 src/eom-window.c:3418
 msgid "Couldn't access trash."
 msgstr "Fékk ekki aðgang að ruslinu."
 
-#: src/eom-window.c:3428
+#: src/eom-window.c:3426
 msgid "Couldn't delete file"
 msgstr "Gat ekki eytt skrá"
 
-#: src/eom-window.c:3530
+#: src/eom-window.c:3528
 #, c-format
 msgid "Error on deleting image %s"
 msgstr "Villa við að eyða mynd %s"
 
-#: src/eom-window.c:3776
+#: src/eom-window.c:3773
 msgid "_Image"
 msgstr "_Mynd"
 
-#: src/eom-window.c:3777
+#: src/eom-window.c:3774
 msgid "_Edit"
 msgstr "Br_eyta"
 
-#: src/eom-window.c:3778
+#: src/eom-window.c:3775
 msgid "_View"
 msgstr "S_koða"
 
-#: src/eom-window.c:3779
+#: src/eom-window.c:3776
 msgid "_Go"
 msgstr "_Fara"
 
-#: src/eom-window.c:3780
+#: src/eom-window.c:3777
 msgid "_Tools"
 msgstr "_Verkfæri"
 
-#: src/eom-window.c:3781
-msgid "_Help"
-msgstr "_Hjálp"
-
-#: src/eom-window.c:3783
+#: src/eom-window.c:3780
 msgid "_Open…"
 msgstr "_Opna…"
 
-#: src/eom-window.c:3784
+#: src/eom-window.c:3781
 msgid "Open a file"
 msgstr "Opna skrá"
 
-#: src/eom-window.c:3786
-msgid "_Close"
-msgstr "_Loka"
-
-#: src/eom-window.c:3787
+#: src/eom-window.c:3784
 msgid "Close window"
 msgstr "Loka glugga"
 
-#: src/eom-window.c:3789
+#: src/eom-window.c:3786
 msgid "T_oolbar"
 msgstr "_Verkfærastika"
 
-#: src/eom-window.c:3790
+#: src/eom-window.c:3787
 msgid "Edit the application toolbar"
 msgstr "Breyta verkfærastiku forritsins"
 
-#: src/eom-window.c:3792
+#: src/eom-window.c:3789
 msgid "Prefere_nces"
 msgstr "Stilli_ngar"
 
-#: src/eom-window.c:3793
+#: src/eom-window.c:3790
 msgid "Preferences for Eye of MATE"
 msgstr "Kjörstillingar fyrir Eye of MATE"
 
-#: src/eom-window.c:3795
+#: src/eom-window.c:3792
 msgid "_Contents"
 msgstr "_Innihald"
 
-#: src/eom-window.c:3796
+#: src/eom-window.c:3793
 msgid "Help on this application"
 msgstr "Skoða hjálp fyrir þetta forrit"
 
-#: src/eom-window.c:3798
+#: src/eom-window.c:3795
 msgid "_About"
 msgstr "_Um"
 
-#: src/eom-window.c:3799
+#: src/eom-window.c:3796
 msgid "About this application"
 msgstr "Um þetta forrit"
 
-#: src/eom-window.c:3804
+#: src/eom-window.c:3801
 msgid "_Toolbar"
 msgstr "_Verkfærastika"
 
-#: src/eom-window.c:3805
+#: src/eom-window.c:3802
 msgid "Changes the visibility of the toolbar in the current window"
 msgstr "Breytir sýnileika verkfærastiku í þessum glugga"
 
-#: src/eom-window.c:3807
+#: src/eom-window.c:3804
 msgid "_Statusbar"
 msgstr "_Stöðustika"
 
-#: src/eom-window.c:3808
+#: src/eom-window.c:3805
 msgid "Changes the visibility of the statusbar in the current window"
 msgstr "Breytir sýnileika stöðustiku í þessum glugga"
 
-#: src/eom-window.c:3810
+#: src/eom-window.c:3807
 msgid "_Image Collection"
 msgstr "_Myndasafn"
 
-#: src/eom-window.c:3811
+#: src/eom-window.c:3808
 msgid ""
 "Changes the visibility of the image collection pane in the current window"
 msgstr "Breytir sýnileika myndasafnsspjalds í þessum glugga"
 
-#: src/eom-window.c:3813
+#: src/eom-window.c:3810
 msgid "Side _Pane"
 msgstr "Hliðarspjald"
 
-#: src/eom-window.c:3814
+#: src/eom-window.c:3811
 msgid "Changes the visibility of the side pane in the current window"
 msgstr "Breytir sýnileika hliðarspjalds í þessum glugga"
 
-#: src/eom-window.c:3819
+#: src/eom-window.c:3816
 msgid "_Save"
 msgstr "_Vista"
 
-#: src/eom-window.c:3820
+#: src/eom-window.c:3817
 msgid "Save changes in currently selected images"
 msgstr "Vista breytingar í völdum myndum"
 
-#: src/eom-window.c:3822
+#: src/eom-window.c:3819
 msgid "Open _with"
 msgstr "Opna _með"
 
-#: src/eom-window.c:3823
+#: src/eom-window.c:3820
 msgid "Open the selected image with a different application"
 msgstr "Opna myndina sem er valin með öðru forriti"
 
-#: src/eom-window.c:3825
+#: src/eom-window.c:3822
 msgid "Save _As…"
 msgstr "Vist_a sem..."
 
-#: src/eom-window.c:3826
+#: src/eom-window.c:3823
 msgid "Save the selected images with a different name"
 msgstr "Vista valdar myndir undir öðru nafni"
 
-#: src/eom-window.c:3828
+#: src/eom-window.c:3825
 msgid "Open Containing _Folder"
 msgstr ""
 
-#: src/eom-window.c:3829
+#: src/eom-window.c:3826
 msgid "Show the folder which contains this file in the file manager"
 msgstr ""
 
-#: src/eom-window.c:3831
+#: src/eom-window.c:3828
 msgid "_Print…"
 msgstr "_Prenta..."
 
-#: src/eom-window.c:3832
+#: src/eom-window.c:3829
 msgid "Print the selected image"
 msgstr "Prenta myndina sem er valin út"
 
-#: src/eom-window.c:3834
+#: src/eom-window.c:3831
 msgid "Prope_rties"
 msgstr "_Eiginleikar"
 
-#: src/eom-window.c:3835
+#: src/eom-window.c:3832
 msgid "Show the properties and metadata of the selected image"
 msgstr "Birta eiginleika og lýsigögn hjá völdum myndum"
 
-#: src/eom-window.c:3837
+#: src/eom-window.c:3834
 msgid "_Undo"
 msgstr "_Afturkalla"
 
-#: src/eom-window.c:3838
+#: src/eom-window.c:3835
 msgid "Undo the last change in the image"
 msgstr "Kalla aftur síðustu breytingu á myndinni"
 
-#: src/eom-window.c:3840
+#: src/eom-window.c:3837
 msgid "Flip _Horizontal"
 msgstr "Velta Lá_rétt"
 
-#: src/eom-window.c:3841
+#: src/eom-window.c:3838
 msgid "Mirror the image horizontally"
 msgstr "Spegla myndinni lárétt"
 
-#: src/eom-window.c:3843
+#: src/eom-window.c:3840
 msgid "Flip _Vertical"
 msgstr "Velta _Lóðrétt"
 
-#: src/eom-window.c:3844
+#: src/eom-window.c:3841
 msgid "Mirror the image vertically"
 msgstr "Spegla myndinni lóðrétt"
 
-#: src/eom-window.c:3846
+#: src/eom-window.c:3843
 msgid "_Rotate Clockwise"
 msgstr "Snúa _réttsælis"
 
-#: src/eom-window.c:3847
+#: src/eom-window.c:3844
 msgid "Rotate the image 90 degrees to the right"
 msgstr "Snúa myndinni 90 gráður til hægri"
 
-#: src/eom-window.c:3849
+#: src/eom-window.c:3846
 msgid "Rotate Counterc_lockwise"
 msgstr "Snúa rangsæ_lis"
 
-#: src/eom-window.c:3850
+#: src/eom-window.c:3847
 msgid "Rotate the image 90 degrees to the left"
 msgstr "Snúa myndinni 90 gráður til vinstri"
 
-#: src/eom-window.c:3852
+#: src/eom-window.c:3849
 msgid "Set as _Desktop Background"
 msgstr "Setja sem bak_grunn skjáborðs"
 
-#: src/eom-window.c:3853
+#: src/eom-window.c:3850
 msgid "Set the selected image as the desktop background"
 msgstr "Nota valda mynd sem bakgrunn skjáborðsins"
 
-#: src/eom-window.c:3856
+#: src/eom-window.c:3853
 msgid "Move the selected image to the trash folder"
 msgstr "Henda valinni skrá í ruslið"
 
-#: src/eom-window.c:3858
+#: src/eom-window.c:3855
 msgid "_Copy"
 msgstr "_Afrita"
 
-#: src/eom-window.c:3859
+#: src/eom-window.c:3856
 msgid "Copy the selected image to the clipboard"
 msgstr "Afrita valda mynd á klippispjaldið"
 
-#: src/eom-window.c:3861 src/eom-window.c:3873 src/eom-window.c:3876
+#: src/eom-window.c:3858 src/eom-window.c:3870 src/eom-window.c:3873
 msgid "_Zoom In"
 msgstr "Renna _að"
 
-#: src/eom-window.c:3862 src/eom-window.c:3874
+#: src/eom-window.c:3859 src/eom-window.c:3871
 msgid "Enlarge the image"
 msgstr "Stækka myndina"
 
-#: src/eom-window.c:3864 src/eom-window.c:3879
+#: src/eom-window.c:3861 src/eom-window.c:3876
 msgid "Zoom _Out"
 msgstr "Renna _frá"
 
-#: src/eom-window.c:3865 src/eom-window.c:3877 src/eom-window.c:3880
+#: src/eom-window.c:3862 src/eom-window.c:3874 src/eom-window.c:3877
 msgid "Shrink the image"
 msgstr "Minnka myndina"
 
-#: src/eom-window.c:3867
+#: src/eom-window.c:3864
 msgid "_Normal Size"
 msgstr "Ve_njuleg Stærð"
 
-#: src/eom-window.c:3868
+#: src/eom-window.c:3865
 msgid "Show the image at its normal size"
 msgstr "Sýna myndinni í venjulegri stærð"
 
-#: src/eom-window.c:3870
+#: src/eom-window.c:3867
 msgid "_Best Fit"
 msgstr "_Passar best"
 
-#: src/eom-window.c:3871
+#: src/eom-window.c:3868
 msgid "Fit the image to the window"
 msgstr "Láta myndina passa í gluggann"
 
-#: src/eom-window.c:3888
+#: src/eom-window.c:3885
 msgid "_Fullscreen"
 msgstr "_Heilskjár"
 
-#: src/eom-window.c:3889
+#: src/eom-window.c:3886
 msgid "Show the current image in fullscreen mode"
 msgstr "Láta þessa mynd fylla allan skjáinn"
 
-#: src/eom-window.c:3891
+#: src/eom-window.c:3888
 msgid "Pause Slideshow"
 msgstr "Gera hlé á myndasýningu"
 
-#: src/eom-window.c:3892
+#: src/eom-window.c:3889
 msgid "Pause or resume the slideshow"
 msgstr "Gera hlé eða halda áfram með myndasýningu"
 
-#: src/eom-window.c:3897 src/eom-window.c:3912
+#: src/eom-window.c:3894 src/eom-window.c:3909
 msgid "_Previous Image"
 msgstr "Fy_rri mynd"
 
-#: src/eom-window.c:3898
+#: src/eom-window.c:3895
 msgid "Go to the previous image of the collection"
 msgstr "Sjá fyrri mynd í safninu"
 
-#: src/eom-window.c:3900
+#: src/eom-window.c:3897
 msgid "_Next Image"
 msgstr "_Næsta mynd"
 
-#: src/eom-window.c:3901
+#: src/eom-window.c:3898
 msgid "Go to the next image of the collection"
 msgstr "Sjá næstu mynd í safninu"
 
-#: src/eom-window.c:3903 src/eom-window.c:3915
+#: src/eom-window.c:3900 src/eom-window.c:3912
 msgid "_First Image"
 msgstr "_Fyrsta mynd"
 
-#: src/eom-window.c:3904
+#: src/eom-window.c:3901
 msgid "Go to the first image of the collection"
 msgstr "Sjá fyrstu myndina í safninu"
 
-#: src/eom-window.c:3906 src/eom-window.c:3918
+#: src/eom-window.c:3903 src/eom-window.c:3915
 msgid "_Last Image"
 msgstr "_Síðasta mynd"
 
-#: src/eom-window.c:3907
+#: src/eom-window.c:3904
 msgid "Go to the last image of the collection"
 msgstr "Sjá síðustu myndina í safninu"
 
-#: src/eom-window.c:3909
+#: src/eom-window.c:3906
 msgid "_Random Image"
 msgstr "Slem_bin mynd"
 
-#: src/eom-window.c:3910
+#: src/eom-window.c:3907
 msgid "Go to a random image of the collection"
 msgstr "Sjá slembna mynd í safninu"
 
-#: src/eom-window.c:3924
+#: src/eom-window.c:3921
 msgid "S_lideshow"
 msgstr "S_kyggnusýning"
 
-#: src/eom-window.c:3925
+#: src/eom-window.c:3922
 msgid "Start a slideshow view of the images"
 msgstr "Skoða myndinar í skyggnusýningu"
 
-#: src/eom-window.c:3995
-msgid "Previous"
-msgstr "Fyrri"
-
-#: src/eom-window.c:3999
-msgid "Next"
-msgstr "Næsta"
-
-#: src/eom-window.c:4003
+#: src/eom-window.c:4000
 msgid "Right"
 msgstr "Til hægri"
 
-#: src/eom-window.c:4006
+#: src/eom-window.c:4003
 msgid "Left"
 msgstr "Til vinstri"
 
-#: src/eom-window.c:4012
+#: src/eom-window.c:4009
 msgid "In"
 msgstr "Inn"
 
-#: src/eom-window.c:4015
+#: src/eom-window.c:4012
 msgid "Out"
 msgstr "Út"
 
-#: src/eom-window.c:4018
+#: src/eom-window.c:4015
 msgid "Normal"
 msgstr "Venjulegur"
 
-#: src/eom-window.c:4021
+#: src/eom-window.c:4018
 msgid "Fit"
 msgstr "Passa"
 
-#: src/eom-window.c:4024
+#: src/eom-window.c:4021
 msgid "Collection"
 msgstr "Safn"
 
-#: src/eom-window.c:4027
+#: src/eom-window.c:4024
 msgctxt "action (to trash)"
 msgid "Trash"
 msgstr "Rusl"
 
-#: src/eom-window.c:4385
+#: src/eom-window.c:4381
 #, c-format
 msgid "Edit the current image using %s"
 msgstr "Breyta þessari mynd með %s"
 
-#: src/eom-window.c:4388
+#: src/eom-window.c:4384
 msgid "Edit Image"
 msgstr "Breyta myndinni"
 
-#: src/eom-window.c:4612
+#: src/eom-window.c:4608
 msgid "Properties"
 msgstr "Stillingar"
 
-#: src/main.c:72
+#: src/main.c:70
 msgid "Open in fullscreen mode"
 msgstr "Opna í skjáfylliham"
 
-#: src/main.c:73
+#: src/main.c:71
 msgid "Disable image collection"
 msgstr "Gera myndasafn óvirkt"
 
-#: src/main.c:74
+#: src/main.c:72
 msgid "Open in slideshow mode"
 msgstr "Opna í skyggnusýningarham"
 
-#: src/main.c:75
+#: src/main.c:73
 msgid "Start a new instance instead of reusing an existing one"
 msgstr "Setja í gang nýtt tilvik í stað þess að nýta það sem er í gangi"
 
-#: src/main.c:77
+#: src/main.c:75
 msgid "Show the application's version"
 msgstr "Birta útgáfuupplýsingar forrits"
 
-#: src/main.c:108
+#: src/main.c:106
 msgid "[FILE…]"
 msgstr "[SKRÁ…]"
 
-#: src/main.c:121
+#: src/main.c:119
 #, c-format
 msgid "Run '%s --help' to see a full list of available command line options."
 msgstr ""
