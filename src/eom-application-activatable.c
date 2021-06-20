@@ -5,6 +5,7 @@
  * Author: Felix Riemann <friemann@gnome.org>
  *
  * Copyright (C) 2012 Felix Riemann
+ * Copyright (C) 2013-2021 MATE developers
  *
  * Base on code by:
  * 	- Steve Frécinaux <code@istique.net>

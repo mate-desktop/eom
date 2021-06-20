@@ -1,6 +1,6 @@
 /* gcc eom-thumbnailer.c `pkg-config --cflags --libs glib-2.0 gio-2.0 MagickWand` -lm -o eom-thumbnailer */
 /*
- * Copyright (C) 2020 MATE developers
+ * Copyright (C) 2020-2021 MATE developers
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

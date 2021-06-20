@@ -1,6 +1,7 @@
 /* Eye Of Gnome - Application Facade (internal)
  *
  * Copyright (C) 2006-2012 The Free Software Foundation
+ * Copyright (C) 2013-2021 MATE developers
  *
  * Author: Lucas Rocha <lucasr@gnome.org>
  *
