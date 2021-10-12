@@ -277,6 +277,11 @@
                             <property name="can-focus">True</property>
                             <property name="receives-default">True</property>
                             <property name="title" translatable="yes">Background Color</property>
+                            <child internal-child="accessible">
+                              <object class="AtkObject" id="bg_color_accessible">
+                                <property name="AtkObject::accessible-name" translatable="yes">Background Color</property>
+                              </object>
+                            </child>
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -388,6 +393,11 @@
                                     <property name="use-alpha">True</property>
                                     <property name="title" translatable="yes">Color for Transparent Areas</property>
                                     <property name="rgba">rgb(0,0,0)</property>
+                                    <child internal-child="accessible">
+                                      <object class="AtkObject" id="transp_color_accessible">
+                                        <property name="AtkObject::accessible-name" translatable="yes">Color for Transparent Areas</property>
+                                      </object>
+                                    </child>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -609,6 +619,11 @@
                                     <property name="adjustment">adjustment1</property>
                                     <property name="climb-rate">1</property>
                                     <property name="numeric">True</property>
+                                    <child internal-child="accessible">
+                                      <object class="AtkObject">
+                                        <property name="AtkObject::accessible-name" translatable="yes">seconds</property>
+                                      </object>
+                                    </child>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
