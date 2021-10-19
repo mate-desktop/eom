@@ -1032,12 +1032,12 @@ eom_scroll_view_scroll_event (GtkWidget *widget, GdkEventScroll *event, gpointer
 	case GDK_SCROLL_DOWN:
 		zoom_factor = 1.0 / priv->zoom_multiplier;
 		xofs = 0;
-		yofs = yofs;
+		/* yofs = yofs; */
 		break;
 
 	case GDK_SCROLL_RIGHT:
 		zoom_factor = priv->zoom_multiplier;
-		xofs = xofs;
+		/* xofs = xofs; */
 		yofs = 0;
 		break;
 
