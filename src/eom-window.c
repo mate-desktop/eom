@@ -4343,7 +4343,7 @@ eom_window_open_editor (GtkAction *action,
 	file = eom_image_get_file (window->priv->image);
 	files = g_list_append (files, file);
 
-	g_app_info_launch (app_info, &files,
+	g_app_info_launch (app_info, files,
                            G_APP_LAUNCH_CONTEXT (context), NULL);
 
 	g_list_free (files);
