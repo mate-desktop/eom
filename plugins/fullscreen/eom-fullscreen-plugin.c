@@ -119,8 +119,7 @@ eom_fullscreen_plugin_activate (EomWindowActivatable *activatable)
 
 	eom_debug (DEBUG_PLUGINS);
 
-	plugin->signal_id = g_signal_connect (G_OBJECT (view),
-	                                      "button-press-event",
+	plugin->signal_id = g_signal_connect (view, "button-press-event",
 	                                      G_CALLBACK (on_button_press),
 	                                      plugin->window);
 }
@@ -131,7 +130,14 @@ eom_fullscreen_plugin_deactivate (EomWindowActivatable *activatable)
 	EomFullscreenPlugin *plugin = EOM_FULLSCREEN_PLUGIN (activatable);
 	GtkWidget *view = eom_window_get_view (plugin->window);
 
-	g_signal_handler_disconnect (view, plugin->signal_id);
+#if GLIB_CHECK_VERSION(2,62,0)
+	g_clear_signal_handler (&plugin->signal_id, view);
+#else
+	if (plugin->signal_id != 0) {
+		g_signal_handler_disconnect (view, plugin->signal_id);
+		plugin->signal_id = 0;
+	}
+#endif
 }
 
 static void

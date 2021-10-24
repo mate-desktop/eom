@@ -87,8 +87,8 @@ struct _EomScrollViewPrivate {
 
 	/* actual image */
 	EomImage *image;
-	guint image_changed_id;
-	guint frame_changed_id;
+	gulong image_changed_id;
+	gulong frame_changed_id;
 	GdkPixbuf *pixbuf;
 	cairo_surface_t *surface;
 
@@ -188,15 +188,20 @@ free_image_resources (EomScrollView *view)
 
 	priv = view->priv;
 
-	if (priv->image_changed_id > 0) {
+#if GLIB_CHECK_VERSION(2,62,0)
+	g_clear_signal_handler (&priv->image_changed_id, priv->image);
+	g_clear_signal_handler (&priv->frame_changed_id, priv->image);
+#else
+	if (priv->image_changed_id != 0) {
 		g_signal_handler_disconnect (priv->image, priv->image_changed_id);
 		priv->image_changed_id = 0;
 	}
 
-	if (priv->frame_changed_id > 0) {
+	if (priv->frame_changed_id != 0) {
 		g_signal_handler_disconnect (priv->image, priv->frame_changed_id);
 		priv->frame_changed_id = 0;
 	}
+#endif
 
 	if (priv->image != NULL) {
 		eom_image_data_unref (priv->image);

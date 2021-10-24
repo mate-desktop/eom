@@ -195,7 +195,14 @@ eom_statusbar_date_plugin_deactivate (EomWindowActivatable *activatable)
 	GtkWidget *statusbar = eom_window_get_statusbar (window);
 	GtkWidget *view = eom_window_get_thumb_view (window);
 
-	g_signal_handler_disconnect (view, plugin->signal_id);
+#if GLIB_CHECK_VERSION(2,62,0)
+	g_clear_signal_handler (&plugin->signal_id, view);
+#else
+	if (plugin->signal_id != 0) {
+		g_signal_handler_disconnect (view, plugin->signal_id);
+		plugin->signal_id = 0;
+	}
+#endif
 
 	gtk_container_remove (GTK_CONTAINER (statusbar), plugin->statusbar_date);
 }
