@@ -4686,7 +4686,9 @@ static void
 eom_window_init (EomWindow *window)
 {
 	GdkGeometry hints;
+#if defined(HAVE_LCMS) && defined(GDK_WINDOWING_X11)
 	GdkScreen *screen;
+#endif
 	EomWindowPrivate *priv;
 
 	eom_debug (DEBUG_WINDOW);
@@ -4698,8 +4700,6 @@ eom_window_init (EomWindow *window)
 
 	hints.min_width  = EOM_WINDOW_MIN_WIDTH;
 	hints.min_height = EOM_WINDOW_MIN_HEIGHT;
-
-	screen = gtk_widget_get_screen (GTK_WIDGET (window));
 
 	priv = window->priv = eom_window_get_instance_private (window);
 
@@ -4738,6 +4738,7 @@ eom_window_init (EomWindow *window)
 	window->priv->status = EOM_WINDOW_STATUS_UNKNOWN;
 
 #if defined(HAVE_LCMS) && defined(GDK_WINDOWING_X11)
+	screen = gtk_widget_get_screen (GTK_WIDGET (window));
 	window->priv->display_profile =
 		eom_window_get_display_profile (screen);
 #endif
