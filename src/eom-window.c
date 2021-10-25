@@ -574,7 +574,6 @@ update_action_groups_state (EomWindow *window)
 	GtkAction *action_sshow;
 	GtkAction *action_print;
 	gboolean print_disabled = FALSE;
-	gboolean show_image_collection = FALSE;
 	gint n_images = 0;
 
 	g_return_if_fail (EOM_IS_WINDOW (window));
@@ -633,6 +632,8 @@ update_action_groups_state (EomWindow *window)
 			priv->status = EOM_WINDOW_STATUS_NORMAL;
 		}
 	} else {
+		gboolean show_image_collection;
+
 		if (priv->flags & EOM_STARTUP_DISABLE_COLLECTION) {
 			g_settings_set_boolean (priv->ui_settings, EOM_CONF_UI_IMAGE_COLLECTION, FALSE);
 
