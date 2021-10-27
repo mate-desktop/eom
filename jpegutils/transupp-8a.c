@@ -48,7 +48,6 @@
 #include "transupp-8a.h"	/* My own external interface */
 #include <ctype.h>		/* to declare isdigit() */
 
-
 #if TRANSFORMS_SUPPORTED
 
 /*
@@ -100,7 +99,6 @@
  *    source buffer it is an undocumented property of jdcoefct.c.
  */
 
-
 LOCAL(void)
 do_crop (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
 	 JDIMENSION x_crop_offset, JDIMENSION y_crop_offset,
@@ -137,7 +135,6 @@ do_crop (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
     }
   }
 }
-
 
 LOCAL(void)
 do_flip_h_no_crop (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
@@ -205,7 +202,6 @@ do_flip_h_no_crop (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
   }
 }
 
-
 LOCAL(void)
 do_flip_h (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
 	   JDIMENSION x_crop_offset, JDIMENSION y_crop_offset,
@@ -266,7 +262,6 @@ do_flip_h (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
     }
   }
 }
-
 
 LOCAL(void)
 do_flip_v (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
@@ -347,7 +342,6 @@ do_flip_v (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
   }
 }
 
-
 LOCAL(void)
 do_transpose (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
 	      JDIMENSION x_crop_offset, JDIMENSION y_crop_offset,
@@ -394,7 +388,6 @@ do_transpose (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
     }
   }
 }
-
 
 LOCAL(void)
 do_rot_90 (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
@@ -476,7 +469,6 @@ do_rot_90 (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
   }
 }
 
-
 LOCAL(void)
 do_rot_270 (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
 	    JDIMENSION x_crop_offset, JDIMENSION y_crop_offset,
@@ -546,7 +538,6 @@ do_rot_270 (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
     }
   }
 }
-
 
 LOCAL(void)
 do_rot_180 (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
@@ -654,7 +645,6 @@ do_rot_180 (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
     }
   }
 }
-
 
 LOCAL(void)
 do_transverse (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
@@ -770,7 +760,6 @@ do_transverse (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
   }
 }
 
-
 /* Parse an unsigned integer: subroutine for jtransform_parse_crop_spec.
  * Returns TRUE if valid integer found, FALSE if not.
  * *strptr is advanced over the digit string, and *result is set to its value.
@@ -791,7 +780,6 @@ jt_read_integer (const char ** strptr, JDIMENSION * result)
   *strptr = ptr;
   return TRUE;
 }
-
 
 /* Parse a crop specification (written in X11 geometry style).
  * The routine returns TRUE if the spec string is valid, FALSE if not.
@@ -849,7 +837,6 @@ jtransform_parse_crop_spec (jpeg_transform_info *info, const char *spec)
   return TRUE;
 }
 
-
 /* Trim off any partial iMCUs on the indicated destination edge */
 
 LOCAL(void)
@@ -873,7 +860,6 @@ trim_bottom_edge (jpeg_transform_info *info, JDIMENSION full_height)
       full_height / info->iMCU_sample_height)
     info->output_height = MCU_rows * info->iMCU_sample_height;
 }
-
 
 /* Request any required workspace.
  *
@@ -1120,7 +1106,6 @@ jtransform_request_workspace (j_decompress_ptr srcinfo,
   return TRUE;
 }
 
-
 /* Transpose destination image parameters */
 
 LOCAL(void)
@@ -1162,7 +1147,6 @@ transpose_critical_parameters (j_compress_ptr dstinfo)
     }
   }
 }
-
 
 /* Adjust Exif image parameters.
  *
@@ -1319,7 +1303,6 @@ adjust_exif_parameters (JOCTET FAR * data, unsigned int length,
   } while (--number_of_tags);
 }
 
-
 /* Adjust output image parameters as needed.
  *
  * This must be called after jpeg_copy_critical_parameters()
@@ -1415,7 +1398,6 @@ jtransform_adjust_parameters (j_decompress_ptr srcinfo,
     return info->workspace_coef_arrays;
   return src_coef_arrays;
 }
-
 
 /* Execute the actual transformation, if any.
  *
@@ -1532,7 +1514,6 @@ jtransform_perfect_transform(JDIMENSION image_width, JDIMENSION image_height,
 }
 
 #endif /* TRANSFORMS_SUPPORTED */
-
 
 /* Setup decompression object to save desired markers in memory.
  * This must be called before jpeg_read_header() to have the desired effect.

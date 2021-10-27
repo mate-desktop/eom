@@ -558,7 +558,6 @@ create_background_surface (EomScrollView *view)
 
     --------------------------------------*/
 
-
 /* Scrolls the view to the specified offsets.  */
 static void
 scroll_to (EomScrollView *view, int x, int y, gboolean change_adjustments)
@@ -640,7 +639,6 @@ scroll_by (EomScrollView *view, int xofs, int yofs)
 	scroll_to (view, priv->xofs + xofs, priv->yofs + yofs, TRUE);
 }
 
-
 /* Callback used when an adjustment is changed */
 static void
 adjustment_changed_cb (GtkAdjustment *adj, gpointer data)
@@ -656,7 +654,6 @@ adjustment_changed_cb (GtkAdjustment *adj, gpointer data)
 
 	gtk_widget_queue_resize (GTK_WIDGET (view));
 }
-
 
 /* Drags the image to the specified position */
 static void
@@ -923,7 +920,6 @@ display_key_press_event (GtkWidget *widget, GdkEventKey *event, gpointer data)
 	return TRUE;
 }
 
-
 /* Button press event handler for the image view */
 static gboolean
 eom_scroll_view_button_press_event (GtkWidget *widget, GdkEventButton *event, gpointer data)
@@ -1158,7 +1154,6 @@ display_size_change (GtkWidget *widget, GdkEventConfigure *event, gpointer data)
 	update_scrollbar_values (view);
 }
 
-
 static gboolean
 eom_scroll_view_focus_in_event (GtkWidget     *widget,
                                 GdkEventFocus *event,
@@ -1369,7 +1364,6 @@ display_draw (GtkWidget *widget, cairo_t *cr, gpointer data)
 
 	return TRUE;
 }
-
 
 /*==================================
 
@@ -2075,7 +2069,6 @@ eom_scroll_view_set_property (GObject *object, guint property_id,
 	}
 }
 
-
 static void
 eom_scroll_view_class_init (EomScrollViewClass *klass)
 {
@@ -2247,7 +2240,6 @@ eom_scroll_view_new (void)
 			       "row-homogeneous", FALSE,
 			       "column-homogeneous", FALSE,
 			       NULL);
-
 
 	return widget;
 }

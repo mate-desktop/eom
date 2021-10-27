@@ -821,7 +821,6 @@ eom_list_store_remove_thumbnail_job (EomListStore *store,
 		g_mutex_unlock (&store->priv->mutex);
 	}
 
-
 }
 
 static void

@@ -2814,7 +2814,6 @@ eom_window_set_wallpaper (EomWindow *window, const gchar *filename, const gchar 
 	gtk_widget_show_all (hbox);
 	gtk_widget_show (info_bar);
 
-
 	eom_window_set_message_area (window, info_bar);
 	gtk_info_bar_set_default_response (GTK_INFO_BAR (info_bar),
 					   GTK_RESPONSE_YES);

@@ -700,7 +700,6 @@ eom_image_set_icc_data (EomImage *img, EomMetadataReader *md_reader)
 
 	priv->profile = eom_metadata_reader_get_icc_profile (md_reader);
 
-
 }
 #endif
 
@@ -896,7 +895,6 @@ eom_image_real_load (EomImage *img,
 	gboolean read_image_data = (data2read & EOM_IMAGE_DATA_IMAGE);
 	gboolean read_only_dimension = (data2read & EOM_IMAGE_DATA_DIMENSION) &&
 				  ((data2read ^ EOM_IMAGE_DATA_DIMENSION) == 0);
-
 
 	priv = img->priv;
 
@@ -1878,7 +1876,6 @@ eom_image_save_as_by_info (EomImage *img, EomImageSaveInfo *source, EomImageSave
 	return success;
 }
 
-
 /*
  * This function is extracted from
  * File: caja/libcaja-private/caja-file.c
@@ -2069,7 +2066,6 @@ eom_image_get_xmp_info (EomImage *img)
 
  	return data;
 }
-
 
 /**
  * eom_image_get_file:

@@ -263,7 +263,6 @@ eom_metadata_sidebar_set_image (EomMetadataSidebar *sidebar, EomImage *image)
 	if (image == priv->image)
 		return;
 
-
 	if (priv->thumb_changed_id != 0) {
 		g_signal_handler_disconnect (priv->image,
 					     priv->thumb_changed_id);
@@ -524,7 +523,6 @@ eom_metadata_sidebar_class_init (EomMetadataSidebarClass *klass)
 						      details_button);
 #endif /* HAVE_METADATA */
 }
-
 
 GtkWidget*
 eom_metadata_sidebar_new (EomWindow *window)

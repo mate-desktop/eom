@@ -120,7 +120,6 @@ parent_file_display_name_query_info_cb (GObject *source_object,
 	GFileInfo *file_info;
 	gchar *display_name;
 
-
 	file_info = g_file_query_info_finish (parent_file, res, NULL);
 	if (file_info == NULL) {
 		display_name = g_file_get_basename (parent_file);
@@ -345,7 +344,6 @@ pd_update_metadata_tab (EomPropertiesDialog *prop_dlg,
 
 	eom_exif_util_set_label_text (GTK_LABEL (priv->exif_iso_label),
 				      exif_data, EXIF_TAG_ISO_SPEED_RATINGS);
-
 
 	eom_exif_util_set_label_text (GTK_LABEL (priv->exif_metering_label),
 				      exif_data, EXIF_TAG_METERING_MODE);

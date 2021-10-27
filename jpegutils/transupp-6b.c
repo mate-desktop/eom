@@ -59,7 +59,6 @@ enum {
   ((cinfo)->err->msg_code = (code), \
    (*(cinfo)->err->error_exit) ((j_common_ptr) (cinfo)))
 
-
 static long
 jround_up (long a, long b)
 /* Compute a rounded up to next multiple of b, ie, ceil(a/b)*b */
@@ -68,7 +67,6 @@ jround_up (long a, long b)
   a += b - 1L;
   return a - (a % b);
 }
-
 
 static void
 jcopy_block_row (JBLOCKROW input_row, JBLOCKROW output_row,
@@ -84,7 +82,6 @@ jcopy_block_row (JBLOCKROW input_row, JBLOCKROW output_row,
     *outptr++ = *inptr++;
   }
 }
-
 
 /*
  * Lossless image transformation routines.  These routines work on DCT
@@ -122,7 +119,6 @@ jcopy_block_row (JBLOCKROW input_row, JBLOCKROW output_row,
  * Notes 2,3,4 boil down to this: generally we should use the destination's
  * dimensions and ignore the source's.
  */
-
 
 static void
 do_flip_h (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
@@ -171,7 +167,6 @@ do_flip_h (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
     }
   }
 }
-
 
 static void
 do_flip_v (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
@@ -243,7 +238,6 @@ do_flip_v (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
   }
 }
 
-
 static void
 do_transpose (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
 	      jvirt_barray_ptr *src_coef_arrays,
@@ -286,7 +280,6 @@ do_transpose (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
     }
   }
 }
-
 
 static void
 do_rot_90 (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
@@ -351,7 +344,6 @@ do_rot_90 (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
   }
 }
 
-
 static void
 do_rot_270 (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
 	    jvirt_barray_ptr *src_coef_arrays,
@@ -414,7 +406,6 @@ do_rot_270 (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
     }
   }
 }
-
 
 static void
 do_rot_180 (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
@@ -516,7 +507,6 @@ do_rot_180 (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
   }
 }
 
-
 static void
 do_transverse (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
 	       jvirt_barray_ptr *src_coef_arrays,
@@ -615,7 +605,6 @@ do_transverse (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
   }
 }
 
-
 /* Request any required workspace.
  *
  * We allocate the workspace virtual arrays from the source decompression
@@ -695,7 +684,6 @@ jtransform_request_workspace (j_decompress_ptr srcinfo,
   info->workspace_coef_arrays = coef_arrays;
 }
 
-
 /* Transpose destination image parameters */
 
 static void
@@ -734,7 +722,6 @@ transpose_critical_parameters (j_compress_ptr dstinfo)
     }
   }
 }
-
 
 /* Trim off any partial iMCUs on the indicated destination edge */
 
@@ -777,7 +764,6 @@ trim_bottom_edge (j_compress_ptr dstinfo)
   if (MCU_rows > 0)		/* can't trim to 0 pixels */
     dstinfo->image_height = MCU_rows * (max_v_samp_factor * DCTSIZE);
 }
-
 
 /* Adjust output image parameters as needed.
  *
@@ -867,7 +853,6 @@ jtransform_adjust_parameters (j_decompress_ptr srcinfo,
   return src_coef_arrays;
 }
 
-
 /* Execute the actual transformation, if any.
  *
  * This must be called *after* jpeg_write_coefficients, because it depends
@@ -911,7 +896,6 @@ jtransform_execute_transformation (j_decompress_ptr srcinfo,
     break;
   }
 }
-
 
 /* Setup decompression object to save desired markers in memory.
  * This must be called before jpeg_read_header() to have the desired effect.
@@ -987,6 +971,5 @@ jcopy_markers_execute (j_decompress_ptr srcinfo, j_compress_ptr dstinfo,
 #endif
   }
 }
-
 
 #endif /* HAVE_LIBJPEG */

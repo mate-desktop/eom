@@ -375,7 +375,6 @@ eom_exif_entry_get_value (ExifEntry    *e,
             ExifRational r;
             gfloat h = 0., m = 0., s = 0.;
 
-
             rational_size = exif_format_get_size (EXIF_FORMAT_RATIONAL);
             if (G_UNLIKELY (e->components != 3 ||
                 e->format != EXIF_FORMAT_RATIONAL))

@@ -115,7 +115,6 @@ typedef struct _EomJobCopyClass EomJobCopyClass;
 #define EOM_JOB_COPY_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST((klass),  EOM_TYPE_JOB_COPY, EomJobCopyClass))
 #define EOM_IS_JOB_COPY(obj)      (G_TYPE_CHECK_INSTANCE_TYPE((obj), EOM_TYPE_JOB_COPY))
 
-
 struct _EomJob
 {
 	GObject  parent;

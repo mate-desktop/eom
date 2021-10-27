@@ -540,8 +540,6 @@ create_treeview (EomCloseConfirmationDialogPrivate *priv)
 							   NULL);
 	gtk_tree_view_append_column (GTK_TREE_VIEW (treeview), column);
 
-
-
 	renderer = gtk_cell_renderer_text_new ();
 	column = gtk_tree_view_column_new_with_attributes ("Name",
 							   renderer,

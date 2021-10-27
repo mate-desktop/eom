@@ -781,7 +781,6 @@ set_initial_values (EomPrintImageSetup *setup)
 
 	update_image_pos_ranges (setup, page_width, page_height, width, height);
 
-
 }
 
 static void
@@ -972,7 +971,6 @@ eom_print_image_setup_init (EomPrintImageSetup *setup)
 
 	gtk_widget_show_all (GTK_WIDGET (setup));
 }
-
 
 /**
  * eom_print_image_setup_new:

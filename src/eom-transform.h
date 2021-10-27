@@ -72,4 +72,3 @@ G_END_DECLS
 
 #endif /* _EOM_TRANSFORM_H_ */
 
-

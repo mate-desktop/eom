@@ -60,7 +60,6 @@ eom_metadata_reader_finished (EomMetadataReader *emr)
 	return EOM_METADATA_READER_GET_INTERFACE (emr)->finished (emr);
 }
 
-
 void
 eom_metadata_reader_consume (EomMetadataReader *emr, const guchar *buf, guint len)
 {
