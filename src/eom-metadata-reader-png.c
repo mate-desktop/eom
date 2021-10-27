@@ -158,7 +158,6 @@ eom_metadata_reader_png_finished (EomMetadataReaderPng *emr)
 	return (emr->priv->state == EMR_FINISHED);
 }
 
-
 static void
 eom_metadata_reader_png_get_next_block (EomMetadataReaderPngPrivate* priv,
 				    	guchar *chunk,

@@ -79,4 +79,3 @@ G_END_DECLS
 
 #endif /* __EOM_SIDEBAR_H__ */
 
-

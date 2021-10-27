@@ -354,7 +354,6 @@ update_preview_cb (GtkFileChooser *file_chooser, gpointer data)
 			gchar *mime_type = g_content_type_get_mime_type (
 						g_file_info_get_content_type (file_info));
 
-
 			if (G_LIKELY (mime_type)) {
 				gboolean can_thumbnail, has_failed;
 

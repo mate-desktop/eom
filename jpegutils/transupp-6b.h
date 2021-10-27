@@ -47,12 +47,10 @@
 
 #ifdef HAVE_LIBJPEG
 
-
 #ifndef TRANSUPP_H
 #define TRANSUPP_H
 
 #include <jpeglib.h>
-
 
 typedef enum {
 	JXFORM_NONE,		/* no transformation */
@@ -111,7 +109,6 @@ typedef struct {
   jvirt_barray_ptr * workspace_coef_arrays; /* workspace for transformations */
 } jpeg_transform_info;
 
-
 /* Request any required workspace */
 void jtransform_request_workspace   (j_decompress_ptr     srcinfo,
 				     jpeg_transform_info *info);
@@ -128,7 +125,6 @@ void jtransform_execute_transformation (j_decompress_ptr     srcinfo,
 					j_compress_ptr       dstinfo,
 					jvirt_barray_ptr    *src_coef_arrays,
 					jpeg_transform_info *info);
-
 
 /*
  * Support for copying optional markers from source to destination file.
@@ -150,7 +146,6 @@ void jcopy_markers_setup (j_decompress_ptr srcinfo,
 void jcopy_markers_execute (j_decompress_ptr srcinfo,
 			    j_compress_ptr   dstinfo,
 			    JCOPY_OPTION     option);
-
 
 #endif /* TRANSUPP_H */
 

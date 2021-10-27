@@ -1024,7 +1024,6 @@ eom_thumb_view_select_single (EomThumbView *thumbview,
 	gtk_tree_path_free (path);
 }
 
-
 /**
  * eom_thumb_view_set_thumbnail_popup:
  * @thumbview: An #EomThumbView.
@@ -1051,7 +1050,6 @@ eom_thumb_view_set_thumbnail_popup (EomThumbView *thumbview,
 	                  G_CALLBACK (thumbview_on_button_press_event_cb),
 	                  NULL);
 }
-
 
 static void
 eom_thumb_view_popup_menu (EomThumbView *thumbview, GdkEventButton *event)

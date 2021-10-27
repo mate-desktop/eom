@@ -130,7 +130,6 @@ main (int argc, char **argv)
         }
 	g_option_context_free (ctx);
 
-
 	set_startup_flags ();
 
 #ifdef HAVE_EXEMPI

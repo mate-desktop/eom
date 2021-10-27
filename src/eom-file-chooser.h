@@ -47,13 +47,11 @@ struct _EomFileChooserClass
 	GtkFileChooserDialogClass  parent_class;
 };
 
-
 GType		 eom_file_chooser_get_type	(void) G_GNUC_CONST;
 
 GtkWidget	*eom_file_chooser_new		(GtkFileChooserAction action);
 
 GdkPixbufFormat	*eom_file_chooser_get_format	(EomFileChooser *chooser);
-
 
 G_END_DECLS
 

@@ -73,7 +73,6 @@ struct error_handler_data {
 	char *filename;
 };
 
-
 static void
 fatal_error_handler (j_common_ptr cinfo)
 {
@@ -102,7 +101,6 @@ fatal_error_handler (j_common_ptr cinfo)
 
         g_assert_not_reached ();
 }
-
 
 static void
 output_message_handler (j_common_ptr cinfo)

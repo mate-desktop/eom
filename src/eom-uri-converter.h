@@ -52,7 +52,6 @@ typedef enum {
 
 #define EOM_UC_ERROR eom_uc_error_quark ()
 
-
 struct _EomURIConverter {
 	GObject parent;
 

@@ -48,7 +48,6 @@ struct _EomApplicationPrivate {
 	PeasExtensionSet *extensions;
 };
 
-
 EggToolbarsModel *eom_application_get_toolbars_model  (EomApplication *application);
 
 void              eom_application_save_toolbars_model (EomApplication *application);

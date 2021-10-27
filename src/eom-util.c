@@ -311,7 +311,6 @@ eom_util_filename_get_extension (const char * filename)
 	return g_strdup (begin);
 }
 
-
 /**
  * eom_util_file_is_persistent:
  * @file: a #GFile

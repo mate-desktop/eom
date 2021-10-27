@@ -11,7 +11,6 @@
  * applications using the library shouldn't need to include this file.
  */
 
-
 /* Declarations for both compression & decompression */
 
 typedef enum {			/* Operating modes for buffer controllers */
@@ -38,7 +37,6 @@ typedef enum {			/* Operating modes for buffer controllers */
 #define DSTATE_BUFPOST	208	/* looking for SOS/EOI in jpeg_finish_output */
 #define DSTATE_RDCOEFS	209	/* reading file in jpeg_read_coefficients */
 #define DSTATE_STOPPING	210	/* looking for EOI in jpeg_finish_decompress */
-
 
 /* Declarations for compression modules */
 
@@ -132,7 +130,6 @@ struct jpeg_marker_writer {
 				      unsigned int datalen));
   JMETHOD(void, write_marker_byte, (j_compress_ptr cinfo, int val));
 };
-
 
 /* Declarations for decompression modules */
 
@@ -259,14 +256,12 @@ struct jpeg_color_quantizer {
   JMETHOD(void, new_color_map, (j_decompress_ptr cinfo));
 };
 
-
 /* Miscellaneous useful macros */
 
 #undef MAX
 #define MAX(a,b)	((a) > (b) ? (a) : (b))
 #undef MIN
 #define MIN(a,b)	((a) < (b) ? (a) : (b))
-
 
 /* We assume that right shift corresponds to signed division by 2 with
  * rounding towards minus infinity.  This is correct for typical "arithmetic
@@ -288,7 +283,6 @@ struct jpeg_color_quantizer {
 #define SHIFT_TEMPS
 #define RIGHT_SHIFT(x,shft)	((x) >> (shft))
 #endif
-
 
 /* Short forms of external names for systems with brain-damaged linkers. */
 
@@ -334,7 +328,6 @@ struct jpeg_color_quantizer {
 #define jpeg_natural_order2	jZAGTable2
 #define jpeg_aritab		jAriTab
 #endif /* NEED_SHORT_EXTERNAL_NAMES */
-
 
 /* Compression module initialization routines */
 EXTERN(void) jinit_compress_master JPP((j_compress_ptr cinfo));

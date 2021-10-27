@@ -52,7 +52,6 @@ typedef enum {
 	EJA_OTHER
 } EomJpegApp1Type;
 
-
 #define EOM_JPEG_MARKER_START   0xFF
 #define EOM_JPEG_MARKER_APP1	0xE1
 #define EOM_JPEG_MARKER_APP2	0xE2
@@ -89,13 +88,11 @@ struct _EomMetadataReaderJpgPrivate {
 static void
 eom_metadata_reader_jpg_init_emr_iface (gpointer g_iface, gpointer iface_data);
 
-
 G_DEFINE_TYPE_WITH_CODE (EomMetadataReaderJpg, eom_metadata_reader_jpg,
 			 G_TYPE_OBJECT,
 			 G_IMPLEMENT_INTERFACE (EOM_TYPE_METADATA_READER,
 			                        eom_metadata_reader_jpg_init_emr_iface) \
 			                        G_ADD_PRIVATE (EomMetadataReaderJpg))
-
 
 static void
 eom_metadata_reader_jpg_dispose (GObject *object)
@@ -154,7 +151,6 @@ eom_metadata_reader_jpg_finished (EomMetadataReaderJpg *emr)
 
 	return (emr->priv->state == EMR_FINISHED);
 }
-
 
 static EomJpegApp1Type
 eom_metadata_identify_app1 (gchar *buf, guint len)
@@ -466,7 +462,6 @@ eom_metadata_reader_jpg_get_exif_data (EomMetadataReaderJpg *emr)
 	return data;
 }
 #endif
-
 
 #ifdef HAVE_EXEMPI
 

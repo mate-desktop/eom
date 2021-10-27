@@ -16,7 +16,6 @@ typedef struct _EomScrollViewPrivate EomScrollViewPrivate;
 #define EOM_IS_SCROLL_VIEW(obj)           (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EOM_TYPE_SCROLL_VIEW))
 #define EOM_IS_SCROLL_VIEW_CLASS(klass)   (G_TYPE_CHECK_CLASS_TYPE ((klass), EOM_TYPE_SCROLL_VIEW))
 
-
 struct _EomScrollView {
 	GtkGrid base_instance;
 
@@ -71,5 +70,4 @@ void     eom_scroll_view_hide_cursor      (EomScrollView *view);
 G_END_DECLS
 
 #endif /* _EOM_SCROLL_VIEW_H_ */
-
 
