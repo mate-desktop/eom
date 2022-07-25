@@ -143,7 +143,7 @@ fi
 
 LIBEXIF_REQUIRED=0.6.14
 
-AC_ARG_WITH([libexif], AC_HELP_STRING([--without-libexif], [disable EXIF support]))
+AC_ARG_WITH([libexif], AS_HELP_STRING([--without-libexif], [disable EXIF support]))
 have_exif=no
 if test x$with_libexif != xno; then
     PKG_CHECK_MODULES(EXIF, libexif >= $LIBEXIF_REQUIRED, have_exif=yes, have_exif=no)
@@ -159,7 +159,7 @@ AM_CONDITIONAL([HAVE_EXIF], [test "x$have_exif" = "xyes"])
 # Little CMS (optional)
 # *********************
 
-AC_ARG_WITH([cms], AC_HELP_STRING([--without-cms], [disable colour management support]))
+AC_ARG_WITH([cms], AS_HELP_STRING([--without-cms], [disable colour management support]))
 have_lcms=no
 if test x$with_cms != xno; then
     PKG_CHECK_MODULES(LCMS, lcms2, have_lcms=yes, have_lcms=no)
@@ -174,7 +174,7 @@ AM_CONDITIONAL([HAVE_LCMS], [test "x$have_lcms" = "xyes"])
 # *********************
 # Exempi (optional)
 # *********************
-AC_ARG_WITH(xmp, AC_HELP_STRING([--without-xmp], [disable special XMP support]))
+AC_ARG_WITH(xmp, AS_HELP_STRING([--without-xmp], [disable special XMP support]))
 have_exempi=no
 if test x$with_xmp != xno; then
     PKG_CHECK_MODULES(EXEMPI, exempi-2.0 >= $EXEMPI_REQUIRED, have_exempi=yes, have_exempi=no)
@@ -202,7 +202,7 @@ AC_SUBST([EOM_DOC_EXIF_STOP])
 # Jpeg (semi-optional)
 # ********************
 
-AC_ARG_WITH(libjpeg, AC_HELP_STRING([--without-libjpeg], [disable special JPEG support]))
+AC_ARG_WITH(libjpeg, AS_HELP_STRING([--without-libjpeg], [disable special JPEG support]))
   have_jpeg=no
   have_libjpeg_80=no
   if test x$with_libjpeg != xno && test -z "$LIBJPEG"; then
@@ -272,7 +272,7 @@ PKG_CHECK_MODULES(LIBXML2, [libxml-2.0 >= $LIBXML2_REQUIRED])
 
 LIBRSVG_REQUIRED=2.36.2
 
-AC_ARG_WITH([librsvg], AC_HELP_STRING([--without-librsvg], [disable RSVG support]))
+AC_ARG_WITH([librsvg], AS_HELP_STRING([--without-librsvg], [disable RSVG support]))
 have_rsvg=no
 if test x$with_librsvg != xno; then
     PKG_CHECK_MODULES(RSVG, librsvg-2.0 >= $LIBRSVG_REQUIRED, have_rsvg=yes, have_rsvg=no)
