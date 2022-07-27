@@ -451,8 +451,6 @@ populate_model (GtkTreeModel *store, GList *imgs)
 		const gchar *name;
 		GdkPixbuf *buf = NULL;
 		GdkPixbuf *buf_scaled = NULL;
-		int width;
-		double ratio;
 
 		img = EOM_IMAGE (imgs->data);
 
@@ -460,9 +458,17 @@ populate_model (GtkTreeModel *store, GList *imgs)
 		buf = eom_image_get_thumbnail (img);
 
 		if (buf) {
-			ratio = IMAGE_COLUMN_HEIGHT / (double) gdk_pixbuf_get_height (buf);
-			width = (int) (gdk_pixbuf_get_width (buf) * ratio);
-			buf_scaled = gdk_pixbuf_scale_simple (buf, width, IMAGE_COLUMN_HEIGHT, GDK_INTERP_BILINEAR);
+			int height;
+			int width;
+			double ratio;
+
+			height = gdk_pixbuf_get_height (buf);
+			ratio = IMAGE_COLUMN_HEIGHT / (double) height;
+			width = gdk_pixbuf_get_width (buf);
+			buf_scaled = gdk_pixbuf_scale_simple (buf,
+			                                      (int) (ratio * (double) width),
+			                                      IMAGE_COLUMN_HEIGHT,
+			                                      GDK_INTERP_BILINEAR);
 		} else
 			buf_scaled = get_nothumb_pixbuf ();
 
