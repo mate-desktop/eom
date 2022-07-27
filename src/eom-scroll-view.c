@@ -1294,7 +1294,8 @@ display_draw (GtkWidget *widget, cairo_t *cr, gpointer data)
 		cairo_matrix_init_identity (&matrix);
 		if (transform) {
 			cairo_matrix_t affine;
-			double image_offset_x = 0., image_offset_y = 0.;
+			int image_offset_x = 0;
+			int image_offset_y = 0;
 
 			eom_transform_get_affine (transform, &affine);
 			cairo_matrix_multiply (&matrix, &affine, &matrix);
@@ -1302,23 +1303,23 @@ display_draw (GtkWidget *widget, cairo_t *cr, gpointer data)
 			switch (eom_transform_get_transform_type (transform)) {
 			case EOM_TRANSFORM_ROT_90:
 			case EOM_TRANSFORM_FLIP_HORIZONTAL:
-				image_offset_x = (double) gdk_pixbuf_get_width (priv->pixbuf);
+				image_offset_x = gdk_pixbuf_get_width (priv->pixbuf);
 				break;
 			case EOM_TRANSFORM_ROT_270:
 			case EOM_TRANSFORM_FLIP_VERTICAL:
-				image_offset_y = (double) gdk_pixbuf_get_height (priv->pixbuf);
+				image_offset_y = gdk_pixbuf_get_height (priv->pixbuf);
 				break;
 			case EOM_TRANSFORM_ROT_180:
 			case EOM_TRANSFORM_TRANSPOSE:
 			case EOM_TRANSFORM_TRANSVERSE:
-				image_offset_x = (double) gdk_pixbuf_get_width (priv->pixbuf);
-				image_offset_y = (double) gdk_pixbuf_get_height (priv->pixbuf);
+				image_offset_x = gdk_pixbuf_get_width (priv->pixbuf);
+				image_offset_y = gdk_pixbuf_get_height (priv->pixbuf);
 				break;
 			case EOM_TRANSFORM_NONE:
 				default:
 				break;
 			}
-			cairo_matrix_init_translate (&translate, image_offset_x, image_offset_y);
+			cairo_matrix_init_translate (&translate, (double) image_offset_x, (double) image_offset_y);
 			cairo_matrix_multiply (&matrix, &matrix, &translate);
 		}
 		/* Zoom factor for SVGs is already scaled, so scale back to application pixels. */
