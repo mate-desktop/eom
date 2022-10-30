@@ -8,14 +8,14 @@
 # David D, 2019
 # Stéphane PETRUS <stephane.petrus@posteo.net>, 2019
 # Laurent Napias, 2020
-# Jerare Yoshi <jeremy.strady@orange.fr>, 2020
+# JerareYoshi <jeremy.strady@orange.fr>, 2020
 # Laurent Napias <tamplan+transifex@free.fr>, 2020
 # Tubuntu, 2020
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-01-16 10:43+0100\n"
+"POT-Creation-Date: 2022-10-29 15:23+0200\n"
 "PO-Revision-Date: 2018-09-26 16:36+0000\n"
 "Last-Translator: Tubuntu, 2020\n"
 "Language-Team: French (https://www.transifex.com/mate/teams/13566/fr/)\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -195,8 +195,8 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:243
 msgid ""
-"Run <command>eom</command> at the prompt in a terminal such as <application"
-">mate-terminal</application>, or from the <application>Run "
+"Run <command>eom</command> at the prompt in a terminal such as "
+"<application>mate-terminal</application>, or from the <application>Run "
 "Application</application> dialog."
 msgstr ""
 
@@ -614,21 +614,9 @@ msgid ""
 "or press <keycap>F11</keycap>. To view them as a slide show, choose "
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Slideshow</guimenuitem></menuchoice>"
 " or press <keycap>F5</keycap>. To return to the collection view, press the "
-"<keycap>Esc</keycap> key, or "
-"<keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>. For more "
-"information about how to customize the slide show, see <xref linkend=\"eom-"
-"prefs-slideshow\"/>."
+"<keycap>Esc</keycap> key. For more information about how to customize the "
+"slide show, see <xref linkend=\"eom-prefs-slideshow\"/>."
 msgstr ""
-"Pour visualiser toutes les images du répertoire en plein écran, choisissez "
-"<menuchoice><guimenu>Vue</guimenu><guimenuitem>Plein "
-"écran</guimenuitem></menuchoice>ou pressez <keycap>F11</keycap>. Pour les "
-"visualiser sous forme de diaporama, sélectionnez "
-"<menuchoice><guimenu>Vue</guimenu><guimenuitem>Diaporama</guimenuitem></menuchoice>"
-" pour taper <keycap>F5</keycap>. Pour retourner à l'affichage de ma "
-"collection, tapez la touche<keycap>Esc</keycap>, ou "
-"<keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>. Pour plus "
-"d'information sur comment personnaliser les diaporamas, consultez<xref "
-"linkend=\"eom-prefs-slideshow\"/>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:450
@@ -758,14 +746,10 @@ msgstr ""
 #: C/index.docbook:487
 msgid ""
 "If you have multiple images in your collection you can press "
-"<keycap>Space</keycap> or use the right/down cursor keys to advance to the "
+"<keycap>Space</keycap> or use the right/left cursor keys to advance to the "
 "next image. The previous image can be reached by pressing "
 "<keycap>Backspace</keycap> or using the left/up cursor keys."
 msgstr ""
-"Si vous avez de multiple images dans votre collection, vous pouvez taper "
-"<keycap>Espace</keycap> ou utiliser la touche du curseur droite/gauche pour "
-"avancer à la nouvelle image. L'image précédente peut être atteinte en tapant"
-" <keycap>Retour arrière</keycap> ou en utilisant le curseur bas/haut."
 
 #. (itstool) path: section/para
 #: C/index.docbook:488
@@ -1065,8 +1049,8 @@ msgstr "Définition de vos paramètres de page"
 #: C/index.docbook:637
 msgid ""
 "Before printing you need to set the page settings you would like to use. To "
-"do that choose <menuchoice><guimenu>Image</guimenu><guimenuitem>Page "
-"Setup</guimenuitem></menuchoice>."
+"do that choose "
+"<menuchoice><guimenu>Image</guimenu><guimenuitem>Print</guimenuitem></menuchoice>."
 msgstr ""
 
 #. (itstool) path: section/para

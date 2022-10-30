@@ -4,21 +4,22 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Damir Mevkić <damir.mevkic@gmail.com>, 2018
+# Damir Mevkić 52K <damir.mevkic@gmail.com>, 2018
 # Marko Šterman <marko.chamillionaire@gmail.com>, 2018
 # worm <thewormhole@gmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Helena S <ele@tutamail.com>, 2020
 # Damir Jerovšek <jierro@windowslive.com>, 2021
 # Arnold Marko <arnold.marko@gmail.com>, 2021
+# Martin Srebotnjak <miles@filmsi.net>, 2021
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: eom 1.25.0\n"
+"Project-Id-Version: eom 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/eom/issues\n"
-"POT-Creation-Date: 2021-06-05 12:10+0200\n"
+"POT-Creation-Date: 2022-10-29 15:23+0200\n"
 "PO-Revision-Date: 2018-03-11 15:18+0000\n"
-"Last-Translator: Arnold Marko <arnold.marko@gmail.com>, 2021\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>, 2021\n"
 "Language-Team: Slovenian (https://www.transifex.com/mate/teams/13566/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,40 +27,40 @@ msgstr ""
 "Language: sl\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:944
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:942
 #, c-format
 msgid "Show “_%s”"
-msgstr "Pokaži \"_%s\""
+msgstr "Pokaži »_%s«"
+
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1417
+msgid "_Move on Toolbar"
+msgstr "_Premakni v orodni vrstici"
+
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1418
+msgid "Move the selected item on the toolbar"
+msgstr "Premakne izbrani predmet v orodni vrstici"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1419
-msgid "_Move on Toolbar"
-msgstr "_Premakni na orodni vrstici"
-
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
-msgid "Move the selected item on the toolbar"
-msgstr "Premakne izbrani predmet na orodni vrstici"
-
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
 msgid "_Remove from Toolbar"
 msgstr "_Odstrani iz orodne vrstice"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1422
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
 msgid "Remove the selected item from the toolbar"
 msgstr "Odstrani izbrani predmet iz orodne vrstice"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1423
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
 msgid "_Delete Toolbar"
 msgstr "_Izbriši orodno vrstico"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1424
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1422
 msgid "Remove the selected toolbar"
 msgstr "Odstrani izbrano orodno vrstico"
 
-#: cut-n-paste/toolbar-editor/egg-toolbar-editor.c:483
+#: cut-n-paste/toolbar-editor/egg-toolbar-editor.c:482
 msgid "Separator"
 msgstr "Ločilnik"
 
-#: data/eom.appdata.xml.in.in:6 src/eom-window.c:2629
+#: data/eom.appdata.xml.in.in:6 src/eom-window.c:2630
 msgid "Eye of MATE"
 msgstr "Eye of MATE"
 
@@ -77,7 +78,7 @@ msgstr ""
 "je slika naložena, jo lahko povečate in zavrtite. Ogledate si lahko tudi "
 "naslednje slike iz iste mape."
 
-#: data/eom.desktop.in.in:3 src/main.c:63 src/main.c:166
+#: data/eom.desktop.in.in:3 src/main.c:63 src/main.c:165
 msgid "Eye of MATE Image Viewer"
 msgstr "Pregledovalnik slik Eye of MATE"
 
@@ -90,6 +91,8 @@ msgstr "Prebrskaj in zavrti slike"
 #: data/eom.desktop.in.in:14
 msgid "image;viewer;JPEG;PNG;TIFF;SVG;MATE;photos;browse;thumbnails;rotate;"
 msgstr ""
+"slika;pregledovalnik;ogledovalnik;JPEG;PNG;TIFF;SVG;MATE;fotografije;fotke;brskanje;prebrskaj;ogled;"
+" sličice;zavrti;zasukaj;vrtenje;sukanje"
 
 #: data/eom-image-properties-dialog.ui:23
 msgid "Image Properties"
@@ -112,85 +115,85 @@ msgstr "_Zapri"
 msgid "Name:"
 msgstr "Ime:"
 
-#: data/eom-image-properties-dialog.ui:166
+#: data/eom-image-properties-dialog.ui:167
 msgid "Width:"
 msgstr "Širina:"
 
-#: data/eom-image-properties-dialog.ui:184
+#: data/eom-image-properties-dialog.ui:186
 msgid "Height:"
 msgstr "Višina:"
 
-#: data/eom-image-properties-dialog.ui:202
+#: data/eom-image-properties-dialog.ui:205
 msgid "Type:"
 msgstr "Vrsta:"
 
-#: data/eom-image-properties-dialog.ui:220
+#: data/eom-image-properties-dialog.ui:224
 msgid "Bytes:"
 msgstr "Bajti:"
 
-#: data/eom-image-properties-dialog.ui:238
-#: data/eom-image-properties-dialog.ui:563
+#: data/eom-image-properties-dialog.ui:243
+#: data/eom-image-properties-dialog.ui:569
 msgid "Location:"
 msgstr "Mesto:"
 
-#: data/eom-image-properties-dialog.ui:371
+#: data/eom-image-properties-dialog.ui:377
 msgid "General"
 msgstr "Splošno"
 
-#: data/eom-image-properties-dialog.ui:404
+#: data/eom-image-properties-dialog.ui:410
 msgid "Aperture Value:"
 msgstr "Vrednost zaslonke:"
 
-#: data/eom-image-properties-dialog.ui:420
+#: data/eom-image-properties-dialog.ui:426
 msgid "Exposure Time:"
 msgstr "Čas osvetlitve:"
 
-#: data/eom-image-properties-dialog.ui:436
+#: data/eom-image-properties-dialog.ui:442
 msgid "Focal Length:"
 msgstr "Goriščna razdalja:"
 
-#: data/eom-image-properties-dialog.ui:452
+#: data/eom-image-properties-dialog.ui:458
 msgid "Flash:"
 msgstr "Bliskavica:"
 
-#: data/eom-image-properties-dialog.ui:468
+#: data/eom-image-properties-dialog.ui:474
 msgid "ISO Speed Rating:"
 msgstr "ISO raven hitrosti:"
 
-#: data/eom-image-properties-dialog.ui:484
+#: data/eom-image-properties-dialog.ui:490
 msgid "Metering Mode:"
 msgstr "Metrični način:"
 
-#: data/eom-image-properties-dialog.ui:500
+#: data/eom-image-properties-dialog.ui:506
 msgid "Camera Model:"
 msgstr "Model aparata:"
 
-#: data/eom-image-properties-dialog.ui:517
+#: data/eom-image-properties-dialog.ui:523
 msgid "Date/Time:"
 msgstr "Datum/Čas:"
 
-#: data/eom-image-properties-dialog.ui:547
+#: data/eom-image-properties-dialog.ui:553
 msgid "Description:"
 msgstr "Opis:"
 
-#: data/eom-image-properties-dialog.ui:579
+#: data/eom-image-properties-dialog.ui:585
 msgid "Keywords:"
 msgstr "Ključne besede:"
 
-#: data/eom-image-properties-dialog.ui:595
+#: data/eom-image-properties-dialog.ui:601
 msgid "Author:"
 msgstr "Avtor:"
 
-#: data/eom-image-properties-dialog.ui:611
+#: data/eom-image-properties-dialog.ui:617
 msgid "Copyright:"
 msgstr "Avtorske pravice:"
 
-#: data/eom-image-properties-dialog.ui:890
-#: data/eom-image-properties-dialog.ui:939 data/metadata-sidebar.ui:409
+#: data/eom-image-properties-dialog.ui:896
+#: data/eom-image-properties-dialog.ui:945 data/metadata-sidebar.ui:409
 msgid "Details"
 msgstr "Podrobnosti"
 
-#: data/eom-image-properties-dialog.ui:915
+#: data/eom-image-properties-dialog.ui:921
 msgid "Metadata"
 msgstr "Metapodatki"
 
@@ -286,71 +289,72 @@ msgstr "Ozadje"
 msgid "As custom color:"
 msgstr "Kot barvo _po meri:"
 
-#: data/eom-preferences-dialog.ui:279 data/org.mate.eom.gschema.xml.in:16
+#: data/eom-preferences-dialog.ui:279 data/eom-preferences-dialog.ui:282
+#: data/org.mate.eom.gschema.xml.in:16
 msgid "Background Color"
 msgstr "Barva ozadja"
 
-#: data/eom-preferences-dialog.ui:312
+#: data/eom-preferences-dialog.ui:317
 msgid "Transparent Parts"
 msgstr "Prosojni deli"
 
-#: data/eom-preferences-dialog.ui:347
+#: data/eom-preferences-dialog.ui:352
 msgid "As check _pattern"
 msgstr "kot preizkusni _vzorec"
 
-#: data/eom-preferences-dialog.ui:368
+#: data/eom-preferences-dialog.ui:373
 msgid "As custom c_olor:"
 msgstr "kot barva _po meri:"
 
-#: data/eom-preferences-dialog.ui:389
+#: data/eom-preferences-dialog.ui:394 data/eom-preferences-dialog.ui:398
 msgid "Color for Transparent Areas"
 msgstr "Barva za prosojne površine"
 
-#: data/eom-preferences-dialog.ui:407
+#: data/eom-preferences-dialog.ui:417
 msgid "As _background"
 msgstr "kot _ozadje"
 
-#: data/eom-preferences-dialog.ui:449
+#: data/eom-preferences-dialog.ui:459
 msgid "Image View"
 msgstr "Pogled slike"
 
-#: data/eom-preferences-dialog.ui:473
+#: data/eom-preferences-dialog.ui:483
 msgid "Image Zoom"
 msgstr "Približanje slike"
 
-#: data/eom-preferences-dialog.ui:508
+#: data/eom-preferences-dialog.ui:518
 msgid "E_xpand images to fit screen"
 msgstr "_Razširi slike na velikost zaslona"
 
-#: data/eom-preferences-dialog.ui:553
+#: data/eom-preferences-dialog.ui:563
 msgid "Sequence"
 msgstr "Zaporedje"
 
-#: data/eom-preferences-dialog.ui:595
+#: data/eom-preferences-dialog.ui:605
 msgid "_Switch image after:"
 msgstr "_Preklopi sliko vsakih:"
 
-#: data/eom-preferences-dialog.ui:623
+#: data/eom-preferences-dialog.ui:624 data/eom-preferences-dialog.ui:638
 msgid "seconds"
 msgstr "sekund"
 
-#: data/eom-preferences-dialog.ui:640
+#: data/eom-preferences-dialog.ui:655
 msgid "_Random sequence"
 msgstr "_Naključno zaporedje"
 
-#: data/eom-preferences-dialog.ui:656
+#: data/eom-preferences-dialog.ui:671
 msgid "_Loop sequence"
 msgstr "_Slike prikazuj krožno"
 
-#: data/eom-preferences-dialog.ui:700
+#: data/eom-preferences-dialog.ui:715
 msgid "Slideshow"
 msgstr "Predstavitev"
 
-#: data/eom-preferences-dialog.ui:734
+#: data/eom-preferences-dialog.ui:749
 msgid "Plugins"
 msgstr "Vtičniki"
 
-#: data/metadata-sidebar.ui:29 src/eom-print-image-setup.c:914
+#: data/metadata-sidebar.ui:29 src/eom-print-image-setup.c:913
 msgid "Size"
 msgstr "Velikost"
 
@@ -622,6 +626,9 @@ msgid ""
 " for editing images (when the \"Edit Image\" toolbar button is clicked). Set"
 " to the empty string to disable this feature."
 msgstr ""
+"Ime namizne datoteke (vključno z ».desktop«) programa, ki ga želite "
+"uporabiti za urejanje slik (ko kliknete gumb »Uredi sliko«). Nastavite "
+"prazen niz, da onemogočite to funkcijo."
 
 #: data/org.mate.eom.gschema.xml.in:127
 msgid ""
@@ -689,21 +696,29 @@ msgstr "V primeru, da ne shranite, bodo spremembe izgubljene."
 msgid "Save changes to image \"%s\" before closing?"
 msgstr "Ali naj se shranijo spremembe slike \"%s\" pred zapiranjem?"
 
-#: src/eom-close-confirmation-dialog.c:597
+#: src/eom-close-confirmation-dialog.c:601
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] ""
+"Odprta je %d slika z ne-shranjenimi spremembami. Ali naj se spremembe "
+"shranijo?"
 msgstr[1] ""
+"Odprti sta %d sliki z ne-shranjenimi spremembami. Ali naj se spremembe "
+"shranijo?"
 msgstr[2] ""
+"Odprte so %d slike z ne-shranjenimi spremembami. Ali naj se spremembe "
+"shranijo?"
 msgstr[3] ""
+"Odprtih je %d slik z ne-shranjenimi spremembami. Ali naj se spremembe "
+"shranijo?"
 
-#: src/eom-close-confirmation-dialog.c:614
+#: src/eom-close-confirmation-dialog.c:618
 msgid "S_elect the images you want to save:"
 msgstr "_Izbor slike za shranjevanje:"
 
-#: src/eom-close-confirmation-dialog.c:633
+#: src/eom-close-confirmation-dialog.c:637
 msgid "If you don't save, all your changes will be lost."
 msgstr "V primeru, da ne shranite, bodo spremembe izgubljene."
 
@@ -736,24 +751,24 @@ msgstr "Vse slike"
 msgid "%s (*.%s)"
 msgstr "%s (*.%s)"
 
-#: src/eom-file-chooser.c:281 src/eom-properties-dialog.c:163
-#: src/eom-properties-dialog.c:165 src/eom-thumb-view.c:517
+#: src/eom-file-chooser.c:281 src/eom-properties-dialog.c:162
+#: src/eom-properties-dialog.c:164 src/eom-thumb-view.c:524
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "slik. točka"
+msgstr[1] "slik. točki"
+msgstr[2] "slik. točke"
+msgstr[3] "slik. točk"
 
-#: src/eom-file-chooser.c:449
+#: src/eom-file-chooser.c:448
 msgid "Open Image"
 msgstr "Odpri sliko"
 
-#: src/eom-file-chooser.c:457
+#: src/eom-file-chooser.c:456
 msgid "Save Image"
 msgstr "Shrani sliko"
 
-#: src/eom-file-chooser.c:465 src/eom-window.c:3996
+#: src/eom-file-chooser.c:464 src/eom-window.c:3996
 msgid "Open Folder"
 msgstr "Odpri mapo"
 
@@ -765,28 +780,28 @@ msgstr "Pretvorba na še ne naloženi sliki."
 msgid "Transformation failed."
 msgstr "Pretvorba ni uspela."
 
-#: src/eom-image.c:1047
+#: src/eom-image.c:1045
 msgid "EXIF not supported for this file format."
 msgstr "EXIF ni podprta oblika zapisa slike."
 
-#: src/eom-image.c:1196
+#: src/eom-image.c:1194
 msgid "Image loading failed."
 msgstr "Nalaganje slike ni uspelo."
 
-#: src/eom-image.c:1723 src/eom-image.c:1825
+#: src/eom-image.c:1721 src/eom-image.c:1823
 msgid "No image loaded."
 msgstr "Ni nobene naložene slike."
 
-#: src/eom-image.c:1733 src/eom-image.c:1837
+#: src/eom-image.c:1731 src/eom-image.c:1835
 msgid "Temporary file creation failed."
 msgstr "Napaka med ustvarjanjem trenutne datoteke."
 
-#: src/eom-image-jpeg.c:384
+#: src/eom-image-jpeg.c:382
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr "Ni mogoče ustvariti začasne datoteke za shranjevanje: %s"
 
-#: src/eom-image-jpeg.c:395
+#: src/eom-image-jpeg.c:393
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "Ni mogoče rezervirati pomnilnika za nalaganje datoteke JPEG"
 
@@ -852,19 +867,19 @@ msgstr "Oznaka"
 msgid "Value"
 msgstr "Vrednost"
 
-#: src/eom-metadata-details.c:436
+#: src/eom-metadata-details.c:435
 msgid "North"
 msgstr "Sever"
 
-#: src/eom-metadata-details.c:439
+#: src/eom-metadata-details.c:438
 msgid "East"
 msgstr "Vzhod"
 
-#: src/eom-metadata-details.c:442
+#: src/eom-metadata-details.c:441
 msgid "West"
 msgstr "Zahod"
 
-#: src/eom-metadata-details.c:445
+#: src/eom-metadata-details.c:444
 msgid "South"
 msgstr "Jug"
 
@@ -886,12 +901,12 @@ msgstr "%.1f (35mm film)"
 #, c-format
 msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%i × %i slik. točk"
+msgstr[1] "%i × %i slik. točk"
+msgstr[2] "%i × %i sl. točk"
+msgstr[3] "%i × %i slik. točk"
 
-#: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
+#: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:179
 msgid "Unknown"
 msgstr "Neznano"
 
@@ -902,93 +917,93 @@ msgstr "%a, %d. %B %Y"
 #: src/eom-metadata-sidebar.c:233
 #, c-format
 msgid "%X"
-msgstr ""
+msgstr "%X"
 
 #: src/eom-print.c:371
 msgid "Image Settings"
 msgstr "Nastavitve slik"
 
-#: src/eom-print-image-setup.c:841
+#: src/eom-print-image-setup.c:840
 msgid "Image"
 msgstr "Slika"
 
-#: src/eom-print-image-setup.c:842
+#: src/eom-print-image-setup.c:841
 msgid "The image whose printing properties will be set up"
 msgstr "Slika kateri bodo nastavljene lastnosti tiskanja"
 
-#: src/eom-print-image-setup.c:848
+#: src/eom-print-image-setup.c:847
 msgid "Page Setup"
 msgstr "Nastavitev strani"
 
-#: src/eom-print-image-setup.c:849
+#: src/eom-print-image-setup.c:848
 msgid "The information for the page where the image will be printed"
 msgstr "Podrobnosti strani, kjer bo natisnjena slika"
 
-#: src/eom-print-image-setup.c:875
+#: src/eom-print-image-setup.c:874
 msgid "Position"
 msgstr "Položaj"
 
-#: src/eom-print-image-setup.c:879
+#: src/eom-print-image-setup.c:878
 msgid "_Left:"
 msgstr "_Levo:"
 
-#: src/eom-print-image-setup.c:881
+#: src/eom-print-image-setup.c:880
 msgid "_Right:"
 msgstr "_Desno:"
 
-#: src/eom-print-image-setup.c:882
+#: src/eom-print-image-setup.c:881
 msgid "_Top:"
 msgstr "_Zgoraj:"
 
-#: src/eom-print-image-setup.c:883
+#: src/eom-print-image-setup.c:882
 msgid "_Bottom:"
 msgstr "_Spodaj:"
 
-#: src/eom-print-image-setup.c:886
+#: src/eom-print-image-setup.c:885
 msgid "C_enter:"
 msgstr "Sr_edina:"
 
-#: src/eom-print-image-setup.c:891
+#: src/eom-print-image-setup.c:890
 msgid "None"
 msgstr "Brez"
 
-#: src/eom-print-image-setup.c:893
+#: src/eom-print-image-setup.c:892
 msgid "Horizontal"
 msgstr "Vodoravno"
 
-#: src/eom-print-image-setup.c:895
+#: src/eom-print-image-setup.c:894
 msgid "Vertical"
 msgstr "Navpično"
 
-#: src/eom-print-image-setup.c:897
+#: src/eom-print-image-setup.c:896
 msgid "Both"
 msgstr "Oba"
 
-#: src/eom-print-image-setup.c:917
+#: src/eom-print-image-setup.c:916
 msgid "_Width:"
 msgstr "_Širina:"
 
-#: src/eom-print-image-setup.c:919
+#: src/eom-print-image-setup.c:918
 msgid "_Height:"
 msgstr "_Višina:"
 
-#: src/eom-print-image-setup.c:922
+#: src/eom-print-image-setup.c:921
 msgid "_Scaling:"
 msgstr "_Merilo:"
 
-#: src/eom-print-image-setup.c:933
+#: src/eom-print-image-setup.c:932
 msgid "_Unit:"
 msgstr "_Enota:"
 
-#: src/eom-print-image-setup.c:938
+#: src/eom-print-image-setup.c:937
 msgid "Millimeters"
 msgstr "milimetri"
 
-#: src/eom-print-image-setup.c:940
+#: src/eom-print-image-setup.c:939
 msgid "Inches"
 msgstr "palci"
 
-#: src/eom-print-image-setup.c:969
+#: src/eom-print-image-setup.c:968
 msgid "Preview"
 msgstr "Predogled"
 
@@ -1011,11 +1026,11 @@ msgstr "kot je"
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: src/eom-thumb-view.c:545
+#: src/eom-thumb-view.c:552
 msgid "Taken on"
 msgstr "Prevzeto na"
 
-#: src/eom-uri-converter.c:985
+#: src/eom-uri-converter.c:974
 msgid "At least two file names are equal."
 msgstr "Vsaj dve imeni datotek sta enaki."
 
@@ -1037,21 +1052,21 @@ msgstr "(neveljaven Unicode)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%i × %i sl. točka  %s    %i%%"
+msgstr[1] "%i × %i sl. točki  %s    %i%%"
+msgstr[2] "%i × %i sl. točke  %s    %i%%"
+msgstr[3] "%i × %i sl. točk  %s    %i%%"
 
-#: src/eom-window.c:832
+#: src/eom-window.c:833
 msgid "_Reload"
 msgstr "_Ponovno naloži"
 
-#: src/eom-window.c:834 src/eom-window.c:2783
+#: src/eom-window.c:835 src/eom-window.c:2784
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "_Skrij"
 
-#: src/eom-window.c:844
+#: src/eom-window.c:845
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -1060,7 +1075,7 @@ msgstr ""
 "Slika \"%s\" je spremenjena z zunanjim programom.\n"
 "Ali želite sliko ponovno naložiti?"
 
-#: src/eom-window.c:1012
+#: src/eom-window.c:1013
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Uporabi \"%s\" za odpiranje izbrane slike"
@@ -1070,25 +1085,25 @@ msgstr "Uporabi \"%s\" za odpiranje izbrane slike"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: src/eom-window.c:1175
+#: src/eom-window.c:1176
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Shranjevanje slike \"%s\" (%u/%u)"
 
-#: src/eom-window.c:1535
+#: src/eom-window.c:1536
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Odpiranje slike \"%s\""
 
-#: src/eom-window.c:1905
+#: src/eom-window.c:1906
 msgid "Leave Fullscreen"
 msgstr "Zapusti celozaslonski način"
 
-#: src/eom-window.c:2045
+#: src/eom-window.c:2046
 msgid "Viewing a slideshow"
 msgstr "Ogled predstavitve"
 
-#: src/eom-window.c:2254
+#: src/eom-window.c:2255
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1097,15 +1112,15 @@ msgstr ""
 "Napaka med tiskanjem datoteke:\n"
 "%s"
 
-#: src/eom-window.c:2516
+#: src/eom-window.c:2517
 msgid "Toolbar Editor"
 msgstr "Urejevalnik orodnih vrstic"
 
-#: src/eom-window.c:2519
+#: src/eom-window.c:2520
 msgid "_Reset to Default"
 msgstr "_Povrni na privzeto"
 
-#: src/eom-window.c:2583
+#: src/eom-window.c:2584
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1117,7 +1132,7 @@ msgstr ""
 "License), kot ga je objavila ustanova Free Software Foundation; bodisi "
 "različice 2 ali (po vaši izbiri) katerikoli poznejši različici.\n"
 
-#: src/eom-window.c:2587
+#: src/eom-window.c:2588
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1129,7 +1144,7 @@ msgstr ""
 "UPORABO. Za več podrobnosti si glejte besedilo Splošnega javnega dovoljenja "
 "(GNU GPL).\n"
 
-#: src/eom-window.c:2591
+#: src/eom-window.c:2592
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
@@ -1140,35 +1155,38 @@ msgstr ""
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, "
 "USA."
 
-#: src/eom-window.c:2630
+#: src/eom-window.c:2631
 msgid "About Eye of MATE"
 msgstr "O Eye of MATE"
 
-#: src/eom-window.c:2632
+#: src/eom-window.c:2633
 msgid ""
 "Copyright © 2000-2010 Free Software Foundation, Inc.\n"
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
+"Avtorske pravice © 2000-2010 Free Software Foundation, Inc. \n"
+"Avtorske pravice © 2011 Perberos\n"
+"Avtorske pravice © 2012-2021 razvijalci MATE"
 
-#: src/eom-window.c:2635
+#: src/eom-window.c:2636
 msgid ""
 "Eye of MATE is a simple graphics viewer for the MATE Desktop Environment."
-msgstr ""
+msgstr "Eye of MATE je preprost pregledovalnik slik za namizno okolje MATE."
 
-#: src/eom-window.c:2638
+#: src/eom-window.c:2639
 msgid "translator-credits"
 msgstr "zasluge-prevajalcev"
 
-#: src/eom-window.c:2731 src/eom-window.c:2746
+#: src/eom-window.c:2732 src/eom-window.c:2747
 msgid "Error launching appearance preferences dialog: "
 msgstr "Napaka pri zagonu pogovornega okna z nastavitvami videza:"
 
-#: src/eom-window.c:2781
+#: src/eom-window.c:2782
 msgid "_Open Background Preferences"
 msgstr "_Odpri možnosti ozadja"
 
-#: src/eom-window.c:2797
+#: src/eom-window.c:2798
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1206,9 +1224,17 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
+"Ali ste prepričani, da želite premakniti\n"
+"%d izbrano sliko v smeti?"
 msgstr[1] ""
+"Ali ste prepričani, da želite premakniti\n"
+"%d izbrani sliki v smeti?"
 msgstr[2] ""
+"Ali ste prepričani, da želite premakniti\n"
+"%d izbrane slike v smeti?"
 msgstr[3] ""
+"Ali ste prepričani, da želite premakniti\n"
+"%d izbranih slik v smeti?"
 
 #: src/eom-window.c:3326
 msgid ""

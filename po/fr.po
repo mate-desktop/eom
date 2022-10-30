@@ -24,9 +24,9 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: eom 1.25.0\n"
+"Project-Id-Version: eom 1.26.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/eom/issues\n"
-"POT-Creation-Date: 2021-06-05 12:10+0200\n"
+"POT-Creation-Date: 2022-10-29 15:23+0200\n"
 "PO-Revision-Date: 2018-03-11 15:18+0000\n"
 "Last-Translator: Stéphane PETRUS <stephane.petrus@posteo.net>, 2021\n"
 "Language-Team: French (https://www.transifex.com/mate/teams/13566/fr/)\n"
@@ -34,42 +34,42 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:944
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:942
 #, c-format
 msgid "Show “_%s”"
 msgstr "Afficher « _%s »"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1419
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1417
 msgid "_Move on Toolbar"
 msgstr "_Déplacer sur la barre d'outils"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1418
 msgid "Move the selected item on the toolbar"
 msgstr "Déplace l'élément sélectionné sur la barre d'outils"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1419
 msgid "_Remove from Toolbar"
 msgstr "_Retirer de la barre d'outils"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1422
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
 msgid "Remove the selected item from the toolbar"
 msgstr "Retirer l'élément sélectionné de la barre d'outils"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1423
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
 msgid "_Delete Toolbar"
 msgstr "_Supprimer la barre d'outils"
 
-#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1424
+#: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1422
 msgid "Remove the selected toolbar"
 msgstr "Supprimer la barre d'outils sélectionnée"
 
-#: cut-n-paste/toolbar-editor/egg-toolbar-editor.c:483
+#: cut-n-paste/toolbar-editor/egg-toolbar-editor.c:482
 msgid "Separator"
 msgstr "Séparateur"
 
-#: data/eom.appdata.xml.in.in:6 src/eom-window.c:2629
+#: data/eom.appdata.xml.in.in:6 src/eom-window.c:2630
 msgid "Eye of MATE"
 msgstr "Eye of MATE"
 
@@ -88,7 +88,7 @@ msgstr ""
 "pivoter l'image, et également afficher les images suivantes dans le "
 "répertoire à partir duquel l'image a été chargée."
 
-#: data/eom.desktop.in.in:3 src/main.c:63 src/main.c:166
+#: data/eom.desktop.in.in:3 src/main.c:63 src/main.c:165
 msgid "Eye of MATE Image Viewer"
 msgstr "Visionneuse d'images Eye of MATE"
 
@@ -123,85 +123,85 @@ msgstr "_Fermer"
 msgid "Name:"
 msgstr "Nom :"
 
-#: data/eom-image-properties-dialog.ui:166
+#: data/eom-image-properties-dialog.ui:167
 msgid "Width:"
 msgstr "Largeur :"
 
-#: data/eom-image-properties-dialog.ui:184
+#: data/eom-image-properties-dialog.ui:186
 msgid "Height:"
 msgstr "Hauteur :"
 
-#: data/eom-image-properties-dialog.ui:202
+#: data/eom-image-properties-dialog.ui:205
 msgid "Type:"
 msgstr "Type :"
 
-#: data/eom-image-properties-dialog.ui:220
+#: data/eom-image-properties-dialog.ui:224
 msgid "Bytes:"
 msgstr "Octets :"
 
-#: data/eom-image-properties-dialog.ui:238
-#: data/eom-image-properties-dialog.ui:563
+#: data/eom-image-properties-dialog.ui:243
+#: data/eom-image-properties-dialog.ui:569
 msgid "Location:"
 msgstr "Emplacement :"
 
-#: data/eom-image-properties-dialog.ui:371
+#: data/eom-image-properties-dialog.ui:377
 msgid "General"
 msgstr "Général"
 
-#: data/eom-image-properties-dialog.ui:404
+#: data/eom-image-properties-dialog.ui:410
 msgid "Aperture Value:"
 msgstr "Ouverture :"
 
-#: data/eom-image-properties-dialog.ui:420
+#: data/eom-image-properties-dialog.ui:426
 msgid "Exposure Time:"
 msgstr "Durée d'exposition :"
 
-#: data/eom-image-properties-dialog.ui:436
+#: data/eom-image-properties-dialog.ui:442
 msgid "Focal Length:"
 msgstr "Distance focale :"
 
-#: data/eom-image-properties-dialog.ui:452
+#: data/eom-image-properties-dialog.ui:458
 msgid "Flash:"
 msgstr "Flash :"
 
-#: data/eom-image-properties-dialog.ui:468
+#: data/eom-image-properties-dialog.ui:474
 msgid "ISO Speed Rating:"
 msgstr "Sensibilité ISO :"
 
-#: data/eom-image-properties-dialog.ui:484
+#: data/eom-image-properties-dialog.ui:490
 msgid "Metering Mode:"
 msgstr "Mode de mesure :"
 
-#: data/eom-image-properties-dialog.ui:500
+#: data/eom-image-properties-dialog.ui:506
 msgid "Camera Model:"
 msgstr "Modèle d'appareil photo :"
 
-#: data/eom-image-properties-dialog.ui:517
+#: data/eom-image-properties-dialog.ui:523
 msgid "Date/Time:"
 msgstr "Date et heure :"
 
-#: data/eom-image-properties-dialog.ui:547
+#: data/eom-image-properties-dialog.ui:553
 msgid "Description:"
 msgstr "Description"
 
-#: data/eom-image-properties-dialog.ui:579
+#: data/eom-image-properties-dialog.ui:585
 msgid "Keywords:"
 msgstr "Mots-clés :"
 
-#: data/eom-image-properties-dialog.ui:595
+#: data/eom-image-properties-dialog.ui:601
 msgid "Author:"
 msgstr "Auteur :"
 
-#: data/eom-image-properties-dialog.ui:611
+#: data/eom-image-properties-dialog.ui:617
 msgid "Copyright:"
 msgstr "Copyright :"
 
-#: data/eom-image-properties-dialog.ui:890
-#: data/eom-image-properties-dialog.ui:939 data/metadata-sidebar.ui:409
+#: data/eom-image-properties-dialog.ui:896
+#: data/eom-image-properties-dialog.ui:945 data/metadata-sidebar.ui:409
 msgid "Details"
 msgstr "Détails"
 
-#: data/eom-image-properties-dialog.ui:915
+#: data/eom-image-properties-dialog.ui:921
 msgid "Metadata"
 msgstr "Métadonnées"
 
@@ -297,71 +297,72 @@ msgstr "Arrière-plan"
 msgid "As custom color:"
 msgstr "Couleur personnalisée :"
 
-#: data/eom-preferences-dialog.ui:279 data/org.mate.eom.gschema.xml.in:16
+#: data/eom-preferences-dialog.ui:279 data/eom-preferences-dialog.ui:282
+#: data/org.mate.eom.gschema.xml.in:16
 msgid "Background Color"
 msgstr "Couleur d'arrière-plan"
 
-#: data/eom-preferences-dialog.ui:312
+#: data/eom-preferences-dialog.ui:317
 msgid "Transparent Parts"
 msgstr "Parties transparentes"
 
-#: data/eom-preferences-dialog.ui:347
+#: data/eom-preferences-dialog.ui:352
 msgid "As check _pattern"
 msgstr "Comme un _damier"
 
-#: data/eom-preferences-dialog.ui:368
+#: data/eom-preferences-dialog.ui:373
 msgid "As custom c_olor:"
 msgstr "_Couleur personnalisée :"
 
-#: data/eom-preferences-dialog.ui:389
+#: data/eom-preferences-dialog.ui:394 data/eom-preferences-dialog.ui:398
 msgid "Color for Transparent Areas"
 msgstr "Couleur pour les zones transparentes"
 
-#: data/eom-preferences-dialog.ui:407
+#: data/eom-preferences-dialog.ui:417
 msgid "As _background"
 msgstr "Comme l'a_rrière-plan"
 
-#: data/eom-preferences-dialog.ui:449
+#: data/eom-preferences-dialog.ui:459
 msgid "Image View"
 msgstr "Vue Image"
 
-#: data/eom-preferences-dialog.ui:473
+#: data/eom-preferences-dialog.ui:483
 msgid "Image Zoom"
 msgstr "Zoom de l'image"
 
-#: data/eom-preferences-dialog.ui:508
+#: data/eom-preferences-dialog.ui:518
 msgid "E_xpand images to fit screen"
 msgstr "É_tendre les images pour remplir l'écran"
 
-#: data/eom-preferences-dialog.ui:553
+#: data/eom-preferences-dialog.ui:563
 msgid "Sequence"
 msgstr "Suite"
 
-#: data/eom-preferences-dialog.ui:595
+#: data/eom-preferences-dialog.ui:605
 msgid "_Switch image after:"
 msgstr "_Changer d'image après :"
 
-#: data/eom-preferences-dialog.ui:623
+#: data/eom-preferences-dialog.ui:624 data/eom-preferences-dialog.ui:638
 msgid "seconds"
 msgstr "secondes"
 
-#: data/eom-preferences-dialog.ui:640
+#: data/eom-preferences-dialog.ui:655
 msgid "_Random sequence"
 msgstr "Suite _aléatoire"
 
-#: data/eom-preferences-dialog.ui:656
+#: data/eom-preferences-dialog.ui:671
 msgid "_Loop sequence"
 msgstr "Suite en _boucle"
 
-#: data/eom-preferences-dialog.ui:700
+#: data/eom-preferences-dialog.ui:715
 msgid "Slideshow"
 msgstr "Diaporama"
 
-#: data/eom-preferences-dialog.ui:734
+#: data/eom-preferences-dialog.ui:749
 msgid "Plugins"
 msgstr "Greffons"
 
-#: data/metadata-sidebar.ui:29 src/eom-print-image-setup.c:914
+#: data/metadata-sidebar.ui:29 src/eom-print-image-setup.c:913
 msgid "Size"
 msgstr "Taille"
 
@@ -679,8 +680,8 @@ msgid ""
 "plugin."
 msgstr ""
 "Liste des greffons actifs. Elle ne contient pas l'« emplacement » des "
-"greffons actifs. Référez-vous au fichier .eom-plugin pour obtenir l'« "
-"emplacement » d'un greffon donné."
+"greffons actifs. Référez-vous au fichier .eom-plugin pour obtenir "
+"l'« emplacement » d'un greffon donné."
 
 #: plugins/fullscreen/fullscreen.plugin.desktop.in.in:5
 msgid "Fullscreen with double-click"
@@ -718,7 +719,7 @@ msgstr ""
 "Voulez-vous enregistrer les modifications apportées à l'image « %s » avant "
 "de fermer ?"
 
-#: src/eom-close-confirmation-dialog.c:597
+#: src/eom-close-confirmation-dialog.c:601
 #, c-format
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
@@ -729,12 +730,15 @@ msgstr[0] ""
 msgstr[1] ""
 "Il y a %d images avec des modifications non enregistrées. Voulez-vous "
 "enregistrer les modifications avant de fermer ?"
+msgstr[2] ""
+"Il y a %d images avec des modifications non enregistrées. Voulez-vous "
+"enregistrer les modifications avant de fermer ?"
 
-#: src/eom-close-confirmation-dialog.c:614
+#: src/eom-close-confirmation-dialog.c:618
 msgid "S_elect the images you want to save:"
 msgstr "Sél_ectionnez les images que vous souhaitez enregistrer :"
 
-#: src/eom-close-confirmation-dialog.c:633
+#: src/eom-close-confirmation-dialog.c:637
 msgid "If you don't save, all your changes will be lost."
 msgstr "Si vous n'enregistrez pas, toutes vos modifications seront perdues."
 
@@ -767,22 +771,23 @@ msgstr "Toutes les images"
 msgid "%s (*.%s)"
 msgstr "%s (*.%s)"
 
-#: src/eom-file-chooser.c:281 src/eom-properties-dialog.c:163
-#: src/eom-properties-dialog.c:165 src/eom-thumb-view.c:517
+#: src/eom-file-chooser.c:281 src/eom-properties-dialog.c:162
+#: src/eom-properties-dialog.c:164 src/eom-thumb-view.c:524
 msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "pixel"
 msgstr[1] "pixels"
+msgstr[2] "pixels"
 
-#: src/eom-file-chooser.c:449
+#: src/eom-file-chooser.c:448
 msgid "Open Image"
 msgstr "Ouvrir une image"
 
-#: src/eom-file-chooser.c:457
+#: src/eom-file-chooser.c:456
 msgid "Save Image"
 msgstr "Enregistrer l'image"
 
-#: src/eom-file-chooser.c:465 src/eom-window.c:3996
+#: src/eom-file-chooser.c:464 src/eom-window.c:3996
 msgid "Open Folder"
 msgstr "Ouvrir un dossier"
 
@@ -794,28 +799,28 @@ msgstr "Transformation impossible sur une image non chargée."
 msgid "Transformation failed."
 msgstr "La transformation a échoué."
 
-#: src/eom-image.c:1047
+#: src/eom-image.c:1045
 msgid "EXIF not supported for this file format."
 msgstr "EXIF n'est pas pris en charge dans ce format de fichier."
 
-#: src/eom-image.c:1196
+#: src/eom-image.c:1194
 msgid "Image loading failed."
 msgstr "Le chargement de l'image a échoué."
 
-#: src/eom-image.c:1723 src/eom-image.c:1825
+#: src/eom-image.c:1721 src/eom-image.c:1823
 msgid "No image loaded."
 msgstr "Aucune image chargée."
 
-#: src/eom-image.c:1733 src/eom-image.c:1837
+#: src/eom-image.c:1731 src/eom-image.c:1835
 msgid "Temporary file creation failed."
 msgstr "Impossible de créer le fichier temporaire."
 
-#: src/eom-image-jpeg.c:384
+#: src/eom-image-jpeg.c:382
 #, c-format
 msgid "Couldn't create temporary file for saving: %s"
 msgstr "Impossible de créer un fichier temporaire pour l'enregistrement : %s"
 
-#: src/eom-image-jpeg.c:395
+#: src/eom-image-jpeg.c:393
 msgid "Couldn't allocate memory for loading JPEG file"
 msgstr "Impossible d'allouer de la mémoire pour le chargement du fichier JPEG"
 
@@ -881,19 +886,19 @@ msgstr "Étiquette"
 msgid "Value"
 msgstr "Valeur"
 
-#: src/eom-metadata-details.c:436
+#: src/eom-metadata-details.c:435
 msgid "North"
 msgstr "Nord"
 
-#: src/eom-metadata-details.c:439
+#: src/eom-metadata-details.c:438
 msgid "East"
 msgstr "Est"
 
-#: src/eom-metadata-details.c:442
+#: src/eom-metadata-details.c:441
 msgid "West"
 msgstr "Ouest"
 
-#: src/eom-metadata-details.c:445
+#: src/eom-metadata-details.c:444
 msgid "South"
 msgstr "Sud"
 
@@ -917,8 +922,9 @@ msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
 msgstr[0] "%i × %i pixel"
 msgstr[1] "%i × %i pixels"
+msgstr[2] "%i × %i pixels"
 
-#: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
+#: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:179
 msgid "Unknown"
 msgstr "Inconnu"
 
@@ -935,87 +941,87 @@ msgstr "%X"
 msgid "Image Settings"
 msgstr "Paramètres de l'image"
 
-#: src/eom-print-image-setup.c:841
+#: src/eom-print-image-setup.c:840
 msgid "Image"
 msgstr "Image"
 
-#: src/eom-print-image-setup.c:842
+#: src/eom-print-image-setup.c:841
 msgid "The image whose printing properties will be set up"
 msgstr "L'image dont les propriétés d'impression seront configurées"
 
-#: src/eom-print-image-setup.c:848
+#: src/eom-print-image-setup.c:847
 msgid "Page Setup"
 msgstr "Mise en page"
 
-#: src/eom-print-image-setup.c:849
+#: src/eom-print-image-setup.c:848
 msgid "The information for the page where the image will be printed"
 msgstr "Les informations de la page sur laquelle l'image sera imprimée"
 
-#: src/eom-print-image-setup.c:875
+#: src/eom-print-image-setup.c:874
 msgid "Position"
 msgstr "Position"
 
-#: src/eom-print-image-setup.c:879
+#: src/eom-print-image-setup.c:878
 msgid "_Left:"
 msgstr "_Gauche :"
 
-#: src/eom-print-image-setup.c:881
+#: src/eom-print-image-setup.c:880
 msgid "_Right:"
 msgstr "_Droite :"
 
-#: src/eom-print-image-setup.c:882
+#: src/eom-print-image-setup.c:881
 msgid "_Top:"
 msgstr "_Haut :"
 
-#: src/eom-print-image-setup.c:883
+#: src/eom-print-image-setup.c:882
 msgid "_Bottom:"
 msgstr "_Bas :"
 
-#: src/eom-print-image-setup.c:886
+#: src/eom-print-image-setup.c:885
 msgid "C_enter:"
 msgstr "C_entrer :"
 
-#: src/eom-print-image-setup.c:891
+#: src/eom-print-image-setup.c:890
 msgid "None"
 msgstr "Aucun"
 
-#: src/eom-print-image-setup.c:893
+#: src/eom-print-image-setup.c:892
 msgid "Horizontal"
 msgstr "Horizontal"
 
-#: src/eom-print-image-setup.c:895
+#: src/eom-print-image-setup.c:894
 msgid "Vertical"
 msgstr "Vertical"
 
-#: src/eom-print-image-setup.c:897
+#: src/eom-print-image-setup.c:896
 msgid "Both"
 msgstr "Les deux"
 
-#: src/eom-print-image-setup.c:917
+#: src/eom-print-image-setup.c:916
 msgid "_Width:"
 msgstr "_Largeur :"
 
-#: src/eom-print-image-setup.c:919
+#: src/eom-print-image-setup.c:918
 msgid "_Height:"
 msgstr "_Hauteur :"
 
-#: src/eom-print-image-setup.c:922
+#: src/eom-print-image-setup.c:921
 msgid "_Scaling:"
 msgstr "_Mise à l'échelle :"
 
-#: src/eom-print-image-setup.c:933
+#: src/eom-print-image-setup.c:932
 msgid "_Unit:"
 msgstr "_Unité :"
 
-#: src/eom-print-image-setup.c:938
+#: src/eom-print-image-setup.c:937
 msgid "Millimeters"
 msgstr "Millimètres"
 
-#: src/eom-print-image-setup.c:940
+#: src/eom-print-image-setup.c:939
 msgid "Inches"
 msgstr "Pouces"
 
-#: src/eom-print-image-setup.c:969
+#: src/eom-print-image-setup.c:968
 msgid "Preview"
 msgstr "Aperçu"
 
@@ -1038,11 +1044,11 @@ msgstr "inchangé"
 msgid "%d / %d"
 msgstr "%d / %d"
 
-#: src/eom-thumb-view.c:545
+#: src/eom-thumb-view.c:552
 msgid "Taken on"
 msgstr "Pris le"
 
-#: src/eom-uri-converter.c:985
+#: src/eom-uri-converter.c:974
 msgid "At least two file names are equal."
 msgstr "Au moins deux noms de fichiers sont identiques."
 
@@ -1066,17 +1072,18 @@ msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i pixel  %s    %i %%"
 msgstr[1] "%i × %i pixels  %s    %i %%"
+msgstr[2] "%i × %i pixels  %s    %i %%"
 
-#: src/eom-window.c:832
+#: src/eom-window.c:833
 msgid "_Reload"
 msgstr "_Recharger"
 
-#: src/eom-window.c:834 src/eom-window.c:2783
+#: src/eom-window.c:835 src/eom-window.c:2784
 msgctxt "MessageArea"
 msgid "Hi_de"
 msgstr "_Masquer"
 
-#: src/eom-window.c:844
+#: src/eom-window.c:845
 #, c-format
 msgid ""
 "The image \"%s\" has been modified by an external application.\n"
@@ -1085,7 +1092,7 @@ msgstr ""
 "L'image « %s » a été modifiée par une application externe.\n"
 "Souhaitez-vous la recharger ?"
 
-#: src/eom-window.c:1012
+#: src/eom-window.c:1013
 #, c-format
 msgid "Use \"%s\" to open the selected image"
 msgstr "Utiliser « %s » pour ouvrir l'image sélectionnée"
@@ -1095,25 +1102,25 @@ msgstr "Utiliser « %s » pour ouvrir l'image sélectionnée"
 #. * - the original filename
 #. * - the current image's position in the queue
 #. * - the total number of images queued for saving
-#: src/eom-window.c:1175
+#: src/eom-window.c:1176
 #, c-format
 msgid "Saving image \"%s\" (%u/%u)"
 msgstr "Enregistrement de l'image « %s » (%u/%u)"
 
-#: src/eom-window.c:1535
+#: src/eom-window.c:1536
 #, c-format
 msgid "Opening image \"%s\""
 msgstr "Ouverture de l'image « %s »"
 
-#: src/eom-window.c:1905
+#: src/eom-window.c:1906
 msgid "Leave Fullscreen"
 msgstr "Quitter le mode plein écran"
 
-#: src/eom-window.c:2045
+#: src/eom-window.c:2046
 msgid "Viewing a slideshow"
 msgstr "Regarder un diaporama"
 
-#: src/eom-window.c:2254
+#: src/eom-window.c:2255
 #, c-format
 msgid ""
 "Error printing file:\n"
@@ -1122,15 +1129,15 @@ msgstr ""
 "Erreur lors de l'impression du fichier :\n"
 "%s"
 
-#: src/eom-window.c:2516
+#: src/eom-window.c:2517
 msgid "Toolbar Editor"
 msgstr "Éditeur de la barre d'outils"
 
-#: src/eom-window.c:2519
+#: src/eom-window.c:2520
 msgid "_Reset to Default"
 msgstr "_Réinitialiser aux valeurs par défaut"
 
-#: src/eom-window.c:2583
+#: src/eom-window.c:2584
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -1142,7 +1149,7 @@ msgstr ""
 "publiée par la Free Software Foundation ; soit la version 2 de la licence, "
 "ou (à votre discrétion) toute version ultérieure.\n"
 
-#: src/eom-window.c:2587
+#: src/eom-window.c:2588
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -1154,7 +1161,7 @@ msgstr ""
 "D'ADÉQUATION A UN BESOIN PARTICULIER. Consultez la Licence Publique Générale"
 " GNU pour plus de détails.\n"
 
-#: src/eom-window.c:2591
+#: src/eom-window.c:2592
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
@@ -1164,11 +1171,11 @@ msgstr ""
 "ce programme ; si ce n'est pas le cas, écrivez à la Free Software "
 "Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA."
 
-#: src/eom-window.c:2630
+#: src/eom-window.c:2631
 msgid "About Eye of MATE"
 msgstr "À propos de Eye of MATE"
 
-#: src/eom-window.c:2632
+#: src/eom-window.c:2633
 msgid ""
 "Copyright © 2000-2010 Free Software Foundation, Inc.\n"
 "Copyright © 2011 Perberos\n"
@@ -1178,14 +1185,14 @@ msgstr ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021  Les développeurs de MATE"
 
-#: src/eom-window.c:2635
+#: src/eom-window.c:2636
 msgid ""
 "Eye of MATE is a simple graphics viewer for the MATE Desktop Environment."
 msgstr ""
 "Eye of MATE est une simple visionneuse graphique pour l'environnement de "
 "bureau MATE."
 
-#: src/eom-window.c:2638
+#: src/eom-window.c:2639
 msgid "translator-credits"
 msgstr ""
 "Contributeurs au projet MATE :\n"
@@ -1203,15 +1210,15 @@ msgstr ""
 "Claude Paroz <claude@2xlibre.net>, 2008-2010.\n"
 "Gérard Baylard <gerard dot b at bbox dot fr>, 2010"
 
-#: src/eom-window.c:2731 src/eom-window.c:2746
+#: src/eom-window.c:2732 src/eom-window.c:2747
 msgid "Error launching appearance preferences dialog: "
 msgstr "Une erreur est survenue au lancement des préférences de l'apparence:"
 
-#: src/eom-window.c:2781
+#: src/eom-window.c:2782
 msgid "_Open Background Preferences"
 msgstr "_Ouvrir les préférences d'arrière-plan"
 
-#: src/eom-window.c:2797
+#: src/eom-window.c:2798
 #, c-format
 msgid ""
 "The image \"%s\" has been set as Desktop Background.\n"
@@ -1254,6 +1261,9 @@ msgstr[0] ""
 "Voulez-vous vraiment déplacer\n"
 "les %d images sélectionnées dans la corbeille ?"
 msgstr[1] ""
+"Voulez-vous vraiment déplacer\n"
+"les %d images sélectionnées dans la corbeille ?"
+msgstr[2] ""
 "Voulez-vous vraiment déplacer\n"
 "les %d images sélectionnées dans la corbeille ?"
 
