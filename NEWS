@@ -1,3 +1,24 @@
+### eom 1.27.0
+
+  * tx: sync with transifex
+  * tx: update resource
+  * tx: migrate config file
+  * explicitly assigning value of variable of type 'int' to itself
+  * Use GLib's new g_clear_signal_handler() function to simplify code
+  * Variable 'show_image_collection' is assigned a value that is never used
+  * Variable 'screen' is assigned a value that is never used
+  * configure.ac: The macro 'AC_HELP_STRING' is obsolete
+  * eom-scroll-view.c: fix -Wbad-function-cast warning
+  * eom-close-confirmation-dialog: fix -Wbad-function-cast warning
+  * Updated url in readme to point to working link
+  * ci: drop -Wunused-parameter compiler cflag from debian build
+  * eom-window: fix warning incompatible-pointer-types
+  * Use a blank line at most
+  * Accessibility: add proper mnemonic relations and labelling
+  * Add support for libexif 0.6.14+ libexif 0.6.22+ was previously required because the macro EXIF_TAG_GAMMA was not defined reading the NEWS file.
+  * tx: update resource
+  * user-guide: fix wrong informations
+
 ### eom 1.26.0
 
   * Translations update
