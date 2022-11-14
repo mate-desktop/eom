@@ -1,6 +1,6 @@
 project('eom','c',
   version: '1.27.0',
-  meson_version: '>=0.64.0',
+  meson_version: '>=0.59.0',
   license: 'GPLv2+',
 )
 
@@ -40,7 +40,7 @@ shared_mime_info = dependency('shared-mime-info', version : '>= 0.20')
 libpeas = dependency('libpeas-1.0', version : '>= ' + libpeas_required)
 libpeas_gtk = dependency('libpeas-gtk-1.0', version : '>= ' + libpeas_required)
 xml = dependency('libxml-2.0', version: '>=2.0')
-gobject_introspection = dependency('gobject-introspection-1.0', version : '>= 0.9.3', required : false)
+gobject_introspection = dependency('gobject-introspection-1.0', version : '>= 0.9.3', required : get_option('introspection'))
 xmp = dependency('exempi-2.0', version: '>= 1.99.5', required : get_option('xmp'))
 exif = dependency('libexif', version: '>= 0.6.14', required : get_option('libexif'))
 rsvg = dependency('librsvg-2.0', version: '>= 2.36.2', required : get_option('librsvg'), not_found_message : 'LIBRSVG support disabled, svg files will not scale')
