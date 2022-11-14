@@ -7,7 +7,7 @@ resources = gnome.compile_resources(
 
 marshal = gnome.genmarshal('eom-marshal', sources: ['eom-marshal.list'], prefix: 'eom_marshal')
 
-inst_headers = [
+inst_headers = files(
   'eom-application.h',
   'eom-application-activatable.h',
   'eom-debug.h',
@@ -30,9 +30,9 @@ inst_headers = [
   'eom-job-queue.h',
   'eom-clipboard-handler.h',
   'eom-jobs.h',
-]
+)
 
-noinst_headers = [
+noinst_headers = files(
   'eom-application-internal.h',
   'eom-session.h',
   'eom-util.h',
@@ -53,11 +53,16 @@ noinst_headers = [
   'eom-plugin-engine.h',
   'eom-close-confirmation-dialog.h',
   'zoom.h',
-]
+)
 
 enum = gnome.mkenums('eom-enum-types', c_template: 'eom-enum-types.c.template', h_template: 'eom-enum-types.h.template', sources: inst_headers)
 
-c_sources = [
+enum_headers = files(
+  'eom-scroll-view.h',
+  'eom-window.h',
+)
+
+c_sources = files(
   'eom-application.c',
   'eom-application-activatable.c',
   'eom-session.c',
@@ -96,7 +101,7 @@ c_sources = [
   'eom-plugin-engine.c',
   'eom-clipboard-handler.c',
   'zoom.c',
-]
+)
 
 libeom_src = [
   c_sources,
@@ -108,17 +113,17 @@ libeom_src = [
 ]
 
 if exif.found()
-  inst_headers += ['eom-exif-util.h']
-  noinst_headers += ['eom-metadata-details.h']
-  libeom_src += [
+  inst_headers += files('eom-exif-util.h')
+  noinst_headers += files('eom-metadata-details.h')
+  libeom_src += files(
     'eom-metadata-details.c',
     'eom-exif-util.c',
-  ]
+  )
 endif
 
 if xmp.found()
-  noinst_headers += ['eom-metadata-details.h']
-  libeom_src += ['eom-metadata-details.c']
+  noinst_headers += files('eom-metadata-details.h')
+  libeom_src += files('eom-metadata-details.c')
 endif
 
 cflags = [

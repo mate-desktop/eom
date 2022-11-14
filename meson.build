@@ -131,7 +131,7 @@ endif
 
 if get_option('thumbnailer')
   if get_option('gdk-pixbuf-thumbnailer')
-    eom_thumbnailer = find_program('gdk-pixbuf-thumbnailer')
+    eom_thumbnailer = find_program('gdk-pixbuf-thumbnailer').full_path()
   else
     magick = dependency('MagickWand', version : '>= 6.2.6')
     if magick.version().version_compare('>= 7')
@@ -139,10 +139,11 @@ if get_option('thumbnailer')
     else
       conf.set('HAVE_IMAGEMAGICK6', 1)
     endif
-    #all_deps += [magick]
     eom_thumbnailer = 'eom-thumbnailer'
   endif
 endif
+
+pkg_info.set('EOM_THUMBNAILER', eom_thumbnailer)
 
 # XMP support
 if xmp.found()
@@ -203,5 +204,9 @@ subdir('man')
 subdir('help')
 subdir('data')
 subdir('doc')
+
+if get_option('thumbnailer')
+  subdir('thumbnailer')
+endif
 
 # TODO: Changelog
