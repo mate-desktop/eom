@@ -2,6 +2,7 @@ option('nls', type : 'boolean', value : true, description : 'Native language sup
 option('thumbnailer', type : 'boolean', value: true)
 option('gdk-pixbuf-thumbnailer', type : 'boolean', value: true, description: 'Use gdk-pixbuf-thumbnailer')
 
+option('introspection', type : 'feature', description : 'Enable GObject introspection')
 option('xmp', type : 'feature', description : 'Special XMP support')
 option('libexif', type : 'feature', description : 'EXIF support')
 option('cms', type : 'feature', description : 'Colour management support')
