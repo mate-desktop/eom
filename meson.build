@@ -20,6 +20,7 @@ libdir = join_paths(get_option('prefix'), get_option('libdir'))
 schemadir = datadir / 'glib-2.0' / 'schemas'
 localedir = join_paths(get_option('prefix'), get_option('localedir'))
 includedir = join_paths(get_option('prefix'), get_option('includedir'))
+pluginsdir = libdir / 'eom' / 'plugins'
 
 # Dependencies
 glib_required = '2.52.0'
@@ -200,7 +201,7 @@ endif
 subdir('cut-n-paste')
 subdir('src')
 subdir('man')
-#subdir('plugins')
+subdir('plugins')
 subdir('help')
 subdir('data')
 subdir('doc')
