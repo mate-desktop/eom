@@ -2,14 +2,14 @@ desktopfile = configure_file(input: 'reload.plugin.desktop.in.in', configuration
 if get_option('nls')
   i18n.merge_file(
     input: desktopfile,
-    output: 'reload.plugin.desktop',
+    output: 'reload.plugin',
     install: true,
     install_dir: pluginsdir,
     type: 'desktop',
     po_dir: po_dir,
   )
 else
-  install_data(desktopfile, install_dir: pluginsdir)
+  install_data(desktopfile, install_dir: pluginsdir, rename: ['reload.plugin'])
 endif
 
 shared_library(

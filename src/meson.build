@@ -1,5 +1,5 @@
 resources = gnome.compile_resources(
-  'eom',
+  'eom-resources',
   'eom.gresource.xml',
   c_name: '_eom',
   source_dir: '../data',
