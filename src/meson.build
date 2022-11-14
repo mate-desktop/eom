@@ -130,7 +130,7 @@ cflags = [
  '-DG_LOG_DOMAIN="EOM"',
  '-DEOM_DATA_DIR="' + pkgdatadir + '"',
  '-DEOM_LOCALE_DIR="' + localedir + '"',
- '-DEOM_PLUGIN_DIR="' + (libdir / 'eom' / 'plugins') + '"',
+ '-DEOM_PLUGIN_DIR="' + pluginsdir + '"',
  '-DLIBDIR="' + libdir + '"',
 ]
 
