@@ -2,14 +2,14 @@ desktopfile = configure_file(input: 'statusbar-date.plugin.desktop.in.in', confi
 if get_option('nls')
   i18n.merge_file(
     input: desktopfile,
-    output: 'statusbar-date.plugin.desktop',
+    output: 'statusbar-date.plugin',
     install: true,
     install_dir: pluginsdir,
     type: 'desktop',
     po_dir: po_dir,
   )
 else
-  install_data(desktopfile, install_dir: pluginsdir)
+  install_data(desktopfile, install_dir: pluginsdir, rename: ['statusbar-date.plugin'])
 endif
 
 shared_library(

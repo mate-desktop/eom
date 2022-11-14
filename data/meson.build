@@ -13,7 +13,7 @@ if get_option('nls')
     po_dir: po_dir,
   )
 else
-  install_data(desktopfile, install_dir: desktopdir)
+  install_data(desktopfile, install_dir: desktopdir, rename: ['eom.desktop'])
 endif
 gnome.post_install(update_desktop_database: true)
 
@@ -30,7 +30,7 @@ if get_option('nls')
     po_dir: po_dir,
   )
 else
-  install_data(appdatafile, install_dir: appdatadir)
+  install_data(appdatafile, install_dir: appdatadir, rename: ['eom.appdata.xml'])
 endif
 
 gsettings_schema = configure_file(input: 'org.mate.eom.gschema.xml.in', configuration: pkg_info, output: 'org.mate.eom.gschema.xml')

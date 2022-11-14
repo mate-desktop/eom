@@ -2,14 +2,14 @@ desktopfile = configure_file(input: 'fullscreen.plugin.desktop.in.in', configura
 if get_option('nls')
   i18n.merge_file(
     input: desktopfile,
-    output: 'fullscreen.plugin.desktop',
+    output: 'fullscreen.plugin',
     install: true,
     install_dir: pluginsdir,
     type: 'desktop',
     po_dir: po_dir,
   )
 else
-  install_data(desktopfile, install_dir: pluginsdir)
+  install_data(desktopfile, install_dir: pluginsdir, rename: ['fullscreen.plugin'])
 endif
 
 shared_library(

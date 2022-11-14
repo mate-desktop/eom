@@ -16,6 +16,7 @@ endif
 sgml = configure_file(input: 'eom-docs.sgml.in', configuration: pkg_info, output: 'eom-docs.sgml')
 versionsxml = configure_file(input: 'version.xml.in', configuration: pkg_info, output: 'version.xml')
 
+if false
 gnome.gtkdoc(
   'eom',
   src_dir: src_inc,
@@ -28,3 +29,4 @@ gnome.gtkdoc(
   dependencies: [all_deps, libeom],
   install: true,
 )
+endif
