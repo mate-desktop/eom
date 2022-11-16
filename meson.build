@@ -210,4 +210,4 @@ if get_option('thumbnailer')
   subdir('thumbnailer')
 endif
 
-# TODO: Changelog
+meson.add_dist_script('update-changelog.sh')
