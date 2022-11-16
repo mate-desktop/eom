@@ -16,17 +16,18 @@ endif
 sgml = configure_file(input: 'eom-docs.sgml.in', configuration: pkg_info, output: 'eom-docs.sgml')
 versionsxml = configure_file(input: 'version.xml.in', configuration: pkg_info, output: 'version.xml')
 
-if false
-gnome.gtkdoc(
-  'eom',
-  src_dir: src_inc,
-  include_directories: include_dirs,
-  main_sgml: 'eom-docs.sgml.in',
-  scan_args: ['--rebuild-types'],
-  mkdb_args: ['--sgml-mode', '--output-format=xml'],
-  ignore_headers: ignore_headers,
-  content_files: [versionsxml],
-  dependencies: [all_deps, libeom],
-  install: true,
-)
+
+if false # Doesn't work, see below
+  gnome.gtkdoc(
+    'eom',
+    src_dir: src_inc,
+    main_sgml: 'eom-docs.sgml.in',
+    scan_args: ['--rebuild-types'],
+    mkdb_args: ['--sgml-mode', '--output-format=xml'],
+    ignore_headers: ignore_headers,
+    content_files: [versionsxml],
+    # Meson doesn't link built object file to the scan
+    dependencies: [all_deps, libeom],
+    install: true,
+  )
 endif
