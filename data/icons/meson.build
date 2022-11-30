@@ -30,4 +30,4 @@ endforeach
 
 install_data(['scalable/apps/eom.svg'], install_dir: appiconsdir / 'scalable' / 'apps')
 
-meson.add_install_script(find_program('gtk-update-icon-cache'), '-f', '-t', appiconsdir, skip_if_destdir: true)
+gnome.post_install(gtk_update_icon_cache: true)
