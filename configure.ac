@@ -318,16 +318,16 @@ if test "x$enable_thumbnailer" != "xno"; then
 
 		CPPFLAGS_save="$CPPFLAGS"
 		CPPFLAGS="$CPPFLAGS $MAGICK_CFLAGS"
-		AC_CHECK_HEADER([wand/MagickWand.h],
-			[have_im6="yes"],
-			[AC_CHECK_HEADER([MagickWand/MagickWand.h], [have_im7="yes"])])
+		AC_CHECK_HEADER([MagickWand/MagickWand.h],
+			[have_im7="yes"],
+			[AC_CHECK_HEADER([wand/MagickWand.h], [have_im6="yes"])])
 		CPPFLAGS="$CPPFLAGS_save"
 
-		if test "x$have_im6" = "xyes"; then
-			 AC_DEFINE(HAVE_IMAGEMAGICK6,1, [Have ImageMagick 6])
-		fi
 		if test "x$have_im7" = "xyes"; then
 			AC_DEFINE(HAVE_IMAGEMAGICK7,1, [Have ImageMagick 7])
+		fi
+		if test "x$have_im6" = "xyes"; then
+			AC_DEFINE(HAVE_IMAGEMAGICK6,1, [Have ImageMagick 6])
 		fi
 
 		THUMBNAILER_CFLAGS="$CFLAGS $GLIB_CFLAGS $GIO_CFLAGS $MAGICK_CFLAGS"
