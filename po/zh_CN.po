@@ -4,15 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Christopher M <i@cicku.me>, 2018
-# e0c668032ced196bd60f2b6a070d982d_8f72ae0, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# zhangxianwei8 <zhang.xianwei8@zte.com.cn>, 2018
-# Mingcong Bai <jeffbai@aosc.xyz>, 2019
-# 玉堂白鹤 <yjwork@qq.com>, 2020
-# liulitchi <xingzuo88@qq.com>, 2020
-# clefebvre <clement.lefebvre@linuxmint.com>, 2021
+# ᴄʜʀɪsᴛᴏᴘʜᴇʀ ᴍᴇɴɢ, 2021
+# liu lizhi <xingzuo88@qq.com>, 2021
+# zhangxianwei8 <zhang.xianwei8@zte.com.cn>, 2021
+# e0c668032ced196bd60f2b6a070d982d_8f72ae0, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# 玉堂白鹤 <yjwork@qq.com>, 2021
+# Mingcong Bai <jeffbai@aosc.xyz>, 2021
 # shuyu liu <liushuyu011@gmail.com>, 2021
+# Skylee Ming-Tian Yang <i@skylee.xyz>, 2021
+# a73a47e368cc011d8f94528bd9d5d3f1_91fccdf <1b07f49e2a323989c85dd26d526f7bb9_871526>, 2021
+# OkayPJ <1535253694@qq.com>, 2021
 # Wenbin Lv <wenbin816@gmail.com>, 2021
 # 
 msgid ""
@@ -20,9 +22,9 @@ msgstr ""
 "Project-Id-Version: eom 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/eom/issues\n"
 "POT-Creation-Date: 2021-06-05 12:10+0200\n"
-"PO-Revision-Date: 2018-03-11 15:18+0000\n"
+"PO-Revision-Date: 2021-09-18 19:22+0000\n"
 "Last-Translator: Wenbin Lv <wenbin816@gmail.com>, 2021\n"
-"Language-Team: Chinese (China) (https://www.transifex.com/mate/teams/13566/zh_CN/)\n"
+"Language-Team: Chinese (China) (https://app.transifex.com/mate/teams/13566/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -260,7 +262,7 @@ msgstr "MATE 之眼首选项"
 
 #: data/eom-preferences-dialog.ui:39 src/eom-window.c:3764
 msgid "_Help"
-msgstr "帮助（_H）"
+msgstr "帮助(_H)"
 
 #: data/eom-preferences-dialog.ui:100
 msgid "Image Enhancements"
@@ -659,7 +661,7 @@ msgstr "在关闭之前保存更改到图像“%s”？"
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
-msgstr[0] "还有 %d 幅图像有没有保存的更改。在关闭之前保存更改？"
+msgstr[0] "%d 个图像包含未保存的更改。您要在关闭程序前保存这些更改吗？"
 
 #: src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
@@ -979,7 +981,7 @@ msgstr "无法显示 MATE 之眼的帮助"
 
 #: src/eom-util.c:113
 msgid " (invalid Unicode)"
-msgstr " (无效的 Unicode)"
+msgstr " （无效的 Unicode）"
 
 #. Translators: This is the string displayed in the statusbar
 #. * The tokens are from left to right:
@@ -1107,16 +1109,18 @@ msgstr "“MATE之眼”为 MATE 桌面的图片浏览器。"
 #: src/eom-window.c:2638
 msgid "translator-credits"
 msgstr ""
-"Christopher Meng <i@cicku.me>, 2012-2013\n"
-"ravix <dr.neemous@gmail.com>, 2013\n"
+"Christopher Meng , 2012-2013\n"
+"ravix , 2013\n"
 "Dianjin Wang <1132321739qq@gmail.com>, 2012\n"
-"Cravix <dr.neemous@gmail.com>, 2013\n"
-"nyanyh <rebuilty@gmail.com>, 2013\n"
-"liulitchi <xingzuo88@qq.com>, 2013\n"
-"玉堂白鹤 <yjwork@qq.com>, 2015\n"
-"Mingye Wang <arthur200126@gmail.com>, 2015-2016\n"
-"白铭骢 <jeffbai@aosc.xyz>, 2015-2016\n"
-"刘子兴 <liushuyu@aosc.xyz>, 2015-2016"
+"Cravix , 2013\n"
+"nyanyh , 2013\n"
+"liulitchi , 2013\n"
+"玉堂白鹤 , 2015\n"
+"Mingye Wang , 2015-2016\n"
+"白铭骢 , 2015-2016\n"
+"刘子兴 , 2015-2016\n"
+"比丘 , 2018-2019\n"
+"OkayPJ , 2020"
 
 #: src/eom-window.c:2731 src/eom-window.c:2746
 msgid "Error launching appearance preferences dialog: "
@@ -1200,11 +1204,11 @@ msgstr "图像(_I)"
 
 #: src/eom-window.c:3760
 msgid "_Edit"
-msgstr "编辑（_E）"
+msgstr "编辑(_E)"
 
 #: src/eom-window.c:3761
 msgid "_View"
-msgstr "视图（_V）"
+msgstr "视图(_V)"
 
 #: src/eom-window.c:3762
 msgid "_Go"
@@ -1317,7 +1321,7 @@ msgstr "以一个不同的名字保存选中图片"
 
 #: src/eom-window.c:3811
 msgid "Open Containing _Folder"
-msgstr "打开包含的文件夹（_F）"
+msgstr "打开包含的文件夹(_F)"
 
 #: src/eom-window.c:3812
 msgid "Show the folder which contains this file in the file manager"

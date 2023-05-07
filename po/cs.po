@@ -4,25 +4,26 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Ondřej Kolín <ondrej.kolin@gmail.com>, 2018
-# Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2018
-# Michal <sinope@seznam.cz>, 2018
-# 1e6459e9b1241af8afa03d508d281c17_dbe0d8b, 2018
-# 6e833d5535e2fe0dd9dfa7fe5bf473f2_d78f422 <64c38a0ff10419c64e8e03d54c72b3bd_352524>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Lukáš Lommer <drom@kdyne.net>, 2020
+# Ondřej Kolín <ondrej.kolin@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Lukáš Kvídera <lukas.kvidera@seznam.cz>, 2021
 # ToMáš Marný, 2021
-# LiberteCzech <liberte.czech@gmail.com>, 2021
+# Michal <sinope@seznam.cz>, 2021
+# clefebvre <clement.lefebvre@linuxmint.com>, 2021
+# 1e6459e9b1241af8afa03d508d281c17_dbe0d8b, 2021
+# LiberteCzech <martin.kriz.czech@gmail.com>, 2021
+# 6e833d5535e2fe0dd9dfa7fe5bf473f2_d78f422 <64c38a0ff10419c64e8e03d54c72b3bd_352524>, 2021
 # Roman Horník <roman.hornik@debian-linux.cz>, 2021
+# Lukáš Lommer <drom@kdyne.net>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: eom 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/eom/issues\n"
 "POT-Creation-Date: 2021-06-05 12:10+0200\n"
-"PO-Revision-Date: 2018-03-11 15:18+0000\n"
-"Last-Translator: Roman Horník <roman.hornik@debian-linux.cz>, 2021\n"
-"Language-Team: Czech (https://www.transifex.com/mate/teams/13566/cs/)\n"
+"PO-Revision-Date: 2021-09-18 19:22+0000\n"
+"Last-Translator: Lukáš Lommer <drom@kdyne.net>, 2021\n"
+"Language-Team: Czech (https://app.transifex.com/mate/teams/13566/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -139,7 +140,7 @@ msgstr "Umístění:"
 
 #: data/eom-image-properties-dialog.ui:371
 msgid "General"
-msgstr "Obecné"
+msgstr "Všeobecné"
 
 #: data/eom-image-properties-dialog.ui:404
 msgid "Aperture Value:"
@@ -252,7 +253,7 @@ msgstr "Přejmenovat z:"
 
 #: data/eom-multiple-save-as-dialog.ui:395
 msgid "To:"
-msgstr "Na:"
+msgstr "Do:"
 
 #: data/eom-multiple-save-as-dialog.ui:425
 msgid "File Name Preview"
@@ -336,7 +337,7 @@ msgstr "_Přepnout obrázek po:"
 
 #: data/eom-preferences-dialog.ui:623
 msgid "seconds"
-msgstr "sekundách"
+msgstr "sekund"
 
 #: data/eom-preferences-dialog.ui:640
 msgid "_Random sequence"
@@ -699,10 +700,14 @@ msgstr "Uložit změny v obrázku „%s“ před zavřením?"
 msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
-msgstr[0] "%d obrázek obsahuje neuložené změny. Uložit změny před uzavřením?"
-msgstr[1] "%d obrázky obsahují neuložené změny. Uložit změny před uzavřením?"
-msgstr[2] "%d obrázků obsahuje neuložené změny. Uložit změny před uzavřením?"
-msgstr[3] "%d obrázků obsahuje neuložené změny. Uložit změny před uzavřením?"
+msgstr[0] ""
+"Existuje %d obrázek s neuloženými změnami. Uložit změny před ukončením?"
+msgstr[1] ""
+"Existují %d obrázky s neuloženými změnami. Uložit změny před ukončením?"
+msgstr[2] ""
+"Existuje %d obrázků s neuloženými změnami. Uložit změny před ukončením?"
+msgstr[3] ""
+"Existuje %d obrázků s neuloženými změnami. Uložit změny před ukončením?"
 
 #: src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
@@ -745,10 +750,10 @@ msgstr "%s (*.%s)"
 #: src/eom-properties-dialog.c:165 src/eom-thumb-view.c:517
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] "bod"
-msgstr[1] "body"
-msgstr[2] "bodů"
-msgstr[3] "bodů"
+msgstr[0] "pixel"
+msgstr[1] "pixely"
+msgstr[2] "pixelů"
+msgstr[3] "pixelů"
 
 #: src/eom-file-chooser.c:449
 msgid "Open Image"
@@ -891,14 +896,14 @@ msgstr "%.1f (35mm film)"
 #, c-format
 msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
-msgstr[0] "%i × %i bod"
-msgstr[1] "%i × %i body"
-msgstr[2] "%i × %i bodů"
-msgstr[3] "%i × %i bodů"
+msgstr[0] "%i × %i pixel"
+msgstr[1] "%i × %i pixely"
+msgstr[2] "%i × %i pixelů"
+msgstr[3] "%i × %i pixelů"
 
 #: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
 msgid "Unknown"
-msgstr "Neznámo"
+msgstr "Neznámé"
 
 #: src/eom-metadata-sidebar.c:229
 msgid "%a, %d %B %Y"
@@ -955,7 +960,7 @@ msgstr "Uprostř_ed:"
 
 #: src/eom-print-image-setup.c:891
 msgid "None"
-msgstr "Nic"
+msgstr "Žádný"
 
 #: src/eom-print-image-setup.c:893
 msgid "Horizontal"
@@ -1042,10 +1047,10 @@ msgstr " (neplatný Unicode)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] "%i × %i bod  %s    %i%%"
-msgstr[1] "%i × %i body  %s    %i%%"
-msgstr[2] "%i × %i bodů  %s    %i%%"
-msgstr[3] "%i × %i bodů  %s    %i%%"
+msgstr[0] "%i × %i pixel  %s    %i%%"
+msgstr[1] "%i × %i pixely  %s    %i%%"
+msgstr[2] "%i × %i pixelů  %s    %i%%"
+msgstr[3] "%i × %i pixelů  %s    %i%%"
 
 #: src/eom-window.c:832
 msgid "_Reload"
@@ -1170,12 +1175,7 @@ msgstr ""
 "Miloslav Trmač <mitr@volny.cz>\n"
 "Petr Tomeš <ptomes@gmail.com>\n"
 "Jakub Friedl <jfriedl@suse.cz>\n"
-"Petr Tomeš <ptomes@gmail.com>\n"
-"Lukáš Novotný <lukasnov@cvs.gnome.org>\n"
-"Kamil Páral <ripper42@gmail.com>\n"
-"Petr Kovář <pknbe@volny.cz>\n"
 "Lucas Lommer <drom@kdyne.net>\n"
-"Tomas Bzatek <tbzatek@redhat.com>\n"
 "Petr Kovář <pknbe@volny.cz>\n"
 "Roman Horník <roman.hornik@debian-linux.cz>"
 
@@ -1226,16 +1226,16 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
-"Opravdu chcete přesunout\n"
+"Jste si jisti, že chcete přesunout\n"
 "%d vybraný obrázek do koše?"
 msgstr[1] ""
-"Opravdu chcete přesunout\n"
+"Jste si jisti, že chcete přesunout\n"
 "%d vybrané obrázky do koše?"
 msgstr[2] ""
-"Opravdu chcete přesunout\n"
+"Jste si jisti, že chcete přesunout\n"
 "%d vybraných obrázků do koše?"
 msgstr[3] ""
-"Opravdu chcete přesunout\n"
+"Jste si jisti, že chcete přesunout\n"
 "%d vybraných obrázků do koše?"
 
 #: src/eom-window.c:3326
@@ -1390,7 +1390,7 @@ msgstr "Uložit vybrané obrázky pod odlišným názvem"
 
 #: src/eom-window.c:3811
 msgid "Open Containing _Folder"
-msgstr "Otevřít Containing _složku"
+msgstr "Otevřít mateřskou _složku"
 
 #: src/eom-window.c:3812
 msgid "Show the folder which contains this file in the file manager"
@@ -1482,7 +1482,7 @@ msgstr "Zvětšit obrázek"
 
 #: src/eom-window.c:3847 src/eom-window.c:3862
 msgid "Zoom _Out"
-msgstr "_Oddálit"
+msgstr "Z_menšit"
 
 #: src/eom-window.c:3848 src/eom-window.c:3860 src/eom-window.c:3863
 msgid "Shrink the image"
@@ -1570,11 +1570,11 @@ msgstr "Spustit promítání snímků"
 
 #: src/eom-window.c:3990
 msgid "Right"
-msgstr "Doprava"
+msgstr "Vpravo"
 
 #: src/eom-window.c:3993
 msgid "Left"
-msgstr "Doleva"
+msgstr "Vlevo"
 
 #: src/eom-window.c:3999
 msgid "In"

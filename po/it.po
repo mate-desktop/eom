@@ -4,10 +4,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Dario Di Nucci <linkin88mail@gmail.com>, 2018
-# l3nn4rt, 2018
-# Guybrush88 <erpizzo@alice.it>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# l3nn4rt, 2021
+# 6d1bb5d393520b00f70a137a58397ea1_b5ba1e2 <22cc5e560e0d5b6554809bfb51b90403_882095>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Dario Di Nucci <linkin88mail@gmail.com>, 2021
 # Giuseppe Pignataro <rogepix@gmail.com>, 2021
 # Enrico B. <enricobe@hotmail.com>, 2021
 # Alessandro Volturno <alelvb@inwind.it>, 2021
@@ -17,14 +17,14 @@ msgstr ""
 "Project-Id-Version: eom 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/eom/issues\n"
 "POT-Creation-Date: 2021-06-05 12:10+0200\n"
-"PO-Revision-Date: 2018-03-11 15:18+0000\n"
+"PO-Revision-Date: 2021-09-18 19:22+0000\n"
 "Last-Translator: Alessandro Volturno <alelvb@inwind.it>, 2021\n"
-"Language-Team: Italian (https://www.transifex.com/mate/teams/13566/it/)\n"
+"Language-Team: Italian (https://app.transifex.com/mate/teams/13566/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:944
 #, c-format
@@ -133,7 +133,7 @@ msgstr "Byte:"
 #: data/eom-image-properties-dialog.ui:238
 #: data/eom-image-properties-dialog.ui:563
 msgid "Location:"
-msgstr "Posizione:"
+msgstr "Percorso:"
 
 #: data/eom-image-properties-dialog.ui:371
 msgid "General"
@@ -202,7 +202,7 @@ msgstr "Salva come"
 
 #: data/eom-multiple-save-as-dialog.ui:42
 msgid "_Cancel"
-msgstr "A_nnulla"
+msgstr "Annulla"
 
 #: data/eom-multiple-save-as-dialog.ui:57
 msgid "Save _As"
@@ -262,7 +262,7 @@ msgstr "Preferenze di Eye of MATE"
 
 #: data/eom-preferences-dialog.ui:39 src/eom-window.c:3764
 msgid "_Help"
-msgstr "_Aiuto"
+msgstr "Aiuto"
 
 #: data/eom-preferences-dialog.ui:100
 msgid "Image Enhancements"
@@ -314,7 +314,7 @@ msgstr "Come s_fondo"
 
 #: data/eom-preferences-dialog.ui:449
 msgid "Image View"
-msgstr "Vista immagine"
+msgstr "Immagine"
 
 #: data/eom-preferences-dialog.ui:473
 msgid "Image Zoom"
@@ -394,7 +394,7 @@ msgstr "Data"
 
 #: data/metadata-sidebar.ui:204
 msgid "Time"
-msgstr "Ora"
+msgstr "Tempo"
 
 #: data/metadata-sidebar.ui:380
 msgid "Focal Length"
@@ -720,6 +720,9 @@ msgstr[0] ""
 msgstr[1] ""
 "Ci sono %d immagini con modifiche non salvate. Salvare le modifiche prima di"
 " chiudere?"
+msgstr[2] ""
+"Ci sono %d immagini con modifiche non salvate. Salvare le modifiche prima di"
+" chiudere?"
 
 #: src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
@@ -764,6 +767,7 @@ msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "pixel"
 msgstr[1] "pixel"
+msgstr[2] "pixel"
 
 #: src/eom-file-chooser.c:449
 msgid "Open Image"
@@ -812,7 +816,7 @@ msgstr "Impossibile allocare memoria per caricare il file JPEG"
 
 #: src/eom-error-message-area.c:108
 msgid "_Retry"
-msgstr "_Riprova"
+msgstr "_Ritenta"
 
 #: src/eom-error-message-area.c:151
 #, c-format
@@ -908,6 +912,7 @@ msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
 msgstr[0] "%i × %i pixel"
 msgstr[1] "%i × %i pixel"
+msgstr[2] "%i × %i pixel"
 
 #: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
 msgid "Unknown"
@@ -968,7 +973,7 @@ msgstr "C_entrata:"
 
 #: src/eom-print-image-setup.c:891
 msgid "None"
-msgstr "Nessuna"
+msgstr "Nessuno"
 
 #: src/eom-print-image-setup.c:893
 msgid "Horizontal"
@@ -1057,6 +1062,7 @@ msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i pixel  %s    %i%%"
 msgstr[1] "%i × %i pixel  %s    %i%%"
+msgstr[2] "%i × %i pixel  %s    %i%%"
 
 #: src/eom-window.c:832
 msgid "_Reload"
@@ -1115,7 +1121,7 @@ msgstr ""
 
 #: src/eom-window.c:2516
 msgid "Toolbar Editor"
-msgstr "Modifica barra strumenti"
+msgstr "Personalizzatore della barra degli strumenti"
 
 #: src/eom-window.c:2519
 msgid "_Reset to Default"
@@ -1151,10 +1157,9 @@ msgid ""
 " this program; if not, write to the Free Software Foundation, Inc., 51 "
 "Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 msgstr ""
-"Si dovrebbe aver ricevuto una copia della GNU General Public License insieme all'applicazione; in caso contrario, scrivere alla\n"
-"Free Software Foundation, Inc., \n"
-"51 Franklin St, Fifth Floor, \n"
-"Boston, MA 02110-1301, USA."
+"Si dovrebbe aver ricevuto una copia della GNU General Public License insieme"
+" all'applicazione; in caso contrario, scrivere alla Free Software "
+"Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA."
 
 #: src/eom-window.c:2630
 msgid "About Eye of MATE"
@@ -1179,7 +1184,7 @@ msgstr ""
 
 #: src/eom-window.c:2638
 msgid "translator-credits"
-msgstr "Enrico Bella, 2020 "
+msgstr "Alessandro Volturno, 2021"
 
 #: src/eom-window.c:2731 src/eom-window.c:2746
 msgid "Error launching appearance preferences dialog: "
@@ -1228,11 +1233,14 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
-"Sei sicuro di voler spostare\n"
-"%d immagine selezionata nel cestino?"
+"Siete sicuri di voler spostare\n"
+"l'immagine selezionata nel cestino?"
 msgstr[1] ""
-"Sei sicuro di voler spostare\n"
-"le %d immagini selezionate nel cestino?"
+"Siete veramente sicuri di voler spostare\n"
+"le %dimmagini selezionate nel cestino?"
+msgstr[2] ""
+"Siete veramente sicuri di voler spostare\n"
+"le %dimmagini selezionate nel cestino?"
 
 #: src/eom-window.c:3326
 msgid ""
@@ -1269,7 +1277,7 @@ msgstr "Imma_gine"
 
 #: src/eom-window.c:3760
 msgid "_Edit"
-msgstr "_Modifica"
+msgstr "Modifica"
 
 #: src/eom-window.c:3761
 msgid "_View"
@@ -1281,7 +1289,7 @@ msgstr "V_ai"
 
 #: src/eom-window.c:3763
 msgid "_Tools"
-msgstr "S_trumenti"
+msgstr "Strumenti"
 
 #: src/eom-window.c:3766
 msgid "_Open…"
@@ -1321,7 +1329,7 @@ msgstr "Aiuto su questa applicazione"
 
 #: src/eom-window.c:3781
 msgid "_About"
-msgstr "_Informazioni"
+msgstr "Informazioni"
 
 #: src/eom-window.c:3782
 msgid "About this application"
@@ -1357,7 +1365,7 @@ msgstr ""
 
 #: src/eom-window.c:3796
 msgid "Side _Pane"
-msgstr "Riquadro _laterale"
+msgstr "Pannello _laterale"
 
 #: src/eom-window.c:3797
 msgid "Changes the visibility of the side pane in the current window"
@@ -1389,7 +1397,7 @@ msgstr "Salva le immagini selezionate con un nome diverso"
 
 #: src/eom-window.c:3811
 msgid "Open Containing _Folder"
-msgstr "Apri la _cartella selezionata"
+msgstr "Apri la _cartella contenitore"
 
 #: src/eom-window.c:3812
 msgid "Show the folder which contains this file in the file manager"
@@ -1481,7 +1489,7 @@ msgstr "Allarga l'immagine"
 
 #: src/eom-window.c:3847 src/eom-window.c:3862
 msgid "Zoom _Out"
-msgstr "Rid_uci ingrandimento"
+msgstr "Riduci ingrandiment_o"
 
 #: src/eom-window.c:3848 src/eom-window.c:3860 src/eom-window.c:3863
 msgid "Shrink the image"

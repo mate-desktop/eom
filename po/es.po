@@ -4,12 +4,12 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Arcenio Cid <gusty.miliki@gmail.com>, 2018
-# Adolfo Jayme Barrientos, 2018
-# Lluís Tusquellas <lutusq@gmail.com>, 2018
-# Emiliano Fascetti, 2018
-# seacat <seacat.linux@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
+# seacat <seacat.linux@gmail.com>, 2021
+# Lluís Tusquellas <lutusq@gmail.com>, 2021
+# clefebvre <clement.lefebvre@linuxmint.com>, 2021
+# Adolfo Jayme-Barrientos, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Emiliano Fascetti, 2021
 # Joel Barrios <darkshram@gmail.com>, 2021
 # Toni Estévez <toni.estevez@gmail.com>, 2021
 # 
@@ -18,14 +18,14 @@ msgstr ""
 "Project-Id-Version: eom 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/eom/issues\n"
 "POT-Creation-Date: 2021-06-05 12:10+0200\n"
-"PO-Revision-Date: 2018-03-11 15:18+0000\n"
+"PO-Revision-Date: 2021-09-18 19:22+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2021\n"
-"Language-Team: Spanish (https://www.transifex.com/mate/teams/13566/es/)\n"
+"Language-Team: Spanish (https://app.transifex.com/mate/teams/13566/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:944
 #, c-format
@@ -704,9 +704,14 @@ msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] ""
-"Hay %d imagen con cambios sin guardar. ¿Guardar cambios antes de cerrar?"
+"Hay %d imagen con cambios sin guardar. ¿Quiere guardar los cambios antes de "
+"cerrar?"
 msgstr[1] ""
-"Hay %dimágenes con cambios sin guardar. ¿Guardar cambios antes de cerrar?"
+"Hay %d imágenes con cambios sin guardar. ¿Quiere guardar los cambios antes "
+"de cerrar?"
+msgstr[2] ""
+"Hay %d imágenes con cambios sin guardar. ¿Quiere guardar los cambios antes "
+"de cerrar?"
 
 #: src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
@@ -751,6 +756,7 @@ msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "píxel"
 msgstr[1] "píxeles"
+msgstr[2] "píxeles"
 
 #: src/eom-file-chooser.c:449
 msgid "Open Image"
@@ -762,7 +768,7 @@ msgstr "Guardar imagen"
 
 #: src/eom-file-chooser.c:465 src/eom-window.c:3996
 msgid "Open Folder"
-msgstr "Abrir carpeta"
+msgstr "Abrir la carpeta"
 
 #: src/eom-image.c:546
 msgid "Transformation on unloaded image."
@@ -893,12 +899,13 @@ msgstr "%.1f (película de 35mm)"
 #, c-format
 msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
-msgstr[0] "%i × %i pixel"
-msgstr[1] "%i × %i pixeles"
+msgstr[0] "%i × %i píxel"
+msgstr[1] "%i × %i píxeles"
+msgstr[2] "%i × %i píxeles"
 
 #: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
 msgid "Unknown"
-msgstr "Desconocido"
+msgstr "Se desconoce"
 
 #: src/eom-metadata-sidebar.c:229
 msgid "%a, %d %B %Y"
@@ -995,7 +1002,7 @@ msgstr "Pulgadas"
 
 #: src/eom-print-image-setup.c:969
 msgid "Preview"
-msgstr "Vista previa"
+msgstr "Vista preliminar"
 
 #: src/eom-save-as-dialog-helper.c:161
 msgid "as is"
@@ -1044,6 +1051,7 @@ msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
 msgstr[0] "%i × %i píxel  %s    %i%%"
 msgstr[1] "%i × %i píxeles  %s    %i%%"
+msgstr[2] "%i × %i píxeles  %s    %i%%"
 
 #: src/eom-window.c:832
 msgid "_Reload"
@@ -1165,7 +1173,8 @@ msgstr ""
 #: src/eom-window.c:2638
 msgid "translator-credits"
 msgstr ""
-"Toni Estevez <toni.estevez@gmail.com>, 2019\n"
+"Toni Estevez <toni.estevez@gmail.com>, 2020-2021\n"
+"Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2018\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2010\n"
 "Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2003-2006\n"
 "Pablo Gonzalo del Campo <pablodc@bigfoot.com>, 2002-2003"
@@ -1220,11 +1229,14 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
-"¿Seguro que quiere mover\n"
-"%d imagen seleccionada a la papelera?"
+"¿Seguro que quiere mover a la papelera\n"
+"%d imagen seleccionada?"
 msgstr[1] ""
-"¿Seguro que quiere mover \n"
-"las %d imágenes seleccionadas a la papelera? "
+"¿Seguro que quiere mover a la papelera\n"
+"las %d imágenes seleccionadas?"
+msgstr[2] ""
+"¿Seguro que quiere mover a la papelera\n"
+"las %d imágenes seleccionadas?"
 
 #: src/eom-window.c:3326
 msgid ""

@@ -1,23 +1,26 @@
 # 
 # Translators:
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# AlexL <loginov.alex.valer@gmail.com>, 2018
-# Михаил Ильинский <mail@milinsky.com>, 2018
-# Alex Putz, 2018
-# Olesya Gerasimenko <gammaray@basealt.ru>, 2019
-# Aleksey Kabanov <ak099@mail.ru>, 2019
-# Wolfgang Ulbrich <mate@raveit.de>, 2019
-# Konstantin <kilolife@gmail.com>, 2019
-# Александр Кураченко <alexander@basealt.ru>, 2019
-# monsta <monsta@inbox.ru>, 2019
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Aleksey Kabanov <ak099@mail.ru>, 2021
+# AlexL <loginov.alex.valer@gmail.com>, 2021
+# Wolfgang Ulbrich <mate@raveit.de>, 2021
+# Konstantin <kilolife@gmail.com>, 2021
+# monsta <monsta@inbox.ru>, 2021
+# Михаил Ильинский <mail@milinsky.com>, 2021
+# Alex Puts, 2021
+# Olesya Gerasimenko <gammaray@basealt.ru>, 2021
+# Alexey Rodionov <melenki@yandex.ru>, 2021
+# Александр Кураченко <alexander@basealt.ru>, 2021
+# Sergej A. <Ser82-png@yandex.ru>, 2022
+# Andrei Stepanov, 2023
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-01-16 10:43+0100\n"
-"PO-Revision-Date: 2018-09-26 16:36+0000\n"
-"Last-Translator: monsta <monsta@inbox.ru>, 2019\n"
-"Language-Team: Russian (https://www.transifex.com/mate/teams/13566/ru/)\n"
+"POT-Creation-Date: 2021-09-18 17:35+0200\n"
+"PO-Revision-Date: 2021-09-18 19:23+0000\n"
+"Last-Translator: Andrei Stepanov, 2023\n"
+"Language-Team: Russian (https://app.transifex.com/mate/teams/13566/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,11 +31,11 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Александр Кураченко <alexander@basealt.ru>\n"
 "Александр Сапрыкин <xelfium@gmail.com>\n"
 "Александр Сигачёв <ajvol2@gmail.com>\n"
 "Александр Соколов\n"
 "Александр Хромин\n"
+"Алексей Родионов <alexey.rodionov@red-soft.ru>\n"
 "Алексей Рочев <equeim@gmail.com>\n"
 "Алексей Сорокин <sor.alexei@meowr.ru>\n"
 "Андрей Иванков\n"
@@ -220,8 +223,8 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:243
 msgid ""
-"Run <command>eom</command> at the prompt in a terminal such as <application"
-">mate-terminal</application>, or from the <application>Run "
+"Run <command>eom</command> at the prompt in a terminal such as "
+"<application>mate-terminal</application>, or from the <application>Run "
 "Application</application> dialog."
 msgstr ""
 "Выполнить команду <command>eom</command> в командной строке терминала "
@@ -519,11 +522,17 @@ msgid ""
 "Collection</guimenuitem></menuchoice> or press "
 "<keycombo><keycap>Ctrl</keycap><keycap>F9</keycap></keycombo>."
 msgstr ""
+"Коллекция изображений содержит все поддерживаемые изображения в текущем "
+"рабочем каталоге. Коллекция появляется на экране после загрузки изображения."
+" Чтобы показать или скрыть её, выберите "
+"<menuchoice><guimenu>Вид</guimenu><guimenuitem>Коллекция "
+"изображений</guimenuitem></menuchoice> или нажмите "
+"<keycombo><keycap>Ctrl</keycap><keycap>F9</keycap></keycombo>."
 
 #. (itstool) path: varlistentry/term
 #: C/index.docbook:377
 msgid "Side Pane"
-msgstr ""
+msgstr "Боковая панель"
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:379
@@ -534,6 +543,11 @@ msgid ""
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Side "
 "Pane</guimenuitem></menuchoice> or press <keycap>F9</keycap>."
 msgstr ""
+"Боковая панель содержит дополнительные сведения о текущем изображении, "
+"например метаданные EXIF (если они доступны).  Эта панель появляется после "
+"загрузки изображения. Чтобы показать или скрыть её, выберите "
+"<menuchoice><guimenu>Вид</guimenu><guimenuitem>Боковая "
+"панель</guimenuitem></menuchoice> или нажмите <keycap>F9</keycap>."
 
 #. (itstool) path: section/para
 #: C/index.docbook:383
@@ -668,6 +682,10 @@ msgid ""
 "Collection</guimenuitem></menuchoice> or pressing "
 "<keycombo><keycap>Ctrl</keycap><keycap>F9</keycap></keycombo>."
 msgstr ""
+"Откройте коллекцию изображений, выбрав "
+"<menuchoice><guimenu>Вид</guimenu><guimenuitem>Коллекция "
+"изображений</guimenuitem></menuchoice> или нажмите "
+"<keycombo><keycap>Ctrl</keycap><keycap>F9</keycap></keycombo>."
 
 #. (itstool) path: section/para
 #: C/index.docbook:444
@@ -692,10 +710,8 @@ msgid ""
 "or press <keycap>F11</keycap>. To view them as a slide show, choose "
 "<menuchoice><guimenu>View</guimenu><guimenuitem>Slideshow</guimenuitem></menuchoice>"
 " or press <keycap>F5</keycap>. To return to the collection view, press the "
-"<keycap>Esc</keycap> key, or "
-"<keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>. For more "
-"information about how to customize the slide show, see <xref linkend=\"eom-"
-"prefs-slideshow\"/>."
+"<keycap>Esc</keycap> key. For more information about how to customize the "
+"slide show, see <xref linkend=\"eom-prefs-slideshow\"/>."
 msgstr ""
 "Чтобы просмотреть все изображения каталога в полноэкранном режиме, выберите "
 "<menuchoice> <guimenu>Вид</guimenu><guimenuitem>Полноэкранный "
@@ -703,10 +719,9 @@ msgstr ""
 "просмотреть их в виде слайд-шоу, выберите "
 "<menuchoice><guimenu>Вид</guimenu><guimenuitem>Слайд-"
 "шоу</guimenuitem></menuchoice> или нажмите <keycap>F5</keycap>. Чтобы "
-"вернуться в режим просмотра коллекции, нажмите клавишу <keycap>Esc</keycap> "
-"или <keycombo><keycap>Ctrl</keycap><keycap>W</keycap></keycombo>. Подробнее "
-"о том, как настроить слайд-шоу, читайте в разделе <xref linkend=\"eom-prefs-"
-"slideshow\"/>."
+"вернуться в режим просмотра коллекции, нажмите клавишу <keycap>Esc</keycap>."
+" Подробнее о том, как настроить слайд-шоу, читайте в разделе <xref "
+"linkend=\"eom-prefs-slideshow\"/>."
 
 #. (itstool) path: info/title
 #: C/index.docbook:450
@@ -846,6 +861,9 @@ msgid ""
 "like this. To return to the normal view, press <keycap>Esc</keycap>, or "
 "<keycap>F11</keycap>."
 msgstr ""
+"В этом режиме не показываются панели, рамки окна и строки меню. Чтобы "
+"вернуться в обычный режим просмотра, нажмите <keycap>Esc</keycap>, or "
+"<keycap>F11</keycap>."
 
 #. (itstool) path: section/para
 #: C/index.docbook:486
@@ -861,13 +879,13 @@ msgstr ""
 #: C/index.docbook:487
 msgid ""
 "If you have multiple images in your collection you can press "
-"<keycap>Space</keycap> or use the right/down cursor keys to advance to the "
+"<keycap>Space</keycap> or use the right/left cursor keys to advance to the "
 "next image. The previous image can be reached by pressing "
 "<keycap>Backspace</keycap> or using the left/up cursor keys."
 msgstr ""
 "Если в вашей коллекции несколько изображений, для перехода к следующему "
 "изображению вы можете использовать клавишу <keycap>Пробел</keycap> или "
-"стрелки вправо/вниз. Чтобы вернуться к предыдущему изображению, нажмите "
+"стрелки вправо/влево. Чтобы вернуться к предыдущему изображению, нажмите "
 "<keycap>Backspace</keycap> или стрелки влево/вверх."
 
 #. (itstool) path: section/para
@@ -1080,8 +1098,7 @@ msgid ""
 msgstr ""
 "Чтобы сохранить изображение под другим именем или преобразовать его в другой"
 " формат, выберите "
-"<menuchoice><guimenu>Изображение</guimenu><guimenuitem>Сохранить "
-"как…</guimenuitem></menuchoice>."
+"<menuchoice><guimenu>Изображение</guimenu><guimenuitem>Сохранить как…</guimenuitem></menuchoice>."
 
 #. (itstool) path: section/para
 #: C/index.docbook:586
@@ -1246,12 +1263,11 @@ msgstr "Настройка параметров страницы"
 #: C/index.docbook:637
 msgid ""
 "Before printing you need to set the page settings you would like to use. To "
-"do that choose <menuchoice><guimenu>Image</guimenu><guimenuitem>Page "
-"Setup</guimenuitem></menuchoice>."
+"do that choose "
+"<menuchoice><guimenu>Image</guimenu><guimenuitem>Print</guimenuitem></menuchoice>."
 msgstr ""
 "Перед печатью необходимо настроить параметры страницы. Для этого выберите "
-"<menuchoice><guimenu>Изображение</guimenu><guimenuitem>Параметры "
-"страницы</guimenuitem></menuchoice>."
+"<menuchoice><guimenu>Изображение</guimenu><guimenuitem>Печать</guimenuitem></menuchoice>."
 
 #. (itstool) path: section/para
 #: C/index.docbook:638
@@ -1355,7 +1371,7 @@ msgid ""
 "in the <guilabel>Preview</guilabel> field."
 msgstr ""
 "Вы также можете изменить положение изображения, перетаскивая его в поле "
-"<guilabel>Предварительный просмотр</guilabel>."
+"<guilabel>Предпросмотр</guilabel>."
 
 #. (itstool) path: listitem/para
 #: C/index.docbook:672
@@ -1740,8 +1756,8 @@ msgstr ""
 "ИЗМЕНЁННЫХ ВЕРСИЙ ДОКУМЕНТА, ЛЕЖИТ НА ВАС. ЕСЛИ ДОКУМЕНТ ИЛИ ИЗМЕНЁННАЯ "
 "ВЕРСИЯ ДОКУМЕНТА ИМЕЕТ НЕДОСТАТКИ, ВЫ (А НЕ АВТОР ДОКУМЕНТА ИЛИ ЕГО "
 "ПОМОЩНИК) БЕРЁТЕ НА СЕБЯ СТОИМОСТЬ ЛЮБОЙ НЕОБХОДИМОЙ ДОРАБОТКИ, КОРРЕКЦИИ "
-"ИЛИ ВОССТАНОВЛЕНИЯ. ЭТОТ ОТКАЗ ОТ ГАРАНТИЙ СОСТАВЛЯЕТ ВАЖНУЮ ЧАСТЬ ЛИЦЕНЗИИ."
-" НИКАКОЕ ИСПОЛЬЗОВАНИЕ ДОКУМЕНТА ИЛИ ИЗМЕНЁННОЙ ВЕРСИИ ДОКУМЕНТА НЕ "
+"ИЛИ ВОССТАНОВЛЕНИЯ. ЭТОТ ОТКАЗ ОТ ГАРАНТИЙ СОСТАВЛЯЕТ ВАЖНУЮ ЧАСТЬ "
+"ЛИЦЕНЗИИ.НИКАКОЕ ИСПОЛЬЗОВАНИЕ ДОКУМЕНТА ИЛИ ИЗМЕНЁННОЙ ВЕРСИИ ДОКУМЕНТА НЕ "
 "ДОПУСКАЕТСЯ БЕЗ ДАННОГО ПРЕДУПРЕЖДЕНИЯ И"
 
 #. (itstool) path: listitem/para
@@ -1762,7 +1778,7 @@ msgstr ""
 "СОГЛАШЕНИЮ ИЛИ ДРУГОЙ ПРИЧИНЕ, АВТОР, СОЗДАТЕЛЬ, ПОМОЩНИКИ ИЛИ "
 "РАСПРОСТРАНИТЕЛИ ДОКУМЕНТА НЕ НЕСУТ ОТВЕТСТВЕННОСТЬ ЗА ПРЯМОЙ, КОСВЕННЫЙ, "
 "СПЕЦИАЛЬНЫЙ, СЛУЧАЙНЫЙ ИЛИ ПРЕДНАМЕРЕННЫЙ УЩЕРБ ЛЮБОГО СВОЙСТВА, ВКЛЮЧАЯ, "
-"БЕЗ ОГРАНИЧЕНИЯ, ПОТЕРЮ ЖЕЛАНИЯ, РАБОТОСПОСОБНОСТИ, КОМПЬЮТЕРНЫЕ СБОИ ИЛИ "
+"БЕЗ ОГРАНИЧЕНИЯ, ПОТЕРЮ РЕПУТАЦИИ, РАБОТОСПОСОБНОСТИ, КОМПЬЮТЕРНЫЕ СБОИ ИЛИ "
 "ПОЛОМКИ, ИЛИ ЛЮБОЙ ДРУГОЙ УЩЕРБ ИЛИ ПОТЕРИ, ВОЗНИКАЮЩИЕ ВСЛЕДСТВИЕ ИЛИ "
 "СВЯЗАННЫЕ С ИСПОЛЬЗОВАНИЕМ ДОКУМЕНТА ИЛИ ИЗМЕНЁННЫХ ВЕРСИЙ ДОКУМЕНТА, ДАЖЕ "
 "ЕСЛИ СТОРОНА БЫЛА УВЕДОМЛЕНА О ВОЗМОЖНОСТИ ТАКОГО УЩЕРБА."
@@ -1774,9 +1790,8 @@ msgid ""
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
 "<_:orderedlist-1/>"
 msgstr ""
-"ДОКУМЕНТ И ИЗМЕНЁННЫЕ ВЕРСИИ ДОКУМЕНТА ПРЕДОСТАВЛЯЮТСЯ ПРЕДОСТАВЛЯЮТСЯ ПО "
-"УСЛОВИЯМ ЛИЦЕНЗИИ БЕСПЛАТНОЙ ДОКУМЕНТАЦИИ GNU С ПОНИМАНИЕМ ЧТО: "
-"<_:orderedlist-1/>"
+"ДОКУМЕНТ И ИЗМЕНЁННЫЕ ВЕРСИИ ДОКУМЕНТА ПРЕДОСТАВЛЯЮТСЯ ПО УСЛОВИЯМ ЛИЦЕНЗИИ "
+"БЕСПЛАТНОЙ ДОКУМЕНТАЦИИ GNU С ПОНИМАНИЕМ, ЧТО: <_:orderedlist-1/>"
 
 #. (itstool) path: formalpara/title
 #: C/legal.xml:77

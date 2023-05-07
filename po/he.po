@@ -4,21 +4,21 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# haxoc c11 <haxoc112@disroot.org>, 2018
-# בר בוכובזה <bokovzabox@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# בר בוכובזה <bokovzabox@gmail.com>, 2021
 # shy tzedaka <shaytzedaka123@gmail.com>, 2021
-# Omer I.S. <omeritzicschwartz@gmail.com>, 2021
+# haxoc c11 <haxoc112@disroot.org>, 2021
+# 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e <ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: eom 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/eom/issues\n"
 "POT-Creation-Date: 2021-06-05 12:10+0200\n"
-"PO-Revision-Date: 2018-03-11 15:18+0000\n"
-"Last-Translator: Omer I.S. <omeritzicschwartz@gmail.com>, 2021\n"
-"Language-Team: Hebrew (https://www.transifex.com/mate/teams/13566/he/)\n"
+"PO-Revision-Date: 2021-09-18 19:22+0000\n"
+"Last-Translator: 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e <ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2021\n"
+"Language-Team: Hebrew (https://app.transifex.com/mate/teams/13566/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -360,7 +360,7 @@ msgstr "גודל קובץ"
 
 #: data/metadata-sidebar.ui:82
 msgid "Folder"
-msgstr "תיקייה"
+msgstr "תיקיה"
 
 #: data/metadata-sidebar.ui:99
 msgid "Aperture"
@@ -482,6 +482,10 @@ msgid ""
 " 0.05 results in a 5% zoom increment for each scroll event and 1.00 result "
 "in a 100% zoom increment."
 msgstr ""
+"The multiplier to be applied when using the mouse scroll wheel for zooming. "
+"This value defines the zooming step used for each scroll event. For example,"
+" 0.05 results in a 5% zoom increment for each scroll event and 1.00 result "
+"in a 100% zoom increment."
 
 #: data/org.mate.eom.gschema.xml.in:51
 msgid "Transparency color"
@@ -663,7 +667,7 @@ msgstr "תאריך בשורת המצב"
 
 #: src/eom-close-confirmation-dialog.c:154
 msgid "Close _without Saving"
-msgstr "_סגירה ללא שמירה"
+msgstr "סגירה _ללא שמירה"
 
 #: src/eom-close-confirmation-dialog.c:187
 msgid "Question"
@@ -727,10 +731,10 @@ msgstr "%s (*.%s)"
 #: src/eom-properties-dialog.c:165 src/eom-thumb-view.c:517
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] "פיקסל"
-msgstr[1] "פיקסלים"
-msgstr[2] "פיקסלים"
-msgstr[3] "פיקסלים"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: src/eom-file-chooser.c:449
 msgid "Open Image"
@@ -738,7 +742,7 @@ msgstr "פתיחת תמונה"
 
 #: src/eom-file-chooser.c:457
 msgid "Save Image"
-msgstr "שמור תמונה"
+msgstr "שמירת תמונה"
 
 #: src/eom-file-chooser.c:465 src/eom-window.c:3996
 msgid "Open Folder"
@@ -873,10 +877,10 @@ msgstr "%.1f (סרט 35 מ\"מ)"
 #, c-format
 msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
-msgstr[0] "פיקסל %i × %i"
-msgstr[1] "%i × %i פיקסלים"
-msgstr[2] "%i × %i פיקסלים"
-msgstr[3] "%i × %i פיקסלים"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
 msgid "Unknown"
@@ -1141,7 +1145,9 @@ msgstr ""
 
 #: src/eom-window.c:2638
 msgid "translator-credits"
-msgstr "Yaron Shahrabani <sh.yaron@gmail.com>"
+msgstr ""
+"Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Omer I.S. <omeritzicschwartz@gmail.com>"
 
 #: src/eom-window.c:2731 src/eom-window.c:2746
 msgid "Error launching appearance preferences dialog: "
@@ -1525,11 +1531,11 @@ msgstr "התחלת מצגת של התמונות"
 
 #: src/eom-window.c:3990
 msgid "Right"
-msgstr "ימינה"
+msgstr "ימין"
 
 #: src/eom-window.c:3993
 msgid "Left"
-msgstr "שמאלה"
+msgstr "שמאל"
 
 #: src/eom-window.c:3999
 msgid "In"
@@ -1541,7 +1547,7 @@ msgstr "יציאה"
 
 #: src/eom-window.c:4005
 msgid "Normal"
-msgstr "רגיל"
+msgstr "רגילה"
 
 #: src/eom-window.c:4008
 msgid "Fit"
@@ -1554,7 +1560,7 @@ msgstr "אוסף"
 #: src/eom-window.c:4014
 msgctxt "action (to trash)"
 msgid "Trash"
-msgstr "פח האשפה"
+msgstr "אשפה"
 
 #: src/eom-window.c:4371
 #, c-format
@@ -1587,11 +1593,11 @@ msgstr "Start a new instance instead of reusing an existing one"
 
 #: src/main.c:75
 msgid "Show the application's version"
-msgstr "Show the application's version"
+msgstr "הצגת גרסת היישום"
 
 #: src/main.c:108
 msgid "[FILE…]"
-msgstr "[FILE…]"
+msgstr "[FILE…‎]"
 
 #: src/main.c:121
 #, c-format

@@ -4,25 +4,25 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# hpiece 8 <hpiece8@gmail.com>, 2018
-# Kukuh Syafaat <syafaatkukuh@gmail.com>, 2018
-# Ibnu Daru Aji, 2018
-# La Ode Muh. Fadlun Akbar <fadlun.net@gmail.com>, 2018
-# Rendiyono Wahyu Saputro <rendi.7936@gmail.com>, 2018
-# Rania el-Amina <reaamina@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Wolfgang Ulbrich <mate@raveit.de>, 2018
-# Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2021
+# clefebvre <clement.lefebvre@linuxmint.com>, 2021
 # Andika Triwidada <andika@gmail.com>, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Ibnu Daru Aji, 2021
+# Willy Sudiarto Raharjo <willysr@slackware-id.org>, 2021
+# La Ode Muh. Fadlun Akbar <fadlun.net@gmail.com>, 2021
+# Rendiyono Wahyu Saputro <rendi.7936@gmail.com>, 2021
+# Rania el-Amina <reaamina@gmail.com>, 2021
+# Kukuh Syafaat <syafaatkukuh@gmail.com>, 2021
+# Triyan W. Nugroho <triyan.wn@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: eom 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/eom/issues\n"
 "POT-Creation-Date: 2021-06-05 12:10+0200\n"
-"PO-Revision-Date: 2018-03-11 15:18+0000\n"
-"Last-Translator: Andika Triwidada <andika@gmail.com>, 2021\n"
-"Language-Team: Indonesian (https://www.transifex.com/mate/teams/13566/id/)\n"
+"PO-Revision-Date: 2021-09-18 19:22+0000\n"
+"Last-Translator: Triyan W. Nugroho <triyan.wn@gmail.com>, 2021\n"
+"Language-Team: Indonesian (https://app.transifex.com/mate/teams/13566/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -184,7 +184,7 @@ msgstr "Kata Kunci:"
 
 #: data/eom-image-properties-dialog.ui:595
 msgid "Author:"
-msgstr "Pembuat"
+msgstr "Pembuat:"
 
 #: data/eom-image-properties-dialog.ui:611
 msgid "Copyright:"
@@ -265,7 +265,7 @@ msgstr "Preferensi Eye of Mate"
 
 #: data/eom-preferences-dialog.ui:39 src/eom-window.c:3764
 msgid "_Help"
-msgstr "_Bantuan"
+msgstr "B_antuan"
 
 #: data/eom-preferences-dialog.ui:100
 msgid "Image Enhancements"
@@ -361,7 +361,7 @@ msgstr "Ukuran"
 
 #: data/metadata-sidebar.ui:46
 msgid "Type"
-msgstr "Jenis"
+msgstr "Tipe"
 
 #: data/metadata-sidebar.ui:63
 msgid "File Size"
@@ -570,7 +570,7 @@ msgstr "Tampilkan/sembunyikan panel koleksi gambar."
 
 #: data/org.mate.eom.gschema.xml.in:92
 msgid "Image collection pane position."
-msgstr "Posisi koleksi citra"
+msgstr "Posisi koleksi citra."
 
 #: data/org.mate.eom.gschema.xml.in:96
 msgid "Whether the image collection pane should be resizable."
@@ -711,7 +711,8 @@ msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] ""
-"Ada %d citra dengan perubahan yang belum disimpan. Simpan sebelum menutup?"
+"Terdapat %d gambar dengan perubahan yang belum disimpan. Simpan perubahan "
+"sebelum menutup?"
 
 #: src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
@@ -1025,7 +1026,7 @@ msgstr "Diambil pada"
 
 #: src/eom-uri-converter.c:985
 msgid "At least two file names are equal."
-msgstr "Ada dua nama berkas yang sama"
+msgstr "Ada dua nama berkas yang sama."
 
 #: src/eom-util.c:65
 msgid "Could not display help for Eye of MATE"
@@ -1171,11 +1172,12 @@ msgstr ""
 "Dirgita <dirgita@gmail.com>\n"
 "Tim MATE Indonesia <http://id.mate.org>\n"
 "Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017.\n"
-"Andika Triwidada <andika@gmail.com>, 2020, 2021."
+"Andika Triwidada <andika@gmail.com>, 2020, 2021.\n"
+"Triyan W. Nugroho <triyan.wn@gmail.com>, 2021."
 
 #: src/eom-window.c:2731 src/eom-window.c:2746
 msgid "Error launching appearance preferences dialog: "
-msgstr "Galat saat meluncurkan dialog preferensi penampilan:"
+msgstr "Galat saat meluncurkan dialog preferensi penampilan: "
 
 #: src/eom-window.c:2781
 msgid "_Open Background Preferences"
@@ -1192,7 +1194,7 @@ msgstr ""
 
 #: src/eom-window.c:3235
 msgid "Saving image locally…"
-msgstr "Menyimpan gambar lokal..."
+msgstr "Menyimpan gambar lokal…"
 
 #: src/eom-window.c:3313
 #, c-format
@@ -1217,8 +1219,8 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
-"Anda yakin hendak memindah\n"
-"%d gambar yang dipilih ke tong sampah?"
+"Apakah Anda yakin untuk memindahkan\n"
+"%d berkas terpilih ke tempat sampah?"
 
 #: src/eom-window.c:3326
 msgid ""
@@ -1230,7 +1232,7 @@ msgstr ""
 
 #: src/eom-window.c:3343 src/eom-window.c:3838 src/eom-window.c:3865
 msgid "Move to _Trash"
-msgstr "Pindahkan ke _Tong Sampah"
+msgstr "Memindah ke _Tong Sampah"
 
 #: src/eom-window.c:3345
 msgid "_Do not ask again during this session"
@@ -1263,7 +1265,7 @@ msgstr "_Tampilan"
 
 #: src/eom-window.c:3762
 msgid "_Go"
-msgstr "_Jalan"
+msgstr "_Ke"
 
 #: src/eom-window.c:3763
 msgid "_Tools"
@@ -1364,7 +1366,7 @@ msgstr "Membuka gambar yang dipilih dengan aplikasi yang berbeda"
 
 #: src/eom-window.c:3808
 msgid "Save _As…"
-msgstr "Simp_an Sebagai..."
+msgstr "Simp_an Sebagai…"
 
 #: src/eom-window.c:3809
 msgid "Save the selected images with a different name"
@@ -1464,7 +1466,7 @@ msgstr "Memperbesar tampilan gambar"
 
 #: src/eom-window.c:3847 src/eom-window.c:3862
 msgid "Zoom _Out"
-msgstr "P_erkecil"
+msgstr "P_erkecil Tampilan"
 
 #: src/eom-window.c:3848 src/eom-window.c:3860 src/eom-window.c:3863
 msgid "Shrink the image"

@@ -4,37 +4,36 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Nicolas Dobigeon <dobigeon@gmail.com>, 2018
-# Benjamin Teissier <enatheme@enatheme.org>, 2018
-# jeremy shields <jeremy.shields@orange.fr>, 2018
-# mauron, 2018
-# dfd998a47e5ece82efa734d3c31b5c3e_071ebb8, 2018
-# df3de0cb43d289cd23a753345b3743cd_a20684f, 2018
-# bf437f16c5a5796ac2a6f350075b40dc, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Charles Monzat <c.monzat@laposte.net>, 2018
-# Laurent Napias <tamplan+transifex@free.fr>, 2018
-# David D, 2019
-# roxfr <roxfr@outlook.fr>, 2020
-# Laurent Napias, 2020
-# Tubuntu, 2020
-# clefebvre <clement.lefebvre@linuxmint.com>, 2021
-# Étienne Deparis <etienne@depar.is>, 2021
+# Nicolas Dobigeon <dobigeon@gmail.com>, 2021
+# bf437f16c5a5796ac2a6f350075b40dc, 2021
 # Stéphane PETRUS <stephane.petrus@posteo.net>, 2021
+# roxfr <roxfr@outlook.fr>, 2021
+# mauron, 2021
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# dfd998a47e5ece82efa734d3c31b5c3e_071ebb8, 2021
+# Tubuntu, 2021
+# clefebvre <clement.lefebvre@linuxmint.com>, 2021
+# Charles Monzat <c.monzat@laposte.net>, 2021
+# Étienne Deparis <etienne@depar.is>, 2021
+# df3de0cb43d289cd23a753345b3743cd_a20684f, 2021
+# jeremy shields <jeremy.shields@orange.fr>, 2021
+# Laurent Napias, 2021
+# Laurent Napias <tamplan+transifex@free.fr>, 2021
+# David D, 2021
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: eom 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/eom/issues\n"
 "POT-Creation-Date: 2021-06-05 12:10+0200\n"
-"PO-Revision-Date: 2018-03-11 15:18+0000\n"
-"Last-Translator: Stéphane PETRUS <stephane.petrus@posteo.net>, 2021\n"
-"Language-Team: French (https://www.transifex.com/mate/teams/13566/fr/)\n"
+"PO-Revision-Date: 2021-09-18 19:22+0000\n"
+"Last-Translator: David D, 2021\n"
+"Language-Team: French (https://app.transifex.com/mate/teams/13566/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:944
 #, c-format
@@ -47,7 +46,7 @@ msgstr "_Déplacer sur la barre d'outils"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1420
 msgid "Move the selected item on the toolbar"
-msgstr "Déplace l'élément sélectionné sur la barre d'outils"
+msgstr "Déplacer l'élément sélectionné sur la barre d'outils"
 
 #: cut-n-paste/toolbar-editor/egg-editable-toolbar.c:1421
 msgid "_Remove from Toolbar"
@@ -182,7 +181,7 @@ msgstr "Date et heure :"
 
 #: data/eom-image-properties-dialog.ui:547
 msgid "Description:"
-msgstr "Description"
+msgstr "Description :"
 
 #: data/eom-image-properties-dialog.ui:579
 msgid "Keywords:"
@@ -271,7 +270,7 @@ msgstr "Préférences de Eye of MATE"
 
 #: data/eom-preferences-dialog.ui:39 src/eom-window.c:3764
 msgid "_Help"
-msgstr "Aid_e"
+msgstr "Aide"
 
 #: data/eom-preferences-dialog.ui:100
 msgid "Image Enhancements"
@@ -679,8 +678,8 @@ msgid ""
 "plugin."
 msgstr ""
 "Liste des greffons actifs. Elle ne contient pas l'« emplacement » des "
-"greffons actifs. Référez-vous au fichier .eom-plugin pour obtenir l'« "
-"emplacement » d'un greffon donné."
+"greffons actifs. Référez-vous au fichier .eom-plugin pour obtenir "
+"l'« emplacement » d'un greffon donné."
 
 #: plugins/fullscreen/fullscreen.plugin.desktop.in.in:5
 msgid "Fullscreen with double-click"
@@ -701,7 +700,7 @@ msgstr "Date dans la barre d'état"
 
 #: src/eom-close-confirmation-dialog.c:154
 msgid "Close _without Saving"
-msgstr "Fermer _sans enregistrer"
+msgstr "Fermer sans enregistrer"
 
 #: src/eom-close-confirmation-dialog.c:187
 msgid "Question"
@@ -727,6 +726,9 @@ msgstr[0] ""
 "Il y a %d image avec des modifications non enregistrées. Voulez-vous "
 "enregistrer les modifications avant de fermer ?"
 msgstr[1] ""
+"Il y a %d images avec des modifications non enregistrées. Voulez-vous "
+"enregistrer les modifications avant de fermer ?"
+msgstr[2] ""
 "Il y a %d images avec des modifications non enregistrées. Voulez-vous "
 "enregistrer les modifications avant de fermer ?"
 
@@ -773,6 +775,7 @@ msgid "pixel"
 msgid_plural "pixels"
 msgstr[0] "pixel"
 msgstr[1] "pixels"
+msgstr[2] "pixels"
 
 #: src/eom-file-chooser.c:449
 msgid "Open Image"
@@ -917,6 +920,7 @@ msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
 msgstr[0] "%i × %i pixel"
 msgstr[1] "%i × %i pixels"
+msgstr[2] "%i × %i pixels"
 
 #: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
 msgid "Unknown"
@@ -1064,8 +1068,9 @@ msgstr " (Unicode non valide)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] "%i × %i pixel  %s    %i %%"
-msgstr[1] "%i × %i pixels  %s    %i %%"
+msgstr[0] "%i × %i pixel  %s    %i%%"
+msgstr[1] "%i × %i pixels  %s    %i%%"
+msgstr[2] "%i × %i pixels  %s    %i%%"
 
 #: src/eom-window.c:832
 msgid "_Reload"
@@ -1107,7 +1112,7 @@ msgstr "Ouverture de l'image « %s »"
 
 #: src/eom-window.c:1905
 msgid "Leave Fullscreen"
-msgstr "Quitter le mode plein écran"
+msgstr "Quitter le plein écran"
 
 #: src/eom-window.c:2045
 msgid "Viewing a slideshow"
@@ -1188,7 +1193,7 @@ msgstr ""
 #: src/eom-window.c:2638
 msgid "translator-credits"
 msgstr ""
-"Contributeurs au projet MATE :\n"
+"Contributeurs au projet MATE :\n"
 "Voir https://www.transifex.com/mate/teams/13566/fr/\n"
 "\n"
 "Contributeurs au projet GNOME :\n"
@@ -1252,8 +1257,11 @@ msgid_plural ""
 "the %d selected images to the trash?"
 msgstr[0] ""
 "Voulez-vous vraiment déplacer\n"
-"les %d images sélectionnées dans la corbeille ?"
+"l'image sélectionnée dans la corbeille ?"
 msgstr[1] ""
+"Voulez-vous vraiment déplacer\n"
+"les %d images sélectionnées dans la corbeille ?"
+msgstr[2] ""
 "Voulez-vous vraiment déplacer\n"
 "les %d images sélectionnées dans la corbeille ?"
 
@@ -1292,11 +1300,11 @@ msgstr "_Image"
 
 #: src/eom-window.c:3760
 msgid "_Edit"
-msgstr "Éditio_n"
+msgstr "Édit_er"
 
 #: src/eom-window.c:3761
 msgid "_View"
-msgstr "_Affichage"
+msgstr "Affichage"
 
 #: src/eom-window.c:3762
 msgid "_Go"
@@ -1336,7 +1344,7 @@ msgstr "Modifie les préférences de Eye of MATE"
 
 #: src/eom-window.c:3778
 msgid "_Contents"
-msgstr "_Sommaire"
+msgstr "Sommaire"
 
 #: src/eom-window.c:3779
 msgid "Help on this application"
@@ -1352,7 +1360,7 @@ msgstr "À propos de cette application"
 
 #: src/eom-window.c:3787
 msgid "_Toolbar"
-msgstr "Barre d'_outils"
+msgstr "Barre d'ou_tils"
 
 #: src/eom-window.c:3788
 msgid "Changes the visibility of the toolbar in the current window"
@@ -1379,7 +1387,7 @@ msgstr ""
 
 #: src/eom-window.c:3796
 msgid "Side _Pane"
-msgstr "Panneau _latéral"
+msgstr "_Panneau latéral"
 
 #: src/eom-window.c:3797
 msgid "Changes the visibility of the side pane in the current window"
@@ -1421,7 +1429,7 @@ msgstr ""
 
 #: src/eom-window.c:3814
 msgid "_Print…"
-msgstr "_Imprimer…"
+msgstr "Im_primer…"
 
 #: src/eom-window.c:3815
 msgid "Print the selected image"

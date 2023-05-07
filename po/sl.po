@@ -4,22 +4,23 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Damir Mevkić <damir.mevkic@gmail.com>, 2018
-# Marko Šterman <marko.chamillionaire@gmail.com>, 2018
-# worm <thewormhole@gmail.com>, 2018
-# Stefano Karapetsas <stefano@karapetsas.com>, 2018
-# Helena S <ele@tutamail.com>, 2020
+# Stefano Karapetsas <stefano@karapetsas.com>, 2021
+# Marko Šterman <marko.chamillionaire@gmail.com>, 2021
 # Damir Jerovšek <jierro@windowslive.com>, 2021
+# worm <thewormhole@gmail.com>, 2021
+# Damir Mevkić 52K <damir.mevkic@gmail.com>, 2021
+# Helena S <ele@tutamail.com>, 2021
 # Arnold Marko <arnold.marko@gmail.com>, 2021
+# Martin Srebotnjak <miles@filmsi.net>, 2022
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: eom 1.25.0\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/eom/issues\n"
 "POT-Creation-Date: 2021-06-05 12:10+0200\n"
-"PO-Revision-Date: 2018-03-11 15:18+0000\n"
-"Last-Translator: Arnold Marko <arnold.marko@gmail.com>, 2021\n"
-"Language-Team: Slovenian (https://www.transifex.com/mate/teams/13566/sl/)\n"
+"PO-Revision-Date: 2021-09-18 19:22+0000\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>, 2022\n"
+"Language-Team: Slovenian (https://app.transifex.com/mate/teams/13566/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -90,6 +91,8 @@ msgstr "Prebrskaj in zavrti slike"
 #: data/eom.desktop.in.in:14
 msgid "image;viewer;JPEG;PNG;TIFF;SVG;MATE;photos;browse;thumbnails;rotate;"
 msgstr ""
+"slika;pregledovalnik;ogledovalnik;JPEG;PNG;TIFF;SVG;MATE;fotografije;fotke;brskanje;prebrskaj;ogled;"
+" sličice;zavrti;zasukaj;vrtenje;sukanje"
 
 #: data/eom-image-properties-dialog.ui:23
 msgid "Image Properties"
@@ -622,6 +625,9 @@ msgid ""
 " for editing images (when the \"Edit Image\" toolbar button is clicked). Set"
 " to the empty string to disable this feature."
 msgstr ""
+"Ime namizne datoteke (vključno z ».desktop«) programa, ki ga želite "
+"uporabiti za urejanje slik (ko kliknete gumb »Uredi sliko«). Nastavite "
+"prazen niz, da onemogočite to funkcijo."
 
 #: data/org.mate.eom.gschema.xml.in:127
 msgid ""
@@ -695,9 +701,17 @@ msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] ""
+"Odprta je %d slika z ne-shranjenimi spremembami. Ali naj se spremembe "
+"shranijo?"
 msgstr[1] ""
+"Odprti sta %d sliki z ne-shranjenimi spremembami. Ali naj se spremembe "
+"shranijo?"
 msgstr[2] ""
+"Odprte so %d slike z ne-shranjenimi spremembami. Ali naj se spremembe "
+"shranijo?"
 msgstr[3] ""
+"Odprtih je %d slik z ne-shranjenimi spremembami. Ali naj se spremembe "
+"shranijo?"
 
 #: src/eom-close-confirmation-dialog.c:614
 msgid "S_elect the images you want to save:"
@@ -740,10 +754,10 @@ msgstr "%s (*.%s)"
 #: src/eom-properties-dialog.c:165 src/eom-thumb-view.c:517
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "slik. točka"
+msgstr[1] "slik. točki"
+msgstr[2] "slik. točke"
+msgstr[3] "slik. točk"
 
 #: src/eom-file-chooser.c:449
 msgid "Open Image"
@@ -886,10 +900,10 @@ msgstr "%.1f (35mm film)"
 #, c-format
 msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%i × %i slik. točka"
+msgstr[1] "%i × %i slik. točki"
+msgstr[2] "%i × %i slik. točke"
+msgstr[3] "%i × %i slik. točk"
 
 #: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:180
 msgid "Unknown"
@@ -902,7 +916,7 @@ msgstr "%a, %d. %B %Y"
 #: src/eom-metadata-sidebar.c:233
 #, c-format
 msgid "%X"
-msgstr ""
+msgstr "%X"
 
 #: src/eom-print.c:371
 msgid "Image Settings"
@@ -1037,10 +1051,10 @@ msgstr "(neveljaven Unicode)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%i × %i slik. točk  %s    %i%%"
+msgstr[1] "%i × %i slik. točk  %s    %i%%"
+msgstr[2] "%i × %i sl. točk  %s    %i%%"
+msgstr[3] "%i × %i slik. točk  %s    %i%%"
 
 #: src/eom-window.c:832
 msgid "_Reload"
@@ -1150,11 +1164,14 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
+"Avtorske pravice © 2000-2010 Free Software Foundation, Inc. \n"
+"Avtorske pravice © 2011 Perberos\n"
+"Avtorske pravice © 2012-2021 razvijalci MATE"
 
 #: src/eom-window.c:2635
 msgid ""
 "Eye of MATE is a simple graphics viewer for the MATE Desktop Environment."
-msgstr ""
+msgstr "Eye of MATE je preprost pregledovalnik slik za namizno okolje MATE."
 
 #: src/eom-window.c:2638
 msgid "translator-credits"
@@ -1206,9 +1223,17 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
+"Ali ste prepričani, da želite premakniti\n"
+"%d izbrano sliko v smeti?"
 msgstr[1] ""
+"Ali ste prepričani, da želite premakniti\n"
+"%d izbrani sliki v smeti?"
 msgstr[2] ""
+"Ali ste prepričani, da želite premakniti\n"
+"%d izbrane slike v smeti?"
 msgstr[3] ""
+"Ali ste prepričani, da želite premakniti\n"
+"%d izbranih slik v smeti?"
 
 #: src/eom-window.c:3326
 msgid ""
@@ -1220,7 +1245,7 @@ msgstr ""
 
 #: src/eom-window.c:3343 src/eom-window.c:3838 src/eom-window.c:3865
 msgid "Move to _Trash"
-msgstr "Premakni v _smeti"
+msgstr "Premakni v sme_ti"
 
 #: src/eom-window.c:3345
 msgid "_Do not ask again during this session"
@@ -1249,7 +1274,7 @@ msgstr "_Uredi"
 
 #: src/eom-window.c:3761
 msgid "_View"
-msgstr "_Pogled"
+msgstr "_Prikaz"
 
 #: src/eom-window.c:3762
 msgid "_Go"
@@ -1289,7 +1314,7 @@ msgstr "Možnosti za enote programa Eye of MATE"
 
 #: src/eom-window.c:3778
 msgid "_Contents"
-msgstr "_Vsebina"
+msgstr "_Vsebine"
 
 #: src/eom-window.c:3779
 msgid "Help on this application"
