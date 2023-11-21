@@ -27,6 +27,7 @@
 
 #include <unistd.h>
 #include <string.h>
+#include <libxml/xmlsave.h>
 #include <libxml/tree.h>
 #include <gdk/gdk.h>
 
