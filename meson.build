@@ -53,6 +53,9 @@ all_deps = [
   xml, gobject_introspection, xmp, exif, rsvg,
 ]
 
+m = cc.find_library('m', required : false)
+all_deps += [m]
+
 z = dependency('zlib')
 assert(cc.has_function('crc32', dependencies: [z]), 'zlib do not have crc32')
 all_deps += [z]
