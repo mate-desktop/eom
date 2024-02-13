@@ -7,7 +7,8 @@
 # Aritz Jorge Sánchez <aritz.jorge@protonmail.com>, 2018
 # Stefano Karapetsas <stefano@karapetsas.com>, 2018
 # Asier Iturralde Sarasola <asier.iturralde@gmail.com>, 2021
-# Alexander Gabilondo <alexgabi@disroot.org>, 2022
+# Alexander Gabilondo <alexgabi@disroot.org>, 2023
+# Wolfgang Ulbrich <mate@raveit.de>, 2024
 # 
 msgid ""
 msgstr ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/eom/issues\n"
 "POT-Creation-Date: 2022-10-29 15:23+0200\n"
 "PO-Revision-Date: 2018-03-11 15:18+0000\n"
-"Last-Translator: Alexander Gabilondo <alexgabi@disroot.org>, 2022\n"
+"Last-Translator: Wolfgang Ulbrich <mate@raveit.de>, 2024\n"
 "Language-Team: Basque (https://app.transifex.com/mate/teams/13566/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -70,6 +71,9 @@ msgid ""
 " image is loaded, you can zoom and rotate the image, and also view "
 "subsequent images in the directory the image was loaded from."
 msgstr ""
+"Eye of MATE zure ordenagailuan irudiak arakatu eta ikusteko aplikazio sinple"
+" bat da. Irudi bat kargatuta dagoenean, irudia handitu eta biratu dezakezu, "
+"eta irudia kargatu den direktorioko hurrengo irudiak ere ikus ditzakezu."
 
 #: data/eom.desktop.in.in:3 src/main.c:63 src/main.c:165
 msgid "Eye of MATE Image Viewer"
@@ -84,6 +88,7 @@ msgstr "Arakatu eta biratu irudiak"
 #: data/eom.desktop.in.in:14
 msgid "image;viewer;JPEG;PNG;TIFF;SVG;MATE;photos;browse;thumbnails;rotate;"
 msgstr ""
+"irudia;erreproduzitzailea;JPEG;PNG;TIFF;SVG;MATE;argazkiak;arakatu;miniaturak;biratu;"
 
 #: data/eom-image-properties-dialog.ui:23
 msgid "Image Properties"
@@ -198,7 +203,7 @@ msgstr "_Utzi"
 
 #: data/eom-multiple-save-as-dialog.ui:57
 msgid "Save _As"
-msgstr ""
+msgstr "Gorde _honela"
 
 #: data/eom-multiple-save-as-dialog.ui:114
 msgid "<b>%f:</b> original filename"
@@ -355,7 +360,7 @@ msgstr "Mota"
 
 #: data/metadata-sidebar.ui:63
 msgid "File Size"
-msgstr ""
+msgstr "Fitxategiaren tamaina"
 
 #: data/metadata-sidebar.ui:82
 msgid "Folder"
@@ -363,19 +368,19 @@ msgstr "Karpeta"
 
 #: data/metadata-sidebar.ui:99
 msgid "Aperture"
-msgstr ""
+msgstr "Irekiera"
 
 #: data/metadata-sidebar.ui:116
 msgid "Exposure"
-msgstr ""
+msgstr "Esposizio"
 
 #: data/metadata-sidebar.ui:133
 msgid "ISO"
-msgstr ""
+msgstr "ISO"
 
 #: data/metadata-sidebar.ui:151
 msgid "Metering"
-msgstr ""
+msgstr "Neurketa"
 
 #: data/metadata-sidebar.ui:169 src/eom-metadata-details.c:65
 msgid "Camera"
@@ -696,7 +701,11 @@ msgid "There is %d image with unsaved changes. Save changes before closing?"
 msgid_plural ""
 "There are %d images with unsaved changes. Save changes before closing?"
 msgstr[0] ""
+"Gorde gabeko aldaketak dituzten irudi %d dago. Aldaketak itxi aurretik gorde"
+" nahi duzu?"
 msgstr[1] ""
+"Gorde gabeko aldaketak dituzten %d irudi daude. Aldaketak itxi aurretik "
+"gorde nahi dituzu?"
 
 #: src/eom-close-confirmation-dialog.c:618
 msgid "S_elect the images you want to save:"
@@ -739,8 +748,8 @@ msgstr "%s (*.%s)"
 #: src/eom-properties-dialog.c:164 src/eom-thumb-view.c:524
 msgid "pixel"
 msgid_plural "pixels"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "pixel"
+msgstr[1] "pixel"
 
 #: src/eom-file-chooser.c:448
 msgid "Open Image"
@@ -883,8 +892,8 @@ msgstr "%.1f (35mm filma)"
 #, c-format
 msgid "%i × %i pixel"
 msgid_plural "%i × %i pixels"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " pixel %i x %i"
+msgstr[1] "%i × %i pixel"
 
 #: src/eom-metadata-sidebar.c:164 src/eom-properties-dialog.c:179
 msgid "Unknown"
@@ -897,7 +906,7 @@ msgstr "%a, %Y %B %d"
 #: src/eom-metadata-sidebar.c:233
 #, c-format
 msgid "%X"
-msgstr ""
+msgstr "%X"
 
 #: src/eom-print.c:371
 msgid "Image Settings"
@@ -1032,8 +1041,8 @@ msgstr " (Unicode baliogabea)"
 #, c-format
 msgid "%i × %i pixel  %s    %i%%"
 msgid_plural "%i × %i pixels  %s    %i%%"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%i × %i pixel  %s    %i%%"
+msgstr[1] "%i × %i pixel  %s    %i%%"
 
 #: src/eom-window.c:833
 msgid "_Reload"
@@ -1079,7 +1088,7 @@ msgstr "Irten pantaila osotik"
 
 #: src/eom-window.c:2046
 msgid "Viewing a slideshow"
-msgstr ""
+msgstr "Aurkezpen bat ikustea"
 
 #: src/eom-window.c:2255
 #, c-format
@@ -1134,7 +1143,7 @@ msgstr ""
 
 #: src/eom-window.c:2631
 msgid "About Eye of MATE"
-msgstr ""
+msgstr "Eye of MATEri buruz"
 
 #: src/eom-window.c:2633
 msgid ""
@@ -1142,11 +1151,16 @@ msgid ""
 "Copyright © 2011 Perberos\n"
 "Copyright © 2012-2021 MATE developers"
 msgstr ""
+"Copyright 2000-2010 Free Software Foundation, Inc.\n"
+"Copyright 2011 Perberos\n"
+"Copyright 2012-2021 MATE garatzaileak"
 
 #: src/eom-window.c:2636
 msgid ""
 "Eye of MATE is a simple graphics viewer for the MATE Desktop Environment."
 msgstr ""
+"Eye of MATE MATE mahaigaineko ingurunerako grafikoen erreproduzitzaile "
+"sinplea da."
 
 #: src/eom-window.c:2639
 msgid "translator-credits"
@@ -1157,6 +1171,7 @@ msgstr ""
 #: src/eom-window.c:2732 src/eom-window.c:2747
 msgid "Error launching appearance preferences dialog: "
 msgstr ""
+"Errore bat gertatu da itxura-hobespenen elkarrizketa-koadroa abiarazteko:"
 
 #: src/eom-window.c:2782
 msgid "_Open Background Preferences"
@@ -1202,7 +1217,11 @@ msgid_plural ""
 "Are you sure you want to move\n"
 "the %d selected images to the trash?"
 msgstr[0] ""
+"Ziur al zaude mugitu nahi duzula\n"
+"hautatutako irudi %d  zakarrontzira?"
 msgstr[1] ""
+"Ziur al zaude mugitu nahi duzula\n"
+"hautatutako %d irudiak zakarrontzira?"
 
 #: src/eom-window.c:3326
 msgid ""
@@ -1360,7 +1379,7 @@ msgstr "Ireki dagoen karpeta"
 
 #: src/eom-window.c:3812
 msgid "Show the folder which contains this file in the file manager"
-msgstr ""
+msgstr "Erakutsi fitxategi hau daukan karpeta fitxategi-kudeatzailean"
 
 #: src/eom-window.c:3814
 msgid "_Print…"
@@ -1436,7 +1455,7 @@ msgstr "_Kopiatu"
 
 #: src/eom-window.c:3842
 msgid "Copy the selected image to the clipboard"
-msgstr ""
+msgstr "Hautatutako irudia arbelean kopiatzen du"
 
 #: src/eom-window.c:3844 src/eom-window.c:3856 src/eom-window.c:3859
 msgid "_Zoom In"
