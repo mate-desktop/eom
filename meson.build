@@ -1,5 +1,5 @@
 project('eom','c',
-  version: '1.27.1',
+  version: '1.28.0',
   meson_version: '>=0.59.0',
   license: 'GPLv2+',
 )
