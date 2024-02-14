@@ -1,0 +1,338 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cppcheck - HTML report - eom</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+    <script>
+      function getStyle(el, styleProp) {
+        var y;
+
+        if (el.currentStyle) {
+          y = el.currentStyle[styleProp];
+        } else if (window.getComputedStyle) {
+          y = document.defaultView.getComputedStyle(el, null).getPropertyValue(styleProp);
+        }
+
+        return y;
+      }
+
+      function toggle() {
+        var el = this.expandable_content;
+        var mark = this.expandable_marker;
+
+        if (el.style.display === "block") {
+          el.style.display = "none";
+          mark.textContent = "[+]";
+        } else {
+          el.style.display = "block";
+          mark.textContent = "[-]";
+        }
+      }
+
+      function initExpandables() {
+        var elements = document.querySelectorAll(".expandable");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var el = elements[i];
+          var clickable = el.querySelector("span");
+          var marker = clickable.querySelector(".marker");
+          var content = el.querySelector(".content");
+          var width = clickable.clientWidth - parseInt(getStyle(content, "padding-left")) - parseInt(getStyle(content, "padding-right"));
+          content.style.width = width + "px";
+          clickable.expandable_content = content;
+          clickable.expandable_marker = marker;
+          clickable.addEventListener("click", toggle);
+        }
+      }
+
+      function toggleDisplay(cb) {
+        var elements = document.querySelectorAll("." + cb.id);
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("id-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleSeverity(cb) {
+        cb.parentElement.classList.toggle("unchecked", !cb.checked);
+        var elements = document.querySelectorAll(".sev_" + cb.id);
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("severity-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleTool(cb) {
+        cb.parentElement.classList.toggle("unchecked", !cb.checked);
+
+        var elements;
+        if (cb.id == "clang-tidy")
+            elements = document.querySelectorAll("[class^=clang-tidy-]");
+        else
+            elements = document.querySelectorAll(".issue:not([class^=clang-tidy-])");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          elements[i].classList.toggle("tool-filtered", !cb.checked);
+        }
+
+        updateFileRows();
+      }
+
+      function toggleAll() {
+        var elements = document.querySelectorAll(".idToggle");
+
+        // starting from 1 since 0 is the "toggle all" input
+        for (var i = 1, len = elements.length; i < len; i++) {
+          var changed = elements[i].checked != elements[0].checked;
+          if (changed) {
+            elements[i].checked = elements[0].checked;
+            toggleDisplay(elements[i]);
+          }
+        }
+      }
+
+      function filterFile(filter) {
+        var elements = document.querySelectorAll(".fileEntry");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = elements[i].querySelector("tr").querySelector("td").textContent.toLowerCase().includes(filter.toLowerCase());
+          elements[i].classList.toggle("text-filtered", !visible);
+        }
+      }
+
+      function filterText(text) {
+        filter = text.toLowerCase();
+        var elements = document.querySelectorAll(".issue");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = false;
+          var fields = elements[i].querySelectorAll("td");
+          for (var n = 0, num = fields.length; n < num; n++) {
+            if (fields[n].textContent.toLowerCase().includes(filter)) {
+              visible = true;
+              break;
+            }
+          }
+          elements[i].classList.toggle("text-filtered", !visible);
+        }
+
+        updateFileRows();
+      }
+
+      function updateFileRows(element) {
+        var elements = document.querySelectorAll(".fileEntry");
+
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var visible = elements[i].querySelector(".issue:not(.id-filtered):not(.severity-filtered):not(.tool-filtered):not(.text-filtered)");
+          elements[i].classList.toggle("file-filtered", !visible);
+        }
+      }
+
+      window.addEventListener("load", initExpandables);
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+    <div id="header" class="header">
+      <h1>Cppcheck report - eom</h1>
+      <div id="filters">
+
+        <label class="checkBtn"><input type="checkbox" onclick="toggleSeverity(this)" id="error"checked/>error</label>
+        <label class="checkBtn disabled"><input type="checkbox" onclick="toggleSeverity(this)" id="warning"disabled/>warning</label>
+        <label class="checkBtn disabled"><input type="checkbox" onclick="toggleSeverity(this)" id="portability"disabled/>portability</label>
+        <label class="checkBtn disabled"><input type="checkbox" onclick="toggleSeverity(this)" id="performance"disabled/>performance</label>
+        <label class="checkBtn"><input type="checkbox" onclick="toggleSeverity(this)" id="style"checked/>style</label>
+        <label class="checkBtn"><input type="checkbox" onclick="toggleSeverity(this)" id="information"checked/>information</label>
+        | 
+        <label class="checkBtn"><input type="checkbox" onclick="toggleTool(this)" id="cppcheck"checked/>cppcheck</label>
+        <label class="checkBtn disabled"><input type="checkbox" onclick="toggleTool(this)" id="clang-tidy"disabled/>clang-tidy</label>
+        | 
+        <label class="severityHeader">File: <input type="text" oninput="filterFile(this.value)"/></label>
+        <label class="severityHeader">Filter: <input type="text" oninput="filterText(this.value)"/></label>
+      </div>
+
+    </div>
+
+    <div id="menu_index">
+     <p><a href="index.html">Defect summary</a> </p>
+
+       <label><input type="checkbox" class="idToggle" onclick="toggleAll()" checked> Toggle all</label>
+       <table>
+           <tr><th>Show</th><th>#</th><th>Defect ID</th></tr>
+            <tr><td><input type="checkbox" class="idToggle" onclick="toggleDisplay(this)" id="variableScope" name="variableScope" checked></td><td>38</td><td>variableScope</td></tr>
+            <tr><td><input type="checkbox" class="idToggle" onclick="toggleDisplay(this)" id="unknownMacro" name="unknownMacro" checked></td><td>22</td><td>unknownMacro</td></tr>
+            <tr><td><input type="checkbox" class="idToggle" onclick="toggleDisplay(this)" id="unusedStructMember" name="unusedStructMember" checked></td><td>8</td><td>unusedStructMember</td></tr>
+            <tr><td><input type="checkbox" class="idToggle" onclick="toggleDisplay(this)" id="unreadVariable" name="unreadVariable" checked></td><td>5</td><td>unreadVariable</td></tr>
+            <tr><td><input type="checkbox" class="idToggle" onclick="toggleDisplay(this)" id="missingInclude" name="missingInclude" checked></td><td>1</td><td>missingInclude</td></tr>
+           <tr><td></td><td>74</td><td>total</td></tr>
+       </table>
+       <p><a href="stats.html">Statistics</a></p>
+    </div>
+    <div id="content_index">
+
+       <table class="summaryTable">
+       <tr><th>Line</th><th>Id</th><th>CWE</th><th>Severity</th><th>Message</th></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="34.html"></a></td></tr>
+         <tr class="missingInclude sev_information issue"><td></td><td>missingInclude</td><td></td><td>information</td><td>Cppcheck cannot find all the include files (use --check-config for details)</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="0.html">cut-n-paste/toolbar-editor/egg-editable-toolbar.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="0.html#line-82">82</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="1.html">cut-n-paste/toolbar-editor/egg-toolbar-editor.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="1.html#line-71">71</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="2.html">cut-n-paste/toolbar-editor/egg-toolbars-model.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="2.html#line-65">65</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="3.html">jpegutils/transupp-6b.c</a></td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="3.html#line-133">133</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;compptr&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="3.html#line-182">182</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;compptr&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="3.html#line-251">251</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;compptr&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="3.html#line-298">298</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;compptr&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="3.html#line-361">361</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;compptr&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="3.html#line-425">425</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;compptr&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="3.html#line-528">528</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;compptr&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="3.html#line-692">692</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;itemp&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="3.html#line-908">908</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;m&apos; can be reduced.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="4.html">jpegutils/transupp-8a.h</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="4.html#line-159">159</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If EXTERN is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="5.html">src/eom-clipboard-handler.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="5.html#line-50">50</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="6.html">src/eom-close-confirmation-dialog.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="6.html#line-76">76</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="7.html">src/eom-error-message-area.c</a></td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="7.html#line-48">48</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;secondary_markup&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="7.html#line-50">50</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;secondary_label&apos; can be reduced.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="8.html">src/eom-exif-util.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="8.html#line-56">56</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_BOXED_TYPE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="9.html">src/eom-file-chooser.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="9.html#line-54">54</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="10.html">src/eom-image-jpeg.c</a></td></tr>
+         <tr class="unreadVariable sev_style issue"><td><a href="10.html#line-207">207</a></td><td>unreadVariable</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td>Variable &apos;jsrcerr.error&apos; is assigned a value that is never used.</td></tr>
+         <tr class="unreadVariable sev_style issue"><td><a href="10.html#line-213">213</a></td><td>unreadVariable</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td>Variable &apos;jdsterr.filename&apos; is assigned a value that is never used.</td></tr>
+         <tr class="unreadVariable sev_style issue"><td><a href="10.html#line-217">217</a></td><td>unreadVariable</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td>Variable &apos;jdsterr.error&apos; is assigned a value that is never used.</td></tr>
+         <tr class="unreadVariable sev_style issue"><td><a href="10.html#line-399">399</a></td><td>unreadVariable</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td>Variable &apos;jerr.filename&apos; is assigned a value that is never used.</td></tr>
+         <tr class="unreadVariable sev_style issue"><td><a href="10.html#line-403">403</a></td><td>unreadVariable</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td>Variable &apos;jerr.error&apos; is assigned a value that is never used.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="11.html">src/eom-image-save-info.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="11.html#line-11">11</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="12.html">src/eom-image.c</a></td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="12.html#line-623">623</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;p&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="12.html#line-1401">1401</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;trans&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="12.html#line-1402">1402</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;inverse&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="12.html#line-1432">1432</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;tmp_file&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="12.html#line-2211">2211</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;mime_types&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="12.html#line-2212">2212</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;i&apos; can be reduced.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="13.html">src/eom-jobs.c</a></td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="13.html#line-910">910</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;src&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="13.html#line-910">910</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;dest&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="13.html#line-911">911</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;filename&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="13.html#line-911">911</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;dest_filename&apos; can be reduced.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="14.html">src/eom-list-store.c</a></td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="14.html#line-250">250</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;thumbnail&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="14.html#line-466">466</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;child&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="14.html#line-546">546</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;file_info&apos; can be reduced.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="15.html">src/eom-metadata-details.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="15.html#line-208">208</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="16.html">src/eom-metadata-reader-jpg.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="16.html#line-91">91</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_CODE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="17.html">src/eom-metadata-reader-png.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="17.html#line-93">93</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_CODE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="18.html">src/eom-metadata-reader.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="18.html#line-33">33</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_INTERFACE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="19.html">src/eom-metadata-sidebar.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="19.html#line-94">94</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="20.html">src/eom-plugin-engine.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="20.html#line-45">45</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="21.html">src/eom-preferences-dialog.c</a></td></tr>
+         <tr class="unusedStructMember sev_style issue"><td><a href="21.html#line-45">45</a></td><td>unusedStructMember</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td>struct member &apos;_EomPreferencesDialogPrivate::ui_settings&apos; is never used.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="22.html">src/eom-print-image-setup.c</a></td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="22.html#line-688">688</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;pixbuf&apos; can be reduced.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="23.html">src/eom-print-preview.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="23.html#line-94">94</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="24.html">src/eom-properties-dialog.c</a></td></tr>
+         <tr class="unusedStructMember sev_style issue"><td><a href="24.html#line-68">68</a></td><td>unusedStructMember</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td>struct member &apos;_EomPropertiesDialogPrivate::next_button&apos; is never used.</td></tr>
+         <tr class="unusedStructMember sev_style issue"><td><a href="24.html#line-69">69</a></td><td>unusedStructMember</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td>struct member &apos;_EomPropertiesDialogPrivate::previous_button&apos; is never used.</td></tr>
+         <tr class="unusedStructMember sev_style issue"><td><a href="24.html#line-71">71</a></td><td>unusedStructMember</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td>struct member &apos;_EomPropertiesDialogPrivate::general_box&apos; is never used.</td></tr>
+         <tr class="unusedStructMember sev_style issue"><td><a href="24.html#line-97">97</a></td><td>unusedStructMember</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td>struct member &apos;_EomPropertiesDialogPrivate::xmp_box&apos; is never used.</td></tr>
+         <tr class="unusedStructMember sev_style issue"><td><a href="24.html#line-98">98</a></td><td>unusedStructMember</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td>struct member &apos;_EomPropertiesDialogPrivate::xmp_box_label&apos; is never used.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="24.html#line-147">147</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;mime_str&apos; can be reduced.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="25.html">src/eom-resources.c</a></td></tr>
+         <tr class="unusedStructMember sev_style issue"><td><a href="25.html#line-9">9</a></td><td>unusedStructMember</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td>union member &apos;Anonymous0::alignment&apos; is never used.</td></tr>
+         <tr class="unusedStructMember sev_style issue"><td><a href="25.html#line-9">9</a></td><td>unusedStructMember</td><td><a href="https://cwe.mitre.org/data/definitions/563.html">563</a></td><td>style</td><td>union member &apos;Anonymous0::ptr&apos; is never used.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="26.html">src/eom-scroll-view.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="26.html#line-164">164</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="27.html">src/eom-sidebar.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="27.html#line-68">68</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="28.html">src/eom-statusbar.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="28.html#line-39">39</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="29.html">src/eom-thumb-view.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="29.html#line-90">90</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_IMPLEMENT_INTERFACE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="30.html">src/eom-transform.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="30.html#line-50">50</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="31.html">src/eom-uri-converter.c</a></td></tr>
+         <tr class="unknownMacro sev_error issue"><td><a href="31.html#line-53">53</a></td><td>unknownMacro</td><td></td><td>error</td><td class="error">There is an unknown macro here somewhere. Configuration is required. If G_DEFINE_TYPE_WITH_PRIVATE is a macro then please configure it.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="32.html">src/eom-util.c</a></td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="32.html#line-84">84</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;valid_bytes&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="32.html#line-208">208</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;file&apos; can be reduced.</td></tr>
+      <tbody class="fileEntry">
+       <tr><td colspan="5"><a href="33.html">src/eom-window.c</a></td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="33.html#line-2216">2216</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;dialog&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="33.html#line-2384">2384</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;dialog&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="33.html#line-3262">3262</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;file&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="33.html#line-3263">3263</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;file_info&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="33.html#line-3265">3265</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;image&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="33.html#line-3294">3294</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;image&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="33.html#line-3455">3455</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;img&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="33.html#line-3457">3457</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;response&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="33.html#line-4168">4168</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;file_list&apos; can be reduced.</td></tr>
+         <tr class="variableScope sev_style issue"><td><a href="33.html#line-4169">4169</a></td><td>variableScope</td><td><a href="https://cwe.mitre.org/data/definitions/398.html">398</a></td><td>style</td><td>The scope of the variable &apos;window&apos; can be reduced.</td></tr>
+      </tbody>
+       </table>
+    </div>
+    <div id="footer" class="footer">
+      <p>
+        Created by Cppcheck 2.9 (<a href="https://cppcheck.sourceforge.io">Sourceforge</a>, <a href="irc://irc.freenode.net/cppcheck">IRC</a>)
+      </p>
+    </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+<html>
+<head>
+<title>rootdir - scan-build results</title>
+<link type="text/css" rel="stylesheet" href="scanview.css"/>
+<script src="sorttable.js"></script>
+<script language='javascript' type="text/javascript">
+function SetDisplay(RowClass, DisplayVal)
+{
+  var Rows = document.getElementsByTagName("tr");
+  for ( var i = 0 ; i < Rows.length; ++i ) {
+    if (Rows[i].className == RowClass) {
+      Rows[i].style.display = DisplayVal;
+    }
+  }
+}
+
+function CopyCheckedStateToCheckButtons(SummaryCheckButton) {
+  var Inputs = document.getElementsByTagName("input");
+  for ( var i = 0 ; i < Inputs.length; ++i ) {
+    if (Inputs[i].type == "checkbox") {
+      if(Inputs[i] != SummaryCheckButton) {
+        Inputs[i].checked = SummaryCheckButton.checked;
+        Inputs[i].onclick();
+      }
+    }
+  }
+}
+
+function returnObjById( id ) {
+    if (document.getElementById)
+        var returnVar = document.getElementById(id);
+    else if (document.all)
+        var returnVar = document.all[id];
+    else if (document.layers)
+        var returnVar = document.layers[id];
+    return returnVar;
+}
+
+var NumUnchecked = 0;
+
+function ToggleDisplay(CheckButton, ClassName) {
+  if (CheckButton.checked) {
+    SetDisplay(ClassName, "");
+    if (--NumUnchecked == 0) {
+      returnObjById("AllBugsCheck").checked = true;
+    }
+  }
+  else {
+    SetDisplay(ClassName, "none");
+    NumUnchecked++;
+    returnObjById("AllBugsCheck").checked = false;
+  }
+}
+</script>
+<!-- SUMMARYENDHEAD -->
+</head>
+<body>
+<h1>rootdir - scan-build results</h1>
+
+<table>
+<tr><th>User:</th><td>root@7a692198cc16</td></tr>
+<tr><th>Working Directory:</th><td>/rootdir</td></tr>
+<tr><th>Command Line:</th><td>make -j 3</td></tr>
+<tr><th>Clang Version:</th><td>clang version 17.0.4 (Fedora 17.0.4-1.fc39)
+</td></tr>
+<tr><th>Date:</th><td>Tue Nov 21 13:51:35 2023</td></tr>
+</table>
+<h2>Bug Summary</h2><table>
+<thead><tr><td>Bug Type</td><td>Quantity</td><td class="sorttable_nosort">Display?</td></tr></thead>
+<tr style="font-weight:bold"><td class="SUMM_DESC">All Bugs</td><td class="Q">22</td><td><center><input type="checkbox" id="AllBugsCheck" onClick="CopyCheckedStateToCheckButtons(this);" checked/></center></td></tr>
+<tr><th>API</th><th colspan=2></th></tr>
+<tr><td class="SUMM_DESC">Argument with 'nonnull' attribute passed null</td><td class="Q">1</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_api_argument_with_nonnull_attribute_passed_null');" checked/></center></td></tr>
+<tr><th>Logic error</th><th colspan=2></th></tr>
+<tr><td class="SUMM_DESC">Cast from non-struct type to struct type</td><td class="Q">6</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_cast_from_non-struct_type_to_struct_type');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Out-of-bound access</td><td class="Q">1</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_out-of-bound_access');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Uninitialized argument value</td><td class="Q">1</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_logic_error_uninitialized_argument_value');" checked/></center></td></tr>
+<tr><th>Unused code</th><th colspan=2></th></tr>
+<tr><td class="SUMM_DESC">Dead assignment</td><td class="Q">2</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_unused_code_dead_assignment');" checked/></center></td></tr>
+<tr><td class="SUMM_DESC">Unreachable code</td><td class="Q">11</td><td><center><input type="checkbox" onClick="ToggleDisplay(this,'bt_unused_code_unreachable_code');" checked/></center></td></tr>
+</table>
+<h2>Reports</h2>
+
+<table class="sortable" style="table-layout:automatic">
+<thead><tr>
+  <td>Bug Group</td>
+  <td class="sorttable_sorted">Bug Type<span id="sorttable_sortfwdind">&nbsp;&#x25BE;</span></td>
+  <td>File</td>
+  <td>Function/Method</td>
+  <td class="Q">Line</td>
+  <td class="Q">Path Length</td>
+  <td class="sorttable_nosort"></td>
+  <!-- REPORTBUGCOL -->
+</tr></thead>
+<tbody>
+<tr class="bt_api_argument_with_nonnull_attribute_passed_null"><td class="DESC">API</td><td class="DESC">Argument with 'nonnull' attribute passed null</td><td>src/eom-image.c</td><td class="DESC">eom_image_real_load</td><td class="Q">956</td><td class="Q">25</td><td><a href="report-b791a9.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-b791a9.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>src/eom-scroll-view.c</td><td class="DESC">sv_rgba_to_string_mapping</td><td class="Q">1794</td><td class="Q">1</td><td><a href="report-1384bf.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-1384bf.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>src/eom-preferences-dialog.c</td><td class="DESC">pd_string_to_rgba_mapping</td><td class="Q">78</td><td class="Q">1</td><td><a href="report-4a64f5.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-4a64f5.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>src/eom-scroll-view.c</td><td class="DESC">sv_string_to_rgba_mapping</td><td class="Q">1774</td><td class="Q">1</td><td><a href="report-d71e34.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-d71e34.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>src/eom-preferences-dialog.c</td><td class="DESC">pd_rgba_to_string_mapping</td><td class="Q">99</td><td class="Q">1</td><td><a href="report-d7f8ad.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-d7f8ad.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>src/eom-window.c</td><td class="DESC">eom_window_cmd_edit_toolbar</td><td class="Q">2515</td><td class="Q">1</td><td><a href="report-e1a871.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-e1a871.html" -->
+</tr>
+<tr class="bt_logic_error_cast_from_non-struct_type_to_struct_type"><td class="DESC">Logic error</td><td class="DESC">Cast from non-struct type to struct type</td><td>src/eom-window.c</td><td class="DESC">eom_window_cmd_edit_toolbar</td><td class="Q">2513</td><td class="Q">1</td><td><a href="report-f88495.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-f88495.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>cut-n-paste/toolbar-editor/egg-toolbar-editor.c</td><td class="DESC">update_editor_sheet</td><td class="Q">619</td><td class="Q">1</td><td><a href="report-84f082.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-84f082.html" -->
+</tr>
+<tr class="bt_unused_code_dead_assignment"><td class="DESC">Unused code</td><td class="DESC">Dead assignment</td><td>cut-n-paste/toolbar-editor/egg-toolbars-model.c</td><td class="DESC">egg_toolbars_model_to_xml</td><td class="Q">101</td><td class="Q">1</td><td><a href="report-f15e81.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-f15e81.html" -->
+</tr>
+<tr class="bt_logic_error_out-of-bound_access"><td class="DESC">Logic error</td><td class="DESC">Out-of-bound access</td><td>src/eom-util.c</td><td class="DESC">eom_util_filename_get_extension</td><td class="Q">299</td><td class="Q">6</td><td><a href="report-982ff6.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-982ff6.html" -->
+</tr>
+<tr class="bt_logic_error_uninitialized_argument_value"><td class="DESC">Logic error</td><td class="DESC">Uninitialized argument value</td><td>src/eom-print-preview.c</td><td class="DESC">key_press_event_cb</td><td class="Q">793</td><td class="Q">5</td><td><a href="report-d22e5d.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-d22e5d.html" -->
+</tr>
+<tr class="bt_unused_code_unreachable_code"><td class="DESC">Unused code</td><td class="DESC">Unreachable code</td><td>src/main.c</td><td class="DESC">main</td><td class="Q">169</td><td class="Q">1</td><td><a href="report-06e1b8.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-06e1b8.html" -->
+</tr>
+<tr class="bt_unused_code_unreachable_code"><td class="DESC">Unused code</td><td class="DESC">Unreachable code</td><td>src/eom-transform.c</td><td class="DESC">eom_transform_get_transform_type</td><td class="Q">398</td><td class="Q">1</td><td><a href="report-270b7d.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-270b7d.html" -->
+</tr>
+<tr class="bt_unused_code_unreachable_code"><td class="DESC">Unused code</td><td class="DESC">Unreachable code</td><td>src/eom-util.c</td><td class="DESC">eom_util_filename_get_extension</td><td class="Q">300</td><td class="Q">1</td><td><a href="report-3abb1a.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-3abb1a.html" -->
+</tr>
+<tr class="bt_unused_code_unreachable_code"><td class="DESC">Unused code</td><td class="DESC">Unreachable code</td><td>src/main.c</td><td class="DESC">main</td><td class="Q">178</td><td class="Q">1</td><td><a href="report-56073d.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-56073d.html" -->
+</tr>
+<tr class="bt_unused_code_unreachable_code"><td class="DESC">Unused code</td><td class="DESC">Unreachable code</td><td>src/eom-transform.c</td><td class="DESC">eom_transform_get_transform_type</td><td class="Q">415</td><td class="Q">1</td><td><a href="report-7315f5.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-7315f5.html" -->
+</tr>
+<tr class="bt_unused_code_unreachable_code"><td class="DESC">Unused code</td><td class="DESC">Unreachable code</td><td>src/eom-transform.c</td><td class="DESC">eom_transform_get_transform_type</td><td class="Q">423</td><td class="Q">1</td><td><a href="report-931eff.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-931eff.html" -->
+</tr>
+<tr class="bt_unused_code_unreachable_code"><td class="DESC">Unused code</td><td class="DESC">Unreachable code</td><td>src/eom-transform.c</td><td class="DESC">eom_transform_get_transform_type</td><td class="Q">409</td><td class="Q">1</td><td><a href="report-9380a6.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-9380a6.html" -->
+</tr>
+<tr class="bt_unused_code_unreachable_code"><td class="DESC">Unused code</td><td class="DESC">Unreachable code</td><td>src/eom-transform.c</td><td class="DESC">eom_transform_get_transform_type</td><td class="Q">393</td><td class="Q">1</td><td><a href="report-97b21d.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-97b21d.html" -->
+</tr>
+<tr class="bt_unused_code_unreachable_code"><td class="DESC">Unused code</td><td class="DESC">Unreachable code</td><td>src/eom-transform.c</td><td class="DESC">eom_transform_get_transform_type</td><td class="Q">403</td><td class="Q">1</td><td><a href="report-ebc41c.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-ebc41c.html" -->
+</tr>
+<tr class="bt_unused_code_unreachable_code"><td class="DESC">Unused code</td><td class="DESC">Unreachable code</td><td>src/main.c</td><td class="DESC">_print_version_and_exit</td><td class="Q">65</td><td class="Q">1</td><td><a href="report-f46d8d.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-f46d8d.html" -->
+</tr>
+<tr class="bt_unused_code_unreachable_code"><td class="DESC">Unused code</td><td class="DESC">Unreachable code</td><td>src/eom-transform.c</td><td class="DESC">eom_transform_get_transform_type</td><td class="Q">431</td><td class="Q">1</td><td><a href="report-f92f6b.html#EndPath">View Report</a></td>
+<!-- REPORTBUG id="report-f92f6b.html" -->
+</tr>
+</tbody>
+</table>
+
+</body></html>
