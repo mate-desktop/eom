@@ -78,7 +78,8 @@ typedef enum {
 typedef enum {
 	EOM_STARTUP_FULLSCREEN         = 1 << 0,
 	EOM_STARTUP_SLIDE_SHOW         = 1 << 1,
-	EOM_STARTUP_DISABLE_COLLECTION = 1 << 2
+	EOM_STARTUP_DISABLE_COLLECTION = 1 << 2,
+	EOM_STARTUP_PRESERVE_ORDER     = 1 << 3
 } EomStartupFlags;
 
 struct _EomWindow {

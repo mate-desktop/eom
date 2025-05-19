@@ -5329,9 +5329,10 @@ eom_window_class_init (EomWindowClass *class)
  * @flags: the initialization parameters for the new window.
  *
  *
- * Creates a new and empty #EomWindow. Use @flags to indicate
- * if the window should be initialized fullscreen, in slideshow mode,
- * and/or without the thumbnails collection visible. See #EomStartupFlags.
+ * Creates a new and empty #EomWindow. Use @flags to indicate if the window
+ * should be initialized fullscreen, in slideshow mode, and/or without the
+ * thumbnails collection visible. Use preserve-order to maintain
+ * the order of input parameters instead of sorting. See #EomStartupFlags.
  *
  * Returns: a newly created #EomWindow.
  **/
@@ -5471,7 +5472,7 @@ eom_window_open_file_list (EomWindow *window, GSList *file_list)
 	g_slist_foreach (file_list, (GFunc) g_object_ref, NULL);
 	window->priv->file_list = file_list;
 
-	job = eom_job_model_new (file_list);
+	job = eom_job_model_new (file_list, !!(window->priv->flags & EOM_STARTUP_PRESERVE_ORDER));
 
 	g_signal_connect (job, "finished",
 	                  G_CALLBACK (eom_job_model_cb),
