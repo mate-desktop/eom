@@ -52,6 +52,7 @@ static gboolean fullscreen = FALSE;
 static gboolean slide_show = FALSE;
 static gboolean disable_collection = FALSE;
 static gboolean force_new_instance = FALSE;
+static gboolean preserve_order = FALSE;
 static gchar **startup_files = NULL;
 
 static gboolean
@@ -71,6 +72,7 @@ static const GOptionEntry goption_options[] =
 	{ "disable-image-collection", 'c', 0, G_OPTION_ARG_NONE, &disable_collection, N_("Disable image collection"), NULL  },
 	{ "slide-show", 's', 0, G_OPTION_ARG_NONE, &slide_show, N_("Open in slideshow mode"), NULL  },
 	{ "new-instance", 'n', 0, G_OPTION_ARG_NONE, &force_new_instance, N_("Start a new instance instead of reusing an existing one"), NULL },
+	{ "preserve-order", 'p', 0, G_OPTION_ARG_NONE, &preserve_order, N_("Preserve the input file order (disable default sorting)"), NULL },
 	{ "version", 0, G_OPTION_FLAG_NO_ARG, G_OPTION_ARG_CALLBACK,
 	  _print_version_and_exit, N_("Show the application's version"), NULL},
 	{ NULL }
@@ -87,6 +89,9 @@ set_startup_flags (void)
 
   if (slide_show)
     flags |= EOM_STARTUP_SLIDE_SHOW;
+
+  if (preserve_order)
+    flags |= EOM_STARTUP_PRESERVE_ORDER;
 }
 
 int

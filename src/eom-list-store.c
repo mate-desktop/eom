@@ -34,7 +34,8 @@ struct _EomListStorePrivate {
 	gint initial_image;       /* The image that should be selected firstly by the view. */
 	GdkPixbuf *busy_image;    /* Loading image icon */
 	GdkPixbuf *missing_image; /* Missing image icon */
-	GMutex mutex;            /* Mutex for saving the jobs in the model */
+	GMutex mutex;             /* Mutex for saving the jobs in the model */
+	gboolean preserve_order;  /* If TRUE, preserves the original order of files */
 };
 
 G_DEFINE_TYPE_WITH_PRIVATE (EomListStore, eom_list_store, GTK_TYPE_LIST_STORE);
@@ -529,6 +530,7 @@ eom_list_store_append_directory (EomListStore *store,
  * eom_list_store_add_files:
  * @store: An #EomListStore.
  * @file_list: (element-type GFile): A %NULL-terminated list of #GFile's.
+ * @preserve_order: Flag to indicate whether to honor the order of input parameters.
  *
  * Adds a list of #GFile's to @store. The given list
  * must be %NULL-terminated.
@@ -540,7 +542,7 @@ eom_list_store_append_directory (EomListStore *store,
  *
  **/
 void
-eom_list_store_add_files (EomListStore *store, GList *file_list)
+eom_list_store_add_files (EomListStore *store, GList *file_list, gboolean preserve_order)
 {
 	GList *it;
 	GFileInfo *file_info;
@@ -624,7 +626,11 @@ eom_list_store_add_files (EomListStore *store, GList *file_list)
 		g_free (caption);
 	}
 
+	/* Set the sort behaviour depending on the toggle option.
+	   If preserve_order is TRUE, then preserve the order in which files were provided.
+	   Otherwise, use the default sort function. */
 	gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (store),
+					      preserve_order ? GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID : \
 					      GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID,
 					      GTK_SORT_ASCENDING);
 

@@ -81,7 +81,8 @@ void            eom_list_store_append_image 	     (EomListStore *store,
 						      EomImage     *image);
 
 void            eom_list_store_add_files 	     (EomListStore *store,
-						      GList        *file_list);
+						      GList        *file_list,
+						      gboolean preserve_order);
 
 void            eom_list_store_remove_image 	     (EomListStore *store,
 						      EomImage     *image);
