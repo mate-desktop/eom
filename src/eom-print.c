@@ -514,6 +514,9 @@ eom_print_set_print_settings (GtkPrintSettings *print_settings)
 		key_file = g_key_file_new ();
 	}
 
+	/* Clear n-copies settings since we do not want to persist that one */
+	gtk_print_settings_unset (print_settings, GTK_PRINT_SETTINGS_N_COPIES);
+
 	gtk_print_settings_to_key_file (print_settings, key_file, EOM_PRINT_SETTINGS_GROUP);
 	eom_print_save_key_file (key_file);
 
