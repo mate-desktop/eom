@@ -351,6 +351,7 @@ eom_job_model_class_init (EomJobModelClass *class)
 /**
  * eom_job_model_new:
  * @file_list: (element-type GFile): a #GFile list
+ * @preserve_order: Flag to indicate whether to honor the order of input parameters.
  *
  * Creates a new #EomJob model.
  *
@@ -358,13 +359,14 @@ eom_job_model_class_init (EomJobModelClass *class)
  */
 
 EomJob *
-eom_job_model_new (GSList *file_list)
+eom_job_model_new (GSList *file_list, gboolean preserve_order)
 {
 	EomJobModel *job;
 
 	job = g_object_new (EOM_TYPE_JOB_MODEL, NULL);
 
 	job->file_list = file_list;
+	job->preserve_order = preserve_order;
 
 	return EOM_JOB (job);
 }
@@ -438,7 +440,7 @@ eom_job_model_run (EomJob *ejob)
 
 	job->store = EOM_LIST_STORE (eom_list_store_new ());
 
-	eom_list_store_add_files (job->store, filtered_list);
+	eom_list_store_add_files (job->store, filtered_list, job->preserve_order);
 
 	g_list_free_full (filtered_list, g_object_unref);
 	g_list_free_full (error_list, g_free);

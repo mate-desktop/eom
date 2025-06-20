@@ -163,6 +163,7 @@ struct _EomJobModel
 	EomJob        parent;
 	EomListStore *store;
 	GSList       *file_list;
+	gboolean      preserve_order;
 };
 
 struct _EomJobModelClass
@@ -247,7 +248,8 @@ EomJob 	       *eom_job_load_new 	   (EomImage        *image,
 
 /* EomJobModel */
 GType 		eom_job_model_get_type     (void) G_GNUC_CONST;
-EomJob 	       *eom_job_model_new          (GSList          *file_list);
+EomJob 	       *eom_job_model_new          (GSList          *file_list,
+					    gboolean preserve_order);
 
 /* EomJobTransform */
 GType 		eom_job_transform_get_type (void) G_GNUC_CONST;
