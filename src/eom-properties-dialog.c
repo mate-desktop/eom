@@ -173,12 +173,13 @@ pd_update_general_tab (EomPropertiesDialog *prop_dlg,
 
 	file = eom_image_get_file (image);
 	file_info = g_file_query_info (file,
-				       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
+				       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE","
+				       G_FILE_ATTRIBUTE_STANDARD_FAST_CONTENT_TYPE,
 				       0, NULL, NULL);
 	if (file_info == NULL) {
 		type_str = g_strdup (_("Unknown"));
 	} else {
-		mime_str = g_file_info_get_content_type (file_info);
+		mime_str = eom_util_get_content_type_with_fallback (file_info);
 		type_str = g_content_type_get_description (mime_str);
 		g_object_unref (file_info);
 	}

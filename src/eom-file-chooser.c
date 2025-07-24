@@ -22,6 +22,7 @@
 #include "eom-file-chooser.h"
 #include "eom-config-keys.h"
 #include "eom-pixbuf-util.h"
+#include "eom-util.h"
 
 #include <stdlib.h>
 
@@ -333,7 +334,8 @@ update_preview_cb (GtkFileChooser *file_chooser, gpointer data)
 				       G_FILE_ATTRIBUTE_TIME_MODIFIED ","
 				       G_FILE_ATTRIBUTE_STANDARD_TYPE ","
 				       G_FILE_ATTRIBUTE_STANDARD_SIZE ","
-				       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
+				       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE","
+				       G_FILE_ATTRIBUTE_STANDARD_FAST_CONTENT_TYPE,
 				       0, NULL, NULL);
 	g_object_unref (file);
 
@@ -352,7 +354,7 @@ update_preview_cb (GtkFileChooser *file_chooser, gpointer data)
 			/* read files smaller than 100kb directly */
 
 			gchar *mime_type = g_content_type_get_mime_type (
-						g_file_info_get_content_type (file_info));
+						eom_util_get_content_type_with_fallback (file_info));
 
 			if (G_LIKELY (mime_type)) {
 				gboolean can_thumbnail, has_failed;

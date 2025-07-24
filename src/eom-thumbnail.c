@@ -36,6 +36,7 @@
 #include "eom-thumbnail.h"
 #include "eom-list-store.h"
 #include "eom-debug.h"
+#include "eom-util.h"
 
 #define EOM_THUMB_ERROR eom_thumb_error_quark ()
 
@@ -161,6 +162,7 @@ eom_thumb_data_new (GFile *file, GError **error)
 
 	file_info = g_file_query_info (file,
 				       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE ","
+				       G_FILE_ATTRIBUTE_STANDARD_FAST_CONTENT_TYPE ","
 				       G_FILE_ATTRIBUTE_TIME_MODIFIED ","
 				       G_FILE_ATTRIBUTE_THUMBNAIL_PATH ","
 				       G_FILE_ATTRIBUTE_THUMBNAILING_FAILED ","
@@ -176,7 +178,7 @@ eom_thumb_data_new (GFile *file, GError **error)
 		/* if available, copy data */
 		data->mtime = g_file_info_get_attribute_uint64 (file_info,
 								G_FILE_ATTRIBUTE_TIME_MODIFIED);
-		data->mime_type = g_strdup (g_file_info_get_content_type (file_info));
+		data->mime_type = g_strdup (eom_util_get_content_type_with_fallback (file_info));
 
 		data->thumb_exists = (g_file_info_get_attribute_byte_string (file_info,
 					                                     G_FILE_ATTRIBUTE_THUMBNAIL_PATH) != NULL);
