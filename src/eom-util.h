@@ -68,6 +68,9 @@ void     eom_util_show_file_in_filemanager   (GFile *file,
 gboolean eom_notebook_scroll_event_cb        (GtkWidget      *notebook,
                                               GdkEventScroll *event);
 
+G_GNUC_INTERNAL
+const     char *eom_util_get_content_type_with_fallback	(GFileInfo *file_info);
+
 G_END_DECLS
 
 #endif /* __EOM_UTIL_H__ */
