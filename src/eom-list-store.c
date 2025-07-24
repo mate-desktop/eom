@@ -26,6 +26,7 @@
 #include "eom-image.h"
 #include "eom-job-queue.h"
 #include "eom-jobs.h"
+#include "eom-util.h"
 
 #include <string.h>
 
@@ -378,12 +379,13 @@ file_monitor_changed_cb (GFileMonitor *monitor,
 	case G_FILE_MONITOR_EVENT_CHANGES_DONE_HINT:
 		file_info = g_file_query_info (file,
 					       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE ","
+					       G_FILE_ATTRIBUTE_STANDARD_FAST_CONTENT_TYPE ","
 					       G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME,
 					       0, NULL, NULL);
 		if (file_info == NULL) {
 			break;
 		}
-		mimetype = g_file_info_get_content_type (file_info);
+		mimetype = eom_util_get_content_type_with_fallback (file_info);
 
 		if (is_file_in_list_store_file (store, file, &iter)) {
 			if (eom_image_is_supported_mime_type (mimetype)) {
@@ -419,12 +421,13 @@ file_monitor_changed_cb (GFileMonitor *monitor,
 		if (!is_file_in_list_store_file (store, file, NULL)) {
 			file_info = g_file_query_info (file,
 						       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE ","
+						       G_FILE_ATTRIBUTE_STANDARD_FAST_CONTENT_TYPE ","
 						       G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME,
 						       0, NULL, NULL);
 			if (file_info == NULL) {
 				break;
 			}
-			mimetype = g_file_info_get_content_type (file_info);
+			mimetype = eom_util_get_content_type_with_fallback (file_info);
 
 			if (eom_image_is_supported_mime_type (mimetype)) {
 				const gchar *caption;
@@ -437,12 +440,13 @@ file_monitor_changed_cb (GFileMonitor *monitor,
 		break;
 	case G_FILE_MONITOR_EVENT_ATTRIBUTE_CHANGED:
 		file_info = g_file_query_info (file,
-					       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
+					       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE ","
+					       G_FILE_ATTRIBUTE_STANDARD_FAST_CONTENT_TYPE,
 					       0, NULL, NULL);
 		if (file_info == NULL) {
 			break;
 		}
-		mimetype = g_file_info_get_content_type (file_info);
+		mimetype = eom_util_get_content_type_with_fallback (file_info);
 		if (is_file_in_list_store_file (store, file, &iter) &&
 		    eom_image_is_supported_mime_type (mimetype)) {
 			eom_list_store_thumbnail_refresh (store, &iter);
@@ -468,7 +472,7 @@ directory_visit (GFile *directory,
 	gboolean load_uri = FALSE;
 	const char *mime_type, *name;
 
-	mime_type = g_file_info_get_content_type (children_info);
+	mime_type = eom_util_get_content_type_with_fallback (children_info);
 	name = g_file_info_get_name (children_info);
 
 	if (!g_str_has_prefix (name, ".")) {
@@ -512,6 +516,7 @@ eom_list_store_append_directory (EomListStore *store,
 
 	file_enumerator = g_file_enumerate_children (file,
 						     G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE ","
+						     G_FILE_ATTRIBUTE_STANDARD_FAST_CONTENT_TYPE ","
 						     G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME ","
 						     G_FILE_ATTRIBUTE_STANDARD_NAME,
 						     0, NULL, NULL);
@@ -565,6 +570,7 @@ eom_list_store_add_files (EomListStore *store, GList *file_list, gboolean preser
 		file_info = g_file_query_info (file,
 					       G_FILE_ATTRIBUTE_STANDARD_TYPE","
 					       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE","
+					       G_FILE_ATTRIBUTE_STANDARD_FAST_CONTENT_TYPE","
 					       G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME,
 					       0, NULL, NULL);
 		if (file_info == NULL) {
@@ -578,7 +584,7 @@ eom_list_store_add_files (EomListStore *store, GList *file_list, gboolean preser
 		if (G_UNLIKELY (file_type == G_FILE_TYPE_UNKNOWN)) {
 			const gchar *ctype;
 
-			ctype = g_file_info_get_content_type (file_info);
+			ctype = eom_util_get_content_type_with_fallback (file_info);
 
 			/* If the content type is supported adjust file_type */
 			if (eom_image_is_supported_mime_type (ctype))

@@ -738,7 +738,8 @@ add_file_to_recent_files (GFile *file)
 		return FALSE;
 
 	file_info = g_file_query_info (file,
-				       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
+				       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE","
+				       G_FILE_ATTRIBUTE_STANDARD_FAST_CONTENT_TYPE,
 				       0, NULL, NULL);
 	if (file_info == NULL)
 		return FALSE;
@@ -746,7 +747,7 @@ add_file_to_recent_files (GFile *file)
 	recent_data = g_slice_new (GtkRecentData);
 	recent_data->display_name = NULL;
 	recent_data->description = NULL;
-	recent_data->mime_type = (gchar *) g_file_info_get_content_type (file_info);
+	recent_data->mime_type = (gchar *) eom_util_get_content_type_with_fallback (file_info);
 	recent_data->app_name = EOM_RECENT_FILES_APP_NAME;
 	recent_data->app_exec = g_strjoin(" ", g_get_prgname (), "%u", NULL);
 	recent_data->groups = groups;
@@ -955,13 +956,14 @@ eom_window_update_openwith_menu (EomWindow *window, EomImage *image)
 
 	file = eom_image_get_file (image);
 	file_info = g_file_query_info (file,
-				       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
+				       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE","
+				       G_FILE_ATTRIBUTE_STANDARD_FAST_CONTENT_TYPE,
 				       0, NULL, NULL);
 
 	if (file_info == NULL)
 		return;
 	else {
-		mime_type = g_file_info_get_content_type (file_info);
+		mime_type = eom_util_get_content_type_with_fallback (file_info);
 	}
 
 	if (priv->open_with_menu_id != 0) {

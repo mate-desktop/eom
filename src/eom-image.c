@@ -589,7 +589,8 @@ eom_image_get_file_info (EomImage *img,
 
 	file_info = g_file_query_info (img->priv->file,
 				       G_FILE_ATTRIBUTE_STANDARD_SIZE ","
-				       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
+				       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE ","
+				       G_FILE_ATTRIBUTE_STANDARD_FAST_CONTENT_TYPE,
 				       0, NULL, error);
 
 	if (file_info == NULL) {
@@ -607,8 +608,9 @@ eom_image_get_file_info (EomImage *img,
 		if (bytes)
 			*bytes = g_file_info_get_size (file_info);
 
-		if (mime_type)
-			*mime_type = g_strdup (g_file_info_get_content_type (file_info));
+		if (mime_type) {
+			*mime_type = g_strdup (eom_util_get_content_type_with_fallback (file_info));
+		}
 		g_object_unref (file_info);
 	}
 }

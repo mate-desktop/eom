@@ -30,6 +30,7 @@
 #include "eom-list-store.h"
 #include "eom-thumbnail.h"
 #include "eom-pixbuf-util.h"
+#include "eom-util.h"
 
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
@@ -385,7 +386,9 @@ filter_files (GSList *files, GList **file_list, GList **error_list)
 
 		if (file != NULL) {
 			file_info = g_file_query_info (file,
-						       G_FILE_ATTRIBUTE_STANDARD_TYPE","G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE,
+						       G_FILE_ATTRIBUTE_STANDARD_TYPE","
+						       G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE","
+						       G_FILE_ATTRIBUTE_STANDARD_FAST_CONTENT_TYPE,
 						       0, NULL, NULL);
 			if (file_info == NULL) {
 				type = G_FILE_TYPE_UNKNOWN;
@@ -397,7 +400,7 @@ filter_files (GSList *files, GList **file_list, GList **error_list)
 				if (G_UNLIKELY (type == G_FILE_TYPE_UNKNOWN)) {
 					const gchar *ctype;
 
-					ctype = g_file_info_get_content_type (file_info);
+					ctype = eom_util_get_content_type_with_fallback (file_info);
 
 					/* If the content type is supported
 					   adjust the file_type */
