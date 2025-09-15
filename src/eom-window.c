@@ -5099,14 +5099,19 @@ eom_window_button_press (GtkWidget *widget, GdkEventButton *event)
 	EomWindow *window = EOM_WINDOW (widget);
 	gint result = FALSE;
 
+	/* We currently can't tell whether the old button codes (6, 7) are
+	 * still in use. So we keep them in addition to the new ones (8, 9)
+	 */
 	if (event->type == GDK_BUTTON_PRESS) {
 		switch (event->button) {
 		case 6:
+		case 8:
 			eom_thumb_view_select_single (EOM_THUMB_VIEW (window->priv->thumbview),
 						      EOM_THUMB_VIEW_SELECT_LEFT);
 			result = TRUE;
 		       	break;
 		case 7:
+		case 9:
 			eom_thumb_view_select_single (EOM_THUMB_VIEW (window->priv->thumbview),
 						      EOM_THUMB_VIEW_SELECT_RIGHT);
 			result = TRUE;
