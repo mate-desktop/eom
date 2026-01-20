@@ -177,6 +177,11 @@ endif
 # Enable GObject Introspection
 if gobject_introspection.found()
   conf.set('HAVE_INTROSPECTION', 1)
+  # Check for girepository-2.0 API (moved to glib in version 1.80+)
+  girepository2 = dependency('girepository-2.0', required: false)
+  if girepository2.found()
+    conf.set('HAVE_GIREPOSITORY_2', 1)
+  endif
 endif
 
 conf_file = configure_file(output : 'config.h', configuration : conf)
