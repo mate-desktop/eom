@@ -783,5 +783,72 @@
 	</varlistentry>		
 	</variablelist>
   </section>
+
+	<!--============ Plugins ==================-->
+  <section xml:id="eom-prefs-plugins"><info><title>Plugins</title></info>
+
+	<para><application>Image Viewer</application> supports plugins that can extend its functionality with additional features. Plugins can add menu items, modify image display behavior, or integrate with external applications.</para>
+
+	<section xml:id="eom-plugins-enable"><info><title>Enabling and Disabling Plugins</title></info>
+		<para>To manage plugins:</para>
+		<orderedlist inheritnum="ignore" continuation="restarts">
+			<listitem>
+				<para>Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>.</para>
+			</listitem>
+			<listitem>
+				<para>Click on the <guilabel>Plugins</guilabel> tab.</para>
+			</listitem>
+			<listitem>
+				<para>Check the box next to a plugin name to enable it, or uncheck it to disable it.</para>
+			</listitem>
+			<listitem>
+				<para>Click <guibutton>Close</guibutton> to save your changes.</para>
+			</listitem>
+		</orderedlist>
+		<para>Changes to plugin activation take effect immediately.</para>
+	</section>
+
+	<section xml:id="eom-plugins-builtin"><info><title>Built-in Plugins</title></info>
+		<para><application>Image Viewer</application> includes the following built-in plugins:</para>
+		<variablelist>
+		<varlistentry>
+			<term><guilabel>Fullscreen with double-click</guilabel></term>
+			<listitem>
+			<para>Allows you to toggle fullscreen mode by double-clicking on an image. This provides a quick way to enter and exit fullscreen without using the menu or keyboard shortcuts.</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><guilabel>Reload Image</guilabel></term>
+			<listitem>
+			<para>Adds a menu item and shortcut to reload the current image from disk. This is useful when an image file has been modified by an external application and you want to see the updated version without closing and reopening the file.</para>
+			</listitem>
+		</varlistentry>
+		<varlistentry>
+			<term><guilabel>Statusbar Date</guilabel></term>
+			<listitem>
+			<para>Displays the date when the photo was taken in the statusbar, extracted from the image's EXIF metadata. This is particularly useful for digital photos taken with a camera that records the capture date.</para>
+			</listitem>
+		</varlistentry>
+		</variablelist>
+	</section>
+
+	<section xml:id="eom-plugins-install"><info><title>Installing Additional Plugins</title></info>
+		<para>Additional plugins can be installed by placing them in one of the following locations:</para>
+		<itemizedlist>
+			<listitem>
+				<para><filename>~/.local/share/eom/plugins/</filename> - for personal use</para>
+			</listitem>
+			<listitem>
+				<para><filename>/usr/lib/eom/plugins/</filename> - system-wide (requires administrator privileges)</para>
+			</listitem>
+		</itemizedlist>
+		<para>After installing a plugin, restart <application>Image Viewer</application> or reload the plugin list in the Preferences dialog to see the new plugin.</para>
+	</section>
+
+	<section xml:id="eom-plugins-develop"><info><title>Developing Plugins</title></info>
+		<para>If you are a developer interested in creating plugins for <application>Image Viewer</application>, please refer to <filename>HACKING-PLUGINS.md</filename> in the source code repository, or visit the MATE Desktop development documentation website.</para>
+	</section>
+
+  </section>
 </section>
 </article>
