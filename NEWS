@@ -1,6 +1,15 @@
 ### eom 1.28.0
 
   * Translations update
+  * plugins: Support building against newer libpeas1 versions
+  * eom-window: Add additional key codes for image switching using mouse buttons
+  * Eom*: Use fast content type as fallback
+  * EomUtil: Add helper to get content type from GFileInfos
+  * Add 'preserve-order' flag to allow viewing order specified on cmd line (#354)
+
+### eom 1.28.0
+
+  * Translations update
   * eom-window: update image counter even if current thumbnail is for failured image
   * meson: explicit dep on -lm as required for Fedora35
   * fix building with new libxml 2.12.0
