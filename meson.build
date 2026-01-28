@@ -178,9 +178,17 @@ endif
 if gobject_introspection.found()
   conf.set('HAVE_INTROSPECTION', 1)
   # Check for girepository-2.0 API (moved to glib in version 1.80+)
+  # We can only use girepository-2.0 if libpeas also uses it, otherwise we get conflicts
   girepository2 = dependency('girepository-2.0', required: false)
   if girepository2.found()
-    conf.set('HAVE_GIREPOSITORY_2', 1)
+    # Check if libpeas requires girepository-2.0
+    pkgconfig = find_program('pkg-config', required: false)
+    if pkgconfig.found()
+      libpeas_requires = run_command(pkgconfig, '--print-requires', 'libpeas-1.0', check: false)
+      if libpeas_requires.returncode() == 0 and libpeas_requires.stdout().contains('girepository-2.0')
+        conf.set('HAVE_GIREPOSITORY_2', 1)
+      endif
+    endif
   endif
 endif
 

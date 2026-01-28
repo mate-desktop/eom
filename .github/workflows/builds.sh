@@ -19,7 +19,7 @@ infoend() {
 if [[ -f meson.build && $1 == "meson" ]]; then
 
 	infobegin "Configure (meson)"
-	meson setup _build --prefix=/usr
+	meson setup _build -Dprefix=/usr -Dgdk-pixbuf-thumbnailer=false
 	infoend
 
 	infobegin "Build (meson)"
