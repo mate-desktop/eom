@@ -27,7 +27,11 @@
 #include "config.h"
 #endif
 #ifdef HAVE_INTROSPECTION
+#ifdef HAVE_GIREPOSITORY_2
+#include <girepository/girepository.h>
+#else
 #include <girepository.h>
+#endif
 #endif
 
 #include "eom-session.h"
@@ -116,7 +120,11 @@ main (int argc, char **argv)
 	 * Using gtk_get_option_group here initializes gtk during parsing */
 	g_option_context_add_group (ctx, gtk_get_option_group (TRUE));
 #ifdef HAVE_INTROSPECTION
+#ifdef HAVE_GIREPOSITORY_2
+	g_option_context_add_group (ctx, gi_repository_get_option_group ());
+#else
 	g_option_context_add_group (ctx, g_irepository_get_option_group ());
+#endif
 #endif
 
 	if (!g_option_context_parse (ctx, &argc, &argv, &error)) {
