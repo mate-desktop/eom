@@ -18,13 +18,22 @@ requires=(
 # https://gitlab.archlinux.org/archlinux/packaging/packages/eom
 requires+=(
 	autoconf-archive
+	dbus-glib
+	exempi
 	gcc
+	gettext
 	git
 	glib2-devel
 	gobject-introspection
+	gobject-introspection-runtime
 	itstool
+	lcms2
+	libexif
+	libjpeg-turbo
+	libpeas
 	make
 	mate-common
+	mate-desktop
 	which
 	yelp-tools
 )
