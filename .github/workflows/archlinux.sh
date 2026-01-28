@@ -15,24 +15,15 @@ requires=(
 	meson  # Used for meson build
 )
 
+# https://gitlab.archlinux.org/archlinux/packaging/packages/eom
 requires+=(
 	autoconf-archive
-	appstream-glib
-	autoconf-archive
-	desktop-file-utils
-	exempi
 	gcc
 	git
 	glib2-devel
 	gobject-introspection
-	imagemagick
 	itstool
-	lcms2
-	libexif
-	libjpeg-turbo
-	libpeas
 	make
-	mate-desktop
 	mate-common
 	which
 	yelp-tools
