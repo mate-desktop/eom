@@ -180,7 +180,11 @@ pd_update_general_tab (EomPropertiesDialog *prop_dlg,
 		type_str = g_strdup (_("Unknown"));
 	} else {
 		mime_str = eom_util_get_content_type_with_fallback (file_info);
-		type_str = g_content_type_get_description (mime_str);
+		if (mime_str != NULL) {
+			type_str = g_content_type_get_description (mime_str);
+		} else {
+			type_str = g_strdup (_("Unknown"));
+		}
 		g_object_unref (file_info);
 	}
 

@@ -167,7 +167,11 @@ eom_metadata_sidebar_update_general_section (EomMetadataSidebar *sidebar)
 		const gchar *mime_str;
 
 		mime_str = eom_util_get_content_type_with_fallback (file_info);
-		str = g_content_type_get_description (mime_str);
+		if (mime_str != NULL) {
+			str = g_content_type_get_description (mime_str);
+		} else {
+			str = g_strdup (_("Unknown"));
+		}
 		g_object_unref (file_info);
 	}
 	gtk_label_set_text (GTK_LABEL (priv->type_label), str);
