@@ -748,6 +748,15 @@ add_file_to_recent_files (GFile *file)
 	recent_data->display_name = NULL;
 	recent_data->description = NULL;
 	recent_data->mime_type = (gchar *) eom_util_get_content_type_with_fallback (file_info);
+
+	/* mime_type is required by GTK, so bail out if we couldn't determine it */
+	if (recent_data->mime_type == NULL) {
+		g_slice_free (GtkRecentData, recent_data);
+		g_free (text_uri);
+		g_object_unref (file_info);
+		return FALSE;
+	}
+
 	recent_data->app_name = EOM_RECENT_FILES_APP_NAME;
 	recent_data->app_exec = g_strjoin(" ", g_get_prgname (), "%u", NULL);
 	recent_data->groups = groups;
