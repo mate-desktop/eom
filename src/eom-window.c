@@ -185,6 +185,8 @@ struct _EomWindowPrivate {
 	gboolean             save_disabled;
 	gboolean             needs_reload_confirmation;
 
+	gulong               crop_signal_id;
+
 	GtkPageSetup        *page_setup;
 
 	PeasExtensionSet    *extensions;
@@ -3195,6 +3197,78 @@ eom_window_cmd_rotate_270 (GtkAction *action, gpointer user_data)
 }
 
 static void
+eom_window_crop_requested_cb (EomScrollView *view,
+                               gint           x,
+                               gint           y,
+                               gint           width,
+                               gint           height,
+                               gpointer       user_data)
+{
+	EomWindow *window;
+	EomWindowPrivate *priv;
+	EomImage *image;
+
+	g_return_if_fail (EOM_IS_WINDOW (user_data));
+
+	window = EOM_WINDOW (user_data);
+	priv = window->priv;
+
+	/* Disconnect and exit crop mode */
+	if (priv->crop_signal_id) {
+		g_signal_handler_disconnect (priv->view, priv->crop_signal_id);
+		priv->crop_signal_id = 0;
+	}
+	eom_scroll_view_set_crop_mode (EOM_SCROLL_VIEW (priv->view), FALSE);
+
+	image = eom_window_get_image (window);
+	g_return_if_fail (EOM_IS_IMAGE (image));
+
+	if (width > 0 && height > 0) {
+		GtkAction *action_undo, *action_save;
+
+		eom_image_crop (image, x, y, width, height);
+		eom_image_modified (image);
+
+		G_GNUC_BEGIN_IGNORE_DEPRECATIONS;
+		action_undo = gtk_action_group_get_action (priv->actions_image, "EditUndo");
+		action_save = gtk_action_group_get_action (priv->actions_image, "ImageSave");
+		gtk_action_set_sensitive (action_undo, eom_image_is_modified (image));
+		if (!priv->save_disabled)
+			gtk_action_set_sensitive (action_save, eom_image_is_modified (image));
+		G_GNUC_END_IGNORE_DEPRECATIONS;
+	}
+}
+
+static void
+eom_window_cmd_crop (GtkAction *action, gpointer user_data)
+{
+	EomWindow *window;
+	EomWindowPrivate *priv;
+
+	g_return_if_fail (EOM_IS_WINDOW (user_data));
+
+	window = EOM_WINDOW (user_data);
+	priv = window->priv;
+
+	g_return_if_fail (priv->image != NULL);
+
+	/* Clean up any stale signal connection first */
+	if (priv->crop_signal_id) {
+		g_signal_handler_disconnect (priv->view, priv->crop_signal_id);
+		priv->crop_signal_id = 0;
+	}
+
+	if (eom_scroll_view_get_crop_mode (EOM_SCROLL_VIEW (priv->view))) {
+		eom_scroll_view_set_crop_mode (EOM_SCROLL_VIEW (priv->view), FALSE);
+	} else {
+		eom_scroll_view_set_crop_mode (EOM_SCROLL_VIEW (priv->view), TRUE);
+		priv->crop_signal_id = g_signal_connect (priv->view, "crop-requested",
+		                                          G_CALLBACK (eom_window_crop_requested_cb),
+		                                          window);
+	}
+}
+
+static void
 eom_window_cmd_wallpaper (GtkAction *action, gpointer user_data)
 {
 	EomWindow *window;
@@ -3836,6 +3910,9 @@ static const GtkActionEntry action_entries_image[] = {
 	{ "EditRotate270", "object-rotate-left", N_("Rotate Counterc_lockwise"), "<ctrl><shift>r",
 	  N_("Rotate the image 90 degrees to the left"),
 	  G_CALLBACK (eom_window_cmd_rotate_270) },
+	{ "EditCrop", "edit-cut", N_("_Crop…"), NULL,
+	  N_("Crop the image to a selected region"),
+	  G_CALLBACK (eom_window_cmd_crop) },
 	{ "ImageSetAsWallpaper", NULL, N_("Set as _Desktop Background"),
 	  "<control>F8", N_("Set the selected image as the desktop background"),
 	  G_CALLBACK (eom_window_cmd_wallpaper) },
