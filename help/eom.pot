@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-10-29 15:23+0200\n"
+"POT-Creation-Date: 2026-04-02 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1006,6 +1006,126 @@ msgstr ""
 #. (itstool) path: listitem/para
 #: C/index.docbook:780
 msgid "Use the <guilabel>Switch image after ... seconds</guilabel> spin box to specify how long each image is displayed during the slide show. If you set this value to zero, the auto advance function is disabled and only manual browsing is available (see <xref linkend=\"eom-fullscreen\"/>)."
+msgstr ""
+
+#. (itstool) path: info/title
+#: C/index.docbook:788
+msgid "Plugins"
+msgstr ""
+
+#. (itstool) path: section/para
+#: C/index.docbook:790
+msgid "<application>Image Viewer</application> supports plugins that can extend its functionality with additional features. Plugins can add menu items, modify image display behavior, or integrate with external applications."
+msgstr ""
+
+#. (itstool) path: info/title
+#: C/index.docbook:792
+msgid "Enabling and Disabling Plugins"
+msgstr ""
+
+#. (itstool) path: section/para
+#: C/index.docbook:793
+msgid "To manage plugins:"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:796
+msgid "Choose <menuchoice><guimenu>Edit</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice>."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:799
+msgid "Click on the <guilabel>Plugins</guilabel> tab."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:802
+msgid "Check the box next to a plugin name to enable it, or uncheck it to disable it."
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:805
+msgid "Click <guibutton>Close</guibutton> to save your changes."
+msgstr ""
+
+#. (itstool) path: section/para
+#: C/index.docbook:808
+msgid "Changes to plugin activation take effect immediately."
+msgstr ""
+
+#. (itstool) path: info/title
+#: C/index.docbook:811
+msgid "Built-in Plugins"
+msgstr ""
+
+#. (itstool) path: section/para
+#: C/index.docbook:812
+msgid "<application>Image Viewer</application> includes the following built-in plugins:"
+msgstr ""
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:815
+msgid "<guilabel>Fullscreen with double-click</guilabel>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:817
+msgid "Allows you to toggle fullscreen mode by double-clicking on an image. This provides a quick way to enter and exit fullscreen without using the menu or keyboard shortcuts."
+msgstr ""
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:821
+msgid "<guilabel>Reload Image</guilabel>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:823
+msgid "Adds a menu item and shortcut to reload the current image from disk. This is useful when an image file has been modified by an external application and you want to see the updated version without closing and reopening the file."
+msgstr ""
+
+#. (itstool) path: varlistentry/term
+#: C/index.docbook:827
+msgid "<guilabel>Statusbar Date</guilabel>"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:829
+msgid "Displays the date when the photo was taken in the statusbar, extracted from the image's EXIF metadata. This is particularly useful for digital photos taken with a camera that records the capture date."
+msgstr ""
+
+#. (itstool) path: info/title
+#: C/index.docbook:835
+msgid "Installing Additional Plugins"
+msgstr ""
+
+#. (itstool) path: section/para
+#: C/index.docbook:836
+msgid "Additional plugins can be installed by placing them in one of the following locations:"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:839
+msgid "<filename>~/.local/share/eom/plugins/</filename> - for personal use"
+msgstr ""
+
+#. (itstool) path: listitem/para
+#: C/index.docbook:842
+msgid "<filename>/usr/lib/eom/plugins/</filename> - system-wide (requires administrator privileges)"
+msgstr ""
+
+#. (itstool) path: section/para
+#: C/index.docbook:845
+msgid "After installing a plugin, restart <application>Image Viewer</application> or reload the plugin list in the Preferences dialog to see the new plugin."
+msgstr ""
+
+#. (itstool) path: info/title
+#: C/index.docbook:848
+msgid "Developing Plugins"
+msgstr ""
+
+#. (itstool) path: section/para
+#: C/index.docbook:849
+msgid "If you are a developer interested in creating plugins for <application>Image Viewer</application>, please refer to <filename>HACKING-PLUGINS.md</filename> in the source code repository, or visit the MATE Desktop development documentation website."
 msgstr ""
 
 #. (itstool) path: legalnotice/para
