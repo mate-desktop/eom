@@ -196,6 +196,12 @@ void              eom_image_apply_display_profile    (EomImage    *img,
 
 void              eom_image_undo                     (EomImage   *img);
 
+void              eom_image_crop                     (EomImage   *img,
+                                                      gint        x,
+                                                      gint        y,
+                                                      gint        width,
+                                                      gint        height);
+
 GList		 *eom_image_get_supported_mime_types (void);
 
 gboolean          eom_image_is_supported_mime_type   (const char *mime_type);

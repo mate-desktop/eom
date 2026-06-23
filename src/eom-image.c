@@ -1428,6 +1428,64 @@ eom_image_undo (EomImage *img)
 	priv->modified = (priv->undo_stack != NULL);
 }
 
+void
+eom_image_crop (EomImage *img, gint x, gint y, gint width, gint height)
+{
+	EomImagePrivate *priv;
+	GdkPixbuf *subpixbuf;
+	GdkPixbuf *cropped;
+	gint orig_width;
+	gint orig_height;
+
+	g_return_if_fail (EOM_IS_IMAGE (img));
+
+	priv = img->priv;
+
+	g_return_if_fail (priv->image != NULL);
+	g_return_if_fail (x >= 0 && y >= 0 && width > 0 && height > 0);
+	g_return_if_fail (x + width <= priv->width && y + height <= priv->height);
+
+	orig_width = priv->width;
+	orig_height = priv->height;
+
+	subpixbuf = gdk_pixbuf_new_subpixbuf (priv->image, x, y, width, height);
+	cropped = gdk_pixbuf_copy (subpixbuf);
+	g_object_unref (subpixbuf);
+
+	g_object_unref (priv->image);
+	priv->image = cropped;
+	priv->width = width;
+	priv->height = height;
+	priv->modified = TRUE;
+
+	if (priv->thumbnail != NULL) {
+		gint thumb_w = gdk_pixbuf_get_width (priv->thumbnail);
+		gint thumb_h = gdk_pixbuf_get_height (priv->thumbnail);
+		gint tx = x * thumb_w / orig_width;
+		gint ty = y * thumb_h / orig_height;
+		gint tw = width * thumb_w / orig_width;
+		gint th = height * thumb_h / orig_height;
+
+		tw = CLAMP (tw, 1, thumb_w - tx);
+		th = CLAMP (th, 1, thumb_h - ty);
+
+		subpixbuf = gdk_pixbuf_new_subpixbuf (priv->thumbnail, tx, ty, tw, th);
+		cropped = gdk_pixbuf_copy (subpixbuf);
+		g_object_unref (subpixbuf);
+		g_object_unref (priv->thumbnail);
+		priv->thumbnail = cropped;
+	}
+
+	/* Crop cannot be undone via the transform mechanism, so clear the stack */
+	g_slist_free_full (priv->undo_stack, g_object_unref);
+	priv->undo_stack = NULL;
+
+	if (priv->trans != NULL) {
+		g_object_unref (priv->trans);
+		priv->trans = NULL;
+	}
+}
+
 static GFile *
 tmp_file_get (void)
 {

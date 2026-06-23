@@ -46,6 +46,7 @@ typedef enum {
 /* Signal IDs */
 enum {
 	SIGNAL_ZOOM_CHANGED,
+	SIGNAL_CROP_REQUESTED,
 	SIGNAL_LAST
 };
 
@@ -54,8 +55,12 @@ static guint view_signals [SIGNAL_LAST] = { 0 };
 typedef enum {
 	EOM_SCROLL_VIEW_CURSOR_NORMAL,
 	EOM_SCROLL_VIEW_CURSOR_HIDDEN,
-	EOM_SCROLL_VIEW_CURSOR_DRAG
+	EOM_SCROLL_VIEW_CURSOR_DRAG,
+	EOM_SCROLL_VIEW_CURSOR_CROSSHAIR
 } EomScrollViewCursor;
+
+#define CROP_HANDLE_SIZE  8
+#define CROP_HANDLE_NONE -1
 
 /* Drag 'n Drop */
 static GtkTargetEntry target_table[] = {
@@ -130,6 +135,22 @@ struct _EomScrollViewPrivate {
 	int drag_ofs_x, drag_ofs_y;
 	guint dragging : 1;
 
+	/* crop mode */
+	gboolean         crop_mode;
+	gboolean         has_crop_rect;
+	gdouble          crop_x1, crop_y1;    /* normalized rect in image px (x1<=x2, y1<=y2) */
+	gdouble          crop_x2, crop_y2;
+	gboolean         crop_drawing;        /* TRUE while drawing initial rect */
+	gint             crop_active_handle;  /* CROP_HANDLE_NONE or 0..7 */
+	gdouble          crop_anchor_x, crop_anchor_y;     /* image coords at draw start */
+	gdouble          crop_drag_x1, crop_drag_y1;       /* saved rect at handle drag start */
+	gdouble          crop_drag_x2, crop_drag_y2;
+	gboolean         crop_moving;                     /* TRUE while dragging rect to move it */
+	gdouble          crop_move_anchor_x, crop_move_anchor_y; /* image coords at move start */
+	gdouble          crop_move_orig_x1, crop_move_orig_y1;   /* rect at move start */
+	gdouble          crop_move_orig_x2, crop_move_orig_y2;
+	gdouble          crop_press_wx, crop_press_wy;    /* widget coords at press (for move vs. click) */
+
 	/* how to indicate transparency in images */
 	EomTransparencyStyle transp_style;
 	GdkRGBA transp_color;
@@ -158,6 +179,10 @@ static void view_on_drag_data_get_cb (GtkWidget *widget,
 				      GdkDragContext*drag_context,
 				      GtkSelectionData *data, guint info,
 				      guint time, gpointer user_data);
+static void get_image_offsets (EomScrollView *view, gint *out_xofs, gint *out_yofs);
+static void widget_to_image (EomScrollView *view, gdouble wx, gdouble wy, gdouble *img_x, gdouble *img_y);
+static void image_to_widget (EomScrollView *view, gdouble img_x, gdouble img_y, gdouble *wx, gdouble *wy);
+static gint get_crop_handle_at (EomScrollView *view, gdouble wx, gdouble wy);
 
 static gboolean _eom_gdk_rgba_equal0 (const GdkRGBA *a, const GdkRGBA *b);
 
@@ -375,6 +400,9 @@ eom_scroll_view_set_cursor (EomScrollView *view, EomScrollViewCursor new_cursor)
                         break;
 		case EOM_SCROLL_VIEW_CURSOR_DRAG:
 			cursor = gdk_cursor_new_for_display (display, GDK_FLEUR);
+			break;
+		case EOM_SCROLL_VIEW_CURSOR_CROSSHAIR:
+			cursor = gdk_cursor_new_for_display (display, GDK_CROSSHAIR);
 			break;
 	}
 
@@ -902,6 +930,13 @@ display_key_press_event (GtkWidget *widget, GdkEventKey *event, gpointer data)
 		zoom = 1.0;
 		break;
 
+	case GDK_KEY_Escape:
+		if (priv->crop_mode) {
+			eom_scroll_view_set_crop_mode (view, FALSE);
+			return TRUE;
+		}
+		return FALSE;
+
 	default:
 		return FALSE;
 	}
@@ -941,6 +976,53 @@ eom_scroll_view_button_press_event (GtkWidget *widget, GdkEventButton *event, gp
 	if (priv->dragging)
 		return FALSE;
 
+	if (priv->crop_mode && event->button == 1) {
+		gdouble img_x, img_y;
+		gint handle;
+
+		widget_to_image (view, event->x, event->y, &img_x, &img_y);
+
+		if (priv->pixbuf != NULL) {
+			img_x = CLAMP (img_x, 0.0, (gdouble) gdk_pixbuf_get_width (priv->pixbuf));
+			img_y = CLAMP (img_y, 0.0, (gdouble) gdk_pixbuf_get_height (priv->pixbuf));
+		}
+
+		handle = get_crop_handle_at (view, event->x, event->y);
+
+		if (handle != CROP_HANDLE_NONE) {
+			priv->crop_active_handle = handle;
+			priv->crop_drag_x1 = priv->crop_x1;
+			priv->crop_drag_y1 = priv->crop_y1;
+			priv->crop_drag_x2 = priv->crop_x2;
+			priv->crop_drag_y2 = priv->crop_y2;
+			eom_scroll_view_set_cursor (view, EOM_SCROLL_VIEW_CURSOR_DRAG);
+		} else if (priv->has_crop_rect &&
+		           img_x >= priv->crop_x1 && img_x <= priv->crop_x2 &&
+		           img_y >= priv->crop_y1 && img_y <= priv->crop_y2) {
+			priv->crop_moving = TRUE;
+			priv->crop_press_wx = event->x;
+			priv->crop_press_wy = event->y;
+			priv->crop_move_anchor_x = img_x;
+			priv->crop_move_anchor_y = img_y;
+			priv->crop_move_orig_x1 = priv->crop_x1;
+			priv->crop_move_orig_y1 = priv->crop_y1;
+			priv->crop_move_orig_x2 = priv->crop_x2;
+			priv->crop_move_orig_y2 = priv->crop_y2;
+			eom_scroll_view_set_cursor (view, EOM_SCROLL_VIEW_CURSOR_DRAG);
+		} else {
+			priv->crop_drawing = TRUE;
+			priv->has_crop_rect = FALSE;
+			priv->crop_active_handle = CROP_HANDLE_NONE;
+			priv->crop_anchor_x = img_x;
+			priv->crop_anchor_y = img_y;
+			priv->crop_x1 = img_x;
+			priv->crop_y1 = img_y;
+			priv->crop_x2 = img_x;
+			priv->crop_y2 = img_y;
+		}
+		return TRUE;
+	}
+
 	switch (event->button) {
 		case 1:
 		case 2:
@@ -976,6 +1058,36 @@ eom_scroll_view_button_release_event (GtkWidget *widget, GdkEventButton *event, 
 
 	view = EOM_SCROLL_VIEW (data);
 	priv = view->priv;
+
+	if (priv->crop_mode && event->button == 1) {
+		if (priv->crop_drawing) {
+			priv->crop_drawing = FALSE;
+			if (priv->crop_x2 > priv->crop_x1 + 0.5 ||
+			    priv->crop_y2 > priv->crop_y1 + 0.5)
+				priv->has_crop_rect = TRUE;
+			gtk_widget_queue_draw (priv->display);
+		} else if (priv->crop_moving) {
+			gdouble moved = ABS (event->x - priv->crop_press_wx) +
+			                ABS (event->y - priv->crop_press_wy);
+			priv->crop_moving = FALSE;
+			if (moved < 4.0) {
+				/* Treat as a click: apply the crop */
+				gint cw = (gint)(priv->crop_x2 - priv->crop_x1);
+				gint ch = (gint)(priv->crop_y2 - priv->crop_y1);
+				if (cw > 0 && ch > 0) {
+					g_signal_emit (view, view_signals[SIGNAL_CROP_REQUESTED], 0,
+					               (gint) priv->crop_x1, (gint) priv->crop_y1, cw, ch);
+				}
+			} else {
+				eom_scroll_view_set_cursor (view, EOM_SCROLL_VIEW_CURSOR_DRAG);
+				gtk_widget_queue_draw (priv->display);
+			}
+		} else if (priv->crop_active_handle != CROP_HANDLE_NONE) {
+			priv->crop_active_handle = CROP_HANDLE_NONE;
+			eom_scroll_view_set_cursor (view, EOM_SCROLL_VIEW_CURSOR_CROSSHAIR);
+		}
+		return TRUE;
+	}
 
 	if (!priv->dragging)
 		return FALSE;
@@ -1079,6 +1191,85 @@ eom_scroll_view_motion_event (GtkWidget *widget, GdkEventMotion *event, gpointer
 
 	view = EOM_SCROLL_VIEW (data);
 	priv = view->priv;
+
+	if (priv->crop_mode) {
+		gdouble wx, wy, img_x, img_y;
+
+		if (event->is_hint) {
+			gdk_window_get_device_position (gtk_widget_get_window (priv->display),
+			                                event->device, &x, &y, &mods);
+			wx = x;
+			wy = y;
+		} else {
+			wx = event->x;
+			wy = event->y;
+		}
+
+		widget_to_image (view, wx, wy, &img_x, &img_y);
+
+		if (priv->pixbuf != NULL) {
+			img_x = CLAMP (img_x, 0.0, (gdouble) gdk_pixbuf_get_width (priv->pixbuf));
+			img_y = CLAMP (img_y, 0.0, (gdouble) gdk_pixbuf_get_height (priv->pixbuf));
+		}
+
+		if (priv->crop_drawing) {
+			priv->crop_x1 = MIN (priv->crop_anchor_x, img_x);
+			priv->crop_x2 = MAX (priv->crop_anchor_x, img_x);
+			priv->crop_y1 = MIN (priv->crop_anchor_y, img_y);
+			priv->crop_y2 = MAX (priv->crop_anchor_y, img_y);
+			gtk_widget_queue_draw (priv->display);
+		} else if (priv->crop_active_handle != CROP_HANDLE_NONE) {
+			gdouble nx1 = priv->crop_drag_x1;
+			gdouble ny1 = priv->crop_drag_y1;
+			gdouble nx2 = priv->crop_drag_x2;
+			gdouble ny2 = priv->crop_drag_y2;
+
+			switch (priv->crop_active_handle) {
+			case 0: nx1 = img_x; ny1 = img_y; break;
+			case 1:              ny1 = img_y; break;
+			case 2: nx2 = img_x; ny1 = img_y; break;
+			case 3: nx1 = img_x;              break;
+			case 4: nx2 = img_x;              break;
+			case 5: nx1 = img_x; ny2 = img_y; break;
+			case 6:              ny2 = img_y; break;
+			case 7: nx2 = img_x; ny2 = img_y; break;
+			}
+
+			priv->crop_x1 = MIN (nx1, nx2);
+			priv->crop_x2 = MAX (nx1, nx2);
+			priv->crop_y1 = MIN (ny1, ny2);
+			priv->crop_y2 = MAX (ny1, ny2);
+			gtk_widget_queue_draw (priv->display);
+		} else if (priv->crop_moving) {
+			gdouble dx = img_x - priv->crop_move_anchor_x;
+			gdouble dy = img_y - priv->crop_move_anchor_y;
+
+			if (priv->pixbuf != NULL) {
+				gdouble iw = (gdouble) gdk_pixbuf_get_width (priv->pixbuf);
+				gdouble ih = (gdouble) gdk_pixbuf_get_height (priv->pixbuf);
+				dx = CLAMP (dx, -priv->crop_move_orig_x1, iw - priv->crop_move_orig_x2);
+				dy = CLAMP (dy, -priv->crop_move_orig_y1, ih - priv->crop_move_orig_y2);
+			}
+			priv->crop_x1 = priv->crop_move_orig_x1 + dx;
+			priv->crop_y1 = priv->crop_move_orig_y1 + dy;
+			priv->crop_x2 = priv->crop_move_orig_x2 + dx;
+			priv->crop_y2 = priv->crop_move_orig_y2 + dy;
+			gtk_widget_queue_draw (priv->display);
+		} else {
+			/* Update cursor based on what is under the pointer */
+			gint handle = get_crop_handle_at (view, wx, wy);
+			if (handle != CROP_HANDLE_NONE) {
+				eom_scroll_view_set_cursor (view, EOM_SCROLL_VIEW_CURSOR_DRAG);
+			} else if (priv->has_crop_rect &&
+			           img_x >= priv->crop_x1 && img_x <= priv->crop_x2 &&
+			           img_y >= priv->crop_y1 && img_y <= priv->crop_y2) {
+				eom_scroll_view_set_cursor (view, EOM_SCROLL_VIEW_CURSOR_DRAG);
+			} else {
+				eom_scroll_view_set_cursor (view, EOM_SCROLL_VIEW_CURSOR_CROSSHAIR);
+			}
+		}
+		return TRUE;
+	}
 
 	if (!priv->dragging)
 		return FALSE;
@@ -1216,6 +1407,158 @@ _set_hq_redraw_timeout (EomScrollView *view)
 	view->priv->hq_redraw_timeout_source = source;
 }
 
+/* Crop-mode helper: compute image top-left position in widget coordinates */
+static void
+get_image_offsets (EomScrollView *view, gint *out_xofs, gint *out_yofs)
+{
+	EomScrollViewPrivate *priv = view->priv;
+	GtkAllocation allocation;
+	gint scaled_width, scaled_height;
+
+	compute_scaled_size (view, priv->zoom, &scaled_width, &scaled_height);
+	gtk_widget_get_allocation (priv->display, &allocation);
+
+	*out_xofs = (scaled_width <= allocation.width)
+	            ? (allocation.width - scaled_width) / 2
+	            : -priv->xofs;
+	*out_yofs = (scaled_height <= allocation.height)
+	            ? (allocation.height - scaled_height) / 2
+	            : -priv->yofs;
+}
+
+/* Convert widget coordinates to image pixel coordinates */
+static void
+widget_to_image (EomScrollView *view, gdouble wx, gdouble wy,
+                 gdouble *img_x, gdouble *img_y)
+{
+	EomScrollViewPrivate *priv = view->priv;
+	gint xofs, yofs;
+
+	get_image_offsets (view, &xofs, &yofs);
+	*img_x = (wx - xofs) * priv->scale / priv->zoom;
+	*img_y = (wy - yofs) * priv->scale / priv->zoom;
+}
+
+/* Convert image pixel coordinates to widget coordinates */
+static void
+image_to_widget (EomScrollView *view, gdouble img_x, gdouble img_y,
+                 gdouble *wx, gdouble *wy)
+{
+	EomScrollViewPrivate *priv = view->priv;
+	gint xofs, yofs;
+
+	get_image_offsets (view, &xofs, &yofs);
+	*wx = img_x * priv->zoom / priv->scale + xofs;
+	*wy = img_y * priv->zoom / priv->scale + yofs;
+}
+
+/*
+ * Return the index [0..7] of the crop handle at widget position (wx, wy),
+ * or CROP_HANDLE_NONE if none.
+ * Handle layout:  0=TL, 1=TC, 2=TR, 3=ML, 4=MR, 5=BL, 6=BC, 7=BR
+ */
+static gint
+get_crop_handle_at (EomScrollView *view, gdouble wx, gdouble wy)
+{
+	EomScrollViewPrivate *priv = view->priv;
+	gdouble wx1, wy1, wx2, wy2, mx, my;
+	gdouble hx[8], hy[8];
+	gint i;
+
+	if (!priv->has_crop_rect)
+		return CROP_HANDLE_NONE;
+
+	image_to_widget (view, priv->crop_x1, priv->crop_y1, &wx1, &wy1);
+	image_to_widget (view, priv->crop_x2, priv->crop_y2, &wx2, &wy2);
+	mx = (wx1 + wx2) / 2.0;
+	my = (wy1 + wy2) / 2.0;
+
+	hx[0] = wx1; hy[0] = wy1;
+	hx[1] = mx;  hy[1] = wy1;
+	hx[2] = wx2; hy[2] = wy1;
+	hx[3] = wx1; hy[3] = my;
+	hx[4] = wx2; hy[4] = my;
+	hx[5] = wx1; hy[5] = wy2;
+	hx[6] = mx;  hy[6] = wy2;
+	hx[7] = wx2; hy[7] = wy2;
+
+	for (i = 0; i < 8; i++) {
+		if (ABS (wx - hx[i]) <= CROP_HANDLE_SIZE &&
+		    ABS (wy - hy[i]) <= CROP_HANDLE_SIZE)
+			return i;
+	}
+	return CROP_HANDLE_NONE;
+}
+
+/* Draw the crop selection overlay (dim, border, handles) */
+static void
+draw_crop_overlay (EomScrollView *view, cairo_t *cr)
+{
+	EomScrollViewPrivate *priv = view->priv;
+	GtkAllocation allocation;
+	gdouble wx1, wy1, wx2, wy2, mx, my;
+	gdouble hx[8], hy[8];
+	gint i;
+
+	if (!priv->has_crop_rect)
+		return;
+
+	gtk_widget_get_allocation (priv->display, &allocation);
+
+	image_to_widget (view, priv->crop_x1, priv->crop_y1, &wx1, &wy1);
+	image_to_widget (view, priv->crop_x2, priv->crop_y2, &wx2, &wy2);
+
+	/* Dim the area outside the selection using 4 rectangles */
+	cairo_set_source_rgba (cr, 0.0, 0.0, 0.0, 0.5);
+	if (wy1 > 0)
+		cairo_rectangle (cr, 0, 0, allocation.width, wy1);
+	if (wy2 < allocation.height)
+		cairo_rectangle (cr, 0, wy2, allocation.width, allocation.height - wy2);
+	if (wx1 > 0)
+		cairo_rectangle (cr, 0, wy1, wx1, wy2 - wy1);
+	if (wx2 < allocation.width)
+		cairo_rectangle (cr, wx2, wy1, allocation.width - wx2, wy2 - wy1);
+	cairo_fill (cr);
+
+	/* Selection border: black outer stroke */
+	cairo_rectangle (cr, wx1, wy1, wx2 - wx1, wy2 - wy1);
+	cairo_set_source_rgba (cr, 0.0, 0.0, 0.0, 1.0);
+	cairo_set_line_width (cr, 3.0);
+	cairo_stroke (cr);
+
+	/* Selection border: white inner stroke */
+	cairo_rectangle (cr, wx1, wy1, wx2 - wx1, wy2 - wy1);
+	cairo_set_source_rgba (cr, 1.0, 1.0, 1.0, 1.0);
+	cairo_set_line_width (cr, 1.0);
+	cairo_stroke (cr);
+
+	/* Draw 8 resize handles */
+	mx = (wx1 + wx2) / 2.0;
+	my = (wy1 + wy2) / 2.0;
+	hx[0] = wx1; hy[0] = wy1;
+	hx[1] = mx;  hy[1] = wy1;
+	hx[2] = wx2; hy[2] = wy1;
+	hx[3] = wx1; hy[3] = my;
+	hx[4] = wx2; hy[4] = my;
+	hx[5] = wx1; hy[5] = wy2;
+	hx[6] = mx;  hy[6] = wy2;
+	hx[7] = wx2; hy[7] = wy2;
+
+	for (i = 0; i < 8; i++) {
+		gdouble hs = CROP_HANDLE_SIZE / 2.0;
+		/* Black border */
+		cairo_rectangle (cr, hx[i] - hs - 1, hy[i] - hs - 1,
+		                 CROP_HANDLE_SIZE + 2, CROP_HANDLE_SIZE + 2);
+		cairo_set_source_rgba (cr, 0.0, 0.0, 0.0, 1.0);
+		cairo_fill (cr);
+		/* White fill */
+		cairo_rectangle (cr, hx[i] - hs, hy[i] - hs,
+		                 CROP_HANDLE_SIZE, CROP_HANDLE_SIZE);
+		cairo_set_source_rgba (cr, 1.0, 1.0, 1.0, 1.0);
+		cairo_fill (cr);
+	}
+}
+
 static gboolean
 display_draw (GtkWidget *widget, cairo_t *cr, gpointer data)
 {
@@ -1289,6 +1632,7 @@ display_draw (GtkWidget *widget, cairo_t *cr, gpointer data)
 	 * This is especially necessary for SVGs where there might
 	 * be more image data available outside the image boundaries.
 	 */
+	cairo_save (cr);
 	cairo_rectangle (cr, xofs, yofs, scaled_width, scaled_height);
 	cairo_clip (cr);
 
@@ -1367,6 +1711,10 @@ display_draw (GtkWidget *widget, cairo_t *cr, gpointer data)
 
 		cairo_paint (cr);
 	}
+	cairo_restore (cr);
+
+	if (priv->crop_mode)
+		draw_crop_overlay (view, cr);
 
 	return TRUE;
 }
@@ -1428,6 +1776,44 @@ void
 eom_scroll_view_show_cursor (EomScrollView *view)
 {
        eom_scroll_view_set_cursor (view, EOM_SCROLL_VIEW_CURSOR_NORMAL);
+}
+
+void
+eom_scroll_view_set_crop_mode (EomScrollView *view, gboolean crop_mode)
+{
+	EomScrollViewPrivate *priv;
+
+	g_return_if_fail (EOM_IS_SCROLL_VIEW (view));
+
+	priv = view->priv;
+
+	if (priv->crop_mode == crop_mode)
+		return;
+
+	priv->crop_mode = crop_mode;
+
+	if (crop_mode) {
+		priv->has_crop_rect = FALSE;
+		priv->crop_drawing = FALSE;
+		priv->crop_active_handle = CROP_HANDLE_NONE;
+		priv->crop_moving = FALSE;
+		eom_scroll_view_set_cursor (view, EOM_SCROLL_VIEW_CURSOR_CROSSHAIR);
+	} else {
+		priv->has_crop_rect = FALSE;
+		priv->crop_drawing = FALSE;
+		priv->crop_active_handle = CROP_HANDLE_NONE;
+		priv->crop_moving = FALSE;
+		eom_scroll_view_set_cursor (view, EOM_SCROLL_VIEW_CURSOR_NORMAL);
+	}
+
+	gtk_widget_queue_draw (priv->display);
+}
+
+gboolean
+eom_scroll_view_get_crop_mode (EomScrollView *view)
+{
+	g_return_val_if_fail (EOM_IS_SCROLL_VIEW (view), FALSE);
+	return view->priv->crop_mode;
 }
 
 /* general properties */
@@ -2182,6 +2568,16 @@ eom_scroll_view_class_init (EomScrollViewClass *klass)
 			      eom_marshal_VOID__DOUBLE,
 			      G_TYPE_NONE, 1,
 			      G_TYPE_DOUBLE);
+
+	view_signals [SIGNAL_CROP_REQUESTED] =
+		g_signal_new ("crop-requested",
+			      EOM_TYPE_SCROLL_VIEW,
+			      G_SIGNAL_RUN_LAST,
+			      G_STRUCT_OFFSET (EomScrollViewClass, crop_requested),
+			      NULL, NULL,
+			      NULL,
+			      G_TYPE_NONE, 4,
+			      G_TYPE_INT, G_TYPE_INT, G_TYPE_INT, G_TYPE_INT);
 
 	widget_class->size_allocate = eom_scroll_view_size_allocate;
 }

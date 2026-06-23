@@ -25,7 +25,8 @@ struct _EomScrollView {
 struct _EomScrollViewClass {
 	GtkGridClass parent_class;
 
-	void (* zoom_changed) (EomScrollView *view, double zoom);
+	void (* zoom_changed)    (EomScrollView *view, double zoom);
+	void (* crop_requested)  (EomScrollView *view, gint x, gint y, gint width, gint height);
 };
 
 typedef enum {
@@ -66,6 +67,10 @@ gboolean eom_scroll_view_get_zoom_is_min  (EomScrollView *view);
 gboolean eom_scroll_view_get_zoom_is_max  (EomScrollView *view);
 void     eom_scroll_view_show_cursor      (EomScrollView *view);
 void     eom_scroll_view_hide_cursor      (EomScrollView *view);
+
+/* crop mode */
+void     eom_scroll_view_set_crop_mode    (EomScrollView *view, gboolean crop_mode);
+gboolean eom_scroll_view_get_crop_mode    (EomScrollView *view);
 
 G_END_DECLS
 
