@@ -1207,79 +1207,68 @@ eom_job_save_progress_cb (EomJobSave *job, float progress, gpointer user_data)
 }
 
 static void
-eom_window_obtain_desired_size (EomImage  *image,
-				gint       width,
-				gint       height,
+eom_window_obtain_desired_size (EomImage  *,
+				int        img_width,
+				int        img_height,
 				EomWindow *window)
 {
-	GdkScreen *screen;
-	GdkDisplay *display;
-	GdkRectangle monitor;
-	GtkAllocation allocation;
-	gint final_width, final_height;
-	gint screen_width, screen_height;
-	gint window_width, window_height;
-	gint img_width, img_height;
-	gint view_width, view_height;
-	gint deco_width, deco_height;
-
 	update_action_groups_state (window);
 
-	img_width = width;
-	img_height = height;
+	gtk_widget_realize (window->priv->view);
 
-	if (!gtk_widget_get_realized (window->priv->view)) {
-		gtk_widget_realize (window->priv->view);
-	}
+	GdkRectangle view_rect;
+	gtk_widget_get_allocation (window->priv->view, &view_rect);
 
-	gtk_widget_get_allocation (window->priv->view, &allocation);
-	view_width  = allocation.width;
-	view_height = allocation.height;
+	GdkRectangle window_rect;
+	gtk_widget_get_allocation (GTK_WIDGET (window), &window_rect);
 
-	if (!gtk_widget_get_realized (GTK_WIDGET (window))) {
-		gtk_widget_realize (GTK_WIDGET (window));
-	}
+	GdkRectangle monitor_rect;
+	gdk_monitor_get_geometry (
+		gdk_display_get_monitor_at_window (
+			gdk_screen_get_display (gtk_window_get_screen (GTK_WINDOW (window))),
+			gtk_widget_get_window (GTK_WIDGET (window))
+		),
+		&monitor_rect
+	);
 
-	gtk_widget_get_allocation (GTK_WIDGET (window), &allocation);
-	window_width  = allocation.width;
-	window_height = allocation.height;
+	int deco_width = window_rect.width - view_rect.width;
+	int deco_height = window_rect.height - view_rect.height;
 
-	screen = gtk_window_get_screen (GTK_WINDOW (window));
-	display = gdk_screen_get_display (screen);
+	/* "arena" is a fake rectangle into which image should fit */
+	int arena_width = monitor_rect.width * 3 / 4 - deco_width;
+	int arena_height = monitor_rect.height * 3 / 4 - deco_height;
 
-	gdk_monitor_get_geometry (gdk_display_get_monitor_at_window (display,
-								     gtk_widget_get_window (GTK_WIDGET (window))),
-				  &monitor);
-
-	screen_width  = monitor.width;
-	screen_height = monitor.height;
-
-	deco_width = window_width - view_width;
-	deco_height = window_height - view_height;
-
-	if (img_width > 0 && img_height > 0) {
-		if ((img_width + deco_width > screen_width) ||
-		    (img_height + deco_height > screen_height))
-		{
-			double factor;
-
-			if (img_width > img_height) {
-				factor = (screen_width * 0.75 - deco_width) / (double) img_width;
+	int new_window_width;
+	int new_window_height;
+	if (img_width > 0 && img_height > 0 && arena_width > 0 && arena_height > 0) {
+		if (img_width > arena_width || img_height > arena_height) {
+			unsigned img_width_u = img_width;
+			unsigned img_height_u = img_height;
+			unsigned arena_width_u = arena_width;
+			unsigned arena_height_u = arena_height;
+			if (img_height_u * arena_width_u < img_width_u * arena_height_u) {
+				new_window_width = arena_width_u;
+				new_window_height = (img_height_u * arena_width_u + img_width_u / 2u) / img_width_u;
 			} else {
-				factor = (screen_height * 0.75 - deco_height) / (double) img_height;
+				new_window_width = (img_width_u * arena_height_u + img_height_u / 2u) / img_height_u;
+				new_window_height = arena_height_u;
 			}
-
-			img_width = img_width * factor;
-			img_height = img_height * factor;
+		} else {
+			new_window_width = img_width;
+			new_window_height = img_height;
 		}
+		new_window_width += deco_width;
+		new_window_height += deco_height;
+	} else {
+		new_window_width = deco_width;
+		new_window_height = deco_height;
 	}
+	new_window_width = MAX(new_window_width, EOM_WINDOW_MIN_WIDTH);
+	new_window_height = MAX(new_window_height, EOM_WINDOW_MIN_HEIGHT);
 
-	final_width = MAX (EOM_WINDOW_MIN_WIDTH, img_width + deco_width);
-	final_height = MAX (EOM_WINDOW_MIN_HEIGHT, img_height + deco_height);
+	eom_debug_message (DEBUG_WINDOW, "Setting window size: %d x %d", new_window_width, new_window_height);
 
-	eom_debug_message (DEBUG_WINDOW, "Setting window size: %d x %d", final_width, final_height);
-
-	gtk_window_set_default_size (GTK_WINDOW (window), final_width, final_height);
+	gtk_window_set_default_size (GTK_WINDOW (window), new_window_width, new_window_height);
 
 	g_signal_emit (window, signals[SIGNAL_PREPARED], 0);
 }
